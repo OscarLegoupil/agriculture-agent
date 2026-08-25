@@ -9,7 +9,7 @@ Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions
 - [x] **M1** foundations, CI, deps, smoke test
 - [x] **M2** typed env wrappers, action legality checker, 5 dynamics notebooks
 - [x] **M3** evaluation harness: parallel runner, replay logger, per-episode metrics, Bradley-Terry rating, A/B compare CLI, MLflow tracking
-- [ ] **M4** rule-based baselines
+- [x] **M4** rule-based baselines: five hand-crafted agents (v0-v4), each closed with a two-agent A/B, plus a round-robin Elo report
 - [ ] **M5** economic planning core (per-tile ROI, allocator, feed budgeting)
 - [ ] **M6** market and opponent modeling
 - [ ] **M7** advanced planner
@@ -62,6 +62,20 @@ Bradley-Terry Elo (mean 1500):  starter 2100  pass 900  delta +1200
 ```
 
 Add `--replay-dir data/raw/replays` to save every episode's JSON and a `manifest.jsonl` for downstream analysis. Add `--mlflow` to log to a local MLflow store.
+
+## Baseline ladder
+
+Each baseline exercises one strategic axis and closes its commit with an A/B against its predecessor. A round-robin over all baselines plus the three built-in agents produces the internal Elo ladder:
+
+![Baseline Elo ladder](reports/figures/baselines-elo.png)
+
+- **v0** pure wheat loop, single tile.
+- **v1** wheat + carrot on two adjacent tiles.
+- **v2** adds one fed and cared goose (coop at (4, 3)), delayed until the wheat pipeline is producing to avoid ramp-up starvation.
+- **v3** market-responsive selling and fertilizer reuse. Fertilizer from the goose is applied at the start of each plant's bonus window, lifting wheat cap 4 -> 6 and carrot 3 -> 4.
+- **v4** adds a second carrot tile at (3, 3) and one hired hand ($1). Land expansion is available but not automatically triggered at this scale.
+
+Full report and win-rate matrix under [`reports/baselines-elo.md`](reports/baselines-elo.md).
 
 ## Quickstart
 
