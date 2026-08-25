@@ -20,6 +20,9 @@ dev = [
     "pre-commit>=3.8",
     "nbstripout>=0.7",
 ]
+notebooks = [
+    "ipykernel>=6.29",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -44,6 +47,10 @@ select = [
     "RUF",           # ruff-specific
 ]
 ignore = ["E501"]  # line length handled by formatter
+
+[tool.ruff.lint.per-file-ignores]
+# Notebooks use math-domain names (T, I0) and can import mid-cell for readability.
+"notebooks/**" = ["N803", "N806", "E402"]
 
 [tool.ruff.format]
 quote-style = "double"

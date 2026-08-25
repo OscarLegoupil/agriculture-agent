@@ -55,9 +55,8 @@ mlartifacts/
 /.dvc/tmp
 /.dvc/plots
 
-# Reports (keep figures folder, ignore generated)
-reports/figures/*
-!reports/figures/.gitkeep
+# Reports figures are committed as portfolio artifacts.
+# Intermediate large figures should be saved elsewhere.
 
 # Secrets
 .env
