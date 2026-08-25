@@ -1,6 +1,6 @@
 # kaggriculture
 
-Applied machine learning on the Kaggriculture Kaggle challenge. This repository is a working project, not a submission notebook. It exists to demonstrate a reproducible, engineering-grade workflow from raw data to a documented model.
+Applied autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) simulation competition. Two agents compete on separate farms across a 30-day, 720-turn season on a dynamic market. The deliverable is a Python `agent(obs)` function submitted to Kaggle. This repository is a working project, not a submission notebook. It exists to demonstrate a reproducible, engineering-grade workflow from environment analysis to a competitive agent.
 
 ## Status
 
@@ -21,36 +21,38 @@ uv run pytest
 
 ```
 .
-├── configs/           experiment configs (YAML)
-├── data/              raw, interim, processed (gitignored, DVC-tracked)
-├── notebooks/         numbered, single-purpose analysis notebooks
-├── reports/           figures, model cards, writeups
-├── src/kaggriculture/ installable package
-└── tests/             pytest suite
+├── configs/               experiment configs (YAML)
+├── data/                  generated replays and metrics (gitignored, DVC-tracked)
+├── notebooks/             numbered environment analysis and evaluation notebooks
+├── reports/               figures, model cards, writeups
+├── src/kaggriculture/     installable package (agent, env, eval, planning, market)
+└── tests/                 pytest suite
 ```
 
 ## Approach
 
 The project is organized as a sequence of milestones, each tracked by GitHub issues:
 
-1. Project scaffolding and tooling
-2. Data acquisition and validation
-3. Exploratory analysis and problem framing
-4. Baseline model and evaluation harness
-5. Feature engineering
-6. Modeling iterations
-7. Final model, model card, reproducibility check
-8. Portfolio writeup
+1. Foundations and tooling
+2. Environment wrapper and dynamics analysis
+3. Evaluation harness (parallel episode runner, ELO rating, A/B testing)
+4. Rule-based baselines
+5. Economic planning core (per-tile ROI, allocation, feed budgeting)
+6. Market and opponent modeling
+7. Advanced planner (search or MCTS macro-planner plus micro-controller)
+8. Submission, hardening, and final writeup
 
-Each modeling iteration is tracked as an issue stating a hypothesis, closed with a comment reporting the result.
+Each agent iteration is tracked as an issue stating a hypothesis, closed with a comment reporting Elo change, headline metrics, and a replay link.
 
 ## Reproducibility
 
 - Environment pinned via `uv.lock`.
-- Data versioned with DVC.
+- Replay data versioned with DVC.
+- Every A/B evaluation is a config plus a git commit plus a fixed set of episode seeds.
 - Experiments tracked in MLflow (local file store).
-- Every reported result maps to a git commit and a DVC data version.
+- The evaluation protocol (opponent pool, episode count, rating system, significance test) is defined once and reused.
 
 ## License
 
 MIT. See [LICENSE](LICENSE).
+

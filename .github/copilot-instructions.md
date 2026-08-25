@@ -19,12 +19,16 @@ These rules apply to every change made in this repository. Follow them without e
 - Do not add error handling for cases that cannot occur. Validate only at real system boundaries (I/O, user input, external APIs).
 - Do not create helpers for one-off operations.
 
+## Project nature
+
+This is a Kaggle Simulations competition. The deliverable is an autonomous `agent(obs)` function that plays a two-player, 720-turn farming game against other agents. There is no target variable and no train/test split. "Data" means episode replays we generate by running our agent against baselines, plus telemetry from the evaluation harness. The simulator is `kaggle_environments` (env name `"kaggriculture"`).
+
 ## Repository layout
 
-- Installable Python code lives under `src/kaggriculture/`. Import as `from kaggriculture import ...`.
-- Notebooks live under `notebooks/`, numbered and single-purpose (e.g. `01-eda.ipynb`, `02-baseline.ipynb`). Notebooks import from the package; they do not contain reusable logic.
+- Installable Python code lives under `src/kaggriculture/`. Import as `from kaggriculture import ...`. Suggested subpackages: `agent/` (the shipped agent and its components), `env/` (typed obs/action wrappers), `eval/` (episode runner, rating, A/B), `planning/` (economic model, allocator, search), `market/` (price model, forecasting).
+- Notebooks live under `notebooks/`, numbered and single-purpose (e.g. `01-env-dynamics.ipynb`, `02-market-curves.ipynb`, `03-baseline-elo.ipynb`). Notebooks import from the package; they do not contain reusable logic.
 - Tests live under `tests/`, mirroring the package structure. Use `pytest`.
-- Raw data goes in `data/raw/` (gitignored). Derived data in `data/interim/` and `data/processed/`.
+- Replay JSONs and generated episode data live under `data/raw/` (gitignored). Derived tables (per-episode metrics, rating snapshots) in `data/interim/` and `data/processed/`.
 - Experiment configs in `configs/` as YAML. Reports and figures in `reports/`.
 
 ## Tooling
@@ -32,16 +36,17 @@ These rules apply to every change made in this repository. Follow them without e
 - Python environment and packaging: `uv` with `pyproject.toml`. Do not add `requirements.txt`, `setup.py`, `Pipfile`, or Poetry files.
 - Lint and format: `ruff` (both linter and formatter). Type-check `src/` with `mypy`.
 - Test: `pytest`. Every non-trivial function in `src/` should have a test.
-- Experiment tracking: MLflow, local file store under `mlruns/` (gitignored).
-- Data versioning: DVC. Do not commit raw data. Commit `.dvc` pointer files.
+- Simulator: `kaggle-environments` (env name `"kaggriculture"`). Kaggle CLI (`kaggle`) is used for submissions and replay downloads.
+- Experiment tracking: MLflow, local file store under `mlruns/` (gitignored). One MLflow run per agent-vs-opponent-pool evaluation; log config, rating, per-episode outcomes, and replay pointers.
+- Data versioning: DVC. Do not commit large replay JSON blobs. Commit `.dvc` pointer files.
 - Do not add new dependencies without a concrete need in the current change.
 
 ## Reproducibility
 
-- Every experiment must be reproducible from a config + a git commit + a DVC data version.
-- Set random seeds explicitly. No hidden global state.
-- Cross-validation strategy is defined once in `src/kaggriculture/eval/` and reused.
-- Never leak the target. Splits are created before any fitting.
+- Every agent-vs-opponent evaluation must be reproducible from a config + a git commit + a fixed set of episode seeds.
+- Set random seeds explicitly in the agent, the evaluation harness, and the simulator (`env.configuration["seed"]`). No hidden global state.
+- The evaluation protocol (opponent pool, episode count per matchup, rating system, statistical test) is defined once in `src/kaggriculture/eval/` and reused across all A/B comparisons. Do not report ad-hoc win rates.
+- Agents must be deterministic given a seed. If an agent uses randomness, it seeds it from the observation, not from `random` globals.
 
 ## Notebooks
 
