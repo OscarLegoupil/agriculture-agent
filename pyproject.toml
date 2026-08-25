@@ -11,6 +11,9 @@ dependencies = [
     "kaggle>=1.6",
 ]
 
+[project.scripts]
+kagg-compare = "kaggriculture.eval.cli:main"
+
 [project.optional-dependencies]
 dev = [
     "ruff>=0.6",
