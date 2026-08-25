@@ -12,6 +12,16 @@ from kaggriculture.eval.metrics import (
     extract_metrics,
     flatten_row,
 )
+from kaggriculture.eval.rating import (
+    Match,
+    bradley_terry_fit,
+    bradley_terry_to_elo_scale,
+    elo_expected,
+    elo_ratings,
+    elo_trajectory,
+    elo_update,
+    episodes_to_matches,
+)
 from kaggriculture.eval.runner import (
     EpisodeResult,
     run_episode,
@@ -21,7 +31,15 @@ from kaggriculture.eval.runner import (
 
 __all__ = [
     "EpisodeResult",
+    "Match",
+    "bradley_terry_fit",
+    "bradley_terry_to_elo_scale",
     "collect_metrics",
+    "elo_expected",
+    "elo_ratings",
+    "elo_trajectory",
+    "elo_update",
+    "episodes_to_matches",
     "extract_metrics",
     "flatten_row",
     "iter_replays",
