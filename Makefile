@@ -1,4 +1,4 @@
-.PHONY: setup test lint typecheck fmt sim ci clean
+.PHONY: setup test lint typecheck fmt sim view ci clean
 
 setup:
 	uv sync --extra dev
@@ -18,6 +18,9 @@ fmt:
 
 sim:
 	uv run python -c "from kaggle_environments import make; env = make('kaggriculture', configuration={'episodeSteps': 720, 'seed': 0}); env.run(['pass', 'starter']); s = env.steps[-1]; print(f'Player 0: {s[0].reward:.0f}  Player 1: {s[1].reward:.0f}  status={s[0].status}')"
+
+view:
+	uv run kagg-view $(A) $(B) --seed $(if $(SEED),$(SEED),0)
 
 ci: lint fmt-check typecheck test
 

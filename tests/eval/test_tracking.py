@@ -1,5 +1,4 @@
 """Test MLflow tracking (skipped if mlflow is not installed)."""
-# ruff: noqa: E402
 
 from __future__ import annotations
 

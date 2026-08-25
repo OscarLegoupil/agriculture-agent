@@ -13,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 kagg-compare = "kaggriculture.eval.cli:main"
+kagg-view = "kaggriculture.eval.view:main"
 
 [project.optional-dependencies]
 dev = [
@@ -57,6 +58,8 @@ ignore = ["E501"]  # line length handled by formatter
 [tool.ruff.lint.per-file-ignores]
 # Notebooks use math-domain names (T, I0) and can import mid-cell for readability.
 "notebooks/**" = ["N803", "N806", "E402"]
+# importorskip must run before the tracking imports.
+"tests/eval/test_tracking.py" = ["E402"]
 
 [tool.ruff.format]
 quote-style = "double"

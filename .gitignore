@@ -58,6 +58,9 @@ mlartifacts/
 # Reports figures are committed as portfolio artifacts.
 # Intermediate large figures should be saved elsewhere.
 
+# Rendered HTML replays (large self-contained bundles, generated on demand).
+reports/replays/
+
 # Secrets
 .env
 .env.*
