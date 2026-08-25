@@ -8,7 +8,7 @@ Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions
 
 - [x] **M1** foundations, CI, deps, smoke test
 - [x] **M2** typed env wrappers, action legality checker, 5 dynamics notebooks
-- [ ] **M3** evaluation harness (parallel runner, Bradley-Terry rating, A/B testing)
+- [x] **M3** evaluation harness: parallel runner, replay logger, per-episode metrics, Bradley-Terry rating, A/B compare CLI, MLflow tracking
 - [ ] **M4** rule-based baselines
 - [ ] **M5** economic planning core (per-tile ROI, allocator, feed budgeting)
 - [ ] **M6** market and opponent modeling
@@ -41,6 +41,27 @@ Wheat and strawberry are the most reliably-demanded. Melon has near-zero shop de
 </table>
 
 Details in [`notebooks/`](notebooks/): market curves, crop yields, animal economics, town demand, hire ROI.
+
+## Evaluating agents
+
+The eval harness runs pairings in parallel with deterministic seeds and seat swapping, and reports Bradley-Terry Elo, Wilson CIs, and a sign-test p-value.
+
+```bash
+uv run kagg-compare pass starter --n 50 --config '{"episodeSteps": 720}'
+```
+
+```
+=== kagg-compare: pass vs starter ===
+episodes: 100  duration: 32.1s  (0.32s/ep)
+
+pass                  W:    0  L:  100  T:   0   win_rate: 0.0%   [95% CI: 0.0%-3.7%]
+starter               W:  100  L:    0  T:   0   win_rate: 100.0% [95% CI: 96.3%-100.0%]
+
+sign test (two-sided): p = 1.58e-30
+Bradley-Terry Elo (mean 1500):  starter 2100  pass 900  delta +1200
+```
+
+Add `--replay-dir data/raw/replays` to save every episode's JSON and a `manifest.jsonl` for downstream analysis. Add `--mlflow` to log to a local MLflow store.
 
 ## Quickstart
 
