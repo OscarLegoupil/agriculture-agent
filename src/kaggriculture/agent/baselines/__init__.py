@@ -6,5 +6,6 @@ in-process use, or point the runner at the file for Kaggle-style loading.
 """
 
 from kaggriculture.agent.baselines.v0_wheat import agent as v0_wheat
+from kaggriculture.agent.baselines.v1_mixed import agent as v1_mixed
 
-__all__ = ["v0_wheat"]
+__all__ = ["v0_wheat", "v1_mixed"]
