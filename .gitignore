@@ -12,9 +12,9 @@ dist/
 .eggs/
 
 # Virtual environments
-.venv/
-venv/
-env/
+/.venv/
+/venv/
+/env/
 
 # uv
 .uv/
