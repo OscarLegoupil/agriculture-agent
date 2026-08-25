@@ -1,6 +1,7 @@
 """Typed views and helpers over the kaggriculture environment."""
 
-from kaggriculture.env import actions, constants
+from kaggriculture.env import actions, constants, legality
+from kaggriculture.env.legality import Issue, check
 from kaggriculture.env.observation import (
     Empty,
     Farm,
@@ -18,6 +19,7 @@ from kaggriculture.env.observation import (
 __all__ = [
     "Empty",
     "Farm",
+    "Issue",
     "Locked",
     "Market",
     "Observation",
@@ -28,5 +30,7 @@ __all__ = [
     "Town",
     "Weed",
     "actions",
+    "check",
     "constants",
+    "legality",
 ]
