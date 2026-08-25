@@ -27,6 +27,11 @@ dev = [
 notebooks = [
     "ipykernel>=6.29",
 ]
+# Behind a corporate SSL-inspection proxy (e.g. Zscaler)? Install this extra
+# and Python's SSL will use the Windows trust store instead of certifi's.
+corp-proxy = [
+    "pip-system-certs>=5.3",
+]
 tracking = [
     "mlflow>=2.16",
 ]
