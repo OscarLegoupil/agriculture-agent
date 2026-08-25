@@ -74,6 +74,15 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     ap.add_argument(
         "--json", action="store_true", help="Emit a JSON result summary instead of text"
     )
+    ap.add_argument(
+        "--mlflow",
+        action="store_true",
+        help="Log this comparison to MLflow (requires tracking extra)",
+    )
+    ap.add_argument("--mlflow-experiment", default="kaggriculture", help="MLflow experiment name")
+    ap.add_argument(
+        "--mlflow-uri", default=None, help="MLflow tracking URI (default local mlruns/)"
+    )
     return ap.parse_args(argv)
 
 
@@ -171,6 +180,17 @@ def main(argv: list[str] | None = None) -> int:
         write_manifest(replay_dir, results)
 
     summary = _summary_dict(args.agent_a, args.agent_b, results, elapsed, replay_dir)
+
+    if args.mlflow:
+        from kaggriculture.eval.tracking import log_to_mlflow
+
+        run_id = log_to_mlflow(
+            summary,
+            results,
+            experiment_name=args.mlflow_experiment,
+            tracking_uri=args.mlflow_uri,
+        )
+        print(f"mlflow run_id: {run_id}", file=sys.stderr)
 
     if args.json:
         json.dump(asdict(summary), sys.stdout, indent=2)

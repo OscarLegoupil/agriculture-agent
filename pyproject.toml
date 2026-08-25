@@ -26,6 +26,9 @@ dev = [
 notebooks = [
     "ipykernel>=6.29",
 ]
+tracking = [
+    "mlflow>=2.16",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -60,7 +63,7 @@ quote-style = "double"
 indent-style = "space"
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 files = ["src"]
 strict = true
 warn_unused_ignores = true
@@ -69,6 +72,10 @@ warn_redundant_casts = true
 [[tool.mypy.overrides]]
 module = ["kaggle_environments", "kaggle_environments.*"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["numpy", "numpy.*"]
+follow_imports = "skip"
 
 [tool.pytest.ini_options]
 minversion = "8.0"
