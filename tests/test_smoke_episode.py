@@ -15,7 +15,7 @@ def test_full_episode_terminates_with_valid_rewards() -> None:
     assert len(final) == 2
     assert all(s.status == "DONE" for s in final)
     for s in final:
-        assert isinstance(s.reward, (int, float))
+        assert isinstance(s.reward, int | float)
         assert s.reward >= 0
 
 

@@ -55,4 +55,3 @@ Each agent iteration is tracked as an issue stating a hypothesis, closed with a 
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
