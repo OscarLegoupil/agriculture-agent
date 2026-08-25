@@ -1,74 +1,69 @@
 # kaggriculture
 
-Applied autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) simulation competition. Two agents compete on separate farms across a 30-day, 720-turn season on a dynamic market. The deliverable is a Python `agent(obs)` function submitted to Kaggle. This repository is a working project, not a submission notebook. It exists to demonstrate a reproducible, engineering-grade workflow from environment analysis to a competitive agent.
+[![CI](https://github.com/OscarLegoupil/agriculture-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/OscarLegoupil/agriculture-agent/actions/workflows/ci.yml)
 
-## Status
+Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) Kaggle simulation. Two players compete on separate farms across a 30-day, 720-turn season on a dynamic market. This is a working project, not a submission notebook: reproducible workflow from environment analysis to a competitive agent.
 
-Milestone 1 (foundations, CI, deps, smoke test) and Milestone 2 (env wrappers, action legality, dynamics notebooks) are complete. Next: milestone 3, the evaluation harness. See open issues and milestones for the current plan.
+## Progress
+
+- [x] **M1** foundations, CI, deps, smoke test
+- [x] **M2** typed env wrappers, action legality checker, 5 dynamics notebooks
+- [ ] **M3** evaluation harness (parallel runner, Bradley-Terry rating, A/B testing)
+- [ ] **M4** rule-based baselines
+- [ ] **M5** economic planning core (per-tile ROI, allocator, feed budgeting)
+- [ ] **M6** market and opponent modeling
+- [ ] **M7** advanced planner
+- [ ] **M8** submission, hardening, final writeup
+
+## The environment at a glance
+
+![Market price curves for all 9 resources](reports/figures/market-curves-grid.png)
+
+Sell prices react to inventory shifts with different shapes on each side of the equilibrium `I0`. Premium goods (strawberry, melon, milk, wool) crash to the $1 floor on modest gluts. Carrot, tomato, and egg use a `hinge` shape that spikes sharply past a threshold on scarcity. Wheat is the only near-linear resource, and the only staple.
+
+<table>
+<tr>
+<td width="50%">
+
+![Crop ROI at base prices](reports/figures/crop-roi.png)
+
+Melon leads `$/tile/day` at base prices, but is glut-crash prone. Strawberry gains the most from fertilizer.
+
+</td>
+<td width="50%">
+
+![Town demand across 5000 seasons](reports/figures/town-demand.png)
+
+Wheat and strawberry are the most reliably-demanded. Melon has near-zero shop demand. Wool distribution is bimodal because yarn stores may never spawn.
+
+</td>
+</tr>
+</table>
+
+Details in [`notebooks/`](notebooks/): market curves, crop yields, animal economics, town demand, hire ROI.
 
 ## Quickstart
 
-Prerequisites: Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/), Git, and a Kaggle account with API credentials configured (`~/.kaggle/kaggle.json`).
+Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/).
 
 ```bash
 git clone https://github.com/OscarLegoupil/agriculture-agent.git
 cd agriculture-agent
 uv sync --extra dev --extra notebooks
 uv run pytest
-```
-
-Run a full 720-turn episode locally:
-
-```bash
-make sim
+make sim   # runs a full 720-turn episode locally
 ```
 
 ## Repository layout
 
 ```
-.
-├── configs/               experiment configs (YAML)
-├── data/                  generated replays and metrics (gitignored, DVC-tracked)
-├── notebooks/             numbered environment analysis and evaluation notebooks
-├── reports/               figures, model cards, writeups
-├── src/kaggriculture/     installable package (agent, env, eval, planning, market)
-└── tests/                 pytest suite
+src/kaggriculture/env/    typed observation wrappers, action builders, legality checker
+notebooks/                numbered dynamics analysis notebooks
+reports/figures/          committed figures produced by notebooks
+tests/                    pytest suite
+configs/                  experiment configs (YAML, populated as milestones land)
+data/                     generated replays and metrics (gitignored, DVC-tracked)
 ```
-
-## Approach
-
-The project is organized as a sequence of milestones, each tracked by GitHub issues:
-
-1. Foundations and tooling
-2. Environment wrapper and dynamics analysis
-3. Evaluation harness (parallel episode runner, ELO rating, A/B testing)
-4. Rule-based baselines
-5. Economic planning core (per-tile ROI, allocation, feed budgeting)
-6. Market and opponent modeling
-7. Advanced planner (search or MCTS macro-planner plus micro-controller)
-8. Submission, hardening, and final writeup
-
-Each agent iteration is tracked as an issue stating a hypothesis, closed with a comment reporting Elo change, headline metrics, and a replay link.
-
-## Environment analysis
-
-Five numbered notebooks under [`notebooks/`](notebooks/) explore the simulator's dynamics. Figures are committed under [`reports/figures/`](reports/figures/).
-
-1. [`01-market-curves.ipynb`](notebooks/01-market-curves.ipynb): sell-price curves for all 9 resources.
-2. [`02-crop-yields.ipynb`](notebooks/02-crop-yields.ipynb): per-crop yield trajectories and a $/tile/day ROI table at base prices.
-3. [`03-animal-economics.ipynb`](notebooks/03-animal-economics.ipynb): cumulative net revenue and break-even days per animal under two feed-cost regimes.
-4. [`04-town-demand.ipynb`](notebooks/04-town-demand.ipynb): per-resource demand distribution across 5000 simulated seasons.
-5. [`05-hire-cost.ipynb`](notebooks/05-hire-cost.ipynb): Fibonacci hire cost and break-even by resource.
-
-The env wrapper package [`src/kaggriculture/env/`](src/kaggriculture/env/) provides typed Observation dataclasses, action builders, a legality checker for diagnostics, and constants transcribed from `kaggle-environments >= 1.32.7`.
-
-## Reproducibility
-
-- Environment pinned via `uv.lock`.
-- Replay data versioned with DVC.
-- Every A/B evaluation is a config plus a git commit plus a fixed set of episode seeds.
-- Experiments tracked in MLflow (local file store).
-- The evaluation protocol (opponent pool, episode count, rating system, significance test) is defined once and reused.
 
 ## License
 
