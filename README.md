@@ -10,7 +10,7 @@ Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions
 - [x] **M2** typed env wrappers, action legality checker, 5 dynamics notebooks
 - [x] **M3** evaluation harness: parallel runner, replay logger, per-episode metrics, Bradley-Terry rating, A/B compare CLI, MLflow tracking
 - [x] **M4** rule-based baselines: five hand-crafted agents (v0-v4), each closed with a two-agent A/B, plus a round-robin Elo report
-- [ ] **M5** economic planning core (per-tile ROI, allocator, feed budgeting)
+- [x] **M5** economic planning core: per-crop and per-animal ROI tables, wheat feed budgeter, static tile allocator, dynamic re-planner
 - [ ] **M6** market and opponent modeling
 - [ ] **M7** advanced planner
 - [ ] **M8** submission, hardening, final writeup
@@ -77,6 +77,18 @@ Each baseline exercises one strategic axis and closes its commit with an A/B aga
 
 Full report and win-rate matrix under [`reports/baselines-elo.md`](reports/baselines-elo.md).
 
+## Economic planning core
+
+M5 turns the dynamics notebooks into a small operations-research layer under `src/kaggriculture/planning/`:
+
+- `crop_roi(crop, watered, fertilized, price)` returns lifecycle units, days to peak, and coins per tile per day. Fertilizer cost is a caller-supplied parameter so animal-produced (free) and market-bought ($100) regimes stay explicit.
+- `animal_roi(animal, cared, product_price, feed_cost_per_day)` returns steady-state coins per day and an exact discrete break-even day, computed from a cumulative-net trace rather than the loose continuous formula in the notebook.
+- `feed_budget(roster)` projects daily wheat consumption from an `AnimalPlan` list and derives the wheat tile count required to sustain the peak.
+- `allocate(tiles, horizon_days, price_map)` enumerates every feasible animal roster and picks the (roster + wheat reserve + best fill crop) combination that maximises expected coins over the remaining horizon.
+- `DynamicReplanner` wraps the allocator with a state machine that re-plans when observed prices drift more than `threshold_pct` from the working forecast, and exposes a `replan_frequency` counter for the harness.
+
+The v5+ agents will consume these tables rather than hard-coding tile choices.
+
 ## Quickstart
 
 Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/).
@@ -92,12 +104,13 @@ make sim   # runs a full 720-turn episode locally
 ## Repository layout
 
 ```
-src/kaggriculture/env/    typed observation wrappers, action builders, legality checker
-notebooks/                numbered dynamics analysis notebooks
-reports/figures/          committed figures produced by notebooks
-tests/                    pytest suite
-configs/                  experiment configs (YAML, populated as milestones land)
-data/                     generated replays and metrics (gitignored, DVC-tracked)
+src/kaggriculture/env/       typed observation wrappers, action builders, legality checker
+src/kaggriculture/planning/  ROI tables, feed budget, tile allocator, dynamic re-planner
+notebooks/                   numbered dynamics analysis notebooks
+reports/figures/             committed figures produced by notebooks
+tests/                       pytest suite
+configs/                     experiment configs (YAML, populated as milestones land)
+data/                        generated replays and metrics (gitignored, DVC-tracked)
 ```
 
 ## License
