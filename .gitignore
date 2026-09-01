@@ -49,6 +49,7 @@ data/processed/*
 # MLflow local store
 mlruns/
 mlartifacts/
+mlflow.db
 
 # DVC
 /.dvc/cache
