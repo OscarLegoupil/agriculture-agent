@@ -179,9 +179,9 @@ def test_forecaster_beats_naive_current_price_at_5_day_horizon() -> None:
     total_forecast = sum(forecast_err.values()) / n
     total_naive = sum(naive_err.values()) / n
     # Rate-based forecast must be at least as good as constant-price.
-    assert (
-        total_forecast <= total_naive * 1.10
-    ), f"forecast {total_forecast:.2f} vs naive {total_naive:.2f}"
+    assert total_forecast <= total_naive * 1.10, (
+        f"forecast {total_forecast:.2f} vs naive {total_naive:.2f}"
+    )
 
 
 def test_forecaster_output_plugs_into_replanner_price_map() -> None:
