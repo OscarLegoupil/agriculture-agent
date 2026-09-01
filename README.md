@@ -11,7 +11,7 @@ Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions
 - [x] **M3** evaluation harness: parallel runner, replay logger, per-episode metrics, Bradley-Terry rating, A/B compare CLI, MLflow tracking
 - [x] **M4** rule-based baselines: five hand-crafted agents (v0-v4), each closed with a two-agent A/B, plus a round-robin Elo report
 - [x] **M5** economic planning core: per-crop and per-animal ROI tables, wheat feed budgeter, static tile allocator, dynamic re-planner
-- [ ] **M6** market and opponent modeling
+- [x] **M6** market and opponent modeling: price forecaster ([model card](reports/market-forecaster-card.md)) and opponent inventory tracker
 - [ ] **M7** advanced planner
 - [ ] **M8** submission, hardening, final writeup
 
@@ -89,6 +89,15 @@ M5 turns the dynamics notebooks into a small operations-research layer under `sr
 
 The v5+ agents will consume these tables rather than hard-coding tile choices.
 
+## Market and opponent modeling
+
+M6 adds two online modules used by the planner and by the M7 trading layer:
+
+- `src/kaggriculture/market/` ships a `PriceForecaster` that combines the deterministic price curve, the deterministic town consumption schedule, and an EWMA net-trade-rate estimate. Predicted prices plug straight into `DynamicReplanner`'s `price_map`. Aggregate MAE against a five-pairing pool: $0.05 at 1 step, $1.88 at 1 day, $19.3 at 5 days, versus $0.78 / $17.6 / $84.3 for the naive constant-price baseline. Full protocol and per-commodity breakdown in the [model card](reports/market-forecaster-card.md).
+- `src/kaggriculture/opponent/` ships an `OpponentInventoryTracker` that reconstructs the opponent's hidden shed from the market inventory ledger (dzjiann's bookkeeping identifier, discussion 737027). Measured MAE across the same opponent pool is exactly zero for every commodity, matching the strong identifiability claim. When a commodity's price sits at the floor the tracker widens the uncertainty interval by the maximum orders the opponent could hide.
+
+![Forecaster calibration at 1, 24 and 120 step horizons](reports/figures/forecaster-calibration.png)
+
 ## Quickstart
 
 Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/).
@@ -106,6 +115,8 @@ make sim   # runs a full 720-turn episode locally
 ```
 src/kaggriculture/env/       typed observation wrappers, action builders, legality checker
 src/kaggriculture/planning/  ROI tables, feed budget, tile allocator, dynamic re-planner
+src/kaggriculture/market/    price curve and online forecaster
+src/kaggriculture/opponent/  inventory inference from public state
 notebooks/                   numbered dynamics analysis notebooks
 reports/figures/             committed figures produced by notebooks
 tests/                       pytest suite
