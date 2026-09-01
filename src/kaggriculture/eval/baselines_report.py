@@ -40,6 +40,17 @@ _DEFAULT_AGENTS: list[tuple[str, str]] = [
 ]
 
 
+def _as_int(value: object) -> int:
+    """Narrow an `object` stat value to `int` for arithmetic.
+
+    Stats dicts store counts as ints under an `object` value type to keep the
+    schema open. This helper asserts the narrowing so mypy is happy without
+    scattering `# type: ignore` across the module.
+    """
+    assert isinstance(value, int), f"expected int, got {type(value).__name__}"
+    return value
+
+
 def _run_round_robin(
     agents: list[tuple[str, str]],
     seeds: list[int],
@@ -75,11 +86,11 @@ def _fit_ratings(
     matches: list[Match] = []
     path_to_short = {path: short for short, path in agents}
     for (short_a, short_b), s in stats.items():
-        for _ in range(int(s["wins_a"])):  # type: ignore[arg-type]
+        for _ in range(_as_int(s["wins_a"])):
             matches.append(Match(short_a, short_b, 1.0))
-        for _ in range(int(s["wins_b"])):  # type: ignore[arg-type]
+        for _ in range(_as_int(s["wins_b"])):
             matches.append(Match(short_a, short_b, 0.0))
-        for _ in range(int(s["ties"])):  # type: ignore[arg-type]
+        for _ in range(_as_int(s["ties"])):
             matches.append(Match(short_a, short_b, 0.5))
     _ = path_to_short
     strengths = bradley_terry_fit(matches)
@@ -125,8 +136,8 @@ def _render_report(
                 continue
             key = (row, col) if (row, col) in stats else (col, row)
             s = stats[key]
-            wins = int(s["wins_a"] if key == (row, col) else s["wins_b"])  # type: ignore[arg-type]
-            total = int(s["n"])  # type: ignore[arg-type]
+            wins = _as_int(s["wins_a" if key == (row, col) else "wins_b"])
+            total = _as_int(s["n"])
             matrix[i, j] = wins / total if total else 0.0
 
     fig2, ax2 = plt.subplots(figsize=(7, 6))
