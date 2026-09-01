@@ -63,6 +63,8 @@ ignore = ["E501"]  # line length handled by formatter
 [tool.ruff.lint.per-file-ignores]
 # Notebooks use math-domain names (T, I0) and can import mid-cell for readability.
 "notebooks/**" = ["N803", "N806", "E402"]
+# Forecaster transcribes the simulator's math with matching symbol names.
+"src/kaggriculture/market/forecaster.py" = ["N803", "N806"]
 # importorskip must run before the tracking imports.
 "tests/eval/test_tracking.py" = ["E402"]
 
