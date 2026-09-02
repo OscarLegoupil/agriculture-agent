@@ -1,0 +1,38 @@
+name: v4_early_tail
+description: >
+  v4 physical setup with earlier tail-liquidation. Route-level liquidate
+  triggers on day 27 instead of 29, and shed_high_water is halved so any
+  build-up salvages sooner. Intended for opponents that produce fast and
+  crash prices late.
+
+crops:
+  - {tile: [3, 4], crop: WHEAT}
+  - {tile: [4, 4], crop: CARROT}
+  - {tile: [3, 3], crop: CARROT}
+
+structures:
+  - {tile: [4, 3], kind: COOP, animal: GOOSE}
+
+hand:
+  primary_tiles: [[3, 3]]
+  fallback_tiles: [[4, 4], [3, 4]]
+
+land_buys: []
+
+market_policy:
+  seed_buy_order: [WHEAT, CARROT]
+  animal_buy_order: [GOOSE]
+  hire:
+    from_day: 3
+    per_day: 1
+    price_cap: 10
+  feed_stockpiles:
+    - {product: WHEAT, for_animal: GOOSE, buy_below: 20, cap: 10, reserve: 2}
+  sell_order: [WHEAT, CARROT, EGG, FERTILIZER]
+  sell_min_price:
+    WHEAT: 25
+    CARROT: 35
+    EGG: 50
+    FERTILIZER: 90
+  liquidate_from_day: 27
+  shed_high_water: 40

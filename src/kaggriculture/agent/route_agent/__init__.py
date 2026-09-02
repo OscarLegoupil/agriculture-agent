@@ -17,6 +17,13 @@ from kaggriculture.agent.route_agent.schema import (
     RouteOverride,
     StructureAssignment,
 )
+from kaggriculture.agent.route_agent.selector import (
+    RouteSelector,
+    SelectorSignals,
+    build_default_selector,
+    default_heuristic,
+    portfolio_from_yaml_paths,
+)
 
 __all__ = [
     "CropAssignment",
@@ -28,9 +35,14 @@ __all__ = [
     "Route",
     "RouteAgent",
     "RouteOverride",
+    "RouteSelector",
+    "SelectorSignals",
     "StructureAssignment",
     "agent_from_yaml",
+    "build_default_selector",
+    "default_heuristic",
     "load_route",
     "micro_agent_from_yaml",
+    "portfolio_from_yaml_paths",
     "wrap_with_micro",
 ]

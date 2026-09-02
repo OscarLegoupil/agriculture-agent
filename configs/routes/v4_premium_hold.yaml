@@ -1,0 +1,37 @@
+name: v4_premium_hold
+description: >
+  v4 physical setup, premium-focused market policy. Holds eggs for 55
+  (v4 is 50) and grows the wheat stockpile to 14 so the goose never
+  misses a feed even during scarcity spikes. Crop sells match v4.
+
+crops:
+  - {tile: [3, 4], crop: WHEAT}
+  - {tile: [4, 4], crop: CARROT}
+  - {tile: [3, 3], crop: CARROT}
+
+structures:
+  - {tile: [4, 3], kind: COOP, animal: GOOSE}
+
+hand:
+  primary_tiles: [[3, 3]]
+  fallback_tiles: [[4, 4], [3, 4]]
+
+land_buys: []
+
+market_policy:
+  seed_buy_order: [WHEAT, CARROT]
+  animal_buy_order: [GOOSE]
+  hire:
+    from_day: 3
+    per_day: 1
+    price_cap: 10
+  feed_stockpiles:
+    - {product: WHEAT, for_animal: GOOSE, buy_below: 22, cap: 14, reserve: 3}
+  sell_order: [EGG, WHEAT, CARROT, FERTILIZER]
+  sell_min_price:
+    WHEAT: 25
+    CARROT: 35
+    EGG: 55
+    FERTILIZER: 90
+  liquidate_from_day: 29
+  shed_high_water: 80
