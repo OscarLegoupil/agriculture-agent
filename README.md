@@ -12,7 +12,7 @@ Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions
 - [x] **M4** rule-based baselines: five hand-crafted agents (v0-v4), each closed with a two-agent A/B, plus a round-robin Elo report
 - [x] **M5** economic planning core: per-crop and per-animal ROI tables, wheat feed budgeter, static tile allocator, dynamic re-planner
 - [x] **M6** market and opponent modeling: price forecaster ([model card](reports/market-forecaster-card.md)) and opponent inventory tracker
-- [ ] **M7** advanced planner
+- [x] **M7** advanced planner: route + micro-controller + public-state selector, tuned by offline beam search
 - [ ] **M8** submission, hardening, final writeup
 
 ## The environment at a glance
@@ -98,6 +98,21 @@ M6 adds two online modules used by the planner and by the M7 trading layer:
 
 ![Forecaster calibration at 1, 24 and 120 step horizons](reports/figures/forecaster-calibration.png)
 
+## Advanced planner
+
+M7 layers a portfolio of route configs under `configs/routes/`, a public-state selector, and an offline beam search under `src/kaggriculture/search/`:
+
+- A route is a YAML plan for one 720-turn episode: tile assignments, coop / pasture placement, hire schedule, land buys, market policy, and an optional embedded micro block. `RouteAgent` in `src/kaggriculture/agent/route_agent/` turns any parsed route into a Kaggle-callable `agent(obs)` and reproduces v4_expansion byte-for-byte on fixed seeds.
+- `MicroController` overlays M6 forecast and opponent-tracker signals on the route's market policy each turn. Rules are additive-only: hard-drop, forecast-salvage, and tail-salvage. In a paired 400-game A/B this overlay beats plain v4 396-4 at defaults, and 386-14 with tuned parameters (sign test p ~= 2e-95, Elo delta +576).
+- `RouteSelector` picks one of four v4 variants after day 3 from opponent tile and land signals. The picked route + a tuned micro layer beats the v4+micro baseline 378-22 on 400 games (Elo delta +494).
+- `kaggriculture.search.beam` is a small discrete-grid beam search that tunes route and micro parameters against a target opponent family. It converges on the same configuration the M7-c heuristic picks for the v4+micro family, and the beam-searched YAML at `configs/routes/tuned/v4_micro.yaml` beats plain v4+micro 189-11 on 200 games (Elo delta +494).
+
+## Current submission
+
+`submissions/20260902-v5/main.py` (agent v5) is the packaged output of M7. It bundles the route decision tree, micro tail-salvage rule, and public-state selector as a single self-contained file with no imports of the `kaggriculture` package.
+
+Runtime posture: 800 ms per-turn hard budget with a safe `PASS` fallback on overrun; per-episode state resets when the observation step index moves backwards, so re-used worker processes cannot leak state. Local smoke test against `starter` on seed 42 finishes at 9604 coins.
+
 ## Quickstart
 
 Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/).
@@ -117,6 +132,10 @@ src/kaggriculture/env/       typed observation wrappers, action builders, legali
 src/kaggriculture/planning/  ROI tables, feed budget, tile allocator, dynamic re-planner
 src/kaggriculture/market/    price curve and online forecaster
 src/kaggriculture/opponent/  inventory inference from public state
+src/kaggriculture/agent/     shipped agent and its route + micro-controller layers
+src/kaggriculture/search/    offline beam search over route + micro parameters
+configs/routes/              route YAMLs (baseline, three v4 variants, tuned/ cache)
+submissions/                 dated Kaggle submission bundles (self-contained main.py)
 notebooks/                   numbered dynamics analysis notebooks
 reports/figures/             committed figures produced by notebooks
 tests/                       pytest suite
