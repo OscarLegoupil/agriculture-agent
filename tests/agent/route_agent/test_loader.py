@@ -38,6 +38,31 @@ def test_route_from_dict_defaults() -> None:
     assert route.market_policy.hire is None
     assert route.market_policy.feed_stockpiles == ()
     assert route.overrides == ()
+    assert route.micro.as_kwargs() == {}
+
+
+def test_route_micro_block_parses_and_defaults() -> None:
+    raw = {
+        "name": "with_micro",
+        "crops": [],
+        "structures": [],
+        "market_policy": {},
+        "micro": {
+            "tail_start_day": 22,
+            "salvage_ratio": 0.85,
+            "drop_ratio": 0.75,
+        },
+    }
+    route = route_from_dict(raw)
+    assert route.micro.tail_start_day == 22
+    assert route.micro.salvage_ratio == 0.85
+    assert route.micro.drop_ratio == 0.75
+    assert route.micro.tail_floor is None
+    assert route.micro.as_kwargs() == {
+        "tail_start_day": 22,
+        "salvage_ratio": 0.85,
+        "drop_ratio": 0.75,
+    }
 
 
 def test_yaml_roundtrip_preserves_tile_coords(tmp_path: Path) -> None:

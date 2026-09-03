@@ -98,6 +98,36 @@ class RouteOverride:
 
 
 @dataclass(frozen=True, slots=True)
+class MicroParams:
+    """Optional micro-controller tuning stored on the route.
+
+    ``None`` values mean "keep the runtime default". This lets the offline
+    search cache only the parameters it actually changed.
+    """
+
+    tail_start_day: int | None = None
+    tail_floor: int | None = None
+    salvage_ratio: float | None = None
+    drop_ratio: float | None = None
+    min_current_price: int | None = None
+    lookahead_days: int | None = None
+
+    def as_kwargs(self) -> dict[str, Any]:
+        return {
+            k: getattr(self, k)
+            for k in (
+                "tail_start_day",
+                "tail_floor",
+                "salvage_ratio",
+                "drop_ratio",
+                "min_current_price",
+                "lookahead_days",
+            )
+            if getattr(self, k) is not None
+        }
+
+
+@dataclass(frozen=True, slots=True)
 class Route:
     name: str
     description: str
@@ -107,3 +137,4 @@ class Route:
     land_buys: tuple[LandBuy, ...]
     market_policy: MarketPolicy
     overrides: tuple[RouteOverride, ...] = field(default_factory=tuple)
+    micro: MicroParams = field(default_factory=lambda: MicroParams())

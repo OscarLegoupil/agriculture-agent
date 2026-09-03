@@ -169,7 +169,7 @@ def micro_agent_from_yaml(
     path: str | Path, **kwargs: Any
 ) -> Callable[[dict[str, Any]], dict[str, Any]]:
     """Load a route YAML and return a micro-wrapped agent, threading the route
-    sell thresholds into the salvage rule.
+    sell thresholds and any embedded micro parameters into the wrapper.
     """
     from kaggriculture.agent.route_agent.loader import load_route
     from kaggriculture.agent.route_agent.runner import RouteAgent
@@ -177,8 +177,10 @@ def micro_agent_from_yaml(
     route = load_route(path)
     ra = RouteAgent(route)
     thresholds = dict(route.market_policy.sell_min_price)
-    kwargs.setdefault("sell_thresholds", thresholds)
-    return wrap_with_micro(lambda obs: ra(obs), **kwargs)
+    merged: dict[str, Any] = {"sell_thresholds": thresholds}
+    merged.update(route.micro.as_kwargs())
+    merged.update(kwargs)
+    return wrap_with_micro(lambda obs: ra(obs), **merged)
 
 
 def apply_early_sell_overrides(

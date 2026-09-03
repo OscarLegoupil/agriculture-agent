@@ -14,6 +14,7 @@ from kaggriculture.agent.route_agent.schema import (
     HireSchedule,
     LandBuy,
     MarketPolicy,
+    MicroParams,
     Route,
     RouteOverride,
     StructureAssignment,
@@ -70,6 +71,7 @@ def route_from_dict(raw: dict[str, Any]) -> Route:
         RouteOverride(turn=int(o["turn"]), unit=str(o["unit"]), action=list(o["action"]))
         for o in raw.get("overrides", [])
     )
+    micro = _micro_params(raw.get("micro", {}) or {})
     return Route(
         name=str(raw["name"]),
         description=str(raw.get("description", "")),
@@ -79,6 +81,24 @@ def route_from_dict(raw: dict[str, Any]) -> Route:
         land_buys=land_buys,
         market_policy=market_policy,
         overrides=overrides,
+        micro=micro,
+    )
+
+
+def _micro_params(raw: dict[str, Any]) -> MicroParams:
+    def _int(k: str) -> int | None:
+        return int(raw[k]) if k in raw and raw[k] is not None else None
+
+    def _float(k: str) -> float | None:
+        return float(raw[k]) if k in raw and raw[k] is not None else None
+
+    return MicroParams(
+        tail_start_day=_int("tail_start_day"),
+        tail_floor=_int("tail_floor"),
+        salvage_ratio=_float("salvage_ratio"),
+        drop_ratio=_float("drop_ratio"),
+        min_current_price=_int("min_current_price"),
+        lookahead_days=_int("lookahead_days"),
     )
 
 

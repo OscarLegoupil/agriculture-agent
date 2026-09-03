@@ -1,0 +1,64 @@
+name: tuned_v4_micro
+description: Tuned against opponent family 'v4_micro' via beam search.
+crops:
+- tile:
+  - 3
+  - 4
+  crop: WHEAT
+- tile:
+  - 4
+  - 4
+  crop: CARROT
+- tile:
+  - 3
+  - 3
+  crop: CARROT
+structures:
+- tile:
+  - 4
+  - 3
+  kind: COOP
+  animal: GOOSE
+hand:
+  primary_tiles:
+  - - 3
+    - 3
+  fallback_tiles:
+  - - 4
+    - 4
+  - - 3
+    - 4
+land_buys: []
+market_policy:
+  seed_buy_order:
+  - WHEAT
+  - CARROT
+  animal_buy_order:
+  - GOOSE
+  hire:
+    from_day: 3
+    per_day: 1
+    price_cap: 10
+  feed_stockpiles:
+  - product: WHEAT
+    for_animal: GOOSE
+    buy_below: 20
+    cap: 10
+    reserve: 2
+  sell_order:
+  - WHEAT
+  - CARROT
+  - EGG
+  - FERTILIZER
+  sell_min_price:
+    WHEAT: 25
+    CARROT: 35
+    EGG: 50
+    FERTILIZER: 90
+  liquidate_from_day: 27
+  shed_high_water: 40
+micro:
+  tail_start_day: 22
+  salvage_ratio: 0.85
+  drop_ratio: 0.7
+  tail_floor: 5
