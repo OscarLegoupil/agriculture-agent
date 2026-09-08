@@ -68,6 +68,12 @@ class MarketPolicy:
     `seed_buy_order`, `animal_buy_order`, and `sell_order` control the exact
     order market entries appear in the returned action dict; this matters when
     the simulator processes queued market actions in order.
+
+    `money_reserve` and `feed_days` are only read by phased routes, which size
+    their seed and animal orders from the active phase instead of the fixed
+    per-crop rules above. `money_reserve` is the operating float kept back from
+    animal and seed buys so the next feed order stays affordable; `feed_days`
+    is how many days of wheat to keep stocked per planned structure.
     """
 
     seed_buy_order: tuple[str, ...]
@@ -78,6 +84,8 @@ class MarketPolicy:
     sell_min_price: dict[str, int]
     liquidate_from_day: int
     shed_high_water: int
+    money_reserve: int = 0
+    feed_days: int = 3
 
 
 @dataclass(frozen=True, slots=True)
@@ -128,6 +136,22 @@ class MicroParams:
 
 
 @dataclass(frozen=True, slots=True)
+class Phase:
+    """The farm footprint that should be in place from `from_day` onward.
+
+    A phase restates the whole footprint rather than a delta, so a route can be
+    read top to bottom without replaying earlier phases. The active phase on a
+    given day is the last one whose `from_day` has arrived.
+    """
+
+    from_day: int
+    crops: tuple[CropAssignment, ...]
+    structures: tuple[StructureAssignment, ...]
+    hands: int
+    fertilize: tuple[str, ...] = field(default_factory=tuple)
+
+
+@dataclass(frozen=True, slots=True)
 class Route:
     name: str
     description: str
@@ -138,3 +162,6 @@ class Route:
     market_policy: MarketPolicy
     overrides: tuple[RouteOverride, ...] = field(default_factory=tuple)
     micro: MicroParams = field(default_factory=lambda: MicroParams())
+    # A non-empty `phases` switches the runner from the v4 decision tree to the
+    # multi-worker scheduler, and `crops` / `structures` / `hand` go unused.
+    phases: tuple[Phase, ...] = field(default_factory=tuple)

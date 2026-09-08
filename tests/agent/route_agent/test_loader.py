@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
 import yaml
 
 from kaggriculture.agent.route_agent import load_route
@@ -87,3 +88,46 @@ def test_yaml_roundtrip_preserves_tile_coords(tmp_path: Path) -> None:
     route = load_route(yml)
     assert route.crops[0].tile == (2, 1)
     assert route.hand.primary_tiles == ((2, 1),)
+
+
+def test_phases_parse_with_defaults() -> None:
+    raw = {
+        "name": "phased",
+        "market_policy": {"money_reserve": 400, "feed_days": 2},
+        "phases": [
+            {"from_day": 0, "crops": [{"tile": [1, 2], "crop": "MELON"}], "hands": 3},
+            {
+                "from_day": 6,
+                "crops": [{"tile": [1, 2], "crop": "MELON"}],
+                "structures": [{"tile": [4, 3], "kind": "COOP", "animal": "GOOSE"}],
+                "hands": 8,
+                "fertilize": ["WHEAT"],
+            },
+        ],
+    }
+    route = route_from_dict(raw)
+    assert [p.from_day for p in route.phases] == [0, 6]
+    assert route.phases[0].crops[0].tile == (1, 2)
+    assert route.phases[0].structures == ()
+    assert route.phases[1].hands == 8
+    assert route.phases[1].fertilize == ("WHEAT",)
+    assert route.market_policy.money_reserve == 400
+    assert route.market_policy.feed_days == 2
+
+
+def test_unphased_route_has_no_phases_and_default_market_fields() -> None:
+    route = route_from_dict({"name": "flat", "market_policy": {}})
+    assert route.phases == ()
+    assert route.market_policy.money_reserve == 0
+    assert route.market_policy.feed_days == 3
+
+
+@pytest.mark.parametrize("days", [[4, 0], [0, 0]])
+def test_phases_must_have_strictly_increasing_from_day(days: list[int]) -> None:
+    raw = {
+        "name": "bad",
+        "market_policy": {},
+        "phases": [{"from_day": d, "hands": 1} for d in days],
+    }
+    with pytest.raises(ValueError, match="strictly increasing"):
+        route_from_dict(raw)
