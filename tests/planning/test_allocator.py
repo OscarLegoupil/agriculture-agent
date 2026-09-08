@@ -16,14 +16,23 @@ def test_allocate_zero_tiles_picks_no_animals_no_fill() -> None:
     assert a.fill_crop is None
 
 
+_NO_ANIMALS = {"GOOSE": 0, "COW": 0, "SHEEP": 0}
+
+
 def test_allocate_single_tile_uses_it_for_best_crop() -> None:
-    a = allocate(tiles=1, horizon_days=30)
+    a = allocate(tiles=1, horizon_days=30, max_animals_per_species=_NO_ANIMALS)
     assert a.fill_crop_tiles == 1
     assert a.fill_crop in {"CARROT", "TOMATO", "STRAWBERRY", "MELON"}
     assert a.animal_counts == {}
 
 
-_NO_ANIMALS = {"GOOSE": 0, "COW": 0, "SHEEP": 0}
+def test_allocate_single_tile_prefers_a_pasture_over_a_crop() -> None:
+    # Feed is bought rather than grown, so one animal needs one tile, and its
+    # product plus a daily fertilizer beats anything a single crop tile earns.
+    a = allocate(tiles=1, horizon_days=30)
+    assert a.structure_tiles == 1
+    assert a.wheat_tiles == 0
+    assert a.fill_crop_tiles == 0
 
 
 def test_allocate_prefers_melon_at_base_prices() -> None:
