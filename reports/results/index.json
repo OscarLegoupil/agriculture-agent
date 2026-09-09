@@ -34,6 +34,181 @@
     "bytes": 513640,
     "games": 768
   },
+  "phase2-adaptive12.json.gz": {
+    "sha256_uncompressed": "9057ddc75455df4145c8b3f5657c48a8d6f7a0b2a7a7b0351c9cb1aa988fd8e0",
+    "bytes": 11537,
+    "games": 12
+  },
+  "phase2-adaptive18-anchor.json.gz": {
+    "sha256_uncompressed": "9343796ef7c3ee1be0f5f79a967bfa31f222187f9b26b6fb1ef57d251bf748d3",
+    "bytes": 5290,
+    "games": 4
+  },
+  "phase2-adaptive18.json.gz": {
+    "sha256_uncompressed": "e391e3125fa8da20234c34bcbda3ddbbb9206520c60355974c236684a5e53e44",
+    "bytes": 8161,
+    "games": 8
+  },
+  "phase2-animal-service-bae96c2ac23c.json.gz": {
+    "sha256_uncompressed": "bae96c2ac23c2ff42a1458300cff8c2a7705f193282e0f699959de4d8fab5f28",
+    "bytes": 57500,
+    "games": 16
+  },
+  "phase2-animal-service.json.gz": {
+    "sha256_uncompressed": "288bb3857442f98227a4c4961c595a5b0b490c1019a10c97f6f6db2e6676783e",
+    "bytes": 57189,
+    "games": 16
+  },
+  "phase2-best-anchors.json.gz": {
+    "sha256_uncompressed": "35ab96b00083abde9f1f2aa51093e557d438710b118dab4b58012145a6bfc011",
+    "bytes": 87477,
+    "games": 24
+  },
+  "phase2-capped.json.gz": {
+    "sha256_uncompressed": "f90d01e241712ce74b4cd3f9eb738483434e52a6656096ede7700d8005e87351",
+    "bytes": 8924,
+    "games": 8
+  },
+  "phase2-cashbridge.json.gz": {
+    "sha256_uncompressed": "e9b2412551d962e2435763d8700a6c7f5cda82eedda86b62489fc53ae6580c77",
+    "bytes": 29507,
+    "games": 8
+  },
+  "phase2-correctness.json.gz": {
+    "sha256_uncompressed": "943fa9a2392b6da873855a8a102f1c06c42bf84751fcfb10a9366b764b0aa99e",
+    "bytes": 171363,
+    "games": 48
+  },
+  "phase2-diagnosis.json.gz": {
+    "sha256_uncompressed": "190fc8f9128abb29ced279d679229316f4568287920fff88588c60c0cdedb552",
+    "bytes": 22123,
+    "games": 24
+  },
+  "phase2-economic.json.gz": {
+    "sha256_uncompressed": "4c54d5681b37130187f563f17e6aab57dec9820e7e025f553c15601d450885fe",
+    "bytes": 8656,
+    "games": 8
+  },
+  "phase2-economics-adaptive-model18-extension.json.gz": {
+    "sha256_uncompressed": "d248cfd88a083ff5ea613db63fdb91e5ad92021b4533afd300da1b52b041499d",
+    "bytes": 29692,
+    "games": 8
+  },
+  "phase2-economics-adaptive-model18-results.json.gz": {
+    "sha256_uncompressed": "095241d969a7672d929734abc5a41ea13f4ae58d89ff7996a0ea9783f976bd55",
+    "bytes": 29929,
+    "games": 8
+  },
+  "phase2-economics-adaptive-model22-results.json.gz": {
+    "sha256_uncompressed": "9cd30cc1ddfb798e0326c710a59feb41d29efad0c9bbc3595b975439774bc8ef",
+    "bytes": 29903,
+    "games": 8
+  },
+  "phase2-economics-deferred-herd-results.json.gz": {
+    "sha256_uncompressed": "e080b09251b236614b03c657636a7d3eaa14e3b15d0ce5a281e00b03a6e50873",
+    "bytes": 29522,
+    "games": 8
+  },
+  "phase2-economics-execution-results.json.gz": {
+    "sha256_uncompressed": "abe58498da80a89592f2dfec5d56245a876db4a343294576602f8bb03912acbd",
+    "bytes": 86392,
+    "games": 24
+  },
+  "phase2-economics-market-default-guard-rejected.json.gz": {
+    "sha256_uncompressed": "9885d5803f2778e792b778ed7feb56ae271b8897aaabb8d09b98dae0cd625626",
+    "bytes": 29463,
+    "games": 8
+  },
+  "phase2-economics-market-results.json.gz": {
+    "sha256_uncompressed": "57c8bd67e3358929ab71db4d6676a83181c335cedb9af3e75d3f26c292c7e234",
+    "bytes": 84087,
+    "games": 24
+  },
+  "phase2-frontier-cok-telemetry-d034ce741d13.json.gz": {
+    "sha256_uncompressed": "d034ce741d13a56accef9b44c76dccf9ff681f0afbdd55d43658f9b442822a09",
+    "bytes": 6518,
+    "games": 8
+  },
+  "phase2-frontier-cok-telemetry.json.gz": {
+    "sha256_uncompressed": "18fe298d117d29f00679c8c2ba962dbf0d34fdc110dd2e7a6de0203741ad94f8",
+    "bytes": 6592,
+    "games": 8
+  },
+  "phase2-frontier-screen-e8721025f932.json.gz": {
+    "sha256_uncompressed": "e8721025f9321c75c2d750adc6070bcfdc4903ce37080587a26197a33a0350e9",
+    "bytes": 15293,
+    "games": 16
+  },
+  "phase2-frontier-screen.json.gz": {
+    "sha256_uncompressed": "c9889aeb3e8b7e075ef759f7c1eadbe99f2ad0d9b4cc1b23518b1431f260782d",
+    "bytes": 14982,
+    "games": 16
+  },
+  "phase2-incumbent-extra-anchors.json.gz": {
+    "sha256_uncompressed": "f6c164bdd00f99d229ad32877f2c9b4f00c647d698183180c08d890b97cb8da3",
+    "bytes": 29644,
+    "games": 8
+  },
+  "phase2-incumbent-reproduction.json.gz": {
+    "sha256_uncompressed": "9deb31cb3bc51ee57587831825ca93c5c3ff5d08388a476e128e7859b15e6365",
+    "bytes": 9340,
+    "games": 8
+  },
+  "phase2-input-plan.json.gz": {
+    "sha256_uncompressed": "11202a0d31759aa0383b1c0fcdca318f511ad68d4d06fdecfeedc8663d415d40",
+    "bytes": 57510,
+    "games": 16
+  },
+  "phase2-interaction-development.json.gz": {
+    "sha256_uncompressed": "ba6835f7b976bcebfcf5a40a59ddc3f034c7303ddcc43768f9afd5b1d818b7ca",
+    "bytes": 171501,
+    "games": 48
+  },
+  "phase2-interactions.json.gz": {
+    "sha256_uncompressed": "37e9eb196a30e109a2e73bcadb8d11795fa7e86e9c9e27293084cb4b430f31da",
+    "bytes": 86922,
+    "games": 24
+  },
+  "phase2-logistics.json.gz": {
+    "sha256_uncompressed": "00bda822f4a24ffe3172d80f618cdfeb7d5330ee3fd74387e8e0c9760db0ba4f",
+    "bytes": 34580,
+    "games": 40
+  },
+  "phase2-mixed-expansion.json.gz": {
+    "sha256_uncompressed": "201d381d1a8943aaef4922e09f7077c925076454c61cb1642978fed1751c9024",
+    "bytes": 85102,
+    "games": 24
+  },
+  "phase2-opening-liquidity.json.gz": {
+    "sha256_uncompressed": "d24691f6662dedc954da34a064d9127649c9c0646486c176e82ebc18c2f071e2",
+    "bytes": 14991,
+    "games": 4
+  },
+  "phase2-opening.json.gz": {
+    "sha256_uncompressed": "836299f3e350e6bd3999a7097a24a2bef5bf98e95ef43f4ad486859bff750028",
+    "bytes": 84814,
+    "games": 24
+  },
+  "phase2-preemption.json.gz": {
+    "sha256_uncompressed": "593a98e1fd7f1aecf67015d63250bb438a577f3f91c71499353e2e93c843e8b6",
+    "bytes": 14677,
+    "games": 4
+  },
+  "phase2-production.json.gz": {
+    "sha256_uncompressed": "cf3e757d4c69d8d6369dd65cace19dd884cf13e9bd11c0ba2bd5f027ae213290",
+    "bytes": 28560,
+    "games": 32
+  },
+  "phase2-recurring.json.gz": {
+    "sha256_uncompressed": "4860612f62ff2cc5bbfff98002b5722e4043c3187072f3212c30fa6c9029c705",
+    "bytes": 111694,
+    "games": 32
+  },
+  "phase2-work-bundles.json.gz": {
+    "sha256_uncompressed": "4a8315839aaffa14b1e6595f6250f15fd7f7e904e714ded718b728a09a535cca",
+    "bytes": 114528,
+    "games": 32
+  },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",
     "bytes": 87139,

@@ -1,6 +1,8 @@
 """Matched policy comparison with complete-seed bootstrap uncertainty."""
 
 import argparse
+import gzip
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -44,7 +46,7 @@ def cash_summary(gaps):
     }
 
 
-def compare(incumbent, challenger, weights):
+def matched_panel(incumbent, challenger):
     old, new = indexed(incumbent), indexed(challenger)
     if old.keys() != new.keys():
         raise ValueError("Candidate and incumbent scenario sets differ")
@@ -55,6 +57,16 @@ def compare(incumbent, challenger, weights):
     expected = {(o, s, seat) for o in opponents for s in seeds for seat in (0, 1)}
     if set(old) != expected:
         raise ValueError("Incomplete seed/seat/opponent panel")
+    for key in old:
+        if old[key]["configuration"] != new[key]["configuration"]:
+            raise ValueError(f"Configuration differs: {key}")
+        if old[key].get("resolved_seed") != new[key].get("resolved_seed"):
+            raise ValueError(f"Resolved seed differs: {key}")
+    return old, new, opponents, seeds
+
+
+def compare(incumbent, challenger, weights):
+    old, new, opponents, seeds = matched_panel(incumbent, challenger)
     if (
         not weights
         or set(weights) - set(opponents)
@@ -62,11 +74,6 @@ def compare(incumbent, challenger, weights):
         or not np.isclose(sum(weights.values()), 1)
     ):
         raise ValueError("Weights must be nonnegative and sum to one over present opponents")
-    for key in old:
-        if old[key]["configuration"] != new[key]["configuration"]:
-            raise ValueError(f"Configuration differs: {key}")
-        if old[key].get("resolved_seed") != new[key].get("resolved_seed"):
-            raise ValueError(f"Resolved seed differs: {key}")
     rng = np.random.default_rng(20260910)
     resamples = rng.integers(len(seeds), size=(10000, len(seeds)))
     report = {"seeds": seeds, "weights": weights, "opponents": {}}
@@ -132,6 +139,79 @@ def compare(incumbent, challenger, weights):
     return report
 
 
+def candidate_identity(manifest):
+    """Verify recorded source identity against the exact frozen and archived bytes."""
+    source = manifest["arguments"]["candidate"]
+    digest = manifest["hashes"][source]
+    frozen_name = manifest["executed_candidate"]
+    snapshot_name = manifest["candidate_snapshot"]
+    frozen = Path(frozen_name.replace("\\", "/"))
+    snapshot = Path(snapshot_name.replace("\\", "/"))
+    if not frozen.is_file() or not snapshot.is_file():
+        raise ValueError("Candidate verification requires frozen executable and source snapshot")
+    frozen_bytes = frozen.read_bytes()
+    archived_bytes = gzip.decompress(snapshot.read_bytes())
+    if any(
+        hashlib.sha256(content).hexdigest() != digest for content in (frozen_bytes, archived_bytes)
+    ):
+        raise ValueError("Candidate source, frozen executable, and snapshot hashes disagree")
+    if any(
+        row["candidate"].replace("\\", "/") != frozen_name.replace("\\", "/")
+        for row in manifest["episodes"]
+    ):
+        raise ValueError("Episode candidate identity differs from frozen executable")
+    return {
+        "sha256": digest,
+        "source": source,
+        "executed_candidate": frozen_name,
+        "snapshot": snapshot_name,
+        "revision": manifest["revision"],
+    }
+
+
+def compare_manifests(old, new, weights):
+    """Validate complete experiments before selecting the requested opponent pool."""
+    if old.get("complete") is not True or new.get("complete") is not True:
+        raise ValueError("Selection requires two completed, integrity-checked benchmarks")
+    _, _, all_opponents, seeds = matched_panel(old["episodes"], new["episodes"])
+    for opponent in all_opponents:
+        if old["hashes"][opponent] != new["hashes"][opponent]:
+            raise ValueError(f"Opponent executable changed: {opponent}")
+    provenance_keys = ("environment_version", "interpreter_sha256", "lock_sha256", "dependencies")
+    for key in provenance_keys:
+        if old[key] != new[key]:
+            raise ValueError(f"Provenance mismatch: {key}")
+    identities = {"incumbent": candidate_identity(old), "challenger": candidate_identity(new)}
+    if set(weights) - set(all_opponents):
+        raise ValueError("Requested pool contains an absent opponent")
+    report = compare(
+        [row for row in old["episodes"] if row["opponent"] in weights],
+        [row for row in new["episodes"] if row["opponent"] in weights],
+        weights,
+    )
+    report["identities"] = identities
+    report["provenance"] = {
+        **{key: old[key] for key in provenance_keys},
+        "all_opponent_hashes": {opponent: old["hashes"][opponent] for opponent in all_opponents},
+        "scenario_configuration_sha256": hashlib.sha256(
+            json.dumps(
+                sorted(
+                    (row["opponent"], row["seed"], row["seat"], row["configuration"])
+                    for row in old["episodes"]
+                ),
+                sort_keys=True,
+                separators=(",", ":"),
+            ).encode()
+        ).hexdigest(),
+        "validated_full_panel": {
+            "opponents": all_opponents,
+            "seeds": seeds,
+            "games_per_policy": len(old["episodes"]),
+        },
+    }
+    return report
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("incumbent", type=Path)
@@ -140,20 +220,12 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     old, new = read_result(args.incumbent), read_result(args.challenger)
-    if not old.get("complete") or not new.get("complete"):
-        raise ValueError("Selection requires two completed, integrity-checked benchmarks")
     opponents = (
         ["data/raw/reference-lonespear/main.py", "data/raw/reference-gzm/main.py"]
         if args.pool == "anchor"
         else ["data/raw/reference-seyam/main.py", "data/raw/reference-cok/main.py"]
     )
-    for opponent in {row["opponent"] for row in old["episodes"]} | set(opponents):
-        if old["hashes"][opponent] != new["hashes"][opponent]:
-            raise ValueError(f"Opponent executable changed: {opponent}")
-    for key in ("environment_version", "interpreter_sha256", "lock_sha256"):
-        if old[key] != new[key]:
-            raise ValueError(f"Provenance mismatch: {key}")
-    report = compare(old["episodes"], new["episodes"], dict.fromkeys(opponents, 0.5))
+    report = compare_manifests(old, new, dict.fromkeys(opponents, 0.5))
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report["aggregate"], indent=2))

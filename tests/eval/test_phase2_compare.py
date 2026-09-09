@@ -1,10 +1,12 @@
 """Matched inference must reject missing scenarios and retain paired dependence."""
 
+import gzip
+import hashlib
 import json
 from copy import deepcopy
 
 import pytest
-from scripts.phase2_compare import compare
+from scripts.phase2_compare import compare, compare_manifests
 
 
 def panel():
@@ -95,3 +97,81 @@ def test_all_errors_produce_null_cash_summaries_and_zero_scores():
     assert result["mean_paired_gap_change"] is None
     assert result["paired_gap_n"] == 0
     json.dumps(report, allow_nan=False)
+
+
+def manifest(tmp_path, name):
+    directory = tmp_path / name
+    directory.mkdir()
+    content = f"# frozen {name}\n".encode()
+    executable = directory / "main.py"
+    executable.write_bytes(content)
+    snapshot = directory / "main.py.gz"
+    snapshot.write_bytes(gzip.compress(content, mtime=0))
+    rows = panel()
+    for row in rows:
+        row["candidate"] = str(executable)
+    return {
+        "complete": True,
+        "arguments": {"candidate": f"source-{name}.py"},
+        "hashes": {
+            f"source-{name}.py": hashlib.sha256(content).hexdigest(),
+            "a": "opponent-a-hash",
+            "b": "opponent-b-hash",
+        },
+        "executed_candidate": str(executable),
+        "candidate_snapshot": str(snapshot),
+        "revision": name,
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "interpreter-hash",
+        "lock_sha256": "lock-hash",
+        "dependencies": {"numpy": "same-version"},
+        "episodes": rows,
+    }
+
+
+def test_manifest_pool_selection_preserves_full_panel_integrity(tmp_path):
+    old, new = manifest(tmp_path, "old"), manifest(tmp_path, "new")
+    result = compare_manifests(old, new, {"a": 1.0})
+    assert set(result["opponents"]) == {"a"}
+    assert result["identities"]["challenger"]["sha256"] == new["hashes"]["source-new.py"]
+    assert result["provenance"]["validated_full_panel"]["games_per_policy"] == 8
+    # Unselected opponents must still match: selection cannot conceal changes.
+    changed = deepcopy(new)
+    changed["hashes"]["b"] = "changed"
+    with pytest.raises(ValueError, match="Opponent executable changed"):
+        compare_manifests(old, changed, {"a": 1.0})
+    changed = deepcopy(new)
+    changed["episodes"][-1]["configuration"]["seed"] = 99
+    with pytest.raises(ValueError, match="Configuration differs"):
+        compare_manifests(old, changed, {"a": 1.0})
+    changed = deepcopy(new)
+    changed["complete"] = False
+    with pytest.raises(ValueError, match="completed"):
+        compare_manifests(old, changed, {"a": 1.0})
+    changed = deepcopy(new)
+    changed["dependencies"]["numpy"] = "changed-version"
+    with pytest.raises(ValueError, match="Provenance mismatch"):
+        compare_manifests(old, changed, {"a": 1.0})
+
+
+def test_manifest_rejects_candidate_identity_or_snapshot_mismatch(tmp_path):
+    old, new = manifest(tmp_path, "old"), manifest(tmp_path, "new")
+    changed = deepcopy(new)
+    changed["episodes"][0]["candidate"] = "another-policy.py"
+    with pytest.raises(ValueError, match="Episode candidate identity"):
+        compare_manifests(old, changed, {"a": 1.0})
+    changed = deepcopy(new)
+    changed["hashes"]["source-new.py"] = "incorrect-source-hash"
+    with pytest.raises(ValueError, match="hashes disagree"):
+        compare_manifests(old, changed, {"a": 1.0})
+    from pathlib import Path
+
+    snapshot = Path(new["candidate_snapshot"])
+    original_snapshot = snapshot.read_bytes()
+    snapshot.write_bytes(gzip.compress(b"different source"))
+    with pytest.raises(ValueError, match="hashes disagree"):
+        compare_manifests(old, new, {"a": 1.0})
+    snapshot.write_bytes(original_snapshot)
+    Path(new["executed_candidate"]).write_bytes(b"changed frozen executable")
+    with pytest.raises(ValueError, match="hashes disagree"):
+        compare_manifests(old, new, {"a": 1.0})

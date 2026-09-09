@@ -126,3 +126,72 @@ Exact executable hashes in `data/interim/phase2-economics/market-results.json`:
 - Intensive model and reserve: `0c67635244bf2092f82f70eb73ba1cf4a9aaf64238791798cab1e917088e8d4e`.
 
 All source snapshots are retained. Subsequent lint-only formatting of the builder does not alter these frozen executed artifacts; reproduce their exact bytes with the snapshot restoration command.
+
+## Funded market execution
+
+`scripts/phase2_market_execution.py` tests sale timing independently of crop and animal production changes. For each shed product, it compares exact per-unit receipts from selling now with receipts after one or two days. Both alternatives include the price impact of the farm's own entire sale quantity. Delayed cash incurs a 1% daily charge and storage incurs one cash unit per product per day. The input products wheat and fertilizer retain the incumbent's existing reservation behavior.
+
+The forecast uses current shops only and adds fully serviced production from publicly observed crops and animals, including current held output and our carried inventory. Holding is eligible only when that observable supply scenario remains smaller than known town consumption. It requires funded labor/feed obligations, keeps at most 24 units, reserves storage headroom, and stops before the terminal liquidation window. A third variant allows a funded position of at most five units when the same inventory model predicts positive resale profit after both buy and sell price impact. This is a bounded experiment with market risk, not risk-free arbitrage; future opponent investments and private inventories remain unknown.
+
+The experiment separates three decisions: one-day holding, two-day holding, and two-day holding plus small funded purchases. It does not tune a grid of price thresholds. All policies retain the incumbent production planner. Synthetic guard probes establish that ample known milk demand permits holding, inadequate maintenance funds prohibit it, and day-29 observations force the original liquidation behavior.
+
+A strategic limitation is that retaining our output also raises the prices available to competing producers. Improving our own sale proceeds may improve a larger opponent's proceeds even more. Match cash gaps, rather than isolated trading income, decide whether this component is useful.
+
+The 24-game screen used seeds 17 and 103, both seats, with identical pinned challenge opponents:
+
+| Policy | Seyam wins / 4; mean gap | COK wins / 4; mean gap |
+|---|---:|---:|
+| Incumbent immediate selling | 1; −19,602.50 | 0; −33,350.25 |
+| Funded one-day holding | 1; −16,340.50 | 0; −44,768.00 |
+| Funded two-day holding | 1; −21,073.25 | 0; −33,218.50 |
+| Two-day holding plus eligible positions | 1; −21,073.25 | 0; −33,218.50 |
+
+No candidate improves match score; reject all three for promotion. The one-day policy slightly improves the Seyam gap but materially worsens COK. The two-day policy remains near the incumbent, with mixed signs. No speculative purchase satisfies the economic and funding guards in these eight scenarios, so the third candidate reproduces two-day holding exactly. This is evidence that the proposed public-state opportunities were unavailable under these constraints, not a test showing active speculation is profitable.
+
+Every game completed normally, with no stderr turns or storage overflow. Maximum observed decisions were 103.7 ms, 13.5 ms and 74.1 ms respectively under concurrent experiment load. The experimental source remains isolated from the deployed policy.
+
+Exact candidates in `data/interim/phase2-economics/execution-results.json`:
+
+- One day: `96e981b8f1188674d460f9ebd5673c31179f5329421c939cc83dfbe5aab671af`.
+- Two days: `0f66c4f51da58fe3d38abd418c761f74e3fda17104b24c22822db5f915df8aea`.
+- Position eligibility: `61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52`.
+
+The largest observed gap still arises before market holding becomes affordable. These results support prioritizing early liquidity and production execution rather than adding this trading component to the incumbent.
+
+## Adaptive herd after the liquidity/model interaction
+
+The combined liquidity, market-model and expansion candidate subsequently became the strongest development challenger (`0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`). Adaptive species allocation was therefore retested on that stronger foundation rather than inferred from its earlier failure on v7. `scripts/phase2_adaptive_herd.py` allows at most 14 animals per species and either 18 or 22 in total. Owned animals awaiting placement count toward the total, and at most two may be pending, limiting forecasts that overlook unplaced purchases. No other production or scheduler behavior changes.
+
+| Candidate / development panel | Seyam wins; mean gap | COK wins; mean gap |
+|---|---:|---:|
+| Fixed herd, seeds 17/103 | 4/4; +17,899.75 | 0/4; −35,825.00 |
+| Adaptive 18, seeds 17/103 | 3/4; +6,652.50 | 0/4; −21,459.25 |
+| Adaptive 22, seeds 17/103 | 3/4; +13,234.25 | 0/4; −23,875.75 |
+| Adaptive 18, extension seeds 0/42 | 2/4; −2,832.75 | 0/4; −25,510.50 |
+
+The 18-animal extension was justified by an observed mechanism, despite no initial COK wins: on seed 17 seat 0, it placed 12 cows, sold 318 milk and finished with 117,454 cash, compared with 63,486 for the fixed-herd challenger. COK also earned more, leaving a 20,648 deficit. On other scenarios, six to eight cows pushed day-20 milk prices to 3–36, limiting revenue despite higher output. Simply filling the milk demand with more cows can therefore erase the attractive current price.
+
+Across all 24 additional games, neither adaptive herd wins a COK matchup. The larger herd does not improve the initial COK gap and adds obligations. These candidates remain unpromoted; the reduced COK deficit is a development observation, not evidence that its strategy-family gate is met. The next economic question is the value of retaining investment capacity until shop demand becomes observable, rather than committing most animal slots under the opening prior.
+
+Exact candidates and locally retained complete records:
+
+- Adaptive 18: `33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039`; `adaptive-model18-results.json` and `adaptive-model18-extension.json` under `data/interim/phase2-economics/`.
+- Adaptive 22: `3ce96e20303ccbd0fbf8d42beaf4bb6698e8be04043c3634a5b3bad953615873`; `adaptive-model22-results.json` in the same directory.
+
+All three manifests identify the identical frozen `0098d9e4...` base and retain exact candidate snapshots.
+
+## Deferring herd flexibility until town evidence
+
+One final eight-game screen tests whether waiting for two actual shop observations improves species allocation. In the default interpreter, shops unlock every three days, so the second observation arrives on day 6. `scripts/phase2_deferred_herd.py` uses the observed shop-instance count, never future identities. It preserves original 4/6/8 species limits until that point, then permits 14 per species, retaining the 18-animal total and two-pending-animal limits. The exact base is asserted to be `0098d9e4...`.
+
+The fixed-herd reference has only 8–11 placed animals on day 6 in this panel, leaving investment capacity for the intervention. The policy does not explicitly reserve capital or animal slots, however; the species limits and pending-purchase guard also change early actions. It therefore tests this specific deferred-flexibility policy, not the general optimal value of waiting for information.
+
+| Policy on seeds 17/103, both seats | Seyam wins / 4; mean gap | COK wins / 4; mean gap |
+|---|---:|---:|
+| Fixed-herd challenger | 4; +17,899.75 | 0; −35,825.00 |
+| Immediate adaptive 18 | 3; +6,652.50 | 0; −21,459.25 |
+| Two-shop deferred flexibility | 1; −7,311.75 | 0; −27,124.75 |
+
+Reject the deferred candidate and do not extend the screen: it produces no COK win and materially weakens Seyam results. Its mean own cash against Seyam is 110,204.50, another example of increased absolute income without stronger match performance. By day 15 it has 11–13 sheep against Seyam, while COK seed 17 seat 0 leads it to 14 cows; observable demand changes the allocation, but that response is not sufficient for competitive improvement.
+
+All eight games completed normally with zero stderr turns and a maximum observed decision of 105.9 ms. Exact executable: `21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629`; full manifest and episodes: `data/interim/phase2-economics/deferred-herd-results.json`. The source is an original modification of this repository's frozen challenger and remains isolated from deployment.

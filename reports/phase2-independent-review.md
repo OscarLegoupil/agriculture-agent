@@ -128,3 +128,128 @@ shop-path caveat, run packaging/state-reset/resource checks, and preserve a
 single untouched holdout. A high score on this named local pool remains
 separate from live leaderboard evidence and uncertainty about opponent
 coverage.
+
+## Subsequent bounded animal-service experiment
+
+A separate implementation experiment tested finite-horizon feed/care decisions
+on unchanged v7. `scripts/phase2_animal_service.py --probe` checks 1,980 small
+state transitions against the official animal refresh, including missed feeds,
+production-eve care consumption and care banked after production. The model
+uses current quotes only and consistently applies admitted feed demand to
+purchases and sale reserves.
+
+The candidate is
+`92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707`.
+It was rejected after 16 historical development games (17 and 103, both seats,
+four opponents):
+
+| Opponent | Incumbent wins | Service-DP wins | Incumbent mean gap | Service-DP mean gap |
+|---|---:|---:|---:|---:|
+| lonespear | 4/4 | 2/4 | 13,891.50 | −1,194.75 |
+| GzmCR | 1/4 | 1/4 | −8,471.00 | −14,308.50 |
+| Seyam | 1/4 | 0/4 | −19,602.50 | −18,072.25 |
+| COK | 0/4 | 0/4 | −33,350.25 | −64,560.50 |
+
+The intervention reduced feeding/care work without reliable competitive gain.
+Against COK, candidate cash rose by 20,715.75 while the cash gap worsened by
+31,210.25: a direct counterexample to promoting on own cash. These are
+whole-policy interventions including opponent responses and changed shop
+paths. All executions finished normally with zero stderr and maximum observed
+action time 76.5 ms.
+
+The transition model is exact for its small animal state; its economic value
+is not. It assumes immediate harvest and constant current prices, charges a
+small action cost without field travel, and credits fertilizer from the final
+refresh that v7's current final-day controller does not collect. Asset
+abandonment and daily replanning also change recovery requirements. These
+limitations and the negative screen rule out promotion. The code remains
+isolated as a reproducible failed experiment; no deployed policy was changed.
+Detailed records are in `results/phase2-animal-service.json.gz` and
+`results/phase2-animal-service-summary.json`.
+
+## Review of the liquidity/model/expansion challenger
+
+The subsequent experimental champion is
+`0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`,
+produced by `phase2_correctness.build("liquidity_model_expand")`. Regenerating
+it during review produces byte-identical source to the content-addressed
+artifact named in `data/raw/phase2-best-path.txt`. Its 710-line executable
+uses only standard-library imports. All referenced parameter keys exist;
+configuration fallbacks cover shed capacity and market-order limits. The
+forecast reads current public market inventories, public crop/animal ages and
+held production, and already unlocked shops. It reads no random seed, future
+realized state, external files or private opponent inventory. There are no
+mutable episode globals beyond fixed initialization parameters.
+
+The implemented changes remove an hour-23 planting opportunity that cannot be
+watered that day, align fertilizer purchase targets and reserves, release fertilizer
+working capital when cash is low, permit affordable partial feed orders, and
+combine a public-inventory price scenario with larger production capacity.
+No fatal accounting or deployment-boundary defect was identified in those
+changes. The candidate still inherits heuristic labor, care, transport and
+terminal task values; this review is not a proof of economic optimality.
+
+The new forecast is a scenario, not an exact forward simulator. It assumes
+future servicing and immediate sale of currently held output, omits future
+replanting and additional herds, approximates care, and does not model crop
+decay before the hypothetical delivery. Future shop demand is an expectation
+over possible shops, which is legitimate but uncertain. Testing the exact
+price curve and empty-farm transitions does not validate production-scenario
+ranking. The observed competitive results, rather than curve agreement alone,
+must justify its use.
+
+The 24 completed anchor development games for this hash record zero failed
+work and stderr, with maximum observed action duration 88.8 ms. These are
+local timing observations, not hosted certification. The six-seed challenge
+record supplied for review remains 7/12 against Seyam and 0/12 against COK;
+the 29.2% equal-weight challenge score fails the stated 50% requirement. The
+incumbent remains the release, and these development results cannot be
+presented as validation or promotion.
+
+The new `phase2_compare.py` addresses the main statistical findings above:
+identical complete scenario sets, exactly one row per seat, common bootstrap
+seed blocks containing both policies, fixed CLI pool weights, completed-run
+markers, executable hashes, interpreter/dependency-lock identity, and matching
+effective configurations. Six comparison/game-contract tests passed during
+this review. Benchmark records now include realized shop sequences and check
+source hashes after the run.
+
+One concrete remaining reporting defect was reproduced: a candidate ERROR
+with `cash=None` correctly receives a zero match score but causes cash-gap
+subtraction to raise `TypeError`. Error-containing panels should produce an
+explicit failed gate and defined missing-cash treatment, not an unusable
+report. Opponent errors should also be counted separately. Freeze the
+challenge identities/weights in the protocol text before validation, and
+include compared artifact identities in the saved comparison report so it
+remains interpretable apart from its command history.
+
+## Pre-validation reporting fixes
+
+The selection protocol and expanded challenger were frozen at
+`9b73672102a64d6818b9c895838360d5e15ebc89`. Subsequent reporting changes do not
+inspect partial validation results or alter policy behavior.
+
+Nullable rewards now remain in the match-score denominator while missing or
+non-finite rewards are excluded from cash summaries with explicit valid and
+missing counts. Paired cash changes use only complete observations for the
+same scenario. Empty cash summaries return JSON null. Candidate, opponent,
+incumbent and incumbent-opponent execution errors are counted separately,
+including both-error episodes. The previously reproduced TypeError is fixed.
+
+`compare_manifests(old, new, weights)` now provides the same integrity checks
+to the CLI and programmatic reporting. It requires completed manifests before
+examining episodes, validates the full scenario panel and every opponent's
+hash before filtering to an anchor/challenge subset, checks environment and
+dependency provenance, and verifies each candidate's declared source hash
+against both its frozen executable and decompressed source snapshot. Every
+episode must name that verified frozen candidate. Changed opponents outside
+the requested pool cannot be silently hidden by filtering.
+
+The returned report includes both candidate identities, revisions, source and
+snapshot paths, all opponent hashes, full-panel dimensions, and a digest of
+scenario configurations. Six targeted tests pass, covering missing rewards,
+error status seat semantics, incomplete and duplicate scenarios, unselected
+opponent mutations, dependency mismatch, and source/frozen/snapshot identity
+failures. Frozen executables and snapshots must be available when re-running
+this integrity-sensitive comparison; source snapshots alone do not silently
+substitute for missing execution artifacts.

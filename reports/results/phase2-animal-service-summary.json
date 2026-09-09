@@ -1,0 +1,55 @@
+{
+  "decision": "reject standalone",
+  "opponents": {
+    "data/raw/reference-cok/main.py": {
+      "dp_wins": 0,
+      "v7_wins": 0,
+      "dp_mean_gap": -64560.5,
+      "v7_mean_gap": -33350.25,
+      "dp_mean_cash": 89481.25,
+      "v7_mean_cash": 68765.5,
+      "dp_feeds": 366.25,
+      "v7_feeds": 404,
+      "dp_care": 344,
+      "v7_care": 389.75
+    },
+    "data/raw/reference-gzm/main.py": {
+      "dp_wins": 1,
+      "v7_wins": 1,
+      "dp_mean_gap": -14308.5,
+      "v7_mean_gap": -8471.0,
+      "dp_mean_cash": 76860.0,
+      "v7_mean_cash": 105492.5,
+      "dp_feeds": 324.75,
+      "v7_feeds": 386,
+      "dp_care": 297.75,
+      "v7_care": 369.75
+    },
+    "data/raw/reference-lonespear/main.py": {
+      "dp_wins": 2,
+      "v7_wins": 4,
+      "dp_mean_gap": -1194.75,
+      "v7_mean_gap": 13891.5,
+      "dp_mean_cash": 89881.25,
+      "v7_mean_cash": 81304.0,
+      "dp_feeds": 322.5,
+      "v7_feeds": 400.5,
+      "dp_care": 298.25,
+      "v7_care": 389.25
+    },
+    "data/raw/reference-seyam/main.py": {
+      "dp_wins": 0,
+      "v7_wins": 1,
+      "dp_mean_gap": -18072.25,
+      "v7_mean_gap": -19602.5,
+      "dp_mean_cash": 82558.25,
+      "v7_mean_cash": 84661.75,
+      "dp_feeds": 352,
+      "v7_feeds": 404.25,
+      "dp_care": 328.5,
+      "v7_care": 390.25
+    }
+  },
+  "transition_contract_checks": 1980,
+  "candidate_hash": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707"
+}

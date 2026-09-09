@@ -1,0 +1,5 @@
+{
+  "summary": "reports\\results\\phase2-paired-summary.json",
+  "label": "Development: gains against three opponents, no COK wins",
+  "generator": "scripts/phase2_figures.py"
+}

@@ -143,3 +143,102 @@ source snapshots are preserved beneath `reports/sources/`:
 
 - Service bundles: `40feb84aa4bbb1683489665d2a1d5dcbbe79dc037b429e6d597edef0c8bb669c`
 - Bundles and input routes: `07b0ef88062a963c99f6c0b08d2624a9c7d63c848d059b31f92b4bc7f88ea64e`
+
+## Mixed-herd expansion and a sustained cash bridge
+
+The next screen preserves the incumbent's mixed production family while
+correcting finite crop valuation, input-stock targets, hour-23 planting, and
+nightly delivery. Three variants use 12 hired hands and a three-quadrant cap:
+four cows/six sheep/eight geese with 40 or 50 crop tiles, and a goose-led
+two-cow/four-sheep/fourteen-goose farm with 44 crop tiles. Crop selection uses
+current-demand values with a modest 1.3 strawberry bias, avoiding the preceding
+experiment's imposed fourfold berry preference. A bounded early herd and ten
+opening wheat plants follow the short-cycle opening hypothesis.
+
+Twenty-four paired games on known seeds 17/103 give:
+
+| Farm | Seyam wins / 4 | Mean cash gap | COK wins / 4 | Mean cash gap |
+|---|---:|---:|---:|---:|
+| Mixed, 40 crops | 0 | −21,101 | 0 | −71,900 |
+| Mixed, 50 crops | 0 | −6,577 | 0 | −67,486 |
+| Goose-led, 44 crops | 2 | +2,454 | 0 | −69,984 |
+
+The mixed farms really reach their 40/50 crop targets and 18 animals; these
+are not paper allocations that remain undeployed. The goose-led farm reaches
+44 crops and 20 animals against Seyam but only 30 crops against COK. The land
+occupancy trigger is not reached before the day-15 investment cutoff, so it
+never buys its third quadrant in those COK games despite later available cash.
+
+The opening diagnosis is more revealing than the target farm size. Against
+Seyam seed 17, the 40-crop variant has 16 melons and four strawberries by day 5,
+cash 669, and only five animals by day 10. The initial wheat is replaced by
+slow crops immediately after day 3; the nominal liquid opening therefore does
+not sustain cash flow until the herd matures.
+
+An eight-game extension keeps ten wheat plants through day 9 in the 50-crop
+variant. The predicted mechanism improves: day-5 cash becomes 1,379 and day-10
+animals become 12 against Seyam seed 17. The measured competitive result still
+fails: 0/4 against each reference, mean gaps −15,740 against Seyam and −52,414
+against COK. Relative to the corresponding 50-crop control, paired gap changes
+are −9,163 and +15,072. Earlier herd growth is insufficient by itself, and
+opponent reactions must be included when evaluating cash-flow interventions.
+
+No variant is promoted. All 32 games finish without failed worker actions or
+stderr; maximum action time is 118.9 ms. Reproduce the screens with:
+
+```powershell
+uv run python scripts/phase2_mixed_expansion.py --workers 3
+uv run python scripts/phase2_mixed_expansion.py --names cashbridge50 --output data/raw/phase2-cashbridge.json --workers 3
+```
+
+Full manifests are `data/raw/phase2-mixed-expansion.json` and
+`data/raw/phase2-cashbridge.json`. They preserve exact candidate snapshots,
+parent opening/production source hashes, configurations, daily realized
+production, transaction ledgers, and runtime records.
+
+## Early recurring cohorts before competitor supply
+
+The final production probe removes animal purchases until day 6 and plants
+strawberries in every non-wheat opening slot. It sustains eight or ten wheat
+plants through day 13, then introduces a small six- or eight-animal herd.
+The hypothesis is to sell an earlier berry wave while funding maintenance from
+short crops, rather than following the competing public agents' later cohorts.
+The variants target 45 and 55 crop tiles on three quadrants with 12 hands.
+
+The first four complete games, seed 17 seat 0 against Seyam and COK for each
+variant, are decisively weak screening results:
+
+| Variant | Own / Seyam cash | Own / COK cash |
+|---|---:|---:|
+| 45 crops, two cows/two sheep/four geese | 40,580 / 82,863 | 35,150 / 120,250 |
+| 55 crops, two sheep/four geese | 47,011 / 138,213 | 32,713 / 135,867 |
+
+The early-cohort mechanism is real: 15–17 strawberries are established by day
+5, with cash 1,668–1,930 and no watering deaths. It does not establish successful
+market preemption. Cash falls to 159–450 by day 10 and remains only 1,463–3,477
+by day 15 while expansion and delayed herd purchases consume receipts. Against
+COK, 135–136 strawberries sell at mean realized prices of approximately 65–73.
+The 45-crop variant never buys its third quadrant and peaks at 42 crops.
+Idle actions reach 1,738–1,917 per game, so insufficient raw labor is not the
+main explanation.
+
+Input transactions also deserve scrutiny before further production search:
+against COK, the 45-crop variant buys 163 fertilizer units, collects 126, uses
+94 and sells 195. Purchases cost 12,495 and sales return 14,334. The resulting
+ledger is consistent, but the large buy/sell flow raises a specific hypothesis
+about low-cash input liquidation followed by replenishment; aggregate totals
+alone cannot prove the timing or avoidable loss.
+
+The remaining twelve planned games are unnecessary for promotion screening
+given cash gaps of 42,283–103,154 in these probes. This is an early rejection,
+not a confidence-bound claim. Whole-policy interventions change the opponent's
+responses and can also change realized shop paths through the official
+environment; these comparisons do not hold future shop draws fixed.
+
+Reproduce the four-game probe with
+`uv run python scripts/phase2_preemption.py --stage probe`. A separate explicit
+`--stage followup` command supports the unrun twelve-game extension. Exact
+sources and the four-game manifest are saved in
+`data/raw/phase2-preemption.json` and `reports/sources/`. All four games complete
+without failed worker actions or stderr; maximum observed decision time is
+10.8 ms.
