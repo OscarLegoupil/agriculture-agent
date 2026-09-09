@@ -1,0 +1,1205 @@
+{
+  "purpose": "One frozen validation panel; no tuning on partial outcomes",
+  "anchor": {
+    "seeds": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2047,
+      2048,
+      2049,
+      2050,
+      2051,
+      2052,
+      2053,
+      2054,
+      2055,
+      2056,
+      2057,
+      2058,
+      2059,
+      2060,
+      2061,
+      2062,
+      2063
+    ],
+    "weights": {
+      "data/raw/reference-lonespear/main.py": 0.5,
+      "data/raw/reference-gzm/main.py": 0.5
+    },
+    "opponents": {
+      "data/raw/reference-gzm/main.py": {
+        "games": 128,
+        "incumbent_score": 0.6640625,
+        "challenger_score": 0.8359375,
+        "score_delta": 0.171875,
+        "delta_ci95": [
+          0.0390625,
+          0.3125
+        ],
+        "incumbent_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": 5737.640625,
+          "median": 4334.0,
+          "p10": -9288.6
+        },
+        "challenger_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": 16475.265625,
+          "median": 17886.5,
+          "p10": -3032.299999999999
+        },
+        "mean_paired_gap_change": 10737.625,
+        "paired_gap_n": 128,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.112997,
+        "failed_work": 0
+      },
+      "data/raw/reference-lonespear/main.py": {
+        "games": 128,
+        "incumbent_score": 0.734375,
+        "challenger_score": 0.9609375,
+        "score_delta": 0.2265625,
+        "delta_ci95": [
+          0.125,
+          0.3359375
+        ],
+        "incumbent_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": 10669.203125,
+          "median": 10681.0,
+          "p10": -6467.0
+        },
+        "challenger_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": 24413.2109375,
+          "median": 27568.5,
+          "p10": 5633.5
+        },
+        "mean_paired_gap_change": 13744.0078125,
+        "paired_gap_n": 128,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.05386,
+        "failed_work": 0
+      }
+    },
+    "aggregate": {
+      "incumbent_score": 0.69921875,
+      "challenger_score": 0.8984375,
+      "score_delta": 0.19921875,
+      "delta_ci95": [
+        0.109375,
+        0.29296875
+      ],
+      "challenger_ci95": [
+        0.8515625,
+        0.94140625
+      ]
+    },
+    "identities": {
+      "incumbent": {
+        "sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+        "source": "submissions/20260909-v7/main.py",
+        "executed_candidate": "data\\interim\\frozen\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee\\main.py",
+        "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz",
+        "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+      },
+      "challenger": {
+        "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+        "source": "data/interim/phase2-challenger/main.py",
+        "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+        "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+        "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+      }
+    },
+    "provenance": {
+      "environment_version": "1.32.7",
+      "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+      "dependencies": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1"
+      },
+      "all_opponent_hashes": {
+        "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+        "data/raw/reference-gzm/main.py": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+        "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+        "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+      },
+      "scenario_configuration_sha256": "a27703b1456b1c9073ba5da5b9c83f0ec6bc3d8f357f140640dc5d5f2ddd0e35",
+      "validated_full_panel": {
+        "opponents": [
+          "data/raw/reference-cok/main.py",
+          "data/raw/reference-gzm/main.py",
+          "data/raw/reference-lonespear/main.py",
+          "data/raw/reference-seyam/main.py"
+        ],
+        "seeds": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026,
+          2027,
+          2028,
+          2029,
+          2030,
+          2031,
+          2032,
+          2033,
+          2034,
+          2035,
+          2036,
+          2037,
+          2038,
+          2039,
+          2040,
+          2041,
+          2042,
+          2043,
+          2044,
+          2045,
+          2046,
+          2047,
+          2048,
+          2049,
+          2050,
+          2051,
+          2052,
+          2053,
+          2054,
+          2055,
+          2056,
+          2057,
+          2058,
+          2059,
+          2060,
+          2061,
+          2062,
+          2063
+        ],
+        "games_per_policy": 512
+      }
+    }
+  },
+  "challenge": {
+    "seeds": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2047,
+      2048,
+      2049,
+      2050,
+      2051,
+      2052,
+      2053,
+      2054,
+      2055,
+      2056,
+      2057,
+      2058,
+      2059,
+      2060,
+      2061,
+      2062,
+      2063
+    ],
+    "weights": {
+      "data/raw/reference-seyam/main.py": 0.5,
+      "data/raw/reference-cok/main.py": 0.5
+    },
+    "opponents": {
+      "data/raw/reference-cok/main.py": {
+        "games": 128,
+        "incumbent_score": 0.0,
+        "challenger_score": 0.0234375,
+        "score_delta": 0.0234375,
+        "delta_ci95": [
+          0.0,
+          0.0625
+        ],
+        "incumbent_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": -43224.78125,
+          "median": -42294.5,
+          "p10": -65952.3
+        },
+        "challenger_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": -35258.78125,
+          "median": -34877.5,
+          "p10": -55669.2
+        },
+        "mean_paired_gap_change": 7966.0,
+        "paired_gap_n": 128,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.149207,
+        "failed_work": 0
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 128,
+        "incumbent_score": 0.0390625,
+        "challenger_score": 0.2421875,
+        "score_delta": 0.203125,
+        "delta_ci95": [
+          0.09375,
+          0.3125
+        ],
+        "incumbent_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": -30270.140625,
+          "median": -32100.5,
+          "p10": -46939.0
+        },
+        "challenger_cash_gap": {
+          "n": 128,
+          "missing": 0,
+          "mean": -11407.65625,
+          "median": -13701.5,
+          "p10": -30046.0
+        },
+        "mean_paired_gap_change": 18862.484375,
+        "paired_gap_n": 128,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.158171,
+        "failed_work": 0
+      }
+    },
+    "aggregate": {
+      "incumbent_score": 0.01953125,
+      "challenger_score": 0.1328125,
+      "score_delta": 0.11328125,
+      "delta_ci95": [
+        0.0546875,
+        0.17578125
+      ],
+      "challenger_ci95": [
+        0.08203125,
+        0.1875
+      ]
+    },
+    "identities": {
+      "incumbent": {
+        "sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+        "source": "submissions/20260909-v7/main.py",
+        "executed_candidate": "data\\interim\\frozen\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee\\main.py",
+        "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz",
+        "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+      },
+      "challenger": {
+        "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+        "source": "data/interim/phase2-challenger/main.py",
+        "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+        "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+        "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+      }
+    },
+    "provenance": {
+      "environment_version": "1.32.7",
+      "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+      "dependencies": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1"
+      },
+      "all_opponent_hashes": {
+        "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+        "data/raw/reference-gzm/main.py": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+        "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+        "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+      },
+      "scenario_configuration_sha256": "a27703b1456b1c9073ba5da5b9c83f0ec6bc3d8f357f140640dc5d5f2ddd0e35",
+      "validated_full_panel": {
+        "opponents": [
+          "data/raw/reference-cok/main.py",
+          "data/raw/reference-gzm/main.py",
+          "data/raw/reference-lonespear/main.py",
+          "data/raw/reference-seyam/main.py"
+        ],
+        "seeds": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026,
+          2027,
+          2028,
+          2029,
+          2030,
+          2031,
+          2032,
+          2033,
+          2034,
+          2035,
+          2036,
+          2037,
+          2038,
+          2039,
+          2040,
+          2041,
+          2042,
+          2043,
+          2044,
+          2045,
+          2046,
+          2047,
+          2048,
+          2049,
+          2050,
+          2051,
+          2052,
+          2053,
+          2054,
+          2055,
+          2056,
+          2057,
+          2058,
+          2059,
+          2060,
+          2061,
+          2062,
+          2063
+        ],
+        "games_per_policy": 512
+      }
+    }
+  },
+  "telemetry": {
+    "incumbent": {
+      "games": 512,
+      "game_seconds": {
+        "mean": 11.128065165234297,
+        "p50": 9.852535849999185,
+        "p95": 19.947366684999178,
+        "max": 32.388059000000794
+      },
+      "per_game_action_p99_seconds": {
+        "mean": 0.0033101054687500004,
+        "p50": 0.002654,
+        "p95": 0.008527299999999998,
+        "max": 0.014914
+      },
+      "per_game_action_max_seconds": {
+        "mean": 0.024417416015625002,
+        "p50": 0.010114,
+        "p95": 0.11169749999999999,
+        "max": 0.288129
+      },
+      "stderr_turns": 1,
+      "errors": 0,
+      "losses_mean_per_game": {
+        "animal_escapes": 0.2890625,
+        "overflow_units": 0.0,
+        "terminal_escapes": 1.15625,
+        "water_deaths": 8.96875
+      },
+      "actions_mean_per_game": {
+        "idle:PASS": 660.89453125,
+        "success:BUILD_COOP": 10.779296875,
+        "success:BUILD_PASTURE": 12.326171875,
+        "success:CARE": 384.0390625,
+        "success:COLLECT_FERTILIZER": 348.853515625,
+        "success:DIG": 19.076171875,
+        "success:DROP": 161.232421875,
+        "success:EAST": 987.58984375,
+        "success:FEED": 396.87890625,
+        "success:FERTILIZE": 117.419921875,
+        "success:HARVEST": 367.76953125,
+        "success:NORTH": 1153.658203125,
+        "success:PICKUP": 188.0234375,
+        "success:PLACE": 18.0859375,
+        "success:PLANT": 128.513671875,
+        "success:SOUTH": 596.861328125,
+        "success:WATER": 479.71484375,
+        "success:WEST": 1077.23828125
+      },
+      "fallback_measure": "Assignment fallback writes stderr; zero stderr establishes zero observed fallbacks. Nonzero stderr is not automatically a fallback count.",
+      "daily_trajectory": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0.0,
+          "animals": 0.0,
+          "land": 1.0,
+          "shed": 0.0,
+          "carried": 0.0
+        },
+        {
+          "step": 24,
+          "cash": 221.5,
+          "crops": 4.5,
+          "animals": 5.5,
+          "land": 1.0,
+          "shed": 0.0,
+          "carried": 0.0
+        },
+        {
+          "step": 48,
+          "cash": 269.75,
+          "crops": 6.25,
+          "animals": 5.5,
+          "land": 1.0,
+          "shed": 2.25,
+          "carried": 0.0
+        },
+        {
+          "step": 72,
+          "cash": 270.28515625,
+          "crops": 9.2578125,
+          "animals": 5.5,
+          "land": 1.0,
+          "shed": 3.49609375,
+          "carried": 0.0
+        },
+        {
+          "step": 96,
+          "cash": 279.552734375,
+          "crops": 12.279296875,
+          "animals": 5.826171875,
+          "land": 1.0,
+          "shed": 4.591796875,
+          "carried": 0.0
+        },
+        {
+          "step": 120,
+          "cash": 281.439453125,
+          "crops": 15.23828125,
+          "animals": 6.19921875,
+          "land": 1.0,
+          "shed": 7.890625,
+          "carried": 0.0
+        },
+        {
+          "step": 144,
+          "cash": 261.6484375,
+          "crops": 16.369140625,
+          "animals": 6.982421875,
+          "land": 1.0,
+          "shed": 9.126953125,
+          "carried": 0.0
+        },
+        {
+          "step": 168,
+          "cash": 284.998046875,
+          "crops": 17.5625,
+          "animals": 8.052734375,
+          "land": 1.2578125,
+          "shed": 12.357421875,
+          "carried": 0.0
+        },
+        {
+          "step": 192,
+          "cash": 322.6796875,
+          "crops": 17.626953125,
+          "animals": 9.12890625,
+          "land": 1.2578125,
+          "shed": 13.6171875,
+          "carried": 0.0
+        },
+        {
+          "step": 216,
+          "cash": 1121.51953125,
+          "crops": 19.13671875,
+          "animals": 10.900390625,
+          "land": 1.8203125,
+          "shed": 21.900390625,
+          "carried": 0.0
+        },
+        {
+          "step": 240,
+          "cash": 1444.037109375,
+          "crops": 23.974609375,
+          "animals": 14.931640625,
+          "land": 1.98828125,
+          "shed": 18.037109375,
+          "carried": 0.0
+        },
+        {
+          "step": 264,
+          "cash": 9059.408203125,
+          "crops": 25.83203125,
+          "animals": 17.349609375,
+          "land": 1.9921875,
+          "shed": 17.849609375,
+          "carried": 0.0
+        },
+        {
+          "step": 288,
+          "cash": 11217.98046875,
+          "crops": 29.302734375,
+          "animals": 17.8984375,
+          "land": 2.0,
+          "shed": 15.013671875,
+          "carried": 0.0
+        },
+        {
+          "step": 312,
+          "cash": 16008.73828125,
+          "crops": 29.052734375,
+          "animals": 17.974609375,
+          "land": 2.0,
+          "shed": 26.431640625,
+          "carried": 0.0
+        },
+        {
+          "step": 336,
+          "cash": 19523.943359375,
+          "crops": 29.001953125,
+          "animals": 17.9765625,
+          "land": 2.0,
+          "shed": 29.650390625,
+          "carried": 0.0
+        },
+        {
+          "step": 360,
+          "cash": 24250.30859375,
+          "crops": 29.041015625,
+          "animals": 17.97265625,
+          "land": 2.0,
+          "shed": 29.4765625,
+          "carried": 0.0
+        },
+        {
+          "step": 384,
+          "cash": 27295.859375,
+          "crops": 28.982421875,
+          "animals": 17.94921875,
+          "land": 2.0,
+          "shed": 31.59765625,
+          "carried": 0.0
+        },
+        {
+          "step": 408,
+          "cash": 30543.595703125,
+          "crops": 29.111328125,
+          "animals": 17.9375,
+          "land": 2.0,
+          "shed": 35.677734375,
+          "carried": 0.0
+        },
+        {
+          "step": 432,
+          "cash": 32676.96875,
+          "crops": 29.505859375,
+          "animals": 17.923828125,
+          "land": 2.0,
+          "shed": 30.638671875,
+          "carried": 0.0
+        },
+        {
+          "step": 456,
+          "cash": 36474.3984375,
+          "crops": 28.447265625,
+          "animals": 17.92578125,
+          "land": 2.0,
+          "shed": 36.09375,
+          "carried": 0.0
+        },
+        {
+          "step": 480,
+          "cash": 39043.50390625,
+          "crops": 28.138671875,
+          "animals": 17.90234375,
+          "land": 2.0,
+          "shed": 38.255859375,
+          "carried": 0.0
+        },
+        {
+          "step": 504,
+          "cash": 43499.478515625,
+          "crops": 26.212890625,
+          "animals": 17.884765625,
+          "land": 2.0,
+          "shed": 39.662109375,
+          "carried": 0.0
+        },
+        {
+          "step": 528,
+          "cash": 46908.751953125,
+          "crops": 27.013671875,
+          "animals": 17.875,
+          "land": 2.0,
+          "shed": 37.82421875,
+          "carried": 0.0
+        },
+        {
+          "step": 552,
+          "cash": 50210.234375,
+          "crops": 26.796875,
+          "animals": 17.857421875,
+          "land": 2.0,
+          "shed": 42.1328125,
+          "carried": 0.0
+        },
+        {
+          "step": 576,
+          "cash": 53107.640625,
+          "crops": 27.416015625,
+          "animals": 17.828125,
+          "land": 2.0,
+          "shed": 43.1640625,
+          "carried": 0.0
+        },
+        {
+          "step": 600,
+          "cash": 57806.455078125,
+          "crops": 27.087890625,
+          "animals": 17.822265625,
+          "land": 2.0,
+          "shed": 43.2578125,
+          "carried": 0.0
+        },
+        {
+          "step": 624,
+          "cash": 60647.720703125,
+          "crops": 28.115234375,
+          "animals": 17.814453125,
+          "land": 2.0,
+          "shed": 43.6796875,
+          "carried": 0.0
+        },
+        {
+          "step": 648,
+          "cash": 64609.171875,
+          "crops": 27.978515625,
+          "animals": 17.80078125,
+          "land": 2.0,
+          "shed": 41.00390625,
+          "carried": 0.0
+        },
+        {
+          "step": 672,
+          "cash": 67843.76171875,
+          "crops": 29.205078125,
+          "animals": 17.796875,
+          "land": 2.0,
+          "shed": 44.31640625,
+          "carried": 0.0
+        },
+        {
+          "step": 696,
+          "cash": 71839.056640625,
+          "crops": 19.7578125,
+          "animals": 16.640625,
+          "land": 2.0,
+          "shed": 49.232421875,
+          "carried": 0.0
+        },
+        {
+          "step": 719,
+          "cash": 78410.4765625,
+          "crops": 3.32421875,
+          "animals": 16.640625,
+          "land": 2.0,
+          "shed": 0.0,
+          "carried": 0.0
+        }
+      ]
+    },
+    "challenger": {
+      "games": 512,
+      "game_seconds": {
+        "mean": 12.361793133007744,
+        "p50": 11.025646549998783,
+        "p95": 24.08629819000125,
+        "max": 37.13464870000098
+      },
+      "per_game_action_p99_seconds": {
+        "mean": 0.005111220703125001,
+        "p50": 0.004309,
+        "p95": 0.012002499999999998,
+        "max": 0.018718
+      },
+      "per_game_action_max_seconds": {
+        "mean": 0.032663767578125,
+        "p50": 0.0137525,
+        "p95": 0.12191035,
+        "max": 0.158171
+      },
+      "stderr_turns": 0,
+      "errors": 0,
+      "losses_mean_per_game": {
+        "animal_escapes": 0.83203125,
+        "overflow_units": 0.0,
+        "terminal_escapes": 1.19140625,
+        "water_deaths": 0.705078125
+      },
+      "actions_mean_per_game": {
+        "idle:PASS": 586.330078125,
+        "success:BUILD_COOP": 9.48828125,
+        "success:BUILD_PASTURE": 10.2578125,
+        "success:CARE": 376.19140625,
+        "success:COLLECT_FERTILIZER": 326.888671875,
+        "success:DIG": 11.017578125,
+        "success:DROP": 160.501953125,
+        "success:EAST": 970.65234375,
+        "success:FEED": 399.384765625,
+        "success:FERTILIZE": 119.9765625,
+        "success:HARVEST": 422.572265625,
+        "success:NORTH": 1199.255859375,
+        "success:PICKUP": 204.609375,
+        "success:PLACE": 18.234375,
+        "success:PLANT": 141.203125,
+        "success:SOUTH": 780.2734375,
+        "success:WATER": 636.021484375,
+        "success:WEST": 1306.06640625
+      },
+      "fallback_measure": "Assignment fallback writes stderr; zero stderr establishes zero observed fallbacks. Nonzero stderr is not automatically a fallback count.",
+      "daily_trajectory": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0.0,
+          "animals": 0.0,
+          "land": 1.0,
+          "shed": 0.0,
+          "carried": 0.0
+        },
+        {
+          "step": 24,
+          "cash": 129.0,
+          "crops": 4.0,
+          "animals": 6.0,
+          "land": 1.0,
+          "shed": 0.0,
+          "carried": 0.0
+        },
+        {
+          "step": 48,
+          "cash": 240.25,
+          "crops": 5.25,
+          "animals": 6.0,
+          "land": 1.0,
+          "shed": 2.0,
+          "carried": 0.0
+        },
+        {
+          "step": 72,
+          "cash": 278.150390625,
+          "crops": 7.74609375,
+          "animals": 6.75,
+          "land": 1.0,
+          "shed": 0.755859375,
+          "carried": 0.0
+        },
+        {
+          "step": 96,
+          "cash": 265.806640625,
+          "crops": 9.494140625,
+          "animals": 7.9765625,
+          "land": 1.0,
+          "shed": 0.513671875,
+          "carried": 0.0
+        },
+        {
+          "step": 120,
+          "cash": 222.98828125,
+          "crops": 10.73828125,
+          "animals": 8.0,
+          "land": 1.0,
+          "shed": 2.01953125,
+          "carried": 0.0
+        },
+        {
+          "step": 144,
+          "cash": 284.814453125,
+          "crops": 11.88671875,
+          "animals": 9.42578125,
+          "land": 1.0,
+          "shed": 2.333984375,
+          "carried": 0.0
+        },
+        {
+          "step": 168,
+          "cash": 291.470703125,
+          "crops": 12.98046875,
+          "animals": 10.744140625,
+          "land": 1.0,
+          "shed": 6.486328125,
+          "carried": 0.0
+        },
+        {
+          "step": 192,
+          "cash": 269.7890625,
+          "crops": 12.98046875,
+          "animals": 11.814453125,
+          "land": 1.0,
+          "shed": 6.51171875,
+          "carried": 0.0
+        },
+        {
+          "step": 216,
+          "cash": 1529.8828125,
+          "crops": 17.482421875,
+          "animals": 14.15625,
+          "land": 1.94140625,
+          "shed": 16.40625,
+          "carried": 0.0
+        },
+        {
+          "step": 240,
+          "cash": 1665.6171875,
+          "crops": 27.919921875,
+          "animals": 17.63671875,
+          "land": 2.0,
+          "shed": 15.029296875,
+          "carried": 0.0
+        },
+        {
+          "step": 264,
+          "cash": 6363.056640625,
+          "crops": 34.94140625,
+          "animals": 17.9140625,
+          "land": 2.90234375,
+          "shed": 22.8359375,
+          "carried": 0.0
+        },
+        {
+          "step": 288,
+          "cash": 8463.818359375,
+          "crops": 39.1875,
+          "animals": 17.986328125,
+          "land": 2.98046875,
+          "shed": 21.06640625,
+          "carried": 0.0
+        },
+        {
+          "step": 312,
+          "cash": 13109.775390625,
+          "crops": 42.75390625,
+          "animals": 17.984375,
+          "land": 3.0,
+          "shed": 29.2265625,
+          "carried": 0.0
+        },
+        {
+          "step": 336,
+          "cash": 16412.01953125,
+          "crops": 46.306640625,
+          "animals": 17.955078125,
+          "land": 3.0,
+          "shed": 41.701171875,
+          "carried": 0.0
+        },
+        {
+          "step": 360,
+          "cash": 21185.1328125,
+          "crops": 47.716796875,
+          "animals": 17.916015625,
+          "land": 3.0,
+          "shed": 33.330078125,
+          "carried": 0.0
+        },
+        {
+          "step": 384,
+          "cash": 23852.634765625,
+          "crops": 48.431640625,
+          "animals": 17.783203125,
+          "land": 3.0,
+          "shed": 30.125,
+          "carried": 0.0
+        },
+        {
+          "step": 408,
+          "cash": 25841.2890625,
+          "crops": 47.697265625,
+          "animals": 17.77734375,
+          "land": 3.0,
+          "shed": 42.09765625,
+          "carried": 0.0
+        },
+        {
+          "step": 432,
+          "cash": 27941.27734375,
+          "crops": 48.51953125,
+          "animals": 17.765625,
+          "land": 3.0,
+          "shed": 38.0234375,
+          "carried": 0.0
+        },
+        {
+          "step": 456,
+          "cash": 32037.916015625,
+          "crops": 47.1015625,
+          "animals": 17.73046875,
+          "land": 3.0,
+          "shed": 36.61328125,
+          "carried": 0.0
+        },
+        {
+          "step": 480,
+          "cash": 34113.515625,
+          "crops": 44.970703125,
+          "animals": 17.60546875,
+          "land": 3.0,
+          "shed": 41.873046875,
+          "carried": 0.0
+        },
+        {
+          "step": 504,
+          "cash": 37943.57421875,
+          "crops": 40.859375,
+          "animals": 17.599609375,
+          "land": 3.0,
+          "shed": 48.435546875,
+          "carried": 0.0
+        },
+        {
+          "step": 528,
+          "cash": 41199.1171875,
+          "crops": 43.6328125,
+          "animals": 17.583984375,
+          "land": 3.0,
+          "shed": 43.994140625,
+          "carried": 0.0
+        },
+        {
+          "step": 552,
+          "cash": 45913.595703125,
+          "crops": 45.33203125,
+          "animals": 17.529296875,
+          "land": 3.0,
+          "shed": 45.20703125,
+          "carried": 0.0
+        },
+        {
+          "step": 576,
+          "cash": 50402.302734375,
+          "crops": 45.263671875,
+          "animals": 17.50390625,
+          "land": 3.0,
+          "shed": 47.63671875,
+          "carried": 0.0
+        },
+        {
+          "step": 600,
+          "cash": 56756.99609375,
+          "crops": 44.505859375,
+          "animals": 17.494140625,
+          "land": 3.0,
+          "shed": 50.140625,
+          "carried": 0.0
+        },
+        {
+          "step": 624,
+          "cash": 61192.16015625,
+          "crops": 44.369140625,
+          "animals": 17.439453125,
+          "land": 3.0,
+          "shed": 49.75,
+          "carried": 0.0
+        },
+        {
+          "step": 648,
+          "cash": 67712.92578125,
+          "crops": 43.609375,
+          "animals": 17.43359375,
+          "land": 3.0,
+          "shed": 44.703125,
+          "carried": 0.0
+        },
+        {
+          "step": 672,
+          "cash": 72240.689453125,
+          "crops": 45.265625,
+          "animals": 17.40234375,
+          "land": 3.0,
+          "shed": 45.17578125,
+          "carried": 0.0
+        },
+        {
+          "step": 696,
+          "cash": 76971.61328125,
+          "crops": 34.138671875,
+          "animals": 16.2109375,
+          "land": 3.0,
+          "shed": 49.140625,
+          "carried": 0.0
+        },
+        {
+          "step": 719,
+          "cash": 85653.4921875,
+          "crops": 9.322265625,
+          "animals": 16.2109375,
+          "land": 3.0,
+          "shed": 0.0,
+          "carried": 0.0
+        }
+      ]
+    }
+  },
+  "gates": {
+    "anchor_delta_at_least_5pp": true,
+    "anchor_delta_lower_95_bound_positive": true,
+    "evaluated_primary_anchor_floor_40pct": true,
+    "challenge_delta_positive": true,
+    "challenge_score_at_least_50pct": false,
+    "candidate_errors_zero": true,
+    "packaging_passed": true,
+    "local_runtime_headroom": true
+  },
+  "statistical_and_local_reliability_gates_pass": false,
+  "holdout": "20000..20127 unopened; required before promotion if these gates pass",
+  "hosted_evidence": "Unavailable: Kaggle authentication required",
+  "coverage_limit": "The two primary anchors were rerun. Supplementary Tina crop-only results remain historical; no new crop-only validation claim is made."
+}

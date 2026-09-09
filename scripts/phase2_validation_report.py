@@ -92,7 +92,7 @@ def main():
     gates = {
         "anchor_delta_at_least_5pp": anchor["aggregate"]["score_delta"] >= 0.05,
         "anchor_delta_lower_95_bound_positive": anchor["aggregate"]["delta_ci95"][0] > 0,
-        "anchor_family_floor_40pct": all(
+        "evaluated_primary_anchor_floor_40pct": all(
             row["challenger_score"] >= 0.4 for row in anchor["opponents"].values()
         ),
         "challenge_delta_positive": challenge["aggregate"]["score_delta"] > 0,
@@ -112,6 +112,7 @@ def main():
         "statistical_and_local_reliability_gates_pass": all(gates.values()),
         "holdout": "20000..20127 unopened; required before promotion if these gates pass",
         "hosted_evidence": "Unavailable: Kaggle authentication required",
+        "coverage_limit": "The two primary anchors were rerun. Supplementary Tina crop-only results remain historical; no new crop-only validation claim is made.",
     }
     args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(

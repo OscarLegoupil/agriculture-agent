@@ -1,11 +1,14 @@
 # Second-cycle research results
 
-The second cycle exposes a limitation in the original benchmark: the v7
-release loses heavily to two newly qualified public route agents. A combined
-liquidity, market-forecast and expansion challenger improves three development
-matchups, but still loses every COK development game. It remains a research
-candidate while the predeclared matched validation completes. No leaderboard
-rating or new release is claimed.
+The frozen challenger improves the primary anchor score from **69.9% to
+89.8%** on 64 previously unused validation seeds. The paired gain is **19.9
+percentage points**, with a 95% interval of **10.9–29.3 points**. Its stronger
+production policy therefore generalizes against those two named opponents.
+
+It still fails the broader competitive objective: challenge score rises from
+2.0% to just **13.3%**, far below the declared 50% gate. **No new release is
+promoted.** v7 remains the release and rollback, despite being weaker on these
+measured anchors. No high-leaderboard claim is supported.
 
 ## Identities and experimental boundary
 
@@ -114,16 +117,52 @@ as evidence of the runtime confound.
 
 ## Validation and release decision
 
-The protocol freezes one challenger at revision `9b73672` before opening seeds
-2000–2063. It runs both policies against the same four executables, both seats:
-1,024 games. The panel is in progress; no partial result selects a variant.
-The 128-seed final holdout, 20000–20127, remains unopened.
+The protocol froze one challenger at revision `9b73672` before opening seeds
+2000–2063. Both policies completed 512 games against the same four executables,
+both seats: **1,024 games**, with no errors for either policy or its opponents.
+No partial result selected a variant. The 128-seed final holdout, 20000–20127,
+remains unopened because the challenge gate failed.
+
+| Opponent | v7 wins / 128 | Challenger wins / 128 | Paired score gain, 95% interval | Mean cash gap, v7 → challenger |
+|---|---:|---:|---:|---:|
+| lonespear `774b260` | 94 | 123 | +22.7 pp [12.5, 33.6] | +10,669 → +24,413 |
+| GzmCR `6a76335` | 85 | 107 | +17.2 pp [3.9, 31.2] | +5,738 → +16,475 |
+| Seyam `8b8c421` | 5 | 31 | +20.3 pp [9.4, 31.2] | −30,270 → −11,408 |
+| COK `7ef67ea` | 0 | 3 | +2.3 pp [0.0, 6.2] | −43,225 → −35,259 |
+
+There were no draws. The equal-weight anchor score is **89.84% [85.16, 94.14]**,
+and its paired improvement over v7 is **19.92 pp [10.94, 29.30]**. The equal-weight
+challenge score is **13.28% [8.20, 18.75]**, with paired improvement **11.33 pp
+[5.47, 17.58]**. Intervals are 95% complete-seed bootstrap intervals.
+[Machine-readable gate and comparison](results/phase2-validation-summary.json)
+contains exact identities, mean/median/lower-tail cash gaps and error counts.
+
+![Matched validation scores and paired improvements](figures/phase2-validation.png)
+
+The challenger reduces the GzmCR 10th-percentile cash gap from −9,289 to −3,032,
+but COK's corresponding gap remains −55,669. Its Seyam development score of
+58.3% falls to 24.2% on validation, illustrating the uncertainty of a six-seed
+selected screen. The primary-anchor gain does not establish general strength
+against crop-focused public route agents. Supplementary Tina was not rerun;
+its independent crop-only results remain historical, so the evaluated anchor
+floor applies only to the two primary anchors.
+
+![Measured cash and living crop footprint](figures/phase2-validation-trajectory.png)
+
+The larger farm realizes more crops and harvests rather than merely requesting
+more investment. Across the balanced four-opponent panel, watering deaths fall
+from 8.97 to 0.71 per game and harvest actions rise from 367.8 to 422.6. The cost
+is more travel and slightly more animal escapes: 0.29 to 0.83 per game before
+the separately classified terminal escapes. No failed worker actions or storage
+overflow were recorded for the challenger. These aggregates describe behavior;
+they are not causal attributions of every cash difference.
 
 Promotion requires an anchor improvement of at least five percentage points
 with a positive lower 95% paired bound, each anchor family at least 40%, and
 a positive challenge improvement with at least 50% challenge score. Errors,
-timeouts or failed deployment checks also prevent promotion. No result will
-change these weights or thresholds.
+timeouts or failed deployment checks also prevent promotion. The measured
+anchor improvement and local reliability criteria passed; the challenge score
+failed decisively. Neither weights nor thresholds were changed.
 
 Uncertainty resamples 10,000 complete seed blocks, retaining both seats,
 both candidate identities and all opponents. This estimates seed variation
@@ -138,8 +177,22 @@ The frozen research artifact passed 2,876 source/artifact action comparisons
 over four complete games, 60 isolated observation checks, repeated episode
 state, and two fresh `python -I -S` processes outside the repository. Peak
 isolated RSS was 24,375,296 bytes. [Packaging measurements](results/phase2-challenger-packaging.json)
-identify the exact compared bytes. The v7 release remains byte-identical to
-the previous cycle. Local timing is not hosted certification.
+identify the exact compared bytes. Linux CI independently passed 315 tests
+(one optional MLflow skip), artifact regeneration and both packaging checks.
+Its resource-based peak RSS measurements were 242,532,352 bytes for v7 and
+251,097,088 for the challenger; retain these alongside the Windows measurement
+rather than treating either as a hosted memory guarantee.
+[CI evidence](results/phase2-linux-ci.json) records the job and artifact identities.
+The v7 release remains byte-identical to the previous cycle. Local timing is
+not hosted certification.
+
+The challenger has zero errors, stderr turns and observed assignment fallbacks
+in its 512 validation games. Maximum measured decision time is 158.2 ms against
+the local one-second action limit. The median per-game 99th-percentile decision
+is 4.31 ms; the 95th percentile of those per-game values is 12.00 ms. These are
+episode-level runtime summaries, not a pooled-action percentile. v7 has one
+recorded stderr turn and a 288.1 ms maximum; the record does not retain that
+turn's text, so it is not labeled a confirmed fallback.
 
 ```bash
 uv sync --frozen --extra dev
@@ -147,6 +200,10 @@ uv run python scripts/fetch_references.py
 uv run python scripts/fetch_challenge_references.py
 uv run python scripts/build_phase2_challenger.py
 uv run python scripts/phase2_paired_report.py
+uv run python scripts/restore_candidate.py 750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee --output data/interim/frozen/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py
+uv run python scripts/restore_candidate.py 0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b --output data/interim/frozen/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b/main.py
+uv run python scripts/phase2_validation_report.py
+uv run python scripts/phase2_figures.py --summary reports/results/phase2-validation-summary.json --output reports/figures/phase2-validation.png --label "Validation: stronger anchors, challenge target unmet"
 uv run python scripts/phase2_figures.py --summary reports/results/phase2-paired-summary.json --output reports/figures/phase2-development.png --label "Development: gains against three opponents, no COK wins"
 ```
 
@@ -155,6 +212,20 @@ Content-addressed snapshots preserve exact historical code even when a later
 builder fixes an experiment bug. Restore with `scripts/restore_candidate.py`
 and the manifest hash. Large replays remain ignored; validation retains replay
 seeds 2000 and 2001 for both policies and every opponent.
+
+To rerun the full matched validation in PowerShell, after fetching references
+and rebuilding the challenger:
+
+```powershell
+$opponents = 'data/raw/reference-lonespear/main.py', 'data/raw/reference-gzm/main.py', 'data/raw/reference-seyam/main.py', 'data/raw/reference-cok/main.py'
+uv run python scripts/benchmark.py --candidate submissions/20260909-v7/main.py --opponents $opponents --seeds (2000..2063) --workers 4 --output data/interim/reproduced-incumbent.json
+uv run python scripts/benchmark.py --candidate data/interim/phase2-challenger/main.py --opponents $opponents --seeds (2000..2063) --workers 4 --output data/interim/reproduced-challenger.json
+uv run python scripts/phase2_validation_report.py --incumbent data/interim/reproduced-incumbent.json --challenger data/interim/reproduced-challenger.json --output data/interim/reproduced-validation-summary.json
+```
+
+This repeats already inspected scenarios; it does not create a new validation
+sample. Each manifest retains all 64 explicit seed values, effective simulator
+configuration and original command arguments for use from other shells.
 
 Kaggle access reports authentication required. No submission was made and no
 legal terms were accepted. Once authenticated and eligible, the release command

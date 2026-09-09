@@ -214,6 +214,16 @@
     "bytes": 111694,
     "games": 32
   },
+  "phase2-validation-challenger.json.gz": {
+    "sha256_uncompressed": "5019dee5e3c57e61b6b0c692595223d1b40c22a03ded5deca647644251903b5f",
+    "bytes": 1829238,
+    "games": 512
+  },
+  "phase2-validation-incumbent.json.gz": {
+    "sha256_uncompressed": "047cd174be5a8a06cd42c02cddf068ae4244d78adf85144df9fd956226d463f7",
+    "bytes": 1823634,
+    "games": 512
+  },
   "phase2-work-bundles.json.gz": {
     "sha256_uncompressed": "4a8315839aaffa14b1e6595f6250f15fd7f7e904e714ded718b728a09a535cca",
     "bytes": 114528,

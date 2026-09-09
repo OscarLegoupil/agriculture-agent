@@ -253,3 +253,60 @@ opponent mutations, dependency mismatch, and source/frozen/snapshot identity
 failures. Frozen executables and snapshots must be available when re-running
 this integrity-sensitive comparison; source snapshots alone do not silently
 substitute for missing execution artifacts.
+
+## Final frozen-validation review
+
+The completed validation archives contain 512 games per policy: four pinned
+opponents, seeds 2000–2063, and both seats exactly once. An independent
+calculation, separate from `phase2_compare.py`, recomputed the win counts and
+10,000 complete-seed bootstrap resamples. It reproduced the saved summary
+exactly. Both manifests identify freeze revision `9b73672`; the incumbent and
+challenger hashes match their actual frozen executables and decompressed
+snapshots. Configuration and resolved-seed pairs match across all 512 keys.
+
+| Opponent | v7 wins | Challenger wins | v7 mean cash gap | Challenger mean cash gap |
+|---|---:|---:|---:|---:|
+| lonespear | 94/128 | 123/128 | 10,669.20 | 24,413.21 |
+| GzmCR | 85/128 | 107/128 | 5,737.64 | 16,475.27 |
+| Seyam | 5/128 | 31/128 | −30,270.14 | −11,407.66 |
+| COK | 0/128 | 3/128 | −43,224.78 | −35,258.78 |
+
+There are no draws. Equal-weight anchor score improves from **69.92% to
+89.84%**, a paired gain of **19.92 percentage points**, with a 95% interval
+of **10.94–29.30 points**. Equal-weight challenge score improves from **1.95%
+to 13.28%**, a paired gain of **11.33 points**, with a 95% interval of
+**5.47–17.58 points**. Thus the challenger is demonstrably stronger on both
+named pools, but its absolute challenge performance remains far below the
+predeclared 50% gate. Positive improvement does not satisfy that gate.
+
+The earlier 7/12 Seyam development result falls to 31/128 on fresh validation.
+This is a material generalization warning: the small development panel made
+the candidate look much closer to the frontier than the larger frozen test
+supports. COK remains a severe weakness. The two challenge wrappers share a
+public-route lineage; confidence intervals address seed variation, not
+uncertainty about the competitive field. Tina's independent crop-focused
+supplementary anchor was not part of these four-opponent validation archives;
+the reported anchor floor only covers the evaluated primary anchors.
+
+The challenger has zero agent errors, opponent errors, stderr turns, and
+telemetry-recorded failed worker actions across 512 games. Because its bounded
+assignment fallback writes stderr, zero stderr supports zero observed
+assignment fallbacks. Maximum action duration is **158.171 ms**; the maximum
+of the per-game action p99 values is **18.718 ms**. These are local observations
+under concurrent benchmark load. The incumbent has one stderr turn (Seyam,
+seed 2005, seat 0); the saved record does not contain that message, so it must
+not be assigned an exact fallback cause or silently counted as zero.
+
+Zero failed actions does not mean zero missed obligations. Mean pre-terminal
+crop deaths fall from 8.97 to 0.71 per game, while animal escapes rise from
+0.29 to 0.83. Neither candidate has observed overflow; final carried/shed
+inventories are empty. That does not prove every product still held on a
+terminal crop or animal was harvested and sold.
+
+**Release decision: retain v7 because the mandatory challenge gate failed.**
+This is a release-policy decision, not a claim that v7 remains the strongest
+agent against the anchors or against the measured challenge pool. Preserve
+the stronger experimental challenger and its failed-gate evidence for future
+research. The new holdout 20000–20127 remains unopened; no corresponding seed
+appears in the result archives at this review. No live leaderboard claim is
+supported without authenticated hosted results.

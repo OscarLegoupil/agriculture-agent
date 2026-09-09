@@ -242,3 +242,107 @@ sources and the four-game manifest are saved in
 `data/raw/phase2-preemption.json` and `reports/sources/`. All four games complete
 without failed worker actions or stderr; maximum observed decision time is
 10.8 ms.
+
+## Frozen validation: transferable gains, unresolved production gap
+
+Both completed validation manifests contain 512 games: seeds 2000–2063, both
+seats, four pinned opponents. The challenger is frozen at
+`0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`.
+This section diagnoses those results without new games or policy changes. It
+is **validation, not holdout**; the reserved final holdout remains unopened.
+
+| Opponent | Incumbent wins / 128 | Challenger wins / 128 | Incumbent mean gap | Challenger mean gap | Challenger median gap | Challenger 10th-percentile gap |
+|---|---:|---:|---:|---:|---:|---:|
+| Lonespear | 94 | 123 | +10,669 | +24,413 | +27,568 | +5,634 |
+| GzmCR | 85 | 107 | +5,738 | +16,475 | +17,886 | −3,032 |
+| Seyam | 5 | 31 | −30,270 | −11,408 | −13,702 | −30,046 |
+| COK | 0 | 3 | −43,225 | −35,259 | −34,878 | −55,669 |
+
+The equal-weight anchor score rises from 69.9% to 89.8%, while challenge score
+rises from 2.0% to only 13.3%. The latter is far below the declared 50% floor.
+These gains do not establish a strong challenge-pool agent or live leaderboard
+potential. Paired uncertainty and the complete promotion decision belong to
+the final paired evaluation summary; the following breakdown explains the
+observed failure instead of changing the selection criteria.
+
+The added farm capacity is realized. Mean peak crops rise from approximately
+30 to 49.6–49.9, and every challenger game purchases two additional quadrants
+instead of one. The herd remains close to 18 animals by day 15. Against COK,
+watering deaths fall from 9.19 to 0.84 per game. Travel increases from 3,876 to
+4,230 actions, idle actions fall from 668 to 609, and labor spending rises from
+5,147 to 8,128. Across all opponents, residual watering deaths are only
+0.56–0.84 per game. The large remaining cash deficits cannot credibly be
+described as primarily unserved crop maintenance or an unbuilt target farm.
+
+Much of the anchor improvement comes from additional strawberry output.
+Against lonespear, mean sold units rise from 44.9 to 126.2 and strawberry income
+from 10,807 to 28,229. Against GzmCR, units rise from 61.9 to 135.9 and income
+from 15,316 to 31,418. Against COK, output also rises substantially, from 49.4
+to 126.8, but realized average sale price declines from 214.5 to 174.4, limiting
+income to 22,126. The extra labor and land cost approximately 4,981 per COK game,
+before additional seeds and inputs. More output therefore buys a much smaller
+competitive gain in the saturated matchup. This comparison includes changed
+opponent responses and shop paths; it does not isolate a causal price effect.
+
+### The consequential early allocation in a representative COK loss
+
+The stored seed-2001, seat-0 challenger replay is particularly informative.
+At day 1, hour 5, the challenger has four melons, four cows, one sheep and one
+goose. COK already has twelve melons, seven wheat, two cows and two sheep.
+The challenger's placed opening animals cost 600 more, while the opponent has
+established a larger crop cohort. By day 8, COK has its second quadrant and
+eight strawberries; the challenger still has one quadrant and no strawberries.
+At day 12 the challenger has thirteen strawberries against COK's thirty-seven,
+despite employing twelve hands against ten. Both have three quadrants then.
+
+Day-15 cash is almost tied, 22,714 versus 23,079. The earlier and larger cohorts
+then pay out: by day 25 cash is 56,449 versus 107,077, and final cash is 84,074
+versus 149,223. Reapplying recorded worker actions through the official unit
+transition function gives these actual harvested quantities:
+
+| Product | Challenger | COK |
+|---|---:|---:|
+| Strawberry | 152 | 274 |
+| Milk | 140 | 279 |
+| Wheat | 195 | 386 |
+| Melon | 150 | 72 |
+| Wool | 135 | 120 |
+| Egg | 282 | 0 |
+
+The eight-geese/six-sheep/four-cow portfolio and later recurring crops produce
+a materially different revenue stream from COK's ten-cow/four-sheep farm and
+earlier berries. This is an observed production and timing deficit, not an
+estimate that copying COK's allocation would recover 65,149. Earlier screens
+of similar herd targets and forced berry openings failed, so the remaining
+problem is coordinating profitable cohorts, working capital and servicing
+through time, rather than substituting those target counts.
+
+Seed 2000 shows why the diagnosis also needs economic-model scrutiny. In that
+challenger game, the forecast selects mainly wheat and tomatoes: at day 20 it
+has twenty wheat, fourteen tomatoes and four strawberries, while COK has
+thirty-three strawberries. Actual berry harvests are 20 versus 216. This
+could reflect overly conservative competitor-supply valuation, but the replay
+alone cannot establish the better counterfactual. Its realized shop path also
+differs from the incumbent's, so cross-policy comparisons cannot treat future
+demand as fixed.
+
+The strongest remaining research direction is an executable, receding-horizon
+cash-flow plan that values the arrival time of alternative crop cohorts and
+animal output, including committed service obligations and price response.
+The evidence does not justify more generic priority adjustments or another
+unconstrained fixed-herd grid. The ambitious competitive target remains unmet.
+
+Compact aggregates, replay hashes, sampled actual farm states, and official-
+transition harvest counts are saved in
+`reports/results/phase2-validation-diagnosis.json`. No new trajectories were
+generated for this analysis, and no policy was tuned from validation results.
+
+Reproduce with `uv run python scripts/phase2_validation_diagnosis.py`, or add
+`--check` to verify the committed measurements without changing the output.
+The command reads the archived completed validation manifests and sixteen
+stored seat-0 replays across both policies, both diagnostic seeds and all four
+opponents. Officially reconstructed harvests reconcile with recorded sales
+plus terminal inventory for seven non-input products. Missing replay files
+produce explicit regeneration commands; the diagnostic never starts games.
+Output uses deterministic LF encoding and portable paths, with SHA-256
+`9c955c7c5a6fe528576ea0ffa30283e6b1620af53a931a2356f23fb6d08e022f`.

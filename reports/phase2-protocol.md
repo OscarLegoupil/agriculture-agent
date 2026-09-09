@@ -88,3 +88,13 @@ opponents, both incumbent and challenger: 1,024 games. Do not prune opponents,
 stop on a favorable interval, or tune using partial results. This confirmation
 budget is separate from hypothesis screening. No candidate variants enter
 this panel. A failed gate retains v7 and leaves the final holdout unopened.
+
+## Validation disposition
+
+Both frozen policies completed the full 64-seed panel without execution errors.
+The anchor score improved from 69.92% to 89.84%, with a positive paired lower
+95% bound. The challenge score improved from 1.95% to 13.28% and failed its 50%
+floor. No candidate was promoted and no final-holdout game was run. Seeds
+2000–2063 are now inspected validation data; any future tuning must treat them
+as known data. The 20000–20127 holdout remains unopened. Supplementary Tina was
+not included in this confirmation panel and has no new validation claim.

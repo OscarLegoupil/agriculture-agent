@@ -1,0 +1,24 @@
+{
+  "revision": "87685242b6fbb5c500949ea4941e6bc89d4e8f49",
+  "job": "https://github.com/OscarLegoupil/agriculture-agent/actions/runs/34350440155/job/102462109968",
+  "platform": "ubuntu-latest",
+  "tests_passed": 315,
+  "tests_skipped": 1,
+  "test_seconds": 183.74,
+  "packaging": {
+    "incumbent": {
+      "sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+      "trajectory_actions": 2876,
+      "isolated_actions": 60,
+      "reported_peak_rss_bytes": 242532352
+    },
+    "challenger": {
+      "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+      "trajectory_actions": 2876,
+      "isolated_actions": 60,
+      "reported_peak_rss_bytes": 251097088
+    }
+  },
+  "log_sha256": "df1c564c79d9d02a880a6291ed3fee500a57345ea4c2401975c800f8ab6a6139",
+  "memory_note": "Linux measurement uses resource.getrusage(RUSAGE_SELF).ru_maxrss; Windows uses GetProcessMemoryInfo. Retain both reported values; do not equate them with verified hosted resource use."
+}
