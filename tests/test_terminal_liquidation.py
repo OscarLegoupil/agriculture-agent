@@ -77,3 +77,8 @@ def test_active_opponent_sale_batches_can_change_cash_allocation():
     assert aggregated["opponent_cash"] != split["opponent_cash"]
     assert aggregated["market"] == split["market"]
     assert sum(aggregated["shed"].values()) == 0
+
+
+def test_terminal_orders_below_cap_remain_separate():
+    result = apply_orders([{"MILK": 1}, {"MILK": 1}], use_policy=True, order_limit=10)
+    assert result["orders"] == [["SELL", "MILK", 1], ["SELL", "MILK", 1]]
