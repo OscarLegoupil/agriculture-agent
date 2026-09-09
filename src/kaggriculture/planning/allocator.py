@@ -30,7 +30,7 @@ from dataclasses import dataclass
 
 from kaggriculture.env.constants import ANIMALS, MARKET_PARAMS
 from kaggriculture.planning.animal_roi import cumulative_net_trace
-from kaggriculture.planning.crop_roi import crop_roi
+from kaggriculture.planning.crop_roi import finite_crop_net
 from kaggriculture.planning.feed_budget import AnimalPlan, feed_budget
 
 
@@ -73,18 +73,23 @@ def _fill_crop_choice(
     price_map: dict[str, float] | None,
     watered: bool,
     fertilized: bool,
+    horizon_days: int,
 ) -> tuple[str, float]:
     """Pick the crop with the highest coins-per-tile-per-day at forecast prices.
 
-    Wheat is excluded because it is allocated separately as feed reserve.
+    Commercial wheat competes with other crops; feed reserve is separate.
     """
     best_crop: str | None = None
     best_rate = float("-inf")
-    for candidate in ("CARROT", "TOMATO", "STRAWBERRY", "MELON"):
+    for candidate in ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"):
         price = None if price_map is None else price_map.get(candidate)
-        roi = crop_roi(candidate, watered=watered, fertilized=fertilized, price=price)
-        if roi.coins_per_tile_per_day > best_rate:
-            best_rate = roi.coins_per_tile_per_day
+        revenue = (
+            finite_crop_net(candidate, horizon_days, fertilized=fertilized, price=price)
+            if watered
+            else 0.0
+        )
+        if revenue > best_rate:
+            best_rate = revenue
             best_crop = candidate
     assert best_crop is not None
     return best_crop, best_rate
@@ -146,6 +151,7 @@ def allocate(
         price_map=price_map,
         watered=watered,
         fertilized=fertilized,
+        horizon_days=horizon_days,
     )
 
     best: Allocation | None = None
@@ -167,7 +173,7 @@ def allocate(
                 continue
             fill_tiles = tiles - used_before_fill
 
-            fill_revenue = fill_tiles * fill_rate * horizon_days
+            fill_revenue = fill_tiles * fill_rate
             # Wheat produced beyond the feed reserve has zero market value in
             # this static model (it is a feed buffer, not a sale target).
             wheat_revenue = 0.0
