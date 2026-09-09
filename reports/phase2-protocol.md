@@ -36,6 +36,13 @@ Run challenger and incumbent against identical opponent versions and scenarios.
 Never compare their raw cash across different opponent responses as if the
 opponent were fixed; these are whole-game policy interventions.
 
+The interpreter shares a seeded daily RNG between weed spawning and shop
+selection. Occupancy changes the number of weed draws, so a policy intervention
+can also change future realized shops. Matched seeds preserve initial randomness,
+not identical exogenous demand paths. New benchmark records include observed
+shop sequences and market inventory/prices to make this consequence inspectable.
+Never patch the interpreter to fix shop paths in deployable performance claims.
+
 Practical promotion requires at least a five-percentage-point improvement on
 the anchor primary score, a positive lower 95% paired-seed bound on that
 improvement, and no independent anchor family below 40%. The challenge pool

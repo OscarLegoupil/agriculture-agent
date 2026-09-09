@@ -68,6 +68,9 @@ def episode(args):
             daily.append(
                 {
                     "step": index,
+                    "shops": list(obs.town.unlocked_shops),
+                    "market_prices": dict(obs.market.prices),
+                    "market_inventory": dict(obs.market.inventory),
                     "cash": farm.money,
                     "crops": sum(t.get("kind") == "PLANT" for t in tiles),
                     "animals": sum("animal" in t for t in tiles),
@@ -133,6 +136,7 @@ def main():
         "candidate_snapshot": snapshot(args.candidate),
         "executed_candidate": str(frozen_candidate),
         "arguments": vars(args),
+        "complete": False,
         "episodes": [],
     }
     output = Path(args.output)
@@ -163,6 +167,11 @@ def main():
                 round(row["seconds"], 2),
                 flush=True,
             )
+    for path in paths:
+        if path in manifest["hashes"] and sha(path) != manifest["hashes"][path]:
+            raise RuntimeError(f"Executable changed during benchmark: {path}")
+    manifest["complete"] = True
+    output.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

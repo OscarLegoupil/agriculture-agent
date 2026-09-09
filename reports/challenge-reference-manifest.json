@@ -1,0 +1,25 @@
+{
+  "reviewed_on": "2026-09-09",
+  "references": {
+    "seyam": {
+      "url": "https://github.com/Seyamalam/Kaggriculture.git",
+      "revision": "8b8c421eb10634c756583ce10c75189f50c83a72",
+      "git_blob_sha256": "0cd14b653102d276c4f902fa3b8c6bd81d869b8ab64c422cb881b9d2346ec639",
+      "sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+      "lineage": "Kaito Fukami public V18/C20 routes with recovery overlay",
+      "executable": "data/raw/reference-seyam/main.py",
+      "newline": "CRLF, matching qualification executable",
+      "license": "Apache-2.0 attributed portions; notices retained in clone"
+    },
+    "cok": {
+      "url": "https://github.com/COK-ZhangZiliang/Kaggriculture.git",
+      "revision": "7ef67eac458cd9ecd13786063e2e581fbe7403ec",
+      "git_blob_sha256": "56831f3c43c9727d90016b7a7a8d4eb51d1a4c08c1120d58f061d9176e8bc109",
+      "sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+      "lineage": "Adaptive Farming Strategy public routes with recovery controller",
+      "executable": "data/raw/reference-cok/main.py",
+      "newline": "CRLF, matching qualification executable",
+      "license": "Apache-2.0 attributed portions; notices retained in clone"
+    }
+  }
+}
