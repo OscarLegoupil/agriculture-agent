@@ -34,7 +34,7 @@ panels to confirm an obvious failure. Changes to this budget must be recorded.
 
 ## Sources and isolation
 
-The local executable truth is kaggle-environments 1.32.7. Every benchmark
+The local executable truth is kaggle-environments 1.32.7. Full benchmark
 manifest records its interpreter SHA-256, effective configuration, resolved
 seed, executable hashes and repository revision. Reference repositories live
 in ignored `data/raw/` and are never imported by the deployed policy.
@@ -164,3 +164,77 @@ worker actions, agent errors, or assignment-budget fallbacks. Isolated peak
 process RSS measured 23,998,464 bytes. This artifact is selected and frozen
 before opening seeds 10000 through 10127. No policy changes are permitted
 based on those holdout outcomes without retiring the holdout.
+
+## Frozen holdout result
+
+The frozen artifact completed the holdout once: 128 seeds, both seats and three
+opponents, 768 games. The primary score is **65.234%**, with a 95% paired-seed
+bootstrap interval of **59.956% to 70.508%**. The predeclared local promotion
+gate passes. No production or scheduling parameters changed after opening it.
+
+| Opponent | Wins / games | Score | 95% seed interval | Mean cash gap | 10th-percentile gap |
+|---|---:|---:|---:|---:|---:|
+| lonespear | 155 / 256 | 60.55% | 52.34–68.75% | +6,402 | −8,630 |
+| GzmCR | 179 / 256 | 69.92% | 62.50–77.34% | +4,979 | −14,025 |
+| TinaawhyteD | 256 / 256 | 100% | 100–100% | +89,206 | +74,482 |
+
+The crop-only interval is degenerate because every sampled seed wins. It does
+not imply zero future loss probability. This reference is much weaker than
+the two primary opponents and carries no primary weight.
+
+All 768 games completed normally. Every cash ledger reconciles exactly;
+there are zero failed worker operations, logged fallbacks, storage overflows,
+or stranded carried/shed units. Maximum decision time was 66.764 ms, and the
+largest per-game 99th percentile was 3.553 ms. Local configuration allows one
+second per action. These timings and the 24 MB isolated RSS measurement provide
+local headroom, but do not establish hosted image or resource compatibility.
+
+Realized footprint peaks near 48 productive tiles, with one successful land
+purchase in every game. Mean daily-hire transactions total 281–287 per season;
+these are repeated daily hires, not simultaneous worker counts. Against the
+primary opponents, labor costs average 5,002–5,176 coins, successful work
+2,586–2,661 actions, and travel 3,809–3,859 moves per game.
+
+There is still an execution and planning gap: mean pre-terminal water deaths
+are 8.4 crops per game and animal escapes 0.2–0.4. Another 1.3 animals escape
+in the terminal window. Telemetry labels events from day 28 onward separately;
+timing alone cannot establish that each abandonment is economically optimal.
+Natural within-day crop decay is not included in the water-death counter, and
+unsold products still on tiles are not included in stranded carried/shed stock.
+Zero invalid actions therefore does not mean zero missed opportunity.
+
+The worst cash gaps are −16,615 against lonespear (10025, seat 1) and −25,096
+against GzmCR (10083, seat 1). Those games had no invalid work, respectively
+eight and seven water deaths, and one terminal escape each. This evidence
+does not isolate a causal explanation for the market-dependent gap. Further
+work should test maintenance opportunity cost and demand diversification on
+new development data before using a new holdout.
+
+The full local suite passes 305 tests, with one optional MLflow test skipped.
+Lint, formatting, strict typing, standalone process checks and deterministic
+artifact regeneration pass. The original v5 artifact remains unchanged.
+
+## Reproduction and remaining publication checks
+
+Detailed records are compressed losslessly in `reports/results/*.json.gz`;
+the readable index records their uncompressed hashes and game counts. Summaries
+and exact candidate source snapshots remain committed. The earliest exploratory
+screens have less complete provenance than the final benchmark manifests;
+their exact executable snapshots are preserved, and they are not promotion
+evidence. Reference pins are in `reports/reference-manifest.json`.
+
+Run `scripts/figures.py` to regenerate quantitative figures from saved records.
+Run `scripts/diagnose_benchmark.py reports/results/holdout-v7.json --output
+data/interim/diagnostics.json` for realized execution aggregates. Readers
+transparently resolve the compressed file. Full replays were retained locally
+for preselected holdout seeds 10000 and 10017; other games can be replayed from
+their recorded pins, effective seed and exact candidate snapshot. Replaying a
+frozen result is a reproducibility check, not another independent sample.
+
+Kaggle authentication was unavailable. No legal terms were accepted and no
+submission was uploaded. After authentication, eligibility and quota checks,
+the remaining command is `kaggle competitions submit kaggriculture -f
+submissions/20260909-v7/main.py -m "v7 joint assignment"`, followed by submission
+status and live replay inspection. The local competitive target passed; hosted
+performance remains unmeasured. Historical phase-allocator feasibility and
+route-generator milestones are not claimed complete by the new policy.

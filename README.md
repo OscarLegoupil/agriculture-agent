@@ -1,209 +1,151 @@
-# kaggriculture
+# Kaggriculture
 
-[![CI](https://github.com/OscarLegoupil/agriculture-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/OscarLegoupil/agriculture-agent/actions/workflows/ci.yml)
+**65.2% weighted holdout match score against two independent public agents**, with a 95% paired-seed interval of **60.0–70.5%**. The policy combines finite-season investment decisions with bounded joint worker assignment. These are local simulator results, not a live leaderboard rating.
 
-Autonomous-agent work on the [Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) Kaggle simulation. Two players compete on separate farms across a 30-day, 720-turn season on a dynamic market. This is a working project, not a submission notebook: reproducible workflow from environment analysis to a competitive agent.
+![A real game rendered by the official Kaggriculture environment](reports/figures/gameplay.png)
 
-## Progress
+*v7 on the left, pinned lonespear on the right. Seed 0, day 21. Rendered from an actual replay with the official environment; [frame provenance](reports/figures/gameplay.json).*
 
-- [x] **M1** foundations, CI, deps, smoke test
-- [x] **M2** typed env wrappers, action legality checker, 5 dynamics notebooks
-- [x] **M3** evaluation harness: parallel runner, replay logger, per-episode metrics, Bradley-Terry rating, A/B compare CLI, MLflow tracking
-- [x] **M4** rule-based baselines: five hand-crafted agents (v0-v4), each closed with a two-agent A/B, plus a round-robin Elo report
-- [x] **M5** economic planning core: per-crop and per-animal ROI tables, wheat feed budgeter, static tile allocator, dynamic re-planner
-- [x] **M6** market and opponent modeling: price forecaster ([model card](reports/market-forecaster-card.md)) and opponent inventory tracker
-- [x] **M7** advanced planner: route + micro-controller + public-state selector, tuned by offline beam search
-- [x] **M8-scale** 10x coin scale-up: multi-worker scheduler, phased routes, allocator-driven route generation
-- [ ] **M8** submission, hardening, final writeup
+## The problem
 
-## The environment at a glance
+[Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) is a two-player farming simulation. Each player starts with 3,000 coins and 25 usable tiles on a 10 × 10 farm. Crops take time to mature, animals need feed and care, and daily worker costs follow a Fibonacci sequence. Both farms sell into the same market: profitable production can destroy its own selling price.
 
-![Market price curves for all 9 resources](reports/figures/market-curves-grid.png)
+Only final cash counts. A valuable crop that cannot be harvested, carried home and sold in time is worth nothing. The optimization problem couples **investment, scheduling, working capital and market exposure**.
 
-Sell prices react to inventory shifts with different shapes on each side of the equilibrium `I0`. Premium goods (strawberry, melon, milk, wool) crash to the $1 floor on modest gluts. Carrot, tomato, and egg use a `hinge` shape that spikes sharply past a threshold on scarcity. Wheat is the only near-linear resource, and the only staple.
+## The solution
 
-<table>
-<tr>
-<td width="50%">
+```mermaid
+flowchart LR
+    O[Observed farms, cash and market] --> E[Finite-season investment gates]
+    E --> T[Tasks, deadlines and input reservations]
+    T --> M[Joint worker assignment]
+    M --> A[Worker actions and market orders]
+    A --> O
+    classDef state fill:#edf3f6,stroke:#265777,color:#193349
+    classDef policy fill:#e0f0ec,stroke:#168477,color:#193349
+    class O,A state
+    class E,T,M policy
+```
 
-![Crop ROI at base prices](reports/figures/crop-roi.png)
+The deployed policy lives in [one self-contained module](src/kaggriculture/agent/competitive.py). It rebuilds decisions from observations, preserving actual asset ages, inventories and cash without hidden episode state.
 
-Melon leads `$/tile/day` at base prices, but is glut-crash prone. Strawberry gains the most from fertilizer.
+**Finite-season investment.** New crops receive no revenue before maturity. All five commercial crops compete for planting slots. Animal purchases account for remaining production events, feed expense and market exposure. Cash reserves constrain purchases; future shop demand uses expected draws, never future realized state.
 
-</td>
-<td width="50%">
+**Coordinated execution.** Minimum-cost assignment matches workers to distinct destinations using task value, urgency, travel and pickup costs. Seeds, stored inputs and delivery capacity are reserved. The solver prepares a valid greedy fallback and checks a 150 ms budget during execution. Transition instrumentation exposes invalid actions and resource losses.
 
-![Town demand across 5000 seasons](reports/figures/town-demand.png)
+**Measured production choices.** Official-interpreter screens explored land, labor, crop-only and livestock-only policies, animal mixes, fertilizer, grown feed, openings and delivery thresholds. Selected capacity bounds are two quadrants, 11 hired workers, up to 30 crops and a herd of four cows, six sheep and eight geese. These are ceilings; observed state and economic gates determine purchases.
 
-Wheat and strawberry are the most reliably-demanded. Melon has near-zero shop demand. Wool distribution is bimodal because yarn stores may never spawn.
+**Cash at the finish.** The last action is day 29, hour 22. There is no final nightly inventory drop. Return trips and sales must fit the remaining action opportunities.
 
-</td>
-</tr>
-</table>
+## Evidence
 
-Details in [`notebooks/`](notebooks/): market curves, crop yields, animal economics, town demand, hire ROI.
+The primary score weights lonespear and GzmCR equally. TinaawhyteD provides an independently implemented crop-only check with no primary weight. Mirrors and supply-heavy variants are diagnostics, not additional independent opponents.
 
-## Evaluating agents
+![Per-opponent scores and paired-seed confidence intervals](reports/figures/performance-v7.png)
 
-The eval harness runs pairings in parallel with deterministic seeds and seat swapping, and reports Bradley-Terry Elo, Wilson CIs, and a sign-test p-value.
+| Holdout opponent | Pinned revision | Wins / games | Mean v7 cash | Mean opponent cash |
+|---|---|---:|---:|---:|
+| [lonespear, livestock-led mixed](https://github.com/lonespear/kaggriculture/tree/774b26093ccf4246525517d48420349b841b6e50) | `774b260` | 155 / 256 | 87,779 | 81,377 |
+| [GzmCR, mixed farming](https://github.com/GzmCR/Kaggriculture/tree/6a76335397d5cd2facffa91c938f629b119ea350) | `6a76335` | 179 / 256 | 84,560 | 79,581 |
+| [TinaawhyteD, crop-only](https://github.com/TinaawhyteD/kaggriculture-agent/tree/169ca945b3358cd85baa71260e9c17dc0ebe5555) | `169ca94` | 256 / 256 | 108,239 | 19,033 |
+
+Development used 16 seeds and validation used 64. The frozen artifact then played the 128-seed holdout once: 768 games, including both seats against all three opponents. Confidence intervals resample complete seeds, retaining both seats and both primary opponents together. Draws count as half a win. The predeclared promotion gate passed: lower 95% bound above 50%, no candidate errors and no independent strategy family below 40%. [Protocol and experiment record](reports/competitive-evaluation.md) · [holdout summary](reports/results/holdout-summary.json) · [validation summary](reports/results/validation-final-summary.json) · [compressed evidence index](reports/results/index.json).
+
+### What changed from v5
+
+The original four-tile v5 beat starter but lost against every independent reference in the diagnostic panel. It remains unchanged. The same four development seeds show both improvement and a difficult matchup:
+
+| Opponent | v5 wins | v7 wins | v5 mean cash | v7 mean cash |
+|---|---:|---:|---:|---:|
+| Starter | 8 / 8 | 8 / 8 | 9,121 | 112,552 |
+| lonespear | 0 / 8 | 8 / 8 | 8,653 | 78,667 |
+| GzmCR | 0 / 8 | 2 / 8 | 8,326 | 93,333 |
+| TinaawhyteD | 0 / 8 | 8 / 8 | 9,338 | 108,302 |
+
+*Seeds 0, 17, 42 and 103, both seats. This small development panel is not the promotion test. Source versions, executable hashes and effective configuration are saved with the results.*
+
+![Cash and productive footprint across the season](reports/figures/trajectories-v7.png)
+
+The important gain was executable production. The old static allocator also credited immature crops with average daily income and excluded commercial wheat. Those assumptions are corrected and tested against the interpreter. Earlier phased planning and route controllers remain available for historical comparison; v7 does not deploy them.
+
+### An ablation that changed the design
+
+![Joint assignment versus greedy worker scheduling](reports/figures/assignment-ablation.png)
+
+Joint assignment reduced mean travel from 4,250 to 3,841 moves and increased successful work from 2,377 to 2,597 actions. Match score rose from 37.5% to 75% across eight games per candidate. This small paired development panel justified broader testing; it is not the headline strength estimate.
+
+More land, more workers and larger herds did not consistently pay. Strawberry-heavy expansion, early goose-first openings and harvest batching also lost their screens. A pickup/drop loop and a same-turn reservation bug were execution defects, not evidence against livestock. Fixes have dedicated regressions.
+
+## Reproduce it
+
+Python 3.11 or 3.12 and [uv](https://docs.astral.sh/uv/) are required. The lockfile pins `kaggle-environments==1.32.7`.
 
 ```bash
-uv run kagg-compare pass starter --n 50 --config '{"episodeSteps": 720}'
+uv sync --frozen --extra dev
+uv run pytest tests/test_competitive_smoke.py -q
 ```
 
-```
-=== kagg-compare: pass vs starter ===
-episodes: 100  duration: 32.1s  (0.32s/ep)
+The second command is the one-command smoke evaluation: the frozen artifact plays starter in both seats. `make smoke` runs the same check where Make is available.
 
-pass                  W:    0  L:  100  T:   0   win_rate: 0.0%   [95% CI: 0.0%-3.7%]
-starter               W:  100  L:    0  T:   0   win_rate: 100.0% [95% CI: 96.3%-100.0%]
-
-sign test (two-sided): p = 1.58e-30
-Bradley-Terry Elo (mean 1500):  starter 2100  pass 900  delta +1200
-```
-
-Add `--replay-dir data/raw/replays` to save every episode's JSON and a `manifest.jsonl` for downstream analysis. Add `--mlflow` to log to a local MLflow store.
-
-## Baseline ladder
-
-Each baseline exercises one strategic axis and closes its commit with an A/B against its predecessor. A round-robin over all baselines plus the three built-in agents produces the internal Elo ladder:
-
-![Baseline Elo ladder](reports/figures/baselines-elo.png)
-
-- **v0** pure wheat loop, single tile.
-- **v1** wheat + carrot on two adjacent tiles.
-- **v2** adds one fed and cared goose (coop at (4, 3)), delayed until the wheat pipeline is producing to avoid ramp-up starvation.
-- **v3** market-responsive selling and fertilizer reuse. Fertilizer from the goose is applied at the start of each plant's bonus window, lifting wheat cap 4 -> 6 and carrot 3 -> 4.
-- **v4** adds a second carrot tile at (3, 3) and one hired hand ($1). Land expansion is available but not automatically triggered at this scale.
-
-Full report and win-rate matrix under [`reports/baselines-elo.md`](reports/baselines-elo.md).
-
-## Economic planning core
-
-M5 turns the dynamics notebooks into a small operations-research layer under `src/kaggriculture/planning/`:
-
-- `crop_roi(crop, watered, fertilized, price)` returns lifecycle units, days to peak, and coins per tile per day. Fertilizer cost is a caller-supplied parameter so animal-produced (free) and market-bought ($100) regimes stay explicit.
-- `animal_roi(animal, cared, product_price, feed_cost_per_day)` returns steady-state coins per day and an exact discrete break-even day, computed from a cumulative-net trace rather than the loose continuous formula in the notebook.
-- `feed_budget(roster)` projects daily wheat consumption from an `AnimalPlan` list and derives the wheat tile count required to sustain the peak.
-- `allocate(tiles, horizon_days, price_map)` enumerates every feasible animal roster and picks the (roster + wheat reserve + best fill crop) combination that maximises expected coins over the remaining horizon.
-- `DynamicReplanner` wraps the allocator with a state machine that re-plans when observed prices drift more than `threshold_pct` from the working forecast, and exposes a `replan_frequency` counter for the harness.
-
-The v5+ agents will consume these tables rather than hard-coding tile choices.
-
-## Market and opponent modeling
-
-M6 adds two online modules used by the planner and by the M7 trading layer:
-
-- `src/kaggriculture/market/` ships a `PriceForecaster` that combines the deterministic price curve, the deterministic town consumption schedule, and an EWMA net-trade-rate estimate. Predicted prices plug straight into `DynamicReplanner`'s `price_map`. Aggregate MAE against a five-pairing pool: $0.05 at 1 step, $1.88 at 1 day, $19.3 at 5 days, versus $0.78 / $17.6 / $84.3 for the naive constant-price baseline. Full protocol and per-commodity breakdown in the [model card](reports/market-forecaster-card.md).
-- `src/kaggriculture/opponent/` ships an `OpponentInventoryTracker` that reconstructs the opponent's hidden shed from the market inventory ledger (dzjiann's bookkeeping identifier, discussion 737027). Measured MAE across the same opponent pool is exactly zero for every commodity, matching the strong identifiability claim. When a commodity's price sits at the floor the tracker widens the uncertainty interval by the maximum orders the opponent could hide.
-
-![Forecaster calibration at 1, 24 and 120 step horizons](reports/figures/forecaster-calibration.png)
-
-## Advanced planner
-
-M7 layers a portfolio of route configs under `configs/routes/`, a public-state selector, and an offline beam search under `src/kaggriculture/search/`:
-
-- A route is a YAML plan for one 720-turn episode: tile assignments, coop / pasture placement, hire schedule, land buys, market policy, and an optional embedded micro block. `RouteAgent` in `src/kaggriculture/agent/route_agent/` turns any parsed route into a Kaggle-callable `agent(obs)` and reproduces v4_expansion byte-for-byte on fixed seeds.
-- `MicroController` overlays M6 forecast and opponent-tracker signals on the route's market policy each turn. Rules are additive-only: hard-drop, forecast-salvage, and tail-salvage. In a paired 400-game A/B this overlay beats plain v4 396-4 at defaults, and 386-14 with tuned parameters (sign test p ~= 2e-95, Elo delta +576).
-- `RouteSelector` picks one of four v4 variants after day 3 from opponent tile and land signals. The picked route + a tuned micro layer beats the v4+micro baseline 378-22 on 400 games (Elo delta +494).
-- `kaggriculture.search.beam` is a small discrete-grid beam search that tunes route and micro parameters against a target opponent family. It converges on the same configuration the M7-c heuristic picks for the v4+micro family, and the beam-searched YAML at `configs/routes/tuned/v4_micro.yaml` beats plain v4+micro 189-11 on 200 games (Elo delta +494).
-
-## Scale-up
-
-M7 ended at 9604 coins against `starter` and around 300 Elo on the live ladder. The ceiling was structural: the runner gave the main farmer one decision tree and hands a short fixed watering list, so the farm could never grow past the four tiles the farmer's twenty-four turns could reach. M8-scale replaces the runner and re-derives the tile plan, and lands at 82081 coins on the same measurement.
-
-Three things had been mispriced.
-
-**Hands are almost free.** They are cleared every night and the n-th rehire of a day costs `fib(n)`, so nine hands cost 88 coins a day, under one percent of what they harvest. The binding constraint was never money, it was the single-worker runner.
-
-**Every animal is a fertilizer machine.** `fertilizer_available` is set on every surviving animal every day, whatever its species, whether or not it was fed. At a 100 base price that byproduct is worth more than the egg, and it is the largest single revenue line in the game. `animal_roi` did not model it, `allocator._structures_for` divided head count by `max_held` (which caps unharvested produce, not occupancy, so a coop holds exactly one goose), and `allocate` charged for feed twice by reserving wheat tiles *and* subtracting a cash feed cost. All three are fixed.
-
-**Melon is the crop, and only briefly.** A melon hits its six-unit cap at age ten for eight waterings, the best coins per worker-action of any crop, but the price curve is quadratic above `I0` and floors after about 158 units. Ten tiles running two cycles is roughly the whole depth of that market; a twenty-five-tile melon farm sells most of its crop at $1.
-
-The shipped plan is twelve structures on the tiles nearest the shed (four geese, four cows, four sheep), thirteen melon tiles behind them, hands ramping to nine by day 5, and a switch of the melon tiles to carrot on day 20, the last day a fresh melon can still ripen. Feed is bought rather than grown: a wheat tile yields one unit a day and a melon tile earns a hundred.
-
-### Multi-worker scheduler
-
-`src/kaggriculture/agent/route_agent/scheduler.py` replaces the decision tree with a per-turn assignment problem. Every planned tile that wants attention becomes a task with a priority; every worker takes the highest-priority task it can reach in the fewest Manhattan steps.
-
-```
-0  water a plant that weeds tonight, feed an animal that escapes tonight
-1  harvest ripe crops and animal produce, place a bought animal
-2  fertilize a plant inside its bonus window
-3  plant an empty plan tile, clear a weed, build a missing structure
-4  water a plant whose yield still grows today
-5  feed and care for an animal that is not at risk
-6  collect fertilizer
-7  drop carried produce at the shed
-8  pick up feed or an animal from the shed
-```
-
-A task that needs a carried item and finds no carrier sends exactly *one* worker to the shed. Without that cap a herd of hungry animals pulls the whole crew into a feed ferry every turn and the crops die untended, which is what the first draft did.
-
-The scheduler holds no state between turns and falls back to an all-`PASS` turn if it overruns a 400 ms budget or the observation will not parse.
-
-### Phased routes
-
-`Route` gained a `phases: list[Phase]` field. A phase restates the whole footprint from a given day rather than a delta, so the file reads top to bottom, and a non-empty `phases` switches `RouteAgent` from the v4 tree to the scheduler. [`configs/routes/expansion_full.yaml`](configs/routes/expansion_full.yaml) is the hand-authored plan the generated one is measured against.
-
-The market policy for a phased route spends in the order feed, animals, seeds, and only grows the herd as far as the wheat already on hand can feed it. An unfed animal escapes after two days and takes the rest of its season income with it; the first version spent its last coin on livestock and then starved the whole herd by day 12.
-
-Paired-seed A/B, 200 games, seat-swapped, against v5: **200-0**, sign test p = 1.2e-60, mean coin gap +70827, Elo delta +1200.
-
-### Allocator-driven route generation
-
-`src/kaggriculture/agent/route_agent/generate.py` derives the same shape from `build_phased_plan` instead of by hand. The allocator decides counts; the generator decides addresses (structures nearest the shed, since they want a daily visit plus a wheat delivery) and adds the two things the allocator cannot express:
-
-- Volume-aware pricing. `Allocation.expected_revenue` is linear in tiles, so repricing alone oscillates between corner solutions: price animals at base and it buys the whole roster, which crashes milk and wool, so the next pass buys none. The generator sweeps a family of herd ceilings and scores every plan with the same volume-aware `plan_revenue`.
-- A tail substitution, so a phase starting too late for melons plants something that can still ripen.
+Fetch the reviewed references and run a paired benchmark:
 
 ```bash
-uv run python -m kaggriculture.agent.route_agent.generate \
-    --family expansion --opponent starter --top-k 8 --eval-seeds 6
+uv run python scripts/fetch_references.py
+uv run python scripts/benchmark.py --candidate submissions/20260909-v7/main.py --opponents data/raw/reference-lonespear/main.py data/raw/reference-gzm/main.py --seeds 0 17 42 103 --output data/interim/reproduction.json
+uv run python scripts/summarize_benchmark.py data/interim/reproduction.json
 ```
 
-The model ranks shapes well and misses the last few percent, so the driver plays the shortlist out and caches the winner in `configs/routes/tuned/`. That distinction is what found the shipped route. The model's own favourite spreads twelve animals evenly across three species; the hand-authored plan is goose-heavy with fifteen. Against `starter` they are within a percent of each other. Against **each other** the even split wins 189-11 over 200 paired seats, sign test p = 5e-43, mean coin gap +7212, because a herd spread across three product markets is not fighting the opponent for the same one. Both agents earn about 60k in that matchup rather than the 82k either earns alone, which is the market depth showing up as a competitive effect rather than a pricing one.
-
-The generated route is what `submissions/20260908-v6/main.py` ships.
-
-## Current submission
-
-`submissions/20260908-v6/main.py` (agent v6) is the packaged M8-scale agent: the scheduler, the phased market policy, and the generated plan as a single self-contained file with no imports of the `kaggriculture` package. A test asserts it reproduces the package agent's rewards exactly on fixed seeds, so a transcription slip cannot pass silently.
-
-Runtime posture: 400 ms per-turn budget with a safe `PASS` fallback on overrun, and a malformed observation returns `PASS` rather than raising. Local smoke test against `starter` on seed 42 finishes at 79600 coins; mean 82175 and worst 79600 across seeds 0-3 and 42.
-
-`submissions/20260902-v5/main.py` is the previous packaged agent (M7): route decision tree, micro tail-salvage, public-state selector. It finishes at 9604 coins on the same smoke test.
-
-## Quickstart
-
-Python 3.11 to 3.12, [uv](https://docs.astral.sh/uv/).
+Search production choices, verify packaging and regenerate figures:
 
 ```bash
-git clone https://github.com/OscarLegoupil/agriculture-agent.git
-cd agriculture-agent
-uv sync --extra dev --extra notebooks
+uv run python scripts/search_production.py --stage 1 --output data/interim/production-search.json
+uv run python scripts/package_submission.py
+uv run python scripts/verify_submission.py --output data/interim/packaging-check.json
+uv run python scripts/figures.py --evaluation reports/results/holdout-v7.json
+uv run python scripts/diagnose_benchmark.py reports/results/holdout-v7.json --output data/interim/diagnostics.json
+uv run python scripts/render_replay.py --screenshot
+```
+
+The screenshot command needs Chrome or Chromium (`--chrome PATH` selects it). It also exports an interactive official HTML replay into ignored `reports/replays/`. Compressed results are read transparently. Restore an exact historical executable with `scripts/restore_candidate.py SHA256`, using its manifest's digest.
+
+## Reliability and boundaries
+
+The [standalone artifact](submissions/20260909-v7/main.py) is built deterministically from the deployed source. SHA-256:
+
+```text
+750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee
+```
+
+Packaging compared 2,876 actions along four complete source/artifact trajectories, then 60 observations in two fresh Python processes without site packages or repository imports. Isolated peak process RSS was about 24 MB. Holdout decisions took at most 66.8 ms; the largest per-game 99th percentile was 3.6 ms. All 768 games finished with zero agent errors, failed worker actions, logged fallbacks, storage overflow or stranded shed/carried inventory. Every cash ledger reconciled. [Packaging measurements](reports/results/packaging-final.json) · [execution diagnostics](reports/results/holdout-diagnostics.json).
+
+CI checks lint, formatting, types, interpreter contracts, execution regressions, complete games, standalone verification and deterministic regeneration. Run the checks locally:
+
+```bash
+uv run ruff check .
+uv run ruff format --check .
+uv run mypy src
 uv run pytest
-make sim   # runs a full 720-turn episode locally
 ```
 
-## Repository layout
+The economic forecast is a compact heuristic, not an exact optimal season plan. Against the primary references, farms still lose about 8.4 crops and 0.2–0.4 animals before the terminal window per game. GzmCR's 10th-percentile cash gap is −14,025 coins. Terminal escape counts are reported separately; this timing classification does not prove abandonment was optimal. The pool covers three public implementations; the crop-only reference is substantially weaker. Local execution does not establish a leaderboard rating or verify the current hosted image and resource limits.
 
-```
-src/kaggriculture/env/       typed observation wrappers, action builders, legality checker
-src/kaggriculture/planning/  ROI tables, feed budget, tile allocator, dynamic re-planner
-src/kaggriculture/market/    price curve and online forecaster
-src/kaggriculture/opponent/  inventory inference from public state
-src/kaggriculture/agent/     shipped agent, its route layers, the scheduler, route generation
-src/kaggriculture/search/    offline beam search over route + micro parameters
-configs/routes/              route YAMLs (v4 variants, expansion_full, tuned/ cache)
-submissions/                 dated Kaggle submission bundles (self-contained main.py)
-notebooks/                   numbered dynamics analysis notebooks
-reports/figures/             committed figures produced by notebooks
-tests/                       pytest suite
-configs/                     experiment configs (YAML, populated as milestones land)
-data/                        generated replays and metrics (gitignored, DVC-tracked)
+Kaggle authentication was unavailable, so no live submission was made. After authenticating and confirming eligibility and quota, submit the exact validated file:
+
+```bash
+kaggle competitions submit kaggriculture -f submissions/20260909-v7/main.py -m "v7 joint assignment"
+kaggle competitions submissions kaggriculture
 ```
 
-## License
+## Repository guide and attribution
 
-MIT. See [LICENSE](LICENSE).
+| Location | Purpose |
+|---|---|
+| `src/kaggriculture/agent/competitive.py` | Deployed policy and bounded assignment solver |
+| `submissions/20260909-v7/` | Standalone artifact and manifest |
+| `submissions/20260902-v5/`, `submissions/20260908-v6/` | Preserved historical submissions |
+| `scripts/` | Evaluation, production search, packaging and figures |
+| `tests/` | Game contracts, failure regressions and integration checks |
+| `reports/results/`, `reports/sources/` | Compressed evidence, summaries and exact candidate snapshots |
+| `data/raw/`, `data/interim/`, `reports/replays/` | Ignored reference checkouts, working data and large replays |
+
+The [official Kaggle interpreter](https://github.com/Kaggle/kaggle-environments/tree/master/kaggle_environments/envs/kaggriculture) supplies game rules and rendering. Public references informed strategic hypotheses and are evaluated in isolated checkouts; their implementations are not included in the submission. lonespear is MIT-licensed, copyright Jonathan Day. Original licenses remain in the checkouts; other reference source is not redistributed. [Full pins and hashes](reports/reference-manifest.json).
