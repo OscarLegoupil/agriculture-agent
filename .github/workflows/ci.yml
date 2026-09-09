@@ -46,7 +46,7 @@ jobs:
       - name: Check artifact regeneration
         run: |
           uv run python scripts/package_submission.py
-          git diff --exit-code -- submissions/20260909-v7
+          git diff --exit-code -- submissions/20260909-v8
 
       - name: Verify frozen research challenger
         run: |

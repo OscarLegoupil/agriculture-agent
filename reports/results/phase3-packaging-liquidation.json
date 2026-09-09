@@ -1,0 +1,33 @@
+{
+  "source": "src\\kaggriculture\\agent\\competitive.py",
+  "artifact": "submissions\\20260909-v8\\main.py",
+  "sha256": "b81f9da1791bb1ebec14d154beb5a51f4dd98be60f980d01d6a13e11e80e983c",
+  "trajectory_actions_compared": 2876,
+  "matches": [
+    {
+      "seed": 23,
+      "seat": 0,
+      "cash": 118946.0
+    },
+    {
+      "seed": 23,
+      "seat": 1,
+      "cash": 118946.0
+    },
+    {
+      "seed": 31,
+      "seat": 0,
+      "cash": 174864.0
+    },
+    {
+      "seed": 31,
+      "seat": 1,
+      "cash": 120073.0
+    }
+  ],
+  "isolated_actions_compared": 60,
+  "fresh_processes": 2,
+  "peak_python_bytes": 3580842,
+  "peak_rss_bytes": 24735744,
+  "memory_measure": "isolated-process peak RSS and tracemalloc Python allocation peak"
+}

@@ -19,7 +19,7 @@ def load(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--artifact", type=Path, default=Path("submissions/20260909-v7/main.py"))
+    parser.add_argument("--artifact", type=Path, default=Path("submissions/20260909-v8/main.py"))
     parser.add_argument(
         "--source", type=Path, default=Path("src/kaggriculture/agent/competitive.py")
     )
