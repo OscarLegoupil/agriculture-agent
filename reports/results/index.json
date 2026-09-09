@@ -229,6 +229,41 @@
     "bytes": 114528,
     "games": 32
   },
+  "phase3-herds.json.gz": {
+    "sha256_uncompressed": "8fdd8383cb909bc08c5bae4840c41d762acdd3c28fc102f72e302ca9c2c8e37d",
+    "bytes": 112986,
+    "games": 32
+  },
+  "phase3-logistics.json.gz": {
+    "sha256_uncompressed": "a618ac4bdd3114f41bbcf3252cd8ac99b523d6a83babd5b896a8caf5bda66923",
+    "bytes": 30013,
+    "games": 8
+  },
+  "phase3-nightly-ablation.json.gz": {
+    "sha256_uncompressed": "a7b13c7369f9261cfe4df6ccd9215d459256cbc3e98b848dfe8c12d5c1963dc9",
+    "bytes": 29699,
+    "games": 8
+  },
+  "phase3-opening-confirm.json.gz": {
+    "sha256_uncompressed": "20656e8588d931ea5fcbc35f9bd26d4bc515e63fa38557cdbc6012c8ce75d08a",
+    "bytes": 112006,
+    "games": 32
+  },
+  "phase3-reserve-labor.json.gz": {
+    "sha256_uncompressed": "69f6bd9f47db4c38a5bbd7d9e02c953efb8e6ce2f35da4ff0239272f16a6a65f",
+    "bytes": 85011,
+    "games": 24
+  },
+  "phase3-selective-delivery.json.gz": {
+    "sha256_uncompressed": "8b9f21ac0032c9494405d0542366e394468d5396c985cfe6f4b877b7eae5e30e",
+    "bytes": 29736,
+    "games": 8
+  },
+  "phase3-startup.json.gz": {
+    "sha256_uncompressed": "f9aedf7a30d990d707e4d7e66292dbd3e81113be6146dda3a8840bdb4e256a67",
+    "bytes": 85301,
+    "games": 24
+  },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",
     "bytes": 87139,
