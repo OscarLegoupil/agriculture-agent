@@ -119,3 +119,25 @@ Seyam and COK share a public route lineage. They remain separately reported
 opponents, not two additional independent strategy families. Local strength
 does not establish a live rating. Authenticated Kaggle access is unavailable;
 no submission or legal-terms acceptance has occurred.
+
+## Fresh validation: large gain, COK floor failed
+
+Both policies completed all 512 games on seeds 3000–3063, both seats. V8 wins
+128/128 against each anchor, 117/128 against Seyam and 41/128 against COK.
+Its equal-four score is 80.859375%, versus 52.9296875% for `0098`: a paired
+gain of 27.9296875 points [95% CI: 23.828125–32.03125]. Challenge score rises
+from 10.9375% to 61.71875% [candidate CI: 55.078125–67.96875%].
+
+All statistical/runtime gates pass except COK's 40% score floor: actual score
+is 32.03125%, mean gap −4,528.29 and 10th-percentile gap −13,557.5. V8 records
+zero candidate errors and a maximum decision of 113.925 ms. This is strong
+improvement across the declared pool, but it does not pass its complete
+promotion protocol. No holdout was opened and no live claim is made.
+
+[Complete validation summary](results/phase3-validation-summary.json) ·
+[matchup figure](figures/phase3-validation-matchups.png) ·
+[realized behavior](figures/phase3-validation-behavior.png).
+
+Further research uses these now-known seeds to diagnose COK losses. The next
+[protocol](phase4-protocol.md) explicitly changes the incumbent to v8 and
+reserves new validation seeds. It does not retroactively pass v8's failed gate.

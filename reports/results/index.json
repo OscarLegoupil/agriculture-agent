@@ -485,6 +485,18 @@
     "games": 24,
     "kind": "benchmark"
   },
+  "phase3-validation-challenger.json.gz": {
+    "sha256_uncompressed": "0b0a35c5b6b07984bd1a4751c6ae0138a2bf319f73689e8f3c2cd6e535ecb07c",
+    "bytes": 1806771,
+    "games": 512,
+    "kind": "benchmark"
+  },
+  "phase3-validation-incumbent.json.gz": {
+    "sha256_uncompressed": "b78272a03b835bd8dc63bf18fadaf27c80fd21b1eb216990f2814d558ddbfe10",
+    "bytes": 1828144,
+    "games": 512,
+    "kind": "benchmark"
+  },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",
     "bytes": 87139,
