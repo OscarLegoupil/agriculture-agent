@@ -150,7 +150,7 @@ seeds 2000 and 2001 for both policies and every opponent.
 
 Kaggle access reports authentication required. No submission was made and no
 legal terms were accepted. Once authenticated and eligible, the release command
-is `kaggle competitions submit -c kaggriculture -f submissions/20260909-v7/main.py -m "v7 validated local release"`.
+is `kaggle competitions submit kaggriculture -f submissions/20260909-v7/main.py -m "v7 validated local release"`.
 Check current quota and hosted rules first; do not submit the unpromoted research
 challenger as a validated improvement. Current rating, game count and live
 opponent coverage remain unknown.

@@ -98,6 +98,43 @@ def main():
         )
         + "\n"
     )
+    if "telemetry" in report:
+        fig, axes = plt.subplots(1, 2, figsize=(10, 3.8))
+        for policy, color, label in (
+            ("incumbent", "#355C7D", "v7 release"),
+            ("challenger", "#168477", "Expanded challenger"),
+        ):
+            days = report["telemetry"][policy]["daily_trajectory"]
+            for axis, field in zip(axes, ("cash", "crops"), strict=True):
+                axis.plot(
+                    [day["step"] / 24 for day in days],
+                    [day[field] for day in days],
+                    color=color,
+                    label=label,
+                    linewidth=2.3,
+                )
+        for axis, label in zip(axes, ("Mean cash", "Mean living crop tiles"), strict=True):
+            axis.set(xlabel="Day", ylabel=label)
+            axis.grid(alpha=0.15)
+        axes[0].legend(frameon=False, fontsize=9)
+        fig.suptitle(
+            "Realized behavior across the matched validation panel",
+            x=0.07,
+            ha="left",
+            fontweight="bold",
+        )
+        fig.text(
+            0.07,
+            0.02,
+            "Equal numbers of games per opponent; cash and footprint alone do not establish stronger match performance.",
+            fontsize=9,
+            color="#52616b",
+        )
+        fig.tight_layout(rect=(0, 0.06, 1, 0.92))
+        fig.savefig(
+            args.output.with_name(args.output.stem + "-trajectory.png"), dpi=180, facecolor="white"
+        )
+        plt.close(fig)
 
 
 if __name__ == "__main__":

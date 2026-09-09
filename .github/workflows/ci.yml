@@ -47,3 +47,9 @@ jobs:
         run: |
           uv run python scripts/package_submission.py
           git diff --exit-code -- submissions/20260909-v7
+
+      - name: Verify frozen research challenger
+        run: |
+          uv run python scripts/build_phase2_challenger.py --output data/interim/ci-challenger
+          uv run python scripts/restore_candidate.py 0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b --output data/interim/ci-challenger-frozen/main.py
+          uv run python scripts/verify_submission.py --source data/interim/ci-challenger/main.py --artifact data/interim/ci-challenger-frozen/main.py --output data/interim/ci-challenger-packaging.json
