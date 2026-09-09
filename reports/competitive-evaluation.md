@@ -116,3 +116,32 @@ remains a rejected candidate, not a benchmark success.
 The broad screen varies land, labor, crop-only production, herd-only production,
 cow/sheep/goose mix, fertilizer and grown feed. Saved outputs, not hand-entered
 chart values, are the source for subsequent comparisons.
+
+The second screen favored 4 cows, 6 sheep and 8 geese (5/8 primary-suite wins)
+over the 8-cow, 6-sheep control (1/8). On seeds 42/103, lowering the delivery
+threshold from eight to five units improved the primary cash gap from -8,035
+to +1,178, with 4/8 wins. More labor and larger herds failed to improve it.
+Harvest batching then lost 12/16 and was rejected. Early goose-first openings
+also underperformed. These are selection data, not confidence intervals.
+
+A joint minimum-cost worker assignment won 6/8 on seeds 5/11 versus the greedy
+delivery control's 3/8. This is the first substantial scheduler improvement
+against both independent references. Extend the targeted-development budget
+from 256 to 512 games to check it across the full 16 development seeds and
+diagnose remaining losses before validation. The primary protocol, seed splits
+and promotion threshold remain unchanged. The full initial test suite passes:
+296 tests, with optional MLflow tracking skipped because it is not installed.
+
+GitHub publication: draft PR #65. Issue #59 was reopened; duplicate #64 was
+consolidated into #62. Kaggle CLI reported authentication required, so no hosted
+submission or live leaderboard claim is available from this environment.
+
+The joint-assignment candidate finished development at 24/32 against lonespear
+and 17/32 against GzmCR. The candidate is now frozen for validation as artifact
+`4d4cfc3413a452997c16cfa44a3711d7fba04e5223d94bec402d8b77ae5235e9`.
+Packaging compared 2,876 source/artifact actions along four complete trajectories,
+plus 60 observations in two clean Python processes with site packages disabled.
+All actions matched. Peak traced Python allocations were approximately 3.1 MB;
+this is not a measurement of full process RSS or a verified hosted memory limit.
+The assignment solver has a precomputed valid greedy fallback and checks its
+150 ms budget inside augmenting-path iterations; fallback use is logged to stderr.

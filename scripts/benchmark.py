@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import importlib.metadata
 import json
@@ -19,6 +20,28 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def snapshot(path):
+    """Keep exact candidate bytes without duplicating deployed Python modules."""
+    digest = sha(path)
+    archive = Path("reports/sources") / (digest + ".py.gz")
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    archive.write_bytes(gzip.compress(Path(path).read_bytes(), mtime=0))
+    return str(archive)
+
+
+def provenance(paths):
+    from kaggle_environments.envs.kaggriculture import kaggriculture as game
+
+    return {
+        "revision": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "hashes": {p: sha(p) for p in paths if Path(p).is_file()},
+        "environment_version": importlib.metadata.version("kaggle-environments"),
+        "interpreter_sha256": sha(game.__file__),
+        "lock_sha256": sha("uv.lock"),
+        "dependencies": {p: importlib.metadata.version(p) for p in ("numpy", "scipy")},
+    }
+
+
 def episode(args):
     candidate, opponent, seed, seat, replay = args
     from kaggle_environments import make
@@ -29,6 +52,8 @@ def episode(args):
     with Telemetry(env, seat) as telemetry:
         env.run(agents)
     elapsed = time.perf_counter() - start
+    runtimes = sorted(log[seat]["duration"] for log in env.logs if len(log) > seat)
+    stderr_turns = sum(bool(log[seat]["stderr"]) for log in env.logs if len(log) > seat)
     daily = []
     actions = Counter()
     for index, step in enumerate(env.steps):
@@ -77,6 +102,11 @@ def episode(args):
         "realized_actions": dict(telemetry.actions),
         "ledger": dict(telemetry.ledger),
         "losses": dict(telemetry.losses),
+        "runtime_max_seconds": max(runtimes, default=0),
+        "runtime_p99_seconds": runtimes[min(len(runtimes) - 1, int(len(runtimes) * 0.99))]
+        if runtimes
+        else 0,
+        "stderr_turns": stderr_turns,
     }
 
 
@@ -89,21 +119,21 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--replays")
     args = parser.parse_args()
-    import kaggle_environments.envs.kaggriculture.kaggriculture as game
-
     paths = [args.candidate, *args.opponents]
+    frozen_candidate = Path("data/interim/frozen") / sha(args.candidate) / "main.py"
+    frozen_candidate.parent.mkdir(parents=True, exist_ok=True)
+    frozen_candidate.write_bytes(Path(args.candidate).read_bytes())
     manifest = {
-        "revision": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
-        "hashes": {p: sha(p) for p in paths if Path(p).is_file()},
-        "environment_version": importlib.metadata.version("kaggle-environments"),
-        "interpreter_sha256": sha(game.__file__),
+        **provenance(paths),
+        "candidate_snapshot": snapshot(args.candidate),
+        "executed_candidate": str(frozen_candidate),
         "arguments": vars(args),
         "episodes": [],
     }
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     tasks = [
-        (args.candidate, opp, seed, seat, args.replays)
+        (str(frozen_candidate), opp, seed, seat, args.replays)
         for opp in args.opponents
         for seed in args.seeds
         for seat in (0, 1)

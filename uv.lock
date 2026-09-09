@@ -1579,7 +1579,7 @@ tracking = [
 requires-dist = [
     { name = "ipykernel", marker = "extra == 'notebooks'", specifier = ">=6.29" },
     { name = "kaggle", specifier = ">=1.6" },
-    { name = "kaggle-environments", specifier = ">=1.32.7" },
+    { name = "kaggle-environments", specifier = "==1.32.7" },
     { name = "mlflow", marker = "extra == 'tracking'", specifier = ">=2.16" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.11" },
     { name = "nbstripout", marker = "extra == 'dev'", specifier = ">=0.7" },

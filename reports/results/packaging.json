@@ -1,0 +1,31 @@
+{
+  "artifact": "submissions\\20260909-v7\\main.py",
+  "sha256": "4d4cfc3413a452997c16cfa44a3711d7fba04e5223d94bec402d8b77ae5235e9",
+  "trajectory_actions_compared": 2876,
+  "matches": [
+    {
+      "seed": 23,
+      "seat": 0,
+      "cash": 122208.0
+    },
+    {
+      "seed": 23,
+      "seat": 1,
+      "cash": 111308.0
+    },
+    {
+      "seed": 31,
+      "seat": 0,
+      "cash": 110723.0
+    },
+    {
+      "seed": 31,
+      "seat": 1,
+      "cash": 113958.0
+    }
+  ],
+  "isolated_actions_compared": 60,
+  "fresh_processes": 2,
+  "peak_python_bytes": 3106848,
+  "memory_measure": "tracemalloc Python allocation peak; not full process RSS"
+}

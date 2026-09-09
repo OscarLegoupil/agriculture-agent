@@ -5,7 +5,7 @@ import json
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from benchmark import episode, sha
+from benchmark import episode, provenance, sha, snapshot
 
 
 def main():
@@ -51,7 +51,34 @@ def main():
             "labor14": {"hands": 14, "quadrants": 3, "crop_tiles": 50},
             "deliver5": {"return_load": 5},
         }
+    if args.stage == 3:
+        candidates = {
+            "goose_control": {},
+            "goose_delivery": {"return_load": 5},
+            "goose_labor12": {"hands": 12},
+            "goose_labor13": {"hands": 13},
+            "goose_compact": {"crop_tiles": 15, "quadrants": 1},
+            "goose_early": {"animal_stop": 12},
+            "goose_care": {"feed_priority": 130},
+            "goose_growth": {"geese": 12, "sheep": 4, "cows": 2, "hands": 12},
+        }
+        candidates = {
+            name: {"cows": 4, "sheep": 6, "geese": 8, **params}
+            for name, params in candidates.items()
+        }
+    if args.stage == 4:
+        candidates = {
+            "delivery_control": {},
+            "opening2": {"opening_geese": 2},
+            "opening4": {"opening_geese": 4},
+            "opening6": {"opening_geese": 6},
+            "drip2": {"sell_batch": 2},
+            "drip5": {"sell_batch": 5},
+            "feed60": {"feed_priority": 60},
+            "early_drip": {"opening_geese": 4, "sell_batch": 3},
+        }
     manifest = {
+        **provenance(args.opponents),
         "source_hash": sha("src/kaggriculture/agent/competitive.py"),
         "candidates": {},
         "episodes": [],
@@ -65,7 +92,12 @@ def main():
             source.replace("def agent(", f"PARAMS.update({params!r})\n\n\ndef agent(", 1),
             encoding="utf-8",
         )
-        manifest["candidates"][str(path)] = {"name": name, "params": params, "sha256": sha(path)}
+        manifest["candidates"][str(path)] = {
+            "name": name,
+            "params": params,
+            "sha256": sha(path),
+            "snapshot": snapshot(path),
+        }
         for seed in args.seeds:
             for seat in (0, 1):
                 for opponent in args.opponents:

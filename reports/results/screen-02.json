@@ -1,0 +1,1472 @@
+{
+  "revision": "549e81efe978b673693534d6230aeb8bc13ea52a",
+  "hashes": {
+    "src/kaggriculture/agent/competitive.py": "9d91ccc8ae1e9e16d5b85f178f26a3fba65569693aa40801812b4fc359e1d9ed",
+    "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026"
+  },
+  "environment_version": "1.32.7",
+  "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "arguments": {
+    "candidate": "src/kaggriculture/agent/competitive.py",
+    "opponents": [
+      "data/raw/reference-lonespear/main.py"
+    ],
+    "seeds": [
+      0,
+      17
+    ],
+    "workers": 2,
+    "output": "reports/results/screen-02.json",
+    "replays": null
+  },
+  "episodes": [
+    {
+      "candidate": "src/kaggriculture/agent/competitive.py",
+      "opponent": "data/raw/reference-lonespear/main.py",
+      "seed": 0,
+      "seat": 0,
+      "cash": 73078.0,
+      "opponent_cash": 82252.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "seconds": 5.8309717000011005,
+      "configuration": {
+        "seed": null,
+        "episodeSteps": 720,
+        "actTimeout": 1,
+        "runTimeout": 1200,
+        "boardSize": 10,
+        "startingMoney": 3000,
+        "maxMarketOrdersPerTurn": 10,
+        "turnsPerDay": 24,
+        "shedCapacity": 100,
+        "weedSpawnChance": 0.005,
+        "townShopUnlockInterval": 3,
+        "townShopSellInterval": 4,
+        "townCenterSellInterval": 24,
+        "farmHandCostMult": 1,
+        "marketParams": {}
+      },
+      "resolved_seed": 0,
+      "daily": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0,
+          "animals": 0,
+          "weeds": 0,
+          "land": 1,
+          "shed": 0,
+          "carried": 0
+        },
+        {
+          "step": 24,
+          "cash": 249.0,
+          "crops": 5,
+          "animals": 4,
+          "weeds": 0,
+          "land": 1,
+          "shed": 3,
+          "carried": 0
+        },
+        {
+          "step": 48,
+          "cash": 294.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 72,
+          "cash": 194.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 96,
+          "cash": 304.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 0,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 120,
+          "cash": 370.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 2,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 144,
+          "cash": 376.0,
+          "crops": 11,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 5,
+          "carried": 0
+        },
+        {
+          "step": 168,
+          "cash": 616.0,
+          "crops": 12,
+          "animals": 6,
+          "weeds": 2,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 192,
+          "cash": 261.0,
+          "crops": 14,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 15,
+          "carried": 0
+        },
+        {
+          "step": 216,
+          "cash": 797.0,
+          "crops": 14,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 240,
+          "cash": 1542.0,
+          "crops": 14,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 18,
+          "carried": 0
+        },
+        {
+          "step": 264,
+          "cash": 4780.0,
+          "crops": 14,
+          "animals": 12,
+          "weeds": 5,
+          "land": 2,
+          "shed": 37,
+          "carried": 0
+        },
+        {
+          "step": 288,
+          "cash": 9876.0,
+          "crops": 18,
+          "animals": 13,
+          "weeds": 6,
+          "land": 2,
+          "shed": 19,
+          "carried": 0
+        },
+        {
+          "step": 312,
+          "cash": 10759.0,
+          "crops": 25,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 20,
+          "carried": 0
+        },
+        {
+          "step": 336,
+          "cash": 13070.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 24,
+          "carried": 0
+        },
+        {
+          "step": 360,
+          "cash": 16495.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 16,
+          "carried": 0
+        },
+        {
+          "step": 384,
+          "cash": 16617.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 0,
+          "land": 2,
+          "shed": 28,
+          "carried": 0
+        },
+        {
+          "step": 408,
+          "cash": 24327.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 31,
+          "carried": 0
+        },
+        {
+          "step": 432,
+          "cash": 28698.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 20,
+          "carried": 0
+        },
+        {
+          "step": 456,
+          "cash": 32181.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 19,
+          "carried": 0
+        },
+        {
+          "step": 480,
+          "cash": 33206.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 504,
+          "cash": 37038.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 30,
+          "carried": 0
+        },
+        {
+          "step": 528,
+          "cash": 39529.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 44,
+          "carried": 0
+        },
+        {
+          "step": 552,
+          "cash": 46659.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 30,
+          "carried": 0
+        },
+        {
+          "step": 576,
+          "cash": 47598.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 48,
+          "carried": 0
+        },
+        {
+          "step": 600,
+          "cash": 50363.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 0,
+          "land": 2,
+          "shed": 47,
+          "carried": 0
+        },
+        {
+          "step": 624,
+          "cash": 53537.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 33,
+          "carried": 0
+        },
+        {
+          "step": 648,
+          "cash": 55963.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 63,
+          "carried": 0
+        },
+        {
+          "step": 672,
+          "cash": 60324.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 47,
+          "carried": 0
+        },
+        {
+          "step": 696,
+          "cash": 67186.0,
+          "crops": 24,
+          "animals": 12,
+          "weeds": 4,
+          "land": 2,
+          "shed": 40,
+          "carried": 0
+        },
+        {
+          "step": 719,
+          "cash": 73078.0,
+          "crops": 10,
+          "animals": 12,
+          "weeds": 4,
+          "land": 2,
+          "shed": 0,
+          "carried": 0
+        }
+      ],
+      "requested_actions": {
+        "PASS": 475,
+        "BUILD_PASTURE": 18,
+        "WEST": 1278,
+        "PICKUP": 142,
+        "NORTH": 1150,
+        "PLACE": 14,
+        "PLANT": 128,
+        "EAST": 1281,
+        "WATER": 418,
+        "SOUTH": 586,
+        "FEED": 279,
+        "CARE": 262,
+        "COLLECT_FERTILIZER": 267,
+        "DROP": 85,
+        "DIG": 30,
+        "HARVEST": 212,
+        "FERTILIZE": 95
+      }
+    },
+    {
+      "candidate": "src/kaggriculture/agent/competitive.py",
+      "opponent": "data/raw/reference-lonespear/main.py",
+      "seed": 0,
+      "seat": 1,
+      "cash": 72591.0,
+      "opponent_cash": 80776.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "seconds": 5.817354500000874,
+      "configuration": {
+        "seed": null,
+        "episodeSteps": 720,
+        "actTimeout": 1,
+        "runTimeout": 1200,
+        "boardSize": 10,
+        "startingMoney": 3000,
+        "maxMarketOrdersPerTurn": 10,
+        "turnsPerDay": 24,
+        "shedCapacity": 100,
+        "weedSpawnChance": 0.005,
+        "townShopUnlockInterval": 3,
+        "townShopSellInterval": 4,
+        "townCenterSellInterval": 24,
+        "farmHandCostMult": 1,
+        "marketParams": {}
+      },
+      "resolved_seed": 0,
+      "daily": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0,
+          "animals": 0,
+          "weeds": 0,
+          "land": 1,
+          "shed": 0,
+          "carried": 0
+        },
+        {
+          "step": 24,
+          "cash": 249.0,
+          "crops": 5,
+          "animals": 4,
+          "weeds": 0,
+          "land": 1,
+          "shed": 3,
+          "carried": 0
+        },
+        {
+          "step": 48,
+          "cash": 294.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 72,
+          "cash": 194.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 96,
+          "cash": 304.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 120,
+          "cash": 370.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 2,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 144,
+          "cash": 280.0,
+          "crops": 11,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 8,
+          "carried": 0
+        },
+        {
+          "step": 168,
+          "cash": 616.0,
+          "crops": 12,
+          "animals": 6,
+          "weeds": 4,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 192,
+          "cash": 362.0,
+          "crops": 15,
+          "animals": 7,
+          "weeds": 2,
+          "land": 1,
+          "shed": 16,
+          "carried": 0
+        },
+        {
+          "step": 216,
+          "cash": 793.0,
+          "crops": 15,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 240,
+          "cash": 1537.0,
+          "crops": 15,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 17,
+          "carried": 0
+        },
+        {
+          "step": 264,
+          "cash": 10490.0,
+          "crops": 16,
+          "animals": 12,
+          "weeds": 1,
+          "land": 2,
+          "shed": 13,
+          "carried": 0
+        },
+        {
+          "step": 288,
+          "cash": 9939.0,
+          "crops": 22,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 17,
+          "carried": 0
+        },
+        {
+          "step": 312,
+          "cash": 10544.0,
+          "crops": 22,
+          "animals": 14,
+          "weeds": 5,
+          "land": 2,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 336,
+          "cash": 15681.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 21,
+          "carried": 0
+        },
+        {
+          "step": 360,
+          "cash": 16673.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 31,
+          "carried": 0
+        },
+        {
+          "step": 384,
+          "cash": 18481.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 34,
+          "carried": 0
+        },
+        {
+          "step": 408,
+          "cash": 23102.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 36,
+          "carried": 0
+        },
+        {
+          "step": 432,
+          "cash": 27303.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 35,
+          "carried": 0
+        },
+        {
+          "step": 456,
+          "cash": 32616.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 34,
+          "carried": 0
+        },
+        {
+          "step": 480,
+          "cash": 32592.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 25,
+          "carried": 0
+        },
+        {
+          "step": 504,
+          "cash": 35161.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 37,
+          "carried": 0
+        },
+        {
+          "step": 528,
+          "cash": 39302.0,
+          "crops": 24,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 48,
+          "carried": 0
+        },
+        {
+          "step": 552,
+          "cash": 43496.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 26,
+          "carried": 0
+        },
+        {
+          "step": 576,
+          "cash": 44879.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 40,
+          "carried": 0
+        },
+        {
+          "step": 600,
+          "cash": 50037.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 28,
+          "carried": 0
+        },
+        {
+          "step": 624,
+          "cash": 49816.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 51,
+          "carried": 0
+        },
+        {
+          "step": 648,
+          "cash": 54281.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 56,
+          "carried": 0
+        },
+        {
+          "step": 672,
+          "cash": 60178.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 33,
+          "carried": 0
+        },
+        {
+          "step": 696,
+          "cash": 65567.0,
+          "crops": 20,
+          "animals": 13,
+          "weeds": 4,
+          "land": 2,
+          "shed": 41,
+          "carried": 0
+        },
+        {
+          "step": 719,
+          "cash": 72591.0,
+          "crops": 10,
+          "animals": 13,
+          "weeds": 6,
+          "land": 2,
+          "shed": 0,
+          "carried": 0
+        }
+      ],
+      "requested_actions": {
+        "PASS": 470,
+        "BUILD_PASTURE": 17,
+        "WEST": 1278,
+        "PICKUP": 148,
+        "NORTH": 1183,
+        "PLACE": 14,
+        "PLANT": 125,
+        "EAST": 1237,
+        "WATER": 415,
+        "SOUTH": 625,
+        "FEED": 282,
+        "CARE": 263,
+        "COLLECT_FERTILIZER": 276,
+        "DROP": 81,
+        "DIG": 35,
+        "HARVEST": 210,
+        "FERTILIZE": 96
+      }
+    },
+    {
+      "candidate": "src/kaggriculture/agent/competitive.py",
+      "opponent": "data/raw/reference-lonespear/main.py",
+      "seed": 17,
+      "seat": 0,
+      "cash": 69867.0,
+      "opponent_cash": 52246.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "seconds": 5.361121100000673,
+      "configuration": {
+        "seed": null,
+        "episodeSteps": 720,
+        "actTimeout": 1,
+        "runTimeout": 1200,
+        "boardSize": 10,
+        "startingMoney": 3000,
+        "maxMarketOrdersPerTurn": 10,
+        "turnsPerDay": 24,
+        "shedCapacity": 100,
+        "weedSpawnChance": 0.005,
+        "townShopUnlockInterval": 3,
+        "townShopSellInterval": 4,
+        "townCenterSellInterval": 24,
+        "farmHandCostMult": 1,
+        "marketParams": {}
+      },
+      "resolved_seed": 17,
+      "daily": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0,
+          "animals": 0,
+          "weeds": 0,
+          "land": 1,
+          "shed": 0,
+          "carried": 0
+        },
+        {
+          "step": 24,
+          "cash": 249.0,
+          "crops": 5,
+          "animals": 4,
+          "weeds": 0,
+          "land": 1,
+          "shed": 3,
+          "carried": 0
+        },
+        {
+          "step": 48,
+          "cash": 294.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 72,
+          "cash": 194.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 1,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 96,
+          "cash": 304.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 120,
+          "cash": 370.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 3,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 144,
+          "cash": 280.0,
+          "crops": 10,
+          "animals": 6,
+          "weeds": 3,
+          "land": 1,
+          "shed": 8,
+          "carried": 0
+        },
+        {
+          "step": 168,
+          "cash": 609.0,
+          "crops": 12,
+          "animals": 6,
+          "weeds": 3,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 192,
+          "cash": 446.0,
+          "crops": 15,
+          "animals": 7,
+          "weeds": 2,
+          "land": 1,
+          "shed": 15,
+          "carried": 0
+        },
+        {
+          "step": 216,
+          "cash": 364.0,
+          "crops": 15,
+          "animals": 8,
+          "weeds": 0,
+          "land": 1,
+          "shed": 27,
+          "carried": 0
+        },
+        {
+          "step": 240,
+          "cash": 1762.0,
+          "crops": 15,
+          "animals": 8,
+          "weeds": 0,
+          "land": 1,
+          "shed": 15,
+          "carried": 0
+        },
+        {
+          "step": 264,
+          "cash": 9625.0,
+          "crops": 12,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 15,
+          "carried": 0
+        },
+        {
+          "step": 288,
+          "cash": 9498.0,
+          "crops": 15,
+          "animals": 14,
+          "weeds": 6,
+          "land": 2,
+          "shed": 24,
+          "carried": 0
+        },
+        {
+          "step": 312,
+          "cash": 10682.0,
+          "crops": 19,
+          "animals": 14,
+          "weeds": 6,
+          "land": 2,
+          "shed": 19,
+          "carried": 0
+        },
+        {
+          "step": 336,
+          "cash": 14715.0,
+          "crops": 18,
+          "animals": 14,
+          "weeds": 8,
+          "land": 2,
+          "shed": 25,
+          "carried": 0
+        },
+        {
+          "step": 360,
+          "cash": 17427.0,
+          "crops": 22,
+          "animals": 14,
+          "weeds": 6,
+          "land": 2,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 384,
+          "cash": 20090.0,
+          "crops": 24,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 25,
+          "carried": 0
+        },
+        {
+          "step": 408,
+          "cash": 22430.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 40,
+          "carried": 0
+        },
+        {
+          "step": 432,
+          "cash": 29641.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 23,
+          "carried": 0
+        },
+        {
+          "step": 456,
+          "cash": 30545.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 24,
+          "carried": 0
+        },
+        {
+          "step": 480,
+          "cash": 32374.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 30,
+          "carried": 0
+        },
+        {
+          "step": 504,
+          "cash": 35879.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 26,
+          "carried": 0
+        },
+        {
+          "step": 528,
+          "cash": 39524.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 26,
+          "carried": 0
+        },
+        {
+          "step": 552,
+          "cash": 44186.0,
+          "crops": 23,
+          "animals": 14,
+          "weeds": 5,
+          "land": 2,
+          "shed": 56,
+          "carried": 0
+        },
+        {
+          "step": 576,
+          "cash": 49130.0,
+          "crops": 23,
+          "animals": 14,
+          "weeds": 6,
+          "land": 2,
+          "shed": 44,
+          "carried": 0
+        },
+        {
+          "step": 600,
+          "cash": 50255.0,
+          "crops": 24,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 45,
+          "carried": 0
+        },
+        {
+          "step": 624,
+          "cash": 53883.0,
+          "crops": 23,
+          "animals": 14,
+          "weeds": 5,
+          "land": 2,
+          "shed": 37,
+          "carried": 0
+        },
+        {
+          "step": 648,
+          "cash": 58660.0,
+          "crops": 20,
+          "animals": 14,
+          "weeds": 7,
+          "land": 2,
+          "shed": 35,
+          "carried": 0
+        },
+        {
+          "step": 672,
+          "cash": 60091.0,
+          "crops": 24,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 33,
+          "carried": 0
+        },
+        {
+          "step": 696,
+          "cash": 66533.0,
+          "crops": 15,
+          "animals": 13,
+          "weeds": 4,
+          "land": 2,
+          "shed": 33,
+          "carried": 0
+        },
+        {
+          "step": 719,
+          "cash": 69867.0,
+          "crops": 0,
+          "animals": 13,
+          "weeds": 4,
+          "land": 2,
+          "shed": 0,
+          "carried": 0
+        }
+      ],
+      "requested_actions": {
+        "PASS": 427,
+        "BUILD_PASTURE": 16,
+        "WEST": 1323,
+        "PICKUP": 138,
+        "NORTH": 1147,
+        "PLACE": 14,
+        "PLANT": 150,
+        "EAST": 1350,
+        "WATER": 391,
+        "SOUTH": 532,
+        "FEED": 284,
+        "CARE": 271,
+        "COLLECT_FERTILIZER": 285,
+        "DROP": 76,
+        "DIG": 62,
+        "HARVEST": 210,
+        "FERTILIZE": 96
+      }
+    },
+    {
+      "candidate": "src/kaggriculture/agent/competitive.py",
+      "opponent": "data/raw/reference-lonespear/main.py",
+      "seed": 17,
+      "seat": 1,
+      "cash": 50185.0,
+      "opponent_cash": 35577.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "seconds": 5.352802800000063,
+      "configuration": {
+        "seed": null,
+        "episodeSteps": 720,
+        "actTimeout": 1,
+        "runTimeout": 1200,
+        "boardSize": 10,
+        "startingMoney": 3000,
+        "maxMarketOrdersPerTurn": 10,
+        "turnsPerDay": 24,
+        "shedCapacity": 100,
+        "weedSpawnChance": 0.005,
+        "townShopUnlockInterval": 3,
+        "townShopSellInterval": 4,
+        "townCenterSellInterval": 24,
+        "farmHandCostMult": 1,
+        "marketParams": {}
+      },
+      "resolved_seed": 17,
+      "daily": [
+        {
+          "step": 0,
+          "cash": 3000.0,
+          "crops": 0,
+          "animals": 0,
+          "weeds": 0,
+          "land": 1,
+          "shed": 0,
+          "carried": 0
+        },
+        {
+          "step": 24,
+          "cash": 249.0,
+          "crops": 5,
+          "animals": 4,
+          "weeds": 0,
+          "land": 1,
+          "shed": 3,
+          "carried": 0
+        },
+        {
+          "step": 48,
+          "cash": 294.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 0,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 72,
+          "cash": 194.0,
+          "crops": 5,
+          "animals": 5,
+          "weeds": 0,
+          "land": 1,
+          "shed": 6,
+          "carried": 0
+        },
+        {
+          "step": 96,
+          "cash": 304.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 0,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 120,
+          "cash": 370.0,
+          "crops": 8,
+          "animals": 6,
+          "weeds": 2,
+          "land": 1,
+          "shed": 4,
+          "carried": 0
+        },
+        {
+          "step": 144,
+          "cash": 280.0,
+          "crops": 11,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 8,
+          "carried": 0
+        },
+        {
+          "step": 168,
+          "cash": 259.0,
+          "crops": 12,
+          "animals": 6,
+          "weeds": 1,
+          "land": 1,
+          "shed": 10,
+          "carried": 0
+        },
+        {
+          "step": 192,
+          "cash": 410.0,
+          "crops": 17,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 18,
+          "carried": 0
+        },
+        {
+          "step": 216,
+          "cash": 1683.0,
+          "crops": 17,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 17,
+          "carried": 0
+        },
+        {
+          "step": 240,
+          "cash": 1604.0,
+          "crops": 17,
+          "animals": 7,
+          "weeds": 0,
+          "land": 1,
+          "shed": 20,
+          "carried": 0
+        },
+        {
+          "step": 264,
+          "cash": 8728.0,
+          "crops": 18,
+          "animals": 13,
+          "weeds": 2,
+          "land": 2,
+          "shed": 20,
+          "carried": 0
+        },
+        {
+          "step": 288,
+          "cash": 9497.0,
+          "crops": 21,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 24,
+          "carried": 0
+        },
+        {
+          "step": 312,
+          "cash": 11071.0,
+          "crops": 25,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 17,
+          "carried": 0
+        },
+        {
+          "step": 336,
+          "cash": 11611.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 39,
+          "carried": 0
+        },
+        {
+          "step": 360,
+          "cash": 16807.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 25,
+          "carried": 0
+        },
+        {
+          "step": 384,
+          "cash": 20894.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 22,
+          "carried": 0
+        },
+        {
+          "step": 408,
+          "cash": 22254.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 31,
+          "carried": 0
+        },
+        {
+          "step": 432,
+          "cash": 22593.0,
+          "crops": 30,
+          "animals": 14,
+          "weeds": 0,
+          "land": 2,
+          "shed": 36,
+          "carried": 0
+        },
+        {
+          "step": 456,
+          "cash": 26781.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 42,
+          "carried": 0
+        },
+        {
+          "step": 480,
+          "cash": 27314.0,
+          "crops": 29,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 24,
+          "carried": 0
+        },
+        {
+          "step": 504,
+          "cash": 30052.0,
+          "crops": 27,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 42,
+          "carried": 0
+        },
+        {
+          "step": 528,
+          "cash": 31199.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 52,
+          "carried": 0
+        },
+        {
+          "step": 552,
+          "cash": 37462.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 3,
+          "land": 2,
+          "shed": 46,
+          "carried": 0
+        },
+        {
+          "step": 576,
+          "cash": 38937.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 37,
+          "carried": 0
+        },
+        {
+          "step": 600,
+          "cash": 40411.0,
+          "crops": 25,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 49,
+          "carried": 0
+        },
+        {
+          "step": 624,
+          "cash": 41377.0,
+          "crops": 25,
+          "animals": 14,
+          "weeds": 4,
+          "land": 2,
+          "shed": 45,
+          "carried": 0
+        },
+        {
+          "step": 648,
+          "cash": 42900.0,
+          "crops": 28,
+          "animals": 14,
+          "weeds": 1,
+          "land": 2,
+          "shed": 39,
+          "carried": 0
+        },
+        {
+          "step": 672,
+          "cash": 44405.0,
+          "crops": 26,
+          "animals": 14,
+          "weeds": 2,
+          "land": 2,
+          "shed": 34,
+          "carried": 0
+        },
+        {
+          "step": 696,
+          "cash": 46171.0,
+          "crops": 18,
+          "animals": 11,
+          "weeds": 2,
+          "land": 2,
+          "shed": 45,
+          "carried": 0
+        },
+        {
+          "step": 719,
+          "cash": 50185.0,
+          "crops": 0,
+          "animals": 11,
+          "weeds": 2,
+          "land": 2,
+          "shed": 0,
+          "carried": 0
+        }
+      ],
+      "requested_actions": {
+        "PASS": 458,
+        "BUILD_PASTURE": 15,
+        "WEST": 1294,
+        "PICKUP": 145,
+        "NORTH": 1165,
+        "PLACE": 14,
+        "PLANT": 139,
+        "EAST": 1207,
+        "WATER": 432,
+        "SOUTH": 617,
+        "FEED": 276,
+        "CARE": 259,
+        "COLLECT_FERTILIZER": 270,
+        "DROP": 93,
+        "DIG": 33,
+        "HARVEST": 227,
+        "FERTILIZE": 107
+      }
+    }
+  ]
+}

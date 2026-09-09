@@ -1,0 +1,55 @@
+{
+  "opponents": {
+    "data/raw/reference-lonespear/main.py": {
+      "games": 32,
+      "seeds": 16,
+      "wins": 24,
+      "draws": 0,
+      "score": 0.75,
+      "ci95": [
+        0.5625,
+        0.90625
+      ],
+      "mean_cash": 83771.4375,
+      "mean_opponent_cash": 74878.84375,
+      "mean_gap": 8892.59375,
+      "p10_gap": -7562.0,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.025213,
+      "max_p99_action_seconds": 0.001466
+    },
+    "data/raw/reference-gzm/main.py": {
+      "games": 32,
+      "seeds": 16,
+      "wins": 17,
+      "draws": 0,
+      "score": 0.53125,
+      "ci95": [
+        0.3125,
+        0.71875
+      ],
+      "mean_cash": 81785.5,
+      "mean_opponent_cash": 81827.78125,
+      "mean_gap": -42.28125,
+      "p10_gap": -13655.6,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.052712,
+      "max_p99_action_seconds": 0.001291
+    }
+  },
+  "primary": {
+    "weights": {
+      "data/raw/reference-lonespear/main.py": 0.5,
+      "data/raw/reference-gzm/main.py": 0.5
+    },
+    "seeds": 16,
+    "score": 0.640625,
+    "ci95": [
+      0.515625,
+      0.75
+    ],
+    "gate_passed": true
+  }
+}
