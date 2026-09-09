@@ -58,3 +58,11 @@ Do not filter either policy by outcome. The saved summary records the full
 filter and file hashes so this scope cannot be confused with the original
 four-opponent validation panel. Keep v8 as the experimental incumbent; this
 candidate does not justify consuming fresh validation seeds.
+
+The explicit-subset CLI reproduces the comparison (PowerShell seed syntax):
+
+```powershell
+python scripts/phase4_compare.py data/raw/phase3-validation-challenger.json data/raw/phase4-depot-field.json --seeds (3000..3031) --opponents data/raw/reference-seyam/main.py data/raw/reference-cok/main.py --output data/raw/depot-comparison.json
+```
+
+Committed `.json.gz` benchmark archives may replace the two input paths.

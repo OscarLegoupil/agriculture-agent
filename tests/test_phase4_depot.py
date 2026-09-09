@@ -35,8 +35,9 @@ def test_remote_feed_purchase_is_only_available_next_turn(monkeypatch, base):
     assert action["farmer"][0] != "PICKUP"
     # An explicitly attempted pickup also fails before the market commits.
     attempted = deepcopy(obs)
-    game._apply_unit_action(attempted["farms"][0], attempted["private"], 0,
-                            ["PICKUP", "WHEAT", 2], 10, 10, 24, 100)
+    game._apply_unit_action(
+        attempted["farms"][0], attempted["private"], 0, ["PICKUP", "WHEAT", 2], 10, 10, 24, 100
+    )
     assert not attempted["private"]["inventories"][0]
     env.state[0].observation = deepcopy(obs)
     env.state[0].action = {"market": [["BUY_PRODUCT", "WHEAT", 2]]}

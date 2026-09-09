@@ -61,7 +61,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--output", type=Path, default=Path("data/raw/phase4-depot.json"))
-    parser.add_argument("--diagnose", action="store_true", help="Read completed records and replays; run no games")
+    parser.add_argument(
+        "--diagnose", action="store_true", help="Read completed records and replays; run no games"
+    )
     args = parser.parse_args()
     if args.diagnose:
         from phase3_field_execution import analyse
@@ -79,13 +81,20 @@ def main():
             lost = Counter()
             for event in service["production_eve_feed_losses"]:
                 lost[event["product"]] += event["extra_units_if_fed"]
-            result.append({
-                "base": data["candidates"][row["candidate"]]["base"],
-                "cash": measured["final_cash"], "harvested": measured["harvested"],
-                "service": service, "banked_units_lost": dict(lost),
-                "ledger": row["ledger"], "losses": row["losses"],
-            })
-        Path("reports/results/phase4-depot-diagnosis.json").write_text(json.dumps(result, indent=2) + "\n")
+            result.append(
+                {
+                    "base": data["candidates"][row["candidate"]]["base"],
+                    "cash": measured["final_cash"],
+                    "harvested": measured["harvested"],
+                    "service": service,
+                    "banked_units_lost": dict(lost),
+                    "ledger": row["ledger"],
+                    "losses": row["losses"],
+                }
+            )
+        Path("reports/results/phase4-depot-diagnosis.json").write_text(
+            json.dumps(result, indent=2) + "\n"
+        )
         return
     candidates = {}
     for base in BASES:
