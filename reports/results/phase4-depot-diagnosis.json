@@ -1,0 +1,360 @@
+[
+  {
+    "base": "v8",
+    "cash": [
+      54470.0,
+      36817.0
+    ],
+    "harvested": [
+      {
+        "WHEAT": 176,
+        "WOOL": 93,
+        "MILK": 118,
+        "MELON": 84,
+        "EGG": 275,
+        "STRAWBERRY": 207,
+        "CARROT": 134
+      },
+      {
+        "WHEAT": 386,
+        "WOOL": 162,
+        "MILK": 222,
+        "MELON": 72,
+        "STRAWBERRY": 274,
+        "CARROT": 11
+      }
+    ],
+    "service": {
+      "modes": {
+        "actual_service_immediate_collection": {
+          "WOOL": 93,
+          "MILK": 118,
+          "EGG": 276
+        },
+        "care_when_actually_fed": {
+          "WOOL": 97,
+          "MILK": 120,
+          "EGG": 285
+        },
+        "ideal_feed_and_care": {
+          "WOOL": 120,
+          "MILK": 120,
+          "EGG": 318
+        }
+      },
+      "nonterminal_missing_service": {
+        "SHEEP:fed_without_care": 4,
+        "SHEEP:unfed": 11,
+        "COW:fed_without_care": 3,
+        "COW:unfed": 1,
+        "GOOSE:fed_without_care": 9,
+        "GOOSE:unfed": 18
+      },
+      "production_eve_feed_losses": [
+        {
+          "day": 15,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 19,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 19,
+          "x": 4,
+          "y": 7,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 20,
+          "x": 4,
+          "y": 0,
+          "animal": "SHEEP",
+          "product": "WOOL",
+          "pending_care_bonus": 3,
+          "extra_units_if_fed": 3
+        },
+        {
+          "day": 20,
+          "x": 4,
+          "y": 1,
+          "animal": "SHEEP",
+          "product": "WOOL",
+          "pending_care_bonus": 3,
+          "extra_units_if_fed": 3
+        },
+        {
+          "day": 20,
+          "x": 2,
+          "y": 2,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 21,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 23,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 24,
+          "x": 2,
+          "y": 2,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 24,
+          "x": 2,
+          "y": 5,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 25,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 27,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 27,
+          "x": 2,
+          "y": 2,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        }
+      ]
+    },
+    "banked_units_lost": {
+      "EGG": 11,
+      "WOOL": 6
+    },
+    "ledger": {
+      "expense:labor": 8260.0,
+      "hires": 308,
+      "expense:COW": 1600,
+      "units:BUY_ANIMAL:COW": 4,
+      "expense:WHEAT": 10116,
+      "units:BUY_SEED:WHEAT": 56,
+      "expense:MELON": 1120,
+      "units:BUY_SEED:MELON": 14,
+      "units:BUY_PRODUCT:WHEAT": 230,
+      "expense:SHEEP": 2000,
+      "units:BUY_ANIMAL:SHEEP": 4,
+      "income:FERTILIZER": 13101,
+      "units:SELL:FERTILIZER": 273,
+      "income:WHEAT": 2775,
+      "units:SELL:WHEAT": 67,
+      "expense:land": 3000.0,
+      "land_purchases": 2,
+      "expense:STRAWBERRY": 4100,
+      "units:BUY_SEED:STRAWBERRY": 41,
+      "income:WOOL": 5358,
+      "units:SELL:WOOL": 93,
+      "income:MILK": 3929,
+      "units:SELL:MILK": 118,
+      "expense:GOOSE": 3000,
+      "units:BUY_ANIMAL:GOOSE": 10,
+      "income:MELON": 14503,
+      "units:SELL:MELON": 84,
+      "income:EGG": 14236,
+      "units:SELL:EGG": 275,
+      "expense:CARROT": 1000,
+      "units:BUY_SEED:CARROT": 50,
+      "income:STRAWBERRY": 17360,
+      "units:SELL:STRAWBERRY": 207,
+      "expense:FERTILIZER": 328,
+      "units:BUY_PRODUCT:FERTILIZER": 21,
+      "income:CARROT": 14732,
+      "units:SELL:CARROT": 134
+    },
+    "losses": {
+      "overflow_units": 0,
+      "animal_escapes": 1,
+      "water_deaths": 1
+    }
+  },
+  {
+    "base": "banked",
+    "cash": [
+      56161.0,
+      40025.0
+    ],
+    "harvested": [
+      {
+        "WHEAT": 170,
+        "WOOL": 99,
+        "MILK": 117,
+        "MELON": 84,
+        "EGG": 283,
+        "STRAWBERRY": 207,
+        "CARROT": 135
+      },
+      {
+        "WHEAT": 386,
+        "WOOL": 162,
+        "MILK": 222,
+        "MELON": 72,
+        "STRAWBERRY": 274,
+        "CARROT": 11
+      }
+    ],
+    "service": {
+      "modes": {
+        "actual_service_immediate_collection": {
+          "WOOL": 99,
+          "MILK": 117,
+          "EGG": 285
+        },
+        "care_when_actually_fed": {
+          "WOOL": 103,
+          "MILK": 120,
+          "EGG": 293
+        },
+        "ideal_feed_and_care": {
+          "WOOL": 120,
+          "MILK": 120,
+          "EGG": 318
+        }
+      },
+      "nonterminal_missing_service": {
+        "SHEEP:fed_without_care": 4,
+        "SHEEP:unfed": 13,
+        "COW:fed_without_care": 4,
+        "COW:unfed": 1,
+        "GOOSE:fed_without_care": 13,
+        "GOOSE:unfed": 16
+      },
+      "production_eve_feed_losses": [
+        {
+          "day": 17,
+          "x": 4,
+          "y": 0,
+          "animal": "SHEEP",
+          "product": "WOOL",
+          "pending_care_bonus": 2,
+          "extra_units_if_fed": 2
+        },
+        {
+          "day": 23,
+          "x": 4,
+          "y": 0,
+          "animal": "SHEEP",
+          "product": "WOOL",
+          "pending_care_bonus": 2,
+          "extra_units_if_fed": 2
+        },
+        {
+          "day": 24,
+          "x": 2,
+          "y": 5,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        },
+        {
+          "day": 26,
+          "x": 9,
+          "y": 0,
+          "animal": "GOOSE",
+          "product": "EGG",
+          "pending_care_bonus": 1,
+          "extra_units_if_fed": 1
+        }
+      ]
+    },
+    "banked_units_lost": {
+      "WOOL": 4,
+      "EGG": 2
+    },
+    "ledger": {
+      "expense:labor": 8260.0,
+      "hires": 308,
+      "expense:COW": 1600,
+      "units:BUY_ANIMAL:COW": 4,
+      "expense:WHEAT": 10441,
+      "units:BUY_SEED:WHEAT": 55,
+      "expense:MELON": 1120,
+      "units:BUY_SEED:MELON": 14,
+      "units:BUY_PRODUCT:WHEAT": 237,
+      "expense:SHEEP": 2000,
+      "units:BUY_ANIMAL:SHEEP": 4,
+      "income:FERTILIZER": 12967,
+      "units:SELL:FERTILIZER": 262,
+      "income:WHEAT": 2493,
+      "units:SELL:WHEAT": 62,
+      "expense:land": 3000.0,
+      "land_purchases": 2,
+      "expense:STRAWBERRY": 4100,
+      "units:BUY_SEED:STRAWBERRY": 41,
+      "income:WOOL": 7749,
+      "units:SELL:WOOL": 99,
+      "income:MILK": 3890,
+      "units:SELL:MILK": 117,
+      "expense:GOOSE": 3000,
+      "units:BUY_ANIMAL:GOOSE": 10,
+      "income:MELON": 14503,
+      "units:SELL:MELON": 84,
+      "income:EGG": 14492,
+      "units:SELL:EGG": 283,
+      "expense:CARROT": 980,
+      "units:BUY_SEED:CARROT": 49,
+      "income:STRAWBERRY": 16777,
+      "units:SELL:STRAWBERRY": 207,
+      "expense:FERTILIZER": 175,
+      "units:BUY_PRODUCT:FERTILIZER": 4,
+      "income:CARROT": 14966,
+      "units:SELL:CARROT": 135
+    },
+    "losses": {
+      "overflow_units": 0,
+      "terminal_escapes": 2
+    }
+  }
+]

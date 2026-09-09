@@ -79,3 +79,27 @@ python scripts/phase4_care.py --priority slack --output data/raw/phase4-care-ini
 ```
 
 The diagnosis command runs no games. It reads the completed frozen-release records, eight saved original/reproduced trajectories, and available corrected feed replays; its output is `reports/results/phase4-execution.json.gz`. Screen manifests are `data/raw/phase4-care.json` and `data/raw/phase4-care-corrected.json`, with pinned sources, environment, configuration, seats, actions and costs. Corrected and original seed-3063 COK replays are retained under `reports/replays/phase4-care`.
+
+
+## Spatial feed reserve counterfactual
+
+A further 32-game extension tests the specific remaining local-input constraint, not another feeding-priority threshold. The depot rule holds at most three wheat for currently unfed animals whose pickup/feed route remains feasible after the next-turn purchase delay. It activates only before day 29 with at least 1,000 cash, retains that reserve when selling wheat, and conservatively counts all carried goods against possible shed capacity. Inputs ordered at the market are never inserted into the same-turn scheduler inventory. Two official reset-based tests, parameterized over both policies, check failed same-turn pickup, successful market arrival, sale reserve, pending cargo and the final feasible pickup window.
+
+| Candidate | COK score | Mean gap | Paired gap change vs v8 | Seyam score | Mean gap | Paired gap change vs v8 |
+|---|---:|---:|---:|---:|---:|---:|
+| v8 + depot | 5/8 | +5,859.50 | +7,604.25 | 7/8 | +8,660.75 | +1,014.63 |
+| Banked escape-first + depot | 6/8 | +8,132.88 | +9,877.63 | 7/8 | +7,359.75 | -286.38 |
+
+This is an informative interaction screen on the same four known seed clusters, not fresh validation. Both candidates record two nonterminal escapes and eleven water deaths across sixteen games. All 32 games finish normally with no candidate stderr, maximum decision time 65.7 ms. Neither candidate is promoted from this small panel.
+
+Seed 3063 seat 0 illustrates both the mechanism and the attribution limit. Depot alone yields 275 eggs, 118 milk and 93 wool; adding banked deadlines yields 283 eggs, 117 milk and 99 wool. Direct discarded bonus falls from eleven eggs/six wool to two eggs/four wool. Wheat expense rises from 10,116 to 10,441. The earlier unmodified v8 trajectory produced 77 eggs, 222 milk and 118 wool: the depot interventions change subsequent herd investment and the occupancy-coupled shop path. Own cash is 54,470 with depot and 56,161 with its banked combination, versus 59,305 originally; opponent cash falls from 67,186 to 36,817 and 40,025. The large match-gap change therefore cannot be attributed solely to recovered feed bonuses at fixed market prices. A broader matched test is needed to distinguish useful robustness from favorable path changes.
+
+Exact candidates: depot `3f0e85ff92c2838c98e90f226ca42a5bdb0f3c2e38901d8cebb02359df78e2ac`; banked depot `ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba`. The completed manifest is `data/raw/phase4-depot.json`; compact official-transition diagnosis is [phase4-depot-diagnosis.json](results/phase4-depot-diagnosis.json).
+
+```powershell
+python -m pytest tests/test_phase4_depot.py
+python scripts/phase4_depot.py --output data/raw/phase4-depot-reproduction.json
+python scripts/phase4_depot.py --diagnose
+```
+
+The last command reuses the completed screen and saved seed-3063 replays without running games.

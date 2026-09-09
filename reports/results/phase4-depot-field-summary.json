@@ -1,0 +1,305 @@
+{
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031
+  ],
+  "weights": {
+    "data/raw/reference-seyam/main.py": 0.5,
+    "data/raw/reference-cok/main.py": 0.5
+  },
+  "opponents": {
+    "data/raw/reference-cok/main.py": {
+      "games": 64,
+      "incumbent_score": 0.328125,
+      "challenger_score": 0.296875,
+      "score_delta": -0.03125,
+      "delta_ci95": [
+        -0.171875,
+        0.109375
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -4732.421875,
+        "median": -5981.0,
+        "p10": -12327.5
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -5908.59375,
+        "median": -8587.5,
+        "p10": -17404.6
+      },
+      "mean_paired_gap_change": -1176.171875,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.085397,
+      "failed_work": 0
+    },
+    "data/raw/reference-seyam/main.py": {
+      "games": 64,
+      "incumbent_score": 0.921875,
+      "challenger_score": 0.9375,
+      "score_delta": 0.015625,
+      "delta_ci95": [
+        -0.09375,
+        0.125
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 16608.578125,
+        "median": 15972.5,
+        "p10": 3250.0000000000036
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 18076.4375,
+        "median": 16445.5,
+        "p10": 3382.600000000001
+      },
+      "mean_paired_gap_change": 1467.859375,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.091393,
+      "failed_work": 0
+    }
+  },
+  "aggregate": {
+    "incumbent_score": 0.625,
+    "challenger_score": 0.6171875,
+    "score_delta": -0.0078125,
+    "delta_ci95": [
+      -0.1015625,
+      0.1015625
+    ],
+    "challenger_ci95": [
+      0.5546875,
+      0.6875
+    ]
+  },
+  "identities": {
+    "incumbent": {
+      "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+      "source": "submissions/20260909-v8/main.py",
+      "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+      "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+      "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+    },
+    "challenger": {
+      "sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+      "source": "data/interim/phase4-depot/banked/ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba/main.py",
+      "executed_candidate": "data\\interim\\frozen\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba\\main.py",
+      "snapshot": "reports\\sources\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba.py.gz",
+      "revision": "323b0569259db125d1815020b2c22c015eb6d877"
+    }
+  },
+  "provenance": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    },
+    "all_opponent_hashes": {
+      "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+      "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+    },
+    "scenario_configuration_sha256": "f918524b388587244397f5d52b88ac17b178cb2a1e9dc829ee2f20f1906afc10",
+    "validated_full_panel": {
+      "opponents": [
+        "data/raw/reference-cok/main.py",
+        "data/raw/reference-seyam/main.py"
+      ],
+      "seeds": [
+        3000,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008,
+        3009,
+        3010,
+        3011,
+        3012,
+        3013,
+        3014,
+        3015,
+        3016,
+        3017,
+        3018,
+        3019,
+        3020,
+        3021,
+        3022,
+        3023,
+        3024,
+        3025,
+        3026,
+        3027,
+        3028,
+        3029,
+        3030,
+        3031
+      ],
+      "games_per_policy": 128
+    }
+  },
+  "scope": "Selected known development panel; no fresh validation or holdout; no anchor opponents tested.",
+  "inputs": {
+    "incumbent": {
+      "path": "data\\raw\\phase3-validation-challenger.json",
+      "sha256_file": "0b0a35c5b6b07984bd1a4751c6ae0138a2bf319f73689e8f3c2cd6e535ecb07c"
+    },
+    "challenger": {
+      "path": "data\\raw\\phase4-depot-field.json",
+      "sha256_file": "2905475c61d8936d2d2faacac5c8c5cc98635c093690be15d479c948cbaaf067"
+    }
+  },
+  "incumbent_original_game_count": 512,
+  "incumbent_subset_selection": {
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031
+    ],
+    "opponents": [
+      "data/raw/reference-seyam/main.py",
+      "data/raw/reference-cok/main.py"
+    ],
+    "seats": [
+      0,
+      1
+    ]
+  },
+  "telemetry": {
+    "incumbent": {
+      "games": 128,
+      "game_wall_seconds": {
+        "mean": 8.35823500625014,
+        "median": 8.314067749997776,
+        "p95": 9.161667214998305,
+        "max": 9.499407399998745
+      },
+      "per_game_action_p99_seconds": {
+        "mean": 0.003737671875,
+        "median": 0.0036750000000000003,
+        "p95": 0.00423885,
+        "max": 0.005079
+      },
+      "per_game_action_max_seconds": {
+        "mean": 0.0242099296875,
+        "median": 0.0122555,
+        "p95": 0.0862196,
+        "max": 0.09905
+      },
+      "quantile_scope": "Distribution across games of each game's measured action statistic; not pooled action quantiles",
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "stderr_turns": 0,
+      "fallback_scope": "Stderr turns are diagnostics, not an exact fallback count; zero establishes no observed fallback that logs to stderr"
+    },
+    "challenger": {
+      "games": 128,
+      "game_wall_seconds": {
+        "mean": 6.230288352343791,
+        "median": 5.574660700000095,
+        "p95": 8.945918779999191,
+        "max": 9.11419190000015
+      },
+      "per_game_action_p99_seconds": {
+        "mean": 0.003121765625,
+        "median": 0.002934,
+        "p95": 0.00425635,
+        "max": 0.004485
+      },
+      "per_game_action_max_seconds": {
+        "mean": 0.020293921875000002,
+        "median": 0.008892500000000001,
+        "p95": 0.07209589999999999,
+        "max": 0.091393
+      },
+      "quantile_scope": "Distribution across games of each game's measured action statistic; not pooled action quantiles",
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "stderr_turns": 0,
+      "fallback_scope": "Stderr turns are diagnostics, not an exact fallback count; zero establishes no observed fallback that logs to stderr"
+    }
+  },
+  "uncertainty": "10000 percentile resamples of whole seed clusters; RNG20260910; both seats, both opponents and both policies remain paired. Adaptive selection and opponent coverage are separate limitations."
+}

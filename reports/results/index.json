@@ -533,6 +533,18 @@
     "games": 16,
     "kind": "benchmark"
   },
+  "phase4-depot-field.json.gz": {
+    "sha256_uncompressed": "2905475c61d8936d2d2faacac5c8c5cc98635c093690be15d479c948cbaaf067",
+    "bytes": 453327,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-depot.json.gz": {
+    "sha256_uncompressed": "6183dd9b38d2f928064c753398e189d5fe0802718876943cb5a14e3072a20e38",
+    "bytes": 114239,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "phase4-economic-ledgers.json.gz": {
     "sha256_uncompressed": "34217f4a87e79623b1be6ff6bc9b43074ec710e1dde76ba8e24544412795445a",
     "bytes": 77622,
@@ -545,11 +557,23 @@
     "games": 0,
     "kind": "analysis"
   },
+  "phase4-joint-feed.json.gz": {
+    "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
+    "bytes": 113924,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "phase4-loss-replays.json.gz": {
     "sha256_uncompressed": "96d9afd19e1890dfa653a0435a4441f867e60f59dab42354d9d3c6c6277a0630",
     "bytes": 15077,
     "games": 4,
     "kind": "benchmark"
+  },
+  "phase4-terminal-audit.json.gz": {
+    "sha256_uncompressed": "f37536cf7a50548daa40fc0002b6d3edd8652a26c23ea93b89d1e76a5a3f6df9",
+    "bytes": 1337,
+    "games": 0,
+    "kind": "analysis"
   },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",

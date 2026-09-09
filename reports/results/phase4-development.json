@@ -2,326 +2,6 @@
   "scope": "Exploratory development only; unequal candidate panels are not directly comparable.",
   "experiments": [
     {
-      "archive": "reports/results/phase4-cohorts.json.gz",
-      "sha256_uncompressed": "b923d8a7d9dcd1a69adc7a6063c040232995e4799db0673ce4d18272f37a440d",
-      "revision": "3f5a16ceb5593d842c66464b47031943a0f88d07",
-      "groups": [
-        {
-          "name": "economic_after_startup",
-          "sha256": "483858b24beba71f0420859d00144c5e30a7e0ba9f07a5ec45f13f368cfa053e",
-          "opponent": "data/raw/reference-cok/main.py",
-          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 4,
-          "draws": 0,
-          "match_score": 0.5,
-          "mean_cash_gap": 472.75,
-          "minimum_cash_gap": -11991.0,
-          "missing_cash_games": 0,
-          "mean_cash": 69204.5,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.061649
-        },
-        {
-          "name": "economic_after_startup",
-          "sha256": "483858b24beba71f0420859d00144c5e30a7e0ba9f07a5ec45f13f368cfa053e",
-          "opponent": "data/raw/reference-seyam/main.py",
-          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 6,
-          "draws": 0,
-          "match_score": 0.75,
-          "mean_cash_gap": 3598.625,
-          "minimum_cash_gap": -11266.0,
-          "missing_cash_games": 0,
-          "mean_cash": 93954.75,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.103371
-        },
-        {
-          "name": "guarded_cohort",
-          "sha256": "fa9353f54164c8ef7e773ab79ffe664b638c320c2a2f1efcb8eb12742ab2e09c",
-          "opponent": "data/raw/reference-cok/main.py",
-          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 3,
-          "draws": 0,
-          "match_score": 0.375,
-          "mean_cash_gap": -2639.75,
-          "minimum_cash_gap": -16131.0,
-          "missing_cash_games": 0,
-          "mean_cash": 78754.75,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.058193
-        },
-        {
-          "name": "guarded_cohort",
-          "sha256": "fa9353f54164c8ef7e773ab79ffe664b638c320c2a2f1efcb8eb12742ab2e09c",
-          "opponent": "data/raw/reference-seyam/main.py",
-          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 5,
-          "draws": 0,
-          "match_score": 0.625,
-          "mean_cash_gap": 4102.0,
-          "minimum_cash_gap": -3537.0,
-          "missing_cash_games": 0,
-          "mean_cash": 84445.5,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.071424
-        }
-      ]
-    },
-    {
-      "archive": "reports/results/phase4-delivery.json.gz",
-      "sha256_uncompressed": "4f7d151d3a541838048fbda336df8ac1088ba0d05bd61a6ea6722f503eb6a13f",
-      "revision": "0254687b4bbb34193daa6c4e3112a7fdcd103c05",
-      "groups": [
-        {
-          "name": "immediate_delivery",
-          "sha256": "9ba68bcdfba55d8fec2a0aeb6486fe6a0a191a210b798e354eaa9d24f83e0f8d",
-          "opponent": "data/raw/reference-cok/main.py",
-          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 6,
-          "draws": 0,
-          "match_score": 0.75,
-          "mean_cash_gap": 2680.625,
-          "minimum_cash_gap": -19232.0,
-          "missing_cash_games": 0,
-          "mean_cash": 65137.5,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.008779
-        },
-        {
-          "name": "immediate_delivery",
-          "sha256": "9ba68bcdfba55d8fec2a0aeb6486fe6a0a191a210b798e354eaa9d24f83e0f8d",
-          "opponent": "data/raw/reference-seyam/main.py",
-          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
-          "scenarios": [
-            [
-              3000,
-              0
-            ],
-            [
-              3000,
-              1
-            ],
-            [
-              3017,
-              0
-            ],
-            [
-              3017,
-              1
-            ],
-            [
-              3042,
-              0
-            ],
-            [
-              3042,
-              1
-            ],
-            [
-              3063,
-              0
-            ],
-            [
-              3063,
-              1
-            ]
-          ],
-          "games": 8,
-          "wins": 8,
-          "draws": 0,
-          "match_score": 1.0,
-          "mean_cash_gap": 15582.25,
-          "minimum_cash_gap": 2922.0,
-          "missing_cash_games": 0,
-          "mean_cash": 100571.25,
-          "non_done_games": 0,
-          "stderr_turns": 0,
-          "runtime_max_seconds": 0.052539
-        }
-      ]
-    },
-    {
       "archive": "reports/results/phase4-capacity.json.gz",
       "sha256_uncompressed": "8ba2b2dcc0a0d24ce78aaf2123f5eeb7b34cbabd43ad44215bc1f6c58f870bf4",
       "revision": "0254687b4bbb34193daa6c4e3112a7fdcd103c05",
@@ -1057,6 +737,217 @@
       ]
     },
     {
+      "archive": "reports/results/phase4-cohorts.json.gz",
+      "sha256_uncompressed": "b923d8a7d9dcd1a69adc7a6063c040232995e4799db0673ce4d18272f37a440d",
+      "revision": "3f5a16ceb5593d842c66464b47031943a0f88d07",
+      "groups": [
+        {
+          "name": "economic_after_startup",
+          "sha256": "483858b24beba71f0420859d00144c5e30a7e0ba9f07a5ec45f13f368cfa053e",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 4,
+          "draws": 0,
+          "match_score": 0.5,
+          "mean_cash_gap": 472.75,
+          "minimum_cash_gap": -11991.0,
+          "missing_cash_games": 0,
+          "mean_cash": 69204.5,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.061649
+        },
+        {
+          "name": "economic_after_startup",
+          "sha256": "483858b24beba71f0420859d00144c5e30a7e0ba9f07a5ec45f13f368cfa053e",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 6,
+          "draws": 0,
+          "match_score": 0.75,
+          "mean_cash_gap": 3598.625,
+          "minimum_cash_gap": -11266.0,
+          "missing_cash_games": 0,
+          "mean_cash": 93954.75,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.103371
+        },
+        {
+          "name": "guarded_cohort",
+          "sha256": "fa9353f54164c8ef7e773ab79ffe664b638c320c2a2f1efcb8eb12742ab2e09c",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 3,
+          "draws": 0,
+          "match_score": 0.375,
+          "mean_cash_gap": -2639.75,
+          "minimum_cash_gap": -16131.0,
+          "missing_cash_games": 0,
+          "mean_cash": 78754.75,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.058193
+        },
+        {
+          "name": "guarded_cohort",
+          "sha256": "fa9353f54164c8ef7e773ab79ffe664b638c320c2a2f1efcb8eb12742ab2e09c",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 5,
+          "draws": 0,
+          "match_score": 0.625,
+          "mean_cash_gap": 4102.0,
+          "minimum_cash_gap": -3537.0,
+          "missing_cash_games": 0,
+          "mean_cash": 84445.5,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.071424
+        }
+      ]
+    },
+    {
       "archive": "reports/results/phase4-delivery-field.json.gz",
       "sha256_uncompressed": "626c9640e7dc80eef8bf180745cb3bb3d5a7ecb26dfbe0a589928fa13dc36e0a",
       "revision": "3f5a16ceb5593d842c66464b47031943a0f88d07",
@@ -1358,6 +1249,326 @@
       ]
     },
     {
+      "archive": "reports/results/phase4-delivery.json.gz",
+      "sha256_uncompressed": "4f7d151d3a541838048fbda336df8ac1088ba0d05bd61a6ea6722f503eb6a13f",
+      "revision": "0254687b4bbb34193daa6c4e3112a7fdcd103c05",
+      "groups": [
+        {
+          "name": "immediate_delivery",
+          "sha256": "9ba68bcdfba55d8fec2a0aeb6486fe6a0a191a210b798e354eaa9d24f83e0f8d",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 6,
+          "draws": 0,
+          "match_score": 0.75,
+          "mean_cash_gap": 2680.625,
+          "minimum_cash_gap": -19232.0,
+          "missing_cash_games": 0,
+          "mean_cash": 65137.5,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.008779
+        },
+        {
+          "name": "immediate_delivery",
+          "sha256": "9ba68bcdfba55d8fec2a0aeb6486fe6a0a191a210b798e354eaa9d24f83e0f8d",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 8,
+          "draws": 0,
+          "match_score": 1.0,
+          "mean_cash_gap": 15582.25,
+          "minimum_cash_gap": 2922.0,
+          "missing_cash_games": 0,
+          "mean_cash": 100571.25,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.052539
+        }
+      ]
+    },
+    {
+      "archive": "reports/results/phase4-joint-feed.json.gz",
+      "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
+      "revision": "323b0569259db125d1815020b2c22c015eb6d877",
+      "groups": [
+        {
+          "name": "joint_banked",
+          "sha256": "ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 6,
+          "draws": 0,
+          "match_score": 0.75,
+          "mean_cash_gap": 2750.25,
+          "minimum_cash_gap": -17786.0,
+          "missing_cash_games": 0,
+          "mean_cash": 76843.625,
+          "non_done_games": 0,
+          "stderr_turns": 3,
+          "runtime_max_seconds": 0.076386
+        },
+        {
+          "name": "joint_banked",
+          "sha256": "ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 8,
+          "draws": 0,
+          "match_score": 1.0,
+          "mean_cash_gap": 8673.25,
+          "minimum_cash_gap": 1208.0,
+          "missing_cash_games": 0,
+          "mean_cash": 88655.625,
+          "non_done_games": 0,
+          "stderr_turns": 5,
+          "runtime_max_seconds": 0.094039
+        },
+        {
+          "name": "joint_depot",
+          "sha256": "f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 6,
+          "draws": 0,
+          "match_score": 0.75,
+          "mean_cash_gap": 6774.375,
+          "minimum_cash_gap": -8653.0,
+          "missing_cash_games": 0,
+          "mean_cash": 74582.375,
+          "non_done_games": 0,
+          "stderr_turns": 2,
+          "runtime_max_seconds": 0.072814
+        },
+        {
+          "name": "joint_depot",
+          "sha256": "f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 7,
+          "draws": 0,
+          "match_score": 0.875,
+          "mean_cash_gap": 7670.5,
+          "minimum_cash_gap": -6985.0,
+          "missing_cash_games": 0,
+          "mean_cash": 85797.75,
+          "non_done_games": 0,
+          "stderr_turns": 1,
+          "runtime_max_seconds": 0.071666
+        }
+      ]
+    },
+    {
       "archive": "reports/results/phase4-loss-replays.json.gz",
       "sha256_uncompressed": "96d9afd19e1890dfa653a0435a4441f867e60f59dab42354d9d3c6c6277a0630",
       "revision": "0254687b4bbb34193daa6c4e3112a7fdcd103c05",
@@ -1396,6 +1607,774 @@
           "non_done_games": 0,
           "stderr_turns": 0,
           "runtime_max_seconds": 0.007001
+        }
+      ]
+    },
+    {
+      "archive": "reports/results/phase4-depot-field.json.gz",
+      "sha256_uncompressed": "2905475c61d8936d2d2faacac5c8c5cc98635c093690be15d479c948cbaaf067",
+      "revision": "323b0569259db125d1815020b2c22c015eb6d877",
+      "groups": [
+        {
+          "name": "data\\interim\\frozen\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba\\main.py",
+          "sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3001,
+              0
+            ],
+            [
+              3001,
+              1
+            ],
+            [
+              3002,
+              0
+            ],
+            [
+              3002,
+              1
+            ],
+            [
+              3003,
+              0
+            ],
+            [
+              3003,
+              1
+            ],
+            [
+              3004,
+              0
+            ],
+            [
+              3004,
+              1
+            ],
+            [
+              3005,
+              0
+            ],
+            [
+              3005,
+              1
+            ],
+            [
+              3006,
+              0
+            ],
+            [
+              3006,
+              1
+            ],
+            [
+              3007,
+              0
+            ],
+            [
+              3007,
+              1
+            ],
+            [
+              3008,
+              0
+            ],
+            [
+              3008,
+              1
+            ],
+            [
+              3009,
+              0
+            ],
+            [
+              3009,
+              1
+            ],
+            [
+              3010,
+              0
+            ],
+            [
+              3010,
+              1
+            ],
+            [
+              3011,
+              0
+            ],
+            [
+              3011,
+              1
+            ],
+            [
+              3012,
+              0
+            ],
+            [
+              3012,
+              1
+            ],
+            [
+              3013,
+              0
+            ],
+            [
+              3013,
+              1
+            ],
+            [
+              3014,
+              0
+            ],
+            [
+              3014,
+              1
+            ],
+            [
+              3015,
+              0
+            ],
+            [
+              3015,
+              1
+            ],
+            [
+              3016,
+              0
+            ],
+            [
+              3016,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3018,
+              0
+            ],
+            [
+              3018,
+              1
+            ],
+            [
+              3019,
+              0
+            ],
+            [
+              3019,
+              1
+            ],
+            [
+              3020,
+              0
+            ],
+            [
+              3020,
+              1
+            ],
+            [
+              3021,
+              0
+            ],
+            [
+              3021,
+              1
+            ],
+            [
+              3022,
+              0
+            ],
+            [
+              3022,
+              1
+            ],
+            [
+              3023,
+              0
+            ],
+            [
+              3023,
+              1
+            ],
+            [
+              3024,
+              0
+            ],
+            [
+              3024,
+              1
+            ],
+            [
+              3025,
+              0
+            ],
+            [
+              3025,
+              1
+            ],
+            [
+              3026,
+              0
+            ],
+            [
+              3026,
+              1
+            ],
+            [
+              3027,
+              0
+            ],
+            [
+              3027,
+              1
+            ],
+            [
+              3028,
+              0
+            ],
+            [
+              3028,
+              1
+            ],
+            [
+              3029,
+              0
+            ],
+            [
+              3029,
+              1
+            ],
+            [
+              3030,
+              0
+            ],
+            [
+              3030,
+              1
+            ],
+            [
+              3031,
+              0
+            ],
+            [
+              3031,
+              1
+            ]
+          ],
+          "games": 64,
+          "wins": 19,
+          "draws": 0,
+          "match_score": 0.296875,
+          "mean_cash_gap": -5908.59375,
+          "minimum_cash_gap": -21352.0,
+          "missing_cash_games": 0,
+          "mean_cash": 81364.65625,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.085397
+        },
+        {
+          "name": "data\\interim\\frozen\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba\\main.py",
+          "sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3001,
+              0
+            ],
+            [
+              3001,
+              1
+            ],
+            [
+              3002,
+              0
+            ],
+            [
+              3002,
+              1
+            ],
+            [
+              3003,
+              0
+            ],
+            [
+              3003,
+              1
+            ],
+            [
+              3004,
+              0
+            ],
+            [
+              3004,
+              1
+            ],
+            [
+              3005,
+              0
+            ],
+            [
+              3005,
+              1
+            ],
+            [
+              3006,
+              0
+            ],
+            [
+              3006,
+              1
+            ],
+            [
+              3007,
+              0
+            ],
+            [
+              3007,
+              1
+            ],
+            [
+              3008,
+              0
+            ],
+            [
+              3008,
+              1
+            ],
+            [
+              3009,
+              0
+            ],
+            [
+              3009,
+              1
+            ],
+            [
+              3010,
+              0
+            ],
+            [
+              3010,
+              1
+            ],
+            [
+              3011,
+              0
+            ],
+            [
+              3011,
+              1
+            ],
+            [
+              3012,
+              0
+            ],
+            [
+              3012,
+              1
+            ],
+            [
+              3013,
+              0
+            ],
+            [
+              3013,
+              1
+            ],
+            [
+              3014,
+              0
+            ],
+            [
+              3014,
+              1
+            ],
+            [
+              3015,
+              0
+            ],
+            [
+              3015,
+              1
+            ],
+            [
+              3016,
+              0
+            ],
+            [
+              3016,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3018,
+              0
+            ],
+            [
+              3018,
+              1
+            ],
+            [
+              3019,
+              0
+            ],
+            [
+              3019,
+              1
+            ],
+            [
+              3020,
+              0
+            ],
+            [
+              3020,
+              1
+            ],
+            [
+              3021,
+              0
+            ],
+            [
+              3021,
+              1
+            ],
+            [
+              3022,
+              0
+            ],
+            [
+              3022,
+              1
+            ],
+            [
+              3023,
+              0
+            ],
+            [
+              3023,
+              1
+            ],
+            [
+              3024,
+              0
+            ],
+            [
+              3024,
+              1
+            ],
+            [
+              3025,
+              0
+            ],
+            [
+              3025,
+              1
+            ],
+            [
+              3026,
+              0
+            ],
+            [
+              3026,
+              1
+            ],
+            [
+              3027,
+              0
+            ],
+            [
+              3027,
+              1
+            ],
+            [
+              3028,
+              0
+            ],
+            [
+              3028,
+              1
+            ],
+            [
+              3029,
+              0
+            ],
+            [
+              3029,
+              1
+            ],
+            [
+              3030,
+              0
+            ],
+            [
+              3030,
+              1
+            ],
+            [
+              3031,
+              0
+            ],
+            [
+              3031,
+              1
+            ]
+          ],
+          "games": 64,
+          "wins": 60,
+          "draws": 0,
+          "match_score": 0.9375,
+          "mean_cash_gap": 18076.4375,
+          "minimum_cash_gap": -8781.0,
+          "missing_cash_games": 0,
+          "mean_cash": 91691.390625,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.091393
+        }
+      ]
+    },
+    {
+      "archive": "reports/results/phase4-depot.json.gz",
+      "sha256_uncompressed": "6183dd9b38d2f928064c753398e189d5fe0802718876943cb5a14e3072a20e38",
+      "revision": "323b0569259db125d1815020b2c22c015eb6d877",
+      "groups": [
+        {
+          "name": "data\\interim\\phase4-depot\\banked\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba\\main.py",
+          "sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 6,
+          "draws": 0,
+          "match_score": 0.75,
+          "mean_cash_gap": 8132.875,
+          "minimum_cash_gap": -7240.0,
+          "missing_cash_games": 0,
+          "mean_cash": 80116.625,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.055273
+        },
+        {
+          "name": "data\\interim\\phase4-depot\\banked\\ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba\\main.py",
+          "sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 7,
+          "draws": 0,
+          "match_score": 0.875,
+          "mean_cash_gap": 7359.75,
+          "minimum_cash_gap": -8149.0,
+          "missing_cash_games": 0,
+          "mean_cash": 87963.0,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.045717
+        },
+        {
+          "name": "data\\interim\\phase4-depot\\v8\\3f0e85ff92c2838c98e90f226ca42a5bdb0f3c2e38901d8cebb02359df78e2ac\\main.py",
+          "sha256": "3f0e85ff92c2838c98e90f226ca42a5bdb0f3c2e38901d8cebb02359df78e2ac",
+          "opponent": "data/raw/reference-cok/main.py",
+          "opponent_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 5,
+          "draws": 0,
+          "match_score": 0.625,
+          "mean_cash_gap": 5859.5,
+          "minimum_cash_gap": -7409.0,
+          "missing_cash_games": 0,
+          "mean_cash": 80006.0,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.065735
+        },
+        {
+          "name": "data\\interim\\phase4-depot\\v8\\3f0e85ff92c2838c98e90f226ca42a5bdb0f3c2e38901d8cebb02359df78e2ac\\main.py",
+          "sha256": "3f0e85ff92c2838c98e90f226ca42a5bdb0f3c2e38901d8cebb02359df78e2ac",
+          "opponent": "data/raw/reference-seyam/main.py",
+          "opponent_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "scenarios": [
+            [
+              3000,
+              0
+            ],
+            [
+              3000,
+              1
+            ],
+            [
+              3017,
+              0
+            ],
+            [
+              3017,
+              1
+            ],
+            [
+              3042,
+              0
+            ],
+            [
+              3042,
+              1
+            ],
+            [
+              3063,
+              0
+            ],
+            [
+              3063,
+              1
+            ]
+          ],
+          "games": 8,
+          "wins": 7,
+          "draws": 0,
+          "match_score": 0.875,
+          "mean_cash_gap": 8660.75,
+          "minimum_cash_gap": -3904.0,
+          "missing_cash_games": 0,
+          "mean_cash": 88577.625,
+          "non_done_games": 0,
+          "stderr_turns": 0,
+          "runtime_max_seconds": 0.039249
         }
       ]
     }

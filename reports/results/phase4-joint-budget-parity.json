@@ -1,0 +1,128 @@
+{
+  "complete": true,
+  "kind": "budget-only saved-observation action parity",
+  "cases": [
+    {
+      "base": "banked",
+      "seed": 3029,
+      "day": 8,
+      "hour": 16,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "banked",
+      "seed": 3029,
+      "day": 8,
+      "hour": 18,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "banked",
+      "seed": 3029,
+      "day": 8,
+      "hour": 20,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "banked",
+      "seed": 3063,
+      "day": 11,
+      "hour": 16,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "banked",
+      "seed": 3063,
+      "day": 11,
+      "hour": 18,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "banked",
+      "seed": 3063,
+      "day": 11,
+      "hour": 20,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3029,
+      "day": 8,
+      "hour": 16,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3029,
+      "day": 8,
+      "hour": 18,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3029,
+      "day": 8,
+      "hour": 20,
+      "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3063,
+      "day": 11,
+      "hour": 16,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3063,
+      "day": 11,
+      "hour": 18,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    },
+    {
+      "base": "depot",
+      "seed": 3063,
+      "day": 11,
+      "hour": 20,
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "actions_equal": true,
+      "stderr": ""
+    }
+  ],
+  "artifacts": {
+    "banked0.006": {
+      "sha256": "ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3"
+    },
+    "banked0.05": {
+      "sha256": "3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57"
+    },
+    "depot0.006": {
+      "sha256": "f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7"
+    },
+    "depot0.05": {
+      "sha256": "e378d7f718fe127c3c2140e8a4c58bfe3ae0ee415244effbd5141084bd605218"
+    }
+  }
+}

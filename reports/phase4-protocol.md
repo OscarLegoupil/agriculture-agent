@@ -77,3 +77,27 @@ deadlines. Sale reserves must agree with purchase targets to avoid a buy/sell
 loop; bought inputs become usable only on the next action. A bounded joint
 maintenance-routing diagnostic may use copied official states without adding
 simulation games. Its schedules are offline diagnostics, not deployable results.
+
+The depot/banked combination wins 6/8 COK and 7/8 Seyam screen games, but large
+shop-path changes again prohibit interpreting its paired gain as direct feed
+recovery. Broader confirmation therefore uses 32 known seeds, 3000–3031,
+both seats and both challenge opponents (128 games), including the diagnosed
+severe losses. Freeze `ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba`
+for this check. Do not open fresh validation based on the original four seeds.
+
+The joint diagnostic also exposes a specific shared-resource admission error:
+two sheep both use one worker's single wheat when independently estimating
+their latest departure. Add 32 original-panel screens for jointly feasible
+feed-route assignment, with and without the depot intervention, after official
+resource-contention and search-budget checks. This tests a distinct controller
+constraint; it does not authorize threshold search or future-state access.
+
+The joint banked-feed screen improves COK from 4/8 to 6/8 with Seyam
+unchanged at 8/8. Confirm it on the same 32 known seeds, 3000–3031,
+both seats and both challenge opponents (128 games). Before this run, raise
+the bounded routing budget from 6 ms to 50 ms: twelve saved-observation
+comparisons preserve actions and the forced-budget fallback test passes.
+Freeze `3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57`.
+The earlier screen's eleven stderr turns have no retained message text and
+cannot be classified retrospectively. New benchmarks retain bounded message
+counts and disclose truncation or omission. This remains known-data screening.

@@ -13,7 +13,10 @@ from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from telemetry import Telemetry
+if __package__:
+    from .telemetry import Telemetry
+else:
+    from telemetry import Telemetry
 
 
 def sha(path):
@@ -42,6 +45,30 @@ def provenance(paths):
     }
 
 
+def stderr_summary(logs, seat):
+    """Retain bounded diagnostics; counts refer to messages, not inferred fallbacks."""
+    messages = Counter()
+    turns = truncated = omitted = 0
+    for log in logs:
+        if len(log) <= seat or not log[seat].get("stderr"):
+            continue
+        turns += 1
+        message = str(log[seat]["stderr"]).strip()
+        if len(message) > 2048:
+            truncated += 1
+            message = message[:2048]
+        if message in messages or len(messages) < 32:
+            messages[message] += 1
+        else:
+            omitted += 1
+    return {
+        "stderr_turns": turns,
+        "stderr_messages": dict(messages),
+        "stderr_truncated_turns": truncated,
+        "stderr_omitted_turns": omitted,
+    }
+
+
 def episode(args):
     candidate, opponent, seed, seat, replay = args
     from kaggle_environments import make
@@ -53,7 +80,7 @@ def episode(args):
         env.run(agents)
     elapsed = time.perf_counter() - start
     runtimes = sorted(log[seat]["duration"] for log in env.logs if len(log) > seat)
-    stderr_turns = sum(bool(log[seat]["stderr"]) for log in env.logs if len(log) > seat)
+    diagnostics = stderr_summary(env.logs, seat)
     daily = []
     actions = Counter()
     for index, step in enumerate(env.steps):
@@ -112,7 +139,7 @@ def episode(args):
         "runtime_p99_seconds": runtimes[min(len(runtimes) - 1, int(len(runtimes) * 0.99))]
         if runtimes
         else 0,
-        "stderr_turns": stderr_turns,
+        **diagnostics,
         "replay_path": replay_path,
     }
 
