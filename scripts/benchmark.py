@@ -80,12 +80,14 @@ def episode(args):
                     "carried": sum(sum(i.values()) for i in obs.private.inventories),
                 }
             )
+    replay_path = None
     if replay:
         path = (
-            Path(replay) / f"{Path(candidate).parent.name}-{Path(opponent).stem}-{seed}-{seat}.json"
+            Path(replay) / f"{Path(candidate).parent.name}-{Path(opponent).parent.name}-{Path(opponent).stem}-{seed}-{seat}.json"
         )
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(env.toJSON()), encoding="utf-8")
+        replay_path = str(path)
     return {
         "candidate": candidate,
         "opponent": opponent,
@@ -107,6 +109,7 @@ def episode(args):
         if runtimes
         else 0,
         "stderr_turns": stderr_turns,
+        "replay_path": replay_path,
     }
 
 
@@ -118,6 +121,7 @@ def main():
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--output", required=True)
     parser.add_argument("--replays")
+    parser.add_argument("--replay-seeds", nargs="+", type=int)
     args = parser.parse_args()
     paths = [args.candidate, *args.opponents]
     frozen_candidate = Path("data/interim/frozen") / sha(args.candidate) / "main.py"
@@ -133,7 +137,8 @@ def main():
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     tasks = [
-        (str(frozen_candidate), opp, seed, seat, args.replays)
+        (str(frozen_candidate), opp, seed, seat,
+         args.replays if args.replay_seeds is None or seed in args.replay_seeds else None)
         for opp in args.opponents
         for seed in args.seeds
         for seat in (0, 1)

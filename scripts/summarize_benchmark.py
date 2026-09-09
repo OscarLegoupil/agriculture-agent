@@ -20,7 +20,9 @@ def summarize(rows, primary=None):
     grouped = defaultdict(list)
     for row in rows:
         grouped[row["opponent"]].append(row)
-    primary = primary or [key for key in grouped if "lonespear" in key or "reference-gzm" in key]
+    if primary is None:
+        declared = ["data/raw/reference-lonespear/main.py", "data/raw/reference-gzm/main.py"]
+        primary = declared if all(opponent in grouped for opponent in declared) else []
     report = {"opponents": {}}
     for opponent, games in grouped.items():
         paired = defaultdict(list)

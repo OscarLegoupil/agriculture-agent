@@ -187,6 +187,7 @@ def agent(obs: dict[str, Any], configuration: dict[str, Any] | None = None) -> d
     positions = [tuple(farm["farmer"]), *map(tuple, farm["hands"])]
     inventories = [dict(i) for i in private["inventories"]]
     shed = dict(private["shed"])
+    shed_room = max(0, cfg.get("shedCapacity", 100) - sum(shed.values()))
     seeds = dict(private["seeds"])
     prices = obs["market"]["prices"]
     cells = [
@@ -521,12 +522,12 @@ def agent(obs: dict[str, Any], configuration: dict[str, Any] | None = None) -> d
         if (
             load
             and ((pos in shed_tiles and load >= 3) or load >= p["return_load"] or end_return)
-            and sum(shed.values()) + sum(inv.values()) <= cfg.get("shedCapacity", 100)
+            and sum(inv.values()) <= shed_room
         ):
             actions[i] = ["DROP"] if home_dist == 0 else move(pos, home)
             if home_dist == 0:
+                shed_room -= sum(inv.values())
                 for item, n in inv.items():
-                    shed[item] = shed.get(item, 0) + n
                     if day == 29 and item in BASE:
                         market.insert(0, ["SELL", item, n])
             continue
@@ -582,8 +583,9 @@ def agent(obs: dict[str, Any], configuration: dict[str, Any] | None = None) -> d
                     seeds[arg] -= 1
         elif load and home_dist:
             actions[i] = move(pos, home)
-        elif load:
+        elif load and sum(inv.values()) <= shed_room:
             actions[i] = ["DROP"]
+            shed_room -= sum(inv.values())
     return {
         "farmer": actions[0],
         "hands": actions[1:],

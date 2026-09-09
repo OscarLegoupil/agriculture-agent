@@ -58,7 +58,22 @@ namespace = {}
 exec(compile(Path(sys.argv[1]).read_bytes(), 'main.py', 'exec'), namespace)
 observations = json.load(sys.stdin)
 actions = [namespace['agent'](obs) for obs in observations]
-print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_traced_memory()[1]}))
+if sys.platform == 'win32':
+    import ctypes
+    class Counters(ctypes.Structure):
+        _fields_ = [('cb', ctypes.c_ulong), ('faults', ctypes.c_ulong)] + [(name, ctypes.c_size_t) for name in
+                    ('peak_rss', 'rss', 'peak_paged', 'paged', 'peak_nonpaged', 'nonpaged', 'pagefile', 'peak_pagefile')]
+    counters = Counters()
+    counters.cb = ctypes.sizeof(counters)
+    ctypes.windll.kernel32.GetCurrentProcess.restype = ctypes.c_void_p
+    handle = ctypes.windll.kernel32.GetCurrentProcess()
+    ctypes.windll.psapi.GetProcessMemoryInfo.argtypes = [ctypes.c_void_p, ctypes.POINTER(Counters), ctypes.c_ulong]
+    assert ctypes.windll.psapi.GetProcessMemoryInfo(handle, ctypes.byref(counters), counters.cb)
+    rss = counters.peak_rss
+else:
+    import resource
+    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (1 if sys.platform == 'darwin' else 1024)
+print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_traced_memory()[1], 'peak_rss_bytes': rss}))
 """
     with tempfile.TemporaryDirectory() as directory:
         # Repeat two independent interpreter lifetimes, with no site packages or
@@ -85,7 +100,8 @@ print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_trace
         "isolated_actions_compared": len(results[0]["actions"]),
         "fresh_processes": 2,
         "peak_python_bytes": max(result["peak_python_bytes"] for result in results),
-        "memory_measure": "tracemalloc Python allocation peak; not full process RSS",
+        "peak_rss_bytes": max(result["peak_rss_bytes"] for result in results),
+        "memory_measure": "isolated-process peak RSS and tracemalloc Python allocation peak",
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")

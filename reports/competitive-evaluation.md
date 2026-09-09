@@ -145,3 +145,22 @@ All actions matched. Peak traced Python allocations were approximately 3.1 MB;
 this is not a measurement of full process RSS or a verified hosted memory limit.
 The assignment solver has a precomputed valid greedy fallback and checks its
 150 ms budget inside augmenting-path iterations; fallback use is logged to stderr.
+
+Validation of that artifact scored 64.06% (95% seed-block interval 55.86% to
+72.27%): 87/128 wins against lonespear, 77/128 against GzmCR and 128/128 against
+the supplementary crop reference. There were no agent errors or logged
+fallbacks; all cash ledgers reconcile exactly. Three PICKUP no-ops exposed
+an ordering defect: assignment order differs from interpreter worker order,
+so a planned DROP must not replenish another worker's pickup reservation.
+The repair reserves pickups only from observed stock and reserves drop capacity
+without crediting same-turn pickups. A focused interpreter-state regression
+test covers this case. Revalidation is required for the repaired hash;
+holdout remains unopened. This adds 384 validation games to the compute budget,
+without treating the repeated validation seeds as new evidence.
+
+The repaired artifact `750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee`
+completed all 384 revalidation games with the same match scores and no failed
+worker actions, agent errors, or assignment-budget fallbacks. Isolated peak
+process RSS measured 23,998,464 bytes. This artifact is selected and frozen
+before opening seeds 10000 through 10127. No policy changes are permitted
+based on those holdout outcomes without retiring the holdout.

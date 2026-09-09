@@ -1,0 +1,61 @@
+{
+  "opponents": {
+    "submissions/20260909-v7/main.py": {
+      "games": 8,
+      "seeds": 4,
+      "wins": 3,
+      "draws": 2,
+      "score": 0.5,
+      "ci95": [
+        0.5,
+        0.5
+      ],
+      "mean_cash": 76765.0,
+      "mean_opponent_cash": 76765.0,
+      "mean_gap": 0.0,
+      "p10_gap": -1731.6,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.010079,
+      "max_p99_action_seconds": 0.001869
+    },
+    "data/raw/reference-lonespear/main_bigherd.py": {
+      "games": 8,
+      "seeds": 4,
+      "wins": 8,
+      "draws": 0,
+      "score": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "mean_cash": 90006.25,
+      "mean_opponent_cash": 33556.0,
+      "mean_gap": 56450.25,
+      "p10_gap": 42302.6,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.051382,
+      "max_p99_action_seconds": 0.001936
+    },
+    "data/raw/reference-lonespear/main_v23.py": {
+      "games": 8,
+      "seeds": 4,
+      "wins": 7,
+      "draws": 0,
+      "score": 0.875,
+      "ci95": [
+        0.625,
+        1.0
+      ],
+      "mean_cash": 86733.0,
+      "mean_opponent_cash": 59673.5,
+      "mean_gap": 27059.5,
+      "p10_gap": 8937.100000000002,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.020736,
+      "max_p99_action_seconds": 0.002005
+    }
+  }
+}

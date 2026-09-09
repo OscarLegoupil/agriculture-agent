@@ -48,5 +48,21 @@ def test_worker_keeps_feed_for_hungry_cow():
     assert agent(obs)["farmer"] == ["FEED"]
 
 
+def test_pickups_never_reserve_a_later_workers_drop():
+    from kaggle_environments.envs.kaggriculture import kaggriculture as game
+
+    env = make("kaggriculture", configuration={"seed": 0})
+    obs = env.reset(2)[0].observation
+    obs.farms[0].hands = [[4, 4], [4, 4]]
+    obs.private.inventories = [{}, {}, {"WHEAT": 3, "MILK": 5}]
+    obs.private.shed["WHEAT"] = 1
+    for x, y in ((3, 4), (4, 3), (2, 4), (4, 2)):
+        obs.farms[0].tiles[y][x] = game._new_animal("COW", 0)
+    action = agent(obs)
+    pickups = [a for a in [action["farmer"], *action["hands"]] if a[:2] == ["PICKUP", "WHEAT"]]
+    assert sum(a[2] for a in pickups) <= 1
+    assert action["hands"][1] == ["DROP"]
+
+
 def test_malformed_observation_has_cheap_fallback():
     assert agent({}) == {"farmer": ["PASS"], "hands": [], "market": []}
