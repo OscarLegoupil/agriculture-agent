@@ -7,8 +7,16 @@ from kaggle_environments.envs.kaggriculture import kaggriculture as game
 def test_inputs_and_hires_are_available_only_next_turn():
     env = make("kaggriculture", configuration={"seed": 0})
     env.reset(2)
-    env.step([{"farmer": ["PLANT", "WHEAT"], "hands": [["WEST"]],
-               "market": [["BUY_SEED", "WHEAT", 1], ["HIRE"]]}, {}])
+    env.step(
+        [
+            {
+                "farmer": ["PLANT", "WHEAT"],
+                "hands": [["WEST"]],
+                "market": [["BUY_SEED", "WHEAT", 1], ["HIRE"]],
+            },
+            {},
+        ]
+    )
     obs = env.state[0].observation
     assert obs.private.seeds["WHEAT"] == 1
     assert len(obs.farms[0].hands) == 1
