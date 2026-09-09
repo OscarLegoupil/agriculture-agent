@@ -203,6 +203,13 @@ Natural within-day crop decay is not included in the water-death counter, and
 unsold products still on tiles are not included in stranded carried/shed stock.
 Zero invalid actions therefore does not mean zero missed opportunity.
 
+An additional 24-game diagnostic reran the exact final artifact on the four
+audit development seeds against itself and pinned lonespear variants. The
+mirror scores 50% (three wins, two draws, three losses); `main_bigherd.py`
+scores 8/8 and `main_v23.py` 7/8. All games completed without candidate errors
+or logged fallbacks. These related variants carry no weight in the independent
+holdout score. Both the earlier pre-repair stress run and final run are retained.
+
 The worst cash gaps are −16,615 against lonespear (10025, seat 1) and −25,096
 against GzmCR (10083, seat 1). Those games had no invalid work, respectively
 eight and seven water deaths, and one terminal escape each. This evidence

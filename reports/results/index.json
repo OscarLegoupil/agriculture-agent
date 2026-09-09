@@ -89,6 +89,11 @@
     "bytes": 7659,
     "games": 8
   },
+  "stress-final-v7.json.gz": {
+    "sha256_uncompressed": "b5cf825583713aa65972d3f71fde9076827ed3b6fa6a9e79effbc27ac72c1a99",
+    "bytes": 21176,
+    "games": 24
+  },
   "stress-v7.json.gz": {
     "sha256_uncompressed": "81bc5aff63993bf038bfc31f4338d4a4d1d2c61883166702cf070a85cdab2713",
     "bytes": 21092,
