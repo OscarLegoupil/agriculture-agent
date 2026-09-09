@@ -180,9 +180,10 @@ def build_phased_plan(
 
     Phase boundaries are the union of {0, season_days}, land buy days, and
     hire ramp change days. Each phase re-runs `allocate()` over its own tile
-    budget and duration, so revenue for a phase is not double-counted
-    against the season total the way calling `allocate()` once with the
-    full remaining horizon would be.
+    budget and the days remaining in the season, not the phase's own length:
+    a phase decides what to build, and a coop bought on day 2 keeps earning
+    until day 30, so charging its cost against a two-day window would price
+    every animal out of every short phase.
     """
     if season_days < 1:
         raise ValueError(f"season_days must be >= 1, got {season_days}")
@@ -200,7 +201,7 @@ def build_phased_plan(
         hands = _hands_active_at(start, hire_ramp)
         allocation = allocate(
             tiles=tiles,
-            horizon_days=end - start,
+            horizon_days=season_days - start,
             price_map=price_map,
             watered=watered,
             fertilized=fertilized,

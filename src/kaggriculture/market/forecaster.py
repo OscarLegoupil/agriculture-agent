@@ -77,6 +77,26 @@ def market_price(item: str, inventory: int | float) -> int:
     return max(PRICE_FLOOR, round(price))
 
 
+def average_sale_price(item: str, units: int, *, start_inventory: int | None = None) -> float:
+    """Mean price realised by selling `units` into an untouched market.
+
+    Each sale raises the market inventory by one and pushes the next unit's
+    price down, so the marginal price of a plan that dumps hundreds of units is
+    nothing like the base price. Sales at the floor do not add supply, which is
+    why the price stops falling there rather than going negative.
+    """
+    if units <= 0:
+        return float(market_price(item, start_inventory or MARKET_PARAMS[item]["I0"]))
+    inventory = MARKET_PARAMS[item]["I0"] if start_inventory is None else start_inventory
+    total = 0.0
+    for _ in range(units):
+        price = market_price(item, inventory)
+        total += price
+        if price > PRICE_FLOOR:
+            inventory += 1
+    return total / units
+
+
 def project_inventory(
     current_inventory: dict[str, int],
     unlocked_shops: Iterable[str],

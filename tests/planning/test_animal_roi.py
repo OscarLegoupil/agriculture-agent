@@ -106,3 +106,18 @@ def test_animal_roi_table_price_map_overrides() -> None:
     goose = next(row for row in rows if row.animal == "GOOSE")
     assert cow.product_price == 1.0
     assert goose.product_price == float(MARKET_PARAMS["EGG"]["base"])
+
+
+def test_cumulative_trace_adds_the_daily_fertilizer_byproduct() -> None:
+    plain = cumulative_net_trace("GOOSE", 6)
+    with_fert = cumulative_net_trace("GOOSE", 6, fertilizer_price=100.0)
+    # One unit becomes collectable each day from day 1 onward.
+    assert [b - a for a, b in zip(plain, with_fert, strict=True)] == [
+        0.0,
+        100.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+    ]

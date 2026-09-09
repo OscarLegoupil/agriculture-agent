@@ -16,22 +16,50 @@ def test_allocate_zero_tiles_picks_no_animals_no_fill() -> None:
     assert a.fill_crop is None
 
 
+_NO_ANIMALS = {"GOOSE": 0, "COW": 0, "SHEEP": 0}
+
+
 def test_allocate_single_tile_uses_it_for_best_crop() -> None:
-    a = allocate(tiles=1, horizon_days=30)
+    a = allocate(tiles=1, horizon_days=30, max_animals_per_species=_NO_ANIMALS)
     assert a.fill_crop_tiles == 1
     assert a.fill_crop in {"CARROT", "TOMATO", "STRAWBERRY", "MELON"}
     assert a.animal_counts == {}
 
 
+def test_allocate_single_tile_prefers_a_pasture_over_a_crop() -> None:
+    # Feed is bought rather than grown, so one animal needs one tile, and its
+    # product plus a daily fertilizer beats anything a single crop tile earns.
+    a = allocate(tiles=1, horizon_days=30)
+    assert a.structure_tiles == 1
+    assert a.wheat_tiles == 0
+    assert a.fill_crop_tiles == 0
+
+
 def test_allocate_prefers_melon_at_base_prices() -> None:
-    # Melon has the highest $/tile/day at base prices ($/tile/day ~ 118).
-    a = allocate(tiles=4, horizon_days=30)
+    # Melon has the highest $/tile/day of any crop at base prices (~118).
+    a = allocate(tiles=4, horizon_days=30, max_animals_per_species=_NO_ANIMALS)
     assert a.fill_crop == "MELON"
 
 
 def test_allocate_switches_fill_crop_when_price_forecast_crashes() -> None:
-    a = allocate(tiles=4, horizon_days=30, price_map={"MELON": 1.0})
+    a = allocate(
+        tiles=4,
+        horizon_days=30,
+        price_map={"MELON": 1.0},
+        max_animals_per_species=_NO_ANIMALS,
+    )
     assert a.fill_crop != "MELON"
+
+
+def test_allocate_prefers_animals_over_the_best_crop() -> None:
+    # An animal earns its product plus a fertilizer unit every day, which beats
+    # a melon tile even after paying for the wheat tile that feeds it.
+    a = allocate(tiles=4, horizon_days=30)
+    assert a.animal_counts != {}
+    assert (
+        a.expected_revenue
+        > allocate(tiles=4, horizon_days=30, max_animals_per_species=_NO_ANIMALS).expected_revenue
+    )
 
 
 def test_allocate_expected_revenue_scales_with_horizon() -> None:
@@ -70,7 +98,8 @@ def test_allocate_animal_forces_wheat_reserve() -> None:
     # animals. A goose coop plus a wheat reserve should show up.
     assert a.animal_counts.get("GOOSE", 0) > 0
     assert a.wheat_tiles > 0
-    assert a.structure_tiles == 1
+    # A coop holds exactly one goose, so structures track the head count.
+    assert a.structure_tiles == a.animal_counts["GOOSE"]
 
 
 def test_allocate_never_over_allocates_tiles() -> None:

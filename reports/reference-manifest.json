@@ -1,0 +1,20 @@
+{
+  "lonespear": {
+    "url": "https://github.com/lonespear/kaggriculture.git",
+    "revision": "774b26093ccf4246525517d48420349b841b6e50",
+    "executable": "main.py",
+    "sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026"
+  },
+  "gzm": {
+    "url": "https://github.com/GzmCR/Kaggriculture.git",
+    "revision": "6a76335397d5cd2facffa91c938f629b119ea350",
+    "executable": "main.py",
+    "sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23"
+  },
+  "tina": {
+    "url": "https://github.com/TinaawhyteD/kaggriculture-agent.git",
+    "revision": "169ca945b3358cd85baa71260e9c17dc0ebe5555",
+    "executable": "agent.py",
+    "sha256": "636502163a8a7c7d3ee5a29fd9f8924abdfa4b09a531724d2af05be525456a3e"
+  }
+}

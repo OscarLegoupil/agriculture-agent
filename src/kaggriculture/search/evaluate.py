@@ -59,8 +59,7 @@ _AGENT_TEMPLATE = textwrap.dedent(
     _agent = wrap_with_micro(
         _base,
         sell_thresholds=dict(_route.market_policy.sell_min_price),
-        {micro_kwargs},
-    )
+        {micro_kwargs})
 
 
     def agent(obs: dict[str, Any]) -> dict[str, Any]:
@@ -70,7 +69,8 @@ _AGENT_TEMPLATE = textwrap.dedent(
 
 
 def _format_kwargs(kwargs: dict[str, Any]) -> str:
-    return ",\n        ".join(f"{k}={v!r}" for k, v in sorted(kwargs.items()))
+    """One trailing-comma argument per line, empty when there are no kwargs."""
+    return "".join(f"{k}={v!r},\n        " for k, v in sorted(kwargs.items()))
 
 
 def build_agent_file(yaml_text: str, micro_kwargs: dict[str, Any], out_path: Path) -> Path:

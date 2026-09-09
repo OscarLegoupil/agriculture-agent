@@ -8,8 +8,10 @@ Structure of the problem:
 
 - Tiles are the constrained resource. Each non-wheat crop occupies 1 tile
   and produces at ``coins_per_tile_per_day`` over the horizon. Each animal
-  species needs a structure (COOP for goose, PASTURE for cow and sheep)
-  which occupies 1 tile and holds up to ``max_held`` animals.
+  needs its own structure tile (COOP for goose, PASTURE for cow and sheep);
+  ``max_held`` caps unharvested produce, not how many animals fit.
+- Animals are valued on their product plus the fertilizer they make daily,
+  which is a larger revenue line than the product itself for every species.
 - Wheat tiles are reserved to feed the animal roster. Peak daily wheat
   demand divided by the per-tile wheat yield rate gives the number of
   wheat tiles required.
@@ -24,12 +26,11 @@ under a millisecond per call, which is what the "static" in the name buys.
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 
-from kaggriculture.env.constants import ANIMALS
+from kaggriculture.env.constants import ANIMALS, MARKET_PARAMS
 from kaggriculture.planning.animal_roi import cumulative_net_trace
-from kaggriculture.planning.crop_roi import crop_roi
+from kaggriculture.planning.crop_roi import finite_crop_net
 from kaggriculture.planning.feed_budget import AnimalPlan, feed_budget
 
 
@@ -51,12 +52,8 @@ class Allocation:
 
 
 def _structures_for(counts: dict[str, int]) -> int:
-    total = 0
-    for animal, n in counts.items():
-        if n <= 0:
-            continue
-        total += math.ceil(n / ANIMALS[animal]["max_held"])
-    return total
+    """One coop or pasture per animal: a structure holds exactly one occupant."""
+    return sum(n for n in counts.values() if n > 0)
 
 
 def _iter_animal_rosters(max_per_species: dict[str, int]) -> list[dict[str, int]]:
@@ -76,18 +73,23 @@ def _fill_crop_choice(
     price_map: dict[str, float] | None,
     watered: bool,
     fertilized: bool,
+    horizon_days: int,
 ) -> tuple[str, float]:
     """Pick the crop with the highest coins-per-tile-per-day at forecast prices.
 
-    Wheat is excluded because it is allocated separately as feed reserve.
+    Commercial wheat competes with other crops; feed reserve is separate.
     """
     best_crop: str | None = None
     best_rate = float("-inf")
-    for candidate in ("CARROT", "TOMATO", "STRAWBERRY", "MELON"):
+    for candidate in ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"):
         price = None if price_map is None else price_map.get(candidate)
-        roi = crop_roi(candidate, watered=watered, fertilized=fertilized, price=price)
-        if roi.coins_per_tile_per_day > best_rate:
-            best_rate = roi.coins_per_tile_per_day
+        revenue = (
+            finite_crop_net(candidate, horizon_days, fertilized=fertilized, price=price)
+            if watered
+            else 0.0
+        )
+        if revenue > best_rate:
+            best_rate = revenue
             best_crop = candidate
     assert best_crop is not None
     return best_crop, best_rate
@@ -100,6 +102,9 @@ def _animal_revenue(
     price_map: dict[str, float] | None,
     feed_cost_per_day: float,
 ) -> float:
+    fertilizer_price = float(MARKET_PARAMS["FERTILIZER"]["base"])
+    if price_map is not None:
+        fertilizer_price = price_map.get("FERTILIZER", fertilizer_price)
     total = 0.0
     for animal, n in counts.items():
         if n <= 0:
@@ -110,9 +115,10 @@ def _animal_revenue(
         trace = cumulative_net_trace(
             animal,
             horizon_days,
-            cared=False,
+            cared=True,
             product_price=product_price,
             feed_cost_per_day=feed_cost_per_day,
+            fertilizer_price=fertilizer_price,
         )
         total += trace[-1] * n
     return total
@@ -145,49 +151,54 @@ def allocate(
         price_map=price_map,
         watered=watered,
         fertilized=fertilized,
+        horizon_days=horizon_days,
     )
 
     best: Allocation | None = None
     for counts in _iter_animal_rosters(caps):
         structures = _structures_for(counts)
         roster = [AnimalPlan(animal=a, purchase_day=0, count=n) for a, n in counts.items() if n > 0]
-        wheat = feed_budget(
+        grown = feed_budget(
             roster,
             season_days=horizon_days,
             wheat_watered=watered,
             wheat_fertilized=fertilized,
         )
-        used_before_fill = wheat.tiles_needed + structures
-        if used_before_fill > tiles:
-            continue
-        fill_tiles = tiles - used_before_fill
+        # Feed is either grown on reserved tiles or bought for cash. Charging
+        # both would double-count it, so each option is costed and the cheaper
+        # one wins: tiles are the scarce resource early, cash is later.
+        for wheat_tiles, feed_cash in ((grown.tiles_needed, 0.0), (0, feed_cost_per_day)):
+            used_before_fill = wheat_tiles + structures
+            if used_before_fill > tiles:
+                continue
+            fill_tiles = tiles - used_before_fill
 
-        fill_revenue = fill_tiles * fill_rate * horizon_days
-        # Wheat produced beyond the feed reserve has zero market value in this
-        # static model (it is a feed buffer, not a sale target).
-        wheat_revenue = 0.0
-        animal_revenue = _animal_revenue(
-            counts,
-            horizon_days=horizon_days,
-            price_map=price_map,
-            feed_cost_per_day=feed_cost_per_day,
-        )
-        total = fill_revenue + wheat_revenue + animal_revenue
-
-        if best is None or total > best.expected_revenue:
-            best = Allocation(
-                tiles=tiles,
+            fill_revenue = fill_tiles * fill_rate
+            # Wheat produced beyond the feed reserve has zero market value in
+            # this static model (it is a feed buffer, not a sale target).
+            wheat_revenue = 0.0
+            animal_revenue = _animal_revenue(
+                counts,
                 horizon_days=horizon_days,
-                fill_crop=fill_crop if fill_tiles > 0 else None,
-                fill_crop_tiles=fill_tiles,
-                wheat_tiles=wheat.tiles_needed,
-                animal_counts={k: v for k, v in counts.items() if v > 0},
-                structure_tiles=structures,
-                expected_revenue=total,
-                fill_crop_revenue=fill_revenue,
-                wheat_revenue=wheat_revenue,
-                animal_revenue=animal_revenue,
+                price_map=price_map,
+                feed_cost_per_day=feed_cash,
             )
+            total = fill_revenue + wheat_revenue + animal_revenue
+
+            if best is None or total > best.expected_revenue:
+                best = Allocation(
+                    tiles=tiles,
+                    horizon_days=horizon_days,
+                    fill_crop=fill_crop if fill_tiles > 0 else None,
+                    fill_crop_tiles=fill_tiles,
+                    wheat_tiles=wheat_tiles,
+                    animal_counts={k: v for k, v in counts.items() if v > 0},
+                    structure_tiles=structures,
+                    expected_revenue=total,
+                    fill_crop_revenue=fill_revenue,
+                    wheat_revenue=wheat_revenue,
+                    animal_revenue=animal_revenue,
+                )
 
     assert best is not None
     return best

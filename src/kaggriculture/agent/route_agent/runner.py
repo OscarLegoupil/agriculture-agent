@@ -16,14 +16,22 @@ from pathlib import Path
 from typing import Any, Final
 
 from kaggriculture.agent.route_agent.loader import load_route
+from kaggriculture.agent.route_agent.scheduler import FarmPlan, harvest_age, pass_action, schedule
 from kaggriculture.agent.route_agent.schema import Route, StructureAssignment
 from kaggriculture.env.constants import ANIMALS, CROPS
+from kaggriculture.env.observation import Empty, Observation, Structure
 
 _TURNS_PER_DAY: Final[int] = 24
+_SEASON_DAYS: Final[int] = 30
 # NW shed access tiles are fixed by the environment.
 _SHED_ACCESS: Final[frozenset[tuple[int, int]]] = frozenset({(4, 4), (5, 4), (4, 5), (5, 5)})
 _HOME: Final[tuple[int, int]] = (4, 4)
 _LAND_PRICES: Final[dict[str, int]] = {"NE": 1000, "SW": 2000, "SE": 4000}
+_MAX_MARKET_ORDERS: Final[int] = 10
+# Hands are cleared every night and cost fib(n) coins, so the crew is cheap but
+# only pays for itself if it lands in the first hours of the day.
+_HIRE_UNTIL_HOUR: Final[int] = 5
+_HIRES_PER_TURN: Final[int] = 2
 
 
 def _crop_cap(crop: str, fertilized: bool) -> int:
@@ -136,6 +144,15 @@ class RouteAgent:
         self._overrides: dict[tuple[int, str], list[Any]] = {
             (o.turn, o.unit): o.action for o in route.overrides
         }
+        self._plans: tuple[FarmPlan, ...] = tuple(
+            FarmPlan(
+                crops={c.tile: c.crop for c in phase.crops},
+                structures={s.tile: (s.kind, s.animal) for s in phase.structures},
+                fertilize=frozenset(phase.fertilize),
+                hands=phase.hands,
+            )
+            for phase in route.phases
+        )
 
     def _resolve_hand(
         self, tiles: tuple[tuple[int, int], ...]
@@ -143,7 +160,132 @@ class RouteAgent:
         return [(t, self._crop_by_tile[t]) for t in tiles if t in self._crop_by_tile]
 
     def __call__(self, obs: dict[str, Any]) -> dict[str, Any]:
+        if self._plans:
+            return self._phased_decide(obs)
         return self._decide(obs)
+
+    def _phased_decide(self, raw: dict[str, Any]) -> dict[str, Any]:
+        """Scheduler-driven turn for routes that declare `phases`."""
+        try:
+            obs = Observation.from_dict(raw)
+        except (KeyError, IndexError, ValueError, TypeError):
+            return pass_action(0)
+        plan = self._plans[self._phase_index(obs.day)]
+        return schedule(plan, obs, market=self._phased_market(obs, plan))
+
+    def _phase_index(self, day: int) -> int:
+        index = 0
+        for i, phase in enumerate(self.route.phases):
+            if phase.from_day > day:
+                break
+            index = i
+        return index
+
+    def _phased_market(self, obs: Observation, plan: FarmPlan) -> list[list[Any]]:
+        """Market orders for a phased route, sized from the active phase.
+
+        Spend order is feed, then animals, then seeds. An unfed animal escapes
+        after two days and takes the rest of its season income with it, so
+        protecting the herd outranks growing it, and the herd only grows as far
+        as the wheat already on hand can feed it. Sells are queued ahead of the
+        buys because the simulator commits a turn's orders in list position, so
+        a sale funds a purchase behind it on the same turn.
+        """
+        mp = self.route.market_policy
+        me = obs.me
+        head: list[list[Any]] = []
+
+        if obs.hour <= _HIRE_UNTIL_HOUR and me.hires_today < plan.hands:
+            shortfall = min(plan.hands - me.hires_today, _HIRES_PER_TURN)
+            head.extend([["HIRE"]] * shortfall)
+
+        unlocked = set(me.unlocked_quadrants)
+        for lb in self.route.land_buys:
+            if lb.quadrant in unlocked:
+                continue
+            price = _LAND_PRICES.get(lb.quadrant, 0)
+            if obs.day >= lb.from_day and me.money >= price + lb.money_buffer:
+                head.append(["BUY_LAND"])
+            break
+
+        carried: dict[str, int] = {}
+        for inventory in obs.private.inventories:
+            for item, n in inventory.items():
+                carried[item] = carried.get(item, 0) + n
+        shed = obs.private.shed
+        placed, vacancies = self._structure_census(obs, plan)
+        feed_target = len(plan.structures) * mp.feed_days
+        wheat = shed.get("WHEAT", 0) + carried.get("WHEAT", 0)
+
+        buys: list[list[Any]] = []
+        budget = me.money
+        if wheat < feed_target:
+            price = max(1, obs.market.prices.get("WHEAT", 25))
+            n = min(feed_target - wheat, int(max(0.0, budget) // price))
+            if n > 0:
+                buys.append(["BUY_PRODUCT", "WHEAT", n])
+                budget -= n * price
+
+        budget -= mp.money_reserve
+        owned = placed + sum(shed.get(a, 0) + carried.get(a, 0) for a in mp.animal_buy_order)
+        headroom = wheat // max(1, mp.feed_days) - owned
+        for animal in mp.animal_buy_order:
+            if headroom <= 0:
+                break
+            cost = int(ANIMALS[animal]["cost"])
+            want = vacancies.get(animal, 0) - shed.get(animal, 0) - carried.get(animal, 0)
+            n = min(want, headroom, int(max(0.0, budget) // cost))
+            if n > 0:
+                buys.append(["BUY_ANIMAL", animal, n])
+                budget -= n * cost
+                headroom -= n
+        for crop in mp.seed_buy_order:
+            cost = int(CROPS[crop]["seed"])
+            want = self._seeds_wanted(obs, plan, crop) - obs.private.seeds.get(crop, 0)
+            n = min(want, int(max(0.0, budget) // cost))
+            if n > 0:
+                buys.append(["BUY_SEED", crop, n])
+                budget -= n * cost
+
+        sells: list[list[Any]] = []
+        liquidate = obs.day >= mp.liquidate_from_day
+        for product in mp.sell_order:
+            n = shed.get(product, 0)
+            if product == "WHEAT":
+                n -= feed_target
+            if n <= 0:
+                continue
+            if liquidate or obs.market.prices.get(product, 0) >= mp.sell_min_price.get(product, 1):
+                sells.append(["SELL", product, n])
+
+        room = max(0, _MAX_MARKET_ORDERS - len(head) - len(buys))
+        return (head + sells[:room] + buys)[:_MAX_MARKET_ORDERS]
+
+    @staticmethod
+    def _structure_census(obs: Observation, plan: FarmPlan) -> tuple[int, dict[str, int]]:
+        """Count placed animals and, per species, structures still waiting for one."""
+        placed = 0
+        vacancies: dict[str, int] = {}
+        tiles = obs.me.tiles
+        for (x, y), (_kind, animal) in plan.structures.items():
+            tile = tiles[y][x]
+            if isinstance(tile, Structure) and tile.animal is not None:
+                placed += 1
+            elif isinstance(tile, Structure):
+                vacancies[animal] = vacancies.get(animal, 0) + 1
+        return placed, vacancies
+
+    @staticmethod
+    def _seeds_wanted(obs: Observation, plan: FarmPlan, crop: str) -> int:
+        """Empty plan tiles for `crop` that can still reach harvest this season."""
+        if obs.day + harvest_age(crop) > _SEASON_DAYS - 1:
+            return 0
+        tiles = obs.me.tiles
+        return sum(
+            1
+            for (x, y), planned in plan.crops.items()
+            if planned == crop and isinstance(tiles[y][x], Empty)
+        )
 
     def _decide(self, obs: dict[str, Any]) -> dict[str, Any]:
         player = int(obs.get("player", 0))

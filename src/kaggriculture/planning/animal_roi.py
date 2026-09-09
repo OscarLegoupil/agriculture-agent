@@ -14,6 +14,10 @@ Yield rules from the simulator:
   next production tick. In steady state a cared-every-day animal produces
   ``1 + interval`` units per production, i.e. adds exactly one unit per day
   regardless of species.
+- Every surviving animal also makes one fertilizer available per day from the
+  day after placement, independent of species, feeding, and care. It is worth
+  coins only if it is sold rather than spent on a crop, so ``fertilizer_price``
+  defaults to 0 and the caller opts in.
 """
 
 from __future__ import annotations
@@ -48,12 +52,14 @@ def cumulative_net_trace(
     cared: bool = False,
     product_price: float | None = None,
     feed_cost_per_day: float = 25.0,
+    fertilizer_price: float = 0.0,
 ) -> list[float]:
     """Cumulative net coins across `days` days for one fresh animal.
 
     Day 0 is the purchase day (capex paid, no feed). Feed is paid every
     subsequent day. Production ticks fire on days
-    ``first_yield_day + k * interval`` for k >= 0.
+    ``first_yield_day + k * interval`` for k >= 0, and one fertilizer unit
+    becomes collectable every day from day 1.
     """
     if animal not in ANIMALS:
         raise KeyError(animal)
@@ -71,7 +77,7 @@ def cumulative_net_trace(
             cum += units * product_price
             pending_care = 0
         if day > 0:
-            cum -= feed_cost_per_day
+            cum += fertilizer_price - feed_cost_per_day
         if cared:
             pending_care += 1
         trace.append(cum)

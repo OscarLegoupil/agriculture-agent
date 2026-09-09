@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/competitive-agent]
   pull_request:
     branches: [main]
 
@@ -39,3 +39,11 @@ jobs:
 
       - name: Test (pytest)
         run: uv run pytest
+
+      - name: Verify standalone artifact
+        run: uv run python scripts/verify_submission.py --output data/interim/ci-packaging.json
+
+      - name: Check artifact regeneration
+        run: |
+          uv run python scripts/package_submission.py
+          git diff --exit-code -- submissions/20260909-v7

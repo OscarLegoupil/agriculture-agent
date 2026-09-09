@@ -1,0 +1,338 @@
+{
+  "data/raw/reference-lonespear/main.py": {
+    "games": 256,
+    "metrics": {
+      "income": {
+        "mean": 114571.265625,
+        "total": 29330244,
+        "max": 148903
+      },
+      "expense": {
+        "mean": 29792.03125,
+        "total": 7626760.0,
+        "max": 33419.0
+      },
+      "accounting_error": {
+        "mean": 0.0,
+        "total": 0.0,
+        "max": 0.0
+      },
+      "hires": {
+        "mean": 280.58984375,
+        "total": 71831,
+        "max": 285
+      },
+      "land_purchases": {
+        "mean": 1,
+        "total": 256,
+        "max": 1
+      },
+      "expense:labor": {
+        "mean": 5002.07421875,
+        "total": 1280531.0,
+        "max": 5201.0
+      },
+      "expense:land": {
+        "mean": 1000.0,
+        "total": 256000.0,
+        "max": 1000.0
+      },
+      "travel": {
+        "mean": 3808.890625,
+        "total": 975076,
+        "max": 3932
+      },
+      "successful_work": {
+        "mean": 2586.3359375,
+        "total": 662102,
+        "max": 2667
+      },
+      "failed_work": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "idle": {
+        "mean": 638.984375,
+        "total": 163580,
+        "max": 727
+      },
+      "water_deaths": {
+        "mean": 8.3984375,
+        "total": 2150,
+        "max": 19
+      },
+      "animal_escapes": {
+        "mean": 0.41796875,
+        "total": 107,
+        "max": 2
+      },
+      "terminal_abandonment": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "terminal_escapes": {
+        "mean": 1.328125,
+        "total": 340,
+        "max": 4
+      },
+      "overflow_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_shed_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_carried_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "peak_productive_tiles": {
+        "mean": 47.99609375,
+        "total": 12287,
+        "max": 48
+      }
+    },
+    "worst_cash_gap": {
+      "seed": 10025,
+      "seat": 1,
+      "cash": 119869.0,
+      "opponent_cash": 136484.0,
+      "losses": {
+        "overflow_units": 0,
+        "water_deaths": 8,
+        "terminal_escapes": 1
+      },
+      "replay_path": null
+    }
+  },
+  "data/raw/reference-gzm/main.py": {
+    "games": 256,
+    "metrics": {
+      "income": {
+        "mean": 109114.24609375,
+        "total": 27933247,
+        "max": 147721
+      },
+      "expense": {
+        "mean": 27554.390625,
+        "total": 7053924.0,
+        "max": 33255.0
+      },
+      "accounting_error": {
+        "mean": 0.0,
+        "total": 0.0,
+        "max": 0.0
+      },
+      "hires": {
+        "mean": 286.546875,
+        "total": 73356,
+        "max": 288
+      },
+      "land_purchases": {
+        "mean": 1,
+        "total": 256,
+        "max": 1
+      },
+      "expense:labor": {
+        "mean": 5176.33203125,
+        "total": 1325141.0,
+        "max": 5269.0
+      },
+      "expense:land": {
+        "mean": 1000.0,
+        "total": 256000.0,
+        "max": 1000.0
+      },
+      "travel": {
+        "mean": 3858.58984375,
+        "total": 987799,
+        "max": 3925
+      },
+      "successful_work": {
+        "mean": 2661.40234375,
+        "total": 681319,
+        "max": 2772
+      },
+      "failed_work": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "idle": {
+        "mean": 643.58984375,
+        "total": 164759,
+        "max": 745
+      },
+      "water_deaths": {
+        "mean": 8.41796875,
+        "total": 2155,
+        "max": 16
+      },
+      "animal_escapes": {
+        "mean": 0.203125,
+        "total": 52,
+        "max": 2
+      },
+      "terminal_abandonment": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "terminal_escapes": {
+        "mean": 1.30078125,
+        "total": 333,
+        "max": 4
+      },
+      "overflow_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_shed_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_carried_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "peak_productive_tiles": {
+        "mean": 47.96875,
+        "total": 12280,
+        "max": 48
+      }
+    },
+    "worst_cash_gap": {
+      "seed": 10083,
+      "seat": 1,
+      "cash": 90054.0,
+      "opponent_cash": 115150.0,
+      "losses": {
+        "overflow_units": 0,
+        "water_deaths": 7,
+        "terminal_escapes": 1
+      },
+      "replay_path": null
+    }
+  },
+  "data/raw/reference-tina/agent.py": {
+    "games": 256,
+    "metrics": {
+      "income": {
+        "mean": 135498.27734375,
+        "total": 34687559,
+        "max": 162083
+      },
+      "expense": {
+        "mean": 30259.09375,
+        "total": 7746328.0,
+        "max": 34813.0
+      },
+      "accounting_error": {
+        "mean": 0.0,
+        "total": 0.0,
+        "max": 0.0
+      },
+      "hires": {
+        "mean": 287.41015625,
+        "total": 73577,
+        "max": 289
+      },
+      "land_purchases": {
+        "mean": 1,
+        "total": 256,
+        "max": 1
+      },
+      "expense:labor": {
+        "mean": 5145.3828125,
+        "total": 1317218.0,
+        "max": 5219.0
+      },
+      "expense:land": {
+        "mean": 1000.0,
+        "total": 256000.0,
+        "max": 1000.0
+      },
+      "travel": {
+        "mean": 3867.9296875,
+        "total": 990190,
+        "max": 3927
+      },
+      "successful_work": {
+        "mean": 2691.7421875,
+        "total": 689086,
+        "max": 2739
+      },
+      "failed_work": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "idle": {
+        "mean": 632.7734375,
+        "total": 161990,
+        "max": 775
+      },
+      "water_deaths": {
+        "mean": 9.2109375,
+        "total": 2358,
+        "max": 18
+      },
+      "animal_escapes": {
+        "mean": 0.48828125,
+        "total": 125,
+        "max": 2
+      },
+      "terminal_abandonment": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "terminal_escapes": {
+        "mean": 0.421875,
+        "total": 108,
+        "max": 2
+      },
+      "overflow_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_shed_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "final_carried_units": {
+        "mean": 0,
+        "total": 0,
+        "max": 0
+      },
+      "peak_productive_tiles": {
+        "mean": 47.921875,
+        "total": 12268,
+        "max": 48
+      }
+    },
+    "worst_cash_gap": {
+      "seed": 10061,
+      "seat": 0,
+      "cash": 73342.0,
+      "opponent_cash": 16572.0,
+      "losses": {
+        "overflow_units": 0,
+        "water_deaths": 13,
+        "animal_escapes": 1
+      },
+      "replay_path": null
+    }
+  }
+}

@@ -24,6 +24,38 @@ from dataclasses import dataclass
 from kaggriculture.env.constants import CROPS, MARKET_PARAMS
 
 
+def finite_crop_net(
+    crop: str, horizon_days: int, *, price: float | None = None, fertilized: bool = False
+) -> float:
+    """Optimistic net receipts from new cohorts with a real maturity boundary.
+
+    Day zero is the planting day. Harvest and replant take separate actions,
+    represented conservatively by starting a replacement on the following day.
+    This screening bound excludes travel and labor and is not a deployed plan.
+    """
+    spec = CROPS[crop]
+    sale_price = float(MARKET_PARAMS[crop]["base"]) if price is None else price
+    remaining = horizon_days - 1
+    total = 0.0
+    while remaining >= spec["first_yield_day"]:
+        if spec["ongoing"]:
+            events = min(
+                spec["max_yield"], 1 + (remaining - spec["first_yield_day"]) // spec["interval"]
+            )
+            age = spec["first_yield_day"] + (events - 1) * spec["interval"]
+            units = events * (2 if fertilized else 1)
+        else:
+            age = min(remaining, spec["max_yield_day"])
+            start = (spec["max_yield_day"] + 1) // 2
+            units = min(spec["max_yield"], 1 + max(0, age - start + 1) * (2 if fertilized else 1))
+        net = units * sale_price - spec["seed"]
+        if net <= 0:
+            break
+        total += net
+        remaining -= age + 1
+    return total
+
+
 @dataclass(frozen=True, slots=True)
 class CropRoi:
     """Lifecycle ROI for one crop under a fixed care regime and market price."""

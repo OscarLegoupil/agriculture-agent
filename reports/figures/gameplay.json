@@ -1,0 +1,21 @@
+{
+  "revision": "2c909664d5f7ad209b7b3811d609a03d4ab56697",
+  "hashes": {
+    "submissions/20260909-v7/main.py": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+    "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026"
+  },
+  "environment_version": "1.32.7",
+  "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  },
+  "seed": 0,
+  "frame": 480,
+  "renderer": "official kaggriculture HTML renderer",
+  "viewport": [
+    1280,
+    900
+  ]
+}
