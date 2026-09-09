@@ -95,3 +95,31 @@ python scripts/phase4_joint_feed.py --budget 0.006 --workers 4 --output data/raw
 ```
 
 The complete compact archive is [phase4-joint-feed.json.gz](results/phase4-joint-feed.json.gz); the [matched summary](results/phase4-joint-feed-summary.json) checks source hashes, opponent hashes and effective configuration against both base panels. Budget-change evidence is [phase4-joint-budget-parity.json](results/phase4-joint-budget-parity.json). No joint policy has been promoted on this screen.
+
+## Broader field result: rejected
+
+The 50 ms joint-banked artifact (`3d84e710…`) was subsequently evaluated on all 32 known development seeds 3000–3031, both seats, against both challenge opponents: 128 games. The exact frozen v8 rows on matching scenarios are the comparison baseline. This is development confirmation, not fresh validation or holdout.
+
+| Opponent | Frozen v8 | Joint banked | v8 mean cash gap | Joint mean cash gap |
+|---|---:|---:|---:|---:|
+| COK | 21/64 | 15/64 | -4,732.42 | -5,671.95 |
+| Seyam | 59/64 | 61/64 | +16,608.72 | +17,084.06 |
+| Equally weighted two-opponent pool | 80/128 | 76/128 | — | — |
+
+The targeted fix does not generalize to the main failing matchup. It is rejected despite its physically correct rescue witness and encouraging four-seed screen. This comparison measures the full banked-plus-joint package against v8; the earlier exact-base comparison isolates the joint component only on its smaller panel. No claim of an isolated broad joint-assignment effect follows from this table. The strict matched result, including paired uncertainty, is [phase4-joint-field-summary.json](results/phase4-joint-field-summary.json).
+
+All 128 games completed, but runtime fallback remains observable: **45 exact `joint_feed_fallback: budget` messages**, now preserved by the evaluation harness. Maximum complete policy action duration was 266.461 ms. The 50 ms search limit does not bound the entire policy call, and wall-clock checks can include process scheduling delays. These fallbacks must not be described as zero-error deterministic execution.
+
+## Bounded solver profiling
+
+To investigate the fallback, profile the unchanged frozen helper over every nonterminal observation in the completed seed-3002 COK and Seyam seat-0 replays. No games are run and no match outcomes are used for selection. On this serial recorded-observation pass, all **1,392 calls** complete without fallback or stderr, with up to 17 pending animals and 13 workers. Each returned assignment passes unique-worker, unique-target, shared depot wheat and deadline assertions.
+
+The saved pass has median helper wall time 0.038 ms, empirical 99th percentile 0.607 ms and maximum 22.138 ms. An earlier local probe of the same observations peaked at 1.188 ms. The dense state producing the larger outlier contains 14 targets; it is not consistently slow across runs. Windows process CPU time is quantized too coarsely for these calls to reliably attribute the difference to CPU work versus scheduling. No predecessor-cycle or persistent slow-state reproducer was found. Scheduling pressure or allocation/collection overhead are plausible explanations; neither is proven by this profile.
+
+The implementation performs at most one successful augmentation per available worker, with bounded Bellman–Ford passes per augmentation and in-search wall-clock checks. There is no evidence here justifying another budget increase or gratuitous solver rewrite. A future promoted policy would still need controlled-load runtime checks, retained fallback messages and full artifact trajectory qualification. This candidate is already rejected on performance grounds.
+
+```powershell
+python scripts/phase4_flow_profile.py
+```
+
+The [saved profiling results](results/phase4-flow-profile.json.gz) pin the source and both replay hashes and preserve every measured call. Profiling does not alter the experimental source hash.

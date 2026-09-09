@@ -1,6 +1,6 @@
 # Kaggriculture
 
-**89.8% validation match score against the two primary public anchors**, up from the incumbent's 69.9% on matched scenarios. A larger, market-aware farm delivers a paired gain of **19.9 percentage points [95% CI: 10.9–29.3]**. The harder challenge pool exposes the remaining gap: **13.3%**, below the 50% promotion gate. The challenger remains experimental; v7 is the release and rollback. These are local simulator results, not a live leaderboard rating.
+**80.9% validation match score across four pinned public opponents**, up from 52.9% for the previous experimental champion on matched scenarios. The paired improvement is **27.9 percentage points [95% CI: 23.8-32.0]**. Crop-financed expansion and deadline-aware execution achieve 100% against the two anchors and 61.7% against the harder challenge pool. **V8 remains experimental:** its 32.0% COK score fails the predeclared 40% matchup floor. These are local simulator results, not a live leaderboard rating.
 
 ![A real game rendered by the official Kaggriculture environment](reports/figures/gameplay.png)
 
@@ -29,38 +29,38 @@ flowchart LR
 
 The deployed policy lives in [one self-contained module](src/kaggriculture/agent/competitive.py). It rebuilds decisions from observations, preserving actual asset ages, inventories and cash without hidden episode state.
 
-**Finite-season investment.** New crops receive no revenue before maturity. All five commercial crops compete for planting slots. Animal purchases account for remaining production events, feed expense and market exposure. Cash reserves constrain purchases; future shop demand uses expected draws, never future realized state.
+**Finite-season investment.** New crops receive no revenue before maturity. Calendar gates value all five commercial crops; an explicit startup cohort rule favors wheat, melons and early berries. Animal purchases account for remaining production events, feed expense and market exposure. Cash reserves constrain purchases; future shop demand uses expected draws, never future realized state.
 
 **Coordinated execution.** Minimum-cost assignment matches workers to distinct destinations using task value, urgency, travel and pickup costs. Seeds, stored inputs and delivery capacity are reserved. The solver prepares a valid greedy fallback and checks a 150 ms budget during execution. Transition instrumentation exposes invalid actions and resource losses.
 
-**Measured production choices.** Official-interpreter screens explored land, labor, crop-only and livestock-only policies, animal mixes, fertilizer, grown feed, openings and delivery thresholds. Selected capacity bounds are two quadrants, 11 hired workers, up to 30 crops and a herd of four cows, six sheep and eight geese. These are ceilings; observed state and economic gates determine purchases.
+**Measured production choices.** An initial melon and wheat cohort finances recurring crops and a shared livestock allocation. V8 permits three total plots, 12 hired workers, 50 crops and 18 animals. These are investment ceilings, not guaranteed purchases. Current experiments test a fourth plot, commissioning speed, earlier herd investment and grown feed. Larger farms and more workers must earn their cost in official games.
 
 **Cash at the finish.** The last action is day 29, hour 22. There is no final nightly inventory drop. Return trips and sales must fit the remaining action opportunities.
 
-**The research challenger.** The second cycle repairs late planting and input accounting, permits affordable partial feed purchases, releases fertilizer reserves when cash is scarce, and projects shared-market inventory from observable assets and expected shop demand. Combining those changes with capacity for 50 crops, three quadrants and 12 hired workers improves the measured anchors. The forecast remains an approximate servicing scenario; it is not an exact forward simulator. The [frozen builder](scripts/build_phase2_challenger.py) reproduces the experimental artifact without changing the deployed module.
+**Market and capital.** The policy projects shared-market inventory from observable assets and expected shop demand. Purchases reserve cash for existing obligations. Annual crops receive useful watering before harvest, imminent feeding deadlines reserve feasible input routes, and fertilizer reserves follow upcoming recurring harvests. This remains an approximate economic model; it does not guarantee optimal schedules or future demand.
 
 ## Evidence
 
-### Second-cycle validation: stronger, but not promoted
+### Current validation: a large gain with a remaining matchup deficit
 
-Both frozen policies played seeds 2000–2063, both seats, against four pinned opponents: **1,024 games**, with no execution errors. Anchors and challenges are separate equal-weight pools; difficult opponents were retained. Seyam and COK share a public route lineage, so they are not counted as two new independent strategy families.
+Frozen v8 and the previous experimental champion each played 64 seeds (3000-3063), both seats, against four pinned opponents: **1,024 games**. All completed normally with zero candidate stderr. The equal-four score gives each opponent 25% weight. Anchor and challenge pools are also reported separately. Seyam and COK share public route ancestry and are not two independent strategy families.
 
-![Incumbent and challenger on the same validation scenarios](reports/figures/phase2-validation.png)
+![Matched validation scores with seed-cluster uncertainty](reports/figures/phase3-validation-matchups.png)
 
-| Opponent | Pinned revision | v7 wins / 128 | Challenger wins / 128 | Challenger mean cash gap |
+| Opponent | Pinned revision | Previous wins / 128 | V8 wins / 128 | V8 mean cash gap |
 |---|---|---:|---:|---:|
-| [lonespear](https://github.com/lonespear/kaggriculture/tree/774b26093ccf4246525517d48420349b841b6e50) | `774b260` | 94 | 123 | +24,413 |
-| [GzmCR](https://github.com/GzmCR/Kaggriculture/tree/6a76335397d5cd2facffa91c938f629b119ea350) | `6a76335` | 85 | 107 | +16,475 |
-| [Seyam](https://github.com/Seyamalam/Kaggriculture/tree/8b8c421eb10634c756583ce10c75189f50c83a72) | `8b8c421` | 5 | 31 | −11,408 |
-| [COK](https://github.com/COK-ZhangZiliang/Kaggriculture/tree/7ef67eac458cd9ecd13786063e2e581fbe7403ec) | `7ef67ea` | 0 | 3 | −35,259 |
+| [lonespear](https://github.com/lonespear/kaggriculture/tree/774b26093ccf4246525517d48420349b841b6e50) | `774b260` | 126 | 128 | +43,804 |
+| [GzmCR](https://github.com/GzmCR/Kaggriculture/tree/6a76335397d5cd2facffa91c938f629b119ea350) | `6a76335` | 117 | 128 | +41,180 |
+| [Seyam](https://github.com/Seyamalam/Kaggriculture/tree/8b8c421eb10634c756583ce10c75189f50c83a72) | `8b8c421` | 26 | 117 | +15,461 |
+| [COK](https://github.com/COK-ZhangZiliang/Kaggriculture/tree/7ef67eac458cd9ecd13786063e2e581fbe7403ec) | `7ef67ea` | 2 | 41 | -4,528 |
 
-The anchor score is **89.84% [85.16–94.14%]**; the challenge score is **13.28% [8.20–18.75%]**. Complete-seed bootstrap intervals retain both seats, both policies and all opponents. Draws count as half a win; none occurred. The primary-anchor improvement and local reliability checks pass, but the challenge floor fails. The new holdout remains unopened. Supplementary Tina was not rerun in this panel; its crop-only results below remain historical.
+V8's equal-four score is **80.86% [77.54-83.98%]**. Confidence intervals resample complete seeds, retaining both seats, opponents and policies together. Draws count as half a win. The COK floor fails despite a large improvement; the final holdout remains unopened. The inspected validation seeds are now development data for the next candidate, with fresh validation reserved at 4000-4063.
 
-![Realized cash and crop capacity during validation](reports/figures/phase2-validation-trajectory.png)
+![Measured cash, production and worker actions](reports/figures/phase3-validation-behavior.png)
 
-The challenger harvests more and reduces watering deaths from 8.97 to 0.71 per game, but travels farther and loses more animals before the terminal window. More cash and a larger farm do not establish broad competitive strength. Against COK, its 10th-percentile cash gap remains −55,669.
+Loss diagnosis separates missing early production, costly purchased feed and slow expansion from controller defects. Broader known-data checks rejected immediate delivery, depot reserves and joint feeding despite encouraging small screens. In inspected fourth-plot games, COK reaches 87-90 productive tiles versus v8's 68 while paying less for labor. Current experiments therefore test land utilization and production timing, with separate labor ablations. They do not assume three additional purchases always pay.
 
-Small matched ablations showed an interaction: liquidity plus expansion won 0/8 challenge games; liquidity plus the forecast won 2/8; all three won 4/8. Broader validation confirmed the anchor gain but reduced Seyam's selected development score from 58.3% to 24.2%. Crop-first openings, service bundles, adaptive livestock, speculative holding and marginal-price-impact investment did not earn promotion. [Research results and ablations](reports/phase2-results.md) · [frozen protocol](reports/phase2-protocol.md) · [validation data and uncertainty](reports/results/phase2-validation-summary.json) · [independent review](reports/phase2-independent-review.md).
+[Validation protocol](reports/phase3-confirmation-protocol.json) | [Results and uncertainty](reports/results/phase3-validation-summary.json) | [Current research protocol](reports/phase4-protocol.md) | [Land diagnosis](reports/phase4-land.md) | [Earlier research and negative results](reports/phase2-results.md).
 
 ### First-cycle release holdout
 
@@ -112,17 +112,17 @@ uv sync --frozen --extra dev
 uv run pytest tests/test_competitive_smoke.py -q
 ```
 
-The second command is the one-command smoke evaluation: the frozen artifact plays starter in both seats. `make smoke` runs the same check where Make is available.
+The second command is the one-command smoke evaluation: both frozen v7 and v8 artifacts play starter in both seats (four games). `make smoke` runs the same check where Make is available.
 
 Fetch the reviewed references and run a paired benchmark:
 
 ```bash
 uv run python scripts/fetch_references.py
-uv run python scripts/benchmark.py --candidate submissions/20260909-v7/main.py --opponents data/raw/reference-lonespear/main.py data/raw/reference-gzm/main.py --seeds 0 17 42 103 --output data/interim/reproduction.json
+uv run python scripts/benchmark.py --candidate submissions/20260909-v8/main.py --opponents data/raw/reference-lonespear/main.py data/raw/reference-gzm/main.py --seeds 0 17 42 103 --output data/interim/reproduction.json
 uv run python scripts/summarize_benchmark.py data/interim/reproduction.json
 ```
 
-Search production choices, verify packaging and regenerate figures:
+Reproduce the historical v7 production search, verify current v8 packaging and regenerate the historical release figures:
 
 ```bash
 uv run python scripts/search_production.py --stage 1 --output data/interim/production-search.json
@@ -135,19 +135,19 @@ uv run python scripts/render_replay.py --screenshot
 
 The screenshot command needs Chrome or Chromium (`--chrome PATH` selects it). It also exports an interactive official HTML replay into ignored `reports/replays/`. Compressed results are read transparently. Restore an exact historical executable with `scripts/restore_candidate.py SHA256`, using its manifest's digest.
 
-Reproduce the second-cycle challenger and its saved comparisons with the commands in [the research report](reports/phase2-results.md#reliability-and-reproduction). The exact research hash is `0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`; the v7 release remains `750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee`. CI rebuilds and checks both artifacts in clean processes. The research candidate recorded a 158.2 ms maximum decision, zero errors, zero stderr and zero observed assignment fallbacks across its 512 validation games. Hosted performance remains unverified because Kaggle authentication is unavailable.
+Reproduce current validation with the frozen v8 artifact and the exact seeds/opponents in [the protocol](reports/phase3-confirmation-protocol.json). Restore historical candidates using their SHA-256 snapshots; do not rebuild them from a changing development policy. The previous experimental champion is `0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`.
 
 ## Reliability and boundaries
 
-The [standalone artifact](submissions/20260909-v7/main.py) is built deterministically from the deployed source. SHA-256:
+The [current standalone experimental artifact](submissions/20260909-v8/main.py) is built deterministically from the deployed source. SHA-256:
 
 ```text
-750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee
+64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325
 ```
 
-First-cycle packaging compared 2,876 actions along four complete source/artifact trajectories, then 60 observations in two fresh Python processes without site packages or repository imports. Windows isolated peak RSS was about 24 MB. In that original holdout, decisions took at most 66.8 ms; all 768 games finished with zero agent errors, failed worker actions, logged fallbacks, storage overflow or stranded shed/carried inventory. Every cash ledger reconciled. [First-cycle packaging](reports/results/packaging-final.json) · [holdout diagnostics](reports/results/holdout-diagnostics.json).
+V8 packaging checks cover 2,876 actions along four complete source/artifact trajectories, 60 observations in two fresh isolated Python processes, and state reset. Peak current-image memory was 24,801,280 bytes on Windows and 23,506,944 bytes in Linux CI. Linux `/proc/self/status` avoids counting inherited pre-exec memory as policy memory. These local measurements do not certify hosted limits. [Packaging evidence](reports/results/phase3-packaging-final.json) | [Linux measurements](reports/results/phase3-linux-ci.json).
 
-Second-cycle Linux CI passed **315 tests**, with one optional MLflow skip, and independently rebuilt and verified both artifacts. Linux resource-based peak RSS was 242.5 MB for v7 and 251.1 MB for the challenger. These platform-specific measurements are recorded separately from the Windows result and do not certify hosted resource limits. [Cross-platform CI evidence](reports/results/phase2-linux-ci.json).
+Across 512 v8 validation games, maximum recorded action time was **113.925 ms**, with zero errors or stderr. The immutable [v7 rollback](submissions/20260909-v7/main.py) retains hash `750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee` and its historical holdout evidence. V8 has not passed the broader release gate.
 
 CI checks lint, formatting, types, interpreter contracts, execution regressions, complete games, standalone verification and deterministic regeneration. Run the checks locally:
 
@@ -158,9 +158,9 @@ uv run mypy src
 uv run pytest
 ```
 
-The economic forecast is a compact heuristic, not an exact optimal season plan. The retained v7 release still has the late-planting defect isolated in the second cycle; the experimental challenger repairs it but fails the broader promotion gate. Terminal escape counts are reported separately; this timing classification does not prove abandonment was optimal. The expanded benchmark includes a weak independent crop-only reference and two harder opponents with shared public route ancestry. It does not represent the full live field. Local execution does not establish a leaderboard rating or verify the current hosted image and resource limits.
+The economic forecast is a compact heuristic, not an exact optimal season plan. V8 repairs the earlier late-planting and deadline defects but still fails the COK qualification floor. Terminal escape counts are reported separately; this timing classification does not prove abandonment was optimal. The expanded benchmark includes a weak independent crop-only reference and two harder opponents with shared public route ancestry. It does not represent the full live field. Local execution does not establish a leaderboard rating or verify the current hosted image and resource limits.
 
-Kaggle authentication was unavailable, so no live submission was made. After authenticating and confirming eligibility and quota, submit the exact validated file:
+Kaggle authentication was unavailable, so no live submission was made. The following command submits the v7 rollback that passed its historical release protocol. V8 remains experimental and has not qualified on the expanded field. Authentication, eligibility and quota must be available:
 
 ```bash
 kaggle competitions submit kaggriculture -f submissions/20260909-v7/main.py -m "v7 joint assignment"
@@ -172,7 +172,8 @@ kaggle competitions submissions kaggriculture
 | Location | Purpose |
 |---|---|
 | `src/kaggriculture/agent/competitive.py` | Deployed policy and bounded assignment solver |
-| `submissions/20260909-v7/` | Standalone artifact and manifest |
+| `submissions/20260909-v8/` | Current frozen experimental artifact and manifest |
+| `submissions/20260909-v7/` | Immutable release rollback |
 | `submissions/20260902-v5/`, `submissions/20260908-v6/` | Preserved historical submissions |
 | `scripts/` | Evaluation, production search, packaging and figures |
 | `tests/` | Game contracts, failure regressions and integration checks |

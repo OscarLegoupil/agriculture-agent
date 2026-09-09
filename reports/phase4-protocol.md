@@ -101,3 +101,29 @@ Freeze `3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57`.
 The earlier screen's eleven stderr turns have no retained message text and
 cannot be classified retrospectively. New benchmarks retain bounded message
 counts and disclose truncation or omission. This remains known-data screening.
+
+
+Authorize 48 additional known-development games for land commissioning: three frozen-v8 variants (land-only, 70 crops, 70 crops with a 14-hand ceiling), seeds 3000, 3017, 3042, 3063, both seats against pinned COK and Seyam. This tests the observed 68 versus 87-90 productive-tile gap while separating purchased area, production capacity and labor. Freeze snapshots before execution; use at most four workers. Report all results, actual land purchases, footprint, labor and service losses. No automatic extension or promotion is authorized by this screen.
+
+Add 32 known-panel games for sustained grown-feed cohorts on frozen v8's
+corrected annual-crop controller. The old phase-three feed test preceded the
+water-before-harvest correction. Here one or 1.5 wheat tiles per observed animal
+(minimum seven, maximum 28) compete with the forced berry cohorts from days
+8–24 by overriding the crop ranking until the target is reached; planting still
+requires positive estimated finite-season value, seeds and cash.
+These are deliberately different production mixes, not an asserted optimal
+allocation. Freeze `36e95469bb83dba2c73622ac0c66dd24a4d8611ccea0ce789b95ae6ee47ea642`
+and `e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265`.
+Thirty opening/terminal saved actions per variant match v8. Run only when four
+local game slots are free, retaining the eight-game concurrency ceiling.
+
+Authorize 128 known-data confirmation games for frozen land-only 6c3d587de64242b3f6937b7b0aa2b4fc1369e21851a4539c78c82bcd401223af: seeds 3000 through 3031, both seats against pinned COK and Seyam. The original four-seed screen reached COK 5/8 and Seyam 8/8 while retaining 68 productive tiles and purchasing a fourth quadrant. This larger panel tests generalization before further geometric ablations. Start four workers only after the opening screen finishes. Compare the exact incumbent subset using phase4_compare.py; no fresh validation claim or automatic additional tuning.
+
+Test the interaction between extra acreage and grown-feed allocation in 32
+original-panel games. In the 3001 replay, COK has 42 berries and 26 wheat on day
+15 while v8 has 42 berries and six wheat. The 70-crop screen expanded primarily
+berries and lost; the higher-wheat 50-crop screen wins 6/8 COK but only 6/8
+Seyam. Combine the existing 70-crop/four-plot/12-hand candidate with each frozen
+wheat-target rule to test whether retaining berry capacity changes that tradeoff.
+Do not assume the components are additive or that the target guarantees feed
+self-sufficiency. All seeds remain known development data; four workers maximum.

@@ -1,0 +1,18 @@
+{
+  "kind": "unchanged-opening-and-terminal saved-action parity",
+  "incumbent": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+  "replay_sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa",
+  "candidates": [
+    {
+      "ratio": 1.0,
+      "sha256": "36e95469bb83dba2c73622ac0c66dd24a4d8611ccea0ce789b95ae6ee47ea642",
+      "equal_actions": 30
+    },
+    {
+      "ratio": 1.5,
+      "sha256": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265",
+      "equal_actions": 30
+    }
+  ]
+}

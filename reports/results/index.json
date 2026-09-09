@@ -557,10 +557,40 @@
     "games": 0,
     "kind": "analysis"
   },
+  "phase4-feed-mix.json.gz": {
+    "sha256_uncompressed": "aba892b93cac3aa7e30e7a3706e602babd2be2bc9e49e2723fec45b0559be2c7",
+    "bytes": 114223,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-flow-profile.json.gz": {
+    "sha256_uncompressed": "3aeffb5e342dee81d2564f9074af0082a05c405d4a3f2ad49285b1894d6cd101",
+    "bytes": 17051,
+    "games": 0,
+    "kind": "analysis"
+  },
   "phase4-joint-feed.json.gz": {
     "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
     "bytes": 113924,
     "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-joint-field.json.gz": {
+    "sha256_uncompressed": "c6a7bf85290aba04118615d57b1eb5851809aa13147e247bc5fa0892d60b3c96",
+    "bytes": 457584,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-land-diagnosis.json.gz": {
+    "sha256_uncompressed": "9274b1bbe67f8410aeadc822223166c3dd92fe74780d6c806149a245d7742c06",
+    "bytes": 12451,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-land.json.gz": {
+    "sha256_uncompressed": "57cd45a2e1c947a3f170f889479394964d0676b87e3579fb85a86ddfbd89a834",
+    "bytes": 173304,
+    "games": 48,
     "kind": "benchmark"
   },
   "phase4-loss-replays.json.gz": {
@@ -569,9 +599,33 @@
     "games": 4,
     "kind": "benchmark"
   },
+  "phase4-opening-audit.json.gz": {
+    "sha256_uncompressed": "97846f7e70ed4f18dcf548b6f521c0b5e63eb9e670d3119ee081671cc991d362",
+    "bytes": 5138,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-opening.json.gz": {
+    "sha256_uncompressed": "1c20e983a378cd72122f817c9171fcbdf16e1b3e4d7114907c00231304dbe449",
+    "bytes": 114369,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-production-interaction.json.gz": {
+    "sha256_uncompressed": "f28bef9965cd7154f73a9570dc696e4a4762ba5e7dc44efe3fa9d8758a95fdb0",
+    "bytes": 117153,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "phase4-terminal-audit.json.gz": {
     "sha256_uncompressed": "f37536cf7a50548daa40fc0002b6d3edd8652a26c23ea93b89d1e76a5a3f6df9",
     "bytes": 1337,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-workload.json.gz": {
+    "sha256_uncompressed": "c80b01b5c0d8c411c54c5593fd17e48c67775fe096704283e40db0116b2717e3",
+    "bytes": 3352,
     "games": 0,
     "kind": "analysis"
   },
