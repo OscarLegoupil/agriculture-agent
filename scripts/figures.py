@@ -1,7 +1,6 @@
 """Generate portfolio figures exclusively from saved benchmark outputs."""
 
 import argparse
-import json
 from pathlib import Path
 
 import matplotlib
@@ -9,6 +8,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from evidence_io import read_result
 from summarize_benchmark import match_score, summarize
 
 COLORS = {"v5": "#9aabb7", "v6": "#e5a43b", "v7": "#168477", "ink": "#193349"}
@@ -20,7 +20,7 @@ LABELS = {
 
 
 def read(name):
-    return json.loads(Path(name).read_text())["episodes"]
+    return read_result(name)["episodes"]
 
 
 def save(fig, name):
@@ -87,7 +87,7 @@ def main():
     for version, filename in (
         ("v5", "audit-v5.json"),
         ("v6", "audit-v6.json"),
-        ("v7", "audit-v7.json"),
+        ("v7", "audit-final-v7.json"),
     ):
         games = [
             r for r in read("reports/results/" + filename) if "reference-lonespear" in r["opponent"]

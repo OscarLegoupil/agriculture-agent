@@ -54,6 +54,15 @@ def test_score_handles_draws_errors_and_seed_clusters():
 
 
 def test_reference_variants_do_not_get_independent_primary_votes():
-    rows = [dict(opponent="data/raw/reference-lonespear/main_bigherd.py", seed=0, seat=seat,
-                 cash=100, opponent_cash=50, statuses=["DONE", "DONE"]) for seat in (0,1)]
+    rows = [
+        dict(
+            opponent="data/raw/reference-lonespear/main_bigherd.py",
+            seed=0,
+            seat=seat,
+            cash=100,
+            opponent_cash=50,
+            statuses=["DONE", "DONE"],
+        )
+        for seat in (0, 1)
+    ]
     assert "primary" not in summarize(rows)

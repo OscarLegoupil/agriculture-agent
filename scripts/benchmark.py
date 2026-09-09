@@ -83,7 +83,8 @@ def episode(args):
     replay_path = None
     if replay:
         path = (
-            Path(replay) / f"{Path(candidate).parent.name}-{Path(opponent).parent.name}-{Path(opponent).stem}-{seed}-{seat}.json"
+            Path(replay)
+            / f"{Path(candidate).parent.name}-{Path(opponent).parent.name}-{Path(opponent).stem}-{seed}-{seat}.json"
         )
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(env.toJSON()), encoding="utf-8")
@@ -137,8 +138,13 @@ def main():
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     tasks = [
-        (str(frozen_candidate), opp, seed, seat,
-         args.replays if args.replay_seeds is None or seed in args.replay_seeds else None)
+        (
+            str(frozen_candidate),
+            opp,
+            seed,
+            seat,
+            args.replays if args.replay_seeds is None or seed in args.replay_seeds else None,
+        )
         for opp in args.opponents
         for seed in args.seeds
         for seat in (0, 1)

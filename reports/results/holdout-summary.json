@@ -1,0 +1,74 @@
+{
+  "opponents": {
+    "data/raw/reference-lonespear/main.py": {
+      "games": 256,
+      "seeds": 128,
+      "wins": 155,
+      "draws": 0,
+      "score": 0.60546875,
+      "ci95": [
+        0.5234375,
+        0.6875
+      ],
+      "mean_cash": 87779.234375,
+      "mean_opponent_cash": 81377.3359375,
+      "mean_gap": 6401.8984375,
+      "p10_gap": -8630.5,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.044531,
+      "max_p99_action_seconds": 0.002158
+    },
+    "data/raw/reference-gzm/main.py": {
+      "games": 256,
+      "seeds": 128,
+      "wins": 179,
+      "draws": 0,
+      "score": 0.69921875,
+      "ci95": [
+        0.625,
+        0.7734375
+      ],
+      "mean_cash": 84559.85546875,
+      "mean_opponent_cash": 79580.64453125,
+      "mean_gap": 4979.2109375,
+      "p10_gap": -14024.5,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.066764,
+      "max_p99_action_seconds": 0.003553
+    },
+    "data/raw/reference-tina/agent.py": {
+      "games": 256,
+      "seeds": 128,
+      "wins": 256,
+      "draws": 0,
+      "score": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "mean_cash": 108239.18359375,
+      "mean_opponent_cash": 19032.98828125,
+      "mean_gap": 89206.1953125,
+      "p10_gap": 74482.0,
+      "errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.039926,
+      "max_p99_action_seconds": 0.003236
+    }
+  },
+  "primary": {
+    "weights": {
+      "data/raw/reference-lonespear/main.py": 0.5,
+      "data/raw/reference-gzm/main.py": 0.5
+    },
+    "seeds": 128,
+    "score": 0.65234375,
+    "ci95": [
+      0.599560546875,
+      0.705078125
+    ],
+    "gate_passed": true
+  }
+}

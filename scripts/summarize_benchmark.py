@@ -7,6 +7,11 @@ from pathlib import Path
 
 import numpy as np
 
+try:
+    from .evidence_io import read_result
+except ImportError:
+    from evidence_io import read_result
+
 
 def match_score(row):
     if row["statuses"][row["seat"]] != "DONE":
@@ -77,7 +82,7 @@ if __name__ == "__main__":
     parser.add_argument("input", type=Path)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    report = summarize(json.loads(args.input.read_text())["episodes"])
+    report = summarize(read_result(args.input)["episodes"])
     text = json.dumps(report, indent=2)
     if args.output:
         args.output.write_text(text + "\n", encoding="utf-8")

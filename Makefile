@@ -20,7 +20,7 @@ sim:
 	uv run python -c "from kaggle_environments import make; env = make('kaggriculture', configuration={'episodeSteps': 720, 'seed': 0}); env.run(['pass', 'starter']); s = env.steps[-1]; print(f'Player 0: {s[0].reward:.0f}  Player 1: {s[1].reward:.0f}  status={s[0].status}')"
 
 smoke:
-	uv run python scripts/benchmark.py --candidate submissions/20260909-v7/main.py --opponents starter --seeds 0 --output data/interim/smoke.json
+	uv run pytest tests/test_competitive_smoke.py -q
 
 view:
 	uv run kagg-view $(A) $(B) --seed $(if $(SEED),$(SEED),0)
