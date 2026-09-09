@@ -90,6 +90,7 @@ copied subsets are deduplicated in the [experiment index](phase2-experiment-inde
 | Can flexible livestock exploit expensive milk? | Adaptive 18 animals narrowed the initial COK mean deficit from 35,825 to 21,459 but won no COK games in the extension. More milk also collapsed prices in other scenarios. | Reject unconditional herd flexibility and 22-animal expansion. |
 | Should flexibility wait for actual shop information? | Waiting for two observed shops changed species allocation, but Seyam fell from 4/4 to 1/4 and COK remained 0/4. | Reject this version; higher own cash did not imply higher match score. |
 | Is speculative market holding useful? | One- and two-day inventory holding did not improve challenge wins; funded speculative positions did not activate. | Reject added trading complexity. |
+| Does investment improve when it charges the price impact on existing own-herd revenue? | A virtual-animal forecast includes pending animals, existing receipts and feed-price effects. After removing runtime fallback activity, it wins 2/4 Seyam and 0/4 COK games, without beating simpler adaptive allocation. | Reject this implementation; the clean follow-up separates the economic result from the first version's budget fallback. |
 
 Two early experimental controller edits were incorrect: a planting guard
 fell through to DIG on empty ground, and a nightly-delivery change allowed
@@ -103,6 +104,13 @@ Detailed causal observations are in the [loss diagnosis](phase2-diagnosis.md)
 and [economic study](phase2-economics.md). The record deliberately retains
 counterexamples: one adaptive farm earned 117,454 after selling 318 milk and
 still lost by 20,648.
+
+Screening and diagnostics remain within the expanded 640-game budget. The
+archive contains 624 rows: 584 unique episode records covering 568 physical
+scenarios, plus explicitly identified copies and reruns. Validation is counted
+separately. The final marginal-investment follow-up records zero stderr and a
+105.0 ms maximum decision; its first version's 148 stderr turns are preserved
+as evidence of the runtime confound.
 
 ## Validation and release decision
 
@@ -155,9 +163,11 @@ Check current quota and hosted rules first; do not submit the unpromoted researc
 challenger as a validated improvement. Current rating, game count and live
 opponent coverage remain unknown.
 
-The next high-value problem is production planning that prices its own market
-impact and the opponent's response while funding executable service obligations.
-The current forecast can identify expensive milk yet buy enough cows to erase
-that opportunity. It also cannot replace a large irreversible early herd after
-shop demand changes. More fixed capacity and more parameter trials did not
-resolve that limitation.
+The next high-value problem is joint planning of investment and executable
+service schedules under opponent supply scenarios. The current forecast can
+identify expensive milk yet buy enough cows to erase that opportunity. Charging
+the estimated revenue loss on existing animals did not fix the tested policy:
+its servicing, delivery and future production assumptions remain approximate.
+It also cannot replace a large irreversible early herd after shop demand
+changes. More fixed capacity and more parameter trials did not resolve that
+limitation.

@@ -195,3 +195,34 @@ The fixed-herd reference has only 8–11 placed animals on day 6 in this panel, 
 Reject the deferred candidate and do not extend the screen: it produces no COK win and materially weakens Seyam results. Its mean own cash against Seyam is 110,204.50, another example of increased absolute income without stronger match performance. By day 15 it has 11–13 sheep against Seyam, while COK seed 17 seat 0 leads it to 14 cows; observable demand changes the allocation, but that response is not sufficient for competitive improvement.
 
 All eight games completed normally with zero stderr turns and a maximum observed decision of 105.9 ms. Exact executable: `21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629`; full manifest and episodes: `data/interim/phase2-economics/deferred-herd-results.json`. The source is an original modification of this repository's frozen challenger and remains isolated from deployment.
+
+## Marginal investment with existing-revenue effects
+
+The final distinct economic probe asks whether valuing only the new animal's output overlooks damage to the farm's existing sales. `scripts/phase2_marginal_investment.py` builds on the same frozen `0098d9e4...` foundation with adaptive 18-animal limits. It projects two public-state scenarios: current assets plus already-owned pending animals, and those assets plus one prospective animal. Both use the existing observable inventory forecast. The new investment receives its projected output revenue, the change in existing own-herd revenue, additional feed cost, the feed-price change charged to existing own animals, capital cost and the existing service-time charge.
+
+The scenario adds a one-day placement lag and uses the forecast's 80% care assumption consistently. It preserves actual crop and animal ages. Virtual assets exist only in copied observations used by the forecast; they are never game actions or privileged simulator state. A direct probe verifies that the original observation remains unchanged. Price and supply-model limitations from the earlier forecast study still apply: this is marginal value **within that scenario**, not an exact whole-farm cash-flow optimizer. In particular, crop-price revenue changes and opponent profit effects are not included in the objective.
+
+The optional calculation checks a 40 ms budget between species and visibly falls back to the original cheap valuation. Its eight-game development screen was entirely separate from the already frozen candidate's validation and used only old seeds 17 and 103.
+
+| Candidate | Seyam wins / 4; mean gap | COK wins / 4; mean gap |
+|---|---:|---:|
+| Fixed-herd challenger | 4; +17,899.75 | 0; −35,825.00 |
+| Adaptive 18 | 3; +6,652.50 | 0; −21,459.25 |
+| Marginal own-revenue valuation | 2; −6,296.00 | 0; −30,944.75 |
+
+Reject without extension: no COK win, worse Seyam performance, and substantial runtime fallback activity. There were 148 turns with stderr across the eight completed games under concurrent load, with the marginal-budget fallback explicitly enabled; maximum observed decision time was 341.6 ms. These results evaluate that fallback-bearing executable and cannot isolate a hypothetical unlimited-runtime marginal policy. The expensive online calculation therefore lacks both performance and runtime evidence for deployment.
+
+Exact executable: `76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d`; full frozen-source manifest and records: `data/interim/phase2-economics/marginal-herd-results.json`. The ongoing validation candidate and deployed incumbent were not modified by this experiment.
+
+### Runtime fidelity follow-up
+
+One additional eight-game run closes the runtime confound without tuning the strategy. Twelve evaluations of a single known day-15 COK observation took a median 4.53 ms and maximum 5.45 ms, returning all three species values. This supported increasing the optional forecast budget from 40 to 200 ms while retaining its in-execution fallback. The earlier artifact remains preserved. The budget literal is the only semantic source change; observations, objective, assumptions, seeds and opponents are unchanged.
+
+| Marginal valuation executable | Seyam wins / 4; mean gap | COK wins / 4; mean gap | Stderr turns | Maximum decision |
+|---|---:|---:|---:|---:|
+| 40 ms budget | 2; −6,296.00 | 0; −30,944.75 | 148 | 341.6 ms |
+| 200 ms budget | 2; −6,296.00 | 0; −21,984.00 | 0 | 105.0 ms |
+
+All eight follow-up games completed normally. Removing observed fallback activity improves the COK cash gap, but produces no COK win and leaves the Seyam deficit unchanged. The intended marginal policy therefore remains rejected on performance evidence, rather than solely because of runtime fallback. Its COK gap is also slightly worse than the simpler adaptive-18 comparator (−21,459.25). No extension or new candidate selection follows this experiment; the frozen validation candidate remains untouched.
+
+Follow-up executable: `cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652`. Complete provenance and records are in `data/interim/phase2-economics/marginal-herd-budget200-results.json`, with the single-observation timing probe in `marginal-runtime-probe.json`. Restore the exact follow-up bytes from the retained source snapshot for reproduction.

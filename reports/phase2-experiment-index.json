@@ -1,5 +1,5 @@
 {
-  "scope": "Completed phase-two experiment manifests selected for curation; phase2-paired and manifests explicitly marked incomplete excluded",
+  "scope": "Completed phase-two screening and diagnostic manifests; validation, derived paired reports and manifests explicitly marked incomplete excluded",
   "counting": "Byte-identical manifest copies count once. Repeated physical scenarios may be reruns or copied subsets, so their count is reported separately without asserting new executions.",
   "manifests": [
     {
@@ -699,6 +699,86 @@
           "recorded_sha256": "61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52",
           "verified_sha256": "61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52",
           "snapshot": "reports\\sources\\61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-marginal-herd-budget200-results.json.gz",
+      "sha256_uncompressed": "b1c921017b56e4d7b9091f242f70680493c7d13add3b56eb0f5bd05ab1fbd758",
+      "source_files": [
+        "reports\\results\\phase2-economics-marginal-herd-budget200-results.json.gz",
+        "data\\interim\\phase2-economics\\marginal-herd-budget200-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": true,
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652/main.py",
+          "recorded_sha256": "cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652",
+          "verified_sha256": "cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652",
+          "snapshot": "reports\\sources\\cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-marginal-herd-results.json.gz",
+      "sha256_uncompressed": "ca99a2f9814a33699495673457c8470d4d4b83d0a15d46cf669d7beacf70bd85",
+      "source_files": [
+        "reports\\results\\phase2-economics-marginal-herd-results.json.gz",
+        "data\\interim\\phase2-economics\\marginal-herd-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/marginal-herd/76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d/main.py",
+          "recorded_sha256": "76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d",
+          "verified_sha256": "76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d",
+          "snapshot": "reports\\sources\\76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d.py.gz"
         }
       ],
       "opponent_checks": [
@@ -2993,12 +3073,12 @@
     }
   ],
   "totals": {
-    "unique_manifest_bytes": 35,
-    "recorded_episode_rows": 608,
-    "unique_episode_records": 568,
+    "unique_manifest_bytes": 37,
+    "recorded_episode_rows": 624,
+    "unique_episode_records": 584,
     "identical_episode_copy_rows": 40,
     "non_DONE_rows": 0,
-    "unique_physical_scenarios": 552,
+    "unique_physical_scenarios": 568,
     "repeated_scenario_extra_rows": 56,
     "role_reversed_extra_records": 8,
     "additional_distinct_records_same_orientation": 8,
@@ -3032,6 +3112,13 @@
       "source": "data\\interim\\phase2-economics\\summary.json",
       "archive": "reports\\diagnostics\\phase2-economics-summary.json.gz",
       "sha256_uncompressed": "48027da7c22b7ac0736de8aa152f19cbdba8383b2baba163aaff0dcd6353be4a",
+      "additional_episode_count": 0,
+      "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
+    },
+    {
+      "source": "data\\interim\\phase2-economics\\marginal-runtime-probe.json",
+      "archive": "reports\\diagnostics\\phase2-economics-marginal-runtime-probe.json.gz",
+      "sha256_uncompressed": "6731fbfd4e2014860b69c74a58e7557e0443b4a4212d020030281c49337c0cf3",
       "additional_episode_count": 0,
       "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
     }

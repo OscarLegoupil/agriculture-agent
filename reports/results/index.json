@@ -114,6 +114,16 @@
     "bytes": 86392,
     "games": 24
   },
+  "phase2-economics-marginal-herd-budget200-results.json.gz": {
+    "sha256_uncompressed": "b1c921017b56e4d7b9091f242f70680493c7d13add3b56eb0f5bd05ab1fbd758",
+    "bytes": 29548,
+    "games": 8
+  },
+  "phase2-economics-marginal-herd-results.json.gz": {
+    "sha256_uncompressed": "ca99a2f9814a33699495673457c8470d4d4b83d0a15d46cf669d7beacf70bd85",
+    "bytes": 29855,
+    "games": 8
+  },
   "phase2-economics-market-default-guard-rejected.json.gz": {
     "sha256_uncompressed": "9885d5803f2778e792b778ed7feb56ae271b8897aaabb8d09b98dae0cd625626",
     "bytes": 29463,

@@ -24,7 +24,7 @@ def read(path):
 
 
 def excluded(path):
-    return "phase2-paired" in str(path)
+    return any(label in str(path) for label in ("phase2-paired", "phase2-validation"))
 
 
 def main():
@@ -67,7 +67,7 @@ def main():
             assert read(target) == content
             archives[key] = target
     index = {
-        "scope": "Completed phase-two experiment manifests selected for curation; phase2-paired and manifests explicitly marked incomplete excluded",
+        "scope": "Completed phase-two screening and diagnostic manifests; validation, derived paired reports and manifests explicitly marked incomplete excluded",
         "counting": "Byte-identical manifest copies count once. Repeated physical scenarios may be reruns or copied subsets, so their count is reported separately without asserting new executions.",
         "manifests": [],
         "warnings": [],
@@ -244,6 +244,7 @@ def main():
         Path("data/interim/phase2-diagnosis/diagnosis.json"),
         Path("data/interim/phase2-economics/market-calibration.json"),
         Path("data/interim/phase2-economics/summary.json"),
+        Path("data/interim/phase2-economics/marginal-runtime-probe.json"),
     ):
         if not source.exists():
             continue
