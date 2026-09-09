@@ -1,0 +1,597 @@
+{
+  "scope": "Known development seeds; exploratory candidate confirmation, not fresh validation.",
+  "incumbent_parent": {
+    "path": "reports/results/phase2-validation-challenger.json.gz",
+    "file_sha256": "b810c47b394337fd496b84f788aa3ed68f1c95506cc3ec9756de29880a0215bd",
+    "original_games": 512,
+    "selected_seeds": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ]
+  },
+  "challenger_manifest_sha256": "400f0f81faacb8238e566aa209e62c29a4df616fadac450e444eb70c14429977",
+  "pools": {
+    "anchor": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "weights": {
+        "data/raw/reference-lonespear/main.py": 0.5,
+        "data/raw/reference-gzm/main.py": 0.5
+      },
+      "opponents": {
+        "data/raw/reference-gzm/main.py": {
+          "games": 32,
+          "incumbent_score": 0.84375,
+          "challenger_score": 1.0,
+          "score_delta": 0.15625,
+          "delta_ci95": [
+            0.03125,
+            0.3125
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 16446.25,
+            "median": 17758.0,
+            "p10": -4387.799999999999
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 46423.125,
+            "median": 46853.0,
+            "p10": 29542.3
+          },
+          "mean_paired_gap_change": 29976.875,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.028132,
+          "failed_work": 0
+        },
+        "data/raw/reference-lonespear/main.py": {
+          "games": 32,
+          "incumbent_score": 0.9375,
+          "challenger_score": 1.0,
+          "score_delta": 0.0625,
+          "delta_ci95": [
+            0.0,
+            0.1875
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 23468.90625,
+            "median": 28372.0,
+            "p10": 4916.6
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 45963.25,
+            "median": 43707.0,
+            "p10": 32054.3
+          },
+          "mean_paired_gap_change": 22494.34375,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.031791,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.890625,
+        "challenger_score": 1.0,
+        "score_delta": 0.109375,
+        "delta_ci95": [
+          0.03125,
+          0.203125
+        ],
+        "challenger_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "source": "data/interim/phase2-challenger/main.py",
+          "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+          "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+        },
+        "challenger": {
+          "sha256": "59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3",
+          "source": "data\\interim\\strategy-screen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "executed_candidate": "data\\interim\\frozen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "snapshot": "reports\\sources\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3.py.gz",
+          "revision": "57bf761ca45c744295013631a1e123fcfa3a29c8"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-gzm/main.py": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "2ff03622af526cbd7705a217b243b0c6754285c7f60165d292c5cb838ac87088",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-gzm/main.py",
+            "data/raw/reference-lonespear/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "games_per_policy": 128
+        }
+      }
+    },
+    "challenge": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "weights": {
+        "data/raw/reference-seyam/main.py": 0.5,
+        "data/raw/reference-cok/main.py": 0.5
+      },
+      "opponents": {
+        "data/raw/reference-cok/main.py": {
+          "games": 32,
+          "incumbent_score": 0.0625,
+          "challenger_score": 0.4375,
+          "score_delta": 0.375,
+          "delta_ci95": [
+            0.125,
+            0.625
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -33208.5,
+            "median": -28326.0,
+            "p10": -63345.5
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -2709.96875,
+            "median": -3421.5,
+            "p10": -13884.8
+          },
+          "mean_paired_gap_change": 30498.53125,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.069167,
+          "failed_work": 0
+        },
+        "data/raw/reference-seyam/main.py": {
+          "games": 32,
+          "incumbent_score": 0.28125,
+          "challenger_score": 0.875,
+          "score_delta": 0.59375,
+          "delta_ci95": [
+            0.28125,
+            0.875
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -12080.4375,
+            "median": -10311.5,
+            "p10": -28080.0
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 20034.28125,
+            "median": 22018.0,
+            "p10": -4312.499999999999
+          },
+          "mean_paired_gap_change": 32114.71875,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.073266,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.171875,
+        "challenger_score": 0.65625,
+        "score_delta": 0.484375,
+        "delta_ci95": [
+          0.34375,
+          0.625
+        ],
+        "challenger_ci95": [
+          0.5625,
+          0.78125
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "source": "data/interim/phase2-challenger/main.py",
+          "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+          "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+        },
+        "challenger": {
+          "sha256": "59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3",
+          "source": "data\\interim\\strategy-screen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "executed_candidate": "data\\interim\\frozen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "snapshot": "reports\\sources\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3.py.gz",
+          "revision": "57bf761ca45c744295013631a1e123fcfa3a29c8"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-gzm/main.py": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "2ff03622af526cbd7705a217b243b0c6754285c7f60165d292c5cb838ac87088",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-gzm/main.py",
+            "data/raw/reference-lonespear/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "games_per_policy": 128
+        }
+      }
+    },
+    "equal_four": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "weights": {
+        "data/raw/reference-lonespear/main.py": 0.25,
+        "data/raw/reference-gzm/main.py": 0.25,
+        "data/raw/reference-seyam/main.py": 0.25,
+        "data/raw/reference-cok/main.py": 0.25
+      },
+      "opponents": {
+        "data/raw/reference-cok/main.py": {
+          "games": 32,
+          "incumbent_score": 0.0625,
+          "challenger_score": 0.4375,
+          "score_delta": 0.375,
+          "delta_ci95": [
+            0.125,
+            0.625
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -33208.5,
+            "median": -28326.0,
+            "p10": -63345.5
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -2709.96875,
+            "median": -3421.5,
+            "p10": -13884.8
+          },
+          "mean_paired_gap_change": 30498.53125,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.069167,
+          "failed_work": 0
+        },
+        "data/raw/reference-gzm/main.py": {
+          "games": 32,
+          "incumbent_score": 0.84375,
+          "challenger_score": 1.0,
+          "score_delta": 0.15625,
+          "delta_ci95": [
+            0.03125,
+            0.3125
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 16446.25,
+            "median": 17758.0,
+            "p10": -4387.799999999999
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 46423.125,
+            "median": 46853.0,
+            "p10": 29542.3
+          },
+          "mean_paired_gap_change": 29976.875,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.028132,
+          "failed_work": 0
+        },
+        "data/raw/reference-lonespear/main.py": {
+          "games": 32,
+          "incumbent_score": 0.9375,
+          "challenger_score": 1.0,
+          "score_delta": 0.0625,
+          "delta_ci95": [
+            0.0,
+            0.1875
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 23468.90625,
+            "median": 28372.0,
+            "p10": 4916.6
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 45963.25,
+            "median": 43707.0,
+            "p10": 32054.3
+          },
+          "mean_paired_gap_change": 22494.34375,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.031791,
+          "failed_work": 0
+        },
+        "data/raw/reference-seyam/main.py": {
+          "games": 32,
+          "incumbent_score": 0.28125,
+          "challenger_score": 0.875,
+          "score_delta": 0.59375,
+          "delta_ci95": [
+            0.28125,
+            0.875
+          ],
+          "incumbent_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": -12080.4375,
+            "median": -10311.5,
+            "p10": -28080.0
+          },
+          "challenger_cash_gap": {
+            "n": 32,
+            "missing": 0,
+            "mean": 20034.28125,
+            "median": 22018.0,
+            "p10": -4312.499999999999
+          },
+          "mean_paired_gap_change": 32114.71875,
+          "paired_gap_n": 32,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.073266,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.53125,
+        "challenger_score": 0.828125,
+        "score_delta": 0.296875,
+        "delta_ci95": [
+          0.203125,
+          0.3984375
+        ],
+        "challenger_ci95": [
+          0.78125,
+          0.890625
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "source": "data/interim/phase2-challenger/main.py",
+          "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+          "revision": "9b73672102a64d6818b9c895838360d5e15ebc89"
+        },
+        "challenger": {
+          "sha256": "59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3",
+          "source": "data\\interim\\strategy-screen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "executed_candidate": "data\\interim\\frozen\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3\\main.py",
+          "snapshot": "reports\\sources\\59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3.py.gz",
+          "revision": "57bf761ca45c744295013631a1e123fcfa3a29c8"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-gzm/main.py": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "data/raw/reference-lonespear/main.py": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "2ff03622af526cbd7705a217b243b0c6754285c7f60165d292c5cb838ac87088",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-gzm/main.py",
+            "data/raw/reference-lonespear/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "games_per_policy": 128
+        }
+      }
+    }
+  }
+}

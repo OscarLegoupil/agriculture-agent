@@ -5,6 +5,14 @@ validation games. This continuation tests startup cash flow and executable crop
 cohorts against the unchanged, pinned COK and Seyam references. All results below
 are exploratory development results, not fresh validation or leaderboard evidence.
 
+**The subsequent broader check rejected this candidate.** On seeds 2000–2015,
+both seats and all four opponents, it scored 96.875% against the anchors but
+31.25% against the challenge pool (Seyam 18/32, COK 2/32). The six-seed results
+below did not generalize. Exact paired results and seed-cluster intervals are in
+[`phase3-opening-field-summary.json`](results/phase3-opening-field-summary.json).
+Severe-loss diagnosis now targets herd allocation limits and missed execution
+deadlines; no release or fresh validation claim follows from this opening screen.
+
 The opening establishes seven wheat tiles and a first melon cohort with two cows
 and two sheep. Wheat supplies working capital before the melon harvest. Later
 planting emphasizes recurring strawberries while their finite remaining season

@@ -27,7 +27,8 @@ def main():
         manifest[path.name] = {
             "sha256_uncompressed": hashlib.sha256(content).hexdigest(),
             "bytes": path.stat().st_size,
-            "games": len(data["episodes"]),
+            "games": len(data.get("episodes", [])),
+            "kind": "benchmark" if "episodes" in data else "analysis",
         }
     (root / "index.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 

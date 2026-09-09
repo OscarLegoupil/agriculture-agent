@@ -1,0 +1,147 @@
+{
+  "examples": [
+    {
+      "actions": [
+        [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "FEED"
+        ]
+      ],
+      "after_daily_refresh": [
+        {
+          "animal": "SHEEP",
+          "cared_today": false,
+          "consecutive_unfed": 0,
+          "fed_today": false,
+          "fertilizer_available": true,
+          "kind": "PASTURE",
+          "pending_care_bonus": 0,
+          "placed_day": 8,
+          "yield_units": 3
+        }
+      ],
+      "day": 16,
+      "first_hour": 14,
+      "initial_cash": 22068.0,
+      "initial_shed_wheat": 5,
+      "inventory_preserved": {
+        "MILK": 6
+      },
+      "last_hour": 23,
+      "targets": [
+        [
+          9,
+          0
+        ]
+      ],
+      "worker": 6
+    },
+    {
+      "actions": [
+        [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "FEED"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "FEED"
+        ]
+      ],
+      "after_daily_refresh": [
+        {
+          "animal": "COW",
+          "cared_today": false,
+          "consecutive_unfed": 0,
+          "fed_today": false,
+          "fertilizer_available": true,
+          "kind": "PASTURE",
+          "pending_care_bonus": 0,
+          "placed_day": 10,
+          "yield_units": 2
+        },
+        {
+          "animal": "COW",
+          "cared_today": false,
+          "consecutive_unfed": 0,
+          "fed_today": false,
+          "fertilizer_available": true,
+          "kind": "PASTURE",
+          "pending_care_bonus": 0,
+          "placed_day": 8,
+          "yield_units": 2
+        }
+      ],
+      "day": 19,
+      "first_hour": 14,
+      "initial_cash": 35708.0,
+      "initial_shed_wheat": 3,
+      "inventory_preserved": {
+        "FERTILIZER": 1
+      },
+      "last_hour": 22,
+      "targets": [
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "worker": 10
+    }
+  ],
+  "replay": "febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-cok-main-2009-0.json",
+  "replay_sha256": "d41acd7df16e21fb6411bbf2e7ef97741ccc133d73c7dec11555086391de2636",
+  "scope": "Local official-action feasibility witnesses at recorded observations, holding other actors and market inactive. These demonstrate physically feasible rescues, not whole-policy replay or guaranteed match benefit."
+}
