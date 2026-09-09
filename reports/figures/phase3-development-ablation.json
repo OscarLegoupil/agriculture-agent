@@ -1,0 +1,63 @@
+{
+  "generator": "scripts/phase3_figures.py",
+  "stage": "development",
+  "inputs": [
+    {
+      "path": "reports/results/phase3-opening-field.json.gz",
+      "sha256_file": "f6ec65c4b577ea5adcf25b42b2da7180ad5a686db8bb7a262440b39301eadcc0"
+    },
+    {
+      "path": "reports/results/phase3-interactions.json.gz",
+      "sha256_file": "127e50d2700c756370ffa333f73ac16689177a50663adbd161ffdc31a73d3f94"
+    },
+    {
+      "path": "reports/results/phase3-funding.json.gz",
+      "sha256_file": "566ad20e43f3e9e0a8a20ea6bf9d066947f65ae44a39510a1ee4ae5448390ff4"
+    }
+  ],
+  "seeds": [
+    2000,
+    2003,
+    2009,
+    2013
+  ],
+  "opponents": [
+    "data/raw/reference-seyam/main.py",
+    "data/raw/reference-cok/main.py"
+  ],
+  "measurements": {
+    "Startup10": {
+      "sha256": "febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b",
+      "score": [
+        0.75,
+        0.0
+      ],
+      "mean_cash_gap": [
+        11753.25,
+        -29958.25
+      ]
+    },
+    "Flexible herd + capacity": {
+      "sha256": "521467d45a0e2739d634ec628009753fe8e3844633bdc6e6f733f45521489a59",
+      "score": [
+        1.0,
+        0.25
+      ],
+      "mean_cash_gap": [
+        13765.875,
+        -3879.25
+      ]
+    },
+    "+ Feed deadline reservations": {
+      "sha256": "59b46457c6511d5df959a95a8c4eb8297e649e0a95b2ae7886f2042e7a60bab3",
+      "score": [
+        1.0,
+        0.75
+      ],
+      "mean_cash_gap": [
+        27183.75,
+        2524.375
+      ]
+    }
+  }
+}

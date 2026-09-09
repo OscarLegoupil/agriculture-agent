@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import importlib.util
+import inspect
 import json
 import subprocess
 import sys
@@ -15,6 +16,86 @@ def load(path):
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def memory_usage():
+    """Separate current-image RSS accounting from pre-exec process history.
+
+    Linux exec_mmap retains the preceding address space's high-water mark for
+    getrusage, whereas proc VmHWM describes the current mm. Neither OS RSS
+    accounting nor tracemalloc is an exact isolated policy-only allocation.
+
+    Kernel accounting references (v6.8):
+    https://github.com/torvalds/linux/blob/v6.8/fs/exec.c#L990
+    https://github.com/torvalds/linux/blob/v6.8/fs/proc/task_mmu.c#L30-L60
+    """
+    import sys
+    from pathlib import Path
+
+    if sys.platform == "win32":
+        import ctypes
+
+        class Counters(ctypes.Structure):
+            _fields_ = [("cb", ctypes.c_ulong), ("faults", ctypes.c_ulong)] + [
+                (name, ctypes.c_size_t)
+                for name in (
+                    "peak_rss",
+                    "rss",
+                    "peak_paged",
+                    "paged",
+                    "peak_nonpaged",
+                    "nonpaged",
+                    "pagefile",
+                    "peak_pagefile",
+                )
+            ]
+
+        counters = Counters()
+        counters.cb = ctypes.sizeof(counters)
+        ctypes.windll.kernel32.GetCurrentProcess.restype = ctypes.c_void_p
+        handle = ctypes.windll.kernel32.GetCurrentProcess()
+        ctypes.windll.psapi.GetProcessMemoryInfo.argtypes = [
+            ctypes.c_void_p,
+            ctypes.POINTER(Counters),
+            ctypes.c_ulong,
+        ]
+        if not ctypes.windll.psapi.GetProcessMemoryInfo(
+            handle, ctypes.byref(counters), counters.cb
+        ):
+            raise OSError("GetProcessMemoryInfo failed")
+        return {
+            "peak_rss_bytes": counters.peak_rss,
+            "peak_rss_measure": "Windows PeakWorkingSetSize",
+            "resource_peak_rss_bytes": None,
+        }
+
+    import resource
+
+    historical = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (
+        1 if sys.platform == "darwin" else 1024
+    )
+    result = {
+        "peak_rss_bytes": historical,
+        "peak_rss_measure": "resource.ru_maxrss; may include pre-exec history",
+        "resource_peak_rss_bytes": historical,
+    }
+    if sys.platform.startswith("linux"):
+        try:
+            status = Path("/proc/self/status").read_text()
+        except OSError:
+            status = ""
+        for line in status.splitlines():
+            fields = line.split()
+            if len(fields) == 3 and fields[0] == "VmHWM:" and fields[2] == "kB":
+                value = int(fields[1])
+                if value <= 0:
+                    raise ValueError("Invalid proc VmHWM")
+                result.update(
+                    peak_rss_bytes=value * 1024,
+                    peak_rss_measure="Linux /proc/self/status VmHWM; current-image RSS high-water estimate",
+                )
+                break
+    return result
 
 
 def main():
@@ -52,7 +133,10 @@ def main():
             environment.run(agents)
             assert all(s.status == "DONE" for s in environment.state)
             matches.append({"seed": seed, "seat": seat, "cash": environment.state[seat].reward})
-    isolated_code = """
+    isolated_code = (
+        inspect.getsource(memory_usage)
+        + "\n"
+        + """
 import json, sys, tracemalloc
 from pathlib import Path
 tracemalloc.start()
@@ -60,23 +144,10 @@ namespace = {}
 exec(compile(Path(sys.argv[1]).read_bytes(), 'main.py', 'exec'), namespace)
 observations = json.load(sys.stdin)
 actions = [namespace['agent'](obs) for obs in observations]
-if sys.platform == 'win32':
-    import ctypes
-    class Counters(ctypes.Structure):
-        _fields_ = [('cb', ctypes.c_ulong), ('faults', ctypes.c_ulong)] + [(name, ctypes.c_size_t) for name in
-                    ('peak_rss', 'rss', 'peak_paged', 'paged', 'peak_nonpaged', 'nonpaged', 'pagefile', 'peak_pagefile')]
-    counters = Counters()
-    counters.cb = ctypes.sizeof(counters)
-    ctypes.windll.kernel32.GetCurrentProcess.restype = ctypes.c_void_p
-    handle = ctypes.windll.kernel32.GetCurrentProcess()
-    ctypes.windll.psapi.GetProcessMemoryInfo.argtypes = [ctypes.c_void_p, ctypes.POINTER(Counters), ctypes.c_ulong]
-    assert ctypes.windll.psapi.GetProcessMemoryInfo(handle, ctypes.byref(counters), counters.cb)
-    rss = counters.peak_rss
-else:
-    import resource
-    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (1 if sys.platform == 'darwin' else 1024)
-print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_traced_memory()[1], 'peak_rss_bytes': rss}))
+memory = memory_usage()
+print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_traced_memory()[1], **memory}))
 """
+    )
     with tempfile.TemporaryDirectory() as directory:
         # Repeat two independent interpreter lifetimes, with no site packages or
         # repository path. Repeated observations also verify in-process reset.
@@ -104,7 +175,17 @@ print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_trace
         "fresh_processes": 2,
         "peak_python_bytes": max(result["peak_python_bytes"] for result in results),
         "peak_rss_bytes": max(result["peak_rss_bytes"] for result in results),
-        "memory_measure": "isolated-process peak RSS and tracemalloc Python allocation peak",
+        "peak_rss_measure": sorted({result["peak_rss_measure"] for result in results}),
+        "resource_peak_rss_bytes": max(
+            (
+                result["resource_peak_rss_bytes"]
+                for result in results
+                if result["resource_peak_rss_bytes"] is not None
+            ),
+            default=None,
+        ),
+        "memory_measure": "isolated executable-image OS RSS high-water estimate where available; historical resource peak retained separately; tracemalloc Python allocation peak",
+        "memory_limitations": "RSS includes interpreter, observations, collected actions and tracing overhead. Linux proc accounting is approximate. A historical pre-exec resource peak is not the current policy's memory footprint.",
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")

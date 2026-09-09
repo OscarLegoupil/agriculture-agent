@@ -1,0 +1,17 @@
+{
+  "revision": "ec40cfc7df0cfd2e92930e24009224abc8c146a7",
+  "workflow_url": "https://github.com/OscarLegoupil/agriculture-agent/actions/runs/34365749991",
+  "job_id": 102514100331,
+  "conclusion": "success",
+  "tests_passed": 351,
+  "tests_skipped": 1,
+  "log_sha256": "19ab0ad304f2817b7dcf4b718a19f501d3bee791ba72d6a1b092277b169bf351",
+  "packaging": {
+    "v8_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+    "trajectory_actions_compared": 2876,
+    "isolated_actions_compared": 60,
+    "v8_resource_ru_maxrss_bytes": 256299008,
+    "incumbent_resource_ru_maxrss_bytes": 251355136,
+    "memory_note": "Linux resource high-water measurement; review of inherited pre-exec peak is pending. Do not interpret this as steady policy RSS."
+  }
+}
