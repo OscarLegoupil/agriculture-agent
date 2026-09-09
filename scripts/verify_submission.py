@@ -20,12 +20,14 @@ def load(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--artifact", type=Path, default=Path("submissions/20260909-v7/main.py"))
+    parser.add_argument(
+        "--source", type=Path, default=Path("src/kaggriculture/agent/competitive.py")
+    )
     parser.add_argument("--output", type=Path, default=Path("reports/results/packaging.json"))
     args = parser.parse_args()
     from kaggle_environments import make
 
-    root = Path(__file__).resolve().parents[1]
-    source_path = root / "src/kaggriculture/agent/competitive.py"
+    source_path = args.source.resolve()
     artifact_path = args.artifact.resolve()
     assert artifact_path.read_bytes() == source_path.read_bytes().replace(b"\r\n", b"\n")
     source, packaged = load(source_path), load(artifact_path)
@@ -93,6 +95,7 @@ print(json.dumps({'actions': actions, 'peak_python_bytes': tracemalloc.get_trace
         assert results[0]["actions"] == results[1]["actions"]
         assert results[0]["actions"] == [source.agent(obs) for obs in samples + samples[:4]]
     report = {
+        "source": str(args.source),
         "artifact": str(args.artifact),
         "sha256": hashlib.sha256(artifact_path.read_bytes()).hexdigest(),
         "trajectory_actions_compared": checked_actions,

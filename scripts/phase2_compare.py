@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,25 @@ def indexed(rows):
             raise ValueError(f"Duplicate scenario: {key}")
         result[key] = row
     return result
+
+
+def cash_gap(row):
+    """Keep absent/non-finite rewards out of cash statistics, never out of scores."""
+    own, rival = row.get("cash"), row.get("opponent_cash")
+    if own is None or rival is None or not (math.isfinite(own) and math.isfinite(rival)):
+        return None
+    return float(own - rival)
+
+
+def cash_summary(gaps):
+    values = [value for value in gaps if value is not None]
+    return {
+        "n": len(values),
+        "missing": len(gaps) - len(values),
+        "mean": float(np.mean(values)) if values else None,
+        "median": float(np.median(values)) if values else None,
+        "p10": float(np.quantile(values, 0.1)) if values else None,
+    }
 
 
 def compare(incumbent, challenger, weights):
@@ -62,16 +82,14 @@ def compare(incumbent, challenger, weights):
             ]
         )
         delta = paired[:, 1] - paired[:, 0]
-        old_gaps = [
-            old[opponent, seed, seat]["cash"] - old[opponent, seed, seat]["opponent_cash"]
-            for seed in seeds
-            for seat in (0, 1)
+        old_gaps = [cash_gap(old[opponent, seed, seat]) for seed in seeds for seat in (0, 1)]
+        new_gaps = [cash_gap(new[opponent, seed, seat]) for seed in seeds for seat in (0, 1)]
+        gap_changes = [
+            after - before
+            for before, after in zip(old_gaps, new_gaps, strict=True)
+            if before is not None and after is not None
         ]
-        new_gaps = [
-            new[opponent, seed, seat]["cash"] - new[opponent, seed, seat]["opponent_cash"]
-            for seed in seeds
-            for seat in (0, 1)
-        ]
+        old_games = [old[opponent, seed, seat] for seed in seeds for seat in (0, 1)]
         games = [new[opponent, seed, seat] for seed in seeds for seat in (0, 1)]
         report["opponents"][opponent] = {
             "games": len(games),
@@ -79,30 +97,17 @@ def compare(incumbent, challenger, weights):
             "challenger_score": float(paired[:, 1].mean()),
             "score_delta": float(delta.mean()),
             "delta_ci95": np.quantile(delta[resamples].mean(axis=1), [0.025, 0.975]).tolist(),
-            "incumbent_cash_gap": dict(
-                zip(
-                    ("mean", "median", "p10"),
-                    (
-                        float(np.mean(old_gaps)),
-                        float(np.median(old_gaps)),
-                        float(np.quantile(old_gaps, 0.1)),
-                    ),
-                    strict=True,
-                )
-            ),
-            "challenger_cash_gap": dict(
-                zip(
-                    ("mean", "median", "p10"),
-                    (
-                        float(np.mean(new_gaps)),
-                        float(np.median(new_gaps)),
-                        float(np.quantile(new_gaps, 0.1)),
-                    ),
-                    strict=True,
-                )
-            ),
-            "mean_paired_gap_change": float(np.mean(np.array(new_gaps) - old_gaps)),
+            "incumbent_cash_gap": cash_summary(old_gaps),
+            "challenger_cash_gap": cash_summary(new_gaps),
+            "mean_paired_gap_change": float(np.mean(gap_changes)) if gap_changes else None,
+            "paired_gap_n": len(gap_changes),
+            "paired_gap_missing": len(games) - len(gap_changes),
             "candidate_errors": sum(r["statuses"][r["seat"]] != "DONE" for r in games),
+            "opponent_errors": sum(r["statuses"][1 - r["seat"]] != "DONE" for r in games),
+            "incumbent_errors": sum(r["statuses"][r["seat"]] != "DONE" for r in old_games),
+            "incumbent_opponent_errors": sum(
+                r["statuses"][1 - r["seat"]] != "DONE" for r in old_games
+            ),
             "stderr_turns": sum(r.get("stderr_turns", 0) for r in games),
             "max_action_seconds": max(r.get("runtime_max_seconds", 0) for r in games),
             "failed_work": sum(
@@ -142,7 +147,7 @@ if __name__ == "__main__":
         if args.pool == "anchor"
         else ["data/raw/reference-seyam/main.py", "data/raw/reference-cok/main.py"]
     )
-    for opponent in opponents:
+    for opponent in {row["opponent"] for row in old["episodes"]} | set(opponents):
         if old["hashes"][opponent] != new["hashes"][opponent]:
             raise ValueError(f"Opponent executable changed: {opponent}")
     for key in ("environment_version", "interpreter_sha256", "lock_sha256"):

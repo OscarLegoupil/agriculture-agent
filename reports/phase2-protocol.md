@@ -19,10 +19,11 @@ known development data, as are the original 16 development seeds and validation
 
 The frozen anchor pool retains lonespear `774b260`, GzmCR `6a76335`, and the
 supplementary TinaawhyteD `169ca94`. Its primary weights remain 0.5/0.5/0.
-An evolving challenge pool will contain reviewed, qualified stronger public
-agents, the incumbent, and supply stress variants. Freeze challenge membership
-and weights before validation; derived implementations share a lineage and
-must not masquerade as independent families.
+The validation challenge pool is frozen at equal weights for Seyam `8b8c421`
+and COK `7ef67ea`, with exact executable hashes in
+`reports/challenge-reference-manifest.json`. Both derive from a shared public
+route lineage; they are two opponents, not two independent strategy families.
+Historical champions and supply variants remain supplementary diagnostics.
 
 Use cheap old-data screens first, normally 8–24 games per hypothesis. Expand
 only changes supported by realized behavior and paired outcomes. Initial budget
@@ -61,3 +62,29 @@ If holdout informs changes, retire it and name a new untouched split.
 Kaggle CLI again reports authentication required. No submission or legal-terms
 acceptance occurred. Local work continues; hosted compatibility and rating
 remain unverified until authenticated access is available.
+
+## Budget extension after initial diagnosis
+
+The initial expansion and generic task-bundle families failed qualification.
+Their failures exposed concrete liquidity and input-target defects: early
+fertilizer reserves block working capital, feed purchases are all-or-nothing,
+and fertilizer replenishment caps order size rather than desired inventory.
+Extend the screen/diagnostic budget from 400 to 640 games to isolate those
+repairs, test short-cycle opening finance, preserve mixed-herd differentiation
+while scaling, and evaluate demand-aware sale timing. This is a new set of
+causal questions, not additional seeds for a rejected priority model. The
+validation/holdout boundaries and promotion gates remain unchanged.
+
+## Frozen validation decision
+
+Before opening validation, freeze the combined liquidity, inventory-forecast
+and expansion challenger at SHA-256
+`0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b`.
+Rebuild it with `scripts/build_phase2_challenger.py`; keep v7 as release.
+The six-known-seed screen improved three matchups but won no COK games.
+A single full validation panel is justified to distinguish transferable gains
+from development selection. Run all 64 reserved seeds, both seats, four
+opponents, both incumbent and challenger: 1,024 games. Do not prune opponents,
+stop on a favorable interval, or tune using partial results. This confirmation
+budget is separate from hypothesis screening. No candidate variants enter
+this panel. A failed gate retains v7 and leaves the final holdout unopened.

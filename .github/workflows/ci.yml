@@ -2,9 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [main, feat/competitive-agent]
+    branches: [main, feat/competitive-agent, feat/competitive-agent-v2]
   pull_request:
-    branches: [main]
+    branches: [main, feat/competitive-agent]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
