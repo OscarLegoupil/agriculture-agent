@@ -1,0 +1,179 @@
+{
+  "scope": "Observation-only eligibility on saved baseline actions; advanced units are not extra revenue",
+  "base_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "results": [
+    {
+      "replay": "reports/replays/phase3-validation/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3000-0.json",
+      "replay_sha256": "deeb081e0d7d5923f89f60d7c13edd81ce3fbc7da49958d74554cd5661c1ec30",
+      "eligible_turns": 89,
+      "advanced_units": {
+        "WOOL": 109,
+        "MILK": 81,
+        "MELON": 66,
+        "EGG": 121,
+        "STRAWBERRY": 107,
+        "CARROT": 42
+      },
+      "turns_by_day": {
+        "6": 2,
+        "8": 2,
+        "9": 2,
+        "10": 6,
+        "11": 1,
+        "12": 3,
+        "13": 2,
+        "14": 3,
+        "15": 6,
+        "16": 2,
+        "17": 4,
+        "18": 6,
+        "19": 4,
+        "20": 6,
+        "21": 5,
+        "22": 6,
+        "23": 4,
+        "24": 7,
+        "25": 4,
+        "26": 4,
+        "27": 6,
+        "28": 4
+      },
+      "first": {
+        "step": 155,
+        "advanced": {
+          "WOOL": 5
+        },
+        "cash": 228.0
+      }
+    },
+    {
+      "replay": "reports/replays/phase3-validation/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3000-1.json",
+      "replay_sha256": "61ae84d3999c4c8a930161aa8bd12d2b13d1f657b5c4272a378da5476996dfdc",
+      "eligible_turns": 87,
+      "advanced_units": {
+        "WOOL": 101,
+        "MILK": 72,
+        "MELON": 66,
+        "EGG": 93,
+        "STRAWBERRY": 86,
+        "CARROT": 30
+      },
+      "turns_by_day": {
+        "6": 2,
+        "8": 2,
+        "9": 2,
+        "10": 6,
+        "11": 1,
+        "12": 3,
+        "13": 2,
+        "14": 3,
+        "15": 5,
+        "16": 3,
+        "17": 5,
+        "18": 5,
+        "19": 3,
+        "20": 5,
+        "21": 6,
+        "22": 4,
+        "23": 4,
+        "24": 6,
+        "25": 5,
+        "26": 3,
+        "27": 5,
+        "28": 7
+      },
+      "first": {
+        "step": 155,
+        "advanced": {
+          "WOOL": 5
+        },
+        "cash": 228.0
+      }
+    },
+    {
+      "replay": "reports/replays/phase3-validation/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-seyam-main-3000-0.json",
+      "replay_sha256": "ff196ad9bdca889ce062088dbbdd479c87114ee2f00821520f64ae63eeedc1af",
+      "eligible_turns": 68,
+      "advanced_units": {
+        "WOOL": 32,
+        "MILK": 144,
+        "MELON": 78,
+        "STRAWBERRY": 117,
+        "EGG": 60,
+        "CARROT": 30
+      },
+      "turns_by_day": {
+        "6": 2,
+        "8": 1,
+        "9": 2,
+        "10": 7,
+        "12": 3,
+        "13": 2,
+        "14": 2,
+        "15": 1,
+        "16": 5,
+        "17": 4,
+        "18": 5,
+        "19": 3,
+        "20": 4,
+        "21": 2,
+        "22": 4,
+        "23": 1,
+        "24": 6,
+        "25": 2,
+        "26": 4,
+        "27": 1,
+        "28": 7
+      },
+      "first": {
+        "step": 155,
+        "advanced": {
+          "WOOL": 5
+        },
+        "cash": 216.0
+      }
+    },
+    {
+      "replay": "reports/replays/phase3-validation/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-seyam-main-3000-1.json",
+      "replay_sha256": "9266fb553b6012660ebbb4041fb1c45efa92b0c3ccc5c3bd97f8849ead39852a",
+      "eligible_turns": 64,
+      "advanced_units": {
+        "WOOL": 96,
+        "MILK": 126,
+        "MELON": 72,
+        "STRAWBERRY": 100,
+        "CARROT": 12
+      },
+      "turns_by_day": {
+        "6": 2,
+        "8": 1,
+        "9": 2,
+        "10": 6,
+        "12": 1,
+        "13": 2,
+        "14": 2,
+        "15": 2,
+        "16": 4,
+        "17": 2,
+        "18": 6,
+        "19": 3,
+        "20": 4,
+        "21": 4,
+        "22": 4,
+        "23": 2,
+        "24": 4,
+        "25": 1,
+        "26": 2,
+        "27": 4,
+        "28": 6
+      },
+      "first": {
+        "step": 155,
+        "advanced": {
+          "WOOL": 5
+        },
+        "cash": 415.0
+      }
+    }
+  ]
+}

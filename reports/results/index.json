@@ -404,8 +404,8 @@
   "phase3-market-summary.json.gz": {
     "sha256_uncompressed": "fbfd015863ed46b9f7b87e6684c03be5274f3b8c881718445106c95613a8d792",
     "bytes": 659,
-    "games": 8,
-    "kind": "benchmark"
+    "games": 0,
+    "kind": "analysis"
   },
   "phase3-market.json.gz": {
     "sha256_uncompressed": "ac1fbe3cd9835569bd2a8d783de4a89d40772bb2ee6a3e0c5c13ad07d1eb9ca5",
@@ -497,17 +497,71 @@
     "games": 512,
     "kind": "benchmark"
   },
+  "phase4-capacity.json.gz": {
+    "sha256_uncompressed": "8ba2b2dcc0a0d24ce78aaf2123f5eeb7b34cbabd43ad44215bc1f6c58f870bf4",
+    "bytes": 169462,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase4-care-corrected.json.gz": {
+    "sha256_uncompressed": "6908c255f710ce6d689620bb6c8697cf05a588b0b0491267dfd2fc508df41399",
+    "bytes": 113852,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-care.json.gz": {
+    "sha256_uncompressed": "aeccfeca94827e930f10bfaec9675392ef3d19812c6cc49caef170638df1136a",
+    "bytes": 113704,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-cohorts.json.gz": {
+    "sha256_uncompressed": "b923d8a7d9dcd1a69adc7a6063c040232995e4799db0673ce4d18272f37a440d",
+    "bytes": 116678,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-delivery-field.json.gz": {
+    "sha256_uncompressed": "626c9640e7dc80eef8bf180745cb3bb3d5a7ecb26dfbe0a589928fa13dc36e0a",
+    "bytes": 227069,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "phase4-delivery.json.gz": {
+    "sha256_uncompressed": "4f7d151d3a541838048fbda336df8ac1088ba0d05bd61a6ea6722f503eb6a13f",
+    "bytes": 25798,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-economic-ledgers.json.gz": {
+    "sha256_uncompressed": "34217f4a87e79623b1be6ff6bc9b43074ec710e1dde76ba8e24544412795445a",
+    "bytes": 77622,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-execution.json.gz": {
+    "sha256_uncompressed": "e6eb1f302e8652b42dc24f177ea43b0d9b5b302ed139b076dc45715390be675f",
+    "bytes": 73992,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-loss-replays.json.gz": {
+    "sha256_uncompressed": "96d9afd19e1890dfa653a0435a4441f867e60f59dab42354d9d3c6c6277a0630",
+    "bytes": 15077,
+    "games": 4,
+    "kind": "benchmark"
+  },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",
     "bytes": 87139,
-    "games": 96,
-    "kind": "benchmark"
+    "games": 0,
+    "kind": "analysis"
   },
   "production-screen-3.json.gz": {
     "sha256_uncompressed": "2297da693fbb47a3069e1c565b3dddbf92389dba43fc259aa17dbeb0bc4302c2",
     "bytes": 63783,
-    "games": 64,
-    "kind": "benchmark"
+    "games": 0,
+    "kind": "analysis"
   },
   "production-screen-4.json.gz": {
     "sha256_uncompressed": "0950134c6d97df5dc8d7af16f7e29f5cd6fb4583011901d48721cb9698590630",
@@ -518,8 +572,8 @@
   "production-screen.json.gz": {
     "sha256_uncompressed": "227621212aaee111c8906b2bf731aaf77e9ba44601d368d252b8ebcaf37530a8",
     "bytes": 18540,
-    "games": 48,
-    "kind": "benchmark"
+    "games": 0,
+    "kind": "analysis"
   },
   "screen-01.json.gz": {
     "sha256_uncompressed": "8cb0509810abd77948f475a071de0a203733adea2e40a4c954a4e452e4276913",

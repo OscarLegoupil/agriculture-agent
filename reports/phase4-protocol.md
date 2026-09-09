@@ -52,3 +52,28 @@ separately. The stronger COK target is deliberate.
 Only a frozen candidate passing fresh validation receives the once-only paired
 holdout. If this holdout guides tuning, retire it before further selection.
 Hosted access remains unavailable; local results do not establish live rating.
+
+## Follow-up after the initial 128 games
+
+Capacity and forecast-cohort changes do not earn promotion in the initial
+panel. Immediate delivery retains 8/8 Seyam wins and improves COK from 4/8
+to 6/8, but both converted outcomes share seed 3063 and most shop paths change.
+Authorize a broader known-data check of that frozen candidate on 3000–3015,
+both seats and both challenge opponents: 64 games. This is confirmation of a
+selected development candidate, not fresh validation.
+
+Daily feeding reservations produced 25 nonterminal escapes because newly
+admitted healthy-animal deadlines could consume resources ahead of existing
+escape risks. This invalidates a clean economic interpretation of that failed
+variant. A 32-game correction check preserves escape-risk assignments first,
+then tests daily or banked-production obligations on the original screen panel.
+No fresh validation or holdout is opened by either extension.
+
+The corrected feeding tiers still do not close the gap. A replay shows an
+otherwise valuable feed route blocked by an empty shed while wheat carried
+elsewhere satisfies the aggregate purchase target. Add 32 screens for a small
+cash- and storage-constrained depot reserve, alone and with banked-production
+deadlines. Sale reserves must agree with purchase targets to avoid a buy/sell
+loop; bought inputs become usable only on the next action. A bounded joint
+maintenance-routing diagnostic may use copied official states without adding
+simulation games. Its schedules are offline diagnostics, not deployable results.

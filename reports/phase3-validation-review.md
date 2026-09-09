@@ -163,3 +163,30 @@ source bytes through the existing comparator. Its aggregate verdict is named
 packaging or hosted compatibility. Focused confirmation tests and existing
 comparison tests pass together: **21 tests**, using synthetic temporary evidence
 without accessing reserved games.
+
+## Explicit phase-four retention gates
+
+The same wrapper now accepts `gate_set: "phase4"`; an absent selector retains
+the phase-three behavior. This implements the changed incumbent and research
+question in `phase4-protocol.md`, without retroactively qualifying v8 under the
+old protocol. The phase-four gate schema replaces `anchor_min_delta` with
+`anchor_min_score: 0.95`, `anchor_delta_lower_min: -0.05` and
+`equal_four_min_delta: 0.03`. It raises `cok_min_score` to at least `0.5` and
+retains all other shared gate fields. Stricter declarations are allowed; weaker
+ones and unknown gate selectors are rejected.
+
+Anchor retention and the three-point equal-four gain are inclusive score
+thresholds. The lower paired anchor bound must be strictly above minus five
+points, and the lower paired equal-four improvement bound strictly above zero.
+Challenge improvement remains strictly positive, its score at least 50%, and
+the equal-four score lower bound strictly above 50%. Independent anchor family
+floors, zero candidate errors and maximum action time strictly below 0.5 seconds
+remain mandatory. The report records the selector, and validation and holdout
+use the same declared gate set.
+
+The confirmation and comparator suite now passes **31 tests**. New synthetic
+cases cover incumbent anchor saturation, retention failure, inclusive gain and
+COK boundaries, strict confidence-bound comparisons, weakened declarations and
+unknown selectors. The ceiling case passes the new retention criteria and still
+fails the unchanged phase-three anchor-improvement criteria. No new games or
+reserved seeds were read for these checks.

@@ -172,3 +172,100 @@ def test_protocol_cannot_weaken_inherited_gates_or_overlap_splits(evidence):
     changed["splits"]["holdout"] = [3000]
     with pytest.raises(ValueError, match="overlaps"):
         confirm(changed, "validation", old, new)
+
+
+@pytest.fixture
+def phase4_evidence(evidence):
+    protocol, old, new = evidence
+    protocol["gate_set"] = "phase4"
+    protocol["gates"].pop("anchor_min_delta")
+    protocol["gates"].update(
+        anchor_min_score=0.95,
+        anchor_delta_lower_min=-0.05,
+        equal_four_min_delta=0.03,
+        cok_min_score=0.5,
+    )
+    for row in old["episodes"]:
+        if row["opponent"] in protocol["pools"]["anchor"]:
+            row["cash"] = 200
+    return protocol, old, new
+
+
+def test_phase4_accepts_anchor_ceiling_retention(phase4_evidence):
+    protocol, old, new = phase4_evidence
+    report = confirm(protocol, "validation", old, new)
+    assert report["gate_set"] == "phase4"
+    assert report["statistical_runtime_gates_pass"]
+    assert report["pools"]["anchor"]["aggregate"]["score_delta"] == 0
+    assert "anchor_delta_at_least_declared_minimum" not in report["gates"]
+    protocol.pop("gate_set")
+    protocol["gates"]["anchor_min_delta"] = 0.05
+    report = confirm(protocol, "validation", old, new)
+    assert report["gate_set"] == "phase3"
+    assert not report["gates"]["anchor_delta_at_least_declared_minimum"]
+    assert not report["gates"]["anchor_delta_lower_95_bound_positive"]
+
+
+def test_phase4_retention_rejects_anchor_regression(phase4_evidence):
+    protocol, old, new = phase4_evidence
+    new["episodes"][0]["cash"] = 0
+    report = confirm(protocol, "validation", old, new)
+    assert not report["gates"]["anchor_score_retention"]
+    assert not report["gates"]["anchor_delta_lower_95_above_retention_floor"]
+
+
+def test_phase4_score_gain_boundary_is_inclusive(phase4_evidence):
+    protocol, old, new = phase4_evidence
+    protocol["gates"]["equal_four_min_delta"] = 0.5
+    report = confirm(protocol, "validation", old, new)
+    assert report["gates"]["equal_four_delta_at_least_declared_minimum"]
+    protocol["gates"]["equal_four_min_delta"] = 0.5001
+    report = confirm(protocol, "validation", old, new)
+    assert not report["gates"]["equal_four_delta_at_least_declared_minimum"]
+
+
+def test_phase4_confidence_bounds_are_strict(phase4_evidence):
+    protocol, old, new = phase4_evidence
+    protocol["gates"]["anchor_delta_lower_min"] = 0
+    report = confirm(protocol, "validation", old, new)
+    assert not report["gates"]["anchor_delta_lower_95_above_retention_floor"]
+    for row in old["episodes"]:
+        row["cash"] = 200
+    report = confirm(protocol, "validation", old, new)
+    assert not report["gates"]["equal_four_delta_lower_95_bound_positive"]
+    assert not report["gates"]["challenge_delta_positive"]
+
+
+def test_phase4_cok_half_score_boundary(phase4_evidence):
+    protocol, old, new = phase4_evidence
+    cok = [row for row in new["episodes"] if row["opponent"] == "cok"]
+    for row in cok[:2]:
+        row["cash"] = 0
+    report = confirm(protocol, "validation", old, new)
+    assert report["gates"]["cok_score_floor"]
+    cok[2]["cash"] = 0
+    report = confirm(protocol, "validation", old, new)
+    assert not report["gates"]["cok_score_floor"]
+
+
+@pytest.mark.parametrize(
+    ("name", "value"),
+    [
+        ("anchor_min_score", 0.949),
+        ("anchor_delta_lower_min", -0.051),
+        ("equal_four_min_delta", 0.029),
+        ("cok_min_score", 0.499),
+    ],
+)
+def test_phase4_cannot_weaken_new_gates(phase4_evidence, name, value):
+    protocol, old, new = phase4_evidence
+    protocol["gates"][name] = value
+    with pytest.raises(ValueError, match="weakened"):
+        confirm(protocol, "validation", old, new)
+
+
+def test_unknown_gate_set_rejected(evidence):
+    protocol, old, new = evidence
+    protocol["gate_set"] = "phase5"
+    with pytest.raises(ValueError, match="Unknown gate_set"):
+        confirm(protocol, "validation", old, new)

@@ -5,6 +5,7 @@ import gzip
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 from statistics import mean
 
@@ -54,8 +55,8 @@ def main():
         manifest = json.loads(raw)
         assert manifest["complete"], f"Unfinished experiment: {path}"
         archive_name = path.name.removesuffix(".gz")
-        if not archive_name.startswith("phase3-"):
-            prefix = path.parent.name if path.parent.name.startswith("phase3-") else "phase3"
+        if not re.match(r"phase\d+-", archive_name):
+            prefix = path.parent.name if re.match(r"phase\d+-", path.parent.name) else "phase3"
             archive_name = prefix + "-" + archive_name
         archive = args.output.parent / (archive_name + ".gz")
         if archive.exists():

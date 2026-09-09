@@ -62,16 +62,26 @@ def validate_protocol(protocol):
         "Validation overlaps holdout",
     )
     gates = protocol["gates"]
+    gate_set = protocol.get("gate_set", "phase3")
+    require(gate_set in ("phase3", "phase4"), "Unknown gate_set")
     require(
         gates["cok_opponent"] in pools["challenge"], "COK floor names an absent challenge opponent"
     )
-    for name, floor in (
-        ("anchor_min_delta", 0.05),
+    floors = [
         ("anchor_min_family_score", 0.4),
         ("challenge_min_score", 0.5),
-        ("cok_min_score", 0.4),
+        ("cok_min_score", 0.5 if gate_set == "phase4" else 0.4),
         ("equal_four_lower_min", 0.5),
-    ):
+    ]
+    if gate_set == "phase4":
+        floors += [
+            ("anchor_min_score", 0.95),
+            ("anchor_delta_lower_min", -0.05),
+            ("equal_four_min_delta", 0.03),
+        ]
+    else:
+        floors.append(("anchor_min_delta", 0.05))
+    for name, floor in floors:
         require(
             isinstance(gates[name], (int, float))
             and math.isfinite(gates[name])
@@ -170,9 +180,6 @@ def confirm(protocol, split, incumbent, challenger):
     anchor, challenge, combined = (pools[name] for name in ("anchor", "challenge", "equal_four"))
     declared = protocol["gates"]
     gates = {
-        "anchor_delta_at_least_declared_minimum": anchor["aggregate"]["score_delta"]
-        >= declared["anchor_min_delta"],
-        "anchor_delta_lower_95_bound_positive": anchor["aggregate"]["delta_ci95"][0] > 0,
         "independent_anchor_family_floor": all(
             row["challenger_score"] >= declared["anchor_min_family_score"]
             for row in anchor["opponents"].values()
@@ -188,9 +195,27 @@ def confirm(protocol, split, incumbent, challenger):
         "local_runtime_headroom": telemetry["challenger"]["per_game_action_max_seconds"]["max"]
         < declared["max_action_seconds"],
     }
+    gate_set = protocol.get("gate_set", "phase3")
+    if gate_set == "phase4":
+        gates.update(
+            anchor_score_retention=anchor["aggregate"]["challenger_score"]
+            >= declared["anchor_min_score"],
+            anchor_delta_lower_95_above_retention_floor=anchor["aggregate"]["delta_ci95"][0]
+            > declared["anchor_delta_lower_min"],
+            equal_four_delta_at_least_declared_minimum=combined["aggregate"]["score_delta"]
+            >= declared["equal_four_min_delta"],
+            equal_four_delta_lower_95_bound_positive=combined["aggregate"]["delta_ci95"][0] > 0,
+        )
+    else:
+        gates.update(
+            anchor_delta_at_least_declared_minimum=anchor["aggregate"]["score_delta"]
+            >= declared["anchor_min_delta"],
+            anchor_delta_lower_95_bound_positive=anchor["aggregate"]["delta_ci95"][0] > 0,
+        )
     return {
         "purpose": "One frozen preregistered panel; no selection from partial results",
         "split": split,
+        "gate_set": gate_set,
         "pools": pools,
         "telemetry": telemetry,
         "gates": gates,
