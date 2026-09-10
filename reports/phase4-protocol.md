@@ -302,6 +302,23 @@ Record condition activation and realized crop composition. This is a single
 predeclared public-state adaptation check, not a free-form classifier search
 or fresh-validation authorization.
 
+Authorize one 16-game local-feed-batch screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam. The
+global six-unit batch improves the small COK screen but fails broader COK
+confirmation. This candidate retains three wheat by default and expands only
+to the number of current FEED tasks within Manhattan distance three of the
+selected target, capped at six. Shared courier admission, storage and all
+other inputs stay at incumbent settings. Freeze
+`0a2105aa95311e740d6cc62adb5a728456605b91a27bfc1fb6117cba287ea5e5`.
+This is an observation-backed single-worker service circuit test, not a
+batch-size grid or fresh-validation authorization.
+
+The local-feed-batch screen completed all 16 games without errors or candidate
+stderr. It fell to 2/8 COK with a -3,577.50 mean gap while retaining 8/8 Seyam
+(+8,456.62); mean pickups were 121.1 and 115.8 respectively. The public local
+cluster is not a useful admission rule for larger input batches. Reject it and
+do not continue batch-size tuning on these seeds.
+
 The cow-heavy-rival feed screen completed all 16 games without errors or
 candidate stderr. It reached 6/8 COK with a +7,395.50 mean gap, but activated
 often enough in the Seyam matchup to fall to 5/8 (+4,090.50). Mean day-15

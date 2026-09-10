@@ -629,6 +629,12 @@
     "games": 48,
     "kind": "benchmark"
   },
+  "phase4-local-feed-batch.json.gz": {
+    "sha256_uncompressed": "dca9a5d47553072c9c80bf0ea7f4ac6446544927e573af6a79b1d28a5f6b0262",
+    "bytes": 58409,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-loss-replays.json.gz": {
     "sha256_uncompressed": "96d9afd19e1890dfa653a0435a4441f867e60f59dab42354d9d3c6c6277a0630",
     "bytes": 15077,
