@@ -593,6 +593,18 @@
     "games": 128,
     "kind": "benchmark"
   },
+  "phase4-input-batches-field.json.gz": {
+    "sha256_uncompressed": "68398ef6741ddd14f01d23708e58ed4487488bdc00a678f37d5e1f5b7cf2e4e9",
+    "bytes": 461543,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-input-batches.json.gz": {
+    "sha256_uncompressed": "17b5e16e48462de4feee8144aa38a6491e8d9ce67b9f31c64f4593047e3f725f",
+    "bytes": 58538,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-joint-feed.json.gz": {
     "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
     "bytes": 113924,

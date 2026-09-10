@@ -253,6 +253,43 @@ Compare realized early purchases and wool receipts before attributing any match
 change to the opening. This is a bounded demand-conditioned capital-allocation
 test, not an unconditional earlier-herd retry or fresh-validation authorization.
 
+Authorize one 16-game local-service input-batch screen on the original known
+panel: seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and
+Seyam. The official interpreter accepts six wheat or eight fertilizer units in
+one pickup, but v8 reserves and collects three/four units. This candidate
+changes both the pickup amounts and the shared-fetch admission denominator,
+so it does not dispatch duplicate couriers for the same demand. Existing
+storage, return, feed-deadline and per-turn re-planning rules remain unchanged.
+Freeze `03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce`.
+The contract test verifies official six-wheat carriage; report pickups, moves,
+feed outcomes and unused carried inputs. This evaluates a finite daily service
+circuit, not a new herd or crop configuration.
+
+The frozen input-batch screen completed all 16 games with zero candidate
+stderr, errors or nonterminal escapes. It improved COK from 4/8 and a
+-1,744.75 mean gap to **7/8 and +5,866.62**, while retaining Seyam at 8/8
+(+21,934.38). Mean successful pickups were 110.0 against COK and 111.25
+against Seyam; this is a whole-policy result, so the score improvement is not
+assigned mechanically to saved pickups alone. The source earns broader
+known-data confirmation, not promotion from four seed clusters.
+
+Authorize 128 known-development confirmation games for frozen input-batch
+artifact `03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce`:
+seeds 3000 through 3031, both seats against pinned COK and Seyam. Compare the
+exact v8 subset, retain both families at equal weight, and report score, paired
+cash gap, action counts, service losses, errors and runtime. No fresh
+validation or holdout is opened by this confirmation. Promotion requires the
+previously declared full gate, including a separate fresh validation pass.
+
+The 128-game confirmation completed with zero candidate errors or stderr turns.
+The candidate improved Seyam from 59/64 to 64/64 and increased its mean paired
+cash gap by 4,035.97, but COK fell from 21/64 to 15/64 despite a +728.48 mean
+paired cash-gap change. Equal-weight score changed from 62.50% to 61.72%; the
+whole-seed paired 95% interval is [-9.38, +7.81] percentage points. The COK
+floor is still missed, and the candidate therefore does not enter fresh
+validation. Larger batches are a useful small-screen service mechanism but do
+not generalize as an unqualified policy change on this challenge pool.
+
 The floor-holdback screen completed 16/16 games with zero candidate stderr or
 errors. It retained 8/8 Seyam wins (mean gap +8,172.62) but remained 4/8 COK
 with a -2,104.75 mean gap, worse than v8's -1,744.75. The $1 contract is valid;
