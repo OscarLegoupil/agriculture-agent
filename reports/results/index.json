@@ -533,6 +533,12 @@
     "games": 16,
     "kind": "benchmark"
   },
+  "phase4-demand-cohort.json.gz": {
+    "sha256_uncompressed": "866ff40e377a31944c85b83c018b3a479963b10ae11445abe007f40598adf19c",
+    "bytes": 59011,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-depot-field.json.gz": {
     "sha256_uncompressed": "2905475c61d8936d2d2faacac5c8c5cc98635c093690be15d479c948cbaaf067",
     "bytes": 453327,
@@ -563,11 +569,29 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "phase4-floor-holdback.json.gz": {
+    "sha256_uncompressed": "912eddfba3f072ee6f09de6e8f6da3c00c20bb976791da5ac6d28d5ed0e9ba64",
+    "bytes": 58350,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-flow-profile.json.gz": {
     "sha256_uncompressed": "3aeffb5e342dee81d2564f9074af0082a05c405d4a3f2ad49285b1894d6cd101",
     "bytes": 17051,
     "games": 0,
     "kind": "analysis"
+  },
+  "phase4-forecast.json.gz": {
+    "sha256_uncompressed": "6bd4c2706ea8cbcdc906e7e5f934edac976371427b95bbbf91384a66af3e22d3",
+    "bytes": 114330,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-high-feed-field.json.gz": {
+    "sha256_uncompressed": "44af3f4ce98bc7350d57432cfdf512a48e893e46f8c6ae999650dfcd7dbdf806",
+    "bytes": 454739,
+    "games": 128,
+    "kind": "benchmark"
   },
   "phase4-joint-feed.json.gz": {
     "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
@@ -611,6 +635,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "phase4-plant-water.json.gz": {
+    "sha256_uncompressed": "0db19af36783a25136a5a2ff1127227b17ccc73858a70eb790402e8a17f22e3a",
+    "bytes": 58748,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-production-interaction.json.gz": {
     "sha256_uncompressed": "f28bef9965cd7154f73a9570dc696e4a4762ba5e7dc44efe3fa9d8758a95fdb0",
     "bytes": 117153,
@@ -628,6 +658,18 @@
     "bytes": 3352,
     "games": 0,
     "kind": "analysis"
+  },
+  "phase4-yarn-herd.json.gz": {
+    "sha256_uncompressed": "d733928e2c86eaf49e77c762c0a3171c48787e5403b1a4802c3e9636063ff047",
+    "bytes": 58189,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-yarn-opening.json.gz": {
+    "sha256_uncompressed": "090e653afc27e9033b4f806c6393397fc7da28c937dddeff6463fda88cd4eb76",
+    "bytes": 58106,
+    "games": 16,
+    "kind": "benchmark"
   },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",

@@ -200,3 +200,74 @@ to -596.50, but fell from 8/8 to 6/8 against Seyam (mean gap +10,270.38).
 The scheduler contract is sound, but a global priority for every same-day
 planting displaces enough work to harm the exact panel. Reject it; any future
 reservation must be admission-controlled rather than a blanket priority boost.
+
+Authorize one 16-game floor-holdback screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam.
+The official contract establishes that stored product does not decay and a
+SELL at price one removes a unit for one dollar without increasing market
+inventory. The candidate therefore holds non-fertilizer product at price one
+before day 28 while shed occupancy is below 85, preserving fifteen spaces for
+incoming cargo; it otherwise leaves all incumbent sales and terminal
+liquidation intact. Freeze
+`14da0c9be702e1a81276535f1c98e36515d0539fe3c350c8fff454546789af32`.
+The contract test must cover floor retention, pressure release and final sale.
+This is a market-execution hypothesis, not a forecast-model correction or
+fresh-validation authorization.
+
+Authorize one 16-game demand-ranked-cohort screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam.
+From days 3-14 v8 forces strawberry above the policy's already-computed
+finite-season public-demand values. This candidate keeps the verified
+wheat/melon bridge opening through day 2, then selects commercial crops from
+the existing forecast, planned-production saturation, fertilizer cost and
+season horizon. It does not add a forecast, use opponent identity or alter
+scheduler, land, animal or sale rules. Freeze
+`6751553bbabc0c8e996cc5cd33448bcb2ba2364e5e1f6eb4ecb8d7e2e6210ba0`.
+Record day-15 crop composition so a score result cannot be mistaken for an
+unchanged production policy. This is a distinct crop-mix intervention; no
+fresh validation or automatic extension is authorized.
+
+Authorize one 16-game Yarn Store herd screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam.
+The COK-loss diagnosis associates cow-heavy v8 herds with lower wool receipts;
+the current shared herd budget can still use every remaining slot for cows even
+after a public single-product Yarn Store unlocks. This candidate limits standing
+plus held cows to eight only while that shop is observable, leaving the existing
+economic ranking to choose sheep or geese within the unchanged 18-animal limit.
+It uses no opponent identity, private inventory or future shop draw. Freeze
+`8c086cdde52f220ce577fd94ab10946a33368c3fb84405c80a8016b49ac2c7ec`.
+Record actual animal composition and product receipts; the cap must not be
+claimed to create sheep that the scheduler did not place. This is one
+species-allocation intervention, not an unrestricted herd expansion.
+
+Authorize one 16-game Yarn Store opening screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam.
+The previous Yarn cap did not affect an already-admitted herd. This candidate
+keeps the two-cow/two-sheep opening unless a Yarn Store is publicly unlocked;
+from day 3 through day 7 only, that signal permits the existing investment
+logic to allocate toward at most four cows and eight sheep. All cash, feed,
+placement, total-18-animal, return and worker constraints remain active, and
+geese stay excluded. Freeze
+`1740509c0102e0f781a32773f925eaf4883f340067a3007a432cde6e86d2c73d`.
+Compare realized early purchases and wool receipts before attributing any match
+change to the opening. This is a bounded demand-conditioned capital-allocation
+test, not an unconditional earlier-herd retry or fresh-validation authorization.
+
+The floor-holdback screen completed 16/16 games with zero candidate stderr or
+errors. It retained 8/8 Seyam wins (mean gap +8,172.62) but remained 4/8 COK
+with a -2,104.75 mean gap, worse than v8's -1,744.75. The $1 contract is valid;
+its small storage policy is not a competitive improvement and is rejected.
+
+The demand-ranked cohort also completed 16/16 games cleanly and materially
+changed the farm: mean day-15 COK crops became 14 strawberries, 11.75 wheat,
+7.5 carrots, 2.5 tomatoes and 12 melons. It fell to 2/8 COK (mean gap
+-15,130.50) and 7/8 Seyam (+5,541.75). The forced early strawberry cohort is
+therefore a financing commitment in this policy, not redundant rigidity. Reject
+the candidate rather than treating the forecast-only crop ranking as an upgrade.
+
+The Yarn Store cow-cap candidate had exactly the incumbent's score and animal
+composition on all 16 games, so it is a no-op on this panel and is rejected.
+The earlier opening release did change COK's mean day-15 herd to 9.25 cows,
+5.75 sheep and 3 geese, yet fell to 2/8 COK with a -8,168.38 mean gap while
+leaving Seyam at 8/8. It did not produce the intended sheep-led response and
+is rejected. Neither result opens fresh validation or expands the herd search.
