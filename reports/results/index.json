@@ -659,6 +659,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "phase4-rival-shape-feed.json.gz": {
+    "sha256_uncompressed": "4107c6007b084bf0395073198df0f233cd5b9d55f099c696265b1fbb96fecfe4",
+    "bytes": 58413,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "phase4-terminal-audit.json.gz": {
     "sha256_uncompressed": "f37536cf7a50548daa40fc0002b6d3edd8652a26c23ea93b89d1e76a5a3f6df9",
     "bytes": 1337,

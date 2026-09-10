@@ -290,6 +290,25 @@ floor is still missed, and the candidate therefore does not enter fresh
 validation. Larger batches are a useful small-screen service mechanism but do
 not generalize as an unqualified policy change on this challenge pool.
 
+Authorize one 16-game cow-heavy-rival feed screen on the original known panel:
+seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and Seyam. The
+static high-wheat mix improved COK but damaged Seyam; the earlier rival-total
+animal proxy also failed. This candidate instead applies that exact wheat
+target only when the public rival board has at least six cows and at least two
+more cows than sheep, an observable production shape rather than an identity,
+private inventory or future market signal. Freeze
+`0660aa2a98959739c2653217ebd2b4b0f496445af38040b66ea8ff6661e94f04`.
+Record condition activation and realized crop composition. This is a single
+predeclared public-state adaptation check, not a free-form classifier search
+or fresh-validation authorization.
+
+The cow-heavy-rival feed screen completed all 16 games without errors or
+candidate stderr. It reached 6/8 COK with a +7,395.50 mean gap, but activated
+often enough in the Seyam matchup to fall to 5/8 (+4,090.50). Mean day-15
+wheat/strawberry composition was 15.6/32.8 against COK and 20.9/26.2 against
+Seyam. The visible herd shape does not robustly select the feed mix; reject it
+without changing the threshold or opening fresh validation.
+
 The floor-holdback screen completed 16/16 games with zero candidate stderr or
 errors. It retained 8/8 Seyam wins (mean gap +8,172.62) but remained 4/8 COK
 with a -2,104.75 mean gap, worse than v8's -1,744.75. The $1 contract is valid;
