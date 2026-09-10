@@ -1,0 +1,399 @@
+{
+  "measurement": "Located requested actions and observed stock; not a successful-action ledger",
+  "opponents": {
+    "cok": {
+      "replay": "reports/replays/phase2-validation/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b-reference-cok-main-2000-0.json",
+      "replay_sha256": "83c851755c754e068b26c54f0039768f798e9e9e137e7f01caff89c15b527807",
+      "seats": {
+        "0": {
+          "fertilized_oneshot_days": 102,
+          "water_before_fertilizer": 99,
+          "pickups": {
+            "COW": {
+              "1": 4
+            },
+            "WHEAT": {
+              "2": 9,
+              "1": 13,
+              "3": 126
+            },
+            "SHEEP": {
+              "1": 9
+            },
+            "GOOSE": {
+              "1": 14
+            },
+            "FERTILIZER": {
+              "4": 22,
+              "3": 4,
+              "1": 1
+            }
+          },
+          "input_dropped": {
+            "WHEAT": 143,
+            "FERTILIZER": 78
+          },
+          "place": {
+            "COW": 4,
+            "SHEEP": 6,
+            "GOOSE": 8
+          },
+          "fertilizer_bought": 37,
+          "opening": [
+            [
+              24,
+              134.0,
+              {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            ],
+            [
+              72,
+              269.0,
+              {
+                "MELON": 9,
+                "WEED": 1,
+                "GOOSE": 1,
+                "COOP": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            ],
+            [
+              120,
+              287.0,
+              {
+                "MELON": 11,
+                "WEED": 1,
+                "GOOSE": 3,
+                "COW": 4,
+                "COOP": 1,
+                "SHEEP": 1
+              }
+            ],
+            [
+              240,
+              2187.0,
+              {
+                "MELON": 13,
+                "GOOSE": 6,
+                "WHEAT": 2,
+                "COW": 4,
+                "PASTURE": 3,
+                "SHEEP": 3,
+                "COOP": 2
+              }
+            ],
+            [
+              360,
+              15551.0,
+              {
+                "WHEAT": 17,
+                "STRAWBERRY": 4,
+                "TOMATO": 8,
+                "MELON": 8,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            ]
+          ]
+        },
+        "1": {
+          "fertilized_oneshot_days": 0,
+          "water_before_fertilizer": 0,
+          "pickups": {
+            "SHEEP": {
+              "1": 20
+            },
+            "COW": {
+              "1": 6
+            },
+            "WHEAT": {
+              "1": 10,
+              "3": 5,
+              "4": 8,
+              "5": 6,
+              "6": 97
+            },
+            "FERTILIZER": {
+              "8": 4,
+              "3": 2,
+              "7": 1
+            }
+          },
+          "input_dropped": {
+            "WHEAT": 22,
+            "FERTILIZER": 0
+          },
+          "place": {
+            "SHEEP": 12,
+            "COW": 6,
+            "FERTILIZER": 4,
+            "WOOL": 15,
+            "MILK": 3,
+            "MELON": 8,
+            "STRAWBERRY": 7
+          },
+          "fertilizer_bought": 0,
+          "opening": [
+            [
+              24,
+              24.0,
+              {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            ],
+            [
+              72,
+              43.0,
+              {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "PASTURE": 1,
+                "COW": 2
+              }
+            ],
+            [
+              120,
+              156.0,
+              {
+                "MELON": 12,
+                "WHEAT": 3,
+                "PASTURE": 1,
+                "SHEEP": 2,
+                "COW": 3
+              }
+            ],
+            [
+              240,
+              2078.0,
+              {
+                "STRAWBERRY": 11,
+                "MELON": 17,
+                "WHEAT": 5,
+                "COW": 6,
+                "SHEEP": 6
+              }
+            ],
+            [
+              360,
+              12260.0,
+              {
+                "STRAWBERRY": 34,
+                "WHEAT": 22,
+                "MELON": 5,
+                "COW": 6,
+                "SHEEP": 10,
+                "PASTURE": 2
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "seyam": {
+      "replay": "reports/replays/phase2-validation/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b-reference-seyam-main-2000-0.json",
+      "replay_sha256": "94cf835839435c93aab7abf9ba24a38aaa928b4823631b3852515920320823f5",
+      "seats": {
+        "0": {
+          "fertilized_oneshot_days": 89,
+          "water_before_fertilizer": 86,
+          "pickups": {
+            "COW": {
+              "1": 4
+            },
+            "WHEAT": {
+              "2": 11,
+              "1": 14,
+              "3": 130
+            },
+            "SHEEP": {
+              "1": 7
+            },
+            "GOOSE": {
+              "1": 12
+            },
+            "FERTILIZER": {
+              "4": 18,
+              "2": 1,
+              "1": 3
+            }
+          },
+          "input_dropped": {
+            "WHEAT": 74,
+            "FERTILIZER": 101
+          },
+          "place": {
+            "COW": 4,
+            "SHEEP": 6,
+            "GOOSE": 8
+          },
+          "fertilizer_bought": 29,
+          "opening": [
+            [
+              24,
+              125.0,
+              {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            ],
+            [
+              72,
+              297.0,
+              {
+                "MELON": 8,
+                "WEED": 1,
+                "GOOSE": 2,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            ],
+            [
+              120,
+              256.0,
+              {
+                "MELON": 10,
+                "WEED": 1,
+                "GOOSE": 3,
+                "COW": 4,
+                "COOP": 2,
+                "SHEEP": 1
+              }
+            ],
+            [
+              240,
+              2317.0,
+              {
+                "MELON": 20,
+                "WHEAT": 6,
+                "STRAWBERRY": 3,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            ],
+            [
+              360,
+              26353.0,
+              {
+                "STRAWBERRY": 25,
+                "MELON": 17,
+                "WHEAT": 8,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            ]
+          ]
+        },
+        "1": {
+          "fertilized_oneshot_days": 39,
+          "water_before_fertilizer": 17,
+          "pickups": {
+            "COW": {
+              "1": 7,
+              "2": 2
+            },
+            "WHEAT": {
+              "2": 293,
+              "1": 7,
+              "8": 3,
+              "7": 3
+            },
+            "SHEEP": {
+              "1": 4,
+              "2": 1
+            },
+            "FERTILIZER": {
+              "3": 13,
+              "1": 1,
+              "4": 5
+            }
+          },
+          "input_dropped": {
+            "WHEAT": 104,
+            "FERTILIZER": 78
+          },
+          "place": {
+            "COW": 8,
+            "SHEEP": 6,
+            "WOOL": 3,
+            "MILK": 2,
+            "WHEAT": 4,
+            "FERTILIZER": 3,
+            "STRAWBERRY": 1
+          },
+          "fertilizer_bought": 0,
+          "opening": [
+            [
+              24,
+              58.0,
+              {
+                "MELON": 7,
+                "WHEAT": 10,
+                "SHEEP": 1,
+                "COW": 3
+              }
+            ],
+            [
+              72,
+              193.0,
+              {
+                "MELON": 8,
+                "WHEAT": 11,
+                "SHEEP": 1,
+                "COW": 3
+              }
+            ],
+            [
+              120,
+              614.0,
+              {
+                "MELON": 10,
+                "WHEAT": 7,
+                "STRAWBERRY": 2,
+                "SHEEP": 1,
+                "COW": 3
+              }
+            ],
+            [
+              240,
+              761.0,
+              {
+                "MELON": 11,
+                "STRAWBERRY": 17,
+                "WHEAT": 7,
+                "COW": 5,
+                "SHEEP": 6,
+                "WEED": 1
+              }
+            ],
+            [
+              360,
+              19870.0,
+              {
+                "STRAWBERRY": 40,
+                "WHEAT": 4,
+                "WEED": 2,
+                "MELON": 8,
+                "COW": 7,
+                "SHEEP": 6
+              }
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

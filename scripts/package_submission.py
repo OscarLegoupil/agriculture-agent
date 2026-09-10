@@ -25,5 +25,5 @@ def build(destination: Path) -> dict:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=Path("submissions/20260909-v7"))
+    parser.add_argument("--output", type=Path, default=Path("submissions/20260909-v8"))
     print(json.dumps(build(parser.parse_args().output), indent=2))

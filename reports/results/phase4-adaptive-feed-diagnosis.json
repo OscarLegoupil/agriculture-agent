@@ -1,0 +1,925 @@
+{
+  "complete": true,
+  "kind": "saved-observation action sensitivity; no stochastic games",
+  "incumbent_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "candidate_sha256": "e521903cfd186595d083d8c1eb7faad0304b1b7e88cfa3c0705899dafbf2b67f",
+  "changed_action_observations": 8,
+  "examples": [
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "seat": 1,
+      "day": 15,
+      "hour": 19,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "seat": 1,
+      "day": 15,
+      "hour": 20,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            2
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "seat": 1,
+      "day": 15,
+      "hour": 21,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "replay_sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863",
+      "seat": 1,
+      "day": 15,
+      "hour": 22,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "replay_sha256": "f26c48ba1cd67f1dd118b70b703bab37d657bc8efdc927d154545fb656697621",
+      "seat": 0,
+      "day": 15,
+      "hour": 19,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "replay_sha256": "f26c48ba1cd67f1dd118b70b703bab37d657bc8efdc927d154545fb656697621",
+      "seat": 0,
+      "day": 15,
+      "hour": 20,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            2
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "replay_sha256": "f26c48ba1cd67f1dd118b70b703bab37d657bc8efdc927d154545fb656697621",
+      "seat": 0,
+      "day": 15,
+      "hour": 21,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "replay": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "replay_sha256": "f26c48ba1cd67f1dd118b70b703bab37d657bc8efdc927d154545fb656697621",
+      "seat": 0,
+      "day": 15,
+      "hour": 22,
+      "baseline": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "TOMATO",
+            1
+          ]
+        ]
+      },
+      "adaptive": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      }
+    }
+  ]
+}

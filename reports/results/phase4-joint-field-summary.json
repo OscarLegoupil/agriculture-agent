@@ -1,0 +1,251 @@
+{
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031
+  ],
+  "weights": {
+    "data/raw/reference-cok/main.py": 0.5,
+    "data/raw/reference-seyam/main.py": 0.5
+  },
+  "opponents": {
+    "data/raw/reference-cok/main.py": {
+      "games": 64,
+      "incumbent_score": 0.328125,
+      "challenger_score": 0.234375,
+      "score_delta": -0.09375,
+      "delta_ci95": [
+        -0.203125,
+        -0.015625
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -4732.421875,
+        "median": -5981.0,
+        "p10": -12327.5
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -5671.953125,
+        "median": -7890.0,
+        "p10": -16028.9
+      },
+      "mean_paired_gap_change": -939.53125,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 35,
+      "max_action_seconds": 0.266461,
+      "failed_work": 0
+    },
+    "data/raw/reference-seyam/main.py": {
+      "games": 64,
+      "incumbent_score": 0.921875,
+      "challenger_score": 0.953125,
+      "score_delta": 0.03125,
+      "delta_ci95": [
+        0.0,
+        0.09375
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 16608.578125,
+        "median": 15972.5,
+        "p10": 3250.0000000000036
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 17084.0625,
+        "median": 15531.5,
+        "p10": 5843.000000000001
+      },
+      "mean_paired_gap_change": 475.484375,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 10,
+      "max_action_seconds": 0.20157,
+      "failed_work": 0
+    }
+  },
+  "aggregate": {
+    "incumbent_score": 0.625,
+    "challenger_score": 0.59375,
+    "score_delta": -0.03125,
+    "delta_ci95": [
+      -0.09375,
+      0.0234375
+    ],
+    "challenger_ci95": [
+      0.515625,
+      0.671875
+    ]
+  },
+  "identities": {
+    "incumbent": {
+      "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+      "source": "submissions/20260909-v8/main.py",
+      "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+      "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+      "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+    },
+    "challenger": {
+      "sha256": "3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57",
+      "source": "data/interim/strategy-screen/3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57/main.py",
+      "executed_candidate": "data\\interim\\frozen\\3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57\\main.py",
+      "snapshot": "reports\\sources\\3d84e710ca80cf761918200746632d895cb9d4911d8fd4f43d924d6cc025fd57.py.gz",
+      "revision": "323b0569259db125d1815020b2c22c015eb6d877"
+    }
+  },
+  "provenance": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    },
+    "all_opponent_hashes": {
+      "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+      "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+    },
+    "scenario_configuration_sha256": "f918524b388587244397f5d52b88ac17b178cb2a1e9dc829ee2f20f1906afc10",
+    "validated_full_panel": {
+      "opponents": [
+        "data/raw/reference-cok/main.py",
+        "data/raw/reference-seyam/main.py"
+      ],
+      "seeds": [
+        3000,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008,
+        3009,
+        3010,
+        3011,
+        3012,
+        3013,
+        3014,
+        3015,
+        3016,
+        3017,
+        3018,
+        3019,
+        3020,
+        3021,
+        3022,
+        3023,
+        3024,
+        3025,
+        3026,
+        3027,
+        3028,
+        3029,
+        3030,
+        3031
+      ],
+      "games_per_policy": 128
+    }
+  },
+  "scope": {
+    "kind": "known-data development comparison; no fresh selection claim",
+    "opponents": [
+      "data/raw/reference-cok/main.py",
+      "data/raw/reference-seyam/main.py"
+    ],
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031
+    ],
+    "seats": [
+      0,
+      1
+    ],
+    "parents": {
+      "incumbent": {
+        "path": "reports\\results\\phase3-validation-challenger.json.gz",
+        "file_sha256": "95c5b9f307df87323c280069291057bb2e958a9fe4def49263aec097b4ea67cc",
+        "total_games": 512
+      },
+      "challenger": {
+        "path": "data\\raw\\phase4-joint-field.json",
+        "file_sha256": "c6a7bf85290aba04118615d57b1eb5851809aa13147e247bc5fa0892d60b3c96",
+        "total_games": 128
+      }
+    }
+  }
+}

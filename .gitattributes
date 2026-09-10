@@ -1,4 +1,5 @@
 /src/kaggriculture/agent/competitive.py text eol=lf
 /submissions/20260909-v7/main.py text eol=lf
+/submissions/20260909-v8/main.py text eol=lf
 /reports/results/*.json text eol=lf
 /reports/sources/*.gz binary

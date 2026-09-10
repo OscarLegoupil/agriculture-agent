@@ -1,0 +1,1605 @@
+{
+  "complete": true,
+  "scope": "offline selected-state feasibility, not match outcomes",
+  "route_model": "exact subset partition; at most one depot pickup per worker; no transfers",
+  "inputs": [
+    {
+      "path": "reports/replays/phase4-losses/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "sha256": "4802679530e005d3dd3e42747b4d9349ea429abecd699ef2e26c3a0509366caa"
+    },
+    {
+      "path": "reports/replays/phase4-losses/64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "sha256": "6d33576919475d0547d0e6aaccfd281e43f38dbf7ddaa32d36d9160387575863"
+    }
+  ],
+  "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "cases": [
+    {
+      "seed": 3029,
+      "seat": 0,
+      "day": 8,
+      "hour": 16,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        }
+      ],
+      "shed_wheat": 2,
+      "workers": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "carried_wheat": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feasible": true,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 4,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "pending": [],
+        "deadline_actions": {
+          "0": [
+            "SOUTH"
+          ]
+        },
+        "actions": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PASS"
+            ]
+          ],
+          "market": []
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PLANT",
+            "STRAWBERRY"
+          ],
+          [
+            "PLANT",
+            "STRAWBERRY"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      },
+      "total_worker_actions": 8,
+      "depot_wheat_used": 1,
+      "schedules": {
+        "0": [
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ]
+        ]
+      },
+      "official_obligation_checks_passed": true,
+      "banked_units_protected_against_no_service": 3,
+      "held_product_difference_vs_recorded_next_morning": {
+        "WOOL": 3
+      },
+      "current_quote_gross_upper_bound": 678,
+      "wheat_quote": 33,
+      "displaced_recorded_actions_offline_only": {
+        "0": [
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            2
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "EAST"
+          ]
+        ]
+      },
+      "urgent_crops_preserved": 0
+    },
+    {
+      "seed": 3029,
+      "seat": 0,
+      "day": 8,
+      "hour": 18,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        }
+      ],
+      "shed_wheat": 2,
+      "workers": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "carried_wheat": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feasible": true,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 4,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "pending": [],
+        "deadline_actions": {
+          "0": [
+            "PICKUP",
+            "WHEAT",
+            1
+          ]
+        },
+        "actions": {
+          "farmer": [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          "hands": [
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "GOOSE",
+              1
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ]
+          ],
+          "market": []
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "GOOSE",
+            1
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      },
+      "total_worker_actions": 6,
+      "depot_wheat_used": 1,
+      "schedules": {
+        "0": [
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ]
+        ]
+      },
+      "official_obligation_checks_passed": true,
+      "banked_units_protected_against_no_service": 3,
+      "held_product_difference_vs_recorded_next_morning": {
+        "WOOL": 3
+      },
+      "current_quote_gross_upper_bound": 681,
+      "wheat_quote": 33,
+      "displaced_recorded_actions_offline_only": {
+        "0": [
+          [
+            "PICKUP",
+            "WHEAT",
+            2
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "EAST"
+          ]
+        ]
+      },
+      "urgent_crops_preserved": 0
+    },
+    {
+      "seed": 3029,
+      "seat": 0,
+      "day": 8,
+      "hour": 20,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        }
+      ],
+      "shed_wheat": 0,
+      "workers": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "carried_wheat": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feasible": false,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 7,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "pending": [
+          [
+            4,
+            0
+          ]
+        ],
+        "deadline_actions": {},
+        "actions": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLACE",
+              "GOOSE"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "PASS"
+            ]
+          ],
+          "market": []
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PLACE",
+            "GOOSE"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "seed": 3063,
+      "seat": 0,
+      "day": 11,
+      "hour": 16,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        },
+        {
+          "position": [
+            4,
+            1
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        }
+      ],
+      "shed_wheat": 1,
+      "workers": [
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "carried_wheat": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feasible": true,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 11,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "pending": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "deadline_actions": {},
+        "actions": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "PLANT",
+            "STRAWBERRY"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": []
+      },
+      "total_worker_actions": 8,
+      "depot_wheat_used": 1,
+      "schedules": {
+        "11": [
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ]
+        ]
+      },
+      "official_obligation_checks_passed": true,
+      "banked_units_protected_against_no_service": 6,
+      "held_product_difference_vs_recorded_next_morning": {
+        "WOOL": 3
+      },
+      "current_quote_gross_upper_bound": 492,
+      "wheat_quote": 36,
+      "displaced_recorded_actions_offline_only": {
+        "11": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ]
+      },
+      "urgent_crops_preserved": 0
+    },
+    {
+      "seed": 3063,
+      "seat": 0,
+      "day": 11,
+      "hour": 18,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        },
+        {
+          "position": [
+            4,
+            1
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        },
+        {
+          "position": [
+            2,
+            2
+          ],
+          "action": "WATER",
+          "extra_units": 0
+        },
+        {
+          "position": [
+            1,
+            3
+          ],
+          "action": "WATER",
+          "extra_units": 0
+        }
+      ],
+      "shed_wheat": 1,
+      "workers": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "carried_wheat": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feasible": true,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 11,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "pending": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "deadline_actions": {},
+        "actions": {
+          "farmer": [
+            "WATER"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              2
+            ]
+          ]
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "WATER"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ]
+      },
+      "total_worker_actions": 10,
+      "depot_wheat_used": 1,
+      "schedules": {
+        "0": [
+          [
+            "WATER"
+          ]
+        ],
+        "2": [
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ]
+        ],
+        "7": [
+          [
+            "WATER"
+          ]
+        ],
+        "11": [
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ]
+        ]
+      },
+      "official_obligation_checks_passed": true,
+      "banked_units_protected_against_no_service": 6,
+      "held_product_difference_vs_recorded_next_morning": {
+        "WOOL": 3
+      },
+      "current_quote_gross_upper_bound": 492,
+      "wheat_quote": 36,
+      "displaced_recorded_actions_offline_only": {
+        "0": [
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2": [
+          [
+            "SOUTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "FEED"
+          ]
+        ],
+        "7": [
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "11": [
+          [
+            "FEED"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ]
+      },
+      "urgent_crops_preserved": 2
+    },
+    {
+      "seed": 3063,
+      "seat": 0,
+      "day": 11,
+      "hour": 20,
+      "tasks": [
+        {
+          "position": [
+            4,
+            0
+          ],
+          "action": "FEED",
+          "extra_units": 3
+        },
+        {
+          "position": [
+            1,
+            2
+          ],
+          "action": "WATER",
+          "extra_units": 0
+        },
+        {
+          "position": [
+            3,
+            8
+          ],
+          "action": "WATER",
+          "extra_units": 0
+        }
+      ],
+      "shed_wheat": 0,
+      "workers": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "carried_wheat": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feasible": false,
+      "banked_policy_audit": {
+        "source_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+        "safe_nightly": true,
+        "all_carried": 10,
+        "valuable_production": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "pending": [
+          [
+            4,
+            0
+          ]
+        ],
+        "deadline_actions": {},
+        "actions": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "PICKUP",
+              "GOOSE",
+              1
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "GOOSE",
+              1
+            ]
+          ]
+        }
+      },
+      "recorded_next_action": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "PICKUP",
+            "GOOSE",
+            1
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "GOOSE",
+            1
+          ]
+        ]
+      }
+    }
+  ]
+}

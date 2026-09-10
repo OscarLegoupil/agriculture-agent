@@ -2,111 +2,787 @@
   "audit-final-v7.json.gz": {
     "sha256_uncompressed": "e1e3813f8b43fc63155eff2a9b818cf8b89dea07bb81357fd97bb21192d2d289",
     "bytes": 27228,
-    "games": 32
+    "games": 32,
+    "kind": "benchmark"
   },
   "audit-v5-extended.json.gz": {
     "sha256_uncompressed": "4d7d47565d6105c42525d8b4a8e55158ea1ed39fe5ca3870d048b991f9b42249",
     "bytes": 5821,
-    "games": 16
+    "games": 16,
+    "kind": "benchmark"
   },
   "audit-v5.json.gz": {
     "sha256_uncompressed": "f212ce4bff8ea1e10cd8c9c12bf85b6dc9a977fb03b378e06063e772361d39d4",
     "bytes": 3848,
-    "games": 16
+    "games": 16,
+    "kind": "benchmark"
   },
   "audit-v6.json.gz": {
     "sha256_uncompressed": "575f8fd24f52c05776cf1f32265214b05763cd8d323a18d3d0ae5598596005cd",
     "bytes": 3936,
-    "games": 16
+    "games": 16,
+    "kind": "benchmark"
   },
   "audit-v7.json.gz": {
     "sha256_uncompressed": "73d4a9e0faed25443e1ca71a549df3af01c822049bdba61a60fc33a00921e288",
     "bytes": 27212,
-    "games": 32
+    "games": 32,
+    "kind": "benchmark"
   },
   "development-matching.json.gz": {
     "sha256_uncompressed": "f4eb345c01c6e5c504312549f99684de6c5783c87b8c626be461d5bad87c6100",
     "bytes": 49773,
-    "games": 64
+    "games": 64,
+    "kind": "benchmark"
   },
   "holdout-v7.json.gz": {
     "sha256_uncompressed": "5e5dc31dc3b59db978da64bb288cd6bc3debfc31d8ee8bb24005c36d8be8dcc5",
     "bytes": 513640,
-    "games": 768
+    "games": 768,
+    "kind": "benchmark"
+  },
+  "phase2-adaptive12.json.gz": {
+    "sha256_uncompressed": "9057ddc75455df4145c8b3f5657c48a8d6f7a0b2a7a7b0351c9cb1aa988fd8e0",
+    "bytes": 11537,
+    "games": 12,
+    "kind": "benchmark"
+  },
+  "phase2-adaptive18-anchor.json.gz": {
+    "sha256_uncompressed": "9343796ef7c3ee1be0f5f79a967bfa31f222187f9b26b6fb1ef57d251bf748d3",
+    "bytes": 5290,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase2-adaptive18.json.gz": {
+    "sha256_uncompressed": "e391e3125fa8da20234c34bcbda3ddbbb9206520c60355974c236684a5e53e44",
+    "bytes": 8161,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-animal-service-bae96c2ac23c.json.gz": {
+    "sha256_uncompressed": "bae96c2ac23c2ff42a1458300cff8c2a7705f193282e0f699959de4d8fab5f28",
+    "bytes": 57500,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase2-animal-service.json.gz": {
+    "sha256_uncompressed": "288bb3857442f98227a4c4961c595a5b0b490c1019a10c97f6f6db2e6676783e",
+    "bytes": 57189,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase2-best-anchors.json.gz": {
+    "sha256_uncompressed": "35ab96b00083abde9f1f2aa51093e557d438710b118dab4b58012145a6bfc011",
+    "bytes": 87477,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-capped.json.gz": {
+    "sha256_uncompressed": "f90d01e241712ce74b4cd3f9eb738483434e52a6656096ede7700d8005e87351",
+    "bytes": 8924,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-cashbridge.json.gz": {
+    "sha256_uncompressed": "e9b2412551d962e2435763d8700a6c7f5cda82eedda86b62489fc53ae6580c77",
+    "bytes": 29507,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-correctness.json.gz": {
+    "sha256_uncompressed": "943fa9a2392b6da873855a8a102f1c06c42bf84751fcfb10a9366b764b0aa99e",
+    "bytes": 171363,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase2-diagnosis.json.gz": {
+    "sha256_uncompressed": "190fc8f9128abb29ced279d679229316f4568287920fff88588c60c0cdedb552",
+    "bytes": 22123,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-economic.json.gz": {
+    "sha256_uncompressed": "4c54d5681b37130187f563f17e6aab57dec9820e7e025f553c15601d450885fe",
+    "bytes": 8656,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-adaptive-model18-extension.json.gz": {
+    "sha256_uncompressed": "d248cfd88a083ff5ea613db63fdb91e5ad92021b4533afd300da1b52b041499d",
+    "bytes": 29692,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-adaptive-model18-results.json.gz": {
+    "sha256_uncompressed": "095241d969a7672d929734abc5a41ea13f4ae58d89ff7996a0ea9783f976bd55",
+    "bytes": 29929,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-adaptive-model22-results.json.gz": {
+    "sha256_uncompressed": "9cd30cc1ddfb798e0326c710a59feb41d29efad0c9bbc3595b975439774bc8ef",
+    "bytes": 29903,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-deferred-herd-results.json.gz": {
+    "sha256_uncompressed": "e080b09251b236614b03c657636a7d3eaa14e3b15d0ce5a281e00b03a6e50873",
+    "bytes": 29522,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-execution-results.json.gz": {
+    "sha256_uncompressed": "abe58498da80a89592f2dfec5d56245a876db4a343294576602f8bb03912acbd",
+    "bytes": 86392,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-economics-marginal-herd-budget200-results.json.gz": {
+    "sha256_uncompressed": "b1c921017b56e4d7b9091f242f70680493c7d13add3b56eb0f5bd05ab1fbd758",
+    "bytes": 29548,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-marginal-herd-results.json.gz": {
+    "sha256_uncompressed": "ca99a2f9814a33699495673457c8470d4d4b83d0a15d46cf669d7beacf70bd85",
+    "bytes": 29855,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-market-default-guard-rejected.json.gz": {
+    "sha256_uncompressed": "9885d5803f2778e792b778ed7feb56ae271b8897aaabb8d09b98dae0cd625626",
+    "bytes": 29463,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-economics-market-results.json.gz": {
+    "sha256_uncompressed": "57c8bd67e3358929ab71db4d6676a83181c335cedb9af3e75d3f26c292c7e234",
+    "bytes": 84087,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-frontier-cok-telemetry-d034ce741d13.json.gz": {
+    "sha256_uncompressed": "d034ce741d13a56accef9b44c76dccf9ff681f0afbdd55d43658f9b442822a09",
+    "bytes": 6518,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-frontier-cok-telemetry.json.gz": {
+    "sha256_uncompressed": "18fe298d117d29f00679c8c2ba962dbf0d34fdc110dd2e7a6de0203741ad94f8",
+    "bytes": 6592,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-frontier-screen-e8721025f932.json.gz": {
+    "sha256_uncompressed": "e8721025f9321c75c2d750adc6070bcfdc4903ce37080587a26197a33a0350e9",
+    "bytes": 15293,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase2-frontier-screen.json.gz": {
+    "sha256_uncompressed": "c9889aeb3e8b7e075ef759f7c1eadbe99f2ad0d9b4cc1b23518b1431f260782d",
+    "bytes": 14982,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase2-incumbent-extra-anchors.json.gz": {
+    "sha256_uncompressed": "f6c164bdd00f99d229ad32877f2c9b4f00c647d698183180c08d890b97cb8da3",
+    "bytes": 29644,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-incumbent-reproduction.json.gz": {
+    "sha256_uncompressed": "9deb31cb3bc51ee57587831825ca93c5c3ff5d08388a476e128e7859b15e6365",
+    "bytes": 9340,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase2-input-plan.json.gz": {
+    "sha256_uncompressed": "11202a0d31759aa0383b1c0fcdca318f511ad68d4d06fdecfeedc8663d415d40",
+    "bytes": 57510,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase2-interaction-development.json.gz": {
+    "sha256_uncompressed": "ba6835f7b976bcebfcf5a40a59ddc3f034c7303ddcc43768f9afd5b1d818b7ca",
+    "bytes": 171501,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase2-interactions.json.gz": {
+    "sha256_uncompressed": "37e9eb196a30e109a2e73bcadb8d11795fa7e86e9c9e27293084cb4b430f31da",
+    "bytes": 86922,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-logistics.json.gz": {
+    "sha256_uncompressed": "00bda822f4a24ffe3172d80f618cdfeb7d5330ee3fd74387e8e0c9760db0ba4f",
+    "bytes": 34580,
+    "games": 40,
+    "kind": "benchmark"
+  },
+  "phase2-mixed-expansion.json.gz": {
+    "sha256_uncompressed": "201d381d1a8943aaef4922e09f7077c925076454c61cb1642978fed1751c9024",
+    "bytes": 85102,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-opening-liquidity.json.gz": {
+    "sha256_uncompressed": "d24691f6662dedc954da34a064d9127649c9c0646486c176e82ebc18c2f071e2",
+    "bytes": 14991,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase2-opening.json.gz": {
+    "sha256_uncompressed": "836299f3e350e6bd3999a7097a24a2bef5bf98e95ef43f4ad486859bff750028",
+    "bytes": 84814,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase2-preemption.json.gz": {
+    "sha256_uncompressed": "593a98e1fd7f1aecf67015d63250bb438a577f3f91c71499353e2e93c843e8b6",
+    "bytes": 14677,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase2-production.json.gz": {
+    "sha256_uncompressed": "cf3e757d4c69d8d6369dd65cace19dd884cf13e9bd11c0ba2bd5f027ae213290",
+    "bytes": 28560,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase2-recurring.json.gz": {
+    "sha256_uncompressed": "4860612f62ff2cc5bbfff98002b5722e4043c3187072f3212c30fa6c9029c705",
+    "bytes": 111694,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase2-validation-challenger.json.gz": {
+    "sha256_uncompressed": "5019dee5e3c57e61b6b0c692595223d1b40c22a03ded5deca647644251903b5f",
+    "bytes": 1829238,
+    "games": 512,
+    "kind": "benchmark"
+  },
+  "phase2-validation-incumbent.json.gz": {
+    "sha256_uncompressed": "047cd174be5a8a06cd42c02cddf068ae4244d78adf85144df9fd956226d463f7",
+    "bytes": 1823634,
+    "games": 512,
+    "kind": "benchmark"
+  },
+  "phase2-work-bundles.json.gz": {
+    "sha256_uncompressed": "4a8315839aaffa14b1e6595f6250f15fd7f7e904e714ded718b728a09a535cca",
+    "bytes": 114528,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-adaptation.json.gz": {
+    "sha256_uncompressed": "40a5a265dbf1266c296b32438e4f30619a5708d8ea4338028b2aa091956ec804",
+    "bytes": 57656,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-anchor-large-dairy.json.gz": {
+    "sha256_uncompressed": "3ac51b169f14c3ffffad71718a9cece4722c478db070885dd55463ff431246ad",
+    "bytes": 29158,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-anchor-startup10.json.gz": {
+    "sha256_uncompressed": "307fe638973deb939e0bdfb77181962b9057bc972d429604a67e6b7514187277",
+    "bytes": 29207,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-deadline-field.json.gz": {
+    "sha256_uncompressed": "400f0f81faacb8238e566aa209e62c29a4df616fadac450e444eb70c14429977",
+    "bytes": 455157,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase3-deadline-net.json.gz": {
+    "sha256_uncompressed": "fb10cc476ea6cdecc46277e4d0cab0a65517ec894c76bde312b8b24552a37bb8",
+    "bytes": 57899,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-deadlines.json.gz": {
+    "sha256_uncompressed": "43341f06fa53c38f44eb45340b1cebba0be9c8a3a1e9adf5453ce24a86b57ca8",
+    "bytes": 56592,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-economics-rate-results.json.gz": {
+    "sha256_uncompressed": "8bfb16fb1c05ff425922835c436eaf6ca5bead68d92f3c25a5846f93710abdb2",
+    "bytes": 29232,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-economics-rate_recurring-results.json.gz": {
+    "sha256_uncompressed": "ca26f55d340b7eae724c02db2c773192a61dbdbdc7e22c6f6fb0b5c9edb22f1c",
+    "bytes": 29201,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-feed-corrected.json.gz": {
+    "sha256_uncompressed": "cb74886bcbf669c986abb6219e0b8e6b3cb07c3d8b5f7b013efc23a61cf326a4",
+    "bytes": 29447,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-feed.json.gz": {
+    "sha256_uncompressed": "72409beabf638f75ebe036cfabf26f87a71ab0b4a0ac5541768fef3e6979fa44",
+    "bytes": 29480,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-fertilizer.json.gz": {
+    "sha256_uncompressed": "079cb3bd216fa895603fa15800fa1c7a641a68a793d4c2a41d1768abf66c4b93",
+    "bytes": 14825,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-field-ledgers.json.gz": {
+    "sha256_uncompressed": "6f30df607d18042b335340990f23dab7365dd1a5e47937dbac476e8571b9969a",
+    "bytes": 189815,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase3-funding.json.gz": {
+    "sha256_uncompressed": "850f90ac8a604e7abae6234307a439b6d490a001581a8cd290f2ef95e9b05ae7",
+    "bytes": 170965,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase3-harvest.json.gz": {
+    "sha256_uncompressed": "4ce350966e4eb655480bb4253444199f56c6982260f24afa6a6305c58edf1d2d",
+    "bytes": 56275,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-herds.json.gz": {
+    "sha256_uncompressed": "8fdd8383cb909bc08c5bae4840c41d762acdd3c28fc102f72e302ca9c2c8e37d",
+    "bytes": 112986,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-interactions.json.gz": {
+    "sha256_uncompressed": "8bfc3e07a05cf7bb5203a568d78d39b6e850c00013f1a6a40f0a40fdbc97920e",
+    "bytes": 226838,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "phase3-investment.json.gz": {
+    "sha256_uncompressed": "6aa519e72a40f8a8ea37eaa18e0b556bd6edb676f9addacb00b4bc8970b421e1",
+    "bytes": 58725,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-labor-results-0.8-20.json.gz": {
+    "sha256_uncompressed": "935587ace2327a80bff00bc67721260a819fa820e2f7872ba2d1e7d69886db2c",
+    "bytes": 28461,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-labor-results-0.8.json.gz": {
+    "sha256_uncompressed": "322dfba367a36a4f479468a470fa54b6a0205e4505af9ca83120f6a138ec0522",
+    "bytes": 28940,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-logistics.json.gz": {
+    "sha256_uncompressed": "a618ac4bdd3114f41bbcf3252cd8ac99b523d6a83babd5b896a8caf5bda66923",
+    "bytes": 30013,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-manure.json.gz": {
+    "sha256_uncompressed": "089bfea4bb349ade63470ab546860538cfce5b3c3675b54515130a2f8846ac93",
+    "bytes": 112192,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-market-summary.json.gz": {
+    "sha256_uncompressed": "fbfd015863ed46b9f7b87e6684c03be5274f3b8c881718445106c95613a8d792",
+    "bytes": 659,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase3-market.json.gz": {
+    "sha256_uncompressed": "ac1fbe3cd9835569bd2a8d783de4a89d40772bb2ee6a3e0c5c13ad07d1eb9ca5",
+    "bytes": 14153,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-mix.json.gz": {
+    "sha256_uncompressed": "c02b13aec73cef3224b87925e8e9cd64a9fbce888c07c4e0f047035b53b48845",
+    "bytes": 115210,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-nightly-ablation.json.gz": {
+    "sha256_uncompressed": "a7b13c7369f9261cfe4df6ccd9215d459256cbc3e98b848dfe8c12d5c1963dc9",
+    "bytes": 29699,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-objective.json.gz": {
+    "sha256_uncompressed": "4837ee5b550b002ecb760950fb42c2fe9caff30fb5c3420a69fa92858c536ef2",
+    "bytes": 115559,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-opening-confirm.json.gz": {
+    "sha256_uncompressed": "20656e8588d931ea5fcbc35f9bd26d4bc515e63fa38557cdbc6012c8ce75d08a",
+    "bytes": 112006,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase3-opening-diagnostic-games.json.gz": {
+    "sha256_uncompressed": "49512ec068409f0cfdad8abcdd0e2c9e6b073b541d85c778096ae7b370f1bd09",
+    "bytes": 15207,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase3-opening-field.json.gz": {
+    "sha256_uncompressed": "48f3e460d5d4b6ff2367abaaea9f79d84bd9e32390e08da9132b5f309cac5fb1",
+    "bytes": 448536,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase3-reserve-labor.json.gz": {
+    "sha256_uncompressed": "69f6bd9f47db4c38a5bbd7d9e02c953efb8e6ce2f35da4ff0239272f16a6a65f",
+    "bytes": 85011,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase3-scale.json.gz": {
+    "sha256_uncompressed": "d27e633b47530c62c81b3c7fc255fc8cbf1932b277b872e295935499bf82606d",
+    "bytes": 85903,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase3-scenarios.json.gz": {
+    "sha256_uncompressed": "5ca0fb1d565709b5c770f506e755424c62feb8b8aa794595d8e46c2f854e8b03",
+    "bytes": 57781,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase3-selective-delivery.json.gz": {
+    "sha256_uncompressed": "8b9f21ac0032c9494405d0542366e394468d5396c985cfe6f4b877b7eae5e30e",
+    "bytes": 29736,
+    "games": 8,
+    "kind": "benchmark"
+  },
+  "phase3-severe-replays.json.gz": {
+    "sha256_uncompressed": "83faf7fc89d5b61738ce6b1ecd7d5f127527a031ff51327bd50316fc811d2b05",
+    "bytes": 15221,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase3-startup.json.gz": {
+    "sha256_uncompressed": "f9aedf7a30d990d707e4d7e66292dbd3e81113be6146dda3a8840bdb4e256a67",
+    "bytes": 85301,
+    "games": 24,
+    "kind": "benchmark"
+  },
+  "phase3-validation-challenger.json.gz": {
+    "sha256_uncompressed": "0b0a35c5b6b07984bd1a4751c6ae0138a2bf319f73689e8f3c2cd6e535ecb07c",
+    "bytes": 1806771,
+    "games": 512,
+    "kind": "benchmark"
+  },
+  "phase3-validation-incumbent.json.gz": {
+    "sha256_uncompressed": "b78272a03b835bd8dc63bf18fadaf27c80fd21b1eb216990f2814d558ddbfe10",
+    "bytes": 1828144,
+    "games": 512,
+    "kind": "benchmark"
+  },
+  "phase4-capacity.json.gz": {
+    "sha256_uncompressed": "8ba2b2dcc0a0d24ce78aaf2123f5eeb7b34cbabd43ad44215bc1f6c58f870bf4",
+    "bytes": 169462,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase4-care-corrected.json.gz": {
+    "sha256_uncompressed": "6908c255f710ce6d689620bb6c8697cf05a588b0b0491267dfd2fc508df41399",
+    "bytes": 113852,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-care.json.gz": {
+    "sha256_uncompressed": "aeccfeca94827e930f10bfaec9675392ef3d19812c6cc49caef170638df1136a",
+    "bytes": 113704,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-cohorts.json.gz": {
+    "sha256_uncompressed": "b923d8a7d9dcd1a69adc7a6063c040232995e4799db0673ce4d18272f37a440d",
+    "bytes": 116678,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-delivery-field.json.gz": {
+    "sha256_uncompressed": "626c9640e7dc80eef8bf180745cb3bb3d5a7ecb26dfbe0a589928fa13dc36e0a",
+    "bytes": 227069,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "phase4-delivery.json.gz": {
+    "sha256_uncompressed": "4f7d151d3a541838048fbda336df8ac1088ba0d05bd61a6ea6722f503eb6a13f",
+    "bytes": 25798,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-demand-cohort.json.gz": {
+    "sha256_uncompressed": "866ff40e377a31944c85b83c018b3a479963b10ae11445abe007f40598adf19c",
+    "bytes": 59011,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-depot-field.json.gz": {
+    "sha256_uncompressed": "2905475c61d8936d2d2faacac5c8c5cc98635c093690be15d479c948cbaaf067",
+    "bytes": 453327,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-depot.json.gz": {
+    "sha256_uncompressed": "6183dd9b38d2f928064c753398e189d5fe0802718876943cb5a14e3072a20e38",
+    "bytes": 114239,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-economic-ledgers.json.gz": {
+    "sha256_uncompressed": "34217f4a87e79623b1be6ff6bc9b43074ec710e1dde76ba8e24544412795445a",
+    "bytes": 77622,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-execution.json.gz": {
+    "sha256_uncompressed": "e6eb1f302e8652b42dc24f177ea43b0d9b5b302ed139b076dc45715390be675f",
+    "bytes": 73992,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-feed-mix.json.gz": {
+    "sha256_uncompressed": "aba892b93cac3aa7e30e7a3706e602babd2be2bc9e49e2723fec45b0559be2c7",
+    "bytes": 114223,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-floor-holdback.json.gz": {
+    "sha256_uncompressed": "912eddfba3f072ee6f09de6e8f6da3c00c20bb976791da5ac6d28d5ed0e9ba64",
+    "bytes": 58350,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-flow-profile.json.gz": {
+    "sha256_uncompressed": "3aeffb5e342dee81d2564f9074af0082a05c405d4a3f2ad49285b1894d6cd101",
+    "bytes": 17051,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-forecast.json.gz": {
+    "sha256_uncompressed": "6bd4c2706ea8cbcdc906e7e5f934edac976371427b95bbbf91384a66af3e22d3",
+    "bytes": 114330,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-high-feed-field.json.gz": {
+    "sha256_uncompressed": "44af3f4ce98bc7350d57432cfdf512a48e893e46f8c6ae999650dfcd7dbdf806",
+    "bytes": 454739,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-input-batches-field.json.gz": {
+    "sha256_uncompressed": "68398ef6741ddd14f01d23708e58ed4487488bdc00a678f37d5e1f5b7cf2e4e9",
+    "bytes": 461543,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-input-batches.json.gz": {
+    "sha256_uncompressed": "17b5e16e48462de4feee8144aa38a6491e8d9ce67b9f31c64f4593047e3f725f",
+    "bytes": 58538,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-joint-feed.json.gz": {
+    "sha256_uncompressed": "d3c48dff53b6b78259b3826206b3ca2d9c9c72c69e0b954b517df903cd357d6e",
+    "bytes": 113924,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-joint-field.json.gz": {
+    "sha256_uncompressed": "c6a7bf85290aba04118615d57b1eb5851809aa13147e247bc5fa0892d60b3c96",
+    "bytes": 457584,
+    "games": 128,
+    "kind": "benchmark"
+  },
+  "phase4-land-diagnosis.json.gz": {
+    "sha256_uncompressed": "9274b1bbe67f8410aeadc822223166c3dd92fe74780d6c806149a245d7742c06",
+    "bytes": 12451,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-land.json.gz": {
+    "sha256_uncompressed": "57cd45a2e1c947a3f170f889479394964d0676b87e3579fb85a86ddfbd89a834",
+    "bytes": 173304,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "phase4-local-feed-batch.json.gz": {
+    "sha256_uncompressed": "dca9a5d47553072c9c80bf0ea7f4ac6446544927e573af6a79b1d28a5f6b0262",
+    "bytes": 58409,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-loss-replays.json.gz": {
+    "sha256_uncompressed": "96d9afd19e1890dfa653a0435a4441f867e60f59dab42354d9d3c6c6277a0630",
+    "bytes": 15077,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "phase4-opening-audit.json.gz": {
+    "sha256_uncompressed": "97846f7e70ed4f18dcf548b6f521c0b5e63eb9e670d3119ee081671cc991d362",
+    "bytes": 5138,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-opening.json.gz": {
+    "sha256_uncompressed": "1c20e983a378cd72122f817c9171fcbdf16e1b3e4d7114907c00231304dbe449",
+    "bytes": 114369,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-plant-water.json.gz": {
+    "sha256_uncompressed": "0db19af36783a25136a5a2ff1127227b17ccc73858a70eb790402e8a17f22e3a",
+    "bytes": 58748,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-production-interaction.json.gz": {
+    "sha256_uncompressed": "f28bef9965cd7154f73a9570dc696e4a4762ba5e7dc44efe3fa9d8758a95fdb0",
+    "bytes": 117153,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "phase4-rival-shape-feed.json.gz": {
+    "sha256_uncompressed": "4107c6007b084bf0395073198df0f233cd5b9d55f099c696265b1fbb96fecfe4",
+    "bytes": 58413,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-terminal-audit.json.gz": {
+    "sha256_uncompressed": "f37536cf7a50548daa40fc0002b6d3edd8652a26c23ea93b89d1e76a5a3f6df9",
+    "bytes": 1337,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-workload.json.gz": {
+    "sha256_uncompressed": "c80b01b5c0d8c411c54c5593fd17e48c67775fe096704283e40db0116b2717e3",
+    "bytes": 3352,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "phase4-yarn-herd.json.gz": {
+    "sha256_uncompressed": "d733928e2c86eaf49e77c762c0a3171c48787e5403b1a4802c3e9636063ff047",
+    "bytes": 58189,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "phase4-yarn-opening.json.gz": {
+    "sha256_uncompressed": "090e653afc27e9033b4f806c6393397fc7da28c937dddeff6463fda88cd4eb76",
+    "bytes": 58106,
+    "games": 16,
+    "kind": "benchmark"
   },
   "production-screen-2.json.gz": {
     "sha256_uncompressed": "98c06f464ec558dcda9b6cfda2cc0aa9173381a202ecf284fff2faa59fb27823",
     "bytes": 87139,
-    "games": 96
+    "games": 0,
+    "kind": "analysis"
   },
   "production-screen-3.json.gz": {
     "sha256_uncompressed": "2297da693fbb47a3069e1c565b3dddbf92389dba43fc259aa17dbeb0bc4302c2",
     "bytes": 63783,
-    "games": 64
+    "games": 0,
+    "kind": "analysis"
   },
   "production-screen-4.json.gz": {
     "sha256_uncompressed": "0950134c6d97df5dc8d7af16f7e29f5cd6fb4583011901d48721cb9698590630",
     "bytes": 67244,
-    "games": 64
+    "games": 64,
+    "kind": "benchmark"
   },
   "production-screen.json.gz": {
     "sha256_uncompressed": "227621212aaee111c8906b2bf731aaf77e9ba44601d368d252b8ebcaf37530a8",
     "bytes": 18540,
-    "games": 48
+    "games": 0,
+    "kind": "analysis"
   },
   "screen-01.json.gz": {
     "sha256_uncompressed": "8cb0509810abd77948f475a071de0a203733adea2e40a4c954a4e452e4276913",
     "bytes": 2779,
-    "games": 4
+    "games": 4,
+    "kind": "benchmark"
   },
   "screen-02.json.gz": {
     "sha256_uncompressed": "f25768c8f5b71f33aedce8d699e323df6c738a3d0475eddd927ded2c515607d1",
     "bytes": 2627,
-    "games": 4
+    "games": 4,
+    "kind": "benchmark"
   },
   "screen-03.json.gz": {
     "sha256_uncompressed": "a49b438562851a666d8cbddc5099dec4dd089557077e58e56f9568fdae0de0a7",
     "bytes": 4856,
-    "games": 4
+    "games": 4,
+    "kind": "benchmark"
   },
   "screen-04.json.gz": {
     "sha256_uncompressed": "b2ca43cd9a8d0cd3609697441308dbcba68c95f4d1330dcef5a853819ffce1a0",
     "bytes": 10548,
-    "games": 12
+    "games": 12,
+    "kind": "benchmark"
   },
   "screen-05.json.gz": {
     "sha256_uncompressed": "3247f4c28f2401127c73cce40e22da7fee34551f4d96f741443a9f26ac1e6e4d",
     "bytes": 8460,
-    "games": 8
+    "games": 8,
+    "kind": "benchmark"
   },
   "screen-06.json.gz": {
     "sha256_uncompressed": "4402fd600fb1ae5d138d9861273b9f6df3d15853b6baaee8c2cb4773308231db",
     "bytes": 16181,
-    "games": 16
+    "games": 16,
+    "kind": "benchmark"
   },
   "screen-matching.json.gz": {
     "sha256_uncompressed": "1d5c65ccdaf44147ea5c168cda99fbb496948fc107bae37af5c932e7c6b78b05",
     "bytes": 7659,
-    "games": 8
+    "games": 8,
+    "kind": "benchmark"
   },
   "stress-final-v7.json.gz": {
     "sha256_uncompressed": "b5cf825583713aa65972d3f71fde9076827ed3b6fa6a9e79effbc27ac72c1a99",
     "bytes": 21176,
-    "games": 24
+    "games": 24,
+    "kind": "benchmark"
   },
   "stress-v7.json.gz": {
     "sha256_uncompressed": "81bc5aff63993bf038bfc31f4338d4a4d1d2c61883166702cf070a85cdab2713",
     "bytes": 21092,
-    "games": 24
+    "games": 24,
+    "kind": "benchmark"
   },
   "validation-repaired-v7.json.gz": {
     "sha256_uncompressed": "c9474975e23cc5a8b78d875775376a8d5cf859e61dbe6854a397535fd351d751",
     "bytes": 253990,
-    "games": 384
+    "games": 384,
+    "kind": "benchmark"
   },
   "validation-v7.json.gz": {
     "sha256_uncompressed": "14e57336b52e93621a38ec7065e861a742990f2517870586c19c85da9f6bdaee",
     "bytes": 253890,
-    "games": 384
+    "games": 384,
+    "kind": "benchmark"
   }
 }

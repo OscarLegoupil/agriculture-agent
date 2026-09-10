@@ -1,0 +1,3126 @@
+{
+  "scope": "Completed phase-two screening and diagnostic manifests; validation, derived paired reports and manifests explicitly marked incomplete excluded",
+  "counting": "Byte-identical manifest copies count once. Repeated physical scenarios may be reruns or copied subsets, so their count is reported separately without asserting new executions.",
+  "manifests": [
+    {
+      "archive": "reports\\results\\phase2-adaptive12.json.gz",
+      "sha256_uncompressed": "9057ddc75455df4145c8b3f5657c48a8d6f7a0b2a7a7b0351c9cb1aa988fd8e0",
+      "source_files": [
+        "reports\\results\\phase2-adaptive12.json.gz",
+        "data\\interim\\phase2-economics\\adaptive12-results.json"
+      ],
+      "episode_rows": 12,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 12
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/9c249546a0749bcf4cbb6ae862d0af2c0edadd939f39ff2f145e99267ebf9105/main.py",
+          "recorded_sha256": "9c249546a0749bcf4cbb6ae862d0af2c0edadd939f39ff2f145e99267ebf9105",
+          "verified_sha256": "9c249546a0749bcf4cbb6ae862d0af2c0edadd939f39ff2f145e99267ebf9105",
+          "snapshot": "reports\\sources\\9c249546a0749bcf4cbb6ae862d0af2c0edadd939f39ff2f145e99267ebf9105.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-adaptive18-anchor.json.gz",
+      "sha256_uncompressed": "9343796ef7c3ee1be0f5f79a967bfa31f222187f9b26b6fb1ef57d251bf748d3",
+      "source_files": [
+        "reports\\results\\phase2-adaptive18-anchor.json.gz",
+        "data\\interim\\phase2-economics\\adaptive18-anchor-results.json"
+      ],
+      "episode_rows": 4,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 4
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848/main.py",
+          "recorded_sha256": "b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848",
+          "verified_sha256": "b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848",
+          "snapshot": "reports\\sources\\b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-adaptive18.json.gz",
+      "sha256_uncompressed": "e391e3125fa8da20234c34bcbda3ddbbb9206520c60355974c236684a5e53e44",
+      "source_files": [
+        "reports\\results\\phase2-adaptive18.json.gz",
+        "data\\interim\\phase2-economics\\adaptive18-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848/main.py",
+          "recorded_sha256": "b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848",
+          "verified_sha256": "b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848",
+          "snapshot": "reports\\sources\\b52f2f2cdb7c4824f9257983e8259b806092d7249e5b69f9c2208c7ce26ac848.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+      "sha256_uncompressed": "bae96c2ac23c2ff42a1458300cff8c2a7705f193282e0f699959de4d8fab5f28",
+      "source_files": [
+        "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+        "data\\raw\\phase2-animal-service.json"
+      ],
+      "episode_rows": 16,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 16
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-animal-service/92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707/main.py",
+          "recorded_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "verified_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "snapshot": "reports\\sources\\92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-animal-service.json.gz",
+      "sha256_uncompressed": "288bb3857442f98227a4c4961c595a5b0b490c1019a10c97f6f6db2e6676783e",
+      "source_files": [
+        "reports\\results\\phase2-animal-service.json.gz"
+      ],
+      "episode_rows": 16,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 16
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-animal-service/92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707/main.py",
+          "recorded_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "verified_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "snapshot": "reports\\sources\\92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-best-anchors.json.gz",
+      "sha256_uncompressed": "35ab96b00083abde9f1f2aa51093e557d438710b118dab4b58012145a6bfc011",
+      "source_files": [
+        "reports\\results\\phase2-best-anchors.json.gz",
+        "data\\raw\\phase2-best-anchors.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": true,
+      "seeds": [
+        0,
+        5,
+        11,
+        17,
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b/main.py",
+          "recorded_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "verified_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-capped.json.gz",
+      "sha256_uncompressed": "f90d01e241712ce74b4cd3f9eb738483434e52a6656096ede7700d8005e87351",
+      "source_files": [
+        "reports\\results\\phase2-capped.json.gz",
+        "data\\interim\\phase2-economics\\capped-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/1e394168c97c9950ba154ba990c274723d75090e03b514d6e8460df5e88a65cc/main.py",
+          "recorded_sha256": "1e394168c97c9950ba154ba990c274723d75090e03b514d6e8460df5e88a65cc",
+          "verified_sha256": "1e394168c97c9950ba154ba990c274723d75090e03b514d6e8460df5e88a65cc",
+          "snapshot": "reports\\sources\\1e394168c97c9950ba154ba990c274723d75090e03b514d6e8460df5e88a65cc.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-cashbridge.json.gz",
+      "sha256_uncompressed": "e9b2412551d962e2435763d8700a6c7f5cda82eedda86b62489fc53ae6580c77",
+      "source_files": [
+        "reports\\results\\phase2-cashbridge.json.gz",
+        "data\\raw\\phase2-cashbridge.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-mixed-expansion/cashbridge50/d17cc796d0455d1a28d395d1481045e2bd2b40684760733d4a8c9a4b49f6299a/main.py",
+          "recorded_sha256": "d17cc796d0455d1a28d395d1481045e2bd2b40684760733d4a8c9a4b49f6299a",
+          "verified_sha256": "d17cc796d0455d1a28d395d1481045e2bd2b40684760733d4a8c9a4b49f6299a",
+          "snapshot": "reports\\sources\\d17cc796d0455d1a28d395d1481045e2bd2b40684760733d4a8c9a4b49f6299a.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-correctness.json.gz",
+      "sha256_uncompressed": "943fa9a2392b6da873855a8a102f1c06c42bf84751fcfb10a9366b764b0aa99e",
+      "source_files": [
+        "reports\\results\\phase2-correctness.json.gz",
+        "data\\raw\\phase2-correctness.json"
+      ],
+      "episode_rows": 48,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 48
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-correctness/admission/612d76868a6560bf115699d319844fbba9c9b7dd817b4ecec77892fcc5721a7f/main.py",
+          "recorded_sha256": "612d76868a6560bf115699d319844fbba9c9b7dd817b4ecec77892fcc5721a7f",
+          "verified_sha256": "612d76868a6560bf115699d319844fbba9c9b7dd817b4ecec77892fcc5721a7f",
+          "snapshot": "reports\\sources\\612d76868a6560bf115699d319844fbba9c9b7dd817b4ecec77892fcc5721a7f.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/accounting/42f507a0d79d68ed1f32b63d27a0fba2622bb465a599aff97c01fd35fc7cdbba/main.py",
+          "recorded_sha256": "42f507a0d79d68ed1f32b63d27a0fba2622bb465a599aff97c01fd35fc7cdbba",
+          "verified_sha256": "42f507a0d79d68ed1f32b63d27a0fba2622bb465a599aff97c01fd35fc7cdbba",
+          "snapshot": "reports\\sources\\42f507a0d79d68ed1f32b63d27a0fba2622bb465a599aff97c01fd35fc7cdbba.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/liquidity/06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b/main.py",
+          "recorded_sha256": "06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b",
+          "verified_sha256": "06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b",
+          "snapshot": "reports\\sources\\06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-diagnosis.json.gz",
+      "sha256_uncompressed": "190fc8f9128abb29ced279d679229316f4568287920fff88588c60c0cdedb552",
+      "source_files": [
+        "reports\\results\\phase2-diagnosis.json.gz",
+        "data\\interim\\phase2-diagnosis\\counterfactuals.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        10000,
+        10017
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-diagnosis/water_urgency/main.py",
+          "recorded_sha256": "3028742fc62c3e86e244ae28a08a609e4f271493cc5ceba9a0c9c9a92f8dd465",
+          "verified_sha256": "3028742fc62c3e86e244ae28a08a609e4f271493cc5ceba9a0c9c9a92f8dd465",
+          "snapshot": "reports\\sources\\3028742fc62c3e86e244ae28a08a609e4f271493cc5ceba9a0c9c9a92f8dd465.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-diagnosis/larger_feed_pickups/main.py",
+          "recorded_sha256": "798879a5024cadee7d67f4fc1affcc46d689c9c430b55d969ec32fb35961e16c",
+          "verified_sha256": "798879a5024cadee7d67f4fc1affcc46d689c9c430b55d969ec32fb35961e16c",
+          "snapshot": "reports\\sources\\798879a5024cadee7d67f4fc1affcc46d689c9c430b55d969ec32fb35961e16c.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-diagnosis/exclude_delivery_workers/main.py",
+          "recorded_sha256": "d85ef6b62ba91e47b3a9357595f0ed0593c94278fafcd4306a3c54a2344f3bba",
+          "verified_sha256": "d85ef6b62ba91e47b3a9357595f0ed0593c94278fafcd4306a3c54a2344f3bba",
+          "snapshot": "reports\\sources\\d85ef6b62ba91e47b3a9357595f0ed0593c94278fafcd4306a3c54a2344f3bba.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economic.json.gz",
+      "sha256_uncompressed": "4c54d5681b37130187f563f17e6aab57dec9820e7e025f553c15601d450885fe",
+      "source_files": [
+        "reports\\results\\phase2-economic.json.gz",
+        "data\\interim\\phase2-economics\\economic-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/525e57bb2ea95f0b882d795a32d31730e1f4351c4bcce9417ff02609e62e6a8a/main.py",
+          "recorded_sha256": "525e57bb2ea95f0b882d795a32d31730e1f4351c4bcce9417ff02609e62e6a8a",
+          "verified_sha256": "525e57bb2ea95f0b882d795a32d31730e1f4351c4bcce9417ff02609e62e6a8a",
+          "snapshot": "reports\\sources\\525e57bb2ea95f0b882d795a32d31730e1f4351c4bcce9417ff02609e62e6a8a.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-adaptive-model18-extension.json.gz",
+      "sha256_uncompressed": "d248cfd88a083ff5ea613db63fdb91e5ad92021b4533afd300da1b52b041499d",
+      "source_files": [
+        "reports\\results\\phase2-economics-adaptive-model18-extension.json.gz",
+        "data\\interim\\phase2-economics\\adaptive-model18-extension.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        42
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/adaptive-model/18/33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039/main.py",
+          "recorded_sha256": "33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039",
+          "verified_sha256": "33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039",
+          "snapshot": "reports\\sources\\33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-adaptive-model18-results.json.gz",
+      "sha256_uncompressed": "095241d969a7672d929734abc5a41ea13f4ae58d89ff7996a0ea9783f976bd55",
+      "source_files": [
+        "reports\\results\\phase2-economics-adaptive-model18-results.json.gz",
+        "data\\interim\\phase2-economics\\adaptive-model18-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/adaptive-model/18/33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039/main.py",
+          "recorded_sha256": "33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039",
+          "verified_sha256": "33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039",
+          "snapshot": "reports\\sources\\33cbb382042daf8732cc815fa764056ac20899958f8c937b47bd0e532aa70039.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-adaptive-model22-results.json.gz",
+      "sha256_uncompressed": "9cd30cc1ddfb798e0326c710a59feb41d29efad0c9bbc3595b975439774bc8ef",
+      "source_files": [
+        "reports\\results\\phase2-economics-adaptive-model22-results.json.gz",
+        "data\\interim\\phase2-economics\\adaptive-model22-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/adaptive-model/22/3ce96e20303ccbd0fbf8d42beaf4bb6698e8be04043c3634a5b3bad953615873/main.py",
+          "recorded_sha256": "3ce96e20303ccbd0fbf8d42beaf4bb6698e8be04043c3634a5b3bad953615873",
+          "verified_sha256": "3ce96e20303ccbd0fbf8d42beaf4bb6698e8be04043c3634a5b3bad953615873",
+          "snapshot": "reports\\sources\\3ce96e20303ccbd0fbf8d42beaf4bb6698e8be04043c3634a5b3bad953615873.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-deferred-herd-results.json.gz",
+      "sha256_uncompressed": "e080b09251b236614b03c657636a7d3eaa14e3b15d0ce5a281e00b03a6e50873",
+      "source_files": [
+        "reports\\results\\phase2-economics-deferred-herd-results.json.gz",
+        "data\\interim\\phase2-economics\\deferred-herd-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/deferred-herd/21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629/main.py",
+          "recorded_sha256": "21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629",
+          "verified_sha256": "21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629",
+          "snapshot": "reports\\sources\\21f8791fe0702046afbc83b6b4bffc98f9cb79274c23f6f772a943ba64b3c629.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-execution-results.json.gz",
+      "sha256_uncompressed": "abe58498da80a89592f2dfec5d56245a876db4a343294576602f8bb03912acbd",
+      "source_files": [
+        "reports\\results\\phase2-economics-execution-results.json.gz",
+        "data\\interim\\phase2-economics\\execution-results.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/execution/hold_day/96e981b8f1188674d460f9ebd5673c31179f5329421c939cc83dfbe5aab671af/main.py",
+          "recorded_sha256": "96e981b8f1188674d460f9ebd5673c31179f5329421c939cc83dfbe5aab671af",
+          "verified_sha256": "96e981b8f1188674d460f9ebd5673c31179f5329421c939cc83dfbe5aab671af",
+          "snapshot": "reports\\sources\\96e981b8f1188674d460f9ebd5673c31179f5329421c939cc83dfbe5aab671af.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-economics/execution/hold_two_days/0f66c4f51da58fe3d38abd418c761f74e3fda17104b24c22822db5f915df8aea/main.py",
+          "recorded_sha256": "0f66c4f51da58fe3d38abd418c761f74e3fda17104b24c22822db5f915df8aea",
+          "verified_sha256": "0f66c4f51da58fe3d38abd418c761f74e3fda17104b24c22822db5f915df8aea",
+          "snapshot": "reports\\sources\\0f66c4f51da58fe3d38abd418c761f74e3fda17104b24c22822db5f915df8aea.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-economics/execution/position/61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52/main.py",
+          "recorded_sha256": "61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52",
+          "verified_sha256": "61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52",
+          "snapshot": "reports\\sources\\61ebb2ee421e08bd4a53ddc76e4dcd1acc80b5e5d65e8f3339ad3dd578b03c52.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-marginal-herd-budget200-results.json.gz",
+      "sha256_uncompressed": "b1c921017b56e4d7b9091f242f70680493c7d13add3b56eb0f5bd05ab1fbd758",
+      "source_files": [
+        "reports\\results\\phase2-economics-marginal-herd-budget200-results.json.gz",
+        "data\\interim\\phase2-economics\\marginal-herd-budget200-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": true,
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652/main.py",
+          "recorded_sha256": "cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652",
+          "verified_sha256": "cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652",
+          "snapshot": "reports\\sources\\cc94209c28f8f05b8013bcca6f54150619ee6e94289331d145ee57ef0227e652.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-marginal-herd-results.json.gz",
+      "sha256_uncompressed": "ca99a2f9814a33699495673457c8470d4d4b83d0a15d46cf669d7beacf70bd85",
+      "source_files": [
+        "reports\\results\\phase2-economics-marginal-herd-results.json.gz",
+        "data\\interim\\phase2-economics\\marginal-herd-results.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/marginal-herd/76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d/main.py",
+          "recorded_sha256": "76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d",
+          "verified_sha256": "76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d",
+          "snapshot": "reports\\sources\\76bd8db90f557c756ea15dfd8729e60fa8bc60ff4ceba389489a39057ab5a96d.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-market-default-guard-rejected.json.gz",
+      "sha256_uncompressed": "9885d5803f2778e792b778ed7feb56ae271b8897aaabb8d09b98dae0cd625626",
+      "source_files": [
+        "reports\\results\\phase2-economics-market-default-guard-rejected.json.gz",
+        "data\\interim\\phase2-economics\\market-default-guard-rejected.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/market/v7_model/49a470b2efc43ef355ee94ddb170584cf4a124d032bbd06c2619fec9f8b6f942/main.py",
+          "recorded_sha256": "49a470b2efc43ef355ee94ddb170584cf4a124d032bbd06c2619fec9f8b6f942",
+          "verified_sha256": "49a470b2efc43ef355ee94ddb170584cf4a124d032bbd06c2619fec9f8b6f942",
+          "snapshot": "reports\\sources\\49a470b2efc43ef355ee94ddb170584cf4a124d032bbd06c2619fec9f8b6f942.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": true
+    },
+    {
+      "archive": "reports\\results\\phase2-economics-market-results.json.gz",
+      "sha256_uncompressed": "57c8bd67e3358929ab71db4d6676a83181c335cedb9af3e75d3f26c292c7e234",
+      "source_files": [
+        "reports\\results\\phase2-economics-market-results.json.gz",
+        "data\\interim\\phase2-economics\\market-results.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-economics/market/v7_model/b5fba54fb7075104c3f3dc824b7fe9a7ad78d08329b083973160d0b57d71895d/main.py",
+          "recorded_sha256": "b5fba54fb7075104c3f3dc824b7fe9a7ad78d08329b083973160d0b57d71895d",
+          "verified_sha256": "b5fba54fb7075104c3f3dc824b7fe9a7ad78d08329b083973160d0b57d71895d",
+          "snapshot": "reports\\sources\\b5fba54fb7075104c3f3dc824b7fe9a7ad78d08329b083973160d0b57d71895d.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-economics/market/exact_reserve/4ef1c2670bfeaec2d60a2d7c7150daccd6e3a0a4fb80e6eec8ecba090070ba89/main.py",
+          "recorded_sha256": "4ef1c2670bfeaec2d60a2d7c7150daccd6e3a0a4fb80e6eec8ecba090070ba89",
+          "verified_sha256": "4ef1c2670bfeaec2d60a2d7c7150daccd6e3a0a4fb80e6eec8ecba090070ba89",
+          "snapshot": "reports\\sources\\4ef1c2670bfeaec2d60a2d7c7150daccd6e3a0a4fb80e6eec8ecba090070ba89.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-economics/market/exact_model_reserve/0c67635244bf2092f82f70eb73ba1cf4a9aaf64238791798cab1e917088e8d4e/main.py",
+          "recorded_sha256": "0c67635244bf2092f82f70eb73ba1cf4a9aaf64238791798cab1e917088e8d4e",
+          "verified_sha256": "0c67635244bf2092f82f70eb73ba1cf4a9aaf64238791798cab1e917088e8d4e",
+          "snapshot": "reports\\sources\\0c67635244bf2092f82f70eb73ba1cf4a9aaf64238791798cab1e917088e8d4e.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+      "sha256_uncompressed": "d034ce741d13a56accef9b44c76dccf9ff681f0afbdd55d43658f9b442822a09",
+      "source_files": [
+        "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+        "data\\raw\\phase2-frontier-cok-telemetry.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        17,
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "verified_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "snapshot": null
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "submissions/20260909-v7/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "current_file_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+      "sha256_uncompressed": "18fe298d117d29f00679c8c2ba962dbf0d34fdc110dd2e7a6de0203741ad94f8",
+      "source_files": [
+        "reports\\results\\phase2-frontier-cok-telemetry.json.gz"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        17,
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "verified_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "snapshot": null
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "submissions/20260909-v7/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "current_file_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+      "sha256_uncompressed": "e8721025f9321c75c2d750adc6070bcfdc4903ce37080587a26197a33a0350e9",
+      "source_files": [
+        "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+        "data\\raw\\phase2-frontier-screen.json"
+      ],
+      "episode_rows": 16,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        17,
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 16
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+      "sha256_uncompressed": "c9889aeb3e8b7e075ef759f7c1eadbe99f2ad0d9b4cc1b23518b1431f260782d",
+      "source_files": [
+        "reports\\results\\phase2-frontier-screen.json.gz"
+      ],
+      "episode_rows": 16,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        17,
+        42,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 16
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-incumbent-extra-anchors.json.gz",
+      "sha256_uncompressed": "f6c164bdd00f99d229ad32877f2c9b4f00c647d698183180c08d890b97cb8da3",
+      "source_files": [
+        "reports\\results\\phase2-incumbent-extra-anchors.json.gz",
+        "data\\raw\\phase2-incumbent-extra-anchors.json"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": true,
+      "seeds": [
+        5,
+        11
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-incumbent-reproduction.json.gz",
+      "sha256_uncompressed": "9deb31cb3bc51ee57587831825ca93c5c3ff5d08388a476e128e7859b15e6365",
+      "source_files": [
+        "reports\\results\\phase2-incumbent-reproduction.json.gz"
+      ],
+      "episode_rows": 8,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        42
+      ],
+      "statuses": {
+        "DONE/DONE": 8
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/frozen/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-input-plan.json.gz",
+      "sha256_uncompressed": "11202a0d31759aa0383b1c0fcdca318f511ad68d4d06fdecfeedc8663d415d40",
+      "source_files": [
+        "reports\\results\\phase2-input-plan.json.gz",
+        "data\\raw\\phase2-input-plan.json"
+      ],
+      "episode_rows": 16,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 16
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-input-plan/compact/4e037c41cd370b4b5a4b060518fcd7e4e0568c89b0d24e1421d857f393939bc2/main.py",
+          "recorded_sha256": "4e037c41cd370b4b5a4b060518fcd7e4e0568c89b0d24e1421d857f393939bc2",
+          "verified_sha256": "4e037c41cd370b4b5a4b060518fcd7e4e0568c89b0d24e1421d857f393939bc2",
+          "snapshot": "reports\\sources\\4e037c41cd370b4b5a4b060518fcd7e4e0568c89b0d24e1421d857f393939bc2.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-input-plan/expanded/42190b2b70a2b7969c789cf3b398765d2b433676e82e839bef043d22c3f576ef/main.py",
+          "recorded_sha256": "42190b2b70a2b7969c789cf3b398765d2b433676e82e839bef043d22c3f576ef",
+          "verified_sha256": "42190b2b70a2b7969c789cf3b398765d2b433676e82e839bef043d22c3f576ef",
+          "snapshot": "reports\\sources\\42190b2b70a2b7969c789cf3b398765d2b433676e82e839bef043d22c3f576ef.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-interaction-development.json.gz",
+      "sha256_uncompressed": "ba6835f7b976bcebfcf5a40a59ddc3f034c7303ddcc43768f9afd5b1d818b7ca",
+      "source_files": [
+        "reports\\results\\phase2-interaction-development.json.gz",
+        "data\\raw\\phase2-interaction-development.json"
+      ],
+      "episode_rows": 48,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        0,
+        5,
+        11,
+        42
+      ],
+      "statuses": {
+        "DONE/DONE": 48
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-correctness/control/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/liquidity/06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b/main.py",
+          "recorded_sha256": "06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b",
+          "verified_sha256": "06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b",
+          "snapshot": "reports\\sources\\06f95ba6fa6aa2ab9a008769421a74643edabf280859080f42bbdd6008dc256b.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/liquidity_model_expand/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b/main.py",
+          "recorded_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "verified_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-interactions.json.gz",
+      "sha256_uncompressed": "37e9eb196a30e109a2e73bcadb8d11795fa7e86e9c9e27293084cb4b430f31da",
+      "source_files": [
+        "reports\\results\\phase2-interactions.json.gz",
+        "data\\raw\\phase2-interactions.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-correctness/liquidity_expand/29a52925b3dd7fd30408d2721bf0fcee2f18a78b528f5d6c8788b6b8cc5dd001/main.py",
+          "recorded_sha256": "29a52925b3dd7fd30408d2721bf0fcee2f18a78b528f5d6c8788b6b8cc5dd001",
+          "verified_sha256": "29a52925b3dd7fd30408d2721bf0fcee2f18a78b528f5d6c8788b6b8cc5dd001",
+          "snapshot": "reports\\sources\\29a52925b3dd7fd30408d2721bf0fcee2f18a78b528f5d6c8788b6b8cc5dd001.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/liquidity_model/02995496b3645241ed778d4ff2bb246fe690a4481b7298c3e9086cc86f6ce5aa/main.py",
+          "recorded_sha256": "02995496b3645241ed778d4ff2bb246fe690a4481b7298c3e9086cc86f6ce5aa",
+          "verified_sha256": "02995496b3645241ed778d4ff2bb246fe690a4481b7298c3e9086cc86f6ce5aa",
+          "snapshot": "reports\\sources\\02995496b3645241ed778d4ff2bb246fe690a4481b7298c3e9086cc86f6ce5aa.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-correctness/liquidity_model_expand/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b/main.py",
+          "recorded_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "verified_sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+          "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-logistics.json.gz",
+      "sha256_uncompressed": "00bda822f4a24ffe3172d80f618cdfeb7d5330ee3fd74387e8e0c9760db0ba4f",
+      "source_files": [
+        "reports\\results\\phase2-logistics.json.gz",
+        "data\\raw\\phase2-logistics.json"
+      ],
+      "episode_rows": 40,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 40
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-logistics/control/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee/main.py",
+          "recorded_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "verified_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "snapshot": "reports\\sources\\750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-logistics/nightly/2a9178fb493326e3ddf8b9750d95831f4339a6ba5d6d0adf17cd56204fe31712/main.py",
+          "recorded_sha256": "2a9178fb493326e3ddf8b9750d95831f4339a6ba5d6d0adf17cd56204fe31712",
+          "verified_sha256": "2a9178fb493326e3ddf8b9750d95831f4339a6ba5d6d0adf17cd56204fe31712",
+          "snapshot": "reports\\sources\\2a9178fb493326e3ddf8b9750d95831f4339a6ba5d6d0adf17cd56204fe31712.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-logistics/delivery_rows/f1f80002c50d71366daab5b024f8ff7b2cedfd5e15aa4d1f03b79a033b969096/main.py",
+          "recorded_sha256": "f1f80002c50d71366daab5b024f8ff7b2cedfd5e15aa4d1f03b79a033b969096",
+          "verified_sha256": "f1f80002c50d71366daab5b024f8ff7b2cedfd5e15aa4d1f03b79a033b969096",
+          "snapshot": "reports\\sources\\f1f80002c50d71366daab5b024f8ff7b2cedfd5e15aa4d1f03b79a033b969096.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-logistics/combined/38bfe9b4eba1cb40c0fd88adf3399efcedb6329b09aab2ca4d5dbaff95c2ac1e/main.py",
+          "recorded_sha256": "38bfe9b4eba1cb40c0fd88adf3399efcedb6329b09aab2ca4d5dbaff95c2ac1e",
+          "verified_sha256": "38bfe9b4eba1cb40c0fd88adf3399efcedb6329b09aab2ca4d5dbaff95c2ac1e",
+          "snapshot": "reports\\sources\\38bfe9b4eba1cb40c0fd88adf3399efcedb6329b09aab2ca4d5dbaff95c2ac1e.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-logistics/deadline/d5e0cbe4bdb887d1a51cd6c08dab87c5db5e37df66aa2da93c0b1f7d32bcae4e/main.py",
+          "recorded_sha256": "d5e0cbe4bdb887d1a51cd6c08dab87c5db5e37df66aa2da93c0b1f7d32bcae4e",
+          "verified_sha256": "d5e0cbe4bdb887d1a51cd6c08dab87c5db5e37df66aa2da93c0b1f7d32bcae4e",
+          "snapshot": "reports\\sources\\d5e0cbe4bdb887d1a51cd6c08dab87c5db5e37df66aa2da93c0b1f7d32bcae4e.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-mixed-expansion.json.gz",
+      "sha256_uncompressed": "201d381d1a8943aaef4922e09f7077c925076454c61cb1642978fed1751c9024",
+      "source_files": [
+        "reports\\results\\phase2-mixed-expansion.json.gz",
+        "data\\raw\\phase2-mixed-expansion.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-mixed-expansion/mixed40/175917778cd7684e557a63c3136ea3c33f12c64e7b61116a4c0359a74625d383/main.py",
+          "recorded_sha256": "175917778cd7684e557a63c3136ea3c33f12c64e7b61116a4c0359a74625d383",
+          "verified_sha256": "175917778cd7684e557a63c3136ea3c33f12c64e7b61116a4c0359a74625d383",
+          "snapshot": "reports\\sources\\175917778cd7684e557a63c3136ea3c33f12c64e7b61116a4c0359a74625d383.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-mixed-expansion/mixed50/72d7eb16e06ec4241e677e2070ea1b67e9d3c951b1f5599d0ea60e46fc27e74a/main.py",
+          "recorded_sha256": "72d7eb16e06ec4241e677e2070ea1b67e9d3c951b1f5599d0ea60e46fc27e74a",
+          "verified_sha256": "72d7eb16e06ec4241e677e2070ea1b67e9d3c951b1f5599d0ea60e46fc27e74a",
+          "snapshot": "reports\\sources\\72d7eb16e06ec4241e677e2070ea1b67e9d3c951b1f5599d0ea60e46fc27e74a.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-mixed-expansion/goose44/3a9bb00b99fedf47ad33567fc9873173ba468c59a88656a60226d7e3a3020d55/main.py",
+          "recorded_sha256": "3a9bb00b99fedf47ad33567fc9873173ba468c59a88656a60226d7e3a3020d55",
+          "verified_sha256": "3a9bb00b99fedf47ad33567fc9873173ba468c59a88656a60226d7e3a3020d55",
+          "snapshot": "reports\\sources\\3a9bb00b99fedf47ad33567fc9873173ba468c59a88656a60226d7e3a3020d55.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-opening-liquidity.json.gz",
+      "sha256_uncompressed": "d24691f6662dedc954da34a064d9127649c9c0646486c176e82ebc18c2f071e2",
+      "source_files": [
+        "reports\\results\\phase2-opening-liquidity.json.gz",
+        "data\\raw\\phase2-opening-liquidity.json"
+      ],
+      "episode_rows": 4,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17
+      ],
+      "statuses": {
+        "DONE/DONE": 4
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-opening/10/5e7227deacd594be8c847a5c7eb5e11a92fc3944778254988b42fdfd9ca33338/main.py",
+          "recorded_sha256": "5e7227deacd594be8c847a5c7eb5e11a92fc3944778254988b42fdfd9ca33338",
+          "verified_sha256": "5e7227deacd594be8c847a5c7eb5e11a92fc3944778254988b42fdfd9ca33338",
+          "snapshot": "reports\\sources\\5e7227deacd594be8c847a5c7eb5e11a92fc3944778254988b42fdfd9ca33338.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-opening.json.gz",
+      "sha256_uncompressed": "836299f3e350e6bd3999a7097a24a2bef5bf98e95ef43f4ad486859bff750028",
+      "source_files": [
+        "reports\\results\\phase2-opening.json.gz",
+        "data\\raw\\phase2-opening.json"
+      ],
+      "episode_rows": 24,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 24
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-opening/6/5bd99eb3194f1bb19cb83d6a3c8ed69641e607cec58e01583bcf92326ed77d03/main.py",
+          "recorded_sha256": "5bd99eb3194f1bb19cb83d6a3c8ed69641e607cec58e01583bcf92326ed77d03",
+          "verified_sha256": "5bd99eb3194f1bb19cb83d6a3c8ed69641e607cec58e01583bcf92326ed77d03",
+          "snapshot": "reports\\sources\\5bd99eb3194f1bb19cb83d6a3c8ed69641e607cec58e01583bcf92326ed77d03.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-opening/10/0231ed1552d64b7d06ec32b96fdcfb1fbc5f91c600ff01cc1fe37df23c68abfa/main.py",
+          "recorded_sha256": "0231ed1552d64b7d06ec32b96fdcfb1fbc5f91c600ff01cc1fe37df23c68abfa",
+          "verified_sha256": "0231ed1552d64b7d06ec32b96fdcfb1fbc5f91c600ff01cc1fe37df23c68abfa",
+          "snapshot": "reports\\sources\\0231ed1552d64b7d06ec32b96fdcfb1fbc5f91c600ff01cc1fe37df23c68abfa.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-opening/14/5f6ce0049d9bd5691f297a5138bb97eb605d9da04f615bb4288d0ded22f8daa1/main.py",
+          "recorded_sha256": "5f6ce0049d9bd5691f297a5138bb97eb605d9da04f615bb4288d0ded22f8daa1",
+          "verified_sha256": "5f6ce0049d9bd5691f297a5138bb97eb605d9da04f615bb4288d0ded22f8daa1",
+          "snapshot": "reports\\sources\\5f6ce0049d9bd5691f297a5138bb97eb605d9da04f615bb4288d0ded22f8daa1.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-preemption.json.gz",
+      "sha256_uncompressed": "593a98e1fd7f1aecf67015d63250bb438a577f3f91c71499353e2e93c843e8b6",
+      "source_files": [
+        "reports\\results\\phase2-preemption.json.gz",
+        "data\\raw\\phase2-preemption.json"
+      ],
+      "episode_rows": 4,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17
+      ],
+      "statuses": {
+        "DONE/DONE": 4
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-preemption/berries45_mixed/b9b23622c9592b17b37a9c87d6daa16d7bf56b919a1fd891b388ef5d2134f797/main.py",
+          "recorded_sha256": "b9b23622c9592b17b37a9c87d6daa16d7bf56b919a1fd891b388ef5d2134f797",
+          "verified_sha256": "b9b23622c9592b17b37a9c87d6daa16d7bf56b919a1fd891b388ef5d2134f797",
+          "snapshot": "reports\\sources\\b9b23622c9592b17b37a9c87d6daa16d7bf56b919a1fd891b388ef5d2134f797.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-preemption/berries55_goose/57e902c6564f4555d56de805802cba5d8fa4824dab34a43e12823fae1e84a0d3/main.py",
+          "recorded_sha256": "57e902c6564f4555d56de805802cba5d8fa4824dab34a43e12823fae1e84a0d3",
+          "verified_sha256": "57e902c6564f4555d56de805802cba5d8fa4824dab34a43e12823fae1e84a0d3",
+          "snapshot": "reports\\sources\\57e902c6564f4555d56de805802cba5d8fa4824dab34a43e12823fae1e84a0d3.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-production.json.gz",
+      "sha256_uncompressed": "cf3e757d4c69d8d6369dd65cace19dd884cf13e9bd11c0ba2bd5f027ae213290",
+      "source_files": [
+        "reports\\results\\phase2-production.json.gz",
+        "data\\raw\\phase2-production.json"
+      ],
+      "episode_rows": 32,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 32
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-production/intensive/7d470265d0100fc539318c7c8f36b53c57166dd2ffcd00bbf2aee85d5b2a7190/main.py",
+          "recorded_sha256": "7d470265d0100fc539318c7c8f36b53c57166dd2ffcd00bbf2aee85d5b2a7190",
+          "verified_sha256": "7d470265d0100fc539318c7c8f36b53c57166dd2ffcd00bbf2aee85d5b2a7190",
+          "snapshot": "reports\\sources\\7d470265d0100fc539318c7c8f36b53c57166dd2ffcd00bbf2aee85d5b2a7190.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/exact/a9d1cafeabf4b39c2a06f1a1e765be48c1a086fb3452117bb8883ffb555ddae2/main.py",
+          "recorded_sha256": "a9d1cafeabf4b39c2a06f1a1e765be48c1a086fb3452117bb8883ffb555ddae2",
+          "verified_sha256": "a9d1cafeabf4b39c2a06f1a1e765be48c1a086fb3452117bb8883ffb555ddae2",
+          "snapshot": "reports\\sources\\a9d1cafeabf4b39c2a06f1a1e765be48c1a086fb3452117bb8883ffb555ddae2.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/berry/7049e0ecfb7f2da3cba120610b226a324b62b082ef3499a41b09a211226488bb/main.py",
+          "recorded_sha256": "7049e0ecfb7f2da3cba120610b226a324b62b082ef3499a41b09a211226488bb",
+          "verified_sha256": "7049e0ecfb7f2da3cba120610b226a324b62b082ef3499a41b09a211226488bb",
+          "snapshot": "reports\\sources\\7049e0ecfb7f2da3cba120610b226a324b62b082ef3499a41b09a211226488bb.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/berry13/ff597a27f702a4e5b5c0622f27e7e58b56450115c94131e73aa2e8a1392551d7/main.py",
+          "recorded_sha256": "ff597a27f702a4e5b5c0622f27e7e58b56450115c94131e73aa2e8a1392551d7",
+          "verified_sha256": "ff597a27f702a4e5b5c0622f27e7e58b56450115c94131e73aa2e8a1392551d7",
+          "snapshot": "reports\\sources\\ff597a27f702a4e5b5c0622f27e7e58b56450115c94131e73aa2e8a1392551d7.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-recurring.json.gz",
+      "sha256_uncompressed": "4860612f62ff2cc5bbfff98002b5722e4043c3187072f3212c30fa6c9029c705",
+      "source_files": [
+        "reports\\results\\phase2-recurring.json.gz",
+        "data\\raw\\phase2-recurring.json"
+      ],
+      "episode_rows": 32,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 32
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-production/recurring/587a63b13cab48a3842bd6883c99f645cea57f30d3986eda1753583591875571/main.py",
+          "recorded_sha256": "587a63b13cab48a3842bd6883c99f645cea57f30d3986eda1753583591875571",
+          "verified_sha256": "587a63b13cab48a3842bd6883c99f645cea57f30d3986eda1753583591875571",
+          "snapshot": "reports\\sources\\587a63b13cab48a3842bd6883c99f645cea57f30d3986eda1753583591875571.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/recurring14/42365ba707fb89af4ed5068c6592a16c300bafa67b17273d7836e02f5e2c7ecf/main.py",
+          "recorded_sha256": "42365ba707fb89af4ed5068c6592a16c300bafa67b17273d7836e02f5e2c7ecf",
+          "verified_sha256": "42365ba707fb89af4ed5068c6592a16c300bafa67b17273d7836e02f5e2c7ecf",
+          "snapshot": "reports\\sources\\42365ba707fb89af4ed5068c6592a16c300bafa67b17273d7836e02f5e2c7ecf.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/crop_opening/607bb2d71cd7624d4a4f9af3b8b7a1fba57d48be9bd5c7b80b22f745c9539307/main.py",
+          "recorded_sha256": "607bb2d71cd7624d4a4f9af3b8b7a1fba57d48be9bd5c7b80b22f745c9539307",
+          "verified_sha256": "607bb2d71cd7624d4a4f9af3b8b7a1fba57d48be9bd5c7b80b22f745c9539307",
+          "snapshot": "reports\\sources\\607bb2d71cd7624d4a4f9af3b8b7a1fba57d48be9bd5c7b80b22f745c9539307.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-production/compact_recurring/fb9cfbfd646eb4008c803d05a45db54a4f4267872aa9d24c1d5c2d7786da19cb/main.py",
+          "recorded_sha256": "fb9cfbfd646eb4008c803d05a45db54a4f4267872aa9d24c1d5c2d7786da19cb",
+          "verified_sha256": "fb9cfbfd646eb4008c803d05a45db54a4f4267872aa9d24c1d5c2d7786da19cb",
+          "snapshot": "reports\\sources\\fb9cfbfd646eb4008c803d05a45db54a4f4267872aa9d24c1d5c2d7786da19cb.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    },
+    {
+      "archive": "reports\\results\\phase2-work-bundles.json.gz",
+      "sha256_uncompressed": "4a8315839aaffa14b1e6595f6250f15fd7f7e904e714ded718b728a09a535cca",
+      "source_files": [
+        "reports\\results\\phase2-work-bundles.json.gz",
+        "data\\raw\\phase2-work-bundles.json"
+      ],
+      "episode_rows": 32,
+      "original_complete_flag": "not recorded",
+      "seeds": [
+        17,
+        103
+      ],
+      "statuses": {
+        "DONE/DONE": 32
+      },
+      "candidate_checks": [
+        {
+          "path": "data/interim/phase2-work-bundles/service_bundles/40feb84aa4bbb1683489665d2a1d5dcbbe79dc037b429e6d597edef0c8bb669c/main.py",
+          "recorded_sha256": "40feb84aa4bbb1683489665d2a1d5dcbbe79dc037b429e6d597edef0c8bb669c",
+          "verified_sha256": "40feb84aa4bbb1683489665d2a1d5dcbbe79dc037b429e6d597edef0c8bb669c",
+          "snapshot": "reports\\sources\\40feb84aa4bbb1683489665d2a1d5dcbbe79dc037b429e6d597edef0c8bb669c.py.gz"
+        },
+        {
+          "path": "data/interim/phase2-work-bundles/input_routes/07b0ef88062a963c99f6c0b08d2624a9c7d63c848d059b31f92b4bc7f88ea64e/main.py",
+          "recorded_sha256": "07b0ef88062a963c99f6c0b08d2624a9c7d63c848d059b31f92b4bc7f88ea64e",
+          "verified_sha256": "07b0ef88062a963c99f6c0b08d2624a9c7d63c848d059b31f92b4bc7f88ea64e",
+          "snapshot": "reports\\sources\\07b0ef88062a963c99f6c0b08d2624a9c7d63c848d059b31f92b4bc7f88ea64e.py.gz"
+        }
+      ],
+      "opponent_checks": [
+        {
+          "path": "data/raw/reference-lonespear/main.py",
+          "recorded_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "current_file_sha256": "3981830b9181db4685afe2b61f182edb13ff5a19d344a70b16a6bc5aedf2a026",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-gzm/main.py",
+          "recorded_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "current_file_sha256": "fef48be655b403c994979ba1e88eaa550c98ec7e1a7b207c1ceebda990d69c23",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-seyam/main.py",
+          "recorded_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "current_file_sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+          "matches_recorded": true
+        },
+        {
+          "path": "data/raw/reference-cok/main.py",
+          "recorded_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "current_file_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "matches_recorded": true
+        }
+      ],
+      "recorded_as_rejected_integration": false
+    }
+  ],
+  "warnings": [],
+  "repeated_scenarios": [
+    {
+      "physical_scenario_sha256": "4ba587ae70db48b6410536f1ccc461556417ad20d0fee7b453bc05584567d91f",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "68795a72441766f799c91e87356950e86000a8fd56bbf45e666b9c3aadb09886",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 89573.0,
+          "opponent_cash": 80179.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "68795a72441766f799c91e87356950e86000a8fd56bbf45e666b9c3aadb09886",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 89573.0,
+          "opponent_cash": 80179.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "1de71254478fa10d509d972e566663d8f50f590f472e31384d85141be0d89fcb",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "e81c64da25a3485bd777746aaf9596896a8a98ad24622b40793a1b5bdaf353e0",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 98832.0,
+          "opponent_cash": 93343.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "e81c64da25a3485bd777746aaf9596896a8a98ad24622b40793a1b5bdaf353e0",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 98832.0,
+          "opponent_cash": 93343.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "544d8bb66c7253823eda2cafc7d433bddd5111ba389048f57d7ade095af515bb",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "0f6e237464045d18cb3dd1eda3bba6d300f8f4220a30671d1fe9a59cf5bda70a",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 85598.0,
+          "opponent_cash": 93949.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "0f6e237464045d18cb3dd1eda3bba6d300f8f4220a30671d1fe9a59cf5bda70a",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 85598.0,
+          "opponent_cash": 93949.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "18e8881ae1d5c51f2f04030329fec5e60ff0490d68d5d960abc8b242905f4b48",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "cfe5ef9e73534c6461b4d4928a081024d82e851de28226adcff21683f73333e6",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 85522.0,
+          "opponent_cash": 96833.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "cfe5ef9e73534c6461b4d4928a081024d82e851de28226adcff21683f73333e6",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 85522.0,
+          "opponent_cash": 96833.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "6d9572072a0e94b9a0775d52758a38d58dd07b080b5db82e8a9e6361534a7740",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "73a277903aa87e0a1875638f4e591ad7c6c759bad71b6034d94f9966ca57992d",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 86724.0,
+          "opponent_cash": 83991.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "73a277903aa87e0a1875638f4e591ad7c6c759bad71b6034d94f9966ca57992d",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 86724.0,
+          "opponent_cash": 83991.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "30ae1bacbd593c9efe55f9308b92ac241d3960dfc4db9c1ad0948a4d00216ff2",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "213b42d62210aa0ec28b703556674b919c5b789469489ae2d049037570510ccd",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 84206.0,
+          "opponent_cash": 87819.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "213b42d62210aa0ec28b703556674b919c5b789469489ae2d049037570510ccd",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 84206.0,
+          "opponent_cash": 87819.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "472cdb28b944e0d584fcf1251ca945e7a793dfb87fe2478c6d443a0399c42412",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "e60b868bc67032213f288b0f113d1dc3c4a06c669cf964ce615dc760fd14787c",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 67057.0,
+          "opponent_cash": 96767.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "e60b868bc67032213f288b0f113d1dc3c4a06c669cf964ce615dc760fd14787c",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 67057.0,
+          "opponent_cash": 96767.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "0797cc304d4e3b78cbc7dd837647737b9b6c8a68d93a6764f004f87b4287229f",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "a60a25dde5a89ec98676f17692715d0969bd22dac22332392e4d1a53db4d1e18",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 69453.0,
+          "opponent_cash": 96097.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "a60a25dde5a89ec98676f17692715d0969bd22dac22332392e4d1a53db4d1e18",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 69453.0,
+          "opponent_cash": 96097.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "8c2154ef362502e6db611c6371d7ce4791972c5aa2be46eac652f294016019e4",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "ad89455498e776d6c8868bb600b3e85ed11fa1cd50dbb25f537d42962b1d4b85",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 75188.0,
+          "opponent_cash": 105793.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "ad89455498e776d6c8868bb600b3e85ed11fa1cd50dbb25f537d42962b1d4b85",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 75188.0,
+          "opponent_cash": 105793.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "be66f8d1aacaf0154f07cf0ea5996d421877013eff1c0665e28dbbcedde81932",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "027687f73360e282e5b0145d7f0bff81a3d3b635aa47731cec41286b8f984ed4",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 80335.0,
+          "opponent_cash": 105554.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "027687f73360e282e5b0145d7f0bff81a3d3b635aa47731cec41286b8f984ed4",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 80335.0,
+          "opponent_cash": 105554.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "41bc443a078951e26b28f9ab2b2d813f880aa52b1397b0ce5b727cbcea836d70",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "ef34562549615fc7312428455b418320b1c09da8d75fa367bee4e66897ce2d63",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 86148.0,
+          "opponent_cash": 92168.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "ef34562549615fc7312428455b418320b1c09da8d75fa367bee4e66897ce2d63",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 86148.0,
+          "opponent_cash": 92168.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "74b2040b8c8c85199f5b8b48dc4d66e546603c51bef5f09657eb0fe1ab9dd6a9",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "487dd47f174ade84e4656604130fe80344bfdb89f3b06e9bc42f8b737d74b9e6",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 88562.0,
+          "opponent_cash": 99007.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "487dd47f174ade84e4656604130fe80344bfdb89f3b06e9bc42f8b737d74b9e6",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 88562.0,
+          "opponent_cash": 99007.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "c35c1d8281c0b33e13fa8319228c19e2bd30b44b025b60f5991d6eb45119f21b",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "4a695ad7610a1c2bcadeb2a8362c258dbf23dee7c436cf2f7381ef7a04453e79",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 88967.0,
+          "opponent_cash": 143449.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "4a695ad7610a1c2bcadeb2a8362c258dbf23dee7c436cf2f7381ef7a04453e79",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 0,
+          "cash": 88967.0,
+          "opponent_cash": 143449.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "18f8c02b3f4fa209036e743258c6c2dc9477def44bacba042e4b87b1b1f1655f",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "daf2711deb38e865f0ff9c1d3d14b183c9414e13f6ffd51bf0c7c51fb19bc19b",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 91634.0,
+          "opponent_cash": 150370.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "daf2711deb38e865f0ff9c1d3d14b183c9414e13f6ffd51bf0c7c51fb19bc19b",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 17,
+          "seat": 1,
+          "cash": 91634.0,
+          "opponent_cash": 150370.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "d2b16e57af13a2a315e5ef099c918e7c6463a5b4792f094e08dd4c0c950dfa7b",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "6d1135b8ea7f83c43ae311bb5a58f5d8b7797d52e8c8e8ec8653f49ad3e6e019",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 88662.0,
+          "opponent_cash": 161174.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "6d1135b8ea7f83c43ae311bb5a58f5d8b7797d52e8c8e8ec8653f49ad3e6e019",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 0,
+          "cash": 88662.0,
+          "opponent_cash": 161174.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "ed444da4c022a084246676a2eb9c9f92ded79e0e85ecc4203ecfbf72a7906f0f",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-animal-service-bae96c2ac23c.json.gz",
+          "episode_record_sha256": "f539e0a03965fb0daba9351296e29925e96e2f2ab39f48918e5ad510cc411f22",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 88662.0,
+          "opponent_cash": 161174.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-animal-service.json.gz",
+          "episode_record_sha256": "f539e0a03965fb0daba9351296e29925e96e2f2ab39f48918e5ad510cc411f22",
+          "candidate_sha256": "92512ba2f62f7ff6f58634dfae7112b00cdd2f3e3161abc3dd7a86d293935707",
+          "seed": 103,
+          "seat": 1,
+          "cash": 88662.0,
+          "opponent_cash": 161174.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "cd900647a689dbb6f65cf17e9b97ee8d433eebea0a5484654c5566d34e2b8e4e",
+      "rows": 5,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "60dd92839bbe43bc9a8557e35afc8ce10c93c8471d3a51fafb488abf9be68b8f",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 0,
+          "seat": 0,
+          "cash": 129151.0,
+          "opponent_cash": 72447.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "60dd92839bbe43bc9a8557e35afc8ce10c93c8471d3a51fafb488abf9be68b8f",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 0,
+          "seat": 0,
+          "cash": 129151.0,
+          "opponent_cash": 72447.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "eb66903d830beb5042fede7e60ee468f1e9f3dd515c87d5884d44f7f0e3afd0a",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 72447.0,
+          "opponent_cash": 129151.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "eb66903d830beb5042fede7e60ee468f1e9f3dd515c87d5884d44f7f0e3afd0a",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 72447.0,
+          "opponent_cash": 129151.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "d805290e539f0c3dd9f05cbefa93a577a4daa39ac65288e1318a3c7bea1b0e5b",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 72447.0,
+          "opponent_cash": 129151.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "42c06df4001409bb3e730c9783b64e1fb6ae0b8ac07cac8126176fd422a649e0",
+      "rows": 5,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "15f5f137b6df99e9375833cdfc37545e15cf25297ad0d89e6ff452db9ab173be",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 0,
+          "seat": 1,
+          "cash": 97429.0,
+          "opponent_cash": 57496.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "15f5f137b6df99e9375833cdfc37545e15cf25297ad0d89e6ff452db9ab173be",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 0,
+          "seat": 1,
+          "cash": 97429.0,
+          "opponent_cash": 57496.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "b3fdbebae79a63ca0ec8da8d8dd53066fe3df30b4cf356ebb4d9abaaa29b3a6d",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 57496.0,
+          "opponent_cash": 97429.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "b3fdbebae79a63ca0ec8da8d8dd53066fe3df30b4cf356ebb4d9abaaa29b3a6d",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 57496.0,
+          "opponent_cash": 97429.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "1f26f5c24367925aa8460504608c363d8e9910ce394a280893fa763a3f86d7ba",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 57496.0,
+          "opponent_cash": 97429.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "c873d31339fb527552ac7209193ac63e0fe2815cb94d3439ac52a93e3aa623e5",
+      "rows": 4,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "f59070a1a1c43e4a4ac8f981aa9c9fde621a89b3245bca74e373bfb6356c922d",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 17,
+          "seat": 0,
+          "cash": 139094.0,
+          "opponent_cash": 87567.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "f59070a1a1c43e4a4ac8f981aa9c9fde621a89b3245bca74e373bfb6356c922d",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 17,
+          "seat": 0,
+          "cash": 139094.0,
+          "opponent_cash": 87567.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "353c1ce12feab396d9856900c1efd18d55e3a15493586b328f17fa314dddd15a",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 1,
+          "cash": 87567.0,
+          "opponent_cash": 139094.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "353c1ce12feab396d9856900c1efd18d55e3a15493586b328f17fa314dddd15a",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 1,
+          "cash": 87567.0,
+          "opponent_cash": 139094.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "5e7198b63cc776b07881f6999a8eab3db1498f56667974a29ad57d289872d29c",
+      "rows": 4,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "654efcb9f3d332d5c2b8286ea09825cacc621ee4ba74d730cdf13771d4dcdc94",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 17,
+          "seat": 1,
+          "cash": 94621.0,
+          "opponent_cash": 66059.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "654efcb9f3d332d5c2b8286ea09825cacc621ee4ba74d730cdf13771d4dcdc94",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 17,
+          "seat": 1,
+          "cash": 94621.0,
+          "opponent_cash": 66059.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "1e48a921bbb4fe77a2576583addd7868e484c35c4ebf95b9ae8d2bf16f4fadd8",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 0,
+          "cash": 66059.0,
+          "opponent_cash": 94621.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "1e48a921bbb4fe77a2576583addd7868e484c35c4ebf95b9ae8d2bf16f4fadd8",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 0,
+          "cash": 66059.0,
+          "opponent_cash": 94621.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "c8f52a68e4f0b413bc3ae0b8850ebc9aff9d4f3945ea804d5c7adfbec0f84241",
+      "rows": 5,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "db20f29584c186961875a627e3ea880f1868a1620277fdc2a224ac135d0aeddb",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 42,
+          "seat": 0,
+          "cash": 65366.0,
+          "opponent_cash": 46668.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "db20f29584c186961875a627e3ea880f1868a1620277fdc2a224ac135d0aeddb",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 42,
+          "seat": 0,
+          "cash": 65366.0,
+          "opponent_cash": 46668.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "79fe3aa8097227b1d7363a219924f0004ee17cacaf9f329e4b9f571d4dc0d886",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 46668.0,
+          "opponent_cash": 65366.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "79fe3aa8097227b1d7363a219924f0004ee17cacaf9f329e4b9f571d4dc0d886",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 46668.0,
+          "opponent_cash": 65366.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "04ce147d37efe39b7dd81617108fe7ecf52239946ef83724c3abd13aee2a4905",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 46668.0,
+          "opponent_cash": 65366.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "cd0b0f318369541c068812166f43692fb810099a49abf6d54b18be1c70f0647f",
+      "rows": 5,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "39eb0d5b0f5d122fa2878568eafad5e3652ece88f5fdcc9667f3c8d8e66cd1c4",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 42,
+          "seat": 1,
+          "cash": 67307.0,
+          "opponent_cash": 42889.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "39eb0d5b0f5d122fa2878568eafad5e3652ece88f5fdcc9667f3c8d8e66cd1c4",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 42,
+          "seat": 1,
+          "cash": 67307.0,
+          "opponent_cash": 42889.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "fc2d82d724040e549259f0906f19887900b7d4b13a51781a5672a9a737171be3",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42889.0,
+          "opponent_cash": 67307.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "fc2d82d724040e549259f0906f19887900b7d4b13a51781a5672a9a737171be3",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42889.0,
+          "opponent_cash": 67307.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "2856716fe0c937a6864c8e3c0613d8ceae8c7499e313e62d2e31349541e52a10",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42889.0,
+          "opponent_cash": 67307.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "d01763261885c73a57905218babdbe7906886f5fd9f0228f69642ee23761b323",
+      "rows": 4,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "52c5affd293f531d278105fa3ddfa31a9049ff57ffa9f3b6e2df9fc2000973ee",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 103,
+          "seat": 0,
+          "cash": 87374.0,
+          "opponent_cash": 60718.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "52c5affd293f531d278105fa3ddfa31a9049ff57ffa9f3b6e2df9fc2000973ee",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 103,
+          "seat": 0,
+          "cash": 87374.0,
+          "opponent_cash": 60718.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "f026b597123e3ae39b8ce80a000850a0d35ab29ff45a6be440ffb89bffb16d2f",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 1,
+          "cash": 60718.0,
+          "opponent_cash": 87374.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "f026b597123e3ae39b8ce80a000850a0d35ab29ff45a6be440ffb89bffb16d2f",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 1,
+          "cash": 60718.0,
+          "opponent_cash": 87374.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "5b5673e2e65d462e6b879e12b194e44cbb4474aa28ba73266450d5b88d4f8a7a",
+      "rows": 4,
+      "role_reversed": true,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry-d034ce741d13.json.gz",
+          "episode_record_sha256": "6fef89b393396613b47114be012d4bd46b0e83387e1c5857f61334fa7c1d0fcd",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 103,
+          "seat": 1,
+          "cash": 87374.0,
+          "opponent_cash": 60718.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-cok-telemetry.json.gz",
+          "episode_record_sha256": "6fef89b393396613b47114be012d4bd46b0e83387e1c5857f61334fa7c1d0fcd",
+          "candidate_sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "seed": 103,
+          "seat": 1,
+          "cash": 87374.0,
+          "opponent_cash": 60718.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "77bc9670e2946a95b8066b8acbc26bc598fd35684251bc4b7cc9113abac76a9f",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 0,
+          "cash": 60718.0,
+          "opponent_cash": 87374.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "77bc9670e2946a95b8066b8acbc26bc598fd35684251bc4b7cc9113abac76a9f",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 0,
+          "cash": 60718.0,
+          "opponent_cash": 87374.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "a08795803a2905fd4462e2ae44f427688cc75920da449fc4ca5ffc5508bf41c0",
+      "rows": 3,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "637b202dd2797baf80cf64174a70d5fba94fb5d941b961985370149ffc3bba31",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 71218.0,
+          "opponent_cash": 117234.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "637b202dd2797baf80cf64174a70d5fba94fb5d941b961985370149ffc3bba31",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 71218.0,
+          "opponent_cash": 117234.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "9954124ffbe845dde5219ddb4d1fdb27503fc31aff69b4c91d06199d99b1dccd",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 0,
+          "cash": 71218.0,
+          "opponent_cash": 117234.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "16a3790ca6430d611bff535d887565852acb4525d61be07a78c03457526fb5f8",
+      "rows": 3,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "ae121ce1975f31dfe3225464667f2cd7140c6c836a330a040b5fafd4fdd351fe",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 73342.0,
+          "opponent_cash": 117016.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "ae121ce1975f31dfe3225464667f2cd7140c6c836a330a040b5fafd4fdd351fe",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 73342.0,
+          "opponent_cash": 117016.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "ed1f135d2caaddd42a9bde8fb9b38a432f1ff1a8e8a2b2530472aea87f3ba248",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 0,
+          "seat": 1,
+          "cash": 73342.0,
+          "opponent_cash": 117016.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "ed0b4dc54b756200ba197540ceb22a0739ab68ffb6c219e9cc94469c7d922f8c",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "92567f61b98335c60139fbd72cf9b0974e0e62c91d1938855031d2be6f8672e1",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 0,
+          "cash": 106393.0,
+          "opponent_cash": 156666.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "92567f61b98335c60139fbd72cf9b0974e0e62c91d1938855031d2be6f8672e1",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 0,
+          "cash": 106393.0,
+          "opponent_cash": 156666.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "1ebf7c0e80ba3836c47c72a3bbf1a7e70d7ebaa5121698bb8391b40489f681bb",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "92f002817610a05ef7060b790196c72bb38d0abbd95a2c39e043aacbd7c6fc40",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 1,
+          "cash": 68155.0,
+          "opponent_cash": 50748.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "92f002817610a05ef7060b790196c72bb38d0abbd95a2c39e043aacbd7c6fc40",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 17,
+          "seat": 1,
+          "cash": 68155.0,
+          "opponent_cash": 50748.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "6fd29b14daadd1993ac93b4ef5d5d1ea30d325b5c86231826aad2fe1e4aa7a46",
+      "rows": 3,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "fa08943e5c3d273616b03254753f0c0919e402b5f13f31ef940d0fc7ea52ba00",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42605.0,
+          "opponent_cash": 64569.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "fa08943e5c3d273616b03254753f0c0919e402b5f13f31ef940d0fc7ea52ba00",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42605.0,
+          "opponent_cash": 64569.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "9f1f4d26faacd1ec3aa7b5f06855b791541b0a864e1aaa8cb7747f164d72877a",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 0,
+          "cash": 42605.0,
+          "opponent_cash": 64569.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "8deccd2fb419d6700ce3d5d61b5d006657acbb617eda273dec273b92f1b86f37",
+      "rows": 3,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "2e51cf00ed0bfa805b91087c6138610b972b1e3369e366b8d2ef90165a2755c5",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 51805.0,
+          "opponent_cash": 63480.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "2e51cf00ed0bfa805b91087c6138610b972b1e3369e366b8d2ef90165a2755c5",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 51805.0,
+          "opponent_cash": 63480.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-interaction-development.json.gz",
+          "episode_record_sha256": "e44dcf73527d81045cf17b44198a7bd11131e8b921d15de548d62203abcae2fc",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 42,
+          "seat": 1,
+          "cash": 51805.0,
+          "opponent_cash": 63480.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "29447fd6db4028677c053ee2fe64cbb7e9f34d5b5f1d2e0ab89f23f0be71782f",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "535e0eb79a398108b8e066d15e5962f9b4d51ac2d4dca7ede5545cf09c69b033",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 0,
+          "cash": 84834.0,
+          "opponent_cash": 105015.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "535e0eb79a398108b8e066d15e5962f9b4d51ac2d4dca7ede5545cf09c69b033",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 0,
+          "cash": 84834.0,
+          "opponent_cash": 105015.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    },
+    {
+      "physical_scenario_sha256": "54be80bcc6feb197f4cdbbbbe79483986e41930e01b2ba02ec2a373aa9937bd4",
+      "rows": 2,
+      "role_reversed": false,
+      "records": [
+        {
+          "archive": "reports\\results\\phase2-frontier-screen-e8721025f932.json.gz",
+          "episode_record_sha256": "6e61aec9020432d25953eb8841cec71bad2a42442e8cce7e947293ba2e8f4a28",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 1,
+          "cash": 79265.0,
+          "opponent_cash": 104628.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "archive": "reports\\results\\phase2-frontier-screen.json.gz",
+          "episode_record_sha256": "6e61aec9020432d25953eb8841cec71bad2a42442e8cce7e947293ba2e8f4a28",
+          "candidate_sha256": "750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee",
+          "seed": 103,
+          "seat": 1,
+          "cash": 79265.0,
+          "opponent_cash": 104628.0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "unique_manifest_bytes": 37,
+    "recorded_episode_rows": 624,
+    "unique_episode_records": 584,
+    "identical_episode_copy_rows": 40,
+    "non_DONE_rows": 0,
+    "unique_physical_scenarios": 568,
+    "repeated_scenario_extra_rows": 56,
+    "role_reversed_extra_records": 8,
+    "additional_distinct_records_same_orientation": 8,
+    "used_seeds": [
+      0,
+      5,
+      11,
+      17,
+      42,
+      103,
+      10000,
+      10017
+    ]
+  },
+  "offline_diagnostics": [
+    {
+      "source": "data\\interim\\phase2-diagnosis\\diagnosis.json",
+      "archive": "reports\\diagnostics\\phase2-diagnosis-diagnosis.json.gz",
+      "sha256_uncompressed": "dfefc8550143f8d5261e6957c45fb1050b780cf818355a9f7f1d55d37cb71c21",
+      "additional_episode_count": 0,
+      "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
+    },
+    {
+      "source": "data\\interim\\phase2-economics\\market-calibration.json",
+      "archive": "reports\\diagnostics\\phase2-economics-market-calibration.json.gz",
+      "sha256_uncompressed": "054908bbb95b78c9cf394ed689c3b8d6e1970aab07ebfa578aa2c378466c685f",
+      "additional_episode_count": 0,
+      "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
+    },
+    {
+      "source": "data\\interim\\phase2-economics\\summary.json",
+      "archive": "reports\\diagnostics\\phase2-economics-summary.json.gz",
+      "sha256_uncompressed": "48027da7c22b7ac0736de8aa152f19cbdba8383b2baba163aaff0dcd6353be4a",
+      "additional_episode_count": 0,
+      "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
+    },
+    {
+      "source": "data\\interim\\phase2-economics\\marginal-runtime-probe.json",
+      "archive": "reports\\diagnostics\\phase2-economics-marginal-runtime-probe.json.gz",
+      "sha256_uncompressed": "6731fbfd4e2014860b69c74a58e7557e0443b4a4212d020030281c49337c0cf3",
+      "additional_episode_count": 0,
+      "scope": "Existing-game diagnosis or derived summary; excluded from game totals"
+    }
+  ]
+}

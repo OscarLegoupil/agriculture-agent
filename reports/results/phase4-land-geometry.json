@@ -1,0 +1,94 @@
+[
+  {
+    "replay": "reports\\replays\\phase4-land\\6c3d587de64242b3f6937b7b0aa2b4fc1369e21851a4539c78c82bcd401223af-reference-cok-main-3063-0.json",
+    "purchases": [
+      {
+        "day": 4,
+        "hour": 21,
+        "quadrant": "NE",
+        "cash_before_turn": 1341.0
+      },
+      {
+        "day": 10,
+        "hour": 17,
+        "quadrant": "SW",
+        "cash_before_turn": 8465.0
+      },
+      {
+        "day": 12,
+        "hour": 20,
+        "quadrant": "SE",
+        "cash_before_turn": 12467.0
+      }
+    ],
+    "daily": [
+      {
+        "day": 12,
+        "productive": 51,
+        "SE": 0,
+        "mean_nearest_shed_distance": 3.5098039215686274
+      },
+      {
+        "day": 15,
+        "productive": 68,
+        "SE": 6,
+        "mean_nearest_shed_distance": 3.3088235294117645
+      },
+      {
+        "day": 20,
+        "productive": 68,
+        "SE": 9,
+        "mean_nearest_shed_distance": 3.264705882352941
+      },
+      {
+        "day": 25,
+        "productive": 57,
+        "SE": 10,
+        "mean_nearest_shed_distance": 2.9473684210526314
+      }
+    ]
+  },
+  {
+    "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+    "purchases": [
+      {
+        "day": 4,
+        "hour": 21,
+        "quadrant": "NE",
+        "cash_before_turn": 1341.0
+      },
+      {
+        "day": 9,
+        "hour": 16,
+        "quadrant": "SW",
+        "cash_before_turn": 2943.0
+      }
+    ],
+    "daily": [
+      {
+        "day": 12,
+        "productive": 59,
+        "SE": 0,
+        "mean_nearest_shed_distance": 3.5254237288135593
+      },
+      {
+        "day": 15,
+        "productive": 68,
+        "SE": 0,
+        "mean_nearest_shed_distance": 3.6470588235294117
+      },
+      {
+        "day": 20,
+        "productive": 68,
+        "SE": 0,
+        "mean_nearest_shed_distance": 3.6470588235294117
+      },
+      {
+        "day": 25,
+        "productive": 57,
+        "SE": 0,
+        "mean_nearest_shed_distance": 3.473684210526316
+      }
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "old_sha256": "d7a816d4fa82be8a781c2d4c9ee845eb6062c8468cc3eb7013fb2c66cb45902a",
+  "new_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "scope": "Saved-observation action comparison, no new games",
+  "complete": true,
+  "results": [
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-cok-main-2002-0.json",
+      "replay_sha256": "4e3acbf25ac3779706ead202cd597b2a7d718a87e4837759c4277ff2a00a190e",
+      "seat": 0,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-cok-main-2002-1.json",
+      "replay_sha256": "82ba75f794fdfdeaddf049a874551e75d5db72c9e74501f19e3ad15cb5e1f7d7",
+      "seat": 1,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-cok-main-2009-0.json",
+      "replay_sha256": "d41acd7df16e21fb6411bbf2e7ef97741ccc133d73c7dec11555086391de2636",
+      "seat": 0,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-cok-main-2009-1.json",
+      "replay_sha256": "9d616233e5b8134ab0a44c1e591b72b35e3e615fedf4a7328ffa6775b1a639aa",
+      "seat": 1,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-gzm-main-2002-0.json",
+      "replay_sha256": "945edfc6c000f3dd186e4f7e2ce1c18d994363053674039bca43c2ea6c25c671",
+      "seat": 0,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-gzm-main-2002-1.json",
+      "replay_sha256": "c8836faecd4b1aa0be90437aa738d59ee5b7973c9ea114ca9454e70089e0529b",
+      "seat": 1,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-lonespear-main-2002-0.json",
+      "replay_sha256": "25cec15b94aa8ffddda52df54a9739d0db775f51c59b662f7d16911d7904623a",
+      "seat": 0,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-lonespear-main-2002-1.json",
+      "replay_sha256": "ec17ce1d9fce169f48fbd3f218a73bc8c68dbfcc730291a9ab6fd474208cb997",
+      "seat": 1,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-seyam-main-2002-0.json",
+      "replay_sha256": "453e25efa799eacdd0040faa7dd835ebb50e135cd1098058bf4b66bde2f26665",
+      "seat": 0,
+      "actions_compared": 719,
+      "differences": []
+    },
+    {
+      "replay": "reports/replays/phase3-opening-field/febe9c76051a11e9ea7700e2d4701722e98274c51c50874ad03e1088b9398d4b-reference-seyam-main-2002-1.json",
+      "replay_sha256": "2c0eaea22d4de1e4ee5f775dced4c76b74065031a8b86054afa3c375a0056c1a",
+      "seat": 1,
+      "actions_compared": 719,
+      "differences": []
+    }
+  ]
+}

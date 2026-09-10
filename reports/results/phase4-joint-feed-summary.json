@@ -1,0 +1,105 @@
+{
+  "complete": true,
+  "scope": "known four-seed development panel",
+  "results": [
+    {
+      "candidate": {
+        "name": "joint_banked",
+        "sha256": "ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3",
+        "snapshot": "reports\\sources\\ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3.py.gz"
+      },
+      "base_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+      "opponent": "data/raw/reference-seyam/main.py",
+      "games": 8,
+      "base_wins": 8,
+      "wins": 8,
+      "draws": 0,
+      "base_mean_gap": 9480.875,
+      "mean_gap": 8673.25,
+      "paired_gap_change": -807.625,
+      "stderr_turns": 5,
+      "max_action_seconds": 0.094039,
+      "statuses": {
+        "['DONE', 'DONE']": 8
+      },
+      "losses": {
+        "terminal_escapes": 15,
+        "water_deaths": 2
+      }
+    },
+    {
+      "candidate": {
+        "name": "joint_banked",
+        "sha256": "ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3",
+        "snapshot": "reports\\sources\\ecd510b27ebd7dbecee158c3687e322670b35cfc24d2eb59f981131bbd2707a3.py.gz"
+      },
+      "base_sha256": "401b58a64d12a3df82ae9157a8d12a0d1e99c10c273fecb96f0d399501a9c6d4",
+      "opponent": "data/raw/reference-cok/main.py",
+      "games": 8,
+      "base_wins": 4,
+      "wins": 6,
+      "draws": 0,
+      "base_mean_gap": -2087.5,
+      "mean_gap": 2750.25,
+      "paired_gap_change": 4837.75,
+      "stderr_turns": 3,
+      "max_action_seconds": 0.076386,
+      "statuses": {
+        "['DONE', 'DONE']": 8
+      },
+      "losses": {
+        "water_deaths": 5,
+        "terminal_escapes": 27
+      }
+    },
+    {
+      "candidate": {
+        "name": "joint_depot",
+        "sha256": "f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7",
+        "snapshot": "reports\\sources\\f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7.py.gz"
+      },
+      "base_sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+      "opponent": "data/raw/reference-seyam/main.py",
+      "games": 8,
+      "base_wins": 7,
+      "wins": 7,
+      "draws": 0,
+      "base_mean_gap": 7359.75,
+      "mean_gap": 7670.5,
+      "paired_gap_change": 310.75,
+      "stderr_turns": 1,
+      "max_action_seconds": 0.071666,
+      "statuses": {
+        "['DONE', 'DONE']": 8
+      },
+      "losses": {
+        "water_deaths": 6,
+        "terminal_escapes": 11
+      }
+    },
+    {
+      "candidate": {
+        "name": "joint_depot",
+        "sha256": "f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7",
+        "snapshot": "reports\\sources\\f99a5d18c21f93ed64a31c53f9277ae0174edba7f211135a1bb2f20291fc4dd7.py.gz"
+      },
+      "base_sha256": "ee412dabf71824ebf32c870b021bc7ae0a3cc35d231f142c8c0fc8550d09a6ba",
+      "opponent": "data/raw/reference-cok/main.py",
+      "games": 8,
+      "base_wins": 6,
+      "wins": 6,
+      "draws": 0,
+      "base_mean_gap": 8132.875,
+      "mean_gap": 6774.375,
+      "paired_gap_change": -1358.5,
+      "stderr_turns": 2,
+      "max_action_seconds": 0.072814,
+      "statuses": {
+        "['DONE', 'DONE']": 8
+      },
+      "losses": {
+        "terminal_escapes": 18
+      }
+    }
+  ]
+}

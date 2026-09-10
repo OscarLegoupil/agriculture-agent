@@ -1,0 +1,31 @@
+{
+  "revision": "ec40cfc7df0cfd2e92930e24009224abc8c146a7",
+  "workflow_url": "https://github.com/OscarLegoupil/agriculture-agent/actions/runs/34365749991",
+  "job_id": 102514100331,
+  "conclusion": "success",
+  "tests_passed": 351,
+  "tests_skipped": 1,
+  "log_sha256": "19ab0ad304f2817b7dcf4b718a19f501d3bee791ba72d6a1b092277b169bf351",
+  "packaging": {
+    "v8_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+    "trajectory_actions_compared": 2876,
+    "isolated_actions_compared": 60,
+    "v8_resource_ru_maxrss_bytes": 256299008,
+    "incumbent_resource_ru_maxrss_bytes": 251355136,
+    "memory_note": "Historical resource.ru_maxrss includes pre-exec address-space history; corrected measurements below separate current-image accounting."
+  },
+  "corrected_memory_ci": {
+    "revision": "0254687b4bbb34193daa6c4e3112a7fdcd103c05",
+    "workflow_url": "https://github.com/OscarLegoupil/agriculture-agent/actions/runs/34367086670",
+    "job_id": 102518485934,
+    "conclusion": "success",
+    "tests_passed": 355,
+    "tests_skipped": 1,
+    "log_sha256": "8bf2d8de7392ac359ac96d88983b973383fd372f127d5e0daf86f163ffdedeeb",
+    "v8_current_image_peak_rss_bytes": 23506944,
+    "v8_resource_peak_rss_bytes": 256131072,
+    "incumbent_current_image_peak_rss_bytes": 23207936,
+    "incumbent_resource_peak_rss_bytes": 251432960,
+    "measure": "Linux /proc/self/status VmHWM; approximate current-image RSS high-water estimate. The allocate-then-exec regression passed."
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "complete": true,
+  "scope": "known-data confirmation; no fresh selection claim",
+  "inputs": {
+    "incumbent": {
+      "path": "reports\\results\\phase3-validation-challenger.json.gz",
+      "sha256_file": "95c5b9f307df87323c280069291057bb2e958a9fe4def49263aec097b4ea67cc"
+    },
+    "candidate": {
+      "path": "data\\raw\\phase4-input-batches-field.json",
+      "sha256_file": "68398ef6741ddd14f01d23708e58ed4487488bdc00a678f37d5e1f5b7cf2e4e9"
+    }
+  },
+  "candidate": {
+    "name": "service_input_batches",
+    "sha256": "03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce",
+    "snapshot": "reports\\sources\\03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce.py.gz"
+  },
+  "comparison": {
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031
+    ],
+    "weights": {
+      "data/raw/reference-seyam/main.py": 0.5,
+      "data/raw/reference-cok/main.py": 0.5
+    },
+    "opponents": {
+      "data/raw/reference-cok/main.py": {
+        "games": 64,
+        "incumbent_score": 0.328125,
+        "challenger_score": 0.234375,
+        "score_delta": -0.09375,
+        "delta_ci95": [
+          -0.25,
+          0.046875
+        ],
+        "incumbent_cash_gap": {
+          "n": 64,
+          "missing": 0,
+          "mean": -4732.421875,
+          "median": -5981.0,
+          "p10": -12327.5
+        },
+        "challenger_cash_gap": {
+          "n": 64,
+          "missing": 0,
+          "mean": -4003.9375,
+          "median": -6909.5,
+          "p10": -14755.0
+        },
+        "mean_paired_gap_change": 728.484375,
+        "paired_gap_n": 64,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.129162,
+        "failed_work": 0
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 64,
+        "incumbent_score": 0.921875,
+        "challenger_score": 1.0,
+        "score_delta": 0.078125,
+        "delta_ci95": [
+          0.0,
+          0.171875
+        ],
+        "incumbent_cash_gap": {
+          "n": 64,
+          "missing": 0,
+          "mean": 16608.578125,
+          "median": 15972.5,
+          "p10": 3250.0000000000036
+        },
+        "challenger_cash_gap": {
+          "n": 64,
+          "missing": 0,
+          "mean": 20644.546875,
+          "median": 16976.5,
+          "p10": 6884.1
+        },
+        "mean_paired_gap_change": 4035.96875,
+        "paired_gap_n": 64,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.086209,
+        "failed_work": 0
+      }
+    },
+    "aggregate": {
+      "incumbent_score": 0.625,
+      "challenger_score": 0.6171875,
+      "score_delta": -0.0078125,
+      "delta_ci95": [
+        -0.09375,
+        0.078125
+      ],
+      "challenger_ci95": [
+        0.546875,
+        0.6953125
+      ]
+    },
+    "identities": {
+      "incumbent": {
+        "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+        "source": "submissions/20260909-v8/main.py",
+        "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+        "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+        "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+      },
+      "challenger": {
+        "sha256": "03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce",
+        "source": "data\\interim\\strategy-screen\\03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce\\main.py",
+        "executed_candidate": "data\\interim\\strategy-screen\\03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce\\main.py",
+        "snapshot": "reports\\sources\\03ed22025fedf5f3c3687de2846be9fbc14a7cf0ecb50193bafb05fb7dd309ce.py.gz",
+        "revision": "5e06d62cca0338c4f5ff63351727e1b5a0fe53f2"
+      }
+    },
+    "provenance": {
+      "environment_version": "1.32.7",
+      "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+      "dependencies": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1"
+      },
+      "all_opponent_hashes": {
+        "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+        "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+      },
+      "scenario_configuration_sha256": "f918524b388587244397f5d52b88ac17b178cb2a1e9dc829ee2f20f1906afc10",
+      "validated_full_panel": {
+        "opponents": [
+          "data/raw/reference-cok/main.py",
+          "data/raw/reference-seyam/main.py"
+        ],
+        "seeds": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015,
+          3016,
+          3017,
+          3018,
+          3019,
+          3020,
+          3021,
+          3022,
+          3023,
+          3024,
+          3025,
+          3026,
+          3027,
+          3028,
+          3029,
+          3030,
+          3031
+        ],
+        "games_per_policy": 128
+      }
+    }
+  },
+  "behavior": {
+    "data/raw/reference-seyam/main.py": {
+      "games": 64,
+      "wheat_net_cash_mean_including_seeds": -6215.71875,
+      "wheat_income_mean": 4157.5625,
+      "wheat_expense_mean_including_seeds": 10373.28125,
+      "wheat_seed_units_mean": 71.984375,
+      "wheat_purchased_feed_units_mean": 222.296875,
+      "berry_income_mean": 29504.84375,
+      "labor_expense_mean": 8204.40625,
+      "successful_hires_mean": 307.515625,
+      "moves_mean": 4213.921875,
+      "day15_mean_composition": {
+        "COOP": 0.015625,
+        "COW": 8.78125,
+        "GOOSE": 1.75,
+        "PASTURE": 0.03125,
+        "SHEEP": 7.4375,
+        "STRAWBERRY": 42.546875,
+        "WEED": 0.234375,
+        "WHEAT": 6.8125
+      },
+      "losses_total": {
+        "water_deaths": 18,
+        "terminal_escapes": 96,
+        "animal_escapes": 18
+      },
+      "stderr_turns": 0,
+      "max_action_seconds": 0.086209,
+      "daily_capacity": [
+        {
+          "day": 8,
+          "wheat_mean": 2.15625,
+          "berries_mean": 24.9375,
+          "animals_mean": 4,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 8.90625,
+          "nonproductive_owned_tiles_upper_bound_mean": 4.90625,
+          "plots_mean": 2
+        },
+        {
+          "day": 9,
+          "wheat_mean": 3.796875,
+          "berries_mean": 24.9375,
+          "animals_mean": 7.203125,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 7.265625,
+          "nonproductive_owned_tiles_upper_bound_mean": 0.0625,
+          "plots_mean": 2
+        },
+        {
+          "day": 10,
+          "wheat_mean": 2.640625,
+          "berries_mean": 24.9375,
+          "animals_mean": 8.9375,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 8.421875,
+          "nonproductive_owned_tiles_upper_bound_mean": 10.8125,
+          "plots_mean": 2.453125
+        },
+        {
+          "day": 11,
+          "wheat_mean": 4.6875,
+          "berries_mean": 26.59375,
+          "animals_mean": 10.609375,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 16.390625,
+          "nonproductive_owned_tiles_upper_bound_mean": 17.890625,
+          "plots_mean": 2.484375
+        },
+        {
+          "day": 12,
+          "wheat_mean": 6.625,
+          "berries_mean": 33.765625,
+          "animals_mean": 13.21875,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 7.609375,
+          "nonproductive_owned_tiles_upper_bound_mean": 19.390625,
+          "plots_mean": 3
+        },
+        {
+          "day": 13,
+          "wheat_mean": 6.84375,
+          "berries_mean": 39.046875,
+          "animals_mean": 16.140625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 2.890625,
+          "nonproductive_owned_tiles_upper_bound_mean": 11.75,
+          "plots_mean": 3
+        },
+        {
+          "day": 14,
+          "wheat_mean": 6.71875,
+          "berries_mean": 40.96875,
+          "animals_mean": 17.640625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 2.3125,
+          "nonproductive_owned_tiles_upper_bound_mean": 9.671875,
+          "plots_mean": 3
+        },
+        {
+          "day": 15,
+          "wheat_mean": 6.8125,
+          "berries_mean": 42.546875,
+          "animals_mean": 17.96875,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.640625,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.671875,
+          "plots_mean": 3
+        },
+        {
+          "day": 16,
+          "wheat_mean": 6.171875,
+          "berries_mean": 42.546875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.953125,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.953125,
+          "plots_mean": 3
+        },
+        {
+          "day": 17,
+          "wheat_mean": 6.53125,
+          "berries_mean": 42.546875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.234375,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.234375,
+          "plots_mean": 3
+        },
+        {
+          "day": 18,
+          "wheat_mean": 6.515625,
+          "berries_mean": 42.546875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.078125,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.078125,
+          "plots_mean": 3
+        },
+        {
+          "day": 19,
+          "wheat_mean": 5.28125,
+          "berries_mean": 42.546875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 1.15625,
+          "nonproductive_owned_tiles_upper_bound_mean": 8.15625,
+          "plots_mean": 3
+        },
+        {
+          "day": 20,
+          "wheat_mean": 5.484375,
+          "berries_mean": 42.546875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.859375,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.859375,
+          "plots_mean": 3
+        }
+      ]
+    },
+    "data/raw/reference-cok/main.py": {
+      "games": 64,
+      "wheat_net_cash_mean_including_seeds": -6394.890625,
+      "wheat_income_mean": 3545.875,
+      "wheat_expense_mean_including_seeds": 9940.765625,
+      "wheat_seed_units_mean": 68.28125,
+      "wheat_purchased_feed_units_mean": 218.796875,
+      "berry_income_mean": 28301.296875,
+      "labor_expense_mean": 8096.71875,
+      "successful_hires_mean": 307.03125,
+      "moves_mean": 4211.25,
+      "day15_mean_composition": {
+        "COW": 10.21875,
+        "GOOSE": 2.1875,
+        "PASTURE": 0.515625,
+        "SHEEP": 5.59375,
+        "STRAWBERRY": 42.796875,
+        "WEED": 0.203125,
+        "WHEAT": 6.78125
+      },
+      "losses_total": {
+        "terminal_escapes": 59,
+        "animal_escapes": 42,
+        "water_deaths": 22
+      },
+      "stderr_turns": 0,
+      "max_action_seconds": 0.129162,
+      "daily_capacity": [
+        {
+          "day": 8,
+          "wheat_mean": 5.078125,
+          "berries_mean": 24.0625,
+          "animals_mean": 4,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 6.859375,
+          "nonproductive_owned_tiles_upper_bound_mean": 2.859375,
+          "plots_mean": 2
+        },
+        {
+          "day": 9,
+          "wheat_mean": 5.09375,
+          "berries_mean": 24.125,
+          "animals_mean": 6,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 6.78125,
+          "nonproductive_owned_tiles_upper_bound_mean": 1.171875,
+          "plots_mean": 2.015625
+        },
+        {
+          "day": 10,
+          "wheat_mean": 3.078125,
+          "berries_mean": 24.828125,
+          "animals_mean": 7.828125,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 8.09375,
+          "nonproductive_owned_tiles_upper_bound_mean": 18.234375,
+          "plots_mean": 2.71875
+        },
+        {
+          "day": 11,
+          "wheat_mean": 4.703125,
+          "berries_mean": 26.125,
+          "animals_mean": 10.078125,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 16.25,
+          "nonproductive_owned_tiles_upper_bound_mean": 24.921875,
+          "plots_mean": 2.75
+        },
+        {
+          "day": 12,
+          "wheat_mean": 6.6875,
+          "berries_mean": 34.671875,
+          "animals_mean": 12.90625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 6.640625,
+          "nonproductive_owned_tiles_upper_bound_mean": 18.734375,
+          "plots_mean": 3
+        },
+        {
+          "day": 13,
+          "wheat_mean": 6.828125,
+          "berries_mean": 39.890625,
+          "animals_mean": 15.734375,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 2.359375,
+          "nonproductive_owned_tiles_upper_bound_mean": 11.625,
+          "plots_mean": 3
+        },
+        {
+          "day": 14,
+          "wheat_mean": 6.234375,
+          "berries_mean": 41.390625,
+          "animals_mean": 17.453125,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 2.375,
+          "nonproductive_owned_tiles_upper_bound_mean": 9.921875,
+          "plots_mean": 3
+        },
+        {
+          "day": 15,
+          "wheat_mean": 6.78125,
+          "berries_mean": 42.796875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.421875,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.421875,
+          "plots_mean": 3
+        },
+        {
+          "day": 16,
+          "wheat_mean": 5.9375,
+          "berries_mean": 42.796875,
+          "animals_mean": 18,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.75,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.75,
+          "plots_mean": 3
+        },
+        {
+          "day": 17,
+          "wheat_mean": 6.109375,
+          "berries_mean": 42.796875,
+          "animals_mean": 17.8125,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.359375,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.546875,
+          "plots_mean": 3
+        },
+        {
+          "day": 18,
+          "wheat_mean": 5.9375,
+          "berries_mean": 42.796875,
+          "animals_mean": 17.765625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.234375,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.46875,
+          "plots_mean": 3
+        },
+        {
+          "day": 19,
+          "wheat_mean": 5.109375,
+          "berries_mean": 42.796875,
+          "animals_mean": 17.765625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.671875,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.90625,
+          "plots_mean": 3
+        },
+        {
+          "day": 20,
+          "wheat_mean": 4.875,
+          "berries_mean": 42.796875,
+          "animals_mean": 17.765625,
+          "wheat_target_mean": null,
+          "crop_budget_headroom_mean": 0.625,
+          "nonproductive_owned_tiles_upper_bound_mean": 7.859375,
+          "plots_mean": 3
+        }
+      ]
+    }
+  }
+}

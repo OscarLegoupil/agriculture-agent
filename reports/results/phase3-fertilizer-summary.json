@@ -1,0 +1,29 @@
+{
+  "hypothesis": "Economically gated annual fertilizer before watering",
+  "decision": "Inconclusive score; small positive margin screen warrants interaction testing, not promotion",
+  "candidate_hash": "8ab3bd2449f7173722d00c871a5027c5681e7148de39db5efc4b2dc5265305a5",
+  "base_sha256": "dbd2a8418b57573cb6084712bfbcd2d18245fac83fcf18bc1ab7c39345b5d955",
+  "official_harvest_cases": 6,
+  "economic_admission_cases": 2,
+  "opponents": {
+    "data/raw/reference-cok/main.py": {
+      "base_wins": 2,
+      "candidate_wins": 2,
+      "base_mean_gap": 639.75,
+      "candidate_mean_gap": 2569.0,
+      "mean_cash_change": 3182.25,
+      "mean_gap_change": 1929.25
+    },
+    "data/raw/reference-seyam/main.py": {
+      "base_wins": 4,
+      "candidate_wins": 4,
+      "base_mean_gap": 15913.25,
+      "candidate_mean_gap": 16157.5,
+      "mean_cash_change": 779.0,
+      "mean_gap_change": 244.25
+    }
+  },
+  "errors": 0,
+  "stderr": 0,
+  "runtime_max_seconds": 0.075416
+}

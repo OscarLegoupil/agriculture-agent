@@ -1,4 +1,4 @@
-"""Budgeted production search using complete official-interpreter games."""
+"""Historical v7 production screens using complete official-interpreter games."""
 
 import argparse
 import json
@@ -14,9 +14,10 @@ def main():
     parser.add_argument("--seeds", nargs="+", type=int, default=[0, 17])
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--stage", type=int, default=1)
+    parser.add_argument("--source", type=Path, default=Path("submissions/20260909-v7/main.py"))
     parser.add_argument("--opponents", nargs="+", default=["data/raw/reference-lonespear/main.py"])
     args = parser.parse_args()
-    source = Path("src/kaggriculture/agent/competitive.py").read_text(encoding="utf-8")
+    source = args.source.read_text(encoding="utf-8")
     candidates = {
         "mixed": {},
         "compact": {"quadrants": 1, "crop_tiles": 15},
@@ -79,7 +80,8 @@ def main():
         }
     manifest = {
         **provenance(args.opponents),
-        "source_hash": sha("src/kaggriculture/agent/competitive.py"),
+        "source": args.source.as_posix(),
+        "source_hash": sha(args.source),
         "candidates": {},
         "episodes": [],
     }

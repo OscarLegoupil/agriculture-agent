@@ -1,0 +1,242 @@
+[
+  {
+    "mode": "land_only",
+    "opponent": "data/raw/reference-cok/main.py",
+    "games": 8,
+    "wins": 5,
+    "draws": 0,
+    "mean_gap": 4120.625,
+    "paired_gap_change": 5865.375,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 68,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 7936.0,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 43,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 7.5,
+      "SHEEP": 7.25,
+      "GOOSE": 3.25
+    },
+    "mean_wheat_expense": 9749.75,
+    "mean_successful_moves": 4013.875,
+    "baseline_mean_successful_moves": 4182.375,
+    "mean_successful_harvest_actions": 380.75,
+    "losses": {
+      "animal_escapes": 0,
+      "terminal_escapes": 21,
+      "water_deaths": 1,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.05187
+  },
+  {
+    "mode": "land_only",
+    "opponent": "data/raw/reference-seyam/main.py",
+    "games": 8,
+    "wins": 8,
+    "draws": 0,
+    "mean_gap": 13562.0,
+    "paired_gap_change": 5915.875,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 68,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 8224.0,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 43,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 14.25,
+      "SHEEP": 2.875,
+      "GOOSE": 0.875
+    },
+    "mean_wheat_expense": 10766.875,
+    "mean_successful_moves": 4006.625,
+    "baseline_mean_successful_moves": 4201.875,
+    "mean_successful_harvest_actions": 361.875,
+    "losses": {
+      "animal_escapes": 0,
+      "terminal_escapes": 8,
+      "water_deaths": 3,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.050041
+  },
+  {
+    "mode": "crop70",
+    "opponent": "data/raw/reference-cok/main.py",
+    "games": 8,
+    "wins": 3,
+    "draws": 0,
+    "mean_gap": -4330.0,
+    "paired_gap_change": -2585.25,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 87.375,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 7936.0,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 56,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 7.5,
+      "SHEEP": 6.75,
+      "GOOSE": 3.625
+    },
+    "mean_wheat_expense": 9341,
+    "mean_successful_moves": 4160,
+    "baseline_mean_successful_moves": 4182.375,
+    "mean_successful_harvest_actions": 391,
+    "losses": {
+      "animal_escapes": 6,
+      "terminal_escapes": 9,
+      "water_deaths": 3,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.179929
+  },
+  {
+    "mode": "crop70",
+    "opponent": "data/raw/reference-seyam/main.py",
+    "games": 8,
+    "wins": 2,
+    "draws": 0,
+    "mean_gap": -2096.125,
+    "paired_gap_change": -9742.25,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 87.125,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 8224.0,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 56.75,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 14.25,
+      "SHEEP": 2.875,
+      "GOOSE": 0.875
+    },
+    "mean_wheat_expense": 10447,
+    "mean_successful_moves": 4176.625,
+    "baseline_mean_successful_moves": 4201.875,
+    "mean_successful_harvest_actions": 376.125,
+    "losses": {
+      "animal_escapes": 1,
+      "terminal_escapes": 5,
+      "water_deaths": 3,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.152605
+  },
+  {
+    "mode": "crop70_hands14",
+    "opponent": "data/raw/reference-cok/main.py",
+    "games": 8,
+    "wins": 1,
+    "draws": 0,
+    "mean_gap": -4828.25,
+    "paired_gap_change": -3083.5,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 88,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 19126.75,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 60.375,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 7.5,
+      "SHEEP": 6.75,
+      "GOOSE": 3.75
+    },
+    "mean_wheat_expense": 9639.75,
+    "mean_successful_moves": 4617.125,
+    "baseline_mean_successful_moves": 4182.375,
+    "mean_successful_harvest_actions": 417.5,
+    "losses": {
+      "animal_escapes": 1,
+      "terminal_escapes": 16,
+      "water_deaths": 3,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.118625
+  },
+  {
+    "mode": "crop70_hands14",
+    "opponent": "data/raw/reference-seyam/main.py",
+    "games": 8,
+    "wins": 3,
+    "draws": 0,
+    "mean_gap": -4508.375,
+    "paired_gap_change": -12154.5,
+    "land_purchase_counts": {
+      "3": 8
+    },
+    "mean_daily_sampled_peak_productive": 88,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 19945.875,
+    "mean_day15_composition": {
+      "WHEAT": 6.875,
+      "CARROT": 0,
+      "STRAWBERRY": 61.875,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 14.125,
+      "SHEEP": 2.875,
+      "GOOSE": 1
+    },
+    "mean_wheat_expense": 11062.125,
+    "mean_successful_moves": 4652,
+    "baseline_mean_successful_moves": 4201.875,
+    "mean_successful_harvest_actions": 405.875,
+    "losses": {
+      "animal_escapes": 2,
+      "terminal_escapes": 11,
+      "water_deaths": 3,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 8
+    },
+    "runtime_max_seconds": 0.16395
+  }
+]

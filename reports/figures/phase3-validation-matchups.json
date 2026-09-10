@@ -1,0 +1,172 @@
+{
+  "generator": "scripts/phase3_figures.py",
+  "summary": {
+    "path": "reports/results/phase3-validation-summary.json",
+    "sha256_file": "fc5c30f3e40e7a1878dbd9f7857c61c26144aac92f2432ada91f75be87eba9d8"
+  },
+  "inputs": {
+    "incumbent": {
+      "path": "reports/results/phase3-validation-incumbent.json.gz",
+      "sha256_file": "99ec9c11d2b947736d7b474b637d407f6fb8297c8bfd12d0313134160fa6218d"
+    },
+    "challenger": {
+      "path": "reports/results/phase3-validation-challenger.json.gz",
+      "sha256_file": "95c5b9f307df87323c280069291057bb2e958a9fe4def49263aec097b4ea67cc"
+    }
+  },
+  "identities": {
+    "incumbent": {
+      "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+      "source": "data/interim/phase2-challenger/main.py",
+      "executed_candidate": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+      "snapshot": "reports\\sources\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b.py.gz",
+      "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+    },
+    "challenger": {
+      "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+      "source": "submissions/20260909-v8/main.py",
+      "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+      "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+      "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+    }
+  },
+  "stage": "validation",
+  "plotted_opponents": {
+    "data/raw/reference-cok/main.py": {
+      "games": 128,
+      "incumbent_score": 0.015625,
+      "challenger_score": 0.3203125,
+      "score_delta": 0.3046875,
+      "delta_ci95": [
+        0.203125,
+        0.4140625
+      ],
+      "incumbent_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": -34130.484375,
+        "median": -32231.0,
+        "p10": -57223.3
+      },
+      "challenger_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": -4528.2890625,
+        "median": -5479.5,
+        "p10": -13557.5
+      },
+      "mean_paired_gap_change": 29602.1953125,
+      "paired_gap_n": 128,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.101945,
+      "failed_work": 0
+    },
+    "data/raw/reference-gzm/main.py": {
+      "games": 128,
+      "incumbent_score": 0.9140625,
+      "challenger_score": 1.0,
+      "score_delta": 0.0859375,
+      "delta_ci95": [
+        0.0390625,
+        0.1484375
+      ],
+      "incumbent_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": 16480.7578125,
+        "median": 15879.5,
+        "p10": 1200.3000000000006
+      },
+      "challenger_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": 41180.375,
+        "median": 41994.5,
+        "p10": 21537.0
+      },
+      "mean_paired_gap_change": 24699.6171875,
+      "paired_gap_n": 128,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.040554,
+      "failed_work": 0
+    },
+    "data/raw/reference-lonespear/main.py": {
+      "games": 128,
+      "incumbent_score": 0.984375,
+      "challenger_score": 1.0,
+      "score_delta": 0.015625,
+      "delta_ci95": [
+        0.0,
+        0.0390625
+      ],
+      "incumbent_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": 22340.3046875,
+        "median": 22637.5,
+        "p10": 3359.600000000001
+      },
+      "challenger_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": 43803.8828125,
+        "median": 44117.0,
+        "p10": 26250.0
+      },
+      "mean_paired_gap_change": 21463.578125,
+      "paired_gap_n": 128,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.04145,
+      "failed_work": 0
+    },
+    "data/raw/reference-seyam/main.py": {
+      "games": 128,
+      "incumbent_score": 0.203125,
+      "challenger_score": 0.9140625,
+      "score_delta": 0.7109375,
+      "delta_ci95": [
+        0.609375,
+        0.8046875
+      ],
+      "incumbent_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": -9238.0234375,
+        "median": -10963.0,
+        "p10": -29217.1
+      },
+      "challenger_cash_gap": {
+        "n": 128,
+        "missing": 0,
+        "mean": 15460.8046875,
+        "median": 15281.0,
+        "p10": 1079.4000000000012
+      },
+      "mean_paired_gap_change": 24698.828125,
+      "paired_gap_n": 128,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.113925,
+      "failed_work": 0
+    }
+  }
+}

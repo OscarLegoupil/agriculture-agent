@@ -7,8 +7,9 @@ from kaggle_environments import make
 
 
 @pytest.mark.parametrize("seat", [0, 1])
-def test_frozen_agent_smoke(seat):
-    artifact = Path(__file__).resolve().parents[1] / "submissions/20260909-v7/main.py"
+@pytest.mark.parametrize("version", ["v7", "v8"])
+def test_frozen_agent_smoke(seat, version):
+    artifact = Path(__file__).resolve().parents[1] / f"submissions/20260909-{version}/main.py"
     environment = make("kaggriculture", configuration={"seed": 0})
     agents = [str(artifact), "starter"] if seat == 0 else ["starter", str(artifact)]
     environment.run(agents)

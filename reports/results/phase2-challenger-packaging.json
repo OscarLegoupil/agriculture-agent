@@ -1,0 +1,33 @@
+{
+  "source": "data\\interim\\phase2-challenger\\main.py",
+  "artifact": "data\\interim\\frozen\\0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b\\main.py",
+  "sha256": "0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b",
+  "trajectory_actions_compared": 2876,
+  "matches": [
+    {
+      "seed": 23,
+      "seat": 0,
+      "cash": 111159.0
+    },
+    {
+      "seed": 23,
+      "seat": 1,
+      "cash": 97956.0
+    },
+    {
+      "seed": 31,
+      "seat": 0,
+      "cash": 116082.0
+    },
+    {
+      "seed": 31,
+      "seat": 1,
+      "cash": 109929.0
+    }
+  ],
+  "isolated_actions_compared": 60,
+  "fresh_processes": 2,
+  "peak_python_bytes": 3383269,
+  "peak_rss_bytes": 24375296,
+  "memory_measure": "isolated-process peak RSS and tracemalloc Python allocation peak"
+}

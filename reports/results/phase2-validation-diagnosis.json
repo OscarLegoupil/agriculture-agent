@@ -1,0 +1,2475 @@
+{
+  "scope": "Post-selection validation diagnosis, no additional games and no policy changes. Shop paths can differ between whole-policy interventions.",
+  "groups": {
+    "incumbent": {
+      "data/raw/reference-cok/main.py": {
+        "games": 128,
+        "wins": 0,
+        "mean_cash": 69622.96875,
+        "mean_gap": -43224.78125,
+        "median_gap": -42294.5,
+        "p10_gap": -65952.3,
+        "max_crops": 30,
+        "ledger": {
+          "expense:CARROT": 702.8125,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 1653.359375,
+          "expense:GOOSE": 2402.34375,
+          "expense:MELON": 1990.625,
+          "expense:SHEEP": 3019.53125,
+          "expense:STRAWBERRY": 875.78125,
+          "expense:TOMATO": 240.625,
+          "expense:WHEAT": 10980.3046875,
+          "expense:labor": 5147.046875,
+          "expense:land": 1000.0,
+          "hires": 288.515625,
+          "income:CARROT": 3822.484375,
+          "income:EGG": 14086.4765625,
+          "income:FERTILIZER": 14662.390625,
+          "income:MELON": 14035.65625,
+          "income:MILK": 15474.703125,
+          "income:STRAWBERRY": 10588.015625,
+          "income:TOMATO": 2526.8671875,
+          "income:WHEAT": 1853.6640625,
+          "income:WOOL": 19185.140625,
+          "land_purchases": 1,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.0078125,
+          "units:BUY_ANIMAL:SHEEP": 6.0390625,
+          "units:BUY_PRODUCT:FERTILIZER": 93.8984375,
+          "units:BUY_PRODUCT:WHEAT": 249.8046875,
+          "units:BUY_SEED:CARROT": 35.140625,
+          "units:BUY_SEED:MELON": 24.8828125,
+          "units:BUY_SEED:STRAWBERRY": 8.7578125,
+          "units:BUY_SEED:TOMATO": 4.8125,
+          "units:BUY_SEED:WHEAT": 61.4140625,
+          "units:SELL:CARROT": 58.15625,
+          "units:SELL:EGG": 303.5546875,
+          "units:SELL:FERTILIZER": 329.90625,
+          "units:SELL:MELON": 137.59375,
+          "units:SELL:MILK": 143.890625,
+          "units:SELL:STRAWBERRY": 49.359375,
+          "units:SELL:TOMATO": 27.953125,
+          "units:SELL:WHEAT": 35.8671875,
+          "units:SELL:WOOL": 144.46875
+        },
+        "actions": {
+          "idle:PASS": 668.3046875,
+          "success:BUILD_COOP": 8.7890625,
+          "success:BUILD_PASTURE": 12.5859375,
+          "success:CARE": 393.5,
+          "success:COLLECT_FERTILIZER": 350.3125,
+          "success:DIG": 18.8828125,
+          "success:DROP": 165.03125,
+          "success:EAST": 1004.8828125,
+          "success:FEED": 405.0859375,
+          "success:FERTILIZE": 114.3046875,
+          "success:HARVEST": 381.1015625,
+          "success:NORTH": 1162.5625,
+          "success:PICKUP": 192.265625,
+          "success:PLACE": 18.046875,
+          "success:PLANT": 131.921875,
+          "success:SOUTH": 589.6328125,
+          "success:WATER": 474.84375,
+          "success:WEST": 1119.2265625
+        },
+        "losses": {
+          "animal_escapes": 0.3046875,
+          "overflow_units": 0,
+          "terminal_escapes": 0.609375,
+          "water_deaths": 9.1875
+        }
+      },
+      "data/raw/reference-gzm/main.py": {
+        "games": 128,
+        "wins": 85,
+        "mean_cash": 84207.8984375,
+        "mean_gap": 5737.640625,
+        "median_gap": 4334.0,
+        "p10_gap": -9288.6,
+        "max_crops": 30,
+        "ledger": {
+          "expense:CARROT": 405,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 1736.96875,
+          "expense:GOOSE": 2407.03125,
+          "expense:MELON": 1884.375,
+          "expense:SHEEP": 3011.71875,
+          "expense:STRAWBERRY": 932.8125,
+          "expense:TOMATO": 280.46875,
+          "expense:WHEAT": 9164.3125,
+          "expense:labor": 5167.6484375,
+          "expense:land": 1000.0,
+          "hires": 286.421875,
+          "income:CARROT": 2431.0703125,
+          "income:EGG": 13326.1875,
+          "income:FERTILIZER": 14002.265625,
+          "income:MELON": 16761.5078125,
+          "income:MILK": 19421.3671875,
+          "income:STRAWBERRY": 15316.09375,
+          "income:TOMATO": 3796.53125,
+          "income:WHEAT": 2650.6875,
+          "income:WOOL": 21092.5234375,
+          "land_purchases": 1,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.0234375,
+          "units:BUY_ANIMAL:SHEEP": 6.0234375,
+          "units:BUY_PRODUCT:FERTILIZER": 85.8203125,
+          "units:BUY_PRODUCT:WHEAT": 200.5625,
+          "units:BUY_SEED:CARROT": 20.25,
+          "units:BUY_SEED:MELON": 23.5546875,
+          "units:BUY_SEED:STRAWBERRY": 9.328125,
+          "units:BUY_SEED:TOMATO": 5.609375,
+          "units:BUY_SEED:WHEAT": 78.2734375,
+          "units:SELL:CARROT": 32.1484375,
+          "units:SELL:EGG": 272.578125,
+          "units:SELL:FERTILIZER": 305.484375,
+          "units:SELL:MELON": 133.96875,
+          "units:SELL:MILK": 133.0078125,
+          "units:SELL:STRAWBERRY": 61.9453125,
+          "units:SELL:TOMATO": 34.375,
+          "units:SELL:WHEAT": 51.109375,
+          "units:SELL:WOOL": 154.8515625
+        },
+        "actions": {
+          "idle:PASS": 646.578125,
+          "success:BUILD_COOP": 14.7265625,
+          "success:BUILD_PASTURE": 11.6015625,
+          "success:CARE": 377.3984375,
+          "success:COLLECT_FERTILIZER": 338.4609375,
+          "success:DIG": 24.2734375,
+          "success:DROP": 158.4765625,
+          "success:EAST": 1008.6796875,
+          "success:FEED": 390.984375,
+          "success:FERTILIZE": 118.796875,
+          "success:HARVEST": 373.0390625,
+          "success:NORTH": 1163.9765625,
+          "success:PICKUP": 183.765625,
+          "success:PLACE": 18.046875,
+          "success:PLANT": 134.65625,
+          "success:SOUTH": 604.671875,
+          "success:WATER": 509.9453125,
+          "success:WEST": 1082.109375
+        },
+        "losses": {
+          "animal_escapes": 0.2109375,
+          "overflow_units": 0,
+          "terminal_escapes": 1.3359375,
+          "water_deaths": 8.59375
+        }
+      },
+      "data/raw/reference-lonespear/main.py": {
+        "games": 128,
+        "wins": 94,
+        "mean_cash": 83989.9453125,
+        "mean_gap": 10669.203125,
+        "median_gap": 10681.0,
+        "p10_gap": -6467.0,
+        "max_crops": 30,
+        "ledger": {
+          "expense:CARROT": 390,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 2082.3359375,
+          "expense:GOOSE": 2404.6875,
+          "expense:MELON": 2415,
+          "expense:SHEEP": 3066.40625,
+          "expense:STRAWBERRY": 750,
+          "expense:TOMATO": 107.8125,
+          "expense:WHEAT": 10881.484375,
+          "expense:labor": 4999.9140625,
+          "expense:land": 1000.0,
+          "hires": 280.546875,
+          "income:CARROT": 3059.1015625,
+          "income:EGG": 14131.8828125,
+          "income:FERTILIZER": 14327.2421875,
+          "income:MELON": 31497.265625,
+          "income:MILK": 16449.84375,
+          "income:STRAWBERRY": 10806.84375,
+          "income:TOMATO": 1282.0703125,
+          "income:WHEAT": 2516.6875,
+          "income:WOOL": 16616.6484375,
+          "land_purchases": 1,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.015625,
+          "units:BUY_ANIMAL:SHEEP": 6.1328125,
+          "units:BUY_PRODUCT:FERTILIZER": 109.0390625,
+          "units:BUY_PRODUCT:WHEAT": 245.453125,
+          "units:BUY_SEED:CARROT": 19.5,
+          "units:BUY_SEED:MELON": 30.1875,
+          "units:BUY_SEED:STRAWBERRY": 7.5,
+          "units:BUY_SEED:TOMATO": 2.15625,
+          "units:BUY_SEED:WHEAT": 63.171875,
+          "units:SELL:CARROT": 32.4609375,
+          "units:SELL:EGG": 295.453125,
+          "units:SELL:FERTILIZER": 339.4296875,
+          "units:SELL:MELON": 165.7578125,
+          "units:SELL:MILK": 130.171875,
+          "units:SELL:STRAWBERRY": 44.90625,
+          "units:SELL:TOMATO": 11.7734375,
+          "units:SELL:WHEAT": 46.8671875,
+          "units:SELL:WOOL": 149.1484375
+        },
+        "actions": {
+          "idle:PASS": 626.7734375,
+          "success:BUILD_COOP": 9.3203125,
+          "success:BUILD_PASTURE": 12.7578125,
+          "success:CARE": 383.734375,
+          "success:COLLECT_FERTILIZER": 348.828125,
+          "success:DIG": 14.4765625,
+          "success:DROP": 156.390625,
+          "success:EAST": 990.9609375,
+          "success:FEED": 396.6484375,
+          "success:FERTILIZE": 118.4375,
+          "success:HARVEST": 354.96875,
+          "success:NORTH": 1153.9375,
+          "success:PICKUP": 194.9921875,
+          "success:PLACE": 18.1484375,
+          "success:PLANT": 120.265625,
+          "success:SOUTH": 604.171875,
+          "success:WATER": 463.0859375,
+          "success:WEST": 1064.6328125
+        },
+        "losses": {
+          "animal_escapes": 0.3984375,
+          "overflow_units": 0,
+          "terminal_escapes": 1.3671875,
+          "water_deaths": 8.140625
+        }
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 128,
+        "wins": 5,
+        "mean_cash": 75821.09375,
+        "mean_gap": -30270.140625,
+        "median_gap": -32100.5,
+        "p10_gap": -46939.0,
+        "max_crops": 29.984375,
+        "ledger": {
+          "expense:CARROT": 468.28125,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 1861.1328125,
+          "expense:GOOSE": 2414.0625,
+          "expense:MELON": 2010,
+          "expense:SHEEP": 3027.34375,
+          "expense:STRAWBERRY": 945.3125,
+          "expense:TOMATO": 169.921875,
+          "expense:WHEAT": 10063.2109375,
+          "expense:labor": 4902.3359375,
+          "expense:land": 1000.0,
+          "hires": 280.4609375,
+          "income:CARROT": 2470.4609375,
+          "income:EGG": 13734.859375,
+          "income:FERTILIZER": 14951.5703125,
+          "income:MELON": 17556.625,
+          "income:MILK": 17376.8828125,
+          "income:STRAWBERRY": 11824.65625,
+          "income:TOMATO": 2213.328125,
+          "income:WHEAT": 2590.0546875,
+          "income:WOOL": 18564.2578125,
+          "land_purchases": 1,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.046875,
+          "units:BUY_ANIMAL:SHEEP": 6.0546875,
+          "units:BUY_PRODUCT:FERTILIZER": 66.8359375,
+          "units:BUY_PRODUCT:WHEAT": 223.984375,
+          "units:BUY_SEED:CARROT": 23.4140625,
+          "units:BUY_SEED:MELON": 25.125,
+          "units:BUY_SEED:STRAWBERRY": 9.453125,
+          "units:BUY_SEED:TOMATO": 3.3984375,
+          "units:BUY_SEED:WHEAT": 68.296875,
+          "units:SELL:CARROT": 36.5703125,
+          "units:SELL:EGG": 290.0234375,
+          "units:SELL:FERTILIZER": 306.5078125,
+          "units:SELL:MELON": 139.359375,
+          "units:SELL:MILK": 143.7421875,
+          "units:SELL:STRAWBERRY": 50.9453125,
+          "units:SELL:TOMATO": 20.25,
+          "units:SELL:WHEAT": 49.6171875,
+          "units:SELL:WOOL": 137.890625
+        },
+        "actions": {
+          "idle:PASS": 701.921875,
+          "success:BUILD_COOP": 10.28125,
+          "success:BUILD_PASTURE": 12.359375,
+          "success:CARE": 381.5234375,
+          "success:COLLECT_FERTILIZER": 357.8125,
+          "success:DIG": 18.671875,
+          "success:DROP": 165.03125,
+          "success:EAST": 945.8359375,
+          "success:FEED": 394.796875,
+          "success:FERTILIZE": 118.140625,
+          "success:HARVEST": 361.96875,
+          "success:NORTH": 1134.15625,
+          "success:PICKUP": 181.0703125,
+          "success:PLACE": 18.1015625,
+          "success:PLANT": 127.2109375,
+          "success:SOUTH": 588.96875,
+          "success:WATER": 470.984375,
+          "success:WEST": 1042.984375
+        },
+        "losses": {
+          "animal_escapes": 0.2421875,
+          "overflow_units": 0,
+          "terminal_escapes": 1.3125,
+          "water_deaths": 9.953125
+        }
+      }
+    },
+    "challenger": {
+      "data/raw/reference-cok/main.py": {
+        "games": 128,
+        "wins": 3,
+        "mean_cash": 74918.2578125,
+        "mean_gap": -35258.78125,
+        "median_gap": -34877.5,
+        "p10_gap": -55669.2,
+        "max_crops": 49.6328125,
+        "ledger": {
+          "expense:CARROT": 528.59375,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 2153.5234375,
+          "expense:GOOSE": 2446.875,
+          "expense:MELON": 2100.625,
+          "expense:SHEEP": 3007.8125,
+          "expense:STRAWBERRY": 2247.65625,
+          "expense:TOMATO": 294.53125,
+          "expense:WHEAT": 11006.78125,
+          "expense:labor": 8127.6484375,
+          "expense:land": 3000.0,
+          "hires": 309.5078125,
+          "income:CARROT": 2766.5859375,
+          "income:EGG": 13506.1484375,
+          "income:FERTILIZER": 14850.9609375,
+          "income:MELON": 13999.1640625,
+          "income:MILK": 15880.5390625,
+          "income:STRAWBERRY": 22125.5546875,
+          "income:TOMATO": 3478.4375,
+          "income:WHEAT": 3430.3046875,
+          "income:WOOL": 18394.609375,
+          "land_purchases": 2,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.15625,
+          "units:BUY_ANIMAL:SHEEP": 6.015625,
+          "units:BUY_PRODUCT:FERTILIZER": 44.6328125,
+          "units:BUY_PRODUCT:WHEAT": 253.0390625,
+          "units:BUY_SEED:CARROT": 26.4296875,
+          "units:BUY_SEED:MELON": 26.2578125,
+          "units:BUY_SEED:STRAWBERRY": 22.4765625,
+          "units:BUY_SEED:TOMATO": 5.890625,
+          "units:BUY_SEED:WHEAT": 69.0859375,
+          "units:SELL:CARROT": 40.6640625,
+          "units:SELL:EGG": 289.640625,
+          "units:SELL:FERTILIZER": 250.6796875,
+          "units:SELL:MELON": 142.6015625,
+          "units:SELL:MILK": 142.28125,
+          "units:SELL:STRAWBERRY": 126.84375,
+          "units:SELL:TOMATO": 32.3515625,
+          "units:SELL:WHEAT": 68.140625,
+          "units:SELL:WOOL": 137.6484375
+        },
+        "actions": {
+          "idle:PASS": 608.578125,
+          "success:BUILD_COOP": 9.0546875,
+          "success:BUILD_PASTURE": 10.3046875,
+          "success:CARE": 376.8203125,
+          "success:COLLECT_FERTILIZER": 317.015625,
+          "success:DIG": 11.3359375,
+          "success:DROP": 169.0078125,
+          "success:EAST": 951.7109375,
+          "success:FEED": 397.6484375,
+          "success:FERTILIZE": 110.96875,
+          "success:HARVEST": 422.9609375,
+          "success:NORTH": 1185.2109375,
+          "success:PICKUP": 205.2265625,
+          "success:PLACE": 18.171875,
+          "success:PLANT": 142.625,
+          "success:SOUTH": 790.203125,
+          "success:WATER": 633.1875,
+          "success:WEST": 1303.328125
+        },
+        "losses": {
+          "animal_escapes": 0.6484375,
+          "overflow_units": 0,
+          "terminal_escapes": 1.234375,
+          "water_deaths": 0.8359375
+        }
+      },
+      "data/raw/reference-gzm/main.py": {
+        "games": 128,
+        "wins": 107,
+        "mean_cash": 90803.5625,
+        "mean_gap": 16475.265625,
+        "median_gap": 17886.5,
+        "p10_gap": -3032.299999999999,
+        "max_crops": 49.890625,
+        "ledger": {
+          "expense:CARROT": 441.71875,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 2605.2265625,
+          "expense:GOOSE": 2437.5,
+          "expense:MELON": 2287.5,
+          "expense:SHEEP": 3062.5,
+          "expense:STRAWBERRY": 2235.15625,
+          "expense:TOMATO": 281.25,
+          "expense:WHEAT": 11190.296875,
+          "expense:labor": 8251.8125,
+          "expense:land": 3000.0,
+          "hires": 310.6484375,
+          "income:CARROT": 2263.90625,
+          "income:EGG": 13580.609375,
+          "income:FERTILIZER": 15404.2109375,
+          "income:MELON": 17170.375,
+          "income:MILK": 19845.8984375,
+          "income:STRAWBERRY": 31417.9140625,
+          "income:TOMATO": 3481.546875,
+          "income:WHEAT": 3785.1015625,
+          "income:WOOL": 18246.9609375,
+          "land_purchases": 2,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.125,
+          "units:BUY_ANIMAL:SHEEP": 6.125,
+          "units:BUY_PRODUCT:FERTILIZER": 50.0859375,
+          "units:BUY_PRODUCT:WHEAT": 252.9921875,
+          "units:BUY_SEED:CARROT": 22.0859375,
+          "units:BUY_SEED:MELON": 28.59375,
+          "units:BUY_SEED:STRAWBERRY": 22.3515625,
+          "units:BUY_SEED:TOMATO": 5.625,
+          "units:BUY_SEED:WHEAT": 71.0859375,
+          "units:SELL:CARROT": 32.2421875,
+          "units:SELL:EGG": 291.1171875,
+          "units:SELL:FERTILIZER": 249.875,
+          "units:SELL:MELON": 154.96875,
+          "units:SELL:MILK": 141.171875,
+          "units:SELL:STRAWBERRY": 135.8671875,
+          "units:SELL:TOMATO": 29.9375,
+          "units:SELL:WHEAT": 72.109375,
+          "units:SELL:WOOL": 133.0390625
+        },
+        "actions": {
+          "idle:PASS": 584.1875,
+          "success:BUILD_COOP": 10.421875,
+          "success:BUILD_PASTURE": 10.40625,
+          "success:CARE": 370.5234375,
+          "success:COLLECT_FERTILIZER": 318.984375,
+          "success:DIG": 13.9609375,
+          "success:DROP": 156.4296875,
+          "success:EAST": 977.625,
+          "success:FEED": 396.7890625,
+          "success:FERTILIZE": 119.1953125,
+          "success:HARVEST": 424.9140625,
+          "success:NORTH": 1202.203125,
+          "success:PICKUP": 207.671875,
+          "success:PLACE": 18.25,
+          "success:PLANT": 142.7734375,
+          "success:SOUTH": 762.4453125,
+          "success:WATER": 642.484375,
+          "success:WEST": 1324.734375
+        },
+        "losses": {
+          "animal_escapes": 1.0859375,
+          "overflow_units": 0,
+          "terminal_escapes": 1.1015625,
+          "water_deaths": 0.5625
+        }
+      },
+      "data/raw/reference-lonespear/main.py": {
+        "games": 128,
+        "wins": 123,
+        "mean_cash": 94596.1875,
+        "mean_gap": 24413.2109375,
+        "median_gap": 27568.5,
+        "p10_gap": 5633.5,
+        "max_crops": 49.78125,
+        "ledger": {
+          "expense:CARROT": 479.84375,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 2337.3828125,
+          "expense:GOOSE": 2503.125,
+          "expense:MELON": 2620.625,
+          "expense:SHEEP": 3031.25,
+          "expense:STRAWBERRY": 2116.40625,
+          "expense:TOMATO": 192.578125,
+          "expense:WHEAT": 11992.1875,
+          "expense:labor": 8250.2734375,
+          "expense:land": 3000.0,
+          "hires": 310.59375,
+          "income:CARROT": 3134.3828125,
+          "income:EGG": 14102.2734375,
+          "income:FERTILIZER": 14461.8046875,
+          "income:MELON": 31690.6875,
+          "income:MILK": 16253.4609375,
+          "income:STRAWBERRY": 28229.1875,
+          "income:TOMATO": 2487.28125,
+          "income:WHEAT": 3737.3203125,
+          "income:WOOL": 15623.4609375,
+          "land_purchases": 2,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.34375,
+          "units:BUY_ANIMAL:SHEEP": 6.0625,
+          "units:BUY_PRODUCT:FERTILIZER": 46.46875,
+          "units:BUY_PRODUCT:WHEAT": 272.046875,
+          "units:BUY_SEED:CARROT": 23.9921875,
+          "units:BUY_SEED:MELON": 32.7578125,
+          "units:BUY_SEED:STRAWBERRY": 21.1640625,
+          "units:BUY_SEED:TOMATO": 3.8515625,
+          "units:BUY_SEED:WHEAT": 64.78125,
+          "units:SELL:CARROT": 36.5546875,
+          "units:SELL:EGG": 301.734375,
+          "units:SELL:FERTILIZER": 245.375,
+          "units:SELL:MELON": 184.6015625,
+          "units:SELL:MILK": 142.2578125,
+          "units:SELL:STRAWBERRY": 126.203125,
+          "units:SELL:TOMATO": 16.921875,
+          "units:SELL:WHEAT": 71.375,
+          "units:SELL:WOOL": 136.0234375
+        },
+        "actions": {
+          "idle:PASS": 586.09375,
+          "success:BUILD_COOP": 10.328125,
+          "success:BUILD_PASTURE": 10.1640625,
+          "success:CARE": 382.046875,
+          "success:COLLECT_FERTILIZER": 327.6015625,
+          "success:DIG": 9.3671875,
+          "success:DROP": 158.7109375,
+          "success:EAST": 983.6015625,
+          "success:FEED": 404.140625,
+          "success:FERTILIZE": 128.6953125,
+          "success:HARVEST": 418.5625,
+          "success:NORTH": 1200.7734375,
+          "success:PICKUP": 206.1796875,
+          "success:PLACE": 18.40625,
+          "success:PLANT": 140.1484375,
+          "success:SOUTH": 772.5,
+          "success:WATER": 638.0078125,
+          "success:WEST": 1289.1171875
+        },
+        "losses": {
+          "animal_escapes": 0.8125,
+          "overflow_units": 0,
+          "terminal_escapes": 1.0703125,
+          "water_deaths": 0.71875
+        }
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 128,
+        "wins": 31,
+        "mean_cash": 82295.9609375,
+        "mean_gap": -11407.65625,
+        "median_gap": -13701.5,
+        "p10_gap": -30046.0,
+        "max_crops": 49.640625,
+        "ledger": {
+          "expense:CARROT": 447.34375,
+          "expense:COW": 1600,
+          "expense:FERTILIZER": 2730.8046875,
+          "expense:GOOSE": 2411.71875,
+          "expense:MELON": 2238.125,
+          "expense:SHEEP": 3035.15625,
+          "expense:STRAWBERRY": 2325.78125,
+          "expense:TOMATO": 252.734375,
+          "expense:WHEAT": 11182.6953125,
+          "expense:labor": 8257.359375,
+          "expense:land": 3000.0,
+          "hires": 310.7421875,
+          "income:CARROT": 2545.515625,
+          "income:EGG": 13795.53125,
+          "income:FERTILIZER": 16071.9609375,
+          "income:MELON": 17721.609375,
+          "income:MILK": 17448.6484375,
+          "income:STRAWBERRY": 25422.515625,
+          "income:TOMATO": 3101.015625,
+          "income:WHEAT": 3652.625,
+          "income:WOOL": 17018.2578125,
+          "land_purchases": 2,
+          "units:BUY_ANIMAL:COW": 4,
+          "units:BUY_ANIMAL:GOOSE": 8.0390625,
+          "units:BUY_ANIMAL:SHEEP": 6.0703125,
+          "units:BUY_PRODUCT:FERTILIZER": 47.6328125,
+          "units:BUY_PRODUCT:WHEAT": 252.734375,
+          "units:BUY_SEED:CARROT": 22.3671875,
+          "units:BUY_SEED:MELON": 27.9765625,
+          "units:BUY_SEED:STRAWBERRY": 23.2578125,
+          "units:BUY_SEED:TOMATO": 5.0546875,
+          "units:BUY_SEED:WHEAT": 69.078125,
+          "units:SELL:CARROT": 31.6875,
+          "units:SELL:EGG": 299.5859375,
+          "units:SELL:FERTILIZER": 270.5390625,
+          "units:SELL:MELON": 150.6953125,
+          "units:SELL:MILK": 141.9453125,
+          "units:SELL:STRAWBERRY": 136.65625,
+          "units:SELL:TOMATO": 25.8046875,
+          "units:SELL:WHEAT": 69.015625,
+          "units:SELL:WOOL": 131.7578125
+        },
+        "actions": {
+          "idle:PASS": 566.4609375,
+          "success:BUILD_COOP": 8.1484375,
+          "success:BUILD_PASTURE": 10.15625,
+          "success:CARE": 375.375,
+          "success:COLLECT_FERTILIZER": 343.953125,
+          "success:DIG": 9.40625,
+          "success:DROP": 157.859375,
+          "success:EAST": 969.671875,
+          "success:FEED": 398.9609375,
+          "success:FERTILIZE": 121.046875,
+          "success:HARVEST": 423.8515625,
+          "success:NORTH": 1208.8359375,
+          "success:PICKUP": 199.359375,
+          "success:PLACE": 18.109375,
+          "success:PLANT": 139.265625,
+          "success:SOUTH": 795.9453125,
+          "success:WATER": 630.40625,
+          "success:WEST": 1307.0859375
+        },
+        "losses": {
+          "animal_escapes": 0.78125,
+          "overflow_units": 0,
+          "terminal_escapes": 1.359375,
+          "water_deaths": 0.703125
+        }
+      }
+    }
+  },
+  "representatives": [
+    {
+      "policy": "incumbent",
+      "seed": 2000,
+      "seat": 0,
+      "opponent": "data/raw/reference-cok/main.py",
+      "replay": "reports/replays/phase2-validation/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee-reference-cok-main-2000-0.json",
+      "replay_sha256": "3cfb99d0fa2d14b678e5a6275027ff037cf654c876ef42bf58004f816a650edb",
+      "cash": 69571.0,
+      "opponent_cash": 97152.0,
+      "snapshots": [
+        {
+          "day": 0,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 546.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "MELON": 1,
+                "COW": 1
+              }
+            },
+            {
+              "cash": 106.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "SHEEP": 1,
+                "COW": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 1,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 122.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 24.0,
+              "hands": 0,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 65.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 5,
+                "WEED": 1,
+                "GOOSE": 1,
+                "COW": 4,
+                "WHEAT": 1,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 104.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "hour": 5,
+          "shops": [
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 90.0,
+              "hands": 6,
+              "land": 1,
+              "composition": {
+                "WHEAT": 3,
+                "MELON": 8,
+                "WEED": 1,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 19.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "PASTURE": 1,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "hour": 5,
+          "shops": [
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 22.0,
+              "hands": 7,
+              "land": 1,
+              "composition": {
+                "WHEAT": 6,
+                "MELON": 10,
+                "WEED": 1,
+                "GOOSE": 2,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 384.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "MELON": 12,
+                "WHEAT": 3,
+                "PASTURE": 1,
+                "SHEEP": 2,
+                "COW": 3
+              }
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT"
+          ],
+          "farms": [
+            {
+              "cash": 489.0,
+              "hands": 8,
+              "land": 1,
+              "composition": {
+                "COOP": 2,
+                "SHEEP": 3,
+                "MELON": 10,
+                "WHEAT": 3,
+                "GOOSE": 3,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 157.0,
+              "hands": 10,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 8,
+                "MELON": 12,
+                "WHEAT": 3,
+                "COW": 6,
+                "SHEEP": 3,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 937.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 1,
+                "SHEEP": 6,
+                "MELON": 14,
+                "WHEAT": 6,
+                "STRAWBERRY": 3,
+                "GOOSE": 8,
+                "WEED": 1,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 919.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 19,
+                "MELON": 12,
+                "WHEAT": 5,
+                "COW": 8,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE"
+          ],
+          "farms": [
+            {
+              "cash": 9141.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 1,
+                "SHEEP": 6,
+                "MELON": 18,
+                "WHEAT": 8,
+                "STRAWBERRY": 4,
+                "GOOSE": 8,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 12900.0,
+              "hands": 10,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 37,
+                "WHEAT": 17,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "PET_CAFE"
+          ],
+          "farms": [
+            {
+              "cash": 21900.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 1,
+                "SHEEP": 6,
+                "STRAWBERRY": 7,
+                "MELON": 14,
+                "WHEAT": 8,
+                "GOOSE": 8,
+                "TOMATO": 1,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 18395.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 17,
+                "COW": 10,
+                "SHEEP": 4,
+                "WEED": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "PET_CAFE",
+            "FARMERS_MARKET"
+          ],
+          "farms": [
+            {
+              "cash": 37831.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 1,
+                "SHEEP": 6,
+                "STRAWBERRY": 7,
+                "MELON": 10,
+                "WHEAT": 7,
+                "WEED": 1,
+                "GOOSE": 8,
+                "CARROT": 1,
+                "TOMATO": 2,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 38289.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 22,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "PET_CAFE",
+            "FARMERS_MARKET",
+            "PET_CAFE",
+            "BRUNCH_SPOT"
+          ],
+          "farms": [
+            {
+              "cash": 53489.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 1,
+                "SHEEP": 6,
+                "STRAWBERRY": 7,
+                "CARROT": 12,
+                "WHEAT": 8,
+                "MELON": 1,
+                "GOOSE": 8,
+                "TOMATO": 2,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 72625.0,
+              "hands": 11,
+              "land": 3,
+              "composition": {
+                "CARROT": 2,
+                "WHEAT": 25,
+                "WEED": 12,
+                "STRAWBERRY": 18,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "PET_CAFE",
+            "FARMERS_MARKET",
+            "PET_CAFE",
+            "BRUNCH_SPOT"
+          ],
+          "farms": [
+            {
+              "cash": 67100.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "PASTURE": 2,
+                "SHEEP": 5,
+                "WEED": 3,
+                "WHEAT": 4,
+                "CARROT": 12,
+                "MELON": 1,
+                "GOOSE": 8,
+                "COW": 4,
+                "TOMATO": 1
+              }
+            },
+            {
+              "cash": 94636.0,
+              "hands": 8,
+              "land": 3,
+              "composition": {
+                "WHEAT": 10,
+                "WEED": 12,
+                "COW": 10,
+                "SHEEP": 4,
+                "STRAWBERRY": 3
+              }
+            }
+          ]
+        }
+      ],
+      "harvested_units": [
+        {
+          "EGG": 304,
+          "WHEAT": 174,
+          "WOOL": 144,
+          "MILK": 144,
+          "MELON": 150,
+          "STRAWBERRY": 50,
+          "TOMATO": 14,
+          "CARROT": 66
+        },
+        {
+          "WHEAT": 383,
+          "WOOL": 120,
+          "MILK": 274,
+          "MELON": 72,
+          "STRAWBERRY": 274,
+          "CARROT": 11
+        }
+      ]
+    },
+    {
+      "policy": "incumbent",
+      "seed": 2001,
+      "seat": 0,
+      "opponent": "data/raw/reference-cok/main.py",
+      "replay": "reports/replays/phase2-validation/750f123073865347efd3b9c4b72022ff9923f4130c929ac76c1b0742374b09ee-reference-cok-main-2001-0.json",
+      "replay_sha256": "b84156f9bb7b080026577b723a80eb09ddcad184f6010f42a9a76188038a6b67",
+      "cash": 77835.0,
+      "opponent_cash": 147477.0,
+      "snapshots": [
+        {
+          "day": 0,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 546.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "MELON": 1,
+                "COW": 1
+              }
+            },
+            {
+              "cash": 106.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "SHEEP": 1,
+                "COW": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 1,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 122.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 24.0,
+              "hands": 0,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 65.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 5,
+                "GOOSE": 1,
+                "COW": 4,
+                "WHEAT": 1,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 104.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 90.0,
+              "hands": 6,
+              "land": 1,
+              "composition": {
+                "WHEAT": 3,
+                "MELON": 8,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 19.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "PASTURE": 1,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 164.0,
+              "hands": 7,
+              "land": 1,
+              "composition": {
+                "WHEAT": 6,
+                "MELON": 10,
+                "GOOSE": 1,
+                "COOP": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 367.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "MELON": 12,
+                "WHEAT": 3,
+                "PASTURE": 1,
+                "SHEEP": 2,
+                "COW": 3
+              }
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 572.0,
+              "hands": 9,
+              "land": 1,
+              "composition": {
+                "WHEAT": 3,
+                "SHEEP": 3,
+                "MELON": 12,
+                "GOOSE": 3,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 186.0,
+              "hands": 10,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 8,
+                "MELON": 12,
+                "WHEAT": 3,
+                "COW": 6,
+                "SHEEP": 3,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 2234.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "MELON": 12,
+                "WHEAT": 6,
+                "STRAWBERRY": 3,
+                "GOOSE": 8,
+                "WEED": 4,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 1790.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 19,
+                "MELON": 12,
+                "WHEAT": 5,
+                "COW": 8,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 11486.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "MELON": 14,
+                "STRAWBERRY": 8,
+                "WHEAT": 8,
+                "GOOSE": 8,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 15461.0,
+              "hands": 10,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 37,
+                "WHEAT": 17,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "BAKERY",
+            "PET_CAFE"
+          ],
+          "farms": [
+            {
+              "cash": 26707.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "STRAWBERRY": 11,
+                "MELON": 12,
+                "WHEAT": 6,
+                "GOOSE": 8,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 23526.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 16,
+                "COW": 10,
+                "SHEEP": 4,
+                "WEED": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "BAKERY",
+            "PET_CAFE",
+            "FARMERS_MARKET"
+          ],
+          "farms": [
+            {
+              "cash": 38040.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "STRAWBERRY": 12,
+                "MELON": 9,
+                "WHEAT": 7,
+                "TOMATO": 1,
+                "GOOSE": 8,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 58701.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 23,
+                "COW": 9,
+                "SHEEP": 4,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "BAKERY",
+            "PET_CAFE",
+            "FARMERS_MARKET",
+            "BAKERY",
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 58715.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "STRAWBERRY": 10,
+                "WHEAT": 9,
+                "CARROT": 10,
+                "TOMATO": 1,
+                "GOOSE": 8,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 107992.0,
+              "hands": 11,
+              "land": 3,
+              "composition": {
+                "CARROT": 2,
+                "WHEAT": 25,
+                "WEED": 12,
+                "STRAWBERRY": 18,
+                "COW": 9,
+                "SHEEP": 4,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "BAKERY",
+            "PET_CAFE",
+            "FARMERS_MARKET",
+            "BAKERY",
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 73986.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "SHEEP": 6,
+                "STRAWBERRY": 4,
+                "CARROT": 10,
+                "WHEAT": 5,
+                "TOMATO": 1,
+                "GOOSE": 8,
+                "WEED": 2,
+                "COW": 4
+              }
+            },
+            {
+              "cash": 139515.0,
+              "hands": 8,
+              "land": 3,
+              "composition": {
+                "WHEAT": 10,
+                "COW": 9,
+                "SHEEP": 4,
+                "PASTURE": 1,
+                "STRAWBERRY": 3,
+                "WEED": 11
+              }
+            }
+          ]
+        }
+      ],
+      "harvested_units": [
+        {
+          "EGG": 304,
+          "WHEAT": 162,
+          "WOOL": 146,
+          "MILK": 144,
+          "MELON": 132,
+          "STRAWBERRY": 87,
+          "CARROT": 45,
+          "TOMATO": 6
+        },
+        {
+          "WHEAT": 383,
+          "WOOL": 120,
+          "MILK": 263,
+          "MELON": 72,
+          "STRAWBERRY": 274,
+          "CARROT": 11
+        }
+      ]
+    },
+    {
+      "policy": "challenger",
+      "seed": 2000,
+      "seat": 0,
+      "opponent": "data/raw/reference-cok/main.py",
+      "replay": "reports/replays/phase2-validation/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b-reference-cok-main-2000-0.json",
+      "replay_sha256": "83c851755c754e068b26c54f0039768f798e9e9e137e7f01caff89c15b527807",
+      "cash": 70932.0,
+      "opponent_cash": 88991.0,
+      "snapshots": [
+        {
+          "day": 0,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 546.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "MELON": 1,
+                "COW": 1
+              }
+            },
+            {
+              "cash": 106.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "SHEEP": 1,
+                "COW": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 1,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 36.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 24.0,
+              "hands": 0,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 223.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 6,
+                "WEED": 1,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 105.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "hour": 5,
+          "shops": [
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 71.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 9,
+                "WEED": 1,
+                "GOOSE": 1,
+                "COOP": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 18.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "PASTURE": 1,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "hour": 5,
+          "shops": [
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 83.0,
+              "hands": 7,
+              "land": 1,
+              "composition": {
+                "MELON": 11,
+                "WEED": 1,
+                "GOOSE": 3,
+                "COW": 4,
+                "COOP": 1,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 371.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "MELON": 12,
+                "WHEAT": 3,
+                "PASTURE": 1,
+                "SHEEP": 2,
+                "COW": 3
+              }
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE"
+          ],
+          "farms": [
+            {
+              "cash": 824.0,
+              "hands": 10,
+              "land": 1,
+              "composition": {
+                "MELON": 13,
+                "GOOSE": 6,
+                "COW": 4,
+                "SHEEP": 2
+              }
+            },
+            {
+              "cash": 424.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 8,
+                "MELON": 17,
+                "WHEAT": 3,
+                "COW": 6,
+                "SHEEP": 3,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 1875.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "MELON": 12,
+                "GOOSE": 6,
+                "WHEAT": 2,
+                "COW": 4,
+                "PASTURE": 1,
+                "SHEEP": 5,
+                "COOP": 2
+              }
+            },
+            {
+              "cash": 1534.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 11,
+                "MELON": 17,
+                "WHEAT": 5,
+                "COW": 6,
+                "SHEEP": 6
+              }
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY",
+            "PIZZA_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 9516.0,
+              "hands": 12,
+              "land": 2,
+              "composition": {
+                "MELON": 12,
+                "STRAWBERRY": 4,
+                "WHEAT": 11,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 8078.0,
+              "hands": 10,
+              "land": 4,
+              "composition": {
+                "STRAWBERRY": 31,
+                "WHEAT": 18,
+                "MELON": 5,
+                "COW": 6,
+                "SHEEP": 8
+              }
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY",
+            "PIZZA_SHOP",
+            "PIZZA_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 17388.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "WHEAT": 17,
+                "STRAWBERRY": 4,
+                "TOMATO": 8,
+                "MELON": 8,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 14006.0,
+              "hands": 12,
+              "land": 4,
+              "composition": {
+                "STRAWBERRY": 34,
+                "WHEAT": 22,
+                "MELON": 5,
+                "COW": 6,
+                "SHEEP": 10,
+                "PASTURE": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY",
+            "PIZZA_SHOP",
+            "PIZZA_SHOP",
+            "YARN_STORE"
+          ],
+          "farms": [
+            {
+              "cash": 34875.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "WHEAT": 20,
+                "STRAWBERRY": 4,
+                "TOMATO": 14,
+                "MELON": 6,
+                "WEED": 1,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 37861.0,
+              "hands": 12,
+              "land": 4,
+              "composition": {
+                "STRAWBERRY": 33,
+                "WHEAT": 39,
+                "COW": 6,
+                "SHEEP": 12,
+                "WEED": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY",
+            "PIZZA_SHOP",
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP",
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 50949.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "WHEAT": 30,
+                "STRAWBERRY": 4,
+                "TOMATO": 7,
+                "WEED": 5,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 61964.0,
+              "hands": 11,
+              "land": 4,
+              "composition": {
+                "WEED": 8,
+                "WHEAT": 29,
+                "STRAWBERRY": 21,
+                "COW": 6,
+                "SHEEP": 12,
+                "CARROT": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "hour": 5,
+          "shops": [
+            "BAKERY",
+            "YARN_STORE",
+            "BAKERY",
+            "PIZZA_SHOP",
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP",
+            "BAKERY"
+          ],
+          "farms": [
+            {
+              "cash": 68069.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "WHEAT": 21,
+                "WEED": 9,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 5,
+                "PASTURE": 1,
+                "CARROT": 3
+              }
+            },
+            {
+              "cash": 83013.0,
+              "hands": 8,
+              "land": 4,
+              "composition": {
+                "WEED": 25,
+                "WHEAT": 11,
+                "COW": 6,
+                "PASTURE": 3,
+                "SHEEP": 9
+              }
+            }
+          ]
+        }
+      ],
+      "harvested_units": [
+        {
+          "EGG": 322,
+          "WOOL": 144,
+          "MILK": 143,
+          "MELON": 114,
+          "WHEAT": 383,
+          "TOMATO": 84,
+          "STRAWBERRY": 20,
+          "CARROT": 7
+        },
+        {
+          "WHEAT": 419,
+          "WOOL": 270,
+          "MILK": 189,
+          "MELON": 102,
+          "STRAWBERRY": 216,
+          "CARROT": 4
+        }
+      ]
+    },
+    {
+      "policy": "challenger",
+      "seed": 2001,
+      "seat": 0,
+      "opponent": "data/raw/reference-cok/main.py",
+      "replay": "reports/replays/phase2-validation/0098d9e4f77e2420cb4a09abd47e49f5160009cd0818ae37a793bc3e419ffc4b-reference-cok-main-2001-0.json",
+      "replay_sha256": "b6650993d12771dd083786147cc955973dd8bad05f6e0ee485aee58993e98142",
+      "cash": 84074.0,
+      "opponent_cash": 149223.0,
+      "snapshots": [
+        {
+          "day": 0,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 546.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "MELON": 1,
+                "COW": 1
+              }
+            },
+            {
+              "cash": 106.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "PASTURE": 2,
+                "SHEEP": 1,
+                "COW": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 1,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 36.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 4,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 24.0,
+              "hands": 0,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "hour": 5,
+          "shops": [],
+          "farms": [
+            {
+              "cash": 223.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 6,
+                "GOOSE": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 105.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 71.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "MELON": 9,
+                "GOOSE": 1,
+                "COOP": 1,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 18.0,
+              "hands": 5,
+              "land": 1,
+              "composition": {
+                "WHEAT": 7,
+                "MELON": 12,
+                "SHEEP": 2,
+                "PASTURE": 1,
+                "COW": 2
+              }
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 34.0,
+              "hands": 7,
+              "land": 1,
+              "composition": {
+                "MELON": 11,
+                "GOOSE": 3,
+                "COOP": 2,
+                "COW": 4,
+                "SHEEP": 1
+              }
+            },
+            {
+              "cash": 354.0,
+              "hands": 4,
+              "land": 1,
+              "composition": {
+                "MELON": 12,
+                "WHEAT": 3,
+                "PASTURE": 1,
+                "SHEEP": 2,
+                "COW": 3
+              }
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 740.0,
+              "hands": 9,
+              "land": 1,
+              "composition": {
+                "MELON": 14,
+                "GOOSE": 5,
+                "COW": 4,
+                "SHEEP": 2
+              }
+            },
+            {
+              "cash": 117.0,
+              "hands": 10,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 8,
+                "MELON": 12,
+                "WHEAT": 3,
+                "COW": 6,
+                "SHEEP": 3,
+                "PASTURE": 1
+              }
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 2003.0,
+              "hands": 12,
+              "land": 2,
+              "composition": {
+                "MELON": 17,
+                "WHEAT": 8,
+                "STRAWBERRY": 5,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 1737.0,
+              "hands": 11,
+              "land": 2,
+              "composition": {
+                "STRAWBERRY": 19,
+                "MELON": 12,
+                "WHEAT": 5,
+                "COW": 8,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP",
+            "PET_CAFE"
+          ],
+          "farms": [
+            {
+              "cash": 9161.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "MELON": 19,
+                "WHEAT": 8,
+                "STRAWBERRY": 13,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 15052.0,
+              "hands": 10,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 37,
+                "WHEAT": 17,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP",
+            "PET_CAFE",
+            "PIZZA_SHOP"
+          ],
+          "farms": [
+            {
+              "cash": 22714.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 26,
+                "MELON": 14,
+                "WHEAT": 8,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6,
+                "WEED": 1
+              }
+            },
+            {
+              "cash": 23079.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 17,
+                "COW": 10,
+                "SHEEP": 4,
+                "WEED": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP",
+            "PET_CAFE",
+            "PIZZA_SHOP",
+            "BRUNCH_SPOT"
+          ],
+          "farms": [
+            {
+              "cash": 33410.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 26,
+                "MELON": 4,
+                "WHEAT": 11,
+                "TOMATO": 5,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6
+              }
+            },
+            {
+              "cash": 57908.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 38,
+                "WHEAT": 23,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP",
+            "PET_CAFE",
+            "PIZZA_SHOP",
+            "BRUNCH_SPOT",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "farms": [
+            {
+              "cash": 56449.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "STRAWBERRY": 26,
+                "WHEAT": 14,
+                "TOMATO": 5,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6,
+                "CARROT": 3
+              }
+            },
+            {
+              "cash": 107077.0,
+              "hands": 11,
+              "land": 3,
+              "composition": {
+                "CARROT": 2,
+                "WHEAT": 25,
+                "WEED": 12,
+                "STRAWBERRY": 18,
+                "COW": 10,
+                "SHEEP": 4
+              }
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "hour": 5,
+          "shops": [
+            "SMOOTHIE_SHOP",
+            "SMOOTHIE_SHOP",
+            "PIZZA_SHOP",
+            "PET_CAFE",
+            "PIZZA_SHOP",
+            "BRUNCH_SPOT",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "farms": [
+            {
+              "cash": 80419.0,
+              "hands": 12,
+              "land": 3,
+              "composition": {
+                "WHEAT": 6,
+                "WEED": 18,
+                "CARROT": 6,
+                "GOOSE": 8,
+                "COW": 4,
+                "SHEEP": 6,
+                "STRAWBERRY": 5
+              }
+            },
+            {
+              "cash": 140632.0,
+              "hands": 8,
+              "land": 3,
+              "composition": {
+                "WHEAT": 10,
+                "COW": 10,
+                "SHEEP": 4,
+                "STRAWBERRY": 3,
+                "WEED": 11
+              }
+            }
+          ]
+        }
+      ],
+      "harvested_units": [
+        {
+          "EGG": 282,
+          "WOOL": 135,
+          "MILK": 140,
+          "MELON": 150,
+          "WHEAT": 195,
+          "STRAWBERRY": 152,
+          "CARROT": 20,
+          "TOMATO": 26
+        },
+        {
+          "WHEAT": 386,
+          "WOOL": 120,
+          "MILK": 279,
+          "MELON": 72,
+          "STRAWBERRY": 274,
+          "CARROT": 11
+        }
+      ]
+    }
+  ]
+}

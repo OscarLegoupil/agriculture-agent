@@ -1,0 +1,434 @@
+{
+  "care_slack": {
+    "seeds": [
+      3000,
+      3017,
+      3042,
+      3063
+    ],
+    "weights": {
+      "data/raw/reference-seyam/main.py": 0.5,
+      "data/raw/reference-cok/main.py": 0.5
+    },
+    "opponents": {
+      "data/raw/reference-cok/main.py": {
+        "games": 8,
+        "incumbent_score": 0.5,
+        "challenger_score": 0.25,
+        "score_delta": -0.25,
+        "delta_ci95": [
+          -1.0,
+          0.5
+        ],
+        "incumbent_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": -1744.75,
+          "median": -2567.0,
+          "p10": -10538.0
+        },
+        "challenger_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": -9716.875,
+          "median": -11784.0,
+          "p10": -21647.7
+        },
+        "mean_paired_gap_change": -7972.125,
+        "paired_gap_n": 8,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.138776,
+        "failed_work": 0
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 8,
+        "incumbent_score": 1.0,
+        "challenger_score": 0.875,
+        "score_delta": -0.125,
+        "delta_ci95": [
+          -0.375,
+          0.0
+        ],
+        "incumbent_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": 7646.125,
+          "median": 6758.0,
+          "p10": 1724.8
+        },
+        "challenger_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": 7889.25,
+          "median": 5149.5,
+          "p10": 490.9000000000001
+        },
+        "mean_paired_gap_change": 243.125,
+        "paired_gap_n": 8,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.145067,
+        "failed_work": 0
+      }
+    },
+    "aggregate": {
+      "incumbent_score": 0.75,
+      "challenger_score": 0.5625,
+      "score_delta": -0.1875,
+      "delta_ci95": [
+        -0.625,
+        0.25
+      ],
+      "challenger_ci95": [
+        0.3125,
+        0.875
+      ]
+    },
+    "identities": {
+      "incumbent": {
+        "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+        "source": "submissions/20260909-v8/main.py",
+        "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+        "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+        "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+      },
+      "challenger": {
+        "sha256": "adce3c00296b534851a9892ad821904e073e9b6b4d17ab23010815d3c25876e2",
+        "source": "data\\interim\\phase4-opening\\care_slack\\adce3c00296b534851a9892ad821904e073e9b6b4d17ab23010815d3c25876e2\\main.py",
+        "executed_candidate": "data\\interim\\phase4-opening\\care_slack\\adce3c00296b534851a9892ad821904e073e9b6b4d17ab23010815d3c25876e2\\main.py",
+        "snapshot": "reports\\sources\\adce3c00296b534851a9892ad821904e073e9b6b4d17ab23010815d3c25876e2.py.gz",
+        "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+      }
+    },
+    "provenance": {
+      "environment_version": "1.32.7",
+      "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+      "dependencies": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1"
+      },
+      "all_opponent_hashes": {
+        "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+        "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+      },
+      "scenario_configuration_sha256": "63d77edab04c81cec44c9cb46ad4ac4b810bbda7bb54d528b4fafee762900e8f",
+      "validated_full_panel": {
+        "opponents": [
+          "data/raw/reference-cok/main.py",
+          "data/raw/reference-seyam/main.py"
+        ],
+        "seeds": [
+          3000,
+          3017,
+          3042,
+          3063
+        ],
+        "games_per_policy": 16
+      }
+    },
+    "economics": {
+      "data/raw/reference-seyam/main.py": {
+        "incumbent": {
+          "units:SELL:WOOL": 63.5,
+          "income:WOOL": 8947.875,
+          "units:SELL:MILK": 319,
+          "income:MILK": 25718.25,
+          "expense:labor": 8093.75,
+          "expense:WHEAT": 10317.125,
+          "expense:COW": 5750,
+          "expense:SHEEP": 1437.5,
+          "expense:GOOSE": 225,
+          "expense:STRAWBERRY": 4300,
+          "units:BUY_ANIMAL:COW": 14.375,
+          "units:BUY_ANIMAL:SHEEP": 2.875,
+          "units:BUY_ANIMAL:GOOSE": 0.75,
+          "day7_animals": 4,
+          "day7_cash": 321.25,
+          "animal_escapes": 13
+        },
+        "challenger": {
+          "units:SELL:WOOL": 117,
+          "income:WOOL": 16478.625,
+          "units:SELL:MILK": 218.75,
+          "income:MILK": 20895.875,
+          "expense:labor": 7868.0,
+          "expense:WHEAT": 10105.125,
+          "expense:COW": 4050,
+          "expense:SHEEP": 3062.5,
+          "expense:GOOSE": 900,
+          "expense:STRAWBERRY": 4300,
+          "units:BUY_ANIMAL:COW": 10.125,
+          "units:BUY_ANIMAL:SHEEP": 6.125,
+          "units:BUY_ANIMAL:GOOSE": 3,
+          "day7_animals": 4,
+          "day7_cash": 331.75,
+          "animal_escapes": 17
+        }
+      },
+      "data/raw/reference-cok/main.py": {
+        "incumbent": {
+          "units:SELL:WOOL": 160.875,
+          "income:WOOL": 18683.125,
+          "units:SELL:MILK": 184.25,
+          "income:MILK": 13905.25,
+          "expense:labor": 7967.75,
+          "expense:WHEAT": 9610,
+          "expense:COW": 3100,
+          "expense:SHEEP": 3750,
+          "expense:GOOSE": 825,
+          "expense:STRAWBERRY": 4325,
+          "units:BUY_ANIMAL:COW": 7.75,
+          "units:BUY_ANIMAL:SHEEP": 7.5,
+          "units:BUY_ANIMAL:GOOSE": 2.75,
+          "day7_animals": 4,
+          "day7_cash": 617.25,
+          "animal_escapes": 25
+        },
+        "challenger": {
+          "units:SELL:WOOL": 173.75,
+          "income:WOOL": 18602.375,
+          "units:SELL:MILK": 187.875,
+          "income:MILK": 17172.75,
+          "expense:labor": 7837.25,
+          "expense:WHEAT": 9320.375,
+          "expense:COW": 3350,
+          "expense:SHEEP": 4750,
+          "expense:GOOSE": 337.5,
+          "expense:STRAWBERRY": 4300,
+          "units:BUY_ANIMAL:COW": 8.375,
+          "units:BUY_ANIMAL:SHEEP": 9.5,
+          "units:BUY_ANIMAL:GOOSE": 1.125,
+          "day7_animals": 4,
+          "day7_cash": 308.0,
+          "animal_escapes": 26
+        }
+      }
+    }
+  },
+  "early_herd": {
+    "seeds": [
+      3000,
+      3017,
+      3042,
+      3063
+    ],
+    "weights": {
+      "data/raw/reference-seyam/main.py": 0.5,
+      "data/raw/reference-cok/main.py": 0.5
+    },
+    "opponents": {
+      "data/raw/reference-cok/main.py": {
+        "games": 8,
+        "incumbent_score": 0.5,
+        "challenger_score": 0.0,
+        "score_delta": -0.5,
+        "delta_ci95": [
+          -1.0,
+          0.0
+        ],
+        "incumbent_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": -1744.75,
+          "median": -2567.0,
+          "p10": -10538.0
+        },
+        "challenger_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": -19020.125,
+          "median": -23414.5,
+          "p10": -27776.1
+        },
+        "mean_paired_gap_change": -17275.375,
+        "paired_gap_n": 8,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.292617,
+        "failed_work": 0
+      },
+      "data/raw/reference-seyam/main.py": {
+        "games": 8,
+        "incumbent_score": 1.0,
+        "challenger_score": 1.0,
+        "score_delta": 0.0,
+        "delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "incumbent_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": 7646.125,
+          "median": 6758.0,
+          "p10": 1724.8
+        },
+        "challenger_cash_gap": {
+          "n": 8,
+          "missing": 0,
+          "mean": 5956.5,
+          "median": 4169.5,
+          "p10": 1923.6000000000001
+        },
+        "mean_paired_gap_change": -1689.625,
+        "paired_gap_n": 8,
+        "paired_gap_missing": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0,
+        "incumbent_errors": 0,
+        "incumbent_opponent_errors": 0,
+        "stderr_turns": 0,
+        "max_action_seconds": 0.157821,
+        "failed_work": 0
+      }
+    },
+    "aggregate": {
+      "incumbent_score": 0.75,
+      "challenger_score": 0.5,
+      "score_delta": -0.25,
+      "delta_ci95": [
+        -0.5,
+        0.0
+      ],
+      "challenger_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    "identities": {
+      "incumbent": {
+        "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+        "source": "submissions/20260909-v8/main.py",
+        "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+        "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+        "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+      },
+      "challenger": {
+        "sha256": "b343911959b3204ee44f131ee0aa39192ff68698c45ddf8f577dff2b6cda127e",
+        "source": "data\\interim\\phase4-opening\\early_herd\\b343911959b3204ee44f131ee0aa39192ff68698c45ddf8f577dff2b6cda127e\\main.py",
+        "executed_candidate": "data\\interim\\phase4-opening\\early_herd\\b343911959b3204ee44f131ee0aa39192ff68698c45ddf8f577dff2b6cda127e\\main.py",
+        "snapshot": "reports\\sources\\b343911959b3204ee44f131ee0aa39192ff68698c45ddf8f577dff2b6cda127e.py.gz",
+        "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+      }
+    },
+    "provenance": {
+      "environment_version": "1.32.7",
+      "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+      "dependencies": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1"
+      },
+      "all_opponent_hashes": {
+        "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+        "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+      },
+      "scenario_configuration_sha256": "63d77edab04c81cec44c9cb46ad4ac4b810bbda7bb54d528b4fafee762900e8f",
+      "validated_full_panel": {
+        "opponents": [
+          "data/raw/reference-cok/main.py",
+          "data/raw/reference-seyam/main.py"
+        ],
+        "seeds": [
+          3000,
+          3017,
+          3042,
+          3063
+        ],
+        "games_per_policy": 16
+      }
+    },
+    "economics": {
+      "data/raw/reference-seyam/main.py": {
+        "incumbent": {
+          "units:SELL:WOOL": 63.5,
+          "income:WOOL": 8947.875,
+          "units:SELL:MILK": 319,
+          "income:MILK": 25718.25,
+          "expense:labor": 8093.75,
+          "expense:WHEAT": 10317.125,
+          "expense:COW": 5750,
+          "expense:SHEEP": 1437.5,
+          "expense:GOOSE": 225,
+          "expense:STRAWBERRY": 4300,
+          "units:BUY_ANIMAL:COW": 14.375,
+          "units:BUY_ANIMAL:SHEEP": 2.875,
+          "units:BUY_ANIMAL:GOOSE": 0.75,
+          "day7_animals": 4,
+          "day7_cash": 321.25,
+          "animal_escapes": 13
+        },
+        "challenger": {
+          "units:SELL:WOOL": 92.125,
+          "income:WOOL": 5670.125,
+          "units:SELL:MILK": 266.75,
+          "income:MILK": 22021.5,
+          "expense:labor": 8349.0,
+          "expense:WHEAT": 11811,
+          "expense:COW": 4100,
+          "expense:SHEEP": 1875,
+          "expense:GOOSE": 1200,
+          "expense:STRAWBERRY": 4025,
+          "units:BUY_ANIMAL:COW": 10.25,
+          "units:BUY_ANIMAL:SHEEP": 3.75,
+          "units:BUY_ANIMAL:GOOSE": 4,
+          "day7_animals": 10,
+          "day7_cash": 231.0,
+          "animal_escapes": 5
+        }
+      },
+      "data/raw/reference-cok/main.py": {
+        "incumbent": {
+          "units:SELL:WOOL": 160.875,
+          "income:WOOL": 18683.125,
+          "units:SELL:MILK": 184.25,
+          "income:MILK": 13905.25,
+          "expense:labor": 7967.75,
+          "expense:WHEAT": 9610,
+          "expense:COW": 3100,
+          "expense:SHEEP": 3750,
+          "expense:GOOSE": 825,
+          "expense:STRAWBERRY": 4325,
+          "units:BUY_ANIMAL:COW": 7.75,
+          "units:BUY_ANIMAL:SHEEP": 7.5,
+          "units:BUY_ANIMAL:GOOSE": 2.75,
+          "day7_animals": 4,
+          "day7_cash": 617.25,
+          "animal_escapes": 25
+        },
+        "challenger": {
+          "units:SELL:WOOL": 142.375,
+          "income:WOOL": 21498.25,
+          "units:SELL:MILK": 250.875,
+          "income:MILK": 19937.75,
+          "expense:labor": 8280.25,
+          "expense:WHEAT": 11050.125,
+          "expense:COW": 3700,
+          "expense:SHEEP": 3375,
+          "expense:GOOSE": 675,
+          "expense:STRAWBERRY": 4250,
+          "units:BUY_ANIMAL:COW": 9.25,
+          "units:BUY_ANIMAL:SHEEP": 6.75,
+          "units:BUY_ANIMAL:GOOSE": 2.25,
+          "day7_animals": 10,
+          "day7_cash": 256.5,
+          "animal_escapes": 23
+        }
+      }
+    }
+  }
+}

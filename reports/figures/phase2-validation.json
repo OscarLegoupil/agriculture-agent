@@ -1,0 +1,5 @@
+{
+  "summary": "reports\\results\\phase2-validation-summary.json",
+  "label": "Validation: stronger anchors, challenge target unmet",
+  "generator": "scripts/phase2_figures.py"
+}
