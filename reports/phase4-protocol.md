@@ -181,3 +181,22 @@ Seyam (mean gap +10,128.88), compared with frozen v8's 4/8 COK and 8/8 Seyam
 on this exact panel. The observation-specific split used to formulate the
 rule did not reproduce as a practical improvement. Reject the candidate; its
 post-hoc screen is retained only as negative development evidence.
+
+Authorize one 16-game plant-water reservation screen on the original known
+panel: seeds 3000, 3017, 3042 and 3063, both seats against pinned COK and
+Seyam. A public observation shows every crop planted earlier in the current
+day; an unwatered one must be serviced before the day refresh destroys the
+paid seed. The candidate raises only that immediate WATER task to 260, while
+the existing escape-deadline pass remains ahead of matching. It does not retain
+worker state, alter planting, crop choice, investment, or market behavior.
+Freeze `7428ec7060515ad3f1bef91b34b616f2f401319c635ccf791bffd739f607b886`.
+The interpreter contract must demonstrate both same-day survival and that an
+already-unfed animal's last feasible route remains first. This is a scheduler
+reliability check, not an automatic promotion or fresh-validation authorization.
+
+The plant-water reservation completed all 16 games without errors or candidate
+stderr. It retained 4/8 COK wins and improved that mean cash gap from -1,744.75
+to -596.50, but fell from 8/8 to 6/8 against Seyam (mean gap +10,270.38).
+The scheduler contract is sound, but a global priority for every same-day
+planting displaces enough work to harm the exact panel. Reject it; any future
+reservation must be admission-controlled rather than a blanket priority boost.
