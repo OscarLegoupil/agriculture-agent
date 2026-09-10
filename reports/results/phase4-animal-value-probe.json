@@ -1,0 +1,319 @@
+{
+  "base_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "candidate_sha256": "84b1368926e09b9cefb7c8e2590a726400a49ba360fe89ceaefa581bf01e981c",
+  "scope": "36known observation decision probes, no full games",
+  "observations": [
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 192,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 216,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 240,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 264,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 288,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 312,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 336,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 360,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+      "step": 384,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 192,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 216,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 240,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 264,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 288,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 312,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 336,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 360,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-1.json",
+      "step": 384,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 192,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 216,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 240,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 264,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 288,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 312,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 336,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 360,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-0.json",
+      "step": 384,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 192,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 216,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 240,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 264,
+      "old_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ],
+      "cohort_purchase": [
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 288,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 312,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 336,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 360,
+      "old_purchase": [],
+      "cohort_purchase": []
+    },
+    {
+      "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3063-1.json",
+      "step": 384,
+      "old_purchase": [],
+      "cohort_purchase": []
+    }
+  ]
+}

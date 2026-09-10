@@ -1,0 +1,361 @@
+{
+  "replay": "reports\\replays\\phase4-losses\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325-reference-cok-main-3029-0.json",
+  "events": [
+    {
+      "seat": 0,
+      "step": 0,
+      "type": "BUY_ANIMAL",
+      "animal": "COW",
+      "quantity": 1,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 1,
+      "step": 0,
+      "type": "BUY_ANIMAL",
+      "animal": "COW",
+      "quantity": 2,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 1,
+      "step": 0,
+      "type": "BUY_ANIMAL",
+      "animal": "SHEEP",
+      "quantity": 2,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 0,
+      "step": 1,
+      "type": "BUY_ANIMAL",
+      "animal": "COW",
+      "quantity": 1,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 0,
+      "step": 3,
+      "unit": 0,
+      "type": "PLACE",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 4,
+      "type": "BUY_ANIMAL",
+      "animal": "SHEEP",
+      "quantity": 1,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 1,
+      "step": 4,
+      "unit": 0,
+      "type": "PLACE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 4,
+      "unit": 3,
+      "type": "PLACE",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 5,
+      "unit": 1,
+      "type": "PLACE",
+      "animal": "SHEEP",
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 6,
+      "unit": 0,
+      "type": "PLACE",
+      "animal": "COW",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 7,
+      "type": "BUY_ANIMAL",
+      "animal": "SHEEP",
+      "quantity": 1,
+      "scope": "recorded order; actual total purchases verified by ledger"
+    },
+    {
+      "seat": 0,
+      "step": 7,
+      "unit": 2,
+      "type": "FEED",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 7,
+      "unit": 3,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 8,
+      "unit": 2,
+      "type": "CARE",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 8,
+      "unit": 3,
+      "type": "CARE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 11,
+      "unit": 2,
+      "type": "FEED",
+      "animal": "COW",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 11,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 12,
+      "unit": 2,
+      "type": "CARE",
+      "animal": "COW",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 12,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "SHEEP",
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 12,
+      "unit": 3,
+      "type": "PLACE",
+      "animal": "COW",
+      "position": [
+        3,
+        4
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 14,
+      "unit": 0,
+      "type": "PLACE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 19,
+      "unit": 2,
+      "type": "PLACE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        0
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 23,
+      "unit": 1,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 25,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 27,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "COW",
+      "position": [
+        3,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 28,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "COW",
+      "position": [
+        3,
+        4
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 30,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 31,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "SHEEP",
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 34,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 38,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "COW",
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 44,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        0
+      ]
+    },
+    {
+      "seat": 0,
+      "step": 45,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        0
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 45,
+      "unit": 0,
+      "type": "FEED",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        3
+      ]
+    },
+    {
+      "seat": 1,
+      "step": 46,
+      "unit": 0,
+      "type": "CARE",
+      "animal": "SHEEP",
+      "position": [
+        4,
+        3
+      ]
+    }
+  ]
+}

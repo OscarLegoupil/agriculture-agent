@@ -1,0 +1,251 @@
+{
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031
+  ],
+  "weights": {
+    "data/raw/reference-cok/main.py": 0.5,
+    "data/raw/reference-seyam/main.py": 0.5
+  },
+  "opponents": {
+    "data/raw/reference-cok/main.py": {
+      "games": 64,
+      "incumbent_score": 0.328125,
+      "challenger_score": 0.46875,
+      "score_delta": 0.140625,
+      "delta_ci95": [
+        0.03125,
+        0.265625
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -4732.421875,
+        "median": -5981.0,
+        "p10": -12327.5
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": -2820.5625,
+        "median": -3888.0,
+        "p10": -18352.699999999997
+      },
+      "mean_paired_gap_change": 1911.859375,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.141913,
+      "failed_work": 0
+    },
+    "data/raw/reference-seyam/main.py": {
+      "games": 64,
+      "incumbent_score": 0.921875,
+      "challenger_score": 0.796875,
+      "score_delta": -0.125,
+      "delta_ci95": [
+        -0.25,
+        0.0
+      ],
+      "incumbent_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 16608.578125,
+        "median": 15972.5,
+        "p10": 3250.0000000000036
+      },
+      "challenger_cash_gap": {
+        "n": 64,
+        "missing": 0,
+        "mean": 12454.484375,
+        "median": 13450.0,
+        "p10": -10059.0
+      },
+      "mean_paired_gap_change": -4154.09375,
+      "paired_gap_n": 64,
+      "paired_gap_missing": 0,
+      "candidate_errors": 0,
+      "opponent_errors": 0,
+      "incumbent_errors": 0,
+      "incumbent_opponent_errors": 0,
+      "stderr_turns": 0,
+      "max_action_seconds": 0.213585,
+      "failed_work": 0
+    }
+  },
+  "aggregate": {
+    "incumbent_score": 0.625,
+    "challenger_score": 0.6328125,
+    "score_delta": 0.0078125,
+    "delta_ci95": [
+      -0.0703125,
+      0.0859375
+    ],
+    "challenger_ci95": [
+      0.5390625,
+      0.7265625
+    ]
+  },
+  "identities": {
+    "incumbent": {
+      "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+      "source": "submissions/20260909-v8/main.py",
+      "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+      "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+      "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+    },
+    "challenger": {
+      "sha256": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265",
+      "source": "data/interim/strategy-screen/e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265/main.py",
+      "executed_candidate": "data\\interim\\frozen\\e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265\\main.py",
+      "snapshot": "reports\\sources\\e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265.py.gz",
+      "revision": "bbbe5f3d22cd22c8cfcaf2aec3b939bd22d306ee"
+    }
+  },
+  "provenance": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    },
+    "all_opponent_hashes": {
+      "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+      "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+    },
+    "scenario_configuration_sha256": "f918524b388587244397f5d52b88ac17b178cb2a1e9dc829ee2f20f1906afc10",
+    "validated_full_panel": {
+      "opponents": [
+        "data/raw/reference-cok/main.py",
+        "data/raw/reference-seyam/main.py"
+      ],
+      "seeds": [
+        3000,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008,
+        3009,
+        3010,
+        3011,
+        3012,
+        3013,
+        3014,
+        3015,
+        3016,
+        3017,
+        3018,
+        3019,
+        3020,
+        3021,
+        3022,
+        3023,
+        3024,
+        3025,
+        3026,
+        3027,
+        3028,
+        3029,
+        3030,
+        3031
+      ],
+      "games_per_policy": 128
+    }
+  },
+  "scope": {
+    "kind": "known-data development comparison; no fresh selection claim",
+    "opponents": [
+      "data/raw/reference-cok/main.py",
+      "data/raw/reference-seyam/main.py"
+    ],
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031
+    ],
+    "seats": [
+      0,
+      1
+    ],
+    "parents": {
+      "incumbent": {
+        "path": "reports\\results\\phase3-validation-challenger.json.gz",
+        "file_sha256": "95c5b9f307df87323c280069291057bb2e958a9fe4def49263aec097b4ea67cc",
+        "total_games": 512
+      },
+      "challenger": {
+        "path": "data\\raw\\phase4-high-feed-field.json",
+        "file_sha256": "44af3f4ce98bc7350d57432cfdf512a48e893e46f8c6ae999650dfcd7dbdf806",
+        "total_games": 128
+      }
+    }
+  }
+}

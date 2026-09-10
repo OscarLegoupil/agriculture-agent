@@ -1,0 +1,625 @@
+{
+  "complete": true,
+  "kind": "saved-observation public-rival-demand sensitivity; no games",
+  "incumbent_sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "candidate_sha256": "30a96f83d1a4ac6fd0eaadbf35bfcaed52347ed2bf6bf07973cce47fc28a79f5",
+  "active_observations": 120,
+  "changed_action_examples": [
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 8,
+      "hour": 10,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 8,
+      "hour": 12,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 8,
+      "hour": 15,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 12,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 13,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 15,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 17,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [
+        [
+          "SELL",
+          "WHEAT",
+          1
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          4
+        ]
+      ],
+      "candidate_market": [
+        [
+          "SELL",
+          "WHEAT",
+          1
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 8,
+      "hour": 10,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 8,
+      "hour": 12,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 8,
+      "hour": 15,
+      "own_animals": 5,
+      "rival_animals": 10,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 12,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 13,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 15,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3002-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 17,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [
+        [
+          "SELL",
+          "WHEAT",
+          1
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          4
+        ]
+      ],
+      "candidate_market": [
+        [
+          "SELL",
+          "WHEAT",
+          1
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 16,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          4
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 18,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-0.json",
+      "seat": 0,
+      "day": 9,
+      "hour": 19,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 16,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          4
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 18,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-cok-main-3029-1.json",
+      "seat": 1,
+      "day": 9,
+      "hour": 19,
+      "own_animals": 7,
+      "rival_animals": 12,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 12,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 14,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 15,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": [
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 16,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "candidate_market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 17,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-0.json",
+      "seat": 0,
+      "day": 11,
+      "hour": 18,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_LAND"
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          2
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 12,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 14,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 15,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": [
+        [
+          "BUY_SEED",
+          "WHEAT",
+          4
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 16,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "candidate_market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 17,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [],
+      "candidate_market": []
+    },
+    {
+      "replay": "e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265-reference-seyam-main-3002-1.json",
+      "seat": 1,
+      "day": 11,
+      "hour": 18,
+      "own_animals": 9,
+      "rival_animals": 14,
+      "active": true,
+      "baseline_market": [
+        [
+          "BUY_LAND"
+        ]
+      ],
+      "candidate_market": [
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          2
+        ]
+      ]
+    }
+  ]
+}

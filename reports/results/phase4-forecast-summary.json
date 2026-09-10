@@ -1,0 +1,537 @@
+{
+  "scope": "Fixed32known-development games, four seeds, two opponents both seats; no extensions",
+  "comparisons": {
+    "sale_floor_vs_v8": {
+      "seeds": [
+        3000,
+        3017,
+        3042,
+        3063
+      ],
+      "weights": {
+        "data/raw/reference-seyam/main.py": 0.5,
+        "data/raw/reference-cok/main.py": 0.5
+      },
+      "opponents": {
+        "data/raw/reference-cok/main.py": {
+          "games": 8,
+          "incumbent_score": 0.5,
+          "challenger_score": 0.5,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -1744.75,
+            "median": -2567.0,
+            "p10": -10538.0
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -3111.875,
+            "median": -3917.5,
+            "p10": -10538.0
+          },
+          "mean_paired_gap_change": -1367.125,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.170404,
+          "failed_work": 0
+        },
+        "data/raw/reference-seyam/main.py": {
+          "games": 8,
+          "incumbent_score": 1.0,
+          "challenger_score": 1.0,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7646.125,
+            "median": 6758.0,
+            "p10": 1724.8
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7104.875,
+            "median": 6092.5,
+            "p10": 1173.8000000000002
+          },
+          "mean_paired_gap_change": -541.25,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.336802,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.75,
+        "challenger_score": 0.75,
+        "score_delta": 0.0,
+        "delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "challenger_ci95": [
+          0.5,
+          1.0
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+          "source": "submissions/20260909-v8/main.py",
+          "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+          "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+          "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+        },
+        "challenger": {
+          "sha256": "000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9",
+          "source": "data\\interim\\phase4-forecast\\sale_floor\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9\\main.py",
+          "executed_candidate": "data\\interim\\phase4-forecast\\sale_floor\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9\\main.py",
+          "snapshot": "reports\\sources\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9.py.gz",
+          "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "63d77edab04c81cec44c9cb46ad4ac4b810bbda7bb54d528b4fafee762900e8f",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            3000,
+            3017,
+            3042,
+            3063
+          ],
+          "games_per_policy": 16
+        }
+      }
+    },
+    "both_vs_v8": {
+      "seeds": [
+        3000,
+        3017,
+        3042,
+        3063
+      ],
+      "weights": {
+        "data/raw/reference-seyam/main.py": 0.5,
+        "data/raw/reference-cok/main.py": 0.5
+      },
+      "opponents": {
+        "data/raw/reference-cok/main.py": {
+          "games": 8,
+          "incumbent_score": 0.5,
+          "challenger_score": 0.5,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -1744.75,
+            "median": -2567.0,
+            "p10": -10538.0
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -3188.375,
+            "median": -3981.0,
+            "p10": -10007.0
+          },
+          "mean_paired_gap_change": -1443.625,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.22373,
+          "failed_work": 0
+        },
+        "data/raw/reference-seyam/main.py": {
+          "games": 8,
+          "incumbent_score": 1.0,
+          "challenger_score": 1.0,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7646.125,
+            "median": 6758.0,
+            "p10": 1724.8
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7617.375,
+            "median": 6404.5,
+            "p10": 1963.5
+          },
+          "mean_paired_gap_change": -28.75,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.233967,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.75,
+        "challenger_score": 0.75,
+        "score_delta": 0.0,
+        "delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "challenger_ci95": [
+          0.5,
+          1.0
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+          "source": "submissions/20260909-v8/main.py",
+          "executed_candidate": "data\\interim\\frozen\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325\\main.py",
+          "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+          "revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db"
+        },
+        "challenger": {
+          "sha256": "1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2",
+          "source": "data\\interim\\phase4-forecast\\both\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2\\main.py",
+          "executed_candidate": "data\\interim\\phase4-forecast\\both\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2\\main.py",
+          "snapshot": "reports\\sources\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2.py.gz",
+          "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "63d77edab04c81cec44c9cb46ad4ac4b810bbda7bb54d528b4fafee762900e8f",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            3000,
+            3017,
+            3042,
+            3063
+          ],
+          "games_per_policy": 16
+        }
+      }
+    },
+    "timing_increment": {
+      "seeds": [
+        3000,
+        3017,
+        3042,
+        3063
+      ],
+      "weights": {
+        "data/raw/reference-seyam/main.py": 0.5,
+        "data/raw/reference-cok/main.py": 0.5
+      },
+      "opponents": {
+        "data/raw/reference-cok/main.py": {
+          "games": 8,
+          "incumbent_score": 0.5,
+          "challenger_score": 0.5,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -3111.875,
+            "median": -3917.5,
+            "p10": -10538.0
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": -3188.375,
+            "median": -3981.0,
+            "p10": -10007.0
+          },
+          "mean_paired_gap_change": -76.5,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.22373,
+          "failed_work": 0
+        },
+        "data/raw/reference-seyam/main.py": {
+          "games": 8,
+          "incumbent_score": 1.0,
+          "challenger_score": 1.0,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "incumbent_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7104.875,
+            "median": 6092.5,
+            "p10": 1173.8000000000002
+          },
+          "challenger_cash_gap": {
+            "n": 8,
+            "missing": 0,
+            "mean": 7617.375,
+            "median": 6404.5,
+            "p10": 1963.5
+          },
+          "mean_paired_gap_change": 512.5,
+          "paired_gap_n": 8,
+          "paired_gap_missing": 0,
+          "candidate_errors": 0,
+          "opponent_errors": 0,
+          "incumbent_errors": 0,
+          "incumbent_opponent_errors": 0,
+          "stderr_turns": 0,
+          "max_action_seconds": 0.233967,
+          "failed_work": 0
+        }
+      },
+      "aggregate": {
+        "incumbent_score": 0.75,
+        "challenger_score": 0.75,
+        "score_delta": 0.0,
+        "delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "challenger_ci95": [
+          0.5,
+          1.0
+        ]
+      },
+      "identities": {
+        "incumbent": {
+          "sha256": "000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9",
+          "source": "data\\interim\\phase4-forecast\\sale_floor\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9\\main.py",
+          "executed_candidate": "data\\interim\\phase4-forecast\\sale_floor\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9\\main.py",
+          "snapshot": "reports\\sources\\000e646a6b8d8a1d2061ea6b8e7c1d3494c4853b217610ade73759abd6ed80c9.py.gz",
+          "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+        },
+        "challenger": {
+          "sha256": "1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2",
+          "source": "data\\interim\\phase4-forecast\\both\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2\\main.py",
+          "executed_candidate": "data\\interim\\phase4-forecast\\both\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2\\main.py",
+          "snapshot": "reports\\sources\\1e43a5d7673adff3d44790da79b06323be0fd95be89c1222407e37b25eeb3bf2.py.gz",
+          "revision": "2c1323cf54f896443f98e5454837ab3f44221b6d"
+        }
+      },
+      "provenance": {
+        "environment_version": "1.32.7",
+        "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+        "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+        "dependencies": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1"
+        },
+        "all_opponent_hashes": {
+          "data/raw/reference-cok/main.py": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+          "data/raw/reference-seyam/main.py": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60"
+        },
+        "scenario_configuration_sha256": "63d77edab04c81cec44c9cb46ad4ac4b810bbda7bb54d528b4fafee762900e8f",
+        "validated_full_panel": {
+          "opponents": [
+            "data/raw/reference-cok/main.py",
+            "data/raw/reference-seyam/main.py"
+          ],
+          "seeds": [
+            3000,
+            3017,
+            3042,
+            3063
+          ],
+          "games_per_policy": 16
+        }
+      }
+    }
+  },
+  "seed_responses": {
+    "data/raw/reference-seyam/main.py": {
+      "3000": {
+        "v8": [
+          1765.0,
+          1631.0
+        ],
+        "sale_floor": [
+          107.0,
+          1631.0
+        ],
+        "both": [
+          1505.0,
+          2160.0
+        ]
+      },
+      "3017": {
+        "v8": [
+          7759.0,
+          8428.0
+        ],
+        "sale_floor": [
+          7759.0,
+          8428.0
+        ],
+        "both": [
+          8119.0,
+          8180.0
+        ]
+      },
+      "3042": {
+        "v8": [
+          21855.0,
+          8283.0
+        ],
+        "sale_floor": [
+          21855.0,
+          8283.0
+        ],
+        "both": [
+          21855.0,
+          9814.0
+        ]
+      },
+      "3063": {
+        "v8": [
+          5691.0,
+          5757.0
+        ],
+        "sale_floor": [
+          4350.0,
+          4426.0
+        ],
+        "both": [
+          4616.0,
+          4690.0
+        ]
+      }
+    },
+    "data/raw/reference-cok/main.py": {
+      "3000": {
+        "v8": [
+          2747.0,
+          5222.0
+        ],
+        "sale_floor": [
+          370.0,
+          1894.0
+        ],
+        "both": [
+          464.0,
+          729.0
+        ]
+      },
+      "3017": {
+        "v8": [
+          -10538.0,
+          -10538.0
+        ],
+        "sale_floor": [
+          -10538.0,
+          -10538.0
+        ],
+        "both": [
+          -8426.0,
+          -8426.0
+        ]
+      },
+      "3042": {
+        "v8": [
+          9150.0,
+          5761.0
+        ],
+        "sale_floor": [
+          6785.0,
+          3542.0
+        ],
+        "both": [
+          6867.0,
+          3299.0
+        ]
+      },
+      "3063": {
+        "v8": [
+          -7881.0,
+          -7881.0
+        ],
+        "sale_floor": [
+          -8205.0,
+          -8205.0
+        ],
+        "both": [
+          -10007.0,
+          -10007.0
+        ]
+      }
+    }
+  }
+}

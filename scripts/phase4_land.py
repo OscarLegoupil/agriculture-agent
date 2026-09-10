@@ -87,6 +87,18 @@ def screen(output, workers, field=False):
         for seed in (range(3000, 3032) if field else [3000, 3017, 3042, 3063])
         for seat in (0, 1)
     ]
+    if field:
+        candidate = next(iter(candidates))
+        manifest.update(
+            arguments={
+                "candidate": candidate,
+                "seeds": list(range(3000, 3032)),
+                "opponents": opponents,
+                "seats": [0, 1],
+            },
+            executed_candidate=candidate,
+            candidate_snapshot=candidates[candidate]["snapshot"],
+        )
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(manifest, indent=2) + "\n")
     with ProcessPoolExecutor(max_workers=workers) as pool:

@@ -202,3 +202,46 @@ Complete records are archived in `reports/results/phase4-opening.json.gz`.
 `phase4-opening-summary.json` preserves full matched source/environment/seed
 checks, cash tails, per-opponent paired intervals and mean financial telemetry.
 The budget is exhausted for these hypotheses; no automatic extension follows.
+
+## Initial animal input sequence, after the rejected care formula
+
+The care formula's failure warrants inspecting prerequisites rather than another
+priority multiplier. Exact successful-action reconstruction for COK seed 3029,
+v8 seat zero, shows these decision steps on day zero:
+
+| Policy / cohort | Purchase | PLACE | FEED | CARE |
+| --- | --- | --- | --- | --- |
+| V8 cows | 0, 1 | 3, 6 | 7, 11 | 8, 12 |
+| V8 sheep | 4, 7 | 14, 19 | 23 for one sheep | none |
+| COK cows | both at 0 | 4, 12 | none | none |
+| COK sheep | both at 0 | 4, 5 | 7, 11 | 8, 12 |
+
+The remaining v8 sheep is not fed until the following day; its first successful
+sheep CARE is decision 45. Original full-ledger checks verify actual animal
+purchases, while copied official unit actions recover successful FEED at step
+23 even though the following observation has already reset daily flags. The
+compact event record is `reports/results/phase4-opening-sequence.json`.
+
+V8's two-animal in-flight cap postpones sheep orders until cows are placed.
+Cow-first inventory enumeration claims nearby sites first; when sheep arrive,
+intervening crop allocations put them at `(4,1)` and `(4,0)`, farther from the
+depot than COK's first sheep. Raising a CARE score cannot repair a missed
+opportunity when the animal has not yet arrived or feed is unavailable. COK
+uses fewer initial hands, so additional initial workers are not the demonstrated
+missing prerequisite.
+
+Two small **unimplemented, unbenchmarked** sequencing interventions follow:
+
+- Admit up to four in-flight initial animals on day zero, retaining the existing
+  two-cow/two-sheep opening caps and all subsequent admission logic. This isolates
+  the purchasing queue but may still let cow-first assignment move sheep tasks.
+- Commission the initial sheep before cows, consistently in both purchase and
+  available-animal task ordering. Retain the same four total assets, funding
+  rules and later herd policy. Changing only purchases can change destinations
+  when newly purchased cows enter the task pool.
+
+Neither intervention copies routes. The causal target is earlier useful care
+from the same owned assets, measured by actual PLACE/FEED/CARE times and first
+wool output before examining score. Both remain hypotheses until the full
+controller performs the intended sequence. No additional games are authorized
+by this diagnosis.

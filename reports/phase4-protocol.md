@@ -127,3 +127,57 @@ Seyam. Combine the existing 70-crop/four-plot/12-hand candidate with each frozen
 wheat-target rule to test whether retaining berry capacity changes that tradeoff.
 Do not assume the components are additive or that the target guarantees feed
 self-sufficiency. All seeds remain known development data; four workers maximum.
+
+Authorize 128 known-data confirmation games for the plain higher-wheat candidate
+`e15a78e4eed4929480c4225e74ebd3f8abb3aee38e2b459832ae8a7b2de63265`:
+seeds 3000–3031, both seats against pinned Seyam and COK. The four-seed screen
+ties v8's overall score but improves the central COK weakness to 6/8 with roughly
+10,477 better mean cash gap, while Seyam remains 6/8. This motivates checking the
+family tradeoff on more known seeds; it is not a promotion or fresh-validation
+claim. Start four workers only after the land-field manifest is complete, keeping
+at most eight concurrent local games. Save output to
+`data/raw/phase4-high-feed-field.json` and replays for seeds 3002 and 3029.
+Use the exact matched v8 subset and strict comparator. No further variants or
+automatic experiment extension are authorized by this run.
+
+Authorize two diagnostic replay reproductions of exact expanded_high_feed 909b5a1f8e9b6dbec3998f28a10a8b7f95fbd43175cc03be9bf5f58d0a78c5b1, COK seed3063 both seats, two workers. These reproduce known development outcomes to measure funded crop commissioning and task competition; no new strategic candidate or performance selection is authorized.
+
+Authorize one 16-game funded-commissioning intervention on expanded_high_feed: days8-16 funded PLANT priority120, corresponding seed-clearing DIG90, retain two/three-action planting-watering admission and existing escape/water deadlines. Original panel3000,3017,3042,3063, bothseats COK/Seyam, fourworkers after official repeated-replanning and escape-reservation tests. Freeze902ce3828c450bba73223a68fd72ad9455dd0db28234274cc1299c1943c7eaa5. This tests a confirmed commissioning bottleneck; no automatic extension.
+
+Authorize a 16-game opening-queue screen for the frozen v8 candidate that
+admits the already-capped two cows and two sheep into the day-zero purchase
+queue. Official seed-zero replay verifies cow purchases at decisions 0/1 and
+sheep at 2/3, instead of 4/7, while leaving every later admission gate, asset
+cap, feed/care policy and labor rule unchanged. Test both seats, COK and Seyam,
+and seeds 3000, 3017, 3042 and 3063. Record actual purchase, placement, feed,
+care and early-wool timing. This is a targeted prerequisite test; it does not
+authorize a larger herd, an earlier general herd ramp, or fresh validation.
+
+Authorize a 16-game public-rival-feed screen. The plain high-feed candidate
+improves COK but loses Seyam on the 32-seed known panel. This candidate applies
+the same wheat target only when the visible rival farm holds at least five more
+animals than ours, a direct observable proxy for a material wheat-demand lead.
+It retains all crop, cash and seed gates. The criterion does not use an opponent
+identity, hidden inventory, future shop draw or future price. Test the original
+four known seeds, both seats, COK and Seyam, with frozen source
+`30a96f83d1a4ac6fd0eaadbf35bfcaed52347ed2bf6bf07973cce47fc28a79f5`.
+This is a single family-adaptation hypothesis, not a threshold search or a
+fresh-validation claim.
+
+Authorize one 16-game premium-berry guard screen. In the completed high-feed
+field, the candidate's paired change is negative in both opponent families on
+the day-eight strawberry quote of 179, while its static wheat override is a
+known displacement of strawberry production. Freeze a single market rule: at a
+public strawberry price of at least 1.49 times the 120 base price, retain the
+normal crop ranking; otherwise retain the frozen 1.5-wheat-per-animal target.
+This uses neither opponent identity nor future market information. The fixed
+four-seed COK/Seyam, both-seat panel is only a post-hoc development screen; do
+not make a fresh-validation or causal-performance claim from it.
+Freeze `fe3826a191c0ffcf49db101edc1e2551c2174268e5a74fa0a79228d8ef93a33d`.
+
+The premium guard completed all 16 games with no candidate stderr or failed
+status. It won 3/8 against COK (mean cash gap -4,052.12) and 8/8 against
+Seyam (mean gap +10,128.88), compared with frozen v8's 4/8 COK and 8/8 Seyam
+on this exact panel. The observation-specific split used to formulate the
+rule did not reproduce as a practical improvement. Reject the candidate; its
+post-hoc screen is retained only as negative development evidence.

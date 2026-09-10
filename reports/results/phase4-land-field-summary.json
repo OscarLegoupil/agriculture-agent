@@ -1,0 +1,82 @@
+[
+  {
+    "mode": "land_only",
+    "opponent": "data/raw/reference-cok/main.py",
+    "games": 64,
+    "wins": 19,
+    "draws": 0,
+    "mean_gap": -6921.09375,
+    "paired_gap_change": -2188.671875,
+    "land_purchase_counts": {
+      "3": 64
+    },
+    "mean_daily_sampled_peak_productive": 68,
+    "baseline_mean_daily_sampled_peak_productive": 68,
+    "mean_labor_expense": 7926.015625,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 43,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 10.1875,
+      "SHEEP": 5.703125,
+      "GOOSE": 2.09375
+    },
+    "mean_wheat_expense": 10057.765625,
+    "mean_successful_moves": 4032.0625,
+    "baseline_mean_successful_moves": 4165.640625,
+    "mean_successful_harvest_actions": 371.40625,
+    "losses": {
+      "animal_escapes": 15,
+      "terminal_escapes": 137,
+      "water_deaths": 8,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 64
+    },
+    "runtime_max_seconds": 0.246829
+  },
+  {
+    "mode": "land_only",
+    "opponent": "data/raw/reference-seyam/main.py",
+    "games": 64,
+    "wins": 60,
+    "draws": 0,
+    "mean_gap": 18274.640625,
+    "paired_gap_change": 1666.0625,
+    "land_purchase_counts": {
+      "3": 64
+    },
+    "mean_daily_sampled_peak_productive": 68,
+    "baseline_mean_daily_sampled_peak_productive": 67.984375,
+    "mean_labor_expense": 8220.234375,
+    "mean_day15_composition": {
+      "WHEAT": 7,
+      "CARROT": 0,
+      "STRAWBERRY": 43,
+      "MELON": 0,
+      "TOMATO": 0,
+      "COW": 10.125,
+      "SHEEP": 6.6875,
+      "GOOSE": 1.1875
+    },
+    "mean_wheat_expense": 10735.421875,
+    "mean_successful_moves": 4034.46875,
+    "baseline_mean_successful_moves": 4203.828125,
+    "mean_successful_harvest_actions": 363.75,
+    "losses": {
+      "animal_escapes": 6,
+      "terminal_escapes": 123,
+      "water_deaths": 14,
+      "overflow_units": 0
+    },
+    "stderr_turns": 0,
+    "statuses": {
+      "['DONE', 'DONE']": 64
+    },
+    "runtime_max_seconds": 0.230624
+  }
+]

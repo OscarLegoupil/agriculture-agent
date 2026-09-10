@@ -1,0 +1,4108 @@
+[
+  {
+    "replay": "reports\\replays\\phase4-commissioning\\909b5a1f8e9b6dbec3998f28a10a8b7f95fbd43175cc03be9bf5f58d0a78c5b1-reference-cok-main-3063-0.json",
+    "replay_sha256": "1face7fcff5992b9e8cd7ac30278ea0bd7bd2df6b381b9d405892aa69d97cf8b",
+    "official_commissioning_witness": {
+      "day": 11,
+      "hour": 7,
+      "worker": 0,
+      "actions": [
+        [
+          "PLANT",
+          "WHEAT"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "COLLECT_FERTILIZER"
+        ]
+      ],
+      "survives_day_end": true,
+      "fertilizer_collected": 1,
+      "scope": "Copied official state; proves local feasibility, not full-policy outcome"
+    },
+    "action_mismatches": 0,
+    "daily": {
+      "10": {
+        "start:MELON": 14,
+        "start:SHEEP": 4,
+        "start:STRAWBERRY": 23,
+        "start:WHEAT": 6,
+        "start:COW": 2,
+        "start:cash": 2594.0,
+        "start:seeds": 1,
+        "funded_plant_task_turns": 166,
+        "funded_dig_task_turns": 1,
+        "requested:WEST": 48,
+        "requested:WATER": 29,
+        "requested:COLLECT_FERTILIZER": 6,
+        "requested:NORTH": 62,
+        "requested:EAST": 36,
+        "requested:PICKUP": 6,
+        "requested:BUILD_PASTURE": 3,
+        "requested:FEED": 6,
+        "requested:HARVEST": 13,
+        "requested:CARE": 6,
+        "requested:SOUTH": 39,
+        "immediate_plant_bypasses": 11,
+        "immediate_plant_bypasses_low_load": 1,
+        "requested:PASS": 5,
+        "requested:DROP": 9,
+        "requested:DIG": 1,
+        "requested:PLANT": 4,
+        "requested:PLACE": 1
+      },
+      "11": {
+        "start:MELON": 3,
+        "start:STRAWBERRY": 25,
+        "start:SHEEP": 5,
+        "start:WHEAT": 8,
+        "start:COW": 2,
+        "start:other": 1,
+        "start:cash": 11031.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 680,
+        "funded_dig_task_turns": 0,
+        "requested:WEST": 66,
+        "requested:WATER": 32,
+        "requested:COLLECT_FERTILIZER": 7,
+        "requested:PICKUP": 9,
+        "requested:EAST": 40,
+        "requested:NORTH": 38,
+        "requested:HARVEST": 6,
+        "requested:PLACE": 6,
+        "requested:FEED": 12,
+        "requested:BUILD_PASTURE": 5,
+        "requested:CARE": 12,
+        "immediate_plant_bypasses": 11,
+        "immediate_plant_bypasses_low_load": 6,
+        "requested:SOUTH": 20,
+        "requested:PLANT": 8,
+        "requested:DROP": 3,
+        "requested:PASS": 7
+      },
+      "12": {
+        "start:MELON": 2,
+        "start:STRAWBERRY": 28,
+        "start:SHEEP": 5,
+        "start:WHEAT": 8,
+        "start:COW": 8,
+        "start:cash": 11247.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 450,
+        "funded_dig_task_turns": 2,
+        "requested:COLLECT_FERTILIZER": 13,
+        "requested:PICKUP": 10,
+        "requested:WEST": 44,
+        "requested:NORTH": 49,
+        "requested:SOUTH": 45,
+        "requested:FEED": 16,
+        "requested:WATER": 24,
+        "requested:EAST": 36,
+        "requested:CARE": 15,
+        "requested:BUILD_PASTURE": 1,
+        "requested:BUILD_COOP": 4,
+        "requested:HARVEST": 6,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 4,
+        "requested:PLACE": 3,
+        "requested:DROP": 5,
+        "requested:PLANT": 10,
+        "requested:PASS": 14
+      },
+      "13": {
+        "start:MELON": 2,
+        "start:STRAWBERRY": 32,
+        "start:SHEEP": 5,
+        "start:WHEAT": 12,
+        "start:COW": 9,
+        "start:GOOSE": 2,
+        "start:other": 2,
+        "start:cash": 8517.0,
+        "start:seeds": 8,
+        "funded_plant_task_turns": 511,
+        "funded_dig_task_turns": 22,
+        "requested:SOUTH": 50,
+        "requested:COLLECT_FERTILIZER": 16,
+        "requested:PICKUP": 8,
+        "requested:WEST": 34,
+        "requested:EAST": 43,
+        "requested:WATER": 38,
+        "requested:PLACE": 2,
+        "requested:NORTH": 40,
+        "requested:BUILD_COOP": 1,
+        "requested:HARVEST": 3,
+        "requested:FEED": 17,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 4,
+        "requested:CARE": 16,
+        "requested:PLANT": 11,
+        "requested:DROP": 5,
+        "requested:PASS": 12
+      },
+      "14": {
+        "start:STRAWBERRY": 34,
+        "start:SHEEP": 5,
+        "start:WHEAT": 20,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:other": 1,
+        "start:cash": 8777.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 325,
+        "funded_dig_task_turns": 21,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:PICKUP": 8,
+        "requested:WEST": 43,
+        "requested:NORTH": 40,
+        "requested:FEED": 15,
+        "requested:EAST": 43,
+        "requested:HARVEST": 3,
+        "requested:WATER": 33,
+        "requested:SOUTH": 41,
+        "requested:FERTILIZE": 5,
+        "requested:DROP": 5,
+        "requested:CARE": 14,
+        "immediate_plant_bypasses": 2,
+        "immediate_plant_bypasses_low_load": 2,
+        "requested:PLANT": 4,
+        "requested:PASS": 22,
+        "requested:DIG": 1
+      },
+      "15": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:WHEAT": 23,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 10313.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 286,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 33,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:WEST": 45,
+        "requested:EAST": 52,
+        "requested:WATER": 48,
+        "requested:PICKUP": 3,
+        "requested:FEED": 13,
+        "requested:NORTH": 47,
+        "immediate_plant_bypasses": 7,
+        "immediate_plant_bypasses_low_load": 5,
+        "requested:HARVEST": 11,
+        "requested:CARE": 12,
+        "requested:FERTILIZE": 6,
+        "requested:PLANT": 5,
+        "requested:PASS": 3
+      },
+      "16": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:WHEAT": 23,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 10160.0,
+        "start:seeds": 8,
+        "funded_plant_task_turns": 325,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 26,
+        "requested:WEST": 35,
+        "requested:NORTH": 49,
+        "requested:PICKUP": 4,
+        "requested:WATER": 43,
+        "requested:HARVEST": 18,
+        "requested:FEED": 18,
+        "requested:EAST": 55,
+        "requested:DROP": 4,
+        "requested:CARE": 16,
+        "requested:COLLECT_FERTILIZER": 17,
+        "immediate_plant_bypasses": 5,
+        "immediate_plant_bypasses_low_load": 3,
+        "requested:FERTILIZE": 5,
+        "requested:PLANT": 2,
+        "requested:PASS": 1
+      },
+      "17": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 1,
+        "start:WHEAT": 18,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 13888.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 370,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 34,
+        "requested:PICKUP": 5,
+        "requested:HARVEST": 25,
+        "requested:WEST": 41,
+        "requested:EAST": 47,
+        "requested:WATER": 39,
+        "requested:FEED": 15,
+        "requested:DROP": 5,
+        "requested:NORTH": 35,
+        "immediate_plant_bypasses": 9,
+        "immediate_plant_bypasses_low_load": 7,
+        "requested:CARE": 15,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:PLANT": 10,
+        "requested:PASS": 3,
+        "requested:FERTILIZE": 1
+      },
+      "18": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:WHEAT": 17,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 20125.0,
+        "start:seeds": 4,
+        "funded_plant_task_turns": 352,
+        "funded_dig_task_turns": 0,
+        "requested:PICKUP": 6,
+        "requested:FEED": 17,
+        "requested:WEST": 38,
+        "requested:NORTH": 53,
+        "requested:HARVEST": 18,
+        "requested:EAST": 46,
+        "requested:WATER": 36,
+        "requested:DROP": 5,
+        "requested:SOUTH": 34,
+        "requested:CARE": 16,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 3,
+        "requested:COLLECT_FERTILIZER": 15,
+        "requested:FERTILIZE": 5,
+        "requested:PLANT": 3
+      },
+      "19": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:WHEAT": 17,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 25206.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 383,
+        "funded_dig_task_turns": 0,
+        "requested:WEST": 37,
+        "requested:HARVEST": 26,
+        "requested:NORTH": 53,
+        "requested:SOUTH": 31,
+        "requested:EAST": 42,
+        "requested:DROP": 10,
+        "requested:WATER": 32,
+        "requested:PICKUP": 5,
+        "requested:FEED": 18,
+        "requested:CARE": 17,
+        "immediate_plant_bypasses": 8,
+        "immediate_plant_bypasses_low_load": 7,
+        "requested:COLLECT_FERTILIZER": 15,
+        "requested:PLANT": 2,
+        "requested:FERTILIZE": 4
+      },
+      "20": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:COW": 9,
+        "start:WHEAT": 14,
+        "start:GOOSE": 4,
+        "start:cash": 29741.0,
+        "start:seeds": 3,
+        "funded_plant_task_turns": 345,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 27,
+        "requested:WEST": 44,
+        "requested:PICKUP": 6,
+        "requested:EAST": 51,
+        "requested:WATER": 46,
+        "requested:FEED": 16,
+        "requested:NORTH": 37,
+        "requested:HARVEST": 18,
+        "immediate_plant_bypasses": 7,
+        "immediate_plant_bypasses_low_load": 5,
+        "requested:DROP": 5,
+        "requested:CARE": 16,
+        "requested:PLANT": 9,
+        "requested:COLLECT_FERTILIZER": 12,
+        "requested:PASS": 1,
+        "requested:FERTILIZE": 5
+      }
+    },
+    "immediate_plant_witnesses": [
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 5,
+        "position": [
+          0,
+          2
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 9,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 10,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            65,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 5,
+        "position": [
+          1,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          1,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 7,
+        "position": [
+          1,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              0
+            ],
+            "WATER",
+            65,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 9,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 10,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              1
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 14,
+        "worker": 7,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 15,
+        "worker": 7,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 16,
+        "worker": 6,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              1
+            ],
+            "BUILD_PASTURE",
+            90,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 10,
+        "hour": 21,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 10373.0,
+        "matched_target": [
+          0,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 5,
+        "worker": 4,
+        "position": [
+          6,
+          4
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12967.0,
+        "matched_target": [
+          7,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              7,
+              3
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 6,
+        "worker": 5,
+        "position": [
+          4,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 12967.0,
+        "matched_target": [
+          4,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              1
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            "COLLECT_FERTILIZER",
+            81,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 7,
+        "worker": 0,
+        "position": [
+          4,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          5,
+          2
+        ],
+        "matched_tasks": [
+          [
+            [
+              5,
+              2
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              5,
+              2
+            ],
+            "COLLECT_FERTILIZER",
+            81,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 11,
+        "hour": 7,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 11,
+        "hour": 8,
+        "worker": 7,
+        "position": [
+          3,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          4,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              3
+            ],
+            "CARE",
+            60,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 9,
+        "worker": 11,
+        "position": [
+          0,
+          3
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 10,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 12,
+        "worker": 11,
+        "position": [
+          3,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12167.0,
+        "matched_target": [
+          3,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              3
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 15,
+        "worker": 5,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 11767.0,
+        "matched_target": [
+          0,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              0
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 3,
+          "WHEAT": 2
+        }
+      },
+      {
+        "day": 11,
+        "hour": 16,
+        "worker": 7,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12276.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 17,
+        "worker": 7,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12276.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 12,
+        "hour": 7,
+        "worker": 11,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 12,
+        "hour": 8,
+        "worker": 11,
+        "position": [
+          0,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 12,
+        "hour": 11,
+        "worker": 2,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          1,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 12,
+        "hour": 14,
+        "worker": 10,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12062.0,
+        "matched_target": [
+          8,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              0
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 13,
+        "hour": 4,
+        "worker": 0,
+        "position": [
+          4,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 7685.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              3,
+              6
+            ],
+            "COLLECT_FERTILIZER",
+            74,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 3
+        }
+      },
+      {
+        "day": 13,
+        "hour": 4,
+        "worker": 7,
+        "position": [
+          7,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 7685.0,
+        "matched_target": [
+          7,
+          4
+        ],
+        "matched_tasks": [
+          [
+            [
+              7,
+              4
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 13,
+        "hour": 9,
+        "worker": 0,
+        "position": [
+          4,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 7905.0,
+        "matched_target": [
+          4,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              7
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              4,
+              7
+            ],
+            "COLLECT_FERTILIZER",
+            73,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 2,
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 13,
+        "hour": 19,
+        "worker": 10,
+        "position": [
+          9,
+          6
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 8371.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 14,
+        "hour": 8,
+        "worker": 10,
+        "position": [
+          3,
+          8
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 9261.0,
+        "matched_target": [
+          2,
+          8
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              8
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 14,
+        "hour": 12,
+        "worker": 6,
+        "position": [
+          3,
+          7
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 9328.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              3,
+              6
+            ],
+            "COLLECT_FERTILIZER",
+            67,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 5,
+        "worker": 10,
+        "position": [
+          7,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9450.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 7,
+        "worker": 7,
+        "position": [
+          7,
+          7
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9450.0,
+        "matched_target": [
+          9,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              9,
+              7
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 8,
+        "worker": 7,
+        "position": [
+          8,
+          7
+        ],
+        "crop": "TOMATO",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9514.0,
+        "matched_target": [
+          9,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              9,
+              7
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 9,
+        "worker": 6,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9514.0,
+        "matched_target": [
+          1,
+          5
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              5
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 15,
+        "hour": 11,
+        "worker": 6,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          2,
+          5
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              5
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 8
+        }
+      },
+      {
+        "day": 15,
+        "hour": 13,
+        "worker": 6,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 12
+        }
+      },
+      {
+        "day": 15,
+        "hour": 13,
+        "worker": 11,
+        "position": [
+          2,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          2,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 16,
+        "hour": 6,
+        "worker": 11,
+        "position": [
+          7,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12011.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      }
+    ]
+  },
+  {
+    "replay": "reports\\replays\\phase4-commissioning\\909b5a1f8e9b6dbec3998f28a10a8b7f95fbd43175cc03be9bf5f58d0a78c5b1-reference-cok-main-3063-1.json",
+    "replay_sha256": "dcb031aba80b61c8768287f8ed79797a3a9afa0f402e18198604c97c1a6002de",
+    "official_commissioning_witness": {
+      "day": 11,
+      "hour": 7,
+      "worker": 0,
+      "actions": [
+        [
+          "PLANT",
+          "WHEAT"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "COLLECT_FERTILIZER"
+        ]
+      ],
+      "survives_day_end": true,
+      "fertilizer_collected": 1,
+      "scope": "Copied official state; proves local feasibility, not full-policy outcome"
+    },
+    "action_mismatches": 0,
+    "daily": {
+      "10": {
+        "start:MELON": 14,
+        "start:SHEEP": 4,
+        "start:STRAWBERRY": 23,
+        "start:WHEAT": 6,
+        "start:COW": 2,
+        "start:cash": 2594.0,
+        "start:seeds": 1,
+        "funded_plant_task_turns": 166,
+        "funded_dig_task_turns": 1,
+        "requested:WEST": 48,
+        "requested:WATER": 29,
+        "requested:COLLECT_FERTILIZER": 6,
+        "requested:NORTH": 62,
+        "requested:EAST": 36,
+        "requested:PICKUP": 6,
+        "requested:BUILD_PASTURE": 3,
+        "requested:FEED": 6,
+        "requested:HARVEST": 13,
+        "requested:CARE": 6,
+        "requested:SOUTH": 39,
+        "immediate_plant_bypasses": 11,
+        "immediate_plant_bypasses_low_load": 1,
+        "requested:PASS": 5,
+        "requested:DROP": 9,
+        "requested:DIG": 1,
+        "requested:PLANT": 4,
+        "requested:PLACE": 1
+      },
+      "11": {
+        "start:MELON": 3,
+        "start:STRAWBERRY": 25,
+        "start:SHEEP": 5,
+        "start:WHEAT": 8,
+        "start:COW": 2,
+        "start:other": 1,
+        "start:cash": 11031.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 680,
+        "funded_dig_task_turns": 0,
+        "requested:WEST": 66,
+        "requested:WATER": 32,
+        "requested:COLLECT_FERTILIZER": 7,
+        "requested:PICKUP": 9,
+        "requested:EAST": 40,
+        "requested:NORTH": 38,
+        "requested:HARVEST": 6,
+        "requested:PLACE": 6,
+        "requested:FEED": 12,
+        "requested:BUILD_PASTURE": 5,
+        "requested:CARE": 12,
+        "immediate_plant_bypasses": 11,
+        "immediate_plant_bypasses_low_load": 6,
+        "requested:SOUTH": 20,
+        "requested:PLANT": 8,
+        "requested:DROP": 3,
+        "requested:PASS": 7
+      },
+      "12": {
+        "start:MELON": 2,
+        "start:STRAWBERRY": 28,
+        "start:SHEEP": 5,
+        "start:WHEAT": 8,
+        "start:COW": 8,
+        "start:cash": 11247.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 450,
+        "funded_dig_task_turns": 2,
+        "requested:COLLECT_FERTILIZER": 13,
+        "requested:PICKUP": 10,
+        "requested:WEST": 44,
+        "requested:NORTH": 49,
+        "requested:SOUTH": 45,
+        "requested:FEED": 16,
+        "requested:WATER": 24,
+        "requested:EAST": 36,
+        "requested:CARE": 15,
+        "requested:BUILD_PASTURE": 1,
+        "requested:BUILD_COOP": 4,
+        "requested:HARVEST": 6,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 4,
+        "requested:PLACE": 3,
+        "requested:DROP": 5,
+        "requested:PLANT": 10,
+        "requested:PASS": 14
+      },
+      "13": {
+        "start:MELON": 2,
+        "start:STRAWBERRY": 32,
+        "start:SHEEP": 5,
+        "start:WHEAT": 12,
+        "start:COW": 9,
+        "start:GOOSE": 2,
+        "start:other": 2,
+        "start:cash": 8517.0,
+        "start:seeds": 8,
+        "funded_plant_task_turns": 511,
+        "funded_dig_task_turns": 22,
+        "requested:SOUTH": 50,
+        "requested:COLLECT_FERTILIZER": 16,
+        "requested:PICKUP": 8,
+        "requested:WEST": 34,
+        "requested:EAST": 43,
+        "requested:WATER": 38,
+        "requested:PLACE": 2,
+        "requested:NORTH": 40,
+        "requested:BUILD_COOP": 1,
+        "requested:HARVEST": 3,
+        "requested:FEED": 17,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 4,
+        "requested:CARE": 16,
+        "requested:PLANT": 11,
+        "requested:DROP": 5,
+        "requested:PASS": 12
+      },
+      "14": {
+        "start:STRAWBERRY": 34,
+        "start:SHEEP": 5,
+        "start:WHEAT": 20,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:other": 1,
+        "start:cash": 8777.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 325,
+        "funded_dig_task_turns": 21,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:PICKUP": 8,
+        "requested:WEST": 43,
+        "requested:NORTH": 40,
+        "requested:FEED": 15,
+        "requested:EAST": 43,
+        "requested:HARVEST": 3,
+        "requested:WATER": 33,
+        "requested:SOUTH": 41,
+        "requested:FERTILIZE": 5,
+        "requested:DROP": 5,
+        "requested:CARE": 14,
+        "immediate_plant_bypasses": 2,
+        "immediate_plant_bypasses_low_load": 2,
+        "requested:PLANT": 4,
+        "requested:PASS": 22,
+        "requested:DIG": 1
+      },
+      "15": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:WHEAT": 23,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 10313.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 286,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 33,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:WEST": 45,
+        "requested:EAST": 52,
+        "requested:WATER": 48,
+        "requested:PICKUP": 3,
+        "requested:FEED": 13,
+        "requested:NORTH": 47,
+        "immediate_plant_bypasses": 7,
+        "immediate_plant_bypasses_low_load": 5,
+        "requested:HARVEST": 11,
+        "requested:CARE": 12,
+        "requested:FERTILIZE": 6,
+        "requested:PLANT": 5,
+        "requested:PASS": 3
+      },
+      "16": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:WHEAT": 23,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 10160.0,
+        "start:seeds": 8,
+        "funded_plant_task_turns": 325,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 26,
+        "requested:WEST": 35,
+        "requested:NORTH": 49,
+        "requested:PICKUP": 4,
+        "requested:WATER": 43,
+        "requested:HARVEST": 18,
+        "requested:FEED": 18,
+        "requested:EAST": 55,
+        "requested:DROP": 4,
+        "requested:CARE": 16,
+        "requested:COLLECT_FERTILIZER": 17,
+        "immediate_plant_bypasses": 5,
+        "immediate_plant_bypasses_low_load": 3,
+        "requested:FERTILIZE": 5,
+        "requested:PLANT": 2,
+        "requested:PASS": 1
+      },
+      "17": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 1,
+        "start:WHEAT": 18,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 13888.0,
+        "start:seeds": 6,
+        "funded_plant_task_turns": 370,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 34,
+        "requested:PICKUP": 5,
+        "requested:HARVEST": 25,
+        "requested:WEST": 41,
+        "requested:EAST": 47,
+        "requested:WATER": 39,
+        "requested:FEED": 15,
+        "requested:DROP": 5,
+        "requested:NORTH": 35,
+        "immediate_plant_bypasses": 9,
+        "immediate_plant_bypasses_low_load": 7,
+        "requested:CARE": 15,
+        "requested:COLLECT_FERTILIZER": 18,
+        "requested:PLANT": 10,
+        "requested:PASS": 3,
+        "requested:FERTILIZE": 1
+      },
+      "18": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:WHEAT": 17,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 20125.0,
+        "start:seeds": 4,
+        "funded_plant_task_turns": 352,
+        "funded_dig_task_turns": 0,
+        "requested:PICKUP": 6,
+        "requested:FEED": 17,
+        "requested:WEST": 38,
+        "requested:NORTH": 53,
+        "requested:HARVEST": 18,
+        "requested:EAST": 46,
+        "requested:WATER": 36,
+        "requested:DROP": 5,
+        "requested:SOUTH": 34,
+        "requested:CARE": 16,
+        "immediate_plant_bypasses": 4,
+        "immediate_plant_bypasses_low_load": 3,
+        "requested:COLLECT_FERTILIZER": 15,
+        "requested:FERTILIZE": 5,
+        "requested:PLANT": 3
+      },
+      "19": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:WHEAT": 17,
+        "start:COW": 9,
+        "start:GOOSE": 4,
+        "start:cash": 25206.0,
+        "start:seeds": 5,
+        "funded_plant_task_turns": 383,
+        "funded_dig_task_turns": 0,
+        "requested:WEST": 37,
+        "requested:HARVEST": 26,
+        "requested:NORTH": 53,
+        "requested:SOUTH": 31,
+        "requested:EAST": 42,
+        "requested:DROP": 10,
+        "requested:WATER": 32,
+        "requested:PICKUP": 5,
+        "requested:FEED": 18,
+        "requested:CARE": 17,
+        "immediate_plant_bypasses": 8,
+        "immediate_plant_bypasses_low_load": 7,
+        "requested:COLLECT_FERTILIZER": 15,
+        "requested:PLANT": 2,
+        "requested:FERTILIZE": 4
+      },
+      "20": {
+        "start:STRAWBERRY": 35,
+        "start:SHEEP": 5,
+        "start:TOMATO": 3,
+        "start:COW": 9,
+        "start:WHEAT": 14,
+        "start:GOOSE": 4,
+        "start:cash": 29741.0,
+        "start:seeds": 3,
+        "funded_plant_task_turns": 345,
+        "funded_dig_task_turns": 0,
+        "requested:SOUTH": 27,
+        "requested:WEST": 44,
+        "requested:PICKUP": 6,
+        "requested:EAST": 51,
+        "requested:WATER": 46,
+        "requested:FEED": 16,
+        "requested:NORTH": 37,
+        "requested:HARVEST": 18,
+        "immediate_plant_bypasses": 7,
+        "immediate_plant_bypasses_low_load": 5,
+        "requested:DROP": 5,
+        "requested:CARE": 16,
+        "requested:PLANT": 9,
+        "requested:COLLECT_FERTILIZER": 12,
+        "requested:PASS": 1,
+        "requested:FERTILIZE": 5
+      }
+    },
+    "immediate_plant_witnesses": [
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 5,
+        "position": [
+          0,
+          2
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 9,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 12,
+        "worker": 10,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            65,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 5,
+        "position": [
+          1,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          1,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 7,
+        "position": [
+          1,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          0,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              0
+            ],
+            "WATER",
+            65,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 9,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 13,
+        "worker": 10,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              1
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 14,
+        "worker": 7,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          2,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 15,
+        "worker": 7,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "MELON": 6
+        }
+      },
+      {
+        "day": 10,
+        "hour": 16,
+        "worker": 6,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 2242.0,
+        "matched_target": [
+          3,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              1
+            ],
+            "BUILD_PASTURE",
+            90,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 10,
+        "hour": 21,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 10373.0,
+        "matched_target": [
+          0,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 5,
+        "worker": 4,
+        "position": [
+          6,
+          4
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12967.0,
+        "matched_target": [
+          7,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              7,
+              3
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 6,
+        "worker": 5,
+        "position": [
+          4,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 12967.0,
+        "matched_target": [
+          4,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              1
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            "COLLECT_FERTILIZER",
+            81,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1,
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 7,
+        "worker": 0,
+        "position": [
+          4,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          5,
+          2
+        ],
+        "matched_tasks": [
+          [
+            [
+              5,
+              2
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              5,
+              2
+            ],
+            "COLLECT_FERTILIZER",
+            81,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 11,
+        "hour": 7,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 11,
+        "hour": 8,
+        "worker": 7,
+        "position": [
+          3,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          4,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              3
+            ],
+            "CARE",
+            60,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 9,
+        "worker": 11,
+        "position": [
+          0,
+          3
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 10,
+        "worker": 11,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12567.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 12,
+        "worker": 11,
+        "position": [
+          3,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12167.0,
+        "matched_target": [
+          3,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              3
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "MELON": 6
+        }
+      },
+      {
+        "day": 11,
+        "hour": 15,
+        "worker": 5,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 11767.0,
+        "matched_target": [
+          0,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              0
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 3,
+          "WHEAT": 2
+        }
+      },
+      {
+        "day": 11,
+        "hour": 16,
+        "worker": 7,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12276.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 11,
+        "hour": 17,
+        "worker": 7,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12276.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            500,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 3,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 12,
+        "hour": 7,
+        "worker": 11,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 12,
+        "hour": 8,
+        "worker": 11,
+        "position": [
+          0,
+          3
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          0,
+          1
+        ],
+        "matched_tasks": [
+          [
+            [
+              0,
+              1
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 12,
+        "hour": 11,
+        "worker": 2,
+        "position": [
+          2,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 11352.0,
+        "matched_target": [
+          1,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              0
+            ],
+            "PLANT",
+            42,
+            null,
+            "STRAWBERRY"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 12,
+        "hour": 14,
+        "worker": 10,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 12062.0,
+        "matched_target": [
+          8,
+          0
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              0
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 13,
+        "hour": 4,
+        "worker": 0,
+        "position": [
+          4,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 7685.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              3,
+              6
+            ],
+            "COLLECT_FERTILIZER",
+            74,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 3
+        }
+      },
+      {
+        "day": 13,
+        "hour": 4,
+        "worker": 7,
+        "position": [
+          7,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 7685.0,
+        "matched_target": [
+          7,
+          4
+        ],
+        "matched_tasks": [
+          [
+            [
+              7,
+              4
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 13,
+        "hour": 9,
+        "worker": 0,
+        "position": [
+          4,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 7905.0,
+        "matched_target": [
+          4,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              4,
+              7
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              4,
+              7
+            ],
+            "COLLECT_FERTILIZER",
+            73,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 2,
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 13,
+        "hour": 19,
+        "worker": 10,
+        "position": [
+          9,
+          6
+        ],
+        "crop": "STRAWBERRY",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 8371.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "PLANT",
+            42,
+            null,
+            "WHEAT"
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        },
+        "inventory": {
+          "FERTILIZER": 1
+        }
+      },
+      {
+        "day": 14,
+        "hour": 8,
+        "worker": 10,
+        "position": [
+          3,
+          8
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "WEST"
+        ],
+        "plant_priority": 42,
+        "cash": 9261.0,
+        "matched_target": [
+          2,
+          8
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              8
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 14,
+        "hour": 12,
+        "worker": 6,
+        "position": [
+          3,
+          7
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "NORTH"
+        ],
+        "plant_priority": 42,
+        "cash": 9328.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ],
+          [
+            [
+              3,
+              6
+            ],
+            "COLLECT_FERTILIZER",
+            67,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 2,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 2,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 5,
+        "worker": 10,
+        "position": [
+          7,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9450.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 7,
+        "worker": 7,
+        "position": [
+          7,
+          7
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9450.0,
+        "matched_target": [
+          9,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              9,
+              7
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 8,
+        "worker": 7,
+        "position": [
+          8,
+          7
+        ],
+        "crop": "TOMATO",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9514.0,
+        "matched_target": [
+          9,
+          7
+        ],
+        "matched_tasks": [
+          [
+            [
+              9,
+              7
+            ],
+            "WATER",
+            115,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      },
+      {
+        "day": 15,
+        "hour": 9,
+        "worker": 6,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9514.0,
+        "matched_target": [
+          1,
+          5
+        ],
+        "matched_tasks": [
+          [
+            [
+              1,
+              5
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 15,
+        "hour": 11,
+        "worker": 6,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          2,
+          5
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              5
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 8
+        }
+      },
+      {
+        "day": 15,
+        "hour": 13,
+        "worker": 6,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          3,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              3,
+              6
+            ],
+            "FEED",
+            90,
+            "WHEAT",
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 12
+        }
+      },
+      {
+        "day": 15,
+        "hour": 13,
+        "worker": 11,
+        "position": [
+          2,
+          2
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "SOUTH"
+        ],
+        "plant_priority": 42,
+        "cash": 9640.0,
+        "matched_target": [
+          2,
+          3
+        ],
+        "matched_tasks": [
+          [
+            [
+              2,
+              3
+            ],
+            "HARVEST",
+            70,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {
+          "WHEAT": 4
+        }
+      },
+      {
+        "day": 16,
+        "hour": 6,
+        "worker": 11,
+        "position": [
+          7,
+          6
+        ],
+        "crop": "WHEAT",
+        "chosen": [
+          "EAST"
+        ],
+        "plant_priority": 42,
+        "cash": 12011.0,
+        "matched_target": [
+          8,
+          6
+        ],
+        "matched_tasks": [
+          [
+            [
+              8,
+              6
+            ],
+            "WATER",
+            140,
+            null,
+            null
+          ]
+        ],
+        "deadline_reserved": false,
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 4,
+          "STRAWBERRY": 1,
+          "MELON": 0
+        },
+        "inventory": {}
+      }
+    ]
+  }
+]
