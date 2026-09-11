@@ -64,6 +64,13 @@ def main():
             candidates[name] = calendar_build(
                 early_herd="herd6" in name, adaptive_crops="adaptive" in name
             )
+        elif name in ("capacity_no_feed_bonus", "capacity_cohort15", "capacity_cohort3"):
+            from experiments.crop_opportunity import build as opportunity_build
+
+            candidates[name] = opportunity_build(
+                "no_multiplier" if name == "capacity_no_feed_bonus" else "cohort",
+                start_day=3 if name == "capacity_cohort3" else 15,
+            )
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 

@@ -17,6 +17,16 @@ to all eight registered development seeds, both seats, with V8 and the frozen
 pinned native library. Report this related public-action strategy separately;
 it does not add an independent strategy family or alter the historical weights.
 
+Next crop-admission screen: remove only the wheat feed multiplier from day 15;
+replace admission with remaining-season cohort receipts from day 15; apply that
+same model from day 3. Use seeds 5000-5007/both seats against the identical Mooman
+bundle and the existing 150 ms control. The cohort model charges commissioning,
+maintenance, renewal, inputs, travel and marginal market impact, including harm
+to owned production. Expected future shops are public-state forecasts. Its
+turnaround and delivery schedule is an admission approximation, to be tested in
+the official environment, not an executable profit guarantee. Recorded-stream
+consistency and interpreter-backed yield/terminal tests precede all 48 games.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,
