@@ -47,10 +47,22 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-fleet-mooman.json.gz": {
+    "sha256_uncompressed": "57b3d7c0c4a17eadc858a4a6dac1864ff09f314abc80dd74a72826ec1690869e",
+    "bytes": 59379,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "breakthrough-fleet-screen.json.gz": {
     "sha256_uncompressed": "67acb29871155c1d0b95a1a3296950ee1f3a68bf5bc4c025b8aa66a3070eca29",
     "bytes": 237642,
     "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-marginal-herd.json.gz": {
+    "sha256_uncompressed": "1b6720b4ce263d7b36c03f5e8c3a3d29ef412b2f12edf00e1786361ea325e71e",
+    "bytes": 122799,
+    "games": 32,
     "kind": "benchmark"
   },
   "breakthrough-melon-screen.json.gz": {
@@ -116,6 +128,12 @@
   "breakthrough-terminal-screen.json.gz": {
     "sha256_uncompressed": "6008eff040389532ac1831bea638e9a6dd206676a0d907d0dc4db1ea7c7e4175",
     "bytes": 121651,
+    "games": 32,
+    "kind": "benchmark"
+  },
+  "breakthrough-wheat-service.json.gz": {
+    "sha256_uncompressed": "989ce1541f80307c0572ed658336daff1c0646017ba00a2aff59ffd8a0587d7f",
+    "bytes": 121858,
     "games": 32,
     "kind": "benchmark"
   },
