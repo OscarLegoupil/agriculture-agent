@@ -165,3 +165,13 @@ while day-1 closing cash falls by only four coins. All four final match outcomes
 are unchanged (COK losses, Seyam wins), and later shop paths differ. Complete
 the original eight-seed screen by adding 5001–5007, 28 games; retain the four
 original rows rather than rerunning or selecting an attempt.
+
+The corrected fleet artifact `9400f9b0...671464b7` wins COK14/16 and Seyam16/16
+on the complete original screen: a25-point equal-weight gain, paired95% interval
+6.25–43.75 points. Mean gaps improve by20,163 and8,255 respectively. This earns
+a separately reported16-game Mooman screen on5000–5007, both seats, compared
+with the already frozen incumbent rows from `breakthrough-race-mooman`.
+Do not rerun the incumbent or change that panel's source/hash/configuration.
+Record the fleet's46 budget-fallback turns, two overflow units and92 nonterminal
+escapes; investigate these before promotion rather than assuming all are harmless.
+The largest recorded action is266ms. No validation or holdout is opened yet.

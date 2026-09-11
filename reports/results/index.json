@@ -41,6 +41,12 @@
     "games": 64,
     "kind": "benchmark"
   },
+  "breakthrough-fleet-corrected.json.gz": {
+    "sha256_uncompressed": "63d5d7ed86e969a732f0e1a51370373ab8fb4eb2c4ac963f12bbc12fdc952a9f",
+    "bytes": 121096,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-fleet-screen.json.gz": {
     "sha256_uncompressed": "67acb29871155c1d0b95a1a3296950ee1f3a68bf5bc4c025b8aa66a3070eca29",
     "bytes": 237642,
@@ -93,6 +99,18 @@
     "sha256_uncompressed": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608",
     "bytes": 459535,
     "games": 128,
+    "kind": "benchmark"
+  },
+  "breakthrough-startup-probe.json.gz": {
+    "sha256_uncompressed": "44aef3af0af61b250669f4271b01189cf3f37a22c0fef0ac820a13f0cd9487ba",
+    "bytes": 19947,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "breakthrough-startup-screen.json.gz": {
+    "sha256_uncompressed": "d6f06d1215addc473d70d88b8c1292516c2cd17d38189d5dd4b96a8c6a3bf670",
+    "bytes": 106560,
+    "games": 28,
     "kind": "benchmark"
   },
   "breakthrough-terminal-screen.json.gz": {
