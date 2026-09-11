@@ -1,6 +1,7 @@
 """Official worker transitions validate the daily fleet's service contracts."""
 
 import gzip
+import hashlib
 import json
 import subprocess
 import sys
@@ -19,6 +20,65 @@ def policy():
     namespace = {}
     exec(build(), namespace)
     return namespace
+
+
+def test_default_builder_preserves_qualified_fleet_bytes():
+    assert hashlib.sha256(build().encode()).hexdigest() == (
+        "9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7"
+    )
+
+
+def test_mature_labor_ablation_changes_actual_hire_orders_only_after_day14():
+    decisions = {}
+    for day in (14, 15):
+        for hands in (10, 12):
+            obs, cfg = world(day=day, hour=0, hands=0)
+            farm = obs["farms"][0]
+            farm["money"] = 100000
+            for y in range(10):
+                for x in range(5):
+                    farm["tiles"][y][x] = game._new_plant("STRAWBERRY", 4, 24)
+            for y in range(8):
+                farm["tiles"][y][4] = game._new_animal("COW", 0)
+            decision = get_last_callable(build(mature_hands=hands))(obs, cfg)
+            decisions[day, hands] = sum(order == ["HIRE"] for order in decision["market"])
+    assert decisions[14, 10] == decisions[14, 12]
+    # The official ten-order cap spreads hiring across turns. Reserve cash
+    # and existing hands determine whether the policy requests the last pair.
+    obs, cfg = world(day=15, hour=1, hands=10)
+    farm = obs["farms"][0]
+    farm["money"] = 100000
+    for y in range(10):
+        for x in range(5):
+            farm["tiles"][y][x] = game._new_plant("STRAWBERRY", 4, 24)
+    for y in range(8):
+        farm["tiles"][y][4] = game._new_animal("COW", 0)
+    old = get_last_callable(build())(deepcopy(obs), cfg)
+    new = get_last_callable(build(mature_hands=10))(deepcopy(obs), cfg)
+    assert sum(order == ["HIRE"] for order in old["market"]) == 2
+    assert all(order != ["HIRE"] for order in new["market"])
+
+
+def test_cereal_rotation_orders_commercial_seed_after_financed_berry_cohort():
+    obs, cfg = world(day=10, hour=0, hands=12)
+    farm = obs["farms"][0]
+    farm["money"] = 100000
+    spaces = [(x, y) for y in range(10) for x in range(5) if (x, y) != (4, 4)]
+    for index, (x, y) in enumerate(spaces):
+        farm["tiles"][y][x] = (
+            game._new_plant("STRAWBERRY", 4, 24)
+            if index < 34
+            else game._new_plant("WHEAT", 9, 24)
+            if index < 41
+            else game._new_animal("COW", 0)
+            if index < 45
+            else None
+        )
+    old = get_last_callable(build())(deepcopy(obs), cfg)
+    new = get_last_callable(build(cereal=True))(deepcopy(obs), cfg)
+    assert any(order[:2] == ["BUY_SEED", "STRAWBERRY"] for order in old["market"])
+    assert any(order[:2] == ["BUY_SEED", "WHEAT"] for order in new["market"])
+    assert not any(order[:2] == ["BUY_SEED", "STRAWBERRY"] for order in new["market"])
 
 
 def world(day=5, hour=10, hands=1):

@@ -657,11 +657,36 @@ def daily_routes(
     return actions, claimed
 
 
-def build():
+def build(*, mature_hands=None, cereal=False):
     root = Path(__file__).resolve().parents[1]
     raw = gzip.decompress((root / "reports/sources" / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
+    if mature_hands is not None and mature_hands not in (8, 10, 12):
+        raise ValueError("Use a declared mature workforce level")
+    parameters = []
+    if mature_hands is not None:
+        parameters.append(f'hands={mature_hands} if obs["day"] >= 15 else PARAMS["hands"]')
+    if cereal:
+        # Use already purchased space. The existing animal-site reservations
+        # still precede crop admission; no extra quadrant is prescribed.
+        parameters.extend(
+            (
+                'crop_tiles=sum(tile != "LOCKED" for row in obs["farms"][obs["player"]]["tiles"] for tile in row)',
+                "feed_grown=24",
+            )
+        )
+        old = '            cohort_crop = "WHEAT" if planned["WHEAT"] < 7 else "MELON" if day < 3 else "STRAWBERRY"'
+        assert source.count(old) == 1
+        source = source.replace(
+            old,
+            '            cohort_crop = ("WHEAT" if planned["WHEAT"] < 7 else "MELON" if day < 3\n'
+            '                           else "STRAWBERRY" if planned["STRAWBERRY"] < 34 else "WHEAT")',
+        )
+    if parameters:
+        source = source.replace(
+            "    p = PARAMS", "    p = dict(PARAMS, " + ", ".join(parameters) + ")", 1
+        )
     marker = "    deadline_actions = {}\n    if day < 29:"
     replacement = """    deadline_actions, route_claimed = daily_routes(
         obs, cfg, positions, inventories, shed, seeds, tasks, shed_tiles, animal_sites, forecast,

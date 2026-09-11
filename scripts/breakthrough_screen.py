@@ -44,6 +44,16 @@ def main():
             from experiments.daily_routes import build as daily_build
 
             candidates[name] = daily_build()
+        elif name in ("fleet10", "fleet_cereal", "fleet10_cereal"):
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(
+                mature_hands=10 if "10" in name else None, cereal="cereal" in name
+            )
+        elif name == "animal_service":
+            from experiments.animal_service import build as service_build
+
+            candidates[name] = service_build()
         elif name == "startup":
             from experiments.startup_liquidity import build as startup_build
 

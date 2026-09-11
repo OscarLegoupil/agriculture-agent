@@ -175,3 +175,24 @@ Do not rerun the incumbent or change that panel's source/hash/configuration.
 Record the fleet's46 budget-fallback turns, two overflow units and92 nonterminal
 escapes; investigate these before promotion rather than assuming all are harmless.
 The largest recorded action is266ms. No validation or holdout is opened yet.
+
+The corrected fleet still loses all16 Mooman games (mean gap -21,957 versus
+v8's -24,383). Its historical gain is not a current-frontier breakthrough.
+Standalone wheat recommissioning wins18/32, marginal herd admission22/32;
+neither improves match score. Startup liquidity alone falls to16/32.
+
+The fleet audit motivates a fixed three-candidate interaction panel: ten
+mature hands from day15; a cereal rotation using already unlocked space with
+34 financed berries and a24-wheat preference; and their combination. Compare
+all three on5000-5007, both seats, COK/Seyam (96games), retaining the frozen
+fleet and v8 rows. This tests whether travel savings can reduce wages and
+service more commercial wheat. It does not prescribe another land purchase.
+Separately screen finite-season sunk-animal feed/care decisions from day16
+on the same32 scenarios. Its exact small animal transition model has only
+an optimistic logistics assumption; diagnostic value bounds are not profit.
+Do not expand a failed component merely to explore more parameters.
+
+These panels use at most five game processes while one additional process
+qualifies the reviewed Six-Day Fieldbook native reference. Candidate selection
+and holdout ranges remain unopened. A distinct150ms fleet search guard may
+be profiled on recorded states without changing the frozen65ms artifact.
