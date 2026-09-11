@@ -18,6 +18,7 @@ def main():
         "--candidates", nargs="+", default=["incumbent", "wool", "dairy", "balanced"]
     )
     parser.add_argument("--seeds", nargs="+", type=int, default=list(range(5000, 5008)))
+    parser.add_argument("--opponents", nargs="+", default=["cok", "seyam"])
     args = parser.parse_args()
     candidates = {}
     for name in args.candidates:
@@ -31,13 +32,17 @@ def main():
             from experiments.service_routes import build as routes_build
 
             candidates[name] = routes_build()
+        elif name == "terminal":
+            from experiments.terminal_crops import build as terminal_build
+
+            candidates[name] = terminal_build()
         elif name.endswith("_herd"):
             candidates[name] = build(name.removesuffix("_herd"), scope="herd")
         else:
             candidates[name] = build(name)
     screen(
         candidates,
-        [f"data/raw/reference-{name}/main.py" for name in ("cok", "seyam")],
+        [f"data/raw/reference-{name}/main.py" for name in args.opponents],
         args.seeds,
         args.output,
         args.workers,

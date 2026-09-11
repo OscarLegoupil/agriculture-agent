@@ -79,3 +79,24 @@ outcomes match v8. Preserve the artifact/evidence, correct the declaration order
 and repeat the same32 development games after an official-loader regression test.
 The route candidate loses half its Seyam games and is not promoted despite a
 one-game COK gain. Its service witness does not generalize to competitive strength.
+
+The isolated herd calendar fails too (COK2/16; Seyam7/16). The corrected market
+planner retains v8's22/32 wins and adds only55 COK/384 Seyam mean cash gap; no
+broader run is justified by this small gain. The newly qualified Mooman route
+beats v8 in all eight qualification games, mean gap−30,031. Independent
+Conchocon loses all eight; Phucthai loses both initial qualification games.
+They add diversity but are not established strong opponents.
+
+Retain the historical pools. Add Mooman as a separately reported current challenge
+with all imported code/action-table hashes; do not average the weak new references
+into a larger headline score. A promoted candidate should close at least half
+the Mooman cash deficit and achieve≥50% score on fresh matched confirmation,
+in addition to the existing gates. This is an aspiration and decision criterion,
+not an asserted achievable result or a live-rating forecast.
+
+Additional mechanism-led screens use the same fixed eight development seeds:
+finite terminal crop rotations/replacement; earlier fully grown melon harvesting
+and same-turn delivery sales; whole-farm routes including crop/input obligations.
+Each first requires official transition and loader tests. Qualify each against
+COK/Seyam (32games); only promising whole-policy gains earn broader development
+or Mooman confirmation. No change opens validation or holdout.

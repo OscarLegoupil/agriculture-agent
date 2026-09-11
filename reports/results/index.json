@@ -29,6 +29,42 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-control-screen.json.gz": {
+    "sha256_uncompressed": "36b6a810a5896f22efef99218b75c66439ec2775870c46eba0e4d9675d4b9446",
+    "bytes": 237956,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-corrected-screen.json.gz": {
+    "sha256_uncompressed": "63f140c6da86a25029c6b66bcfe16c1e93a78feceeec507b3678af965601131c",
+    "bytes": 236377,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-new-opponents.json.gz": {
+    "sha256_uncompressed": "1777057757a6623a47aeb0197e4f9caa6adda2b32ec13f4af6ba225cd5f57930",
+    "bytes": 59358,
+    "games": 16,
+    "kind": "benchmark"
+  },
+  "breakthrough-phucthai-qualification.json.gz": {
+    "sha256_uncompressed": "2accf7392551e223d8e36f7cf4606bfb9c0d372d2b5fa4f2ad090bd79bb78e0e",
+    "bytes": 9453,
+    "games": 2,
+    "kind": "benchmark"
+  },
+  "breakthrough-reproduction.json.gz": {
+    "sha256_uncompressed": "1992f278d000464d8e32c2c20b62bea3bf6b9a55826c8d13e9a42ada5f76e80c",
+    "bytes": 15255,
+    "games": 4,
+    "kind": "benchmark"
+  },
+  "breakthrough-season-screen.json.gz": {
+    "sha256_uncompressed": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608",
+    "bytes": 459535,
+    "games": 128,
+    "kind": "benchmark"
+  },
   "development-matching.json.gz": {
     "sha256_uncompressed": "f4eb345c01c6e5c504312549f99684de6c5783c87b8c626be461d5bad87c6100",
     "bytes": 49773,

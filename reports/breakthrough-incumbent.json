@@ -1,0 +1,54 @@
+{
+  "source_revision": "4b0fdc79482c42c42e9725f48318ed2184d5a6db",
+  "branch_base": "5054fd30b6ec76ac819799907fda8ec8d27e42da",
+  "artifact": "submissions/20260909-v8/main.py",
+  "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+  "parameters": {
+    "hands": 12,
+    "quadrants": 3,
+    "cows": 10,
+    "sheep": 4,
+    "geese": 0,
+    "crop_tiles": 50,
+    "fertilize": true,
+    "care": true,
+    "animal_stop": 16,
+    "return_load": 5,
+    "feed_grown": 8,
+    "deadline_boost": 500,
+    "feed_priority": 90,
+    "crop_bias": {},
+    "batch_harvest": false,
+    "opening_geese": 0,
+    "sell_batch": 100,
+    "matching": true
+  },
+  "reproduction": "results/breakthrough-reproduction.json.gz",
+  "environment": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    }
+  },
+  "configuration": {
+    "seed": null,
+    "episodeSteps": 720,
+    "actTimeout": 1,
+    "runTimeout": 1200,
+    "boardSize": 10,
+    "startingMoney": 3000,
+    "maxMarketOrdersPerTurn": 10,
+    "turnsPerDay": 24,
+    "shedCapacity": 100,
+    "weedSpawnChance": 0.005,
+    "townShopUnlockInterval": 3,
+    "townShopSellInterval": 4,
+    "townCenterSellInterval": 24,
+    "farmHandCostMult": 1,
+    "marketParams": {}
+  },
+  "qualification": "Strongest experimental incumbent; fails previous COK floor; no own live submission evidence"
+}

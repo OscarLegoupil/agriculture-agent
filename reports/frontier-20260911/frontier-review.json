@@ -1,0 +1,86 @@
+{
+  "reviewed_utc": "2026-09-11T12:30:22.372812+00:00",
+  "official": {
+    "source_revision": "28b6d8af3ce73926b3d0fda1410c1ddd8384ab8c",
+    "source_date": "2026-08-15",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "configuration_sha256": "a82c89c1a2315b93f39775d8e025471a01b738647c9772658368ee6b1b6f4867",
+    "act_timeout_seconds": 1,
+    "source_url": "https://github.com/Kaggle/kaggle-environments/tree/28b6d8af3ce73926b3d0fda1410c1ddd8384ab8c/kaggle_environments/envs/kaggriculture",
+    "hosted_version_verified": false
+  },
+  "live_observations": "live-observations.json",
+  "reference_candidates": [
+    {
+      "name": "mooman Shop Router 0909 K6",
+      "repository": "https://github.com/mooman0222/Kaggriculture-opencode",
+      "revision": "b7a0aad0b6047d61e64885966cdb76abf2d22021",
+      "path": "data/raw/reference-mooman/main.py",
+      "manifest": "sr0909-manifest.json",
+      "archive_review": "sr0909-archive-review.json",
+      "license": "Apache-2.0 for sr0909 package; repository MIT umbrella",
+      "independence": "Related public action-route lineage; do not count as independent of COK/Seyam.",
+      "review": "Read complete main.py and router.py; pure JSON action data; only local sibling-file reads and documented environment toggles. No network or shell calls. No agent execution performed in this review.",
+      "environment_defaults": {
+        "SR_LEADK": "6",
+        "SR_IDLE": "1",
+        "SR_GATE": "1",
+        "SR_GUARD": "1"
+      },
+      "strategic_difference": "13 whole-season action programs selected using first two public shops at step 144; per-worker same-day weed repair queues; planned-sale advances; clone-gated six-turn sale advance; idle WATER/CARE; guarded opening and final liquidation. Backbones request two land purchases (three total plots), ongoing wheat and late carrot production.",
+      "live_submission_id": 56156691,
+      "limitations": "Repository links artifact to submission; cannot download hosted bytes. Dynamic rating does not establish rank. Exact local strength pending root benchmark."
+    },
+    {
+      "name": "conchocon marginal-economy scheduler",
+      "repository": "https://github.com/conchocon154/kaggriculture-agent",
+      "revision": "8f4addee7a8db49678b748ac1cfd79c2f0d39518",
+      "path": "data/raw/reference-conchocon/main.py",
+      "sha256": "a09e5e3a98ed12f054c84aea740c1274670468953210692c9754aa1c648fb520",
+      "license": "MIT; sibling LICENSE preserved",
+      "independence": "Independent economic task scheduler; no embedded reference action route.",
+      "review": "Read complete source; only math import, no file/network/shell/dynamic-code calls; no execution performed.",
+      "strategic_difference": "Melon-heavy initial farm then goose/fertilizer income, up to 10 hands; crop/animal marginal pipeline value, large 12-wheat pickups, no recurring crops.",
+      "limitations": "Only starter/predecessor performance claimed publicly; competitive strength unverified. Shared-seed reservations appear absent and raw pipeline market model ignores future town demand."
+    },
+    {
+      "name": "phucthai finite-horizon routed planner",
+      "repository": "https://github.com/phucthaiv02/kaggriculture",
+      "revision": "ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1",
+      "path": "data/raw/reference-phucthai/main.py",
+      "manifest": "phucthai-manifest.json",
+      "license": "Apache-2.0; sibling LICENSE preserved",
+      "independence": "Independent task-bundle insertion routes and finite-horizon planner, no replay tapes.",
+      "review": "Reviewed imports/calls and planning/scheduler/forecast entrypoints. Imports installed official game for deterministic synthetic tile forecasts; no actual environment state or RNG access beyond current observation. No file/network/shell calls in upstream policy; benchmark adapter adds only local import path. No execution performed.",
+      "strategic_difference": "Fixed 12 melon, 9 wheat, 2 cow, 2 sheep opening, then marginal 16-day producer/market/labor selection; daily multi-action task bundles with shared pickup needs and route insertion; up to 16 hands.",
+      "limitations": "Public material does not demonstrate strong opponent results; costly search may exceed hosted budget; imports official interpreter at runtime. Must benchmark separately before inclusion in competitive claims."
+    }
+  ],
+  "other_screened_sources": [
+    {
+      "repository": "robsartin/robriculture",
+      "revision": "7f54373b67cf41f71168f09457390f6663e3a6a1",
+      "license": "CC-BY-4.0",
+      "finding": "Independent but available evidence does not establish frontier strength; docs retain older 489.1 rating, current lean_feed champion only 12/16 against predecessor."
+    },
+    {
+      "repository": "zw-2000/zw-kaggriculture",
+      "revision": "0bc94f65a9627d22005ccbd9260d3205470b0c1e",
+      "license": "No license found; not selected for redistribution.",
+      "finding": "Independent reactive wheat/animal/tomato economy; README mostly predecessor comparisons and stale parameters. Download retained ignored for source inspection; not executed."
+    },
+    {
+      "repository": "ggmljs/Kaggriculture",
+      "revision": "bf1590e2260e21f64ac57b80842874230adb0e3b",
+      "license": "Apache-2.0",
+      "finding": "Related COK routes; actual public submission 56103627 latest 1337.9 rating versus README 600 initial. Not independent pool addition."
+    }
+  ],
+  "access": "Kaggle pages render no readable content; official leaderboard/replay REST endpoints 401. Public EpisodeService/ListEpisodes returned 200 without credentials and provided timestamped results. No authentication circumvention attempted.",
+  "implications": [
+    "Existing COK/Seyam coverage is stale relative to an accessible currently active high-rating route implementation. Qualify mooman before declaring improvement.",
+    "Independent source diversity is available but independent competitive strength remains to be measured.",
+    "Current strong public route varies whole executable production schedules by shop-pair, including wheat/carrot rotations; copying farm counts is insufficient.",
+    "Two extra land purchases occur in reviewed strong current tapes; three purchases is not universal."
+  ]
+}
