@@ -44,6 +44,10 @@ def main():
             from experiments.daily_routes import build as daily_build
 
             candidates[name] = daily_build()
+        elif name == "startup":
+            from experiments.startup_liquidity import build as startup_build
+
+            candidates[name] = startup_build()
         elif name.startswith("rotation"):
             from experiments.crop_rotation import build as rotation_build
 

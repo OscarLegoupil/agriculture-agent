@@ -149,3 +149,12 @@ test whether repeated rotations can improve feed economics without changing
 the first financed berry cohort. Test each standalone on the fixed eight seeds
 after official transition, shared-resource, source-loader and runtime checks.
 Successful components may be combined only in an explicitly recorded new panel.
+
+Startup liquidity is a separate small intervention: on days 1–7, allow at most
+three hands costing 1, 1 and 2 coins against manure that is already available
+and reachable before the feeding deadline. The 120-coin reserve otherwise keeps
+the first-day farmer alone despite this saleable asset. Preserve the ordinary
+reserve for expensive hires and unproduced revenue. First run seed 5000, both
+seats and both historical challenges (four games), inspecting actual early
+receipts and survival before allocating a larger panel. This is development
+diagnosis, not independent selection evidence.
