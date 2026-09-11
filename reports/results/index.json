@@ -77,6 +77,12 @@
     "games": 64,
     "kind": "benchmark"
   },
+  "breakthrough-fleet-animals-mooman.json.gz": {
+    "sha256_uncompressed": "d0c92b02a15da2f579a66a7aff1b1983bdf601d407cf76990d08238f6c87e577",
+    "bytes": 60294,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "breakthrough-fleet-capacity.json.gz": {
     "sha256_uncompressed": "50f79709f716c1de1fff4ee753aa50912044b4d75b3461e024500b01f320d5f1",
     "bytes": 353966,
@@ -101,10 +107,22 @@
     "games": 64,
     "kind": "benchmark"
   },
+  "breakthrough-investment-cash-mooman.json.gz": {
+    "sha256_uncompressed": "7cf86b992f3488dc272b7a3ea6fb1925fa19f03aba8e95b2bfbb0fca7d803317",
+    "bytes": 119334,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-marginal-herd.json.gz": {
     "sha256_uncompressed": "1b6720b4ce263d7b36c03f5e8c3a3d29ef412b2f12edf00e1786361ea325e71e",
     "bytes": 122799,
     "games": 32,
+    "kind": "benchmark"
+  },
+  "breakthrough-market-collection-mooman.json.gz": {
+    "sha256_uncompressed": "f73314ae229583018cfcaf5b077ddf1be82561f614fec8b793be290818977ee5",
+    "bytes": 61383,
+    "games": 16,
     "kind": "benchmark"
   },
   "breakthrough-melon-screen.json.gz": {
@@ -123,6 +141,18 @@
     "sha256_uncompressed": "b29ba8280a4892a9647b6f6d6c283720ef42b63a9df0d6992c5908d3e46a9a3a",
     "bytes": 293856,
     "games": 80,
+    "kind": "benchmark"
+  },
+  "breakthrough-opportunity-diagnosis.json.gz": {
+    "sha256_uncompressed": "e0fe3a766d5ebcb21eef47cdacd459a5e58be722616aec0603b408f634c54b0c",
+    "bytes": 16627,
+    "games": 0,
+    "kind": "analysis"
+  },
+  "breakthrough-opportunity-mooman.json.gz": {
+    "sha256_uncompressed": "d97c4349a42162783a02f06acff37fabe9842b0020f6ee60305a3b315500bb1c",
+    "bytes": 176752,
+    "games": 48,
     "kind": "benchmark"
   },
   "breakthrough-phucthai-qualification.json.gz": {
@@ -159,6 +189,12 @@
     "sha256_uncompressed": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608",
     "bytes": 459535,
     "games": 128,
+    "kind": "benchmark"
+  },
+  "breakthrough-sixday-common-budget.json.gz": {
+    "sha256_uncompressed": "ae599fa8a23344e28320c89f85f263ad439af5f049a0319fda44f5326bdddf14",
+    "bytes": 117996,
+    "games": 32,
     "kind": "benchmark"
   },
   "breakthrough-startup-probe.json.gz": {
@@ -916,6 +952,12 @@
     "bytes": 7659,
     "games": 8,
     "kind": "benchmark"
+  },
+  "shop-option-diagnostic.json.gz": {
+    "sha256_uncompressed": "c465444f2fa317265cf6db12124b937e42eebe3247ab7eb481cacbe86676f05b",
+    "bytes": 23373,
+    "games": 0,
+    "kind": "analysis"
   },
   "stress-final-v7.json.gz": {
     "sha256_uncompressed": "b5cf825583713aa65972d3f71fde9076827ed3b6fa6a9e79effbc27ac72c1a99",
