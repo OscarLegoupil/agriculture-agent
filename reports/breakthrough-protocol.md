@@ -115,3 +115,19 @@ both seats (32games), reporting that pool separately. Complete both panels
 without score-based stopping. At most six game processes; no fresh selection
 or holdout data is opened. Separate harvest-only/sale-only component tests may
 use the original eight development seeds to diagnose the interaction.
+
+The matched Mooman panel rejects a frontier claim for the melon change: both
+policies lose all16 games. Next test two separately frozen execution/economics
+prototypes on the original eight development seeds and COK/Seyam (64games).
+The daily fleet planner balances mandatory irrigation/feeding before inserting
+input-producing and consuming bundles; it also protects prompt melon delivery.
+The labor model changes only mature days15–28, preserving startup and paid
+animal commissioning queues. Contract witnesses and historical observation
+probes precede full games; neither constitutes evidence of season profitability.
+
+A follow-up production experiment preserves the initial financed berry cohort,
+then allocates remaining crop capacity to commercial wheat. Screen one bounded
+mix first (34berries,16annual/feed capacity); the alternative30/20 is declared
+for a capacity frontier only if actual planting and receipts support the idea.
+This separates crop composition from the previously failed early-herd calendar.
+All use development5000–5007, both seats, with the existing matched v8 results.

@@ -36,6 +36,18 @@ def main():
             from experiments.terminal_crops import build as terminal_build
 
             candidates[name] = terminal_build()
+        elif name == "labor":
+            from experiments.labor_calendar import build as labor_build
+
+            candidates[name] = labor_build()
+        elif name == "daily_routes":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build()
+        elif name.startswith("rotation"):
+            from experiments.crop_rotation import build as rotation_build
+
+            candidates[name] = rotation_build(int(name.removeprefix("rotation")))
         elif name.startswith("melon"):
             from experiments.melon_race import build as melon_build
 
