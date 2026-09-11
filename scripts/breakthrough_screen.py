@@ -91,6 +91,14 @@ def main():
             from experiments.diversified_calendar import build as diversified_build
 
             candidates[name] = diversified_build(compact_herd=name == "capacity_crop_focus")
+        elif name == "capacity_market_safe":
+            from experiments.market_collection_safe import build as safe_market_build
+
+            candidates[name] = safe_market_build()
+        elif name in ("capacity_investment_safe", "capacity_land_safe"):
+            from experiments.investment_liquidity_safe import build as safe_liquidity_build
+
+            candidates[name] = safe_liquidity_build(seed_capital=name == "capacity_investment_safe")
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 

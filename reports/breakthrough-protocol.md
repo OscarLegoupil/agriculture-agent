@@ -73,6 +73,16 @@ production appears. These are fixed experimental compositions, not inferred
 future opponent actions. The funded-selector prefix grows real short crops but
 does not advance land, so its competitive effect still requires full seasons.
 
+Collection repairs (48 games): both capital variants caused crop deaths, and
+market pressure caused four deaths in an official crowded-farm witness despite
+sufficient water-service capacity. Repair their common scheduling defect before
+rejecting the economic ideas: reserve mandatory work before new urgency, retain
+same-visit and committed maintenance, allow mandatory insertion, and defer a
+delivery that would otherwise cause a death. Compare safe market, safe land and
+safe land+seed variants on the same 16 scenarios against their frozen parents
+and common control. These are falsifiable fixes, not retrospectively repaired
+benchmark records. All prior losing results remain available.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,
