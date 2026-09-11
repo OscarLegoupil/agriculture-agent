@@ -131,3 +131,21 @@ mix first (34berries,16annual/feed capacity); the alternative30/20 is declared
 for a capacity frontier only if actual planting and receipts support the idea.
 This separates crop composition from the previously failed early-herd calendar.
 All use development5000–5007, both seats, with the existing matched v8 results.
+
+Completed follow-ups: race's32-seed score improves64.06%→76.56%, paired95%
+delta3.91–21.09points; Mooman remains0/16 for both. Mature labor keeps22/32 wins
+but reduces both opponent cash gaps; the34-berry rotation also keeps22/32.
+Neither warrants a parameter frontier yet. The first whole-fleet implementation
+wins only3/32 and has a reproduced opening liquidity deadlock and prerequisite
+pruning defect. Fix these with actual multistep official contracts before
+repeating the same32-game development panel; retain the defective hash/results.
+
+Two further targeted hypotheses follow actual losses. Marginal herd admission
+prices a new cohort's effect on existing future sales, rather than a scalar
+blend of today's high quote and later collapsed prices. A sheep-heavy loss
+sells164 wool on days20–29 for only4,704 coins despite earlier investment at
+high current quotes. Separately, immediate wheat harvest/replant/water contracts
+test whether repeated rotations can improve feed economics without changing
+the first financed berry cohort. Test each standalone on the fixed eight seeds
+after official transition, shared-resource, source-loader and runtime checks.
+Successful components may be combined only in an explicitly recorded new panel.

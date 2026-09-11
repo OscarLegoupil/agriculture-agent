@@ -41,6 +41,18 @@
     "games": 64,
     "kind": "benchmark"
   },
+  "breakthrough-fleet-screen.json.gz": {
+    "sha256_uncompressed": "67acb29871155c1d0b95a1a3296950ee1f3a68bf5bc4c025b8aa66a3070eca29",
+    "bytes": 237642,
+    "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-melon-screen.json.gz": {
+    "sha256_uncompressed": "bde23952f2e4473f14dbbc1da5108d93bf3e8353fc9c72db5d061995fb983f8f",
+    "bytes": 353857,
+    "games": 96,
+    "kind": "benchmark"
+  },
   "breakthrough-new-opponents.json.gz": {
     "sha256_uncompressed": "1777057757a6623a47aeb0197e4f9caa6adda2b32ec13f4af6ba225cd5f57930",
     "bytes": 59358,
@@ -53,16 +65,40 @@
     "games": 2,
     "kind": "benchmark"
   },
+  "breakthrough-race-field.json.gz": {
+    "sha256_uncompressed": "96c552f8323a184c5a109bbf5fe6669cbe887d01f9a8a7b075c15607742f48e2",
+    "bytes": 700813,
+    "games": 192,
+    "kind": "benchmark"
+  },
+  "breakthrough-race-mooman.json.gz": {
+    "sha256_uncompressed": "1599187e978097fd34e8e1f7fa69f3165354c1594c84e4f027ab0cf8665bf8d8",
+    "bytes": 116737,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-reproduction.json.gz": {
     "sha256_uncompressed": "1992f278d000464d8e32c2c20b62bea3bf6b9a55826c8d13e9a42ada5f76e80c",
     "bytes": 15255,
     "games": 4,
     "kind": "benchmark"
   },
+  "breakthrough-rotation-screen.json.gz": {
+    "sha256_uncompressed": "ef2e0201392b45e09b965972ffdffe3b04115022bea3f88586696c52162938ab",
+    "bytes": 121913,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-season-screen.json.gz": {
     "sha256_uncompressed": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608",
     "bytes": 459535,
     "games": 128,
+    "kind": "benchmark"
+  },
+  "breakthrough-terminal-screen.json.gz": {
+    "sha256_uncompressed": "6008eff040389532ac1831bea638e9a6dd206676a0d907d0dc4db1ea7c7e4175",
+    "bytes": 121651,
+    "games": 32,
     "kind": "benchmark"
   },
   "development-matching.json.gz": {
