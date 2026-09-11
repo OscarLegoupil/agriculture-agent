@@ -36,6 +36,14 @@ def main():
             from experiments.terminal_crops import build as terminal_build
 
             candidates[name] = terminal_build()
+        elif name.startswith("melon"):
+            from experiments.melon_race import build as melon_build
+
+            candidates[name] = melon_build(
+                fertilizer=name != "melon_race_only",
+                race=name != "melon_fertilizer_only",
+                same_turn_sales=name != "melon_fertilizer_only",
+            )
         elif name.endswith("_herd"):
             candidates[name] = build(name.removesuffix("_herd"), scope="herd")
         else:
