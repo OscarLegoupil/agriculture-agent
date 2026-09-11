@@ -19,13 +19,13 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''    desired = dict.fromkeys(ANIMALS, 18)
-    if day < 8:'''
-    new = '''    desired = dict.fromkeys(ANIMALS, 18)
+    old = """    desired = dict.fromkeys(ANIMALS, 18)
+    if day < 8:"""
+    new = """    desired = dict.fromkeys(ANIMALS, 18)
     # A known single-product wool buyer diversifies the shared herd budget.
     if "YARN_STORE" in obs["town"]["unlocked_shops"]:
         desired["COW"] = 8
-    if day < 8:'''
+    if day < 8:"""
     assert source.count(old) == 1
     source = source.replace(old, new)
     compile(source, "yarn_herd", "exec")

@@ -8,7 +8,7 @@ def test_input_batch_candidate_compiles_and_changes_both_reservation_terms():
     source = build()
     assert 'batch_size = 6 if required == "WHEAT" else 8' in source
     assert '6 if required == "WHEAT" else 8' in source
-    assert 'demand_inputs[required] / batch_size' in source
+    assert "demand_inputs[required] / batch_size" in source
     namespace = {}
     exec(source, namespace)
     assert callable(namespace["agent"])

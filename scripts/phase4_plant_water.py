@@ -21,26 +21,26 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''                140
+    old = """                140
                 if water_before_harvest
                 else (
-                    p["deadline_boost"]'''
-    new = '''                260
+                    p["deadline_boost"]"""
+    new = """                260
                 if tile["planted_day"] == day and not tile["watered_today"]
                 else (
                     140
                     if water_before_harvest
                     else (
-                        p["deadline_boost"]'''
+                        p["deadline_boost"]"""
     assert source.count(old) == 1
     source = source.replace(old, new)
-    old_close = '''                    else 65
+    old_close = """                    else 65
                 ),
-            )'''
-    new_close = '''                    else 65
+            )"""
+    new_close = """                    else 65
                     )
                 ),
-            )'''
+            )"""
     assert source.count(old_close) == 1
     source = source.replace(old_close, new_close)
     compile(source, "plant_water", "exec")
@@ -51,9 +51,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--screen", action="store_true")
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument(
-        "--output", type=Path, default=Path("data/raw/phase4-plant-water.json")
-    )
+    parser.add_argument("--output", type=Path, default=Path("data/raw/phase4-plant-water.json"))
     args = parser.parse_args()
     source = build()
     digest = hashlib.sha256(source.encode()).hexdigest()

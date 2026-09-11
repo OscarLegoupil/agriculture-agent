@@ -13,17 +13,17 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''                amount = min(
+    old = """                amount = min(
                     shed[required], 3 if required == "WHEAT" else 4, demand_inputs[required]
-                )'''
-    new = '''                nearby_feed = sum(
+                )"""
+    new = """                nearby_feed = sum(
                     other_op == "FEED" and distance(other_target, target) <= 3
                     for other_target, other_op, _, _, _ in tasks
                 )
                 batch_size = (
                     min(6, max(3, nearby_feed)) if required == "WHEAT" else 4
                 )
-                amount = min(shed[required], batch_size, demand_inputs[required])'''
+                amount = min(shed[required], batch_size, demand_inputs[required])"""
     assert source.count(old) == 1
     source = source.replace(old, new)
     compile(source, "local_feed_batch", "exec")
@@ -34,7 +34,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--screen", action="store_true")
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--output", type=Path, default=Path("data/raw/phase4-local-feed-batch.json"))
+    parser.add_argument(
+        "--output", type=Path, default=Path("data/raw/phase4-local-feed-batch.json")
+    )
     args = parser.parse_args()
     source = build()
     digest = hashlib.sha256(source.encode()).hexdigest()
