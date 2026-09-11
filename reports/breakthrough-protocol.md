@@ -247,3 +247,12 @@ references own three quadrants; that observation does not prove a fourth is
 unprofitable. This adds16 games (128 total across eight candidates), with
 actual purchase costs, planting, utilization and losses reported. No worker
 increase or extra land-specific production rule is bundled with it.
+
+The completed32-seed capacity confirmation retains a large historical gain:
+COK49/64 versus v8's21/64, Seyam64/64 versus61/64; equal score88.28% versus
+64.06%, paired improvement24.22 points [14.06,34.38]. Mooman is only9/64
+versus0/64 (14.06%, interval3.13-26.56), mean gap -14,529 versus -30,920.
+This fails the current-opponent target. Across those192 capacity games,
+727 visible budget fallbacks also limit clean attribution and portability.
+The150ms control addresses that confound in subsequent screens; do not
+reinterpret the original65ms result as a reproducible fixed-work ablation.

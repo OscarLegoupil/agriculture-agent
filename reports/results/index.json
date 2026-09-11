@@ -35,6 +35,18 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-capacity-field.json.gz": {
+    "sha256_uncompressed": "56571d63849819ec7cc42e98dd29092149cbe77fc87dcf29923e3ed81c336503",
+    "bytes": 359192,
+    "games": 96,
+    "kind": "benchmark"
+  },
+  "breakthrough-capacity-mooman-field.json.gz": {
+    "sha256_uncompressed": "e4902df6424359a13e0a856188f9c3c483651ddcdc0e5ba4240ec80cc7884d97",
+    "bytes": 350211,
+    "games": 96,
+    "kind": "benchmark"
+  },
   "breakthrough-cereal-mooman.json.gz": {
     "sha256_uncompressed": "a476be1af35e0784b267f6dee0732ac46d989bec78102b63c2a460d85fe9d1a2",
     "bytes": 59986,
