@@ -75,6 +75,10 @@ def verify(manifest):
     for opponent in panel["opponents"]:
         if sha(local_path(opponent).read_bytes()) != manifest["hashes"][opponent]:
             raise ValueError(f"Opponent executable hash differs: {opponent}")
+    for bundle in manifest.get("executable_bundles", {}).values():
+        for path, digest in bundle.items():
+            if sha(local_path(path).read_bytes()) != digest:
+                raise ValueError(f"Executable sidecar hash differs: {path}")
     configurations = set()
     for row in rows:
         if row.get("resolved_seed") != row["seed"]:
