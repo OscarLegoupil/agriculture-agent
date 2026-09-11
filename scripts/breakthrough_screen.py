@@ -50,6 +50,32 @@ def main():
             candidates[name] = daily_build(
                 mature_hands=10 if "10" in name else None, cereal="cereal" in name
             )
+        elif name == "capacity_budget":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(cereal=True, budget_seconds=0.150)
+        elif name == "capacity_land":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(cereal=True, budget_seconds=0.150, extra_quadrant=True)
+        elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
+            from experiments.berry_bridge import build as bridge_build
+
+            candidates[name] = bridge_build(
+                berries=4 if "bridge" in name else 0,
+                cereal=True,
+                arrival_replan="arrival" in name,
+                budget_seconds=0.150,
+            )
+        elif name in ("capacity_service", "capacity_fertilizer", "capacity_renewal"):
+            from experiments.cereal_service import build as cereal_build
+
+            candidates[name] = cereal_build(
+                fertilizer=name != "capacity_renewal",
+                renewal=name != "capacity_fertilizer",
+                cereal_capacity=True,
+                budget_seconds=0.150,
+            )
         elif name == "animal_service":
             from experiments.animal_service import build as service_build
 

@@ -657,7 +657,7 @@ def daily_routes(
     return actions, claimed
 
 
-def build(*, mature_hands=None, cereal=False, budget_seconds=0.065):
+def build(*, mature_hands=None, cereal=False, budget_seconds=0.065, extra_quadrant=False):
     root = Path(__file__).resolve().parents[1]
     raw = gzip.decompress((root / "reports/sources" / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
@@ -667,6 +667,8 @@ def build(*, mature_hands=None, cereal=False, budget_seconds=0.065):
     if mature_hands is not None and mature_hands not in (8, 10, 12):
         raise ValueError("Use a declared mature workforce level")
     parameters = []
+    if extra_quadrant:
+        parameters.append("quadrants=4")
     if mature_hands is not None:
         parameters.append(f'hands={mature_hands} if obs["day"] >= 15 else PARAMS["hands"]')
     if cereal:

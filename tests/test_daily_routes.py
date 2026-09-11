@@ -28,6 +28,28 @@ def test_default_builder_preserves_qualified_fleet_bytes():
     )
 
 
+def test_extra_quadrant_investment_executes_at_official_marginal_cost():
+    obs, cfg = world(day=14, hour=2, hands=12)
+    farm = obs["farms"][0]
+    farm["money"] = 100000
+    game._do_buy_land(farm, 10)
+    game._do_buy_land(farm, 10)
+    assert len(farm["unlocked_quadrants"]) == 3
+    for row in farm["tiles"]:
+        for x, tile in enumerate(row):
+            if tile is None:
+                row[x] = game._new_plant("STRAWBERRY", 5, 24)
+    base = get_last_callable(build(cereal=True))(deepcopy(obs), cfg)
+    expanded = get_last_callable(build(cereal=True, extra_quadrant=True))(deepcopy(obs), cfg)
+    assert ["BUY_LAND"] not in base["market"]
+    assert ["BUY_LAND"] in expanded["market"]
+    before = farm["money"]
+    game._do_buy_land(farm, 10)
+    assert before - farm["money"] == 4000
+    assert len(farm["unlocked_quadrants"]) == 4
+    assert sum(tile != "LOCKED" for row in farm["tiles"] for tile in row) == 100
+
+
 def test_mature_labor_ablation_changes_actual_hire_orders_only_after_day14():
     decisions = {}
     for day in (14, 15):

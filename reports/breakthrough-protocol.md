@@ -238,3 +238,12 @@ valuable later crop. First complete official prerequisite/economic tests.
 Run all declared rows without score-based stopping, at most six game processes.
 Only material matchup improvement earns broader confirmation. No validation
 or holdout opens during these mechanism and reliability screens.
+
+Add one bounded investment ablation to that same Mooman screen: allow the
+fourth quadrant (third paid purchase,4,000 coins) while retaining twelve hands
+and the cash gate. The capacity policy now actually fills the previously
+owned75 cells, so the marginal land question is executable. The reviewed
+references own three quadrants; that observation does not prove a fourth is
+unprofitable. This adds16 games (128 total across eight candidates), with
+actual purchase costs, planting, utilization and losses reported. No worker
+increase or extra land-specific production rule is bundled with it.
