@@ -17,11 +17,11 @@ import numpy as np
 
 try:
     from .evidence_io import read_result
-    from .phase2_compare import compare
+    from .phase2_compare import compare, score_interval
     from .summarize_benchmark import match_score
 except ImportError:
     from evidence_io import read_result
-    from phase2_compare import compare
+    from phase2_compare import compare, score_interval
     from summarize_benchmark import match_score
 
 
@@ -230,7 +230,7 @@ def build_report(paths, champion=CHAMPION, use_replays=False):
         "provenance": {key: first[key] for key in PROVENANCE},
         "opponent_hashes": {o: first["hashes"][o] for o in opponents},
         "weights": dict.fromkeys(opponents, 1 / len(opponents)),
-        "uncertainty": "10000 whole-seed bootstrap draws, RNG20260910; seats, opponents and policies retained together",
+        "uncertainty": "10000 whole-seed bootstrap draws, RNG20260910; seats, opponents and policies retained together; absolute all-win/all-loss scores use conservative bounded-mean endpoint intervals",
         "measurement_notes": [
             "Runtime distributions summarize per-episode action maxima/p99 values, not raw action timings.",
             "Daily worker peaks require retained replays; unavailable worker observations are null, never inferred from wages.",
@@ -273,7 +273,7 @@ def build_report(paths, champion=CHAMPION, use_replays=False):
             comparison["opponents"][opponent].update(
                 wins=int(sum(score == 1 for score in scores)),
                 draws=int(sum(score == 0.5 for score in scores)),
-                score_ci95=np.quantile(blocks[samples].mean(axis=1), [0.025, 0.975]).tolist(),
+                score_ci95=score_interval(blocks, samples),
                 mean_paired_gap_change_ci95=(
                     np.quantile(cash_blocks[samples].mean(axis=1), [0.025, 0.975]).tolist()
                     if cash_blocks is not None

@@ -35,6 +35,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-cereal-mooman.json.gz": {
+    "sha256_uncompressed": "a476be1af35e0784b267f6dee0732ac46d989bec78102b63c2a460d85fe9d1a2",
+    "bytes": 59986,
+    "games": 16,
+    "kind": "benchmark"
+  },
   "breakthrough-control-screen.json.gz": {
     "sha256_uncompressed": "36b6a810a5896f22efef99218b75c66439ec2775870c46eba0e4d9675d4b9446",
     "bytes": 237956,
@@ -45,6 +51,12 @@
     "sha256_uncompressed": "63f140c6da86a25029c6b66bcfe16c1e93a78feceeec507b3678af965601131c",
     "bytes": 236377,
     "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-fleet-capacity.json.gz": {
+    "sha256_uncompressed": "50f79709f716c1de1fff4ee753aa50912044b4d75b3461e024500b01f320d5f1",
+    "bytes": 353966,
+    "games": 96,
     "kind": "benchmark"
   },
   "breakthrough-fleet-corrected.json.gz": {

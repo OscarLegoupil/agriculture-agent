@@ -4,8 +4,22 @@ import gzip
 import hashlib
 from copy import deepcopy
 
+import numpy as np
 import pytest
 from scripts.breakthrough_report import verify
+from scripts.phase2_compare import score_interval
+
+
+def test_perfect_panel_does_not_claim_certainty_about_unseen_seeds():
+    samples = np.random.default_rng(1).integers(8, size=(10000, 8))
+    low, high = score_interval(np.ones(8), samples)
+    assert low == pytest.approx(0.6305833524471807)
+    assert high == 1
+    assert score_interval(np.zeros(8), samples) == pytest.approx([0, 1 - low])
+    varied = np.array([0, 0.25, 0.5, 1, 0, 0.5, 1, 0.75])
+    assert score_interval(varied, samples) == pytest.approx(
+        np.quantile(varied[samples].mean(axis=1), [0.025, 0.975])
+    )
 
 
 @pytest.fixture
