@@ -45,6 +45,14 @@ slack. Purchase thresholds remain unchanged; quotes never become spendable cash
 before a real sale. Reacting-opponent checkpoint prefixes move land and the first
 berry planting thirteen hours earlier, but those prefixes are not season results.
 
+Fleet livestock screen: retain opening and purchases; from day 16, choose feed
+and care with the tested finite-season animal recurrence. Credit only today's
+service versus withholding it, with held stock and sunk investment cancelling.
+The official rescue witness preserves a starving, banked-care sheep for a six-
+unit first harvest; saturated animals are deliberately retired. Test the same
+16 Mooman development scenarios. Collection timing and future price paths remain
+approximations. Interrupted-episode cache reset is verified before freezing.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

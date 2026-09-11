@@ -79,6 +79,10 @@ def main():
             from experiments.investment_liquidity import build as liquidity_build
 
             candidates[name] = liquidity_build(seed_capital=name == "capacity_investment_cash")
+        elif name == "capacity_animal_dp":
+            from experiments.fleet_animal_service import build as animal_dp_build
+
+            candidates[name] = animal_dp_build()
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 
