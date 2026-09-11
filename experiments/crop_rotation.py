@@ -27,6 +27,6 @@ def build(berries=34):
     source = source.replace(old, new)
     # After long-cohort commissioning ends, annual selection remains price-aware;
     # feed opportunity value applies to the admitted commercial-wheat capacity.
-    source = source.replace('    p = PARAMS', f'    p = dict(PARAMS, feed_grown={50 - berries})', 1)
+    source = source.replace("    p = PARAMS", f"    p = dict(PARAMS, feed_grown={50 - berries})", 1)
     compile(source, "crop_rotation", "exec")
     return source
