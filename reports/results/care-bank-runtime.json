@@ -1,0 +1,64 @@
+[
+  {
+    "floor": false,
+    "sha256": "845abf20a4384d007464aaad7189cd9fd20a55240467e9f73ced7a55f0c66041",
+    "observations": 2157,
+    "mismatches": [],
+    "stderr": [],
+    "stats": {
+      "insertion_evaluations": 467697,
+      "committed_actions": 16716,
+      "unassigned_obligations": 1482,
+      "bounded_searches": 477,
+      "resource_invalidations": 21
+    },
+    "p95_seconds": 0.01221969999896828,
+    "max_seconds": 0.024523399999452522,
+    "inputs": [
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-0.json",
+        "sha256": "766785d08a2962a549275581f2b9c54500c1c1cbbaacb85293ca3a8c3fe9a2a8"
+      },
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-1.json",
+        "sha256": "2e9d7af9fe8aafefbf3b8afc5e955b0a847d568de6f24928ca329d95d93a299d"
+      },
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-0.json",
+        "sha256": "766785d08a2962a549275581f2b9c54500c1c1cbbaacb85293ca3a8c3fe9a2a8"
+      }
+    ],
+    "scope": "Recorded capacity observations both seats then seat0 reset. Source versus official-loader parity/runtime; not a new match result."
+  },
+  {
+    "floor": true,
+    "sha256": "5c57cd6d0ef539f34aa5dc0f74d865c14801a20bf5d83e50f7232a7c39076c1e",
+    "observations": 2157,
+    "mismatches": [],
+    "stderr": [],
+    "stats": {
+      "insertion_evaluations": 547614,
+      "committed_actions": 16473,
+      "unassigned_obligations": 1851,
+      "bounded_searches": 678,
+      "resource_invalidations": 75
+    },
+    "p95_seconds": 0.013237630002913647,
+    "max_seconds": 0.03275229999781004,
+    "inputs": [
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-0.json",
+        "sha256": "766785d08a2962a549275581f2b9c54500c1c1cbbaacb85293ca3a8c3fe9a2a8"
+      },
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-1.json",
+        "sha256": "2e9d7af9fe8aafefbf3b8afc5e955b0a847d568de6f24928ca329d95d93a299d"
+      },
+      {
+        "path": "reports/replays/breakthrough/fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba-reference-mooman-main-5007-0.json",
+        "sha256": "766785d08a2962a549275581f2b9c54500c1c1cbbaacb85293ca3a8c3fe9a2a8"
+      }
+    ],
+    "scope": "Recorded capacity observations both seats then seat0 reset. Source versus official-loader parity/runtime; not a new match result."
+  }
+]

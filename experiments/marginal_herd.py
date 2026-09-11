@@ -360,9 +360,9 @@ def marginal_herd_purchase(obs, configuration=None, fallback=None, budget_second
     return max(accepted)[1] if accepted else None
 
 
-def build():
-    content = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
-    assert hashlib.sha256(content).hexdigest() == INCUMBENT
+def build(*, base=INCUMBENT):
+    content = gzip.decompress((Path("reports/sources") / f"{base}.py.gz").read_bytes())
+    assert hashlib.sha256(content).hexdigest() == base
     source = content.decode()
     helpers = "\n\n".join(
         inspect.getsource(function)

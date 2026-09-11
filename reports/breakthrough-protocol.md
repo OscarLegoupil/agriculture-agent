@@ -1,5 +1,24 @@
 # Structural strategy research, 11 September 2026
 
+Admission/execution interaction: the marginal herd model was screened only with
+V8's older executor, preserving 22/32 historical wins. Reuse its exact economic
+assumptions with the 150 ms capacity fleet on 5000-5007/both seats against Mooman
+(16 games). This changes post-day-8 purchased species and timing by charging
+existing-product price dilution, actual care banks, service and feed, and a
+cash runway. The two inherited future-shop scenarios and internal 50 ms model
+budget remain frozen. This is a previously untested interaction with the improved
+executor, not a claim that the original small result demonstrated a good model.
+
+Care-bank screen: replace the fixed per-production animal quantity with a
+recurrence carrying observed age and pending care, retaining 0.8 future care
+intensity. Test quantities alone and their interaction with floor-aware prices,
+16 Mooman games each (5000-5007, both seats). The diagnostic reduces eight-day
+milk quote error in 48 observed checkpoints and agrees with official animal
+transitions under full care; only complete games can establish policy benefit.
+The floor-only screen raises mean cash gap but loses two prior wins, so neither
+component is assumed to improve match outcomes. Finish the fixed 32-game panel
+without score-based stopping; validation and holdout remain unopened.
+
 Floor-execution screen: retain the exact 150 ms control, replacing only its
 daily price execution with early, spread and late sale scenarios. Each respects
 the official rule that a sale at one coin does not increase market inventory,

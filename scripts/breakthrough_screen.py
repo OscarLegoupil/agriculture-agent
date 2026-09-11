@@ -87,13 +87,19 @@ def main():
             from experiments.floor_forecast import build as floor_build
 
             candidates[name] = floor_build(animal_service=name == "capacity_floor_animals")
+        elif name in ("capacity_care_bank", "capacity_floor_care"):
+            from experiments.care_bank_forecast import build as care_build
+
+            candidates[name] = care_build(floor_forecast=name == "capacity_floor_care")
         elif name in ("capacity_water", "capacity_water_market"):
             from experiments.deadline_water import build as water_build
 
             candidates[name] = (
                 water_build()
                 if name == "capacity_water"
-                else water_build(base="a028706ed48d71983ea57522eedf9bed450341a8f2247b97281b8e2a7a4f28eb")
+                else water_build(
+                    base="a028706ed48d71983ea57522eedf9bed450341a8f2247b97281b8e2a7a4f28eb"
+                )
             )
         elif name == "capacity_financed":
             from experiments.crop_opportunity_financed import build as financed_build
@@ -145,6 +151,12 @@ def main():
             from experiments.marginal_herd import build as herd_build
 
             candidates[name] = herd_build()
+        elif name == "capacity_marginal_herd":
+            from experiments.marginal_herd import build as herd_build
+
+            candidates[name] = herd_build(
+                base="fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba"
+            )
         elif name.startswith("rotation"):
             from experiments.crop_rotation import build as rotation_build
 

@@ -160,8 +160,11 @@ def test_model_is_observation_pure_and_budget_fallback_is_visible(capsys):
     assert "marginal_herd_budget_fallback" in capsys.readouterr().err
 
 
-def test_official_loader_selects_new_admission_and_independent_instances_reset():
-    first, second = get_last_callable(build()), get_last_callable(build())
+@pytest.mark.parametrize(
+    "base", [INCUMBENT, "fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba"]
+)
+def test_official_loader_selects_new_admission_and_independent_instances_reset(base):
+    first, second = get_last_callable(build(base=base)), get_last_callable(build(base=base))
     assert first.__name__ == "agent"
     assert "marginal_herd_purchase" in first.__code__.co_names
     environment = make("kaggriculture", configuration={"seed": 5000})
@@ -190,6 +193,20 @@ def test_recorded_startup_actions_match_incumbent_in_both_seats():
             assert candidate(observation, replay["configuration"]) == champion(
                 observation, replay["configuration"]
             )
+
+
+@pytest.mark.skipif(not REPLAY.exists(), reason="Local replay is not distributed with CI")
+def test_fleet_admission_preserves_recorded_pre_admission_decisions():
+    replay = json.loads(REPLAY.read_bytes())
+    base = "fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba"
+    candidate = get_last_callable(build(base=base))
+    parent = get_last_callable(
+        gzip.decompress(Path(f"reports/sources/{base}.py.gz").read_bytes()).decode()
+    )
+    for step in replay["steps"][:192]:
+        for seat in (0, 1):
+            obs = {**step[0]["observation"], **step[seat]["observation"], "player": seat}
+            assert candidate(obs, replay["configuration"]) == parent(obs, replay["configuration"])
 
 
 @pytest.mark.skipif(not REPLAY.exists(), reason="Local replay is not distributed with CI")
