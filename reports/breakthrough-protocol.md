@@ -158,3 +158,10 @@ reserve for expensive hires and unproduced revenue. First run seed 5000, both
 seats and both historical challenges (four games), inspecting actual early
 receipts and survival before allocating a larger panel. This is development
 diagnosis, not independent selection evidence.
+
+The four-game liquidity probe completes normally with no nonterminal crop/animal
+losses. Its cheap hires plant the extra two melons on day 1 rather than day 2,
+while day-1 closing cash falls by only four coins. All four final match outcomes
+are unchanged (COK losses, Seyam wins), and later shop paths differ. Complete
+the original eight-seed screen by adding 5001–5007, 28 games; retain the four
+original rows rather than rerunning or selecting an attempt.
