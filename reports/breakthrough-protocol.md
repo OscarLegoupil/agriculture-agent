@@ -36,6 +36,15 @@ threshold experiments did not change. Use the same 16 Mooman development games
 and unchanged common-budget control; verify both-seat harvest/drop/sale contracts
 before running. The threshold is a declared screening hypothesis, not tuned here.
 
+Capital-delivery screen: on seeds 5001/5002, observed manure could finance the
+already-eligible day-5 land gate while five hired hands were idle. Test a delivery
+trigger for land only, and for land plus missing seed capital (32 Mooman games,
+the same eight development seeds and both seats). Each trigger requires disjoint
+observed sources, distinct workers, transport time, shed room and maintenance
+slack. Purchase thresholds remain unchanged; quotes never become spendable cash
+before a real sale. Reacting-opponent checkpoint prefixes move land and the first
+berry planting thirteen hours earlier, but those prefixes are not season results.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

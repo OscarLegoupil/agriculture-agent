@@ -75,6 +75,10 @@ def main():
             from experiments.market_collection import build as collection_build
 
             candidates[name] = collection_build()
+        elif name in ("capacity_investment_cash", "capacity_land_cash"):
+            from experiments.investment_liquidity import build as liquidity_build
+
+            candidates[name] = liquidity_build(seed_capital=name == "capacity_investment_cash")
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 
