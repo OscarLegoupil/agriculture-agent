@@ -48,6 +48,10 @@ def main():
             from experiments.startup_liquidity import build as startup_build
 
             candidates[name] = startup_build()
+        elif name == "wheat_service":
+            from experiments.wheat_service import build as wheat_build
+
+            candidates[name] = wheat_build()
         elif name.startswith("rotation"):
             from experiments.crop_rotation import build as rotation_build
 
