@@ -23,7 +23,7 @@ def season_targets(day, family):
     return {"COW": cows, "SHEEP": sheep, "GOOSE": 0}, wheat, 38
 
 
-def build(family="wool"):
+def build(family="wool", scope="all"):
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
@@ -34,7 +34,8 @@ def build(family="wool"):
         source = source.replace(old, new)
 
     replace("def agent(obs:", inspect.getsource(season_targets) + "\n\ndef agent(obs:")
-    replace("    p = PARAMS", "    p = dict(PARAMS, quadrants=4, crop_tiles=70)")
+    if scope == "all":
+        replace("    p = PARAMS", "    p = dict(PARAMS, quadrants=4, crop_tiles=70)")
     replace(
         "    desired = dict.fromkeys(ANIMALS, 18)\n    if day < 8:\n        desired = dict(COW=2, SHEEP=2, GOOSE=0)",
         f"    desired, wheat_target, berry_target = season_targets(day, {family!r})\n    if day < 3:\n        desired = dict(COW=2, SHEEP=2, GOOSE=0)",
@@ -53,6 +54,22 @@ def build(family="wool"):
         "                deficit = (cap - counts[animal] - stock[animal]) / max(1, cap)\n"
         "                options.append((deficit, animal))",
     )
+    if scope == "herd":
+        # Preserve every opening decision; the structural package changed the
+        # initial animal ordering even though its day3 aggregate herd matched.
+        replace(
+            '            feed_cost = (29 - day) * prices["WHEAT"]',
+            "            if day < 3:\n"
+            "                revenue = events * (interval + 1) * forecast[product]\n"
+            '            feed_cost = (29 - day) * prices["WHEAT"]',
+        )
+        replace(
+            "                options.append((deficit, animal))",
+            "                options.append((net / cost if day < 3 else deficit, animal))",
+        )
+        compile(source, "herd_calendar", "exec")
+        return source
+    assert scope == "all"
     replace(
         '    target_hands = min(p["hands"], max(4, math.ceil(workload / 8)))\n    if day == 29:',
         "    commissioning = 8 if 3 <= day <= 8 else 4\n"

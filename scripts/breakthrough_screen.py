@@ -31,6 +31,8 @@ def main():
             from experiments.service_routes import build as routes_build
 
             candidates[name] = routes_build()
+        elif name.endswith("_herd"):
+            candidates[name] = build(name.removesuffix("_herd"), scope="herd")
         else:
             candidates[name] = build(name)
     screen(

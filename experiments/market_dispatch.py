@@ -113,9 +113,8 @@ def build():
         "        inventory_states.append(dict(inventory))\n    return inventory_states\n\n    first_sale = {item: spec[1] for item, spec in crop_specs.items()}",
     )
     model = model[: model.index("\n    first_sale =")]
+    source = source.replace("def agent(", "def physical_agent(", 1)
     wrapper = """
-physical_agent = agent
-
 def agent(obs, configuration=None):
     action = physical_agent(obs, configuration)
     if not obs.get("farms") or obs.get("player") not in (0, 1):

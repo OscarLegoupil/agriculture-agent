@@ -63,3 +63,19 @@ opponents must have no important unexplained regression.
 Changing occupancy changes weed RNG consumption and later shop draws. Paired
 seeds measure whole-policy effects; cash changes are not unit-value causal gains
 under a fixed demand path. Offline ideal-service bounds are not deployable scores.
+
+## Follow-up after the structural screen
+
+All three combined calendars fail: COK 0–2/16, Seyam 6–8/16 versus v8 6/16
+and16/16. They establish earlier animals/wheat but displace the financed berry
+cohort. The deficit ranking also changes the first purchased species. A 32-game
+ablation therefore retains the exact incumbent opening through day2, crops,
+labor and land, changing only post-opening directed wool-herd admission and its
+co-product credit. Verify72 consecutive opening actions before running.
+
+The first market-dispatch screen is an invalid intervention: the official
+last-callable loader selects a late alias of the physical incumbent. Its exact
+outcomes match v8. Preserve the artifact/evidence, correct the declaration order,
+and repeat the same32 development games after an official-loader regression test.
+The route candidate loses half its Seyam games and is not promoted despite a
+one-game COK gain. Its service witness does not generalize to competitive strength.

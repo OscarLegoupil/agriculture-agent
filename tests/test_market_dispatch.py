@@ -56,9 +56,13 @@ def test_budget_fallback_is_immediate_valid_liquidation(capsys):
 
 def test_deployment_entry_point_and_terminal_liquidation():
     from kaggle_environments import make
+    from kaggle_environments.agent import get_last_callable
 
     namespace = {}
     exec(build(), namespace)
+    loaded = get_last_callable(build())
+    assert loaded.__name__ == "agent"
+    assert "dispatch_sales" in loaded.__code__.co_names
     env = make("kaggriculture", configuration={"seed": 5000})
     env.reset(2)
     obs = env.state[0].observation

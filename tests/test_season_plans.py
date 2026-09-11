@@ -46,3 +46,19 @@ def test_calendar_cannot_spend_absent_working_capital():
         exec(build(family), policy)
         action = policy["agent"](deepcopy(state), dict(env.configuration))
         assert not any(a[0].startswith("BUY") or a[0] == "HIRE" for a in action["market"])
+
+
+def test_isolated_herd_calendar_preserves_complete_opening_trajectory():
+    from kaggle_environments import make
+
+    from kaggriculture.agent.competitive import agent
+
+    env = make("kaggriculture", configuration={"seed": 5000})
+    env.reset(2)
+    policy = {}
+    exec(build("wool", scope="herd"), policy)
+    for _ in range(72):
+        obs = deepcopy(env.state[0].observation)
+        expected = agent(deepcopy(obs), dict(env.configuration))
+        assert policy["agent"](deepcopy(obs), dict(env.configuration)) == expected
+        env.step([expected, {}])
