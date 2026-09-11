@@ -5,7 +5,7 @@ import json
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from benchmark import episode, provenance, snapshot
+from benchmark import episode, provenance, snapshot, verify_bundles
 
 
 def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=None):
@@ -66,6 +66,7 @@ def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=N
         assert (
             hashlib.sha256(Path(opponent).read_bytes()).hexdigest() == manifest["hashes"][opponent]
         )
+    verify_bundles(manifest)
     manifest["complete"] = True
     output.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return manifest

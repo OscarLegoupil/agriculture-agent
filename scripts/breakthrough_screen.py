@@ -39,7 +39,7 @@ def main():
         args.seeds,
         args.output,
         args.workers,
-        inputs=[__file__, "experiments/season_plans.py"],
+        inputs=[__file__, *map(str, Path("experiments").glob("*.py"))],
         replays="reports/replays/breakthrough",
     )
 

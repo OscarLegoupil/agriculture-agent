@@ -35,14 +35,46 @@ def snapshot(path):
 def provenance(paths):
     from kaggle_environments.envs.kaggriculture import kaggriculture as game
 
+    bundles = {}
+    for filename in paths:
+        main = Path(filename)
+        if main.name != "main.py" or not main.is_file():
+            continue
+        bundles[str(main)] = {
+            str(path): sha(path)
+            for path in sorted(main.parent.rglob("*"))
+            if path.is_file()
+            and path.suffix in (".py", ".json", ".txt")
+            and ".git" not in path.parts
+        }
     return {
         "revision": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "tracked_worktree_changes": subprocess.check_output(
+            ["git", "status", "--porcelain", "--untracked-files=no"], text=True
+        ).splitlines(),
+        "harness_sha256": {
+            str(path): sha(path)
+            for path in (
+                Path(__file__),
+                Path(__file__).with_name("telemetry.py"),
+                Path(__file__).with_name("strategy_screen.py"),
+            )
+        },
         "hashes": {p: sha(p) for p in paths if Path(p).is_file()},
+        "executable_bundles": bundles,
         "environment_version": importlib.metadata.version("kaggle-environments"),
         "interpreter_sha256": sha(game.__file__),
         "lock_sha256": sha("uv.lock"),
         "dependencies": {p: importlib.metadata.version(p) for p in ("numpy", "scipy")},
     }
+
+
+def verify_bundles(manifest):
+    """Reject changed imported modules or action tables, not only main.py."""
+    for bundle in manifest.get("executable_bundles", {}).values():
+        for path, expected in bundle.items():
+            if sha(path) != expected:
+                raise RuntimeError(f"Executable bundle changed during benchmark: {path}")
 
 
 def stderr_summary(logs, seat):
@@ -167,6 +199,8 @@ def main():
         "episodes": [],
     }
     output = Path(args.output)
+    if output.exists():
+        raise FileExistsError(f"Use a new experiment path: {output}")
     output.parent.mkdir(parents=True, exist_ok=True)
     tasks = [
         (
@@ -197,6 +231,7 @@ def main():
     for path in paths:
         if path in manifest["hashes"] and sha(path) != manifest["hashes"][path]:
             raise RuntimeError(f"Executable changed during benchmark: {path}")
+    verify_bundles(manifest)
     manifest["complete"] = True
     output.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
