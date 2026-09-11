@@ -27,6 +27,15 @@ turnaround and delivery schedule is an admission approximation, to be tested in
 the official environment, not an executable profit guarantee. Recorded-stream
 consistency and interpreter-backed yield/terminal tests precede all 48 games.
 
+Physical market-dispatch screen: extend the established melon delivery race to
+commodities whose quote could fall at least 20% if currently visible rival output
+were sold. Harvest, return and sale take priority over optional care/manure on
+that visit; feeding/watering prerequisites remain. No rival private stock or
+future action is available. This tests transport timing, which earlier selling-
+threshold experiments did not change. Use the same 16 Mooman development games
+and unchanged common-budget control; verify both-seat harvest/drop/sale contracts
+before running. The threshold is a declared screening hypothesis, not tuned here.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

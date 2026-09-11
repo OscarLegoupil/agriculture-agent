@@ -71,6 +71,10 @@ def main():
                 "no_multiplier" if name == "capacity_no_feed_bonus" else "cohort",
                 start_day=3 if name == "capacity_cohort3" else 15,
             )
+        elif name == "capacity_market_collection":
+            from experiments.market_collection import build as collection_build
+
+            candidates[name] = collection_build()
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 
