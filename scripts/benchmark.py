@@ -44,7 +44,7 @@ def provenance(paths):
             str(path): sha(path)
             for path in sorted(main.parent.rglob("*"))
             if path.is_file()
-            and path.suffix in (".py", ".json", ".txt")
+            and path.suffix in (".py", ".json", ".txt", ".so", ".dll", ".dylib")
             and ".git" not in path.parts
         }
     return {
@@ -80,8 +80,9 @@ def verify_bundles(manifest):
 def stderr_summary(logs, seat):
     """Retain bounded diagnostics; counts refer to messages, not inferred fallbacks."""
     messages = Counter()
+    indices = {}
     turns = truncated = omitted = 0
-    for log in logs:
+    for log_index, log in enumerate(logs):
         if len(log) <= seat or not log[seat].get("stderr"):
             continue
         turns += 1
@@ -91,11 +92,13 @@ def stderr_summary(logs, seat):
             message = message[:2048]
         if message in messages or len(messages) < 32:
             messages[message] += 1
+            indices.setdefault(message, []).append(log_index)
         else:
             omitted += 1
     return {
         "stderr_turns": turns,
         "stderr_messages": dict(messages),
+        "stderr_log_indices": indices,
         "stderr_truncated_turns": truncated,
         "stderr_omitted_turns": omitted,
     }

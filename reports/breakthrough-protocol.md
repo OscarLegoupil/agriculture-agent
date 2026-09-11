@@ -203,3 +203,19 @@ This earns a16-game Mooman panel on5000-5007, both seats, compared with the
 existing frozen v8 and fleet rows. Start that panel while the predeclared
 labor/cereal interaction finishes; do not use partial interaction scores for
 selection or stop it early. The total game-process ceiling remains six.
+
+Completed cereal/Mooman:6/16 wins, mean gap -713 versus v8 -24,383 and
+fleet -21,957. The ten-hand interaction retains32/32 historical wins but
+reduces both cash gaps relative to the twelve-hand cereal plan; do not
+advance it merely for cheaper wages. Cereal's current-reference win rate
+still misses50%. Seed5000 also flips both Six-Day Fieldbook seats, but the
+large receipts are primarily late tomatoes; this is one known seed against
+a related route family, not independent evidence of a wheat-only mechanism.
+
+Confirm the frozen cereal policy on development5008-5031, both seats:
+COK/Seyam96 candidate games using the existing matched v8 extension;
+Mooman96 games including v8 and cereal. Combine with the original eight
+seed rows, retaining all losses. These192 games investigate generalization
+and lower-tail behavior before fresh validation. They do not open4000-4063
+or20000-20127. No score-based early stopping. Record the three visible
+Mooman fallback turns; future harnesses preserve their exact log indices.
