@@ -35,6 +35,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-calendar-mooman.json.gz": {
+    "sha256_uncompressed": "91c1ab085364f874102bbbdb1caf8a2dce381667393c92242c91a018097cb353",
+    "bytes": 176495,
+    "games": 48,
+    "kind": "benchmark"
+  },
   "breakthrough-capacity-field.json.gz": {
     "sha256_uncompressed": "56571d63849819ec7cc42e98dd29092149cbe77fc87dcf29923e3ed81c336503",
     "bytes": 359192,
@@ -51,6 +57,12 @@
     "sha256_uncompressed": "a476be1af35e0784b267f6dee0732ac46d989bec78102b63c2a460d85fe9d1a2",
     "bytes": 59986,
     "games": 16,
+    "kind": "benchmark"
+  },
+  "breakthrough-cereal-service-mooman.json.gz": {
+    "sha256_uncompressed": "aa738079f6868502c01bb2e71b70e4b435f6034a8860bdf513d414cd48f147d4",
+    "bytes": 176650,
+    "games": 48,
     "kind": "benchmark"
   },
   "breakthrough-control-screen.json.gz": {
@@ -105,6 +117,12 @@
     "sha256_uncompressed": "1777057757a6623a47aeb0197e4f9caa6adda2b32ec13f4af6ba225cd5f57930",
     "bytes": 59358,
     "games": 16,
+    "kind": "benchmark"
+  },
+  "breakthrough-opening-mooman.json.gz": {
+    "sha256_uncompressed": "b29ba8280a4892a9647b6f6d6c283720ef42b63a9df0d6992c5908d3e46a9a3a",
+    "bytes": 293856,
+    "games": 80,
     "kind": "benchmark"
   },
   "breakthrough-phucthai-qualification.json.gz": {
