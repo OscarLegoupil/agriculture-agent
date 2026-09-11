@@ -25,10 +25,19 @@ def sha(path):
 
 def snapshot(path):
     """Keep exact candidate bytes without duplicating deployed Python modules."""
-    digest = sha(path)
+    content = Path(path).read_bytes()
+    digest = hashlib.sha256(content).hexdigest()
     archive = Path("reports/sources") / (digest + ".py.gz")
     archive.parent.mkdir(parents=True, exist_ok=True)
-    archive.write_bytes(gzip.compress(Path(path).read_bytes(), mtime=0))
+    if archive.exists():
+        if gzip.decompress(archive.read_bytes()) != content:
+            raise ValueError(f"Existing source snapshot is corrupt: {archive}")
+    else:
+        compressed = bytearray(gzip.compress(content, mtime=0))
+        # Python 3.11/3.12 can expose zlib's platform-specific gzip OS header.
+        # Existing archives remain immutable; new ones use the portable marker.
+        compressed[9] = 255
+        archive.write_bytes(compressed)
     return str(archive)
 
 

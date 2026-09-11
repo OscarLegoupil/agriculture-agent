@@ -10,6 +10,13 @@ All retain the same 150 ms / 512-insertion fleet executor. These test production
 commitments that remained fixed in the capacity experiments. No additional
 validation or holdout data are opened by these screens.
 
+The initial Six-Day Fieldbook qualification used only seed 5000, whose favorable
+tomato path cannot establish broad strength. Extend that separate challenge check
+to all eight registered development seeds, both seats, with V8 and the frozen
+150 ms capacity control (32 games). Run both on the same Linux environment and
+pinned native library. Report this related public-action strategy separately;
+it does not add an independent strategy family or alter the historical weights.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

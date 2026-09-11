@@ -4,6 +4,14 @@
 
 ![A real game rendered by the official Kaggriculture environment](reports/figures/gameplay.png)
 
+**Current research, 11 September:** a broader challenge pool exposes a larger gap.
+Whole-farm routes and expanded cereal capacity improve known-data COK results from
+21/64 to 49/64, but win only 9/64 against the pinned Mooman reference. This candidate
+is unpromoted. [Current protocol](reports/breakthrough-protocol.md),
+[capacity diagnosis](reports/breakthrough-capacity-review.md), and
+[controlled follow-up experiments](reports/breakthrough-opening-review.md) separate
+production gains, demand-path effects, runtime fallbacks and rejected ideas.
+
 *v7 on the left, pinned lonespear on the right. Seed 0, day 21. Rendered from an actual replay with the official environment; [frame provenance](reports/figures/gameplay.json).*
 
 ## The problem
