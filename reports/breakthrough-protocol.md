@@ -1,5 +1,15 @@
 # Structural strategy research, 11 September 2026
 
+Latest development extension: the 150 ms common-budget Mooman panel rejects the
+berry bridge, arrival replanning, wheat renewal and extra-quadrant package.
+Fertilizer alone preserves the same six wins out of sixteen. Next, test three
+opening calendars on the same eight development seeds/both seats: six early
+animals with reserved sites (four cows, two sheep), public-state crop ranking
+after day 3 instead of the prescribed berry cohort, and their interaction.
+All retain the same 150 ms / 512-insertion fleet executor. These test production
+commitments that remained fixed in the capacity experiments. No additional
+validation or holdout data are opened by these screens.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

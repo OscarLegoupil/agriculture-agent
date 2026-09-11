@@ -58,6 +58,12 @@ def main():
             from experiments.daily_routes import build as daily_build
 
             candidates[name] = daily_build(cereal=True, budget_seconds=0.150, extra_quadrant=True)
+        elif name in ("capacity_herd6", "capacity_adaptive", "capacity_herd6_adaptive"):
+            from experiments.early_calendar import build as calendar_build
+
+            candidates[name] = calendar_build(
+                early_herd="herd6" in name, adaptive_crops="adaptive" in name
+            )
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 
