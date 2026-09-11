@@ -1,0 +1,53 @@
+{
+  "scope": "Complete recorded-state parity and process-reset checks; no new match outcomes",
+  "source": "data\\interim\\capacity-budget-build\\main.py",
+  "artifact": "data\\interim\\strategy-screen\\fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba\\main.py",
+  "sha256": "fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba",
+  "replays": [
+    {
+      "path": "reports\\replays\\breakthrough\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05-reference-mooman-main-5005-0.json",
+      "seat": 0,
+      "sha256": "91261cd0d0a84231c995215eb6b6e132184c0b2987578c8d2fb885bc2cbb1109"
+    },
+    {
+      "path": "reports\\replays\\breakthrough\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05-reference-mooman-main-5005-1.json",
+      "seat": 1,
+      "sha256": "da7a2165bb31495d2bd7b3ead23307d0c48267f63924035465b6d8957f9a8c79"
+    },
+    {
+      "path": "reports\\replays\\breakthrough\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05-reference-mooman-main-5005-0.json",
+      "seat": 0,
+      "sha256": "91261cd0d0a84231c995215eb6b6e132184c0b2987578c8d2fb885bc2cbb1109"
+    }
+  ],
+  "source_recorded_mismatches": [],
+  "source_official_loader_mismatches": [],
+  "source_budget_fallback_indices": [],
+  "isolated_mismatches": [],
+  "source_runtime_max_seconds": 0.11824729999898409,
+  "isolated_processes": [
+    {
+      "memory": {
+        "peak_rss_bytes": 20455424,
+        "peak_rss_measure": "Windows PeakWorkingSetSize",
+        "resource_peak_rss_bytes": null
+      },
+      "runtime_max_seconds": 0.0743257000012818,
+      "stderr": [],
+      "actions": 2157
+    },
+    {
+      "memory": {
+        "peak_rss_bytes": 20439040,
+        "peak_rss_measure": "Windows PeakWorkingSetSize",
+        "resource_peak_rss_bytes": null
+      },
+      "runtime_max_seconds": 0.08537230000001728,
+      "stderr": [],
+      "actions": 2157
+    }
+  ],
+  "actions_per_process": 2157,
+  "passed": true,
+  "memory_note": "Clean executable process RSS includes interpreter and one decoded observation; no allocation tracer. Parent replay-loading memory is excluded."
+}

@@ -1,0 +1,63 @@
+{
+  "source_url": "https://raw.githubusercontent.com/mooman0222/Kaggriculture-opencode/b7a0aad0b6047d61e64885966cdb76abf2d22021/agents/sr0909_live_k6.tar.gz",
+  "sha256": "2f410be6c8eea484eab2c37c8d9ab40d29b9561b56d44c26293b0aed82e0590b",
+  "bytes": 185136,
+  "members": [
+    {
+      "name": "._main.py",
+      "size": 163,
+      "regular_file": true,
+      "sha256": "b6688ae5c2aa8ac24d53c2274f3017211c7c20b1f17265f1ea64d5885094b44f",
+      "matches_checked_source": false
+    },
+    {
+      "name": "main.py",
+      "size": 6413,
+      "regular_file": true,
+      "sha256": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded",
+      "matches_checked_source": true
+    },
+    {
+      "name": "._router.py",
+      "size": 163,
+      "regular_file": true,
+      "sha256": "b6688ae5c2aa8ac24d53c2274f3017211c7c20b1f17265f1ea64d5885094b44f",
+      "matches_checked_source": false
+    },
+    {
+      "name": "router.py",
+      "size": 9365,
+      "regular_file": true,
+      "sha256": "d6d74997dc5b483db63d8e39cafa1afeec0f366824e75107e109123f111e866b",
+      "matches_checked_source": true
+    },
+    {
+      "name": "._actions.json",
+      "size": 163,
+      "regular_file": true,
+      "sha256": "b6688ae5c2aa8ac24d53c2274f3017211c7c20b1f17265f1ea64d5885094b44f",
+      "matches_checked_source": false
+    },
+    {
+      "name": "actions.json",
+      "size": 5099830,
+      "regular_file": true,
+      "sha256": "17d503f2fd20d59f9c0f14024d1e74a8add8bb9b5561d4d908b45deecb5495ef",
+      "matches_checked_source": true
+    },
+    {
+      "name": "._LICENSE.txt",
+      "size": 163,
+      "regular_file": true,
+      "sha256": "b6688ae5c2aa8ac24d53c2274f3017211c7c20b1f17265f1ea64d5885094b44f",
+      "matches_checked_source": false
+    },
+    {
+      "name": "LICENSE.txt",
+      "size": 11358,
+      "regular_file": true,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "matches_checked_source": true
+    }
+  ]
+}

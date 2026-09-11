@@ -5,7 +5,19 @@ import json
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from benchmark import episode, provenance, snapshot
+from benchmark import episode, provenance, snapshot, verify_bundles
+
+
+def verify_entrypoint(source):
+    """Check the official callable selector, including constants and bindings."""
+    from kaggle_environments.agent import get_last_callable
+
+    namespace = {}
+    exec(source, namespace)
+    loaded = get_last_callable(source)
+    intended = namespace.get("agent")
+    if intended is None or not hasattr(loaded, "__code__") or loaded.__code__ != intended.__code__:
+        raise ValueError("Official loader selects a different candidate policy")
 
 
 def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=None):
@@ -21,6 +33,7 @@ def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=N
     }
     tasks = []
     for name, source in candidates.items():
+        verify_entrypoint(source)
         content = source.encode("utf-8")
         digest = hashlib.sha256(content).hexdigest()
         path = Path("data/interim/strategy-screen") / digest / "main.py"
@@ -66,6 +79,7 @@ def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=N
         assert (
             hashlib.sha256(Path(opponent).read_bytes()).hexdigest() == manifest["hashes"][opponent]
         )
+    verify_bundles(manifest)
     manifest["complete"] = True
     output.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return manifest

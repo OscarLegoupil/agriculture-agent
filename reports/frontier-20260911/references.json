@@ -1,0 +1,126 @@
+{
+  "reviewed_date": "2026-09-11",
+  "references": [
+    {
+      "name": "mooman",
+      "repository": "mooman0222/Kaggriculture-opencode",
+      "revision": "b7a0aad0b6047d61e64885966cdb76abf2d22021",
+      "files": [
+        {
+          "relative_path": "main.py",
+          "url": "https://raw.githubusercontent.com/mooman0222/Kaggriculture-opencode/b7a0aad0b6047d61e64885966cdb76abf2d22021/agents/sr0909_live/main.py",
+          "sha256": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded"
+        },
+        {
+          "relative_path": "router.py",
+          "url": "https://raw.githubusercontent.com/mooman0222/Kaggriculture-opencode/b7a0aad0b6047d61e64885966cdb76abf2d22021/agents/sr0909_live/router.py",
+          "sha256": "d6d74997dc5b483db63d8e39cafa1afeec0f366824e75107e109123f111e866b"
+        },
+        {
+          "relative_path": "actions.json",
+          "url": "https://raw.githubusercontent.com/mooman0222/Kaggriculture-opencode/b7a0aad0b6047d61e64885966cdb76abf2d22021/agents/sr0909_live/actions.json",
+          "sha256": "17d503f2fd20d59f9c0f14024d1e74a8add8bb9b5561d4d908b45deecb5495ef"
+        },
+        {
+          "relative_path": "LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/mooman0222/Kaggriculture-opencode/b7a0aad0b6047d61e64885966cdb76abf2d22021/agents/sr0909_live/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "conchocon",
+      "repository": "conchocon154/kaggriculture-agent",
+      "revision": "8f4addee7a8db49678b748ac1cfd79c2f0d39518",
+      "files": [
+        {
+          "relative_path": "main.py",
+          "url": "https://raw.githubusercontent.com/conchocon154/kaggriculture-agent/8f4addee7a8db49678b748ac1cfd79c2f0d39518/main.py",
+          "sha256": "a09e5e3a98ed12f054c84aea740c1274670468953210692c9754aa1c648fb520"
+        },
+        {
+          "relative_path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/conchocon154/kaggriculture-agent/8f4addee7a8db49678b748ac1cfd79c2f0d39518/LICENSE",
+          "sha256": "885cdbaf95a6d5d85d28a7decca0f976cd5829d36a98a6ce2c2ec4ab5b37ede8"
+        }
+      ]
+    },
+    {
+      "name": "phucthai",
+      "repository": "phucthaiv02/kaggriculture",
+      "revision": "ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1",
+      "files": [
+        {
+          "relative_path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "relative_path": "agents/__init__.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "relative_path": "agents/expansion_agent.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/expansion_agent.py",
+          "sha256": "b67749867cc3441e7732108e0469c9eaf08965e6233a995406a441cb6ab34dcf"
+        },
+        {
+          "relative_path": "agents/farm_tasks.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/farm_tasks.py",
+          "sha256": "172108b3c11933f9bf0fbe28a85397df19e8f8577f48a33b65fe61bbd95478bb"
+        },
+        {
+          "relative_path": "agents/forecast.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/forecast.py",
+          "sha256": "865ad93c3664fc18560af11f77b6ea43fb30d3ca910bdcad5fbffdc9e28a7e12"
+        },
+        {
+          "relative_path": "agents/horizon.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/horizon.py",
+          "sha256": "37abed46963ac537ec6d6e0dab405f13369e58dd8e20bad763159ffa802766a0"
+        },
+        {
+          "relative_path": "agents/intraday.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/intraday.py",
+          "sha256": "d74763ce1ce2bdf08bd31a4f4522855dc2f38a48f7fdca84c5ff703e3f045511"
+        },
+        {
+          "relative_path": "agents/labor.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/labor.py",
+          "sha256": "d210237ebb424deaefe69233e48626b91921d1d9ed3ab8f39fdc7ae22269439a"
+        },
+        {
+          "relative_path": "agents/opening_book.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/opening_book.py",
+          "sha256": "328074d91d48b4aa3427d6b50a25f5712d799b973bf9fc1c130052f3c5c07267"
+        },
+        {
+          "relative_path": "agents/planner.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/planner.py",
+          "sha256": "950a88e9f520764b93e1ab85e327cb38b171903c17bc9104173c02cf3cab1b8a"
+        },
+        {
+          "relative_path": "agents/scheduler.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/scheduler.py",
+          "sha256": "6fe488a2202d0f26352f555a2c66c81a9c973b1d789864af87ccacfba200a966"
+        },
+        {
+          "relative_path": "agents/schedules.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/schedules.py",
+          "sha256": "09e7241e45a874dec6d7beb1e552bdb10bd02b37966fcec50ba32f46e132aff8"
+        },
+        {
+          "relative_path": "agents/selling.py",
+          "url": "https://raw.githubusercontent.com/phucthaiv02/kaggriculture/ee6b942cb9e8b4d4efb2a49d151cdd6c03184bb1/agents/selling.py",
+          "sha256": "2ffbcfef2e5d5e27cccd83200ec365914142948745dd5132605962aa2b2d5fec"
+        },
+        {
+          "relative_path": "main.py",
+          "local_source": "benchmarks/adapters/phucthai.py",
+          "sha256": "aeeeef589a79a5cd59996056ec016f847bcc59feca0d02f9e294e360caa3ad3f"
+        }
+      ]
+    }
+  ]
+}

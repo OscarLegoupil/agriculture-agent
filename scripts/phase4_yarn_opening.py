@@ -19,14 +19,14 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''    if day < 8:
+    old = """    if day < 8:
         desired = dict(COW=2, SHEEP=2, GOOSE=0)
-    purchase = None'''
-    new = '''    if day < 8:
+    purchase = None"""
+    new = """    if day < 8:
         desired = dict(COW=2, SHEEP=2, GOOSE=0)
         if day >= 3 and "YARN_STORE" in obs["town"]["unlocked_shops"]:
             desired = dict(COW=4, SHEEP=8, GOOSE=0)
-    purchase = None'''
+    purchase = None"""
     assert source.count(old) == 1
     source = source.replace(old, new)
     compile(source, "yarn_opening", "exec")

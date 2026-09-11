@@ -1,0 +1,38 @@
+{
+  "source": "data\\interim\\race-build\\main.py",
+  "artifact": "data\\interim\\strategy-screen\\13f029db938d83caf2c5fdde2341e848ac139b957f343c3a53e683e8115815c2\\main.py",
+  "sha256": "13f029db938d83caf2c5fdde2341e848ac139b957f343c3a53e683e8115815c2",
+  "trajectory_actions_compared": 2876,
+  "matches": [
+    {
+      "seed": 23,
+      "seat": 0,
+      "cash": 122212.0
+    },
+    {
+      "seed": 23,
+      "seat": 1,
+      "cash": 122212.0
+    },
+    {
+      "seed": 31,
+      "seat": 0,
+      "cash": 164308.0
+    },
+    {
+      "seed": 31,
+      "seat": 1,
+      "cash": 118509.0
+    }
+  ],
+  "isolated_actions_compared": 60,
+  "fresh_processes": 2,
+  "peak_python_bytes": 3866580,
+  "peak_rss_bytes": 23949312,
+  "peak_rss_measure": [
+    "Windows PeakWorkingSetSize"
+  ],
+  "resource_peak_rss_bytes": null,
+  "memory_measure": "isolated executable-image OS RSS high-water estimate where available; historical resource peak retained separately; tracemalloc Python allocation peak",
+  "memory_limitations": "RSS includes interpreter, observations, collected actions and tracing overhead. Linux proc accounting is approximate. A historical pre-exec resource peak is not the current policy's memory footprint."
+}

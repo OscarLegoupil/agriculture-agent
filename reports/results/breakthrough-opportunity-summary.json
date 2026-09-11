@@ -1,0 +1,2561 @@
+{
+  "complete": true,
+  "scope": "Development comparison; intervals do not adjust for candidate selection or opponent coverage",
+  "inputs": [
+    {
+      "path": "reports/results/breakthrough-opening-mooman.json.gz",
+      "sha256_file": "99ce218977a993f802c0e94d3523b9fc9465bc59ef1ca0c7367f5e201ddb506f",
+      "revision": "fcacde604148b4a9aa1b2a8f166cd48e801ca81a"
+    },
+    {
+      "path": "reports/results/breakthrough-opportunity-mooman.json.gz",
+      "sha256_file": "537c482d79d49617e464911ede5bfa781107ce158129ec41591fb3605b50871f",
+      "revision": "be3bb32fbd3571f17cb8a674ade9217ac7c16df9"
+    }
+  ],
+  "champion": {
+    "name": "capacity_budget",
+    "sha256": "fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba",
+    "snapshot": "reports\\sources\\fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba.py.gz"
+  },
+  "configuration": {
+    "actTimeout": 1,
+    "boardSize": 10,
+    "episodeSteps": 720,
+    "farmHandCostMult": 1,
+    "marketParams": {},
+    "maxMarketOrdersPerTurn": 10,
+    "runTimeout": 1200,
+    "seed": null,
+    "shedCapacity": 100,
+    "startingMoney": 3000,
+    "townCenterSellInterval": 24,
+    "townShopSellInterval": 4,
+    "townShopUnlockInterval": 3,
+    "turnsPerDay": 24,
+    "weedSpawnChance": 0.005
+  },
+  "provenance": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    }
+  },
+  "opponent_hashes": {
+    "data/raw/reference-mooman/main.py": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded"
+  },
+  "weights": {
+    "data/raw/reference-mooman/main.py": 1.0
+  },
+  "uncertainty": "10000 whole-seed bootstrap draws, RNG20260910; seats, opponents and policies retained together; absolute all-win/all-loss scores use conservative bounded-mean endpoint intervals",
+  "measurement_notes": [
+    "Runtime distributions summarize per-episode action maxima/p99 values, not raw action timings.",
+    "Daily worker peaks require retained replays; unavailable worker observations are null, never inferred from wages.",
+    "Production excludes movement, pickup, DROP and selective PLACE delivery; exact operation means are retained.",
+    "Terminal escape classification does not establish optimal abandonment.",
+    "Input source hashes are recorded in original manifests; unfrozen changing harness files are not re-certified here."
+  ],
+  "policies": [
+    {
+      "identity": {
+        "name": "capacity_budget",
+        "sha256": "fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba",
+        "snapshot": "reports\\sources\\fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.375,
+            "score_delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "mean_paired_gap_change": 0.0,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 1,
+            "max_action_seconds": 0.180245,
+            "failed_work": 0,
+            "wins": 6,
+            "draws": 0,
+            "score_ci95": [
+              0.125,
+              0.75
+            ],
+            "mean_paired_gap_change_ci95": [
+              0.0,
+              0.0
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 483.75,
+                "expense:COW": 2800.0,
+                "expense:FERTILIZER": 94.6875,
+                "expense:GOOSE": 637.5,
+                "expense:MELON": 1170.0,
+                "expense:SHEEP": 4437.5,
+                "expense:STRAWBERRY": 3400.0,
+                "expense:TOMATO": 396.875,
+                "expense:WHEAT": 7252.6875,
+                "expense:labor": 7846.75,
+                "expense:land": 3000.0,
+                "hires": 307.3125,
+                "income:CARROT": 3538.0,
+                "income:EGG": 3449.75,
+                "income:FERTILIZER": 11265.3125,
+                "income:MELON": 14031.5,
+                "income:MILK": 8866.8125,
+                "income:STRAWBERRY": 23136.3125,
+                "income:TOMATO": 21329.375,
+                "income:WHEAT": 7763.4375,
+                "income:WOOL": 35317.125,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 7.0,
+                "units:BUY_ANIMAL:GOOSE": 2.125,
+                "units:BUY_ANIMAL:SHEEP": 8.875,
+                "units:BUY_PRODUCT:FERTILIZER": 9.0,
+                "units:BUY_PRODUCT:WHEAT": 156.8125,
+                "units:BUY_SEED:CARROT": 24.1875,
+                "units:BUY_SEED:MELON": 14.625,
+                "units:BUY_SEED:STRAWBERRY": 34.0,
+                "units:BUY_SEED:TOMATO": 7.9375,
+                "units:BUY_SEED:WHEAT": 101.75,
+                "units:SELL:CARROT": 59.625,
+                "units:SELL:EGG": 66.375,
+                "units:SELL:FERTILIZER": 262.4375,
+                "units:SELL:MELON": 86.25,
+                "units:SELL:MILK": 122.5,
+                "units:SELL:STRAWBERRY": 246.6875,
+                "units:SELL:TOMATO": 59.625,
+                "units:SELL:WHEAT": 187.375,
+                "units:SELL:WOOL": 194.0625
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 1128.6875,
+                "success:BUILD_COOP": 2.375,
+                "success:BUILD_PASTURE": 17.3125,
+                "success:CARE": 292.5,
+                "success:COLLECT_FERTILIZER": 328.0,
+                "success:DIG": 30.0,
+                "success:DROP": 77.375,
+                "success:EAST": 856.75,
+                "success:FEED": 301.5625,
+                "success:FERTILIZE": 73.4375,
+                "success:HARVEST": 419.625,
+                "success:NORTH": 1026.0625,
+                "success:PICKUP": 200.25,
+                "success:PLACE": 18.0,
+                "success:PLANT": 177.25,
+                "success:SOUTH": 676.875,
+                "success:WATER": 878.125,
+                "success:WEST": 1050.3125
+              },
+              "moves_mean": 3610.0,
+              "productive_actions_mean": 2520.1875,
+              "losses_total": {
+                "animal_escapes": 92,
+                "terminal_escapes": 55,
+                "overflow_units": 72
+              },
+              "stderr_turns": 1,
+              "stderr_messages": {
+                "daily_route_budget_fallback": 1
+              },
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.08140349999999999,
+                "p95": 0.14305625,
+                "p99": 0.17280724999999997,
+                "max": 0.180245
+              },
+              "runtime_max_seconds": 0.180245,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.0510315,
+                "p95": 0.07469250000000001,
+                "p99": 0.0750321,
+                "max": 0.075117
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1182.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 12.5,
+                    "WEED": 0.125,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1338.375,
+                  "land_mean": 2.0,
+                  "crops_mean": 33.5,
+                  "animals_mean": 4.0,
+                  "shed_mean": 7.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 5.375,
+                    "GOOSE": 0.75,
+                    "MELON": 2.0,
+                    "PASTURE": 0.25,
+                    "SHEEP": 5.375,
+                    "STRAWBERRY": 22.25,
+                    "WHEAT": 6.375
+                  },
+                  "cash_mean": 11901.625,
+                  "land_mean": 2.375,
+                  "crops_mean": 30.625,
+                  "animals_mean": 11.5,
+                  "shed_mean": 18.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 7.0,
+                    "GOOSE": 2.125,
+                    "SHEEP": 8.875,
+                    "STRAWBERRY": 34.0,
+                    "WHEAT": 23.0
+                  },
+                  "cash_mean": 13637.1875,
+                  "land_mean": 3.0,
+                  "crops_mean": 57.0,
+                  "animals_mean": 18.0,
+                  "shed_mean": 22.75,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 0.375,
+                    "COW": 6.5,
+                    "GOOSE": 2.125,
+                    "MELON": 0.625,
+                    "PASTURE": 0.625,
+                    "SHEEP": 8.6875,
+                    "STRAWBERRY": 34.0,
+                    "TOMATO": 7.5625,
+                    "WHEAT": 13.625
+                  },
+                  "cash_mean": 36962.8125,
+                  "land_mean": 3.0,
+                  "crops_mean": 56.1875,
+                  "animals_mean": 17.3125,
+                  "shed_mean": 63.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 9.3125,
+                    "COW": 2.1875,
+                    "GOOSE": 2.125,
+                    "MELON": 0.375,
+                    "PASTURE": 4.5,
+                    "SHEEP": 4.5,
+                    "STRAWBERRY": 6.125,
+                    "TOMATO": 4.5625,
+                    "WEED": 8.8125,
+                    "WHEAT": 14.375
+                  },
+                  "cash_mean": 85701.5625,
+                  "land_mean": 3.0,
+                  "crops_mean": 34.75,
+                  "animals_mean": 8.8125,
+                  "shed_mean": 61.1875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.375,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "challenger_ci95": [
+            0.125,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_arrival",
+        "sha256": "ece18981bd6eecd22c4bce4d6e0f20b0040b5a45b46cb87a1fc3912c326b450c",
+        "snapshot": "reports\\sources\\ece18981bd6eecd22c4bce4d6e0f20b0040b5a45b46cb87a1fc3912c326b450c.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.0,
+            "score_delta": -0.375,
+            "delta_ci95": [
+              -0.75,
+              -0.125
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -18324.625,
+              "median": -20835.0,
+              "p10": -29641.5
+            },
+            "mean_paired_gap_change": -17574.5,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 2,
+            "max_action_seconds": 0.159805,
+            "failed_work": 0,
+            "wins": 0,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.36941664755281933
+            ],
+            "mean_paired_gap_change_ci95": [
+              -40168.9375,
+              -2932.9953125
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 638.75,
+                "expense:COW": 2100.0,
+                "expense:FERTILIZER": 351.0625,
+                "expense:GOOSE": 1050.0,
+                "expense:MELON": 1175.0,
+                "expense:SHEEP": 4625.0,
+                "expense:STRAWBERRY": 3412.5,
+                "expense:TOMATO": 296.875,
+                "expense:WHEAT": 5763.375,
+                "expense:labor": 7934.1875,
+                "expense:land": 3000.0,
+                "hires": 307.625,
+                "income:CARROT": 5782.8125,
+                "income:EGG": 5086.375,
+                "income:FERTILIZER": 11209.9375,
+                "income:MELON": 14047.5625,
+                "income:MILK": 13257.3125,
+                "income:STRAWBERRY": 19350.75,
+                "income:TOMATO": 7135.5625,
+                "income:WHEAT": 6673.125,
+                "income:WOOL": 27381.5,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 5.25,
+                "units:BUY_ANIMAL:GOOSE": 3.5,
+                "units:BUY_ANIMAL:SHEEP": 9.25,
+                "units:BUY_PRODUCT:FERTILIZER": 23.1875,
+                "units:BUY_PRODUCT:WHEAT": 126.25,
+                "units:BUY_SEED:CARROT": 31.9375,
+                "units:BUY_SEED:MELON": 14.6875,
+                "units:BUY_SEED:STRAWBERRY": 34.125,
+                "units:BUY_SEED:TOMATO": 5.9375,
+                "units:BUY_SEED:WHEAT": 101.375,
+                "units:SELL:CARROT": 80.375,
+                "units:SELL:EGG": 101.3125,
+                "units:SELL:FERTILIZER": 268.125,
+                "units:SELL:MELON": 86.25,
+                "units:SELL:MILK": 103.0625,
+                "units:SELL:STRAWBERRY": 217.25,
+                "units:SELL:TOMATO": 40.8125,
+                "units:SELL:WHEAT": 163.75,
+                "units:SELL:WOOL": 165.6875
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 942.0625,
+                "success:BUILD_COOP": 3.875,
+                "success:BUILD_PASTURE": 15.25,
+                "success:CARE": 272.8125,
+                "success:COLLECT_FERTILIZER": 300.75,
+                "success:DIG": 32.5,
+                "success:DROP": 80.875,
+                "success:EAST": 936.6875,
+                "success:FEED": 279.5625,
+                "success:FERTILIZE": 55.625,
+                "success:HARVEST": 417.3125,
+                "success:NORTH": 1089.9375,
+                "success:PICKUP": 227.4375,
+                "success:PLACE": 18.0,
+                "success:PLANT": 181.6875,
+                "success:SOUTH": 720.6875,
+                "success:WATER": 865.625,
+                "success:WEST": 1119.3125
+              },
+              "moves_mean": 3866.625,
+              "productive_actions_mean": 2425.0,
+              "losses_total": {
+                "water_deaths": 2,
+                "animal_escapes": 100,
+                "overflow_units": 23,
+                "terminal_escapes": 40
+              },
+              "stderr_turns": 2,
+              "stderr_messages": {
+                "daily_route_budget_fallback": 2
+              },
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.092085,
+                "p95": 0.15622675,
+                "p99": 0.15908935,
+                "max": 0.159805
+              },
+              "runtime_max_seconds": 0.159805,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.051031,
+                "p95": 0.053811,
+                "p99": 0.0543414,
+                "max": 0.054474
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 207.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 14.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 812.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 4.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 16.25,
+                    "WEED": 0.125,
+                    "WHEAT": 5.875
+                  },
+                  "cash_mean": 1178.5,
+                  "land_mean": 2.0,
+                  "crops_mean": 36.125,
+                  "animals_mean": 4.0,
+                  "shed_mean": 7.375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COOP": 0.125,
+                    "COW": 4.875,
+                    "GOOSE": 0.5,
+                    "MELON": 2.0,
+                    "PASTURE": 0.125,
+                    "SHEEP": 5.375,
+                    "STRAWBERRY": 23.625,
+                    "WEED": 0.125,
+                    "WHEAT": 5.125
+                  },
+                  "cash_mean": 11900.5,
+                  "land_mean": 2.375,
+                  "crops_mean": 30.75,
+                  "animals_mean": 10.75,
+                  "shed_mean": 19.5,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 5.25,
+                    "GOOSE": 3.5,
+                    "PASTURE": 0.0625,
+                    "SHEEP": 9.1875,
+                    "STRAWBERRY": 34.0,
+                    "WEED": 0.125,
+                    "WHEAT": 21.5
+                  },
+                  "cash_mean": 12281.4375,
+                  "land_mean": 3.0,
+                  "crops_mean": 55.5,
+                  "animals_mean": 17.9375,
+                  "shed_mean": 29.9375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 1.75,
+                    "COW": 3.75,
+                    "GOOSE": 3.5,
+                    "MELON": 0.625,
+                    "PASTURE": 2.4375,
+                    "SHEEP": 7.9375,
+                    "STRAWBERRY": 34.0,
+                    "TOMATO": 5.5,
+                    "WEED": 0.25,
+                    "WHEAT": 12.1875
+                  },
+                  "cash_mean": 35293.9375,
+                  "land_mean": 3.0,
+                  "crops_mean": 54.0625,
+                  "animals_mean": 15.1875,
+                  "shed_mean": 57.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 10.1875,
+                    "COW": 2.5,
+                    "GOOSE": 3.5,
+                    "MELON": 0.3125,
+                    "PASTURE": 2.8125,
+                    "SHEEP": 3.25,
+                    "STRAWBERRY": 3.25,
+                    "TOMATO": 3.375,
+                    "WEED": 9.5,
+                    "WHEAT": 13.3125
+                  },
+                  "cash_mean": 73114.6875,
+                  "land_mean": 3.0,
+                  "crops_mean": 30.4375,
+                  "animals_mean": 9.25,
+                  "shed_mean": 44.0625,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.0,
+          "score_delta": -0.375,
+          "delta_ci95": [
+            -0.75,
+            -0.125
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.36941664755281933
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_bridge",
+        "sha256": "c505868b9ed24f33d606b0448c3a832001e85f42abf20c37cae4c2a6922e9bee",
+        "snapshot": "reports\\sources\\c505868b9ed24f33d606b0448c3a832001e85f42abf20c37cae4c2a6922e9bee.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.125,
+            "score_delta": -0.25,
+            "delta_ci95": [
+              -0.625,
+              0.25
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -12464.5625,
+              "median": -11313.0,
+              "p10": -24238.0
+            },
+            "mean_paired_gap_change": -11714.4375,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 4,
+            "max_action_seconds": 0.218677,
+            "failed_work": 0,
+            "wins": 2,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.375
+            ],
+            "mean_paired_gap_change_ci95": [
+              -40548.7625,
+              8734.75
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 827.5,
+                "expense:COW": 2750.0,
+                "expense:FERTILIZER": 140.875,
+                "expense:GOOSE": 1087.5,
+                "expense:MELON": 1220.0,
+                "expense:SHEEP": 3750.0,
+                "expense:STRAWBERRY": 3425.0,
+                "expense:TOMATO": 100.0,
+                "expense:WHEAT": 5398.375,
+                "expense:labor": 7751.9375,
+                "expense:land": 3000.0,
+                "hires": 305.6875,
+                "income:CARROT": 7118.625,
+                "income:EGG": 5690.125,
+                "income:FERTILIZER": 11128.4375,
+                "income:MELON": 14070.0,
+                "income:MILK": 9864.375,
+                "income:STRAWBERRY": 24186.125,
+                "income:TOMATO": 1427.5625,
+                "income:WHEAT": 8132.25,
+                "income:WOOL": 24067.5625,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 6.875,
+                "units:BUY_ANIMAL:GOOSE": 3.625,
+                "units:BUY_ANIMAL:SHEEP": 7.5,
+                "units:BUY_PRODUCT:FERTILIZER": 13.125,
+                "units:BUY_PRODUCT:WHEAT": 115.75,
+                "units:BUY_SEED:CARROT": 41.375,
+                "units:BUY_SEED:MELON": 15.25,
+                "units:BUY_SEED:STRAWBERRY": 34.25,
+                "units:BUY_SEED:TOMATO": 2.0,
+                "units:BUY_SEED:WHEAT": 109.4375,
+                "units:SELL:CARROT": 105.8125,
+                "units:SELL:EGG": 110.5,
+                "units:SELL:FERTILIZER": 263.3125,
+                "units:SELL:MELON": 86.375,
+                "units:SELL:MILK": 120.0,
+                "units:SELL:STRAWBERRY": 235.125,
+                "units:SELL:TOMATO": 14.75,
+                "units:SELL:WHEAT": 199.1875,
+                "units:SELL:WOOL": 137.25
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 1107.0625,
+                "success:BUILD_COOP": 3.75,
+                "success:BUILD_PASTURE": 16.375,
+                "success:CARE": 275.0,
+                "success:COLLECT_FERTILIZER": 306.0625,
+                "success:DIG": 33.8125,
+                "success:DROP": 72.125,
+                "success:EAST": 876.1875,
+                "success:FEED": 280.75,
+                "success:FERTILIZE": 55.375,
+                "success:HARVEST": 427.5,
+                "success:NORTH": 1017.0625,
+                "success:PICKUP": 188.25,
+                "success:PLACE": 18.0,
+                "success:PLANT": 196.9375,
+                "success:SOUTH": 681.25,
+                "success:WATER": 913.4375,
+                "success:WEST": 1033.3125
+              },
+              "moves_mean": 3607.8125,
+              "productive_actions_mean": 2509.0,
+              "losses_total": {
+                "overflow_units": 90,
+                "animal_escapes": 116,
+                "terminal_escapes": 26,
+                "water_deaths": 4
+              },
+              "stderr_turns": 4,
+              "stderr_messages": {
+                "daily_route_budget_fallback": 4
+              },
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.098924,
+                "p95": 0.20878375,
+                "p99": 0.21669835,
+                "max": 0.218677
+              },
+              "runtime_max_seconds": 0.218677,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.0598195,
+                "p95": 0.0679675,
+                "p99": 0.0695407,
+                "max": 0.069934
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1182.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 12.75,
+                    "WEED": 0.125,
+                    "WHEAT": 5.5
+                  },
+                  "cash_mean": 422.125,
+                  "land_mean": 2.0,
+                  "crops_mean": 32.25,
+                  "animals_mean": 4.0,
+                  "shed_mean": 18.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COOP": 0.25,
+                    "COW": 4.375,
+                    "GOOSE": 1.125,
+                    "MELON": 2.0,
+                    "PASTURE": 0.875,
+                    "SHEEP": 5.25,
+                    "STRAWBERRY": 24.125,
+                    "WEED": 0.25,
+                    "WHEAT": 5.5
+                  },
+                  "cash_mean": 11708.125,
+                  "land_mean": 2.5,
+                  "crops_mean": 31.625,
+                  "animals_mean": 10.75,
+                  "shed_mean": 19.125,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 6.875,
+                    "GOOSE": 3.625,
+                    "SHEEP": 7.5,
+                    "STRAWBERRY": 34.0,
+                    "WHEAT": 21.875
+                  },
+                  "cash_mean": 12297.625,
+                  "land_mean": 3.0,
+                  "crops_mean": 55.875,
+                  "animals_mean": 18.0,
+                  "shed_mean": 26.125,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 1.5,
+                    "COW": 6.75,
+                    "GOOSE": 3.625,
+                    "MELON": 1.125,
+                    "PASTURE": 0.875,
+                    "SHEEP": 6.375,
+                    "STRAWBERRY": 34.0,
+                    "TOMATO": 1.875,
+                    "WHEAT": 17.25
+                  },
+                  "cash_mean": 34734.0,
+                  "land_mean": 3.0,
+                  "crops_mean": 55.75,
+                  "animals_mean": 16.75,
+                  "shed_mean": 79.5,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 14.375,
+                    "COW": 3.25,
+                    "GOOSE": 3.625,
+                    "MELON": 0.125,
+                    "PASTURE": 2.0625,
+                    "SHEEP": 2.25,
+                    "STRAWBERRY": 3.25,
+                    "TOMATO": 1.375,
+                    "WEED": 7.1875,
+                    "WHEAT": 16.1875
+                  },
+                  "cash_mean": 70599.75,
+                  "land_mean": 3.0,
+                  "crops_mean": 35.3125,
+                  "animals_mean": 9.125,
+                  "shed_mean": 49.625,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.125,
+          "score_delta": -0.25,
+          "delta_ci95": [
+            -0.625,
+            0.25
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_bridge_arrival",
+        "sha256": "a0ab912653b9865b46f5fadc491828b7017fb288d8c857f692d9f4e8445f6859",
+        "snapshot": "reports\\sources\\a0ab912653b9865b46f5fadc491828b7017fb288d8c857f692d9f4e8445f6859.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.125,
+            "score_delta": -0.25,
+            "delta_ci95": [
+              -0.625,
+              0.0
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -15273.625,
+              "median": -18371.0,
+              "p10": -25939.0
+            },
+            "mean_paired_gap_change": -14523.5,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 0,
+            "max_action_seconds": 0.142882,
+            "failed_work": 0,
+            "wins": 2,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.375
+            ],
+            "mean_paired_gap_change_ci95": [
+              -40318.5,
+              2849.6875
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 828.75,
+                "expense:COW": 3050.0,
+                "expense:FERTILIZER": 128.6875,
+                "expense:GOOSE": 862.5,
+                "expense:MELON": 1120.0,
+                "expense:SHEEP": 3750.0,
+                "expense:STRAWBERRY": 3400.0,
+                "expense:TOMATO": 315.625,
+                "expense:WHEAT": 5935.375,
+                "expense:labor": 7802.1875,
+                "expense:land": 3000.0,
+                "hires": 305.0625,
+                "income:CARROT": 8121.375,
+                "income:EGG": 3909.125,
+                "income:FERTILIZER": 10838.125,
+                "income:MELON": 13827.625,
+                "income:MILK": 15360.8125,
+                "income:STRAWBERRY": 28714.0,
+                "income:TOMATO": 5372.375,
+                "income:WHEAT": 7331.875,
+                "income:WOOL": 19171.875,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 7.625,
+                "units:BUY_ANIMAL:GOOSE": 2.875,
+                "units:BUY_ANIMAL:SHEEP": 7.5,
+                "units:BUY_PRODUCT:FERTILIZER": 6.8125,
+                "units:BUY_PRODUCT:WHEAT": 132.5,
+                "units:BUY_SEED:CARROT": 41.4375,
+                "units:BUY_SEED:MELON": 14.0,
+                "units:BUY_SEED:STRAWBERRY": 34.0,
+                "units:BUY_SEED:TOMATO": 6.3125,
+                "units:BUY_SEED:WHEAT": 94.375,
+                "units:SELL:CARROT": 107.125,
+                "units:SELL:EGG": 79.625,
+                "units:SELL:FERTILIZER": 238.6875,
+                "units:SELL:MELON": 84.0,
+                "units:SELL:MILK": 139.0625,
+                "units:SELL:STRAWBERRY": 230.0625,
+                "units:SELL:TOMATO": 44.5625,
+                "units:SELL:WHEAT": 178.25,
+                "units:SELL:WOOL": 127.875
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 917.3125,
+                "success:BUILD_COOP": 3.625,
+                "success:BUILD_PASTURE": 15.75,
+                "success:CARE": 262.25,
+                "success:COLLECT_FERTILIZER": 292.4375,
+                "success:DIG": 33.75,
+                "success:DROP": 78.625,
+                "success:EAST": 917.1875,
+                "success:FEED": 266.125,
+                "success:FERTILIZE": 60.5625,
+                "success:HARVEST": 415.0625,
+                "success:NORTH": 1071.0,
+                "success:PICKUP": 228.5,
+                "success:PLACE": 18.0,
+                "success:PLANT": 184.1875,
+                "success:SOUTH": 733.4375,
+                "success:WATER": 884.4375,
+                "success:WEST": 1118.1875
+              },
+              "moves_mean": 3839.8125,
+              "productive_actions_mean": 2418.1875,
+              "losses_total": {
+                "animal_escapes": 129,
+                "terminal_escapes": 22
+              },
+              "stderr_turns": 0,
+              "stderr_messages": {},
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.074572,
+                "p95": 0.11987275,
+                "p99": 0.13828015,
+                "max": 0.142882
+              },
+              "runtime_max_seconds": 0.142882,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.029875,
+                "p95": 0.03466875,
+                "p99": 0.03686895,
+                "max": 0.037419
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 207.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 14.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 812.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 4.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 15.625,
+                    "WEED": 0.125,
+                    "WHEAT": 5.0
+                  },
+                  "cash_mean": 477.875,
+                  "land_mean": 2.0,
+                  "crops_mean": 34.625,
+                  "animals_mean": 4.0,
+                  "shed_mean": 17.625,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 4.75,
+                    "GOOSE": 0.625,
+                    "MELON": 2.0,
+                    "PASTURE": 0.875,
+                    "SHEEP": 4.875,
+                    "STRAWBERRY": 23.75,
+                    "WHEAT": 5.125
+                  },
+                  "cash_mean": 12766.375,
+                  "land_mean": 2.25,
+                  "crops_mean": 30.875,
+                  "animals_mean": 10.25,
+                  "shed_mean": 18.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 7.625,
+                    "GOOSE": 2.875,
+                    "SHEEP": 7.5,
+                    "STRAWBERRY": 34.0,
+                    "WHEAT": 21.375
+                  },
+                  "cash_mean": 12563.3125,
+                  "land_mean": 3.0,
+                  "crops_mean": 55.375,
+                  "animals_mean": 18.0,
+                  "shed_mean": 27.3125,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 2.375,
+                    "COW": 7.125,
+                    "GOOSE": 2.875,
+                    "PASTURE": 0.875,
+                    "SHEEP": 5.875,
+                    "STRAWBERRY": 34.0,
+                    "TOMATO": 5.875,
+                    "WEED": 0.1875,
+                    "WHEAT": 13.125
+                  },
+                  "cash_mean": 34205.125,
+                  "land_mean": 3.0,
+                  "crops_mean": 55.375,
+                  "animals_mean": 15.875,
+                  "shed_mean": 66.5,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 11.5625,
+                    "COW": 3.75,
+                    "GOOSE": 2.875,
+                    "PASTURE": 2.5625,
+                    "SHEEP": 1.9375,
+                    "STRAWBERRY": 3.375,
+                    "TOMATO": 2.75,
+                    "WEED": 9.8125,
+                    "WHEAT": 13.1875
+                  },
+                  "cash_mean": 76733.25,
+                  "land_mean": 3.0,
+                  "crops_mean": 30.875,
+                  "animals_mean": 8.5625,
+                  "shed_mean": 52.375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.125,
+          "score_delta": -0.25,
+          "delta_ci95": [
+            -0.625,
+            0.0
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.375
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_land",
+        "sha256": "2cb7fb6a1a2ecca9e4fc96407ed900aa7ba9b1e0fb01f923e1985254bdba52cc",
+        "snapshot": "reports\\sources\\2cb7fb6a1a2ecca9e4fc96407ed900aa7ba9b1e0fb01f923e1985254bdba52cc.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.25,
+            "score_delta": -0.125,
+            "delta_ci95": [
+              -0.375,
+              0.0
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -7796.375,
+              "median": -10176.5,
+              "p10": -21722.5
+            },
+            "mean_paired_gap_change": -7046.25,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 1,
+            "max_action_seconds": 0.154083,
+            "failed_work": 0,
+            "wins": 4,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.625
+            ],
+            "mean_paired_gap_change_ci95": [
+              -24330.4921875,
+              4420.210937499997
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 643.75,
+                "expense:COW": 2800.0,
+                "expense:FERTILIZER": 269.625,
+                "expense:GOOSE": 637.5,
+                "expense:MELON": 1340.0,
+                "expense:SHEEP": 4437.5,
+                "expense:STRAWBERRY": 3487.5,
+                "expense:TOMATO": 909.375,
+                "expense:WHEAT": 6451.625,
+                "expense:labor": 7875.0625,
+                "expense:land": 7000.0,
+                "hires": 307.6875,
+                "income:CARROT": 4099.9375,
+                "income:EGG": 3414.125,
+                "income:FERTILIZER": 11176.625,
+                "income:MELON": 14602.0,
+                "income:MILK": 9523.25,
+                "income:STRAWBERRY": 27870.9375,
+                "income:TOMATO": 20296.5625,
+                "income:WHEAT": 9080.875,
+                "income:WOOL": 34774.0,
+                "land_purchases": 3.0,
+                "units:BUY_ANIMAL:COW": 7.0,
+                "units:BUY_ANIMAL:GOOSE": 2.125,
+                "units:BUY_ANIMAL:SHEEP": 8.875,
+                "units:BUY_PRODUCT:FERTILIZER": 16.5625,
+                "units:BUY_PRODUCT:WHEAT": 137.3125,
+                "units:BUY_SEED:CARROT": 32.1875,
+                "units:BUY_SEED:MELON": 16.75,
+                "units:BUY_SEED:STRAWBERRY": 34.875,
+                "units:BUY_SEED:TOMATO": 18.1875,
+                "units:BUY_SEED:WHEAT": 114.5625,
+                "units:SELL:CARROT": 75.5625,
+                "units:SELL:EGG": 64.875,
+                "units:SELL:FERTILIZER": 243.4375,
+                "units:SELL:MELON": 96.25,
+                "units:SELL:MILK": 111.75,
+                "units:SELL:STRAWBERRY": 217.875,
+                "units:SELL:TOMATO": 121.5,
+                "units:SELL:WHEAT": 219.8125,
+                "units:SELL:WOOL": 184.4375
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 915.5,
+                "success:BUILD_COOP": 2.5,
+                "success:BUILD_PASTURE": 17.3125,
+                "success:CARE": 271.875,
+                "success:COLLECT_FERTILIZER": 297.875,
+                "success:DIG": 22.0,
+                "success:DROP": 71.9375,
+                "success:EAST": 921.5625,
+                "success:FEED": 281.8125,
+                "success:FERTILIZE": 69.875,
+                "success:HARVEST": 466.6875,
+                "success:NORTH": 971.0625,
+                "success:PICKUP": 197.125,
+                "success:PLACE": 18.0,
+                "success:PLANT": 207.8125,
+                "success:SOUTH": 800.125,
+                "success:WATER": 1011.1875,
+                "success:WEST": 1013.5
+              },
+              "moves_mean": 3706.25,
+              "productive_actions_mean": 2648.9375,
+              "losses_total": {
+                "animal_escapes": 92,
+                "terminal_escapes": 53,
+                "overflow_units": 110,
+                "water_deaths": 4
+              },
+              "stderr_turns": 1,
+              "stderr_messages": {
+                "daily_route_budget_fallback": 1
+              },
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.098041,
+                "p95": 0.14335275,
+                "p99": 0.15193695,
+                "max": 0.154083
+              },
+              "runtime_max_seconds": 0.154083,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.043284,
+                "p95": 0.0580535,
+                "p99": 0.0597971,
+                "max": 0.060233
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1182.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 12.5,
+                    "WEED": 0.125,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1338.375,
+                  "land_mean": 2.0,
+                  "crops_mean": 33.5,
+                  "animals_mean": 4.0,
+                  "shed_mean": 7.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 5.375,
+                    "GOOSE": 0.75,
+                    "MELON": 2.0,
+                    "PASTURE": 0.25,
+                    "SHEEP": 5.375,
+                    "STRAWBERRY": 22.25,
+                    "WHEAT": 6.375
+                  },
+                  "cash_mean": 11901.625,
+                  "land_mean": 2.375,
+                  "crops_mean": 30.625,
+                  "animals_mean": 11.5,
+                  "shed_mean": 18.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 7.0,
+                    "GOOSE": 2.125,
+                    "SHEEP": 8.875,
+                    "STRAWBERRY": 34.0,
+                    "WEED": 0.0625,
+                    "WHEAT": 36.125
+                  },
+                  "cash_mean": 9518.625,
+                  "land_mean": 4.0,
+                  "crops_mean": 70.125,
+                  "animals_mean": 18.0,
+                  "shed_mean": 24.1875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 3.875,
+                    "COW": 5.75,
+                    "GOOSE": 2.125,
+                    "MELON": 2.375,
+                    "PASTURE": 1.4375,
+                    "SHEEP": 8.625,
+                    "STRAWBERRY": 34.5,
+                    "TOMATO": 17.25,
+                    "WEED": 0.625,
+                    "WHEAT": 12.8125
+                  },
+                  "cash_mean": 31624.4375,
+                  "land_mean": 4.0,
+                  "crops_mean": 70.8125,
+                  "animals_mean": 16.5,
+                  "shed_mean": 62.0625,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 7.6875,
+                    "COW": 2.625,
+                    "GOOSE": 2.125,
+                    "MELON": 0.625,
+                    "PASTURE": 6.125,
+                    "SHEEP": 4.1875,
+                    "STRAWBERRY": 6.625,
+                    "TOMATO": 8.0625,
+                    "WEED": 23.3125,
+                    "WHEAT": 14.125
+                  },
+                  "cash_mean": 89800.1875,
+                  "land_mean": 4.0,
+                  "crops_mean": 37.125,
+                  "animals_mean": 8.9375,
+                  "shed_mean": 60.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.25,
+          "score_delta": -0.125,
+          "delta_ci95": [
+            -0.375,
+            0.0
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.625
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_no_feed_bonus",
+        "sha256": "7fb159182bdf32b97119b239730f208646070f99ee253a4388980d3da80dd263",
+        "snapshot": "reports\\sources\\7fb159182bdf32b97119b239730f208646070f99ee253a4388980d3da80dd263.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.25,
+            "score_delta": -0.125,
+            "delta_ci95": [
+              -0.375,
+              0.0
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": 1872.0,
+              "median": -11376.0,
+              "p10": -18064.0
+            },
+            "mean_paired_gap_change": 2622.125,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 0,
+            "max_action_seconds": 0.070078,
+            "failed_work": 0,
+            "wins": 4,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.625
+            ],
+            "mean_paired_gap_change_ci95": [
+              -225.625,
+              5598.375
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 707.5,
+                "expense:COW": 2800.0,
+                "expense:FERTILIZER": 118.625,
+                "expense:GOOSE": 637.5,
+                "expense:MELON": 1270.0,
+                "expense:SHEEP": 4437.5,
+                "expense:STRAWBERRY": 3412.5,
+                "expense:TOMATO": 646.875,
+                "expense:WHEAT": 8222.75,
+                "expense:labor": 7820.25,
+                "expense:land": 3000.0,
+                "hires": 307.0625,
+                "income:CARROT": 5083.25,
+                "income:EGG": 3487.875,
+                "income:FERTILIZER": 11313.4375,
+                "income:MELON": 14532.25,
+                "income:MILK": 8645.0,
+                "income:STRAWBERRY": 23724.125,
+                "income:TOMATO": 23825.4375,
+                "income:WHEAT": 5627.75,
+                "income:WOOL": 36381.9375,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 7.0,
+                "units:BUY_ANIMAL:GOOSE": 2.125,
+                "units:BUY_ANIMAL:SHEEP": 8.875,
+                "units:BUY_PRODUCT:FERTILIZER": 11.6875,
+                "units:BUY_PRODUCT:WHEAT": 184.125,
+                "units:BUY_SEED:CARROT": 35.375,
+                "units:BUY_SEED:MELON": 15.875,
+                "units:BUY_SEED:STRAWBERRY": 34.125,
+                "units:BUY_SEED:TOMATO": 12.9375,
+                "units:BUY_SEED:WHEAT": 80.4375,
+                "units:SELL:CARROT": 89.875,
+                "units:SELL:EGG": 66.5,
+                "units:SELL:FERTILIZER": 261.1875,
+                "units:SELL:MELON": 93.75,
+                "units:SELL:MILK": 120.5,
+                "units:SELL:STRAWBERRY": 246.3125,
+                "units:SELL:TOMATO": 92.75,
+                "units:SELL:WHEAT": 136.0625,
+                "units:SELL:WOOL": 196.6875
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 1119.25,
+                "success:BUILD_COOP": 2.375,
+                "success:BUILD_PASTURE": 17.3125,
+                "success:CARE": 294.5625,
+                "success:COLLECT_FERTILIZER": 330.125,
+                "success:DIG": 30.0625,
+                "success:DROP": 82.875,
+                "success:EAST": 853.4375,
+                "success:FEED": 301.9375,
+                "success:FERTILIZE": 80.375,
+                "success:HARVEST": 426.25,
+                "success:NORTH": 1015.25,
+                "success:PICKUP": 206.75,
+                "success:PLACE": 18.0,
+                "success:PLANT": 172.3125,
+                "success:SOUTH": 679.0,
+                "success:WATER": 873.375,
+                "success:WEST": 1040.6875
+              },
+              "moves_mean": 3588.375,
+              "productive_actions_mean": 2528.6875,
+              "losses_total": {
+                "animal_escapes": 96,
+                "overflow_units": 30,
+                "terminal_escapes": 54
+              },
+              "stderr_turns": 0,
+              "stderr_messages": {},
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.025793499999999997,
+                "p95": 0.06630325000000001,
+                "p99": 0.06932305,
+                "max": 0.070078
+              },
+              "runtime_max_seconds": 0.070078,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.0126695,
+                "p95": 0.015773000000000002,
+                "p99": 0.016708999999999998,
+                "max": 0.016943
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1182.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 12.5,
+                    "WEED": 0.125,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1338.375,
+                  "land_mean": 2.0,
+                  "crops_mean": 33.5,
+                  "animals_mean": 4.0,
+                  "shed_mean": 7.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 5.375,
+                    "GOOSE": 0.75,
+                    "MELON": 2.0,
+                    "PASTURE": 0.25,
+                    "SHEEP": 5.375,
+                    "STRAWBERRY": 22.25,
+                    "WHEAT": 6.375
+                  },
+                  "cash_mean": 11901.625,
+                  "land_mean": 2.375,
+                  "crops_mean": 30.625,
+                  "animals_mean": 11.5,
+                  "shed_mean": 18.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 7.0,
+                    "GOOSE": 2.125,
+                    "SHEEP": 8.875,
+                    "STRAWBERRY": 34.0,
+                    "WHEAT": 23.0
+                  },
+                  "cash_mean": 13637.1875,
+                  "land_mean": 3.0,
+                  "crops_mean": 57.0,
+                  "animals_mean": 18.0,
+                  "shed_mean": 22.75,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 3.625,
+                    "COW": 6.875,
+                    "GOOSE": 2.125,
+                    "MELON": 1.875,
+                    "PASTURE": 0.125,
+                    "SHEEP": 8.8125,
+                    "STRAWBERRY": 34.0,
+                    "TOMATO": 11.8125,
+                    "WHEAT": 5.125
+                  },
+                  "cash_mean": 36723.0625,
+                  "land_mean": 3.0,
+                  "crops_mean": 56.4375,
+                  "animals_mean": 17.8125,
+                  "shed_mean": 55.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 10.5625,
+                    "COW": 1.75,
+                    "GOOSE": 2.125,
+                    "MELON": 0.5,
+                    "PASTURE": 4.3125,
+                    "SHEEP": 4.75,
+                    "STRAWBERRY": 6.125,
+                    "TOMATO": 8.0625,
+                    "WEED": 9.375,
+                    "WHEAT": 12.3125
+                  },
+                  "cash_mean": 87726.6875,
+                  "land_mean": 3.0,
+                  "crops_mean": 37.5625,
+                  "animals_mean": 8.625,
+                  "shed_mean": 59.6875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.25,
+          "score_delta": -0.125,
+          "delta_ci95": [
+            -0.375,
+            0.0
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.625
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_cohort15",
+        "sha256": "d59808d43fc55c9d348416d9d3d4f665a2c1d848ecc679a3d5ceacb4d4fccc1d",
+        "snapshot": "reports\\sources\\d59808d43fc55c9d348416d9d3d4f665a2c1d848ecc679a3d5ceacb4d4fccc1d.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.375,
+            "score_delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -583.1875,
+              "median": -13075.5,
+              "p10": -25007.0
+            },
+            "mean_paired_gap_change": 166.9375,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 0,
+            "max_action_seconds": 0.074604,
+            "failed_work": 0,
+            "wins": 6,
+            "draws": 0,
+            "score_ci95": [
+              0.125,
+              0.75
+            ],
+            "mean_paired_gap_change_ci95": [
+              -2991.0,
+              2391.88125
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 517.5,
+                "expense:COW": 2800.0,
+                "expense:FERTILIZER": 120.0,
+                "expense:GOOSE": 637.5,
+                "expense:MELON": 1180.0,
+                "expense:SHEEP": 4437.5,
+                "expense:STRAWBERRY": 3662.5,
+                "expense:TOMATO": 746.875,
+                "expense:WHEAT": 9501.625,
+                "expense:labor": 7902.875,
+                "expense:land": 3000.0,
+                "hires": 307.875,
+                "income:CARROT": 4314.4375,
+                "income:EGG": 3464.5,
+                "income:FERTILIZER": 11349.6875,
+                "income:MELON": 14116.625,
+                "income:MILK": 9093.8125,
+                "income:STRAWBERRY": 24593.5,
+                "income:TOMATO": 25537.125,
+                "income:WHEAT": 5039.75,
+                "income:WOOL": 33990.4375,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 7.0,
+                "units:BUY_ANIMAL:GOOSE": 2.125,
+                "units:BUY_ANIMAL:SHEEP": 8.875,
+                "units:BUY_PRODUCT:FERTILIZER": 14.875,
+                "units:BUY_PRODUCT:WHEAT": 215.375,
+                "units:BUY_SEED:CARROT": 25.875,
+                "units:BUY_SEED:MELON": 14.75,
+                "units:BUY_SEED:STRAWBERRY": 36.625,
+                "units:BUY_SEED:TOMATO": 14.9375,
+                "units:BUY_SEED:WHEAT": 67.5,
+                "units:SELL:CARROT": 72.875,
+                "units:SELL:EGG": 66.0,
+                "units:SELL:FERTILIZER": 262.5,
+                "units:SELL:MELON": 87.0,
+                "units:SELL:MILK": 136.25,
+                "units:SELL:STRAWBERRY": 257.75,
+                "units:SELL:TOMATO": 114.375,
+                "units:SELL:WHEAT": 121.125,
+                "units:SELL:WOOL": 193.6875
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 1151.5625,
+                "success:BUILD_COOP": 2.375,
+                "success:BUILD_PASTURE": 17.3125,
+                "success:CARE": 302.125,
+                "success:COLLECT_FERTILIZER": 338.375,
+                "success:DIG": 26.75,
+                "success:DROP": 88.1875,
+                "success:EAST": 844.8125,
+                "success:FEED": 311.5,
+                "success:FERTILIZE": 90.125,
+                "success:HARVEST": 431.25,
+                "success:NORTH": 1014.5625,
+                "success:PICKUP": 214.75,
+                "success:PLACE": 18.0,
+                "success:PLANT": 158.6875,
+                "success:SOUTH": 673.25,
+                "success:WATER": 848.0625,
+                "success:WEST": 1040.25
+              },
+              "moves_mean": 3572.875,
+              "productive_actions_mean": 2526.5625,
+              "losses_total": {
+                "overflow_units": 30,
+                "animal_escapes": 69,
+                "terminal_escapes": 52
+              },
+              "stderr_turns": 0,
+              "stderr_messages": {},
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.0323385,
+                "p95": 0.0741165,
+                "p99": 0.0745065,
+                "max": 0.074604
+              },
+              "runtime_max_seconds": 0.074604,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.0138885,
+                "p95": 0.01644025,
+                "p99": 0.017206449999999998,
+                "max": 0.017398
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1182.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 12.5,
+                    "WEED": 0.125,
+                    "WHEAT": 7.0
+                  },
+                  "cash_mean": 1338.375,
+                  "land_mean": 2.0,
+                  "crops_mean": 33.5,
+                  "animals_mean": 4.0,
+                  "shed_mean": 7.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 5.375,
+                    "GOOSE": 0.75,
+                    "MELON": 2.0,
+                    "PASTURE": 0.25,
+                    "SHEEP": 5.375,
+                    "STRAWBERRY": 22.25,
+                    "WHEAT": 6.375
+                  },
+                  "cash_mean": 11901.625,
+                  "land_mean": 2.375,
+                  "crops_mean": 30.625,
+                  "animals_mean": 11.5,
+                  "shed_mean": 18.875,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 7.0,
+                    "GOOSE": 2.125,
+                    "SHEEP": 8.875,
+                    "STRAWBERRY": 34.0,
+                    "WHEAT": 23.0
+                  },
+                  "cash_mean": 13637.1875,
+                  "land_mean": 3.0,
+                  "crops_mean": 57.0,
+                  "animals_mean": 18.0,
+                  "shed_mean": 22.75,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 4.125,
+                    "COW": 6.75,
+                    "GOOSE": 2.125,
+                    "MELON": 0.75,
+                    "PASTURE": 0.25,
+                    "SHEEP": 8.8125,
+                    "STRAWBERRY": 36.5,
+                    "TOMATO": 14.4375,
+                    "WHEAT": 1.0
+                  },
+                  "cash_mean": 36855.9375,
+                  "land_mean": 3.0,
+                  "crops_mean": 56.8125,
+                  "animals_mean": 17.6875,
+                  "shed_mean": 55.25,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 8.3125,
+                    "COW": 3.8125,
+                    "GOOSE": 2.125,
+                    "MELON": 0.25,
+                    "PASTURE": 5.0625,
+                    "SHEEP": 4.5,
+                    "STRAWBERRY": 8.625,
+                    "TOMATO": 11.0625,
+                    "WEED": 10.125,
+                    "WHEAT": 9.75
+                  },
+                  "cash_mean": 84776.5625,
+                  "land_mean": 3.0,
+                  "crops_mean": 38.0,
+                  "animals_mean": 10.4375,
+                  "shed_mean": 68.4375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.375,
+          "score_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "challenger_ci95": [
+            0.125,
+            0.75
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "name": "capacity_cohort3",
+        "sha256": "9a83bb475173e00d1b5e2b28dada9c472e9e751139a5493ddbf1d3e5eb6a4652",
+        "snapshot": "reports\\sources\\9a83bb475173e00d1b5e2b28dada9c472e9e751139a5493ddbf1d3e5eb6a4652.py.gz"
+      },
+      "comparison": {
+        "seeds": [
+          5000,
+          5001,
+          5002,
+          5003,
+          5004,
+          5005,
+          5006,
+          5007
+        ],
+        "weights": {
+          "data/raw/reference-mooman/main.py": 1.0
+        },
+        "opponents": {
+          "data/raw/reference-mooman/main.py": {
+            "games": 16,
+            "incumbent_score": 0.375,
+            "challenger_score": 0.1875,
+            "score_delta": -0.1875,
+            "delta_ci95": [
+              -0.5625,
+              0.25
+            ],
+            "incumbent_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -750.125,
+              "median": -12856.0,
+              "p10": -25976.5
+            },
+            "challenger_cash_gap": {
+              "n": 16,
+              "missing": 0,
+              "mean": -10647.625,
+              "median": -12682.0,
+              "p10": -25867.0
+            },
+            "mean_paired_gap_change": -9897.5,
+            "paired_gap_n": 16,
+            "paired_gap_missing": 0,
+            "candidate_errors": 0,
+            "opponent_errors": 0,
+            "incumbent_errors": 0,
+            "incumbent_opponent_errors": 0,
+            "stderr_turns": 0,
+            "max_action_seconds": 0.08573,
+            "failed_work": 0,
+            "wins": 3,
+            "draws": 0,
+            "score_ci95": [
+              0.0,
+              0.4375
+            ],
+            "mean_paired_gap_change_ci95": [
+              -29139.8125,
+              7838.587499999999
+            ],
+            "behavior": {
+              "ledger_mean": {
+                "expense:CARROT": 561.25,
+                "expense:COW": 3100.0,
+                "expense:FERTILIZER": 107.75,
+                "expense:GOOSE": 900.0,
+                "expense:MELON": 1350.0,
+                "expense:SHEEP": 3625.0,
+                "expense:STRAWBERRY": 3337.5,
+                "expense:TOMATO": 703.125,
+                "expense:WHEAT": 9340.5,
+                "expense:labor": 7785.25,
+                "expense:land": 3000.0,
+                "hires": 307.125,
+                "income:CARROT": 3816.5625,
+                "income:EGG": 4554.75,
+                "income:FERTILIZER": 10782.0,
+                "income:MELON": 14565.125,
+                "income:MILK": 18948.125,
+                "income:STRAWBERRY": 36943.0,
+                "income:TOMATO": 7813.625,
+                "income:WHEAT": 6532.625,
+                "income:WOOL": 17810.0,
+                "land_purchases": 2.0,
+                "units:BUY_ANIMAL:COW": 7.75,
+                "units:BUY_ANIMAL:GOOSE": 3.0,
+                "units:BUY_ANIMAL:SHEEP": 7.25,
+                "units:BUY_PRODUCT:FERTILIZER": 8.1875,
+                "units:BUY_PRODUCT:WHEAT": 211.6875,
+                "units:BUY_SEED:CARROT": 28.0625,
+                "units:BUY_SEED:MELON": 16.875,
+                "units:BUY_SEED:STRAWBERRY": 33.375,
+                "units:BUY_SEED:TOMATO": 14.0625,
+                "units:BUY_SEED:WHEAT": 68.9375,
+                "units:SELL:CARROT": 80.0,
+                "units:SELL:EGG": 88.0,
+                "units:SELL:FERTILIZER": 245.6875,
+                "units:SELL:MELON": 94.375,
+                "units:SELL:MILK": 155.3125,
+                "units:SELL:STRAWBERRY": 242.25,
+                "units:SELL:TOMATO": 105.375,
+                "units:SELL:WHEAT": 148.3125,
+                "units:SELL:WOOL": 139.375
+              },
+              "realized_actions_mean": {
+                "idle:PASS": 1205.25,
+                "success:BUILD_COOP": 3.0,
+                "success:BUILD_PASTURE": 16.0,
+                "success:CARE": 286.125,
+                "success:COLLECT_FERTILIZER": 323.625,
+                "success:DIG": 30.6875,
+                "success:DROP": 74.0625,
+                "success:EAST": 857.6875,
+                "success:FEED": 292.1875,
+                "success:FERTILIZE": 85.625,
+                "success:HARVEST": 421.875,
+                "success:NORTH": 1026.875,
+                "success:PICKUP": 213.3125,
+                "success:PLACE": 18.0,
+                "success:PLANT": 159.75,
+                "success:SOUTH": 647.375,
+                "success:WATER": 841.75,
+                "success:WEST": 1048.6875
+              },
+              "moves_mean": 3580.625,
+              "productive_actions_mean": 2460.625,
+              "losses_total": {
+                "overflow_units": 133,
+                "animal_escapes": 68,
+                "terminal_escapes": 44
+              },
+              "stderr_turns": 0,
+              "stderr_messages": {},
+              "stderr_truncated_turns": 0,
+              "stderr_omitted_turns": 0,
+              "runtime_episode_max_seconds": {
+                "games": 16,
+                "median": 0.0421965,
+                "p95": 0.078224,
+                "p99": 0.08422879999999999,
+                "max": 0.08573
+              },
+              "runtime_max_seconds": 0.08573,
+              "runtime_episode_p99_seconds": {
+                "games": 16,
+                "median": 0.0179345,
+                "p95": 0.02611925,
+                "p99": 0.02675585,
+                "max": 0.026915
+              },
+              "milestones": {
+                "3": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0
+                  },
+                  "cash_mean": 508.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 14.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 5.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "5": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 0.125,
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 6.875
+                  },
+                  "cash_mean": 522.0,
+                  "land_mean": 1.0,
+                  "crops_mean": 21.0,
+                  "animals_mean": 4.0,
+                  "shed_mean": 0.0,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "8": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 1.625,
+                    "COW": 2.0,
+                    "MELON": 14.0,
+                    "SHEEP": 2.0,
+                    "STRAWBERRY": 13.5,
+                    "WEED": 0.125,
+                    "WHEAT": 2.375
+                  },
+                  "cash_mean": 1009.5,
+                  "land_mean": 2.0,
+                  "crops_mean": 31.5,
+                  "animals_mean": 4.0,
+                  "shed_mean": 3.375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "11": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 2.375,
+                    "COOP": 0.125,
+                    "COW": 4.75,
+                    "GOOSE": 1.25,
+                    "MELON": 2.25,
+                    "PASTURE": 0.625,
+                    "SHEEP": 4.0,
+                    "STRAWBERRY": 21.75,
+                    "WHEAT": 3.0
+                  },
+                  "cash_mean": 12299.5,
+                  "land_mean": 2.25,
+                  "crops_mean": 29.375,
+                  "animals_mean": 10.0,
+                  "shed_mean": 18.75,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "15": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 6.0,
+                    "COW": 7.75,
+                    "GOOSE": 3.0,
+                    "MELON": 0.375,
+                    "SHEEP": 7.25,
+                    "STRAWBERRY": 31.0625,
+                    "TOMATO": 3.375,
+                    "WHEAT": 12.125
+                  },
+                  "cash_mean": 13132.625,
+                  "land_mean": 3.0,
+                  "crops_mean": 52.9375,
+                  "animals_mean": 18.0,
+                  "shed_mean": 34.375,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "20": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 3.5,
+                    "COW": 7.5,
+                    "GOOSE": 3.0,
+                    "MELON": 2.25,
+                    "PASTURE": 0.75,
+                    "SHEEP": 6.25,
+                    "STRAWBERRY": 29.875,
+                    "TOMATO": 13.75,
+                    "WHEAT": 5.375
+                  },
+                  "cash_mean": 37814.5625,
+                  "land_mean": 3.0,
+                  "crops_mean": 54.75,
+                  "animals_mean": 16.75,
+                  "shed_mean": 63.8125,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                },
+                "29": {
+                  "observed_games": 16,
+                  "composition_mean": {
+                    "CARROT": 3.25,
+                    "COW": 5.0,
+                    "GOOSE": 3.0,
+                    "MELON": 1.375,
+                    "PASTURE": 4.0,
+                    "SHEEP": 3.0,
+                    "STRAWBERRY": 8.5,
+                    "TOMATO": 7.75,
+                    "WEED": 5.5625,
+                    "WHEAT": 19.625
+                  },
+                  "cash_mean": 80622.625,
+                  "land_mean": 3.0,
+                  "crops_mean": 40.5,
+                  "animals_mean": 11.0,
+                  "shed_mean": 66.3125,
+                  "carried_mean": 0.0,
+                  "replay_worker_games": 0,
+                  "peak_hands_mean": null
+                }
+              }
+            }
+          }
+        },
+        "aggregate": {
+          "incumbent_score": 0.375,
+          "challenger_score": 0.1875,
+          "score_delta": -0.1875,
+          "delta_ci95": [
+            -0.5625,
+            0.25
+          ],
+          "challenger_ci95": [
+            0.0,
+            0.4375
+          ]
+        }
+      }
+    }
+  ],
+  "worker_replays": []
+}

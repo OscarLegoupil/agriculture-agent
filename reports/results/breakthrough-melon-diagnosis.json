@@ -1,0 +1,4941 @@
+{
+  "date": "2026-09-11",
+  "protocol": {
+    "role": "Exploratory mechanism audit of a completed development screen; not fresh confirmation or promotion evidence.",
+    "seeds": [
+      5000,
+      5001,
+      5002,
+      5003,
+      5004,
+      5005,
+      5006,
+      5007
+    ],
+    "seats": [
+      0,
+      1
+    ],
+    "opponent_weights": {
+      "reference-cok": 0.5,
+      "reference-seyam": 0.5
+    },
+    "draw_score": 0.5,
+    "bootstrap_replicates": 20000,
+    "bootstrap_rng_seed": 1729,
+    "bootstrap_unit": "One seed, carrying both seats, both opponent matchups, and all candidate/incumbent paired outcomes together.",
+    "independence_limitation": "COK and Seyam share replay-route ancestry. Seed intervals do not quantify opponent coverage or repeated candidate-selection uncertainty."
+  },
+  "sources": {
+    "incumbent": {
+      "name": "incumbent",
+      "sha256": "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325",
+      "snapshot": "reports\\sources\\64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325.py.gz",
+      "entrypoint_verified": true,
+      "manifest": "data\\raw\\breakthrough-season-screen.json",
+      "manifest_sha256": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608"
+    },
+    "melon": {
+      "name": "melon",
+      "sha256": "e56e8b7dc4d905580ea68c72e9003cff28b205fcf794885cee80a9dce85bce28",
+      "snapshot": "reports\\sources\\e56e8b7dc4d905580ea68c72e9003cff28b205fcf794885cee80a9dce85bce28.py.gz",
+      "entrypoint_verified": true,
+      "manifest": "data\\raw\\breakthrough-melon-screen.json",
+      "manifest_sha256": "bde23952f2e4473f14dbbc1da5108d93bf3e8353fc9c72db5d061995fb983f8f"
+    },
+    "melon_race_only": {
+      "name": "melon_race_only",
+      "sha256": "13f029db938d83caf2c5fdde2341e848ac139b957f343c3a53e683e8115815c2",
+      "snapshot": "reports\\sources\\13f029db938d83caf2c5fdde2341e848ac139b957f343c3a53e683e8115815c2.py.gz",
+      "entrypoint_verified": true,
+      "manifest": "data\\raw\\breakthrough-melon-screen.json",
+      "manifest_sha256": "bde23952f2e4473f14dbbc1da5108d93bf3e8353fc9c72db5d061995fb983f8f"
+    },
+    "melon_fertilizer_only": {
+      "name": "melon_fertilizer_only",
+      "sha256": "37b7ba4423b55894cfcf1e9be0989762cf902e23d75152e2d691b589858b6a87",
+      "snapshot": "reports\\sources\\37b7ba4423b55894cfcf1e9be0989762cf902e23d75152e2d691b589858b6a87.py.gz",
+      "entrypoint_verified": true,
+      "manifest": "data\\raw\\breakthrough-melon-screen.json",
+      "manifest_sha256": "bde23952f2e4473f14dbbc1da5108d93bf3e8353fc9c72db5d061995fb983f8f"
+    }
+  },
+  "opponents": {
+    "seyam": {
+      "url": "https://github.com/Seyamalam/Kaggriculture.git",
+      "revision": "8b8c421eb10634c756583ce10c75189f50c83a72",
+      "git_blob_sha256": "0cd14b653102d276c4f902fa3b8c6bd81d869b8ab64c422cb881b9d2346ec639",
+      "sha256": "4c02a323b0939e8f99df69dc6c23026946b033b0d831c79216ffac0ded9c8e60",
+      "lineage": "Kaito Fukami public V18/C20 routes with recovery overlay",
+      "executable": "data/raw/reference-seyam/main.py",
+      "newline": "CRLF, matching qualification executable",
+      "license": "Apache-2.0 attributed portions; notices retained in clone"
+    },
+    "cok": {
+      "url": "https://github.com/COK-ZhangZiliang/Kaggriculture.git",
+      "revision": "7ef67eac458cd9ecd13786063e2e581fbe7403ec",
+      "git_blob_sha256": "56831f3c43c9727d90016b7a7a8d4eb51d1a4c08c1120d58f061d9176e8bc109",
+      "sha256": "1c7335f698692f1c7bac34913a9ededc0f736dfb2b51346a4fa59098ab471d01",
+      "lineage": "Adaptive Farming Strategy public routes with recovery controller",
+      "executable": "data/raw/reference-cok/main.py",
+      "newline": "CRLF, matching qualification executable",
+      "license": "Apache-2.0 attributed portions; notices retained in clone"
+    }
+  },
+  "environment": {
+    "package": "kaggle-environments==1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    },
+    "effective_configuration": {
+      "seed": null,
+      "episodeSteps": 720,
+      "actTimeout": 1,
+      "runTimeout": 1200,
+      "boardSize": 10,
+      "startingMoney": 3000,
+      "maxMarketOrdersPerTurn": 10,
+      "turnsPerDay": 24,
+      "shedCapacity": 100,
+      "weedSpawnChance": 0.005,
+      "townShopUnlockInterval": 3,
+      "townShopSellInterval": 4,
+      "townCenterSellInterval": 24,
+      "farmHandCostMult": 1,
+      "marketParams": {}
+    },
+    "seed_note": "The interpreter removes seed from configuration and retains the resolved seed in episode info; every resolved_seed matches the declared seed."
+  },
+  "audit": {
+    "replays": 128,
+    "reconstructed_bilateral_market_balances": 10818,
+    "reconstructed_melon_sales_reconcile_to_telemetry": true,
+    "entrypoint_and_snapshot_hash_checks": "Passed for every candidate.",
+    "action_parity": {
+      "tested": 1920,
+      "mismatches": [],
+      "stderr": [],
+      "max_seconds": 0.050749900001392234,
+      "method": "Frozen raw-source official loader; recorded observation only; no simulator step or future state read by callable."
+    },
+    "raw_diagnosis_sha256": "7f4160de15b3c68f37834b5ab8d3c7f2e0e45c113646b9c5bc4334a312c5e4f0",
+    "method": "Read saved states, replay only recorded unit actions and market orders on independent copies using official helpers, check resulting cash against next saved state; no daily refresh, new randomness, counterfactual game, or policy tuning.",
+    "state_hash_exclusions": [
+      "remainingOverageTime",
+      "runtime logs"
+    ],
+    "historical_harness_diff": "Baseline to screen changes add source/bundle metadata, loader checking, and overwrite protection; episode execution and Telemetry are unchanged.",
+    "opponent_sales_method": "Both players' transactions are reconstructed in the same official market pass."
+  },
+  "aggregate": {
+    "incumbent": {
+      "reference-cok": {
+        "games": 16,
+        "wins": 6,
+        "draws": 0,
+        "score": {
+          "mean": 0.375,
+          "ci95": [
+            0.125,
+            0.75
+          ]
+        },
+        "cash": {
+          "mean": 81911.4375,
+          "ci95": [
+            64431.625,
+            98048.0
+          ]
+        },
+        "gap": {
+          "mean": -4601.5625,
+          "ci95": [
+            -12304.0,
+            3302.3125
+          ]
+        },
+        "gap_median": -7520.5,
+        "gap_p10": -20451.5,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.064064,
+        "max_episode_p99_runtime_seconds": 0.00838
+      },
+      "reference-seyam": {
+        "games": 16,
+        "wins": 16,
+        "draws": 0,
+        "score": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "cash": {
+          "mean": 75974.25,
+          "ci95": [
+            63630.815625,
+            88567.25
+          ]
+        },
+        "gap": {
+          "mean": 21277.1875,
+          "ci95": [
+            15279.625,
+            26314.909374999963
+          ]
+        },
+        "gap_median": 22116.5,
+        "gap_p10": 9131.0,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.056181,
+        "max_episode_p99_runtime_seconds": 0.004976
+      },
+      "weighted": {
+        "games": 32,
+        "wins": 22,
+        "draws": 0,
+        "score": {
+          "mean": 0.6875,
+          "ci95": [
+            0.5625,
+            0.875
+          ]
+        },
+        "cash": {
+          "mean": 78942.84375,
+          "ci95": [
+            66011.39140625,
+            92346.90625
+          ]
+        },
+        "gap": {
+          "mean": 8337.8125,
+          "ci95": [
+            3202.09375,
+            12934.96875
+          ]
+        },
+        "gap_median": 9901.0,
+        "gap_p10": -12169.8,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.064064,
+        "max_episode_p99_runtime_seconds": 0.00838
+      }
+    },
+    "melon_race_only": {
+      "reference-cok": {
+        "games": 16,
+        "wins": 11,
+        "draws": 0,
+        "score": {
+          "mean": 0.6875,
+          "ci95": [
+            0.375,
+            0.9375
+          ]
+        },
+        "cash": {
+          "mean": 84240.4375,
+          "ci95": [
+            67434.0,
+            100724.4375
+          ]
+        },
+        "gap": {
+          "mean": 2145.0625,
+          "ci95": [
+            -3234.0812499999997,
+            7035.375
+          ]
+        },
+        "gap_median": 1516.5,
+        "gap_p10": -7680.5,
+        "paired_score_change": {
+          "mean": 0.3125,
+          "ci95": [
+            -0.0625,
+            0.6875
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 2329.0,
+          "ci95": [
+            -5910.125,
+            9905.6875
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": -4417.625,
+          "ci95": [
+            -14849.875,
+            5009.75
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 6746.625,
+          "ci95": [
+            2074.571875,
+            10921.9375
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.052161,
+        "max_episode_p99_runtime_seconds": 0.004074
+      },
+      "reference-seyam": {
+        "games": 16,
+        "wins": 16,
+        "draws": 0,
+        "score": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "cash": {
+          "mean": 75086.375,
+          "ci95": [
+            65204.6875,
+            87072.375
+          ]
+        },
+        "gap": {
+          "mean": 23758.75,
+          "ci95": [
+            16714.7390625,
+            29837.9375
+          ]
+        },
+        "gap_median": 23892.0,
+        "gap_p10": 9081.5,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": -887.875,
+          "ci95": [
+            -6344.484375,
+            3513.125
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": -3369.4375,
+          "ci95": [
+            -10531.5625,
+            2311.4375
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 2481.5625,
+          "ci95": [
+            229.03750000000002,
+            4934.75
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.06182,
+        "max_episode_p99_runtime_seconds": 0.004268
+      },
+      "weighted": {
+        "games": 32,
+        "wins": 27,
+        "draws": 0,
+        "score": {
+          "mean": 0.84375,
+          "ci95": [
+            0.6875,
+            0.96875
+          ]
+        },
+        "cash": {
+          "mean": 79663.40625,
+          "ci95": [
+            68006.96875,
+            92953.625
+          ]
+        },
+        "gap": {
+          "mean": 12951.90625,
+          "ci95": [
+            8366.23671875,
+            16465.75
+          ]
+        },
+        "gap_median": 13047.5,
+        "gap_p10": -5495.3,
+        "paired_score_change": {
+          "mean": 0.15625,
+          "ci95": [
+            -0.03125,
+            0.34375
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 720.5625,
+          "ci95": [
+            -4085.0140625,
+            5705.899999999981
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": -3893.53125,
+          "ci95": [
+            -10133.78125,
+            2215.622656249989
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 4614.09375,
+          "ci95": [
+            1852.40625,
+            6953.7148437499945
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.06182,
+        "max_episode_p99_runtime_seconds": 0.004268
+      }
+    },
+    "melon": {
+      "reference-cok": {
+        "games": 16,
+        "wins": 6,
+        "draws": 0,
+        "score": {
+          "mean": 0.375,
+          "ci95": [
+            0.125,
+            0.75
+          ]
+        },
+        "cash": {
+          "mean": 81745.1875,
+          "ci95": [
+            68972.25,
+            93464.1875
+          ]
+        },
+        "gap": {
+          "mean": -1244.3125,
+          "ci95": [
+            -9030.0625,
+            7594.29062499992
+          ]
+        },
+        "gap_median": -6737.0,
+        "gap_p10": -12846.5,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            -0.375,
+            0.375
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": -166.25,
+          "ci95": [
+            -11130.5421875,
+            11779.4375
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": -3523.5,
+          "ci95": [
+            -13934.6875,
+            6837.9375
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 3357.25,
+          "ci95": [
+            -4876.0,
+            10824.843749999985
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.062276,
+        "max_episode_p99_runtime_seconds": 0.004026
+      },
+      "reference-seyam": {
+        "games": 16,
+        "wins": 16,
+        "draws": 0,
+        "score": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "cash": {
+          "mean": 80433.375,
+          "ci95": [
+            65579.0,
+            94833.7578125
+          ]
+        },
+        "gap": {
+          "mean": 23464.0625,
+          "ci95": [
+            16846.4375,
+            30058.004687499993
+          ]
+        },
+        "gap_median": 24239.5,
+        "gap_p10": 11624.0,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 4459.125,
+          "ci95": [
+            -2109.6875,
+            12182.1875
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 2272.25,
+          "ci95": [
+            -4513.0625,
+            9890.6875
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 2186.875,
+          "ci95": [
+            -3434.2765625,
+            8937.25
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.061245,
+        "max_episode_p99_runtime_seconds": 0.004731
+      },
+      "weighted": {
+        "games": 32,
+        "wins": 22,
+        "draws": 0,
+        "score": {
+          "mean": 0.6875,
+          "ci95": [
+            0.5625,
+            0.875
+          ]
+        },
+        "cash": {
+          "mean": 81089.28125,
+          "ci95": [
+            70426.41015625,
+            91820.40625
+          ]
+        },
+        "gap": {
+          "mean": 11109.875,
+          "ci95": [
+            7089.71875,
+            14626.3125
+          ]
+        },
+        "gap_median": 13585.0,
+        "gap_p10": -11810.5,
+        "paired_score_change": {
+          "mean": 0.0,
+          "ci95": [
+            -0.1875,
+            0.1875
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 2146.4375,
+          "ci95": [
+            -3332.875,
+            7030.34375
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": -625.625,
+          "ci95": [
+            -7226.9484375,
+            5310.621093749989
+          ]
+        },
+        "paired_gap_change": {
+          "mean": 2772.0625,
+          "ci95": [
+            -1540.0625,
+            6795.5
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.062276,
+        "max_episode_p99_runtime_seconds": 0.004731
+      }
+    },
+    "melon_fertilizer_only": {
+      "reference-cok": {
+        "games": 16,
+        "wins": 3,
+        "draws": 0,
+        "score": {
+          "mean": 0.1875,
+          "ci95": [
+            0.0,
+            0.4375
+          ]
+        },
+        "cash": {
+          "mean": 78220.375,
+          "ci95": [
+            65779.1875,
+            90151.3125
+          ]
+        },
+        "gap": {
+          "mean": -9999.125,
+          "ci95": [
+            -18673.1859375,
+            -1346.8125
+          ]
+        },
+        "gap_median": -7567.0,
+        "gap_p10": -26808.5,
+        "paired_score_change": {
+          "mean": -0.1875,
+          "ci95": [
+            -0.5625,
+            0.125
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": -3691.0625,
+          "ci95": [
+            -14794.75,
+            7185.625
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 1706.5,
+          "ci95": [
+            -8564.3125,
+            12463.0
+          ]
+        },
+        "paired_gap_change": {
+          "mean": -5397.5625,
+          "ci95": [
+            -14942.125,
+            2287.579687499977
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.084035,
+        "max_episode_p99_runtime_seconds": 0.005437
+      },
+      "reference-seyam": {
+        "games": 16,
+        "wins": 15,
+        "draws": 0,
+        "score": {
+          "mean": 0.9375,
+          "ci95": [
+            0.8125,
+            1.0
+          ]
+        },
+        "cash": {
+          "mean": 76971.0625,
+          "ci95": [
+            63526.875,
+            91787.92656249998
+          ]
+        },
+        "gap": {
+          "mean": 17942.375,
+          "ci95": [
+            9937.915625,
+            25131.795312499995
+          ]
+        },
+        "gap_median": 21411.0,
+        "gap_p10": 6783.0,
+        "paired_score_change": {
+          "mean": -0.0625,
+          "ci95": [
+            -0.1875,
+            0.0
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": 996.8125,
+          "ci95": [
+            -5388.875,
+            6960.3125
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 4331.625,
+          "ci95": [
+            -3909.25,
+            12671.0625
+          ]
+        },
+        "paired_gap_change": {
+          "mean": -3334.8125,
+          "ci95": [
+            -9462.021875,
+            1999.0
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.060332,
+        "max_episode_p99_runtime_seconds": 0.003932
+      },
+      "weighted": {
+        "games": 32,
+        "wins": 18,
+        "draws": 0,
+        "score": {
+          "mean": 0.5625,
+          "ci95": [
+            0.4375,
+            0.71875
+          ]
+        },
+        "cash": {
+          "mean": 77595.71875,
+          "ci95": [
+            67619.625,
+            87242.21484374993
+          ]
+        },
+        "gap": {
+          "mean": 3971.625,
+          "ci95": [
+            -1860.3484374999998,
+            9621.8125
+          ]
+        },
+        "gap_median": 5828.5,
+        "gap_p10": -25090.6,
+        "paired_score_change": {
+          "mean": -0.125,
+          "ci95": [
+            -0.34375,
+            0.0625
+          ]
+        },
+        "paired_own_cash_change": {
+          "mean": -1347.125,
+          "ci95": [
+            -6864.90625,
+            4284.0
+          ]
+        },
+        "paired_opponent_cash_change": {
+          "mean": 3019.0625,
+          "ci95": [
+            -4982.84375,
+            10155.049999999988
+          ]
+        },
+        "paired_gap_change": {
+          "mean": -4366.1875,
+          "ci95": [
+            -9833.3125,
+            325.1875
+          ]
+        },
+        "non_done_games": 0,
+        "stderr_turns": 0,
+        "max_runtime_seconds": 0.084035,
+        "max_episode_p99_runtime_seconds": 0.005437
+      }
+    }
+  },
+  "mechanism": {
+    "incumbent": {
+      "harvest": {
+        "first_hour_mean": 9.34375,
+        "first_hour_range": [
+          9,
+          12
+        ],
+        "day10_quantity_mean": 69.75,
+        "season_quantity_mean": 84.0
+      },
+      "drop": {
+        "first_hour_mean": 15.1875,
+        "first_hour_range": [
+          15,
+          17
+        ],
+        "day10_quantity_mean": 55.6875,
+        "season_quantity_mean": 69.75
+      },
+      "sell": {
+        "first_hour_mean": 16.1875,
+        "first_hour_range": [
+          16,
+          18
+        ],
+        "day10_quantity_mean": 53.625,
+        "season_quantity_mean": 84.0
+      },
+      "day10_melon_revenue": 12229.78125,
+      "season_melon_revenue": 15962.71875,
+      "day10_start_cash": 1312.375,
+      "day11_start_cash": 13792.1875,
+      "day11_shed_melons": 16.125,
+      "day10_opening_melons_at_yield_cap": 0.0,
+      "fertilizer_applications_to_melon": 0.0,
+      "day6_to_9_fertilizer_purchase_cash": 0.0,
+      "day10_composition": {
+        "MELON": 14.0,
+        "WHEAT": 3.625,
+        "STRAWBERRY": 24.1875,
+        "COW": 4.0,
+        "SHEEP": 4.125,
+        "GOOSE": 0.3125
+      },
+      "mean_ledger": {
+        "expense:CARROT": 407.5,
+        "expense:COW": 3025.0,
+        "expense:FERTILIZER": 320.84375,
+        "expense:GOOSE": 1162.5,
+        "expense:MELON": 1120.0,
+        "expense:SHEEP": 3281.25,
+        "expense:STRAWBERRY": 4312.5,
+        "expense:TOMATO": 70.3125,
+        "expense:WHEAT": 10303.625,
+        "expense:labor": 8031.40625,
+        "expense:land": 3000.0,
+        "hires": 306.21875,
+        "income:CARROT": 4075.5,
+        "income:EGG": 5604.3125,
+        "income:FERTILIZER": 12797.5625,
+        "income:MELON": 15962.71875,
+        "income:MILK": 14373.1875,
+        "income:STRAWBERRY": 31678.375,
+        "income:TOMATO": 1432.4375,
+        "income:WHEAT": 4175.34375,
+        "income:WOOL": 20878.34375,
+        "land_purchases": 2.0,
+        "units:BUY_ANIMAL:COW": 7.5625,
+        "units:BUY_ANIMAL:GOOSE": 3.875,
+        "units:BUY_ANIMAL:SHEEP": 6.5625,
+        "units:BUY_PRODUCT:FERTILIZER": 14.15625,
+        "units:BUY_PRODUCT:WHEAT": 221.1875,
+        "units:BUY_SEED:CARROT": 20.375,
+        "units:BUY_SEED:MELON": 14.0,
+        "units:BUY_SEED:STRAWBERRY": 43.125,
+        "units:BUY_SEED:TOMATO": 1.40625,
+        "units:BUY_SEED:WHEAT": 68.5,
+        "units:SELL:CARROT": 49.75,
+        "units:SELL:EGG": 103.3125,
+        "units:SELL:FERTILIZER": 258.90625,
+        "units:SELL:MELON": 84.0,
+        "units:SELL:MILK": 183.125,
+        "units:SELL:STRAWBERRY": 253.25,
+        "units:SELL:TOMATO": 8.65625,
+        "units:SELL:WHEAT": 91.34375,
+        "units:SELL:WOOL": 138.09375
+      },
+      "mean_realized_actions": {
+        "idle:PASS": 729.40625,
+        "success:BUILD_COOP": 5.1875,
+        "success:BUILD_PASTURE": 16.40625,
+        "success:CARE": 317.4375,
+        "success:COLLECT_FERTILIZER": 295.5625,
+        "success:DIG": 27.5625,
+        "success:DROP": 169.96875,
+        "success:EAST": 1012.4375,
+        "success:FEED": 338.09375,
+        "success:FERTILIZE": 50.8125,
+        "success:HARVEST": 371.75,
+        "success:NORTH": 1172.65625,
+        "success:PICKUP": 157.125,
+        "success:PLACE": 18.0,
+        "success:PLANT": 143.40625,
+        "success:SOUTH": 860.53125,
+        "success:WATER": 763.59375,
+        "success:WEST": 1153.78125
+      },
+      "loss_totals": {
+        "animal_escapes": 8,
+        "overflow_units": 0,
+        "terminal_escapes": 77,
+        "water_deaths": 10
+      }
+    },
+    "melon_race_only": {
+      "harvest": {
+        "first_hour_mean": 5.0,
+        "first_hour_range": [
+          5,
+          5
+        ],
+        "day10_quantity_mean": 72.0,
+        "season_quantity_mean": 84.0
+      },
+      "drop": {
+        "first_hour_mean": 10.0,
+        "first_hour_range": [
+          10,
+          10
+        ],
+        "day10_quantity_mean": 71.4375,
+        "season_quantity_mean": 83.0625
+      },
+      "sell": {
+        "first_hour_mean": 10.0,
+        "first_hour_range": [
+          10,
+          10
+        ],
+        "day10_quantity_mean": 71.4375,
+        "season_quantity_mean": 84.0
+      },
+      "day10_melon_revenue": 16697.25,
+      "season_melon_revenue": 17899.625,
+      "day10_start_cash": 1312.375,
+      "day11_start_cash": 17835.84375,
+      "day11_shed_melons": 0.5625,
+      "day10_opening_melons_at_yield_cap": 0.0,
+      "fertilizer_applications_to_melon": 0.0,
+      "day6_to_9_fertilizer_purchase_cash": 0.0,
+      "day10_composition": {
+        "MELON": 14.0,
+        "WHEAT": 3.625,
+        "STRAWBERRY": 24.1875,
+        "COW": 4.0,
+        "SHEEP": 4.125,
+        "GOOSE": 0.3125
+      },
+      "mean_ledger": {
+        "expense:CARROT": 436.875,
+        "expense:COW": 2987.5,
+        "expense:FERTILIZER": 409.625,
+        "expense:GOOSE": 1190.625,
+        "expense:MELON": 1120.0,
+        "expense:SHEEP": 3281.25,
+        "expense:STRAWBERRY": 4300.0,
+        "expense:TOMATO": 93.75,
+        "expense:WHEAT": 10342.75,
+        "expense:labor": 7980.1875,
+        "expense:land": 3000.0,
+        "hires": 305.875,
+        "income:CARROT": 4321.78125,
+        "income:EGG": 5935.40625,
+        "income:FERTILIZER": 12772.28125,
+        "income:MELON": 17899.625,
+        "income:MILK": 14445.625,
+        "income:STRAWBERRY": 31749.53125,
+        "income:TOMATO": 2404.09375,
+        "income:WHEAT": 3771.0625,
+        "income:WOOL": 18506.5625,
+        "land_purchases": 2.0,
+        "units:BUY_ANIMAL:COW": 7.46875,
+        "units:BUY_ANIMAL:GOOSE": 3.96875,
+        "units:BUY_ANIMAL:SHEEP": 6.5625,
+        "units:BUY_PRODUCT:FERTILIZER": 17.0,
+        "units:BUY_PRODUCT:WHEAT": 222.0,
+        "units:BUY_SEED:CARROT": 21.84375,
+        "units:BUY_SEED:MELON": 14.0,
+        "units:BUY_SEED:STRAWBERRY": 43.0,
+        "units:BUY_SEED:TOMATO": 1.875,
+        "units:BUY_SEED:WHEAT": 64.0625,
+        "units:SELL:CARROT": 55.4375,
+        "units:SELL:EGG": 108.46875,
+        "units:SELL:FERTILIZER": 256.625,
+        "units:SELL:MELON": 84.0,
+        "units:SELL:MILK": 176.96875,
+        "units:SELL:STRAWBERRY": 250.09375,
+        "units:SELL:TOMATO": 11.75,
+        "units:SELL:WHEAT": 83.28125,
+        "units:SELL:WOOL": 138.625
+      },
+      "mean_realized_actions": {
+        "idle:PASS": 739.34375,
+        "success:BUILD_COOP": 4.90625,
+        "success:BUILD_PASTURE": 16.4375,
+        "success:CARE": 315.1875,
+        "success:COLLECT_FERTILIZER": 290.34375,
+        "success:DIG": 25.15625,
+        "success:DROP": 171.15625,
+        "success:EAST": 1012.8125,
+        "success:FEED": 334.96875,
+        "success:FERTILIZE": 50.71875,
+        "success:HARVEST": 371.125,
+        "success:NORTH": 1181.125,
+        "success:PICKUP": 160.375,
+        "success:PLACE": 18.0,
+        "success:PLANT": 141.0625,
+        "success:SOUTH": 854.21875,
+        "success:WATER": 760.3125,
+        "success:WEST": 1151.53125
+      },
+      "loss_totals": {
+        "animal_escapes": 8,
+        "overflow_units": 0,
+        "terminal_escapes": 66,
+        "water_deaths": 8
+      }
+    },
+    "melon": {
+      "harvest": {
+        "first_hour_mean": 4.0,
+        "first_hour_range": [
+          4,
+          4
+        ],
+        "day10_quantity_mean": 72.0,
+        "season_quantity_mean": 84.0
+      },
+      "drop": {
+        "first_hour_mean": 9.0,
+        "first_hour_range": [
+          9,
+          9
+        ],
+        "day10_quantity_mean": 71.625,
+        "season_quantity_mean": 83.625
+      },
+      "sell": {
+        "first_hour_mean": 9.0,
+        "first_hour_range": [
+          9,
+          9
+        ],
+        "day10_quantity_mean": 71.625,
+        "season_quantity_mean": 84.0
+      },
+      "day10_melon_revenue": 16958.46875,
+      "season_melon_revenue": 18185.21875,
+      "day10_start_cash": 985.84375,
+      "day11_start_cash": 17996.34375,
+      "day11_shed_melons": 0.375,
+      "day10_opening_melons_at_yield_cap": 12.0,
+      "fertilizer_applications_to_melon": 14.0,
+      "day6_to_9_fertilizer_purchase_cash": 715.4375,
+      "day10_composition": {
+        "MELON": 14.0,
+        "WHEAT": 4.6875,
+        "STRAWBERRY": 22.3125,
+        "COW": 3.8125,
+        "SHEEP": 3.40625,
+        "GOOSE": 0.3125
+      },
+      "mean_ledger": {
+        "expense:CARROT": 408.125,
+        "expense:COW": 3475.0,
+        "expense:FERTILIZER": 1016.0625,
+        "expense:GOOSE": 1134.375,
+        "expense:MELON": 1120.0,
+        "expense:SHEEP": 2890.625,
+        "expense:STRAWBERRY": 4340.625,
+        "expense:TOMATO": 114.0625,
+        "expense:WHEAT": 10290.8125,
+        "expense:labor": 7764.59375,
+        "expense:land": 3000.0,
+        "hires": 303.3125,
+        "income:CARROT": 4437.65625,
+        "income:EGG": 5665.03125,
+        "income:FERTILIZER": 12535.375,
+        "income:MELON": 18185.21875,
+        "income:MILK": 15364.5,
+        "income:STRAWBERRY": 34916.125,
+        "income:TOMATO": 3207.625,
+        "income:WHEAT": 3950.8125,
+        "income:WOOL": 15381.21875,
+        "land_purchases": 2.0,
+        "units:BUY_ANIMAL:COW": 8.6875,
+        "units:BUY_ANIMAL:GOOSE": 3.78125,
+        "units:BUY_ANIMAL:SHEEP": 5.78125,
+        "units:BUY_PRODUCT:FERTILIZER": 19.625,
+        "units:BUY_PRODUCT:WHEAT": 217.78125,
+        "units:BUY_SEED:CARROT": 20.40625,
+        "units:BUY_SEED:MELON": 14.0,
+        "units:BUY_SEED:STRAWBERRY": 43.40625,
+        "units:BUY_SEED:TOMATO": 2.28125,
+        "units:BUY_SEED:WHEAT": 68.25,
+        "units:SELL:CARROT": 52.03125,
+        "units:SELL:EGG": 106.59375,
+        "units:SELL:FERTILIZER": 242.09375,
+        "units:SELL:MELON": 84.0,
+        "units:SELL:MILK": 190.6875,
+        "units:SELL:STRAWBERRY": 259.03125,
+        "units:SELL:TOMATO": 15.21875,
+        "units:SELL:WHEAT": 88.75,
+        "units:SELL:WOOL": 113.09375
+      },
+      "mean_realized_actions": {
+        "idle:PASS": 688.09375,
+        "success:BUILD_COOP": 4.8125,
+        "success:BUILD_PASTURE": 16.84375,
+        "success:CARE": 309.8125,
+        "success:COLLECT_FERTILIZER": 291.65625,
+        "success:DIG": 25.71875,
+        "success:DROP": 172.8125,
+        "success:EAST": 1087.28125,
+        "success:FEED": 328.53125,
+        "success:FERTILIZE": 69.1875,
+        "success:HARVEST": 375.15625,
+        "success:NORTH": 1154.96875,
+        "success:PICKUP": 158.625,
+        "success:PLACE": 18.25,
+        "success:PLANT": 145.125,
+        "success:SOUTH": 833.9375,
+        "success:WATER": 747.09375,
+        "success:WEST": 1117.96875
+      },
+      "loss_totals": {
+        "animal_escapes": 16,
+        "overflow_units": 0,
+        "terminal_escapes": 68,
+        "water_deaths": 28
+      }
+    },
+    "melon_fertilizer_only": {
+      "harvest": {
+        "first_hour_mean": 6.6875,
+        "first_hour_range": [
+          6,
+          7
+        ],
+        "day10_quantity_mean": 63.0,
+        "season_quantity_mean": 84.0
+      },
+      "drop": {
+        "first_hour_mean": 11.6875,
+        "first_hour_range": [
+          11,
+          12
+        ],
+        "day10_quantity_mean": 37.3125,
+        "season_quantity_mean": 52.3125
+      },
+      "sell": {
+        "first_hour_mean": 12.6875,
+        "first_hour_range": [
+          12,
+          13
+        ],
+        "day10_quantity_mean": 32.625,
+        "season_quantity_mean": 84.0
+      },
+      "day10_melon_revenue": 7782.0625,
+      "season_melon_revenue": 15070.9375,
+      "day10_start_cash": 985.84375,
+      "day11_start_cash": 6998.09375,
+      "day11_shed_melons": 30.375,
+      "day10_opening_melons_at_yield_cap": 12.0,
+      "fertilizer_applications_to_melon": 14.0,
+      "day6_to_9_fertilizer_purchase_cash": 715.4375,
+      "day10_composition": {
+        "MELON": 14.0,
+        "WHEAT": 4.6875,
+        "STRAWBERRY": 22.3125,
+        "COW": 3.8125,
+        "SHEEP": 3.40625,
+        "GOOSE": 0.3125
+      },
+      "mean_ledger": {
+        "expense:CARROT": 412.5,
+        "expense:COW": 3075.0,
+        "expense:FERTILIZER": 1030.9375,
+        "expense:GOOSE": 1284.375,
+        "expense:MELON": 1120.0,
+        "expense:SHEEP": 3093.75,
+        "expense:STRAWBERRY": 4331.25,
+        "expense:TOMATO": 126.5625,
+        "expense:WHEAT": 10615.90625,
+        "expense:labor": 8004.71875,
+        "expense:land": 3000.0,
+        "hires": 305.4375,
+        "income:CARROT": 3923.375,
+        "income:EGG": 6544.125,
+        "income:FERTILIZER": 12824.15625,
+        "income:MELON": 15070.9375,
+        "income:MILK": 11969.15625,
+        "income:STRAWBERRY": 34427.34375,
+        "income:TOMATO": 3776.0625,
+        "income:WHEAT": 4024.59375,
+        "income:WOOL": 18130.96875,
+        "land_purchases": 2.0,
+        "units:BUY_ANIMAL:COW": 7.6875,
+        "units:BUY_ANIMAL:GOOSE": 4.28125,
+        "units:BUY_ANIMAL:SHEEP": 6.1875,
+        "units:BUY_PRODUCT:FERTILIZER": 20.1875,
+        "units:BUY_PRODUCT:WHEAT": 226.125,
+        "units:BUY_SEED:CARROT": 20.625,
+        "units:BUY_SEED:MELON": 14.0,
+        "units:BUY_SEED:STRAWBERRY": 43.3125,
+        "units:BUY_SEED:TOMATO": 2.53125,
+        "units:BUY_SEED:WHEAT": 68.84375,
+        "units:SELL:CARROT": 51.09375,
+        "units:SELL:EGG": 120.5625,
+        "units:SELL:FERTILIZER": 245.84375,
+        "units:SELL:MELON": 84.0,
+        "units:SELL:MILK": 181.0625,
+        "units:SELL:STRAWBERRY": 257.34375,
+        "units:SELL:TOMATO": 16.5625,
+        "units:SELL:WHEAT": 89.90625,
+        "units:SELL:WOOL": 123.6875
+      },
+      "mean_realized_actions": {
+        "idle:PASS": 677.0625,
+        "success:BUILD_COOP": 5.625,
+        "success:BUILD_PASTURE": 16.03125,
+        "success:CARE": 315.03125,
+        "success:COLLECT_FERTILIZER": 293.40625,
+        "success:DIG": 28.375,
+        "success:DROP": 171.53125,
+        "success:EAST": 1077.09375,
+        "success:FEED": 333.9375,
+        "success:FERTILIZE": 67.75,
+        "success:HARVEST": 383.75,
+        "success:NORTH": 1128.09375,
+        "success:PICKUP": 164.125,
+        "success:PLACE": 18.15625,
+        "success:PLANT": 146.5625,
+        "success:SOUTH": 830.71875,
+        "success:WATER": 757.875,
+        "success:WEST": 1173.90625
+      },
+      "loss_totals": {
+        "animal_escapes": 12,
+        "overflow_units": 0,
+        "terminal_escapes": 58,
+        "water_deaths": 20
+      }
+    }
+  },
+  "paired_cases": [
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "caa38241acafa5d33124f4eb4a26210c32b3800a286471def905060e597a54e2",
+      "incumbent_replay_sha256": "1a0090ff74cabe510b4006a51860ac885920b74bea17de5569aca2a3fb1dbd56",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 5458,
+      "season_melon_revenue_change": 2941,
+      "own_cash_change": -15476.0,
+      "opponent_cash_change": -27722.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -2925,
+      "melon_cash_margin_change": 5866
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "31e6305394f000697ea79038ddd45ce00e80edfff0125abcc21b02c1510abb59",
+      "incumbent_replay_sha256": "41e711b2b5e84163969926ab5ee94a17a8bc51a3272cef1d3333448e0cf08d58",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        17,
+        10
+      ],
+      "day10_melon_revenue_change": 5078,
+      "season_melon_revenue_change": 3061,
+      "own_cash_change": -19620.0,
+      "opponent_cash_change": -34069.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -3097,
+      "melon_cash_margin_change": 6158
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "2a898e26377bd29af1e3c42df7f6f65f7d8ceb9de85793f684986f96d7d2e9d2",
+      "incumbent_replay_sha256": "aaecdaff8defa521927ad537ff23ed8cc5e02fe40ea80cdecc4654dd0ba002ce",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 3712,
+      "season_melon_revenue_change": 2567,
+      "own_cash_change": 11805.0,
+      "opponent_cash_change": -3779.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2632,
+      "melon_cash_margin_change": 5199
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "904ff5512b0a52f194f8fa4032825bfa41cc7238650cfdd8ad0d1e9c2ccb21ad",
+      "incumbent_replay_sha256": "e316369159547f40f0b63793030d015c394a7a205d6fb05feea7eea69c838408",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 3712,
+      "season_melon_revenue_change": 2567,
+      "own_cash_change": 21916.0,
+      "opponent_cash_change": 17248.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2632,
+      "melon_cash_margin_change": 5199
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "11515284df491433addef94e018b99bd0f7277bc16ef0ff4448f84967313ba28",
+      "incumbent_replay_sha256": "2d01d62fbb35196ce5653f8baa6506126c4b937c225961b70f4e29e582d474fc",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 18,
+      "first_harvest_hour": [
+        12,
+        5
+      ],
+      "first_sale_hour": [
+        18,
+        10
+      ],
+      "day10_melon_revenue_change": 7330,
+      "season_melon_revenue_change": 3728,
+      "own_cash_change": -3068.0,
+      "opponent_cash_change": -2408.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -3753,
+      "melon_cash_margin_change": 7481
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "2430d3ecdbee1971946708e0b50910157c7daa2c0277ad7683032edbebcd4ff3",
+      "incumbent_replay_sha256": "d9bbbcf17dde8fbd0ac624b76e315e5eb19a05e23129b2b778a51ad376174416",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        17,
+        10
+      ],
+      "day10_melon_revenue_change": 5659,
+      "season_melon_revenue_change": 3094,
+      "own_cash_change": 21426.0,
+      "opponent_cash_change": 20568.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -3138,
+      "melon_cash_margin_change": 6232
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "bbaa736dc1d20bff6c509b4e167c2fd75bd8cf339a8efb473e98284d7636ab5a",
+      "incumbent_replay_sha256": "fea78f486cef0701b72f60b2d2389f98182ea020bd098a94f90c3c61a6db80b0",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 21,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 3322,
+      "season_melon_revenue_change": 2813,
+      "own_cash_change": -124.0,
+      "opponent_cash_change": -4070.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2846,
+      "melon_cash_margin_change": 5659
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "b34b7dde8249c05588ebf3cd9145a993583e05967367bf0f8f183a9571c5cb86",
+      "incumbent_replay_sha256": "a8219bea6482460ff09b1ec29c8f00f05fe3872d6620d19bd79ff6c7bd4d64fa",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 5950,
+      "season_melon_revenue_change": 3403,
+      "own_cash_change": -22099.0,
+      "opponent_cash_change": -36980.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -3425,
+      "melon_cash_margin_change": 6828
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "71bbf5e2ecf2f13647ef455730cd84e9de233c24e61fe9151edbb84fd82e5552",
+      "incumbent_replay_sha256": "305f8a1118bd34030421978b17230b3fdfa1d8975e4807b649f8ad610406ff60",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        17,
+        10
+      ],
+      "day10_melon_revenue_change": 5078,
+      "season_melon_revenue_change": 3061,
+      "own_cash_change": 4655.0,
+      "opponent_cash_change": -10694.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -3097,
+      "melon_cash_margin_change": 6158
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "2dbbfe201370bb0e2e0301f6d304b36475d83043f0a285e9ef3f290433bdd910",
+      "incumbent_replay_sha256": "314e790a1c593671b5750dbef54f59d83267aa51116a1b5aba5591a803e0acee",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        17,
+        10
+      ],
+      "day10_melon_revenue_change": 5078,
+      "season_melon_revenue_change": 3061,
+      "own_cash_change": 4655.0,
+      "opponent_cash_change": -10694.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -3097,
+      "melon_cash_margin_change": 6158
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "ba0a6042aab9972fc86a8fe4e90636dc10f1b3ed142208c6faafa372588e1e0a",
+      "incumbent_replay_sha256": "8d0923eace28086f547a09093c285b6d7f617bfe407d7646c2b769fdd887e364",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4689,
+      "season_melon_revenue_change": 2891,
+      "own_cash_change": 15869.0,
+      "opponent_cash_change": 10488.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2924,
+      "melon_cash_margin_change": 5815
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "c4e461629e6c3394589463b96641ff5e21ea9fcbaf2d02996c95f766796418a9",
+      "incumbent_replay_sha256": "4d388937b0d3e566bb7b3d5c4c97e65e4ae8974cc7488c98b9cadd3e84c76f31",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4689,
+      "season_melon_revenue_change": 2891,
+      "own_cash_change": 15869.0,
+      "opponent_cash_change": 10488.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2924,
+      "melon_cash_margin_change": 5815
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "b3447906bd62a650fe2b91fca3485a623ac387df94c6b2ca3c6b0cdd351172e9",
+      "incumbent_replay_sha256": "a2690047f373b4250f1fd3ae474552fea1261e21681a52354debde9783542523",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 24,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 3384,
+      "season_melon_revenue_change": 2147,
+      "own_cash_change": -3113.0,
+      "opponent_cash_change": -6672.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -2172,
+      "melon_cash_margin_change": 4319
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "dfcaed223a7c78d5cbe34de8fb098053dde11d7c7ac25e715fdf42eceb16929f",
+      "incumbent_replay_sha256": "ade278a9a8a955023ef4f161fb9fad19f3966c7a163395915e8ca8af9fa4ff95",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 24,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 3384,
+      "season_melon_revenue_change": 2147,
+      "own_cash_change": -1082.0,
+      "opponent_cash_change": -7647.0,
+      "score_change": 1.0,
+      "opponent_melon_revenue_change": -2172,
+      "melon_cash_margin_change": 4319
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "a79ba4f452ba7900042a8fa48c7e838aefc79b408285e3adde6087e8b8e156ed",
+      "incumbent_replay_sha256": "69edf2d42c9ebb3c4d1862b3774603bd558a913103879000ec501055eb2a861e",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4651,
+      "season_melon_revenue_change": 2886,
+      "own_cash_change": 1651.0,
+      "opponent_cash_change": -606.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -2886,
+      "melon_cash_margin_change": 5772
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "c0423537bbf0a35aebe8aebf8818010f88a91c7e16da269d1a743fe9f7da1bf0",
+      "incumbent_replay_sha256": "f6812a54ae31a0d64a6fd156e676754c4ca7359b68b9b7967e827925601bf456",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 5198,
+      "season_melon_revenue_change": 3400,
+      "own_cash_change": 4000.0,
+      "opponent_cash_change": 15867.0,
+      "score_change": -1.0,
+      "opponent_melon_revenue_change": -3412,
+      "melon_cash_margin_change": 6812
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "b91893ea72698dd7b0b1d2030d98ebae8c9b33012d90149e981f6175a0184462",
+      "incumbent_replay_sha256": "0d9cb9601918bfa92a5377ff32c959b667f53bb67fa4e61e9a604155ee41fdef",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4188,
+      "season_melon_revenue_change": 1005,
+      "own_cash_change": 5478.0,
+      "opponent_cash_change": 4427.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1062,
+      "melon_cash_margin_change": 2067
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "216bd96d0a13416220bf95739c53003b674149f605bebe9479b7737107b539a6",
+      "incumbent_replay_sha256": "8355539c44b0bf327ea936045c6b46cfef4692779e303087d0dac77d2931544c",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4162,
+      "season_melon_revenue_change": 950,
+      "own_cash_change": 7283.0,
+      "opponent_cash_change": 3681.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1010,
+      "melon_cash_margin_change": 1960
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "e6bfe690fb3c96c5719fa3793032993d3c1891ed877c1b514ba7db5c86e474d5",
+      "incumbent_replay_sha256": "35df12c44ad19af199217689a48bbbd23e2c7b384d3cca818e220864ab8fd240",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4180,
+      "season_melon_revenue_change": 995,
+      "own_cash_change": 8116.0,
+      "opponent_cash_change": 8321.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1026,
+      "melon_cash_margin_change": 2021
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "af15c4facd5244bed2f0607ca6903cf8533f9e06e288c2b7edbaefe75d11c9a9",
+      "incumbent_replay_sha256": "e8962faecf45aae76883011074ffa7173426995fa43ce98952b39e154c166d52",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4180,
+      "season_melon_revenue_change": 995,
+      "own_cash_change": 7633.0,
+      "opponent_cash_change": 8318.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1026,
+      "melon_cash_margin_change": 2021
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "cf0985a4c204f9a5488c2c4bd08400a4fed1cd9aa03387da656526b7c3c7be19",
+      "incumbent_replay_sha256": "1e1e9e4da34ebc5b7ba071f63735611ba9781aeb681f26fcd4410c6028eb1deb",
+      "first_action_divergence_step": 241,
+      "first_state_divergence_step": 242,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 5411,
+      "season_melon_revenue_change": 1145,
+      "own_cash_change": -17342.0,
+      "opponent_cash_change": -11022.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1160,
+      "melon_cash_margin_change": 2305
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "99230ae34e1c9813fd8c3f4607510659bcdf02b594dfd65a268d30206ff38f05",
+      "incumbent_replay_sha256": "e753ccb92f5079f31a00a6214f5fe63a351fa2a5befa5ef29870347246502f9a",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4180,
+      "season_melon_revenue_change": 995,
+      "own_cash_change": 14964.0,
+      "opponent_cash_change": 10748.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1026,
+      "melon_cash_margin_change": 2021
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "0b34d53d4834d570ae052e94cc18009e5833e8a5e0194e73ebfc35e5905d5d03",
+      "incumbent_replay_sha256": "ecb419d0d5b9fb5208383fb060bc72c68f0a4ab158b6a41931b9a6c9fc2d2698",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 5470,
+      "season_melon_revenue_change": 1204,
+      "own_cash_change": 4246.0,
+      "opponent_cash_change": -5394.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -1233,
+      "melon_cash_margin_change": 2437
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "f4fa2762ad0efb855548932286d2f4fcb5c871ad3d6277e5955516828a2c60bf",
+      "incumbent_replay_sha256": "d7894b25c09cc4d76a21fe14c7485b5ef3f6c3d5adbb4fa1ed8d6e6ce06106ee",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 2925,
+      "season_melon_revenue_change": 776,
+      "own_cash_change": -4834.0,
+      "opponent_cash_change": -10959.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -823,
+      "melon_cash_margin_change": 1599
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "cec43db411e5ee450f4f97ca8579751384a925c31bc6067202b6b6aff280bb06",
+      "incumbent_replay_sha256": "1766cfb023429ae79278eab143f96d3ea4f28c991646bc8f7c8cc5bb5c8b9755",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": -191.0,
+      "opponent_cash_change": 590.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "fcab065994e755876459be2d992df4f567ace4295908e2ecacb1e8ec710a7401",
+      "incumbent_replay_sha256": "4e10a44da3669ee1b95015e187f04f71b7d121830e33704aa5375263172678c0",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": -280.0,
+      "opponent_cash_change": 411.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "492e33bda3c622ed098e37b9d352684b4761f1772f57fb1eaadcca2cf83e288d",
+      "incumbent_replay_sha256": "d58699f429255a78e0fca6fc9e7b26fd37b780b016e6b8853b0bf7b0e795c8f4",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": 772.0,
+      "opponent_cash_change": -3554.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "d0245d0a20fefab4109dd4a13e9da488173fd74949dfe3e291921c7acd0353cf",
+      "incumbent_replay_sha256": "de37f673ae12aec580cc6e30e2b3cdde72b8f9d5050b09056a1cc8a6cd45ae66",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": 774.0,
+      "opponent_cash_change": -3578.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "18175c5c90c58231450445edfcce55f233130d2f6849fa5ab332cc5cc950feea",
+      "incumbent_replay_sha256": "05f65b73d5428aa83c6a532f23dc991d9260199c9f3c71970d90e2133f64bc76",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": -16452.0,
+      "opponent_cash_change": -24496.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "0e11d296d48255239939f1c1f22c0e099495f20d4f3c26b018fcceb7ecc56d4a",
+      "incumbent_replay_sha256": "db6bea2976f1ab8bb8b13f6cc1c6e03330ea42ae3edbb745fa0fc494785c2043",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": -18324.0,
+      "opponent_cash_change": -24965.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "2304d3aed12fb4d3c4f942fc8b7d2a37f972bf4cb64484d994a694a3487e99c3",
+      "incumbent_replay_sha256": "7353d7c4f5b010e2f699c06373a60da5312ddf67ef5c6149503da5ce02350634",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 4138,
+      "season_melon_revenue_change": 926,
+      "own_cash_change": -6846.0,
+      "opponent_cash_change": -4378.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -985,
+      "melon_cash_margin_change": 1911
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "fff822df8951c04097a9bc1c414602da300eca70c0925a0623fc9cf6549ae4bf",
+      "incumbent_replay_sha256": "5c5d7b6b3a65a52ca7134900dba2c01241f7d72aa251416fc182e43418d3ebe2",
+      "first_action_divergence_step": 240,
+      "first_state_divergence_step": 241,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        9,
+        5
+      ],
+      "first_sale_hour": [
+        16,
+        10
+      ],
+      "day10_melon_revenue_change": 2925,
+      "season_melon_revenue_change": 776,
+      "own_cash_change": 797.0,
+      "opponent_cash_change": -2061.0,
+      "score_change": 0.0,
+      "opponent_melon_revenue_change": -823,
+      "melon_cash_margin_change": 1599
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "62f4ed08f5e1cc8af0dfdfc508545a34b4407129660e7d7ad231951f9a7a5a18",
+      "incumbent_replay_sha256": "1a0090ff74cabe510b4006a51860ac885920b74bea17de5569aca2a3fb1dbd56",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 5848,
+      "season_melon_revenue_change": 3298,
+      "own_cash_change": -2821.0,
+      "opponent_cash_change": -884.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "b5f720df2a532eb83ffdd2ef733bccd66e77aeec7bc731839a435d5db9ca3425",
+      "incumbent_replay_sha256": "41e711b2b5e84163969926ab5ee94a17a8bc51a3272cef1d3333448e0cf08d58",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        17,
+        9
+      ],
+      "day10_melon_revenue_change": 6378,
+      "season_melon_revenue_change": 3780,
+      "own_cash_change": -11391.0,
+      "opponent_cash_change": -11501.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "22327ebfa50cf70daad37840b4aaa4952732886f090063ebcd548fde2f05de79",
+      "incumbent_replay_sha256": "aaecdaff8defa521927ad537ff23ed8cc5e02fe40ea80cdecc4654dd0ba002ce",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4231,
+      "season_melon_revenue_change": 3053,
+      "own_cash_change": 20309.0,
+      "opponent_cash_change": 5701.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "92727d625cb55eeabd6a090fe3d7edca4ef0223abac6448ebf97e1d74dc3c0a9",
+      "incumbent_replay_sha256": "e316369159547f40f0b63793030d015c394a7a205d6fb05feea7eea69c838408",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4231,
+      "season_melon_revenue_change": 3053,
+      "own_cash_change": 34414.0,
+      "opponent_cash_change": 29941.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "13d5ad5130f8c2847e8cd043b2aa1269ce3eb093ab9814cc6f6b174493f27d9e",
+      "incumbent_replay_sha256": "2d01d62fbb35196ce5653f8baa6506126c4b937c225961b70f4e29e582d474fc",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 15,
+      "first_harvest_hour": [
+        12,
+        4
+      ],
+      "first_sale_hour": [
+        18,
+        9
+      ],
+      "day10_melon_revenue_change": 7759,
+      "season_melon_revenue_change": 4124,
+      "own_cash_change": -7878.0,
+      "opponent_cash_change": -13884.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "4ecce166668b788b4a6b5568192a47ff814fc905973915033604b605c5f78b40",
+      "incumbent_replay_sha256": "d9bbbcf17dde8fbd0ac624b76e315e5eb19a05e23129b2b778a51ad376174416",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        17,
+        9
+      ],
+      "day10_melon_revenue_change": 6171,
+      "season_melon_revenue_change": 3573,
+      "own_cash_change": 12240.0,
+      "opponent_cash_change": -3956.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "740c3f2f5038aee08eef4f3f6f500047dc641ce15cffc25f3fc9f9f078ab6887",
+      "incumbent_replay_sha256": "fea78f486cef0701b72f60b2d2389f98182ea020bd098a94f90c3c61a6db80b0",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3629,
+      "season_melon_revenue_change": 3087,
+      "own_cash_change": -3312.0,
+      "opponent_cash_change": -16133.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "837ace1e59622d5ac50a79c4ee81e3727c34155eccc2f1300716f0e9e7d7ab98",
+      "incumbent_replay_sha256": "a8219bea6482460ff09b1ec29c8f00f05fe3872d6620d19bd79ff6c7bd4d64fa",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 6352,
+      "season_melon_revenue_change": 3772,
+      "own_cash_change": -36227.0,
+      "opponent_cash_change": -48582.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "49af3f6edde435dc15fed5e247bdc973b65b80f7fd6a02ef9e12fd539c19476c",
+      "incumbent_replay_sha256": "305f8a1118bd34030421978b17230b3fdfa1d8975e4807b649f8ad610406ff60",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        17,
+        9
+      ],
+      "day10_melon_revenue_change": 6344,
+      "season_melon_revenue_change": 3746,
+      "own_cash_change": 16278.0,
+      "opponent_cash_change": -8280.0,
+      "score_change": 1.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "6e43abeca06c92c6b463263c75d7548fe1901a28d94c5ffbbd88234048972e1a",
+      "incumbent_replay_sha256": "314e790a1c593671b5750dbef54f59d83267aa51116a1b5aba5591a803e0acee",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        17,
+        9
+      ],
+      "day10_melon_revenue_change": 6344,
+      "season_melon_revenue_change": 3746,
+      "own_cash_change": 1417.0,
+      "opponent_cash_change": -12841.0,
+      "score_change": 1.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "2e432989570554e49047cd30ec59cd1ed0c7c6632d7f18fe5eb0f73ee9b3ec76",
+      "incumbent_replay_sha256": "8d0923eace28086f547a09093c285b6d7f617bfe407d7646c2b769fdd887e364",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4888,
+      "season_melon_revenue_change": 3057,
+      "own_cash_change": -19053.0,
+      "opponent_cash_change": -1609.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "2d8fb48d4b7374b6749a009b1479b688acf6749992f456b8956e05862999e223",
+      "incumbent_replay_sha256": "4d388937b0d3e566bb7b3d5c4c97e65e4ae8974cc7488c98b9cadd3e84c76f31",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4888,
+      "season_melon_revenue_change": 3057,
+      "own_cash_change": -19053.0,
+      "opponent_cash_change": -1609.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "2055a850ebbb1051b1adb1559c4135663033115f7122e7cf0013c634e4950047",
+      "incumbent_replay_sha256": "a2690047f373b4250f1fd3ae474552fea1261e21681a52354debde9783542523",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3852,
+      "season_melon_revenue_change": 2582,
+      "own_cash_change": -13010.0,
+      "opponent_cash_change": -3876.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "aafee0625b515bafd321f062ae4b8fd9441af2a2bab882ba5040d48a16d39934",
+      "incumbent_replay_sha256": "ade278a9a8a955023ef4f161fb9fad19f3966c7a163395915e8ca8af9fa4ff95",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3852,
+      "season_melon_revenue_change": 2582,
+      "own_cash_change": -13979.0,
+      "opponent_cash_change": -6255.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "7b1d77beafd1e2f0829df861c6da93bc37dd50d46fef8508a1f6cc40d5c3f3c9",
+      "incumbent_replay_sha256": "69edf2d42c9ebb3c4d1862b3774603bd558a913103879000ec501055eb2a861e",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 5053,
+      "season_melon_revenue_change": 3255,
+      "own_cash_change": 38247.0,
+      "opponent_cash_change": 32358.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "e90b1289cc93c622f2d99ddb810fd13b1125bd5f685df0ae735258c1e0bc1e09",
+      "incumbent_replay_sha256": "f6812a54ae31a0d64a6fd156e676754c4ca7359b68b9b7967e827925601bf456",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 5641,
+      "season_melon_revenue_change": 3810,
+      "own_cash_change": 1159.0,
+      "opponent_cash_change": 5034.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "e25ffd17e82aa39d8031f40589872daaceb731d38ad66daa5b507c288ed2b370",
+      "incumbent_replay_sha256": "0d9cb9601918bfa92a5377ff32c959b667f53bb67fa4e61e9a604155ee41fdef",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4338,
+      "season_melon_revenue_change": 1205,
+      "own_cash_change": 10622.0,
+      "opponent_cash_change": 22343.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "4f7c2a34e59c7e5a7938f0f3b07c8283071049be8301e52a65e0c9b59026a50d",
+      "incumbent_replay_sha256": "8355539c44b0bf327ea936045c6b46cfef4692779e303087d0dac77d2931544c",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4269,
+      "season_melon_revenue_change": 1107,
+      "own_cash_change": 23131.0,
+      "opponent_cash_change": 25339.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "6bb7d22a4dcdc9d4f39309c8c34b99e9ec68a4f15ad202da36a14ccad3ff913d",
+      "incumbent_replay_sha256": "35df12c44ad19af199217689a48bbbd23e2c7b384d3cca818e220864ab8fd240",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4270,
+      "season_melon_revenue_change": 1135,
+      "own_cash_change": -6298.0,
+      "opponent_cash_change": -9079.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "5d643ec49598d56f60236a562a6be8b90fb68333f93b88283fdf834bcd867a97",
+      "incumbent_replay_sha256": "e8962faecf45aae76883011074ffa7173426995fa43ce98952b39e154c166d52",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4270,
+      "season_melon_revenue_change": 1135,
+      "own_cash_change": -9965.0,
+      "opponent_cash_change": -15938.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "7cd2a1bf19377e000ef2d6a0062b427e6e326de5e227793b1d09772690efc789",
+      "incumbent_replay_sha256": "1e1e9e4da34ebc5b7ba071f63735611ba9781aeb681f26fcd4410c6028eb1deb",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 5480,
+      "season_melon_revenue_change": 1264,
+      "own_cash_change": -17442.0,
+      "opponent_cash_change": -9549.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "d0fad27a99b9baba9b47954d90ffba42326c25722ae851e29ab64039c4a130cc",
+      "incumbent_replay_sha256": "e753ccb92f5079f31a00a6214f5fe63a351fa2a5befa5ef29870347246502f9a",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4235,
+      "season_melon_revenue_change": 1100,
+      "own_cash_change": 12492.0,
+      "opponent_cash_change": 12289.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "94ba148662dd4d436e523af908c4a30a445fa41be530c5ea7d56b759863b3010",
+      "incumbent_replay_sha256": "ecb419d0d5b9fb5208383fb060bc72c68f0a4ab158b6a41931b9a6c9fc2d2698",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 5602,
+      "season_melon_revenue_change": 1386,
+      "own_cash_change": -6923.0,
+      "opponent_cash_change": -5599.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "ab86bc5c607ee4c5853267f4ac497d48b44d015c4fb5372f4cf9e67fb8056587",
+      "incumbent_replay_sha256": "d7894b25c09cc4d76a21fe14c7485b5ef3f6c3d5adbb4fa1ed8d6e6ce06106ee",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3032,
+      "season_melon_revenue_change": 933,
+      "own_cash_change": 8077.0,
+      "opponent_cash_change": -9890.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "11072c2bfe17bacdc27ba965f483be1229718a37a5e23e7c356c9c52c8dec5d1",
+      "incumbent_replay_sha256": "1766cfb023429ae79278eab143f96d3ea4f28c991646bc8f7c8cc5bb5c8b9755",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4245,
+      "season_melon_revenue_change": 1083,
+      "own_cash_change": 3810.0,
+      "opponent_cash_change": 6892.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "0a4360765ce212733ec9f260fcbd1fcd386a6cef1683d4b5dfda42e49254ee06",
+      "incumbent_replay_sha256": "4e10a44da3669ee1b95015e187f04f71b7d121830e33704aa5375263172678c0",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4245,
+      "season_melon_revenue_change": 1083,
+      "own_cash_change": 3767.0,
+      "opponent_cash_change": 6908.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "69d4b4582c85cb5d90251db86b8d93b1087b769f0d65de25668f5f721b6170ed",
+      "incumbent_replay_sha256": "d58699f429255a78e0fca6fc9e7b26fd37b780b016e6b8853b0bf7b0e795c8f4",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3052,
+      "season_melon_revenue_change": 966,
+      "own_cash_change": -832.0,
+      "opponent_cash_change": -4066.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "077a384197ba0728e9331aae3f4f20130ad43ad503a99481b23705814b3da749",
+      "incumbent_replay_sha256": "de37f673ae12aec580cc6e30e2b3cdde72b8f9d5050b09056a1cc8a6cd45ae66",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3052,
+      "season_melon_revenue_change": 966,
+      "own_cash_change": -832.0,
+      "opponent_cash_change": -4052.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "f61d6a3c37c340922e6cabb7dcc30e2d1b053f54c166bb8fecb7eab553bccea4",
+      "incumbent_replay_sha256": "05f65b73d5428aa83c6a532f23dc991d9260199c9f3c71970d90e2133f64bc76",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4245,
+      "season_melon_revenue_change": 1083,
+      "own_cash_change": 26936.0,
+      "opponent_cash_change": 5208.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "621a7be2998f2c39076476a898697a7ccb2ac5dc17312daa94b7e3da8579cad4",
+      "incumbent_replay_sha256": "db6bea2976f1ab8bb8b13f6cc1c6e03330ea42ae3edbb745fa0fc494785c2043",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4245,
+      "season_melon_revenue_change": 1083,
+      "own_cash_change": 24031.0,
+      "opponent_cash_change": 1988.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "430d38c69ab5dbae8b0c327b37673eca1947901dac4d5e6ef605a82956b037c2",
+      "incumbent_replay_sha256": "7353d7c4f5b010e2f699c06373a60da5312ddf67ef5c6149503da5ce02350634",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 4245,
+      "season_melon_revenue_change": 1083,
+      "own_cash_change": -8745.0,
+      "opponent_cash_change": 2383.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "5bce94e405eacef1d2365d37f11f3af61e3a4f1979935849806ff40809cf55f0",
+      "incumbent_replay_sha256": "5c5d7b6b3a65a52ca7134900dba2c01241f7d72aa251416fc182e43418d3ebe2",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        4
+      ],
+      "first_sale_hour": [
+        16,
+        9
+      ],
+      "day10_melon_revenue_change": 3032,
+      "season_melon_revenue_change": 933,
+      "own_cash_change": 9517.0,
+      "opponent_cash_change": 11179.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "2aeb9f02838580c3703d6d3d7e96d0f43edef9a56b3748756abffccd3804deae",
+      "incumbent_replay_sha256": "1a0090ff74cabe510b4006a51860ac885920b74bea17de5569aca2a3fb1dbd56",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -2335,
+      "season_melon_revenue_change": -1212,
+      "own_cash_change": -19498.0,
+      "opponent_cash_change": -21044.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "f7f7b3a05360da0132beca6bbd4e6f00f6464fcb82e6cfea605f2b192b7eb934",
+      "incumbent_replay_sha256": "41e711b2b5e84163969926ab5ee94a17a8bc51a3272cef1d3333448e0cf08d58",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 21,
+      "first_harvest_hour": [
+        10,
+        7
+      ],
+      "first_sale_hour": [
+        17,
+        13
+      ],
+      "day10_melon_revenue_change": -5225,
+      "season_melon_revenue_change": -1172,
+      "own_cash_change": -3099.0,
+      "opponent_cash_change": 207.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "101614c96abc04374488664f94f5b2183e8dca5c81bb8d5f02373e9d96ea8b7c",
+      "incumbent_replay_sha256": "aaecdaff8defa521927ad537ff23ed8cc5e02fe40ea80cdecc4654dd0ba002ce",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -4673,
+      "season_melon_revenue_change": -1520,
+      "own_cash_change": -2652.0,
+      "opponent_cash_change": 4228.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "f50dcf5ccc20c6df319f9e79eedcb93b7090269e10d26ca21d1f3a79f703ba64",
+      "incumbent_replay_sha256": "e316369159547f40f0b63793030d015c394a7a205d6fb05feea7eea69c838408",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -4673,
+      "season_melon_revenue_change": -1520,
+      "own_cash_change": 3807.0,
+      "opponent_cash_change": 21654.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "c739a109e467dfb009ba92b3b8f80e11b846fd21131a6c98fcd8db3fcba48b25",
+      "incumbent_replay_sha256": "2d01d62fbb35196ce5653f8baa6506126c4b937c225961b70f4e29e582d474fc",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        12,
+        6
+      ],
+      "first_sale_hour": [
+        18,
+        12
+      ],
+      "day10_melon_revenue_change": -3306,
+      "season_melon_revenue_change": -133,
+      "own_cash_change": 4396.0,
+      "opponent_cash_change": 21641.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "7324b2f99d37c051c7bccd4e40aec735df10c36c27afe8230d20807ad0d565b8",
+      "incumbent_replay_sha256": "d9bbbcf17dde8fbd0ac624b76e315e5eb19a05e23129b2b778a51ad376174416",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        6
+      ],
+      "first_sale_hour": [
+        17,
+        12
+      ],
+      "day10_melon_revenue_change": -4894,
+      "season_melon_revenue_change": -684,
+      "own_cash_change": 24885.0,
+      "opponent_cash_change": 31720.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "c6b02580255404ff1a716d0e0496e11aca282e7b9a780656b70bad127e180f36",
+      "incumbent_replay_sha256": "fea78f486cef0701b72f60b2d2389f98182ea020bd098a94f90c3c61a6db80b0",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5314,
+      "season_melon_revenue_change": -1572,
+      "own_cash_change": -8439.0,
+      "opponent_cash_change": -14699.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "dec709784df9cbef02e24e114deeef18f6f56a4cd603ed351985075c820c0d21",
+      "incumbent_replay_sha256": "a8219bea6482460ff09b1ec29c8f00f05fe3872d6620d19bd79ff6c7bd4d64fa",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -2591,
+      "season_melon_revenue_change": -857,
+      "own_cash_change": -13919.0,
+      "opponent_cash_change": -16854.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "0feb50398860c61637497c9c07191696f4a0241fa0dc58f140c40ba82ae36cba",
+      "incumbent_replay_sha256": "305f8a1118bd34030421978b17230b3fdfa1d8975e4807b649f8ad610406ff60",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        7
+      ],
+      "first_sale_hour": [
+        17,
+        13
+      ],
+      "day10_melon_revenue_change": -3640,
+      "season_melon_revenue_change": -548,
+      "own_cash_change": 21249.0,
+      "opponent_cash_change": 6984.0,
+      "score_change": 1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "03b7418aeae711e30c255f6eafdff6c344caab31f48b8fe669f0f8bcb5b958eb",
+      "incumbent_replay_sha256": "314e790a1c593671b5750dbef54f59d83267aa51116a1b5aba5591a803e0acee",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        7
+      ],
+      "first_sale_hour": [
+        17,
+        13
+      ],
+      "day10_melon_revenue_change": -1524,
+      "season_melon_revenue_change": -520,
+      "own_cash_change": 3254.0,
+      "opponent_cash_change": -1319.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "50cdb04bc47609347640bf55d593489a2579e7b3acde43d8e8afacdf007c7510",
+      "incumbent_replay_sha256": "8d0923eace28086f547a09093c285b6d7f617bfe407d7646c2b769fdd887e364",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -5033,
+      "season_melon_revenue_change": -1577,
+      "own_cash_change": -29923.0,
+      "opponent_cash_change": 2734.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "f2ccfdb841c002961868118e65686d94c0e3526cd6d55378a3c9d1d998860434",
+      "incumbent_replay_sha256": "4d388937b0d3e566bb7b3d5c4c97e65e4ae8974cc7488c98b9cadd3e84c76f31",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        10,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -5033,
+      "season_melon_revenue_change": -1577,
+      "own_cash_change": -29923.0,
+      "opponent_cash_change": 2734.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "ad1f765a978e1904169c45fe0e5dc391940255b616b58d1e57442b2fd677f2ed",
+      "incumbent_replay_sha256": "a2690047f373b4250f1fd3ae474552fea1261e21681a52354debde9783542523",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -7490,
+      "season_melon_revenue_change": -2246,
+      "own_cash_change": -19193.0,
+      "opponent_cash_change": -17139.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "722574a83fd95e6758f39309162b5c4f9c6ca5e8e30a025e045dfbda5fe0aefe",
+      "incumbent_replay_sha256": "ade278a9a8a955023ef4f161fb9fad19f3966c7a163395915e8ca8af9fa4ff95",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -7490,
+      "season_melon_revenue_change": -2246,
+      "own_cash_change": -20915.0,
+      "opponent_cash_change": -21742.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "26f851062fa9faa260aa4687bec8ac56ca87618e652b3c0634e6b0ab69fd32fc",
+      "incumbent_replay_sha256": "69edf2d42c9ebb3c4d1862b3774603bd558a913103879000ec501055eb2a861e",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -6032,
+      "season_melon_revenue_change": -1039,
+      "own_cash_change": 43419.0,
+      "opponent_cash_change": 36614.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "2803498df765bdca8435d4e9bfdc79f9737c6ab381a584079d70d800616ceaee",
+      "incumbent_replay_sha256": "f6812a54ae31a0d64a6fd156e676754c4ca7359b68b9b7967e827925601bf456",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -4416,
+      "season_melon_revenue_change": -929,
+      "own_cash_change": -12506.0,
+      "opponent_cash_change": -8415.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 0,
+      "candidate_replay_sha256": "b0dde926484ade368373868f3c8681a34eae9ad1b6080a2607bdf181c3bba61a",
+      "incumbent_replay_sha256": "0d9cb9601918bfa92a5377ff32c959b667f53bb67fa4e61e9a604155ee41fdef",
+      "first_action_divergence_step": 144,
+      "first_state_divergence_step": 145,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        10,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -3881,
+      "season_melon_revenue_change": -458,
+      "own_cash_change": 7672.0,
+      "opponent_cash_change": 9904.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5000,
+      "seat": 1,
+      "candidate_replay_sha256": "070deb18afd7dad5c506f2d529d47a815e082a32b88d87cc59a79071889d1db2",
+      "incumbent_replay_sha256": "8355539c44b0bf327ea936045c6b46cfef4692779e303087d0dac77d2931544c",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3922,
+      "season_melon_revenue_change": -528,
+      "own_cash_change": 16466.0,
+      "opponent_cash_change": 15906.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 0,
+      "candidate_replay_sha256": "32d6558b8e98a0109bdde949997d0bc88face2420fe2a4b4591f952f1ed199d9",
+      "incumbent_replay_sha256": "35df12c44ad19af199217689a48bbbd23e2c7b384d3cca818e220864ab8fd240",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -3989,
+      "season_melon_revenue_change": -554,
+      "own_cash_change": -178.0,
+      "opponent_cash_change": -2515.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5001,
+      "seat": 1,
+      "candidate_replay_sha256": "416cb4773c96a545292715cd3ff2f6a257e1b01ac2a844ddc5051af0c85b5dfc",
+      "incumbent_replay_sha256": "e8962faecf45aae76883011074ffa7173426995fa43ce98952b39e154c166d52",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -3989,
+      "season_melon_revenue_change": -554,
+      "own_cash_change": -676.0,
+      "opponent_cash_change": -2549.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 0,
+      "candidate_replay_sha256": "3d1cc8021c2563d38fa54dc7a06e0e1060e59691c509cf807a6c43fb524761a9",
+      "incumbent_replay_sha256": "1e1e9e4da34ebc5b7ba071f63735611ba9781aeb681f26fcd4410c6028eb1deb",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        6
+      ],
+      "first_sale_hour": [
+        16,
+        12
+      ],
+      "day10_melon_revenue_change": -2779,
+      "season_melon_revenue_change": -425,
+      "own_cash_change": -11725.0,
+      "opponent_cash_change": 19486.0,
+      "score_change": -1.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5002,
+      "seat": 1,
+      "candidate_replay_sha256": "2e08e15960051dc18383d4eb12036095daba0d5ae77f52873a49ba78f2128cd4",
+      "incumbent_replay_sha256": "e753ccb92f5079f31a00a6214f5fe63a351fa2a5befa5ef29870347246502f9a",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5332,
+      "season_melon_revenue_change": -648,
+      "own_cash_change": -12388.0,
+      "opponent_cash_change": -6260.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 0,
+      "candidate_replay_sha256": "b6a0fe99ab41ca7649d9d751ec1ee72d1c374df70af6f5d452fd96d1c89aa129",
+      "incumbent_replay_sha256": "ecb419d0d5b9fb5208383fb060bc72c68f0a4ab158b6a41931b9a6c9fc2d2698",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3967,
+      "season_melon_revenue_change": -378,
+      "own_cash_change": -1017.0,
+      "opponent_cash_change": -8839.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5003,
+      "seat": 1,
+      "candidate_replay_sha256": "0216204167aa573b87d589c365f9e81635304a7eb99905f88307e0c36fd93023",
+      "incumbent_replay_sha256": "d7894b25c09cc4d76a21fe14c7485b5ef3f6c3d5adbb4fa1ed8d6e6ce06106ee",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5244,
+      "season_melon_revenue_change": -776,
+      "own_cash_change": -24742.0,
+      "opponent_cash_change": -19900.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 0,
+      "candidate_replay_sha256": "a762012907137ad9804a9c0abada2f56900cddeaad865bf83aea3382cad1458e",
+      "incumbent_replay_sha256": "1766cfb023429ae79278eab143f96d3ea4f28c991646bc8f7c8cc5bb5c8b9755",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3946,
+      "season_melon_revenue_change": -552,
+      "own_cash_change": 10162.0,
+      "opponent_cash_change": 25993.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5004,
+      "seat": 1,
+      "candidate_replay_sha256": "147af4f09dd2933146aba510358a68159102fba5c488a5467fd7ac0f5f48ef0b",
+      "incumbent_replay_sha256": "4e10a44da3669ee1b95015e187f04f71b7d121830e33704aa5375263172678c0",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3946,
+      "season_melon_revenue_change": -552,
+      "own_cash_change": 10108.0,
+      "opponent_cash_change": 26037.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 0,
+      "candidate_replay_sha256": "97c8ba9a548067b2e4bded093df251eafa184c502ff8c5aa05f113a2f7ec1aff",
+      "incumbent_replay_sha256": "d58699f429255a78e0fca6fc9e7b26fd37b780b016e6b8853b0bf7b0e795c8f4",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5333,
+      "season_melon_revenue_change": -701,
+      "own_cash_change": 10118.0,
+      "opponent_cash_change": 11154.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5005,
+      "seat": 1,
+      "candidate_replay_sha256": "84b83bffb0171d7570b574eba1b7051146b3a4c59fbfa266328b87e86ab01b31",
+      "incumbent_replay_sha256": "de37f673ae12aec580cc6e30e2b3cdde72b8f9d5050b09056a1cc8a6cd45ae66",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5333,
+      "season_melon_revenue_change": -701,
+      "own_cash_change": 10094.0,
+      "opponent_cash_change": 11192.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 0,
+      "candidate_replay_sha256": "3880225bd807bae4a6d2225a017b5985ceffaab3bd233133047794e9385a9a39",
+      "incumbent_replay_sha256": "05f65b73d5428aa83c6a532f23dc991d9260199c9f3c71970d90e2133f64bc76",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3946,
+      "season_melon_revenue_change": -552,
+      "own_cash_change": 939.0,
+      "opponent_cash_change": -6395.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5006,
+      "seat": 1,
+      "candidate_replay_sha256": "053ff3b3d25e17b552d8383b4df151442e4e0e4665b0848d83917733e2c371ff",
+      "incumbent_replay_sha256": "db6bea2976f1ab8bb8b13f6cc1c6e03330ea42ae3edbb745fa0fc494785c2043",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3946,
+      "season_melon_revenue_change": -552,
+      "own_cash_change": -3034.0,
+      "opponent_cash_change": -9285.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 0,
+      "candidate_replay_sha256": "90df43fc62ddf7e54b0412f38f8be49657786045443b8d68531ed6bd3343a777",
+      "incumbent_replay_sha256": "7353d7c4f5b010e2f699c06373a60da5312ddf67ef5c6149503da5ce02350634",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 12,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -3946,
+      "season_melon_revenue_change": -552,
+      "own_cash_change": -6653.0,
+      "opponent_cash_change": 5397.0,
+      "score_change": 0.0
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-seyam",
+      "seed": 5007,
+      "seat": 1,
+      "candidate_replay_sha256": "0d065811d7f6a193045a55720d924d0886eb317d664447319f39f2b4f3701298",
+      "incumbent_replay_sha256": "5c5d7b6b3a65a52ca7134900dba2c01241f7d72aa251416fc182e43418d3ebe2",
+      "first_action_divergence_step": 162,
+      "first_state_divergence_step": 163,
+      "first_shop_divergence_day": 9,
+      "first_harvest_hour": [
+        9,
+        7
+      ],
+      "first_sale_hour": [
+        16,
+        13
+      ],
+      "day10_melon_revenue_change": -5159,
+      "season_melon_revenue_change": -702,
+      "own_cash_change": 10803.0,
+      "opponent_cash_change": -20.0,
+      "score_change": 0.0
+    }
+  ],
+  "representative_timelines": [
+    {
+      "candidate": "incumbent",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "day10": [
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4,
+          "position": [
+            2,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8,
+          "position": [
+            3,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 9,
+          "position": [
+            0,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11,
+          "position": [
+            1,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6,
+          "position": [
+            2,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2,
+          "position": [
+            0,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 12,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12,
+          "position": [
+            1,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0,
+          "position": [
+            3,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 9
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 24,
+          "cash": 6049
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3,
+          "position": [
+            2,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1394
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10,
+          "position": [
+            0,
+            4
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 2563
+        },
+        {
+          "day": 10,
+          "hour": 20,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12
+        },
+        {
+          "day": 10,
+          "hour": 21,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 9,
+          "position": [
+            1,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 21,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1041
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5,
+          "position": [
+            1,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 23,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3
+        }
+      ]
+    },
+    {
+      "candidate": "melon",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "day10": [
+        {
+          "day": 10,
+          "hour": 4,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0,
+          "position": [
+            3,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1,
+          "position": [
+            1,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 5,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5,
+          "position": [
+            0,
+            4
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 6,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6,
+          "position": [
+            2,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 7,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2,
+          "position": [
+            2,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 7,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3,
+          "position": [
+            1,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 7,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12,
+          "position": [
+            0,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 8,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4,
+          "position": [
+            3,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10,
+          "position": [
+            1,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1617
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 7,
+          "position": [
+            0,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8,
+          "position": [
+            2,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 3058
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11,
+          "position": [
+            1,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1495
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 18,
+          "cash": 4412
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1432
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1394
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 7
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 2473
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1014
+        }
+      ]
+    },
+    {
+      "candidate": "melon_race_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "day10": [
+        {
+          "day": 10,
+          "hour": 5,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0,
+          "position": [
+            3,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 6,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1,
+          "position": [
+            2,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 6,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5,
+          "position": [
+            1,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 7,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3,
+          "position": [
+            0,
+            4
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 8,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2,
+          "position": [
+            2,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 8,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6,
+          "position": [
+            1,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 8,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 7,
+          "position": [
+            0,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 9,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4,
+          "position": [
+            3,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8,
+          "position": [
+            2,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 10,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1617
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 9,
+          "position": [
+            1,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10,
+          "position": [
+            0,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 11,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 3058
+        },
+        {
+          "day": 10,
+          "hour": 12,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3
+        },
+        {
+          "day": 10,
+          "hour": 12,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12,
+          "position": [
+            1,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 12,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1495
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 7
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 18,
+          "cash": 4412
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1432
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1325
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 9
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10
+        },
+        {
+          "day": 10,
+          "hour": 18,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 2290
+        },
+        {
+          "day": 10,
+          "hour": 20,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 12
+        },
+        {
+          "day": 10,
+          "hour": 20,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 876
+        }
+      ]
+    },
+    {
+      "candidate": "melon_fertilizer_only",
+      "opponent": "reference-cok",
+      "seed": 5000,
+      "seat": 0,
+      "day10": [
+        {
+          "day": 10,
+          "hour": 7,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6,
+          "position": [
+            1,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 12,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8,
+          "position": [
+            3,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 13,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1617
+        },
+        {
+          "day": 10,
+          "hour": 14,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11,
+          "position": [
+            3,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4,
+          "position": [
+            2,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1,
+          "position": [
+            2,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2,
+          "position": [
+            0,
+            3
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 16,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5,
+          "position": [
+            2,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 17,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6,
+          "position": [
+            0,
+            4
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 8
+        },
+        {
+          "day": 10,
+          "hour": 19,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 11
+        },
+        {
+          "day": 10,
+          "hour": 20,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 4
+        },
+        {
+          "day": 10,
+          "hour": 20,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 12,
+          "cash": 2719
+        },
+        {
+          "day": 10,
+          "hour": 21,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 3,
+          "position": [
+            1,
+            2
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 21,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 6,
+          "cash": 1258
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 1
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 2
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 6
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 7,
+          "position": [
+            1,
+            1
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 22,
+          "op": "HARVEST",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 10,
+          "position": [
+            1,
+            0
+          ],
+          "planted_day": 0
+        },
+        {
+          "day": 10,
+          "hour": 23,
+          "op": "DROP",
+          "item": "MELON",
+          "qty": 6,
+          "worker": 5
+        },
+        {
+          "day": 10,
+          "hour": 23,
+          "op": "SELL",
+          "item": "MELON",
+          "qty": 18,
+          "cash": 3118
+        }
+      ]
+    }
+  ],
+  "market_transfer": {
+    "reference-cok": {
+      "own_melon_revenue_change": 2916.125,
+      "opponent_melon_revenue_change": -2945.75,
+      "melon_cash_margin_change": 5861.875,
+      "combined_bilateral_melon_revenue_change": -29.625,
+      "final_cash_margin_change": 6746.625,
+      "melon_share_of_cash_margin_change": 0.8688603561039779,
+      "remainder_margin_change": 884.75,
+      "qualification": "Accounting identity, not a controlled causal decomposition; later shops and other production can respond to the intervention."
+    },
+    "reference-seyam": {
+      "own_melon_revenue_change": 957.6875,
+      "opponent_melon_revenue_change": -1005.25,
+      "melon_cash_margin_change": 1962.9375,
+      "combined_bilateral_melon_revenue_change": -47.5625,
+      "final_cash_margin_change": 2481.5625,
+      "melon_share_of_cash_margin_change": 0.7910086890819796,
+      "remainder_margin_change": 518.625,
+      "qualification": "Accounting identity, not a controlled causal decomposition; later shops and other production can respond to the intervention."
+    },
+    "weighted": {
+      "own_melon_revenue_change": 1936.90625,
+      "opponent_melon_revenue_change": -1975.5,
+      "melon_cash_margin_change": 3912.40625,
+      "combined_bilateral_melon_revenue_change": -38.59375,
+      "final_cash_margin_change": 4614.09375,
+      "melon_share_of_cash_margin_change": 0.8479251749056897,
+      "remainder_margin_change": 701.6875,
+      "qualification": "Accounting identity, not a controlled causal decomposition; later shops and other production can respond to the intervention."
+    }
+  },
+  "current_frontier": {
+    "manifest": "data\\raw\\breakthrough-race-mooman.json",
+    "manifest_sha256": "1599187e978097fd34e8e1f7fa69f3165354c1594c84e4f027ab0cf8665bf8d8",
+    "revision": "a1ea464abe602b9fdf34471ccd33218df8854811",
+    "declared_panel": {
+      "seeds": [
+        5000,
+        5001,
+        5002,
+        5003,
+        5004,
+        5005,
+        5006,
+        5007
+      ],
+      "seats": [
+        0,
+        1
+      ],
+      "opponents": [
+        "data/raw/reference-mooman/main.py"
+      ]
+    },
+    "opponent_executables": {
+      "data\\raw\\reference-mooman\\main.py": {
+        "data\\raw\\reference-mooman\\actions.json": "17d503f2fd20d59f9c0f14024d1e74a8add8bb9b5561d4d908b45deecb5495ef",
+        "data\\raw\\reference-mooman\\LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "data\\raw\\reference-mooman\\main.py": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded",
+        "data\\raw\\reference-mooman\\router.py": "d6d74997dc5b483db63d8e39cafa1afeec0f366824e75107e109123f111e866b"
+      }
+    },
+    "results": {
+      "incumbent": {
+        "games": 16,
+        "wins": 0,
+        "draws": 0,
+        "cash": 72725.1875,
+        "gap": -24382.9375,
+        "non_done_games": 0,
+        "stderr_turns": 0
+      },
+      "melon_race_only": {
+        "games": 16,
+        "wins": 0,
+        "draws": 0,
+        "cash": 72660.625,
+        "gap": -25332.8125,
+        "non_done_games": 0,
+        "stderr_turns": 0
+      }
+    },
+    "conclusion": "Historical-pool challenger only: no demonstrated improvement against the current Mooman reference; both policies lose every inspected game."
+  }
+}

@@ -1,0 +1,191 @@
+"""Screen declared structural candidates on eight new development seed clusters."""
+
+import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from experiments.season_plans import build
+from strategy_screen import screen
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument(
+        "--candidates", nargs="+", default=["incumbent", "wool", "dairy", "balanced"]
+    )
+    parser.add_argument("--seeds", nargs="+", type=int, default=list(range(5000, 5008)))
+    parser.add_argument("--opponents", nargs="+", default=["cok", "seyam"])
+    args = parser.parse_args()
+    candidates = {}
+    for name in args.candidates:
+        if name == "incumbent":
+            candidates[name] = Path("submissions/20260909-v8/main.py").read_text(encoding="utf-8")
+        elif name == "market":
+            from experiments.market_dispatch import build as market_build
+
+            candidates[name] = market_build()
+        elif name == "routes":
+            from experiments.service_routes import build as routes_build
+
+            candidates[name] = routes_build()
+        elif name == "terminal":
+            from experiments.terminal_crops import build as terminal_build
+
+            candidates[name] = terminal_build()
+        elif name == "labor":
+            from experiments.labor_calendar import build as labor_build
+
+            candidates[name] = labor_build()
+        elif name == "daily_routes":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build()
+        elif name in ("fleet10", "fleet_cereal", "fleet10_cereal"):
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(
+                mature_hands=10 if "10" in name else None, cereal="cereal" in name
+            )
+        elif name == "capacity_budget":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(cereal=True, budget_seconds=0.150)
+        elif name == "capacity_land":
+            from experiments.daily_routes import build as daily_build
+
+            candidates[name] = daily_build(cereal=True, budget_seconds=0.150, extra_quadrant=True)
+        elif name in ("capacity_herd6", "capacity_adaptive", "capacity_herd6_adaptive"):
+            from experiments.early_calendar import build as calendar_build
+
+            candidates[name] = calendar_build(
+                early_herd="herd6" in name, adaptive_crops="adaptive" in name
+            )
+        elif name in ("capacity_no_feed_bonus", "capacity_cohort15", "capacity_cohort3"):
+            from experiments.crop_opportunity import build as opportunity_build
+
+            candidates[name] = opportunity_build(
+                "no_multiplier" if name == "capacity_no_feed_bonus" else "cohort",
+                start_day=3 if name == "capacity_cohort3" else 15,
+            )
+        elif name == "capacity_market_collection":
+            from experiments.market_collection import build as collection_build
+
+            candidates[name] = collection_build()
+        elif name in ("capacity_investment_cash", "capacity_land_cash"):
+            from experiments.investment_liquidity import build as liquidity_build
+
+            candidates[name] = liquidity_build(seed_capital=name == "capacity_investment_cash")
+        elif name == "capacity_animal_dp":
+            from experiments.fleet_animal_service import build as animal_dp_build
+
+            candidates[name] = animal_dp_build()
+        elif name in ("capacity_floor", "capacity_floor_animals"):
+            from experiments.floor_forecast import build as floor_build
+
+            candidates[name] = floor_build(animal_service=name == "capacity_floor_animals")
+        elif name in ("capacity_care_bank", "capacity_floor_care"):
+            from experiments.care_bank_forecast import build as care_build
+
+            candidates[name] = care_build(floor_forecast=name == "capacity_floor_care")
+        elif name in ("capacity_water", "capacity_water_market"):
+            from experiments.deadline_water import build as water_build
+
+            candidates[name] = (
+                water_build()
+                if name == "capacity_water"
+                else water_build(
+                    base="a028706ed48d71983ea57522eedf9bed450341a8f2247b97281b8e2a7a4f28eb"
+                )
+            )
+        elif name == "capacity_financed":
+            from experiments.crop_opportunity_financed import build as financed_build
+
+            candidates[name] = financed_build()
+        elif name in ("capacity_diversified", "capacity_crop_focus"):
+            from experiments.diversified_calendar import build as diversified_build
+
+            candidates[name] = diversified_build(compact_herd=name == "capacity_crop_focus")
+        elif name == "capacity_market_safe":
+            from experiments.market_collection_safe import build as safe_market_build
+
+            candidates[name] = safe_market_build()
+        elif name in ("capacity_investment_safe", "capacity_land_safe"):
+            from experiments.investment_liquidity_safe import build as safe_liquidity_build
+
+            candidates[name] = safe_liquidity_build(seed_capital=name == "capacity_investment_safe")
+        elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
+            from experiments.berry_bridge import build as bridge_build
+
+            candidates[name] = bridge_build(
+                berries=4 if "bridge" in name else 0,
+                cereal=True,
+                arrival_replan="arrival" in name,
+                budget_seconds=0.150,
+            )
+        elif name in ("capacity_service", "capacity_fertilizer", "capacity_renewal"):
+            from experiments.cereal_service import build as cereal_build
+
+            candidates[name] = cereal_build(
+                fertilizer=name != "capacity_renewal",
+                renewal=name != "capacity_fertilizer",
+                cereal_capacity=True,
+                budget_seconds=0.150,
+            )
+        elif name == "animal_service":
+            from experiments.animal_service import build as service_build
+
+            candidates[name] = service_build()
+        elif name == "startup":
+            from experiments.startup_liquidity import build as startup_build
+
+            candidates[name] = startup_build()
+        elif name == "wheat_service":
+            from experiments.wheat_service import build as wheat_build
+
+            candidates[name] = wheat_build()
+        elif name == "marginal_herd":
+            from experiments.marginal_herd import build as herd_build
+
+            candidates[name] = herd_build()
+        elif name == "capacity_marginal_herd":
+            from experiments.marginal_herd import build as herd_build
+
+            candidates[name] = herd_build(
+                base="fca083cdb5ac82dc4ad39a4227ef60ca57c948f819b565804aa706994f8e61ba"
+            )
+        elif name.startswith("rotation"):
+            from experiments.crop_rotation import build as rotation_build
+
+            candidates[name] = rotation_build(int(name.removeprefix("rotation")))
+        elif name.startswith("melon"):
+            from experiments.melon_race import build as melon_build
+
+            modes = {
+                "melon": (True, True, True),
+                "melon_race_only": (False, True, True),
+                "melon_fertilizer_only": (True, False, False),
+                "melon_harvest_only": (False, True, False),
+                "melon_sale_only": (False, False, True),
+            }
+            candidates[name] = melon_build(*modes[name])
+        elif name.endswith("_herd"):
+            candidates[name] = build(name.removesuffix("_herd"), scope="herd")
+        else:
+            candidates[name] = build(name)
+    screen(
+        candidates,
+        [f"data/raw/reference-{name}/main.py" for name in args.opponents],
+        args.seeds,
+        args.output,
+        args.workers,
+        inputs=[__file__, *map(str, Path("experiments").glob("*.py"))],
+        replays="reports/replays/breakthrough",
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -20,11 +20,11 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''        if sum(shed.values()) < 70 and day < 29:
+    old = """        if sum(shed.values()) < 70 and day < 29:
             quantity = min(quantity, p["sell_batch"])
         if quantity:
-            market.append(["SELL", item, quantity])'''
-    new = '''        if sum(shed.values()) < 70 and day < 29:
+            market.append(["SELL", item, quantity])"""
+    new = """        if sum(shed.values()) < 70 and day < 29:
             quantity = min(quantity, p["sell_batch"])
         # A $1 sale removes durable shed stock without reducing future supply.
         # Keep room for incoming cargo; final liquidation remains unchanged.
@@ -36,7 +36,7 @@ def build():
         ):
             quantity = 0
         if quantity:
-            market.append(["SELL", item, quantity])'''
+            market.append(["SELL", item, quantity])"""
     assert source.count(old) == 1
     source = source.replace(old, new)
     compile(source, "floor_holdback", "exec")

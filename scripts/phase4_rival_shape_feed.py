@@ -18,7 +18,7 @@ def build():
     source = raw.decode()
     needle = "        crop = max(values, key=lambda c: values[c])"
     assert source.count(needle) == 1
-    replacement = f'''        rival = obs["farms"][1 - obs["player"]]
+    replacement = f"""        rival = obs["farms"][1 - obs["player"]]
         rival_animals = [
             tile["animal"]
             for row in rival["tiles"]
@@ -34,7 +34,7 @@ def build():
             feed_value = crop_value("WHEAT", day, forecast["WHEAT"], fert_price, False)
             if planned["WHEAT"] < target_wheat and feed_value > 0:
                 values["WHEAT"] = max(values.values()) + 1
-{needle}'''
+{needle}"""
     source = source.replace(needle, replacement)
     compile(source, "rival_shape_feed", "exec")
     return source
@@ -44,7 +44,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--screen", action="store_true")
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--output", type=Path, default=Path("data/raw/phase4-rival-shape-feed.json"))
+    parser.add_argument(
+        "--output", type=Path, default=Path("data/raw/phase4-rival-shape-feed.json")
+    )
     args = parser.parse_args()
     source = build()
     digest = hashlib.sha256(source.encode()).hexdigest()

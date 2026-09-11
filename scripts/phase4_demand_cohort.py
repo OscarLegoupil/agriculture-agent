@@ -19,7 +19,7 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old = '''        # Short crops bridge the first long cohort's startup costs.
+    old = """        # Short crops bridge the first long cohort's startup costs.
         # Later recurring cohorts must arrive early enough to repay before liquidation.
         if day < 15:
             cohort_crop = "WHEAT" if planned["WHEAT"] < 7 else "MELON" if day < 3 else "STRAWBERRY"
@@ -32,8 +32,8 @@ def build():
             )
             if current_value > 0:
                 values[cohort_crop] = max(1, max(values.values()) + 1)
-'''
-    new = '''        # Keep the opening bridge crops, then respect the forecast-ranked
+"""
+    new = """        # Keep the opening bridge crops, then respect the forecast-ranked
         # commercial values above rather than forcing one crop through day 14.
         if day < 3:
             cohort_crop = "WHEAT" if planned["WHEAT"] < 7 else "MELON"
@@ -46,7 +46,7 @@ def build():
             )
             if current_value > 0:
                 values[cohort_crop] = max(1, max(values.values()) + 1)
-'''
+"""
     assert source.count(old) == 1
     source = source.replace(old, new)
     compile(source, "demand_cohort", "exec")

@@ -1,0 +1,72 @@
+{
+  "captured_utc": "2026-09-11T12:28:21.829363+00:00",
+  "api": "https://www.kaggle.com/api/i/competitions.EpisodeService/ListEpisodes",
+  "access": "Public endpoint returned HTTP200 JSON without credentials. Official leaderboard and replay API endpoints returned401; no access workaround attempted.",
+  "limitations": [
+    "Dynamic submission ratings do not establish rank or stable field strength.",
+    "Repository identifies source with submission; hosted executable bytes are unavailable.",
+    "Public episode list may be delayed or capped; counts describe returned completed public episodes."
+  ],
+  "submissions": [
+    {
+      "submission_id": 56156691,
+      "raw_path": "data\\raw\\frontier-20260911\\public-episodes-56156691.json",
+      "raw_sha256": "74039255ba75e7103b435977fd01dca4a0dc57759f66b4b79f36872a4ef54bb8",
+      "completed_public_count": 97,
+      "wins": 65,
+      "draws": 0,
+      "latest": {
+        "episode_id": 107802362,
+        "ended": "2026-09-11T11:07:17.336746900Z",
+        "own_cash": 93368,
+        "opponent_cash": 102566,
+        "own_rating_before": 2701.4843233942584,
+        "own_rating_after": 2697.673419308456,
+        "opponent_rating_before": 2744.3579863114533,
+        "opponent_submission_id": 56145301
+      },
+      "first_end": "2026-09-11T02:28:37.783740800Z",
+      "opponent_rating_mean": 2414.5998960204065
+    },
+    {
+      "submission_id": 56112322,
+      "raw_path": "data\\raw\\frontier-20260911\\public-episodes-56112322.json",
+      "raw_sha256": "3e6d8cfcb1277592fd5d79fca17babd6da536a42091589df7441e3bc53e93b23",
+      "completed_public_count": 314,
+      "wins": 176,
+      "draws": 0,
+      "latest": {
+        "episode_id": 107718852,
+        "ended": "2026-09-11T05:32:48.814841500Z",
+        "own_cash": 131699,
+        "opponent_cash": 139242,
+        "own_rating_before": 2542.689856014899,
+        "own_rating_after": 2536.2285691876386,
+        "opponent_rating_before": 2429.0814448627107,
+        "opponent_submission_id": 56156462
+      },
+      "first_end": "2026-09-09T03:29:12.226189800Z",
+      "opponent_rating_mean": 2531.9906300196208
+    },
+    {
+      "submission_id": 56103627,
+      "raw_path": "data\\raw\\frontier-20260911\\public-episodes-56103627.json",
+      "raw_sha256": "c38909e9bc3d1c3747ecb342e786b570c92f668d688c45dfafb9f8e5f15c0c52",
+      "completed_public_count": 74,
+      "wins": 40,
+      "draws": 0,
+      "latest": {
+        "episode_id": 107201564,
+        "ended": "2026-09-09T17:52:18.148219600Z",
+        "own_cash": 112722,
+        "opponent_cash": 100045,
+        "own_rating_before": 1333.613427535545,
+        "own_rating_after": 1337.9170319989773,
+        "opponent_rating_before": 1322.0828554491432,
+        "opponent_submission_id": 55917084
+      },
+      "first_end": "2026-09-08T17:44:24.408004100Z",
+      "opponent_rating_mean": 1291.8172842834945
+    }
+  ]
+}

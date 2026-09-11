@@ -65,6 +65,22 @@ def matched_panel(incumbent, challenger):
     return old, new, opponents, seeds
 
 
+def score_interval(blocks, resamples):
+    """Seed-block interval with conservative bounds at all-win/all-loss endpoints.
+
+    Percentile resampling of a constant endpoint falsely returns zero width.
+    For independent scores X in [0,1], P(X=1) <= E[X]; hence observing n
+    ones has probability at most mean**n. Invert that bound at alpha/2.
+    Seats and opponent outcomes remain inside each seed block.
+    """
+    blocks = np.asarray(blocks, dtype=float)
+    if np.all(blocks == 1):
+        return [float(0.025 ** (1 / len(blocks))), 1.0]
+    if np.all(blocks == 0):
+        return [0.0, float(1 - 0.025 ** (1 / len(blocks)))]
+    return np.quantile(blocks[resamples].mean(axis=1), [0.025, 0.975]).tolist()
+
+
 def compare(incumbent, challenger, weights):
     old, new, opponents, seeds = matched_panel(incumbent, challenger)
     if (
@@ -132,9 +148,7 @@ def compare(incumbent, challenger, weights):
         "challenger_score": float(aggregate[:, 1].mean()),
         "score_delta": float(delta.mean()),
         "delta_ci95": np.quantile(delta[resamples].mean(axis=1), [0.025, 0.975]).tolist(),
-        "challenger_ci95": np.quantile(
-            aggregate[:, 1][resamples].mean(axis=1), [0.025, 0.975]
-        ).tolist(),
+        "challenger_ci95": score_interval(aggregate[:, 1], resamples),
     }
     return report
 

@@ -1,0 +1,112 @@
+{
+  "reviewed_on": "2026-09-11",
+  "name": "Six-Day Public-State Fieldbook",
+  "author": "Yusuke Hayashi",
+  "notebook": {
+    "url": "https://www.kaggle.com/code/yhay81/six-day-public-state-fieldbook",
+    "id": 132897306,
+    "version": 3,
+    "last_run_utc": "2026-09-08T13:40:29.587877Z",
+    "sha256": "04476d84223b728b4da444aadd6210689f0feba060eb6d456cdede49c9285d91"
+  },
+  "dataset": {
+    "url": "https://www.kaggle.com/datasets/yhay81/six-day-public-state-agent-source",
+    "id": 11873359,
+    "version": 1,
+    "last_updated_utc": "2026-09-02T13:05:15.753Z",
+    "archive_sha256": "c7bb89d34b1db89ba76d7a2a1d084d0ca4f34b29fbbbc086af830ee612b30997",
+    "api_license_name": "Unknown",
+    "license_evidence": "Attached source_manifest.json declares Apache-2.0; active policy and bridge SPDX headers match. Preserve full supplied source and manifest."
+  },
+  "license": "Apache-2.0",
+  "lineage": "Separate author and codebase from our incumbent. Both use mined public-action histories and share the same broad replay-tape economic family as COK/Seyam/Mooman. They do not constitute two new independent strategy families. Exact derivation from any particular COK or Mooman route has not been established.",
+  "lineage_evidence": "Same-author Fieldbook: Commit for Three Days explicitly credits Milan Leonard episode 102248386 and public histories from Milan Leonard, Kenjo1209, and Shuwen (Shawn) Ge. Six-Day describes adding public Bantam and Zenith Ye blocks; its historical rank claims have not been verified.",
+  "source_files_sha256": {
+    "agent_main.py": "5809846fd528f00d1c01d6f58940633604adb7283d1e2f152603697967e3bb89",
+    "policy.cpp": "a3f04707615b7c04f3ab4a3c593081c98df2dd091be386aa80a3ffad7c00c1b4",
+    "policy_plugin_abi.hpp": "67679edc55b1951deac859d1191a6eb2198868b3b7237beb2266db9788d80345",
+    "pyrandom.hpp": "3835fe39fbc74b05078022a839dea1c1aff7a9d6d21a1227d4d6cd61a3612d75",
+    "README.md": "48b68539cfa092c07276c71be2b0d40b944e6033e29d887c8d4479b1a71d4efd",
+    "sim.hpp": "f483219c22dd9a05c00e28a200aa48d70d4a461915c09b3a0fb36c0330cc554c",
+    "six_day_budget_guard.hpp": "5cf24ed4099e5b19e9f195869881548f2145a40329fc30d11e682501c3688556",
+    "source_manifest.json": "670eabed05fab956eaad0faec33a48642902f78d5a14ffeb9f40f1336053dcba",
+    "submission_bridge.cpp": "2e58be38b2f67e9ed2cfaa97d0534285b2af21c7d4e2be92735e647d4a68a4c5"
+  },
+  "archive": {
+    "path": "reports/frontier-20260911/fieldbook-reference.tar.gz",
+    "sha256": "25c3ed0461aecb307c522742c87b03b01d57392539cc8ac549d12f84e4b3bf44",
+    "bytes": 94665,
+    "contents": "Unmodified supplied sources, exact main.py copy of agent_main.py, compiled agent.so, original source manifest and README, Apache-2.0 license text, build provenance.",
+    "determinism": "Two fixed-metadata tar/gzip constructions were byte-identical."
+  },
+  "entrypoint_sha256": "5809846fd528f00d1c01d6f58940633604adb7283d1e2f152603697967e3bb89",
+  "native_sha256": "a59679c4c6344581810bf48557440f614954b68a425a69ed1d22dbc1ac7c9aa9",
+  "native_bytes": 232296,
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "build_command": "g++ -O3 -std=c++17 -shared -fPIC -I. -o agent.so policy.cpp submission_bridge.cpp",
+  "native_dependency_sha256": {
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed"
+  },
+  "required_symbol_versions_maximum": {
+    "GLIBC": "2.14",
+    "GLIBCXX": "3.4.21",
+    "CXXABI": "1.3.9"
+  },
+  "qualification": {
+    "environment_version": "1.32.7",
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]",
+    "clean_directory_preflight": {
+      "official_last_callable": "agent",
+      "both_seats": true,
+      "duplicate_step_zero_equal": true,
+      "first_actions": [
+        {
+          "farmer": [
+            "PASS"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              53
+            ]
+          ]
+        },
+        {
+          "farmer": [
+            "PASS"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              53
+            ]
+          ]
+        }
+      ]
+    },
+    "source_modifications": [],
+    "full_manifests": {
+      "data/raw/frontier-20260911/fieldbook/sixday-qualification.json": "ba0e2987e11513d02400bcebdc7a64a09f44a0d408031b539205bbc97677ce61",
+      "data/raw/frontier-20260911/fieldbook/fleet-sixday-screen.json": "d55e84419bc549fbfcd2f7b3d2e2c5503f4063edf063085eb8b290d15ed211f3",
+      "data/raw/frontier-20260911/fieldbook/fleet-cereal-sixday-screen.json": "941dc450c8112a344f6bcf69e6cb6aa5bafb4ce54308ba0cc4a4968d0475a501"
+    },
+    "summary": "reports/results/breakthrough-sixday-screen.json"
+  },
+  "limitations": [
+    "Challenge reference in a related replay-tape strategy family, not an additional independent production paradigm.",
+    "No current leaderboard rank, stable rating or source-to-hosted-artifact equivalence established. Notebook score listings and author-reported broad-pool results remain unverified.",
+    "Linux ELF library; not directly loadable by Windows Python. Hosted compatibility remains untested.",
+    "Native bridge forwards episodeSteps only; qualification uses official default board/economic settings.",
+    "Standard benchmark provenance omits shared libraries; this manifest records the native executable and its system dependencies."
+  ]
+}

@@ -1,0 +1,2363 @@
+{
+  "analysis_sha256": "05940e8dffb3eb8029bfb1cd7e3573f106f2f19733aaf414c0f5f05f0426716a",
+  "cases": {
+    "5000-0-cereal-town-cereal": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        157637.0,
+        89224.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13261.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 36884.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 1,
+            "STRAWBERRY": 34,
+            "TOMATO": 24
+          }
+        },
+        "624": {
+          "cash": 51911.0,
+          "composition": {
+            "COW": 14,
+            "PASTURE": 2,
+            "STRAWBERRY": 16,
+            "TOMATO": 24,
+            "WEED": 2,
+            "WHEAT": 15
+          }
+        },
+        "719": {
+          "cash": 157637.0,
+          "composition": {
+            "COW": 4,
+            "PASTURE": 8,
+            "STRAWBERRY": 1,
+            "TOMATO": 10,
+            "WEED": 26
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 318,
+        "EGG": 120,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 408,
+        "STRAWBERRY": 318,
+        "TOMATO": 696,
+        "WHEAT": 786,
+        "WOOL": 102
+      },
+      "expenses": {
+        "CARROT": 200,
+        "COW": 6400,
+        "FERTILIZER": 143,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 3400,
+        "TOMATO": 1200,
+        "WHEAT": 8699,
+        "labor": 7725.0,
+        "land": 3000.0
+      },
+      "gap": 68413.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        157637.0,
+        89224.0
+      ],
+      "income": {
+        "CARROT": 841,
+        "FERTILIZER": 11181,
+        "MELON": 13879,
+        "MILK": 26993,
+        "STRAWBERRY": 13028,
+        "TOMATO": 110345,
+        "WHEAT": 6689,
+        "WOOL": 4568
+      },
+      "replay_archive_sha256": "e8afdcf489a7a2b47959699f0db5564bbcc4d9913acb7f0624f2c3117772a8a9",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.043926,
+          "p99_seconds": 0.034604,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.028427,
+          "p99_seconds": 0.000706,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 16,
+        "FERTILIZER": 225,
+        "MELON": 84,
+        "MILK": 297,
+        "STRAWBERRY": 254,
+        "TOMATO": 186,
+        "WHEAT": 142,
+        "WOOL": 35
+      }
+    },
+    "5000-0-cereal-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        79199.0,
+        87491.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 12282.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 32522.0,
+          "composition": {
+            "COW": 16,
+            "PASTURE": 2,
+            "STRAWBERRY": 43,
+            "TOMATO": 7
+          }
+        },
+        "624": {
+          "cash": 50137.0,
+          "composition": {
+            "CARROT": 6,
+            "COW": 15,
+            "STRAWBERRY": 23,
+            "TOMATO": 7,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 79199.0,
+          "composition": {
+            "COW": 14,
+            "PASTURE": 1,
+            "STRAWBERRY": 6,
+            "WEED": 17
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 280,
+        "COW": 6400,
+        "FERTILIZER": 17,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 4300,
+        "TOMATO": 350,
+        "WHEAT": 10859,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": -8292.0,
+      "income": {
+        "CARROT": 1981,
+        "FERTILIZER": 11297,
+        "MELON": 13879,
+        "MILK": 27053,
+        "STRAWBERRY": 13295,
+        "TOMATO": 35252,
+        "WHEAT": 4213,
+        "WOOL": 4568
+      },
+      "replay_archive_sha256": "37a2121580ca13e8a8ec3d8868eedecb8a39c7b2be298724262d60b4647d3571",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.056421,
+          "p99_seconds": 0.030994,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.029558,
+          "p99_seconds": 0.000745,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 37,
+        "FERTILIZER": 267,
+        "MELON": 84,
+        "MILK": 332,
+        "STRAWBERRY": 276,
+        "TOMATO": 56,
+        "WHEAT": 89,
+        "WOOL": 35
+      }
+    },
+    "5000-0-fleet-town-cereal": {
+      "candidate_stderr_turns": 2,
+      "cash_candidate_opponent": [
+        100339.0,
+        95976.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13189.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 32237.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 1,
+            "STRAWBERRY": 34,
+            "TOMATO": 21,
+            "WHEAT": 3
+          }
+        },
+        "624": {
+          "cash": 52694.0,
+          "composition": {
+            "CARROT": 3,
+            "COW": 8,
+            "PASTURE": 7,
+            "STRAWBERRY": 14,
+            "TOMATO": 21,
+            "WEED": 1,
+            "WHEAT": 20
+          }
+        },
+        "719": {
+          "cash": 100339.0,
+          "composition": {
+            "COW": 8,
+            "STRAWBERRY": 1,
+            "TOMATO": 9,
+            "WEED": 19
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 240,
+        "COW": 6400,
+        "FERTILIZER": 147,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 3400,
+        "TOMATO": 1150,
+        "WHEAT": 6996,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": 4363.0,
+      "income": {
+        "CARROT": 1400,
+        "FERTILIZER": 10975,
+        "MELON": 13879,
+        "MILK": 17710,
+        "STRAWBERRY": 27426,
+        "TOMATO": 45768,
+        "WHEAT": 6931,
+        "WOOL": 4572
+      },
+      "replay_archive_sha256": "ff488d7447598625027c25f814ce38f1ccf3748b3f78f74eb2bb6bd08a877710",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.087479,
+          "p99_seconds": 0.03683,
+          "stderr_log_indices": {
+            "daily_route_budget_fallback": [
+              435,
+              507
+            ]
+          },
+          "stderr_messages": {
+            "daily_route_budget_fallback": 2
+          },
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 2
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.028272,
+          "p99_seconds": 0.000632,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 32,
+        "FERTILIZER": 213,
+        "MELON": 84,
+        "MILK": 277,
+        "STRAWBERRY": 272,
+        "TOMATO": 168,
+        "WHEAT": 147,
+        "WOOL": 39
+      }
+    },
+    "5000-0-fleet-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        66645.0,
+        92888.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 12313.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 29731.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 43,
+            "TOMATO": 7
+          }
+        },
+        "624": {
+          "cash": 48051.0,
+          "composition": {
+            "CARROT": 2,
+            "COW": 13,
+            "SHEEP": 2,
+            "STRAWBERRY": 23,
+            "TOMATO": 7,
+            "WHEAT": 15
+          }
+        },
+        "719": {
+          "cash": 66645.0,
+          "composition": {
+            "COW": 11,
+            "SHEEP": 2,
+            "STRAWBERRY": 6,
+            "WEED": 17
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 192,
+        "EGG": 282,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 408,
+        "STRAWBERRY": 480,
+        "TOMATO": 534,
+        "WHEAT": 822,
+        "WOOL": 30
+      },
+      "expenses": {
+        "CARROT": 140,
+        "COW": 6400,
+        "FERTILIZER": 328,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 4300,
+        "TOMATO": 350,
+        "WHEAT": 10668,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": -26243.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        66645.0,
+        92888.0
+      ],
+      "income": {
+        "CARROT": 846,
+        "FERTILIZER": 11411,
+        "MELON": 13879,
+        "MILK": 17567,
+        "STRAWBERRY": 27295,
+        "TOMATO": 17854,
+        "WHEAT": 5525,
+        "WOOL": 4587
+      },
+      "replay_archive_sha256": "6fe5d031ed9fd5617bf194a39957dc76da9c8834ad6072c07de7f15f90ce9fef",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.062594,
+          "p99_seconds": 0.041772,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.030447,
+          "p99_seconds": 0.000904,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 19,
+        "FERTILIZER": 268,
+        "MELON": 84,
+        "MILK": 298,
+        "STRAWBERRY": 337,
+        "TOMATO": 56,
+        "WHEAT": 113,
+        "WOOL": 50
+      }
+    },
+    "5000-1-cereal-town-cereal": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        168247.0,
+        83893.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13340.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 35647.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 34,
+            "TOMATO": 19
+          }
+        },
+        "624": {
+          "cash": 58606.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 1,
+            "STRAWBERRY": 14,
+            "TOMATO": 23,
+            "WHEAT": 18
+          }
+        },
+        "719": {
+          "cash": 168247.0,
+          "composition": {
+            "COW": 13,
+            "PASTURE": 4,
+            "STRAWBERRY": 1,
+            "TOMATO": 13,
+            "WEED": 18
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 282,
+        "EGG": 120,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 480,
+        "STRAWBERRY": 282,
+        "TOMATO": 732,
+        "WHEAT": 822,
+        "WOOL": 30
+      },
+      "expenses": {
+        "CARROT": 60,
+        "COW": 6400,
+        "FERTILIZER": 20,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 3400,
+        "TOMATO": 1150,
+        "WHEAT": 9638,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": 84354.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        168247.0,
+        83893.0
+      ],
+      "income": {
+        "CARROT": 302,
+        "FERTILIZER": 11452,
+        "MELON": 13879,
+        "MILK": 34463,
+        "STRAWBERRY": 11385,
+        "TOMATO": 115701,
+        "WHEAT": 7287,
+        "WOOL": 4579
+      },
+      "replay_archive_sha256": "a537e90314ce2273d387e0ac5ed9240a303ff22ec16047d79dff815b1825bea4",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.079867,
+          "p99_seconds": 0.000257,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.067897,
+          "p99_seconds": 0.024803,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 6,
+        "FERTILIZER": 256,
+        "MELON": 84,
+        "MILK": 333,
+        "STRAWBERRY": 233,
+        "TOMATO": 158,
+        "WHEAT": 154,
+        "WOOL": 46
+      }
+    },
+    "5000-1-cereal-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        86830.0,
+        83352.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 12282.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 43,
+            "WEED": 1,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 32957.0,
+          "composition": {
+            "COW": 16,
+            "PASTURE": 2,
+            "STRAWBERRY": 43,
+            "TOMATO": 7,
+            "WEED": 1
+          }
+        },
+        "624": {
+          "cash": 54743.0,
+          "composition": {
+            "CARROT": 4,
+            "COW": 16,
+            "STRAWBERRY": 24,
+            "TOMATO": 7,
+            "WEED": 1,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 86830.0,
+          "composition": {
+            "COW": 15,
+            "PASTURE": 1,
+            "STRAWBERRY": 6,
+            "WEED": 19
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 240,
+        "COW": 6400,
+        "FERTILIZER": 14,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 4300,
+        "TOMATO": 350,
+        "WHEAT": 11676,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": 3478.0,
+      "income": {
+        "CARROT": 1667,
+        "FERTILIZER": 11373,
+        "MELON": 13879,
+        "MILK": 34046,
+        "STRAWBERRY": 11755,
+        "TOMATO": 37697,
+        "WHEAT": 4958,
+        "WOOL": 4568
+      },
+      "replay_archive_sha256": "6a62dcb34375b7a821e93010f5befe6c2ce819cb806493edbac0620e2254ee60",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.028943,
+          "p99_seconds": 0.000258,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.06345,
+          "p99_seconds": 0.025493,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 33,
+        "FERTILIZER": 278,
+        "MELON": 84,
+        "MILK": 342,
+        "STRAWBERRY": 270,
+        "TOMATO": 56,
+        "WHEAT": 102,
+        "WOOL": 35
+      }
+    },
+    "5000-1-fleet-town-cereal": {
+      "candidate_stderr_turns": 1,
+      "cash_candidate_opponent": [
+        134101.0,
+        101267.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13244.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 34,
+            "WHEAT": 20
+          }
+        },
+        "480": {
+          "cash": 32843.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 1,
+            "STRAWBERRY": 34,
+            "TOMATO": 22,
+            "WHEAT": 1
+          }
+        },
+        "624": {
+          "cash": 62326.0,
+          "composition": {
+            "COW": 11,
+            "PASTURE": 1,
+            "STRAWBERRY": 18,
+            "TOMATO": 22,
+            "WHEAT": 22
+          }
+        },
+        "719": {
+          "cash": 134101.0,
+          "composition": {
+            "COW": 11,
+            "STRAWBERRY": 1,
+            "TOMATO": 11,
+            "WEED": 20
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 160,
+        "COW": 6400,
+        "FERTILIZER": 79,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 3400,
+        "TOMATO": 1150,
+        "WHEAT": 7775,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": 32834.0,
+      "income": {
+        "CARROT": 920,
+        "FERTILIZER": 10927,
+        "MELON": 13879,
+        "MILK": 25419,
+        "STRAWBERRY": 30586,
+        "TOMATO": 70044,
+        "WHEAT": 6848,
+        "WOOL": 4575
+      },
+      "replay_archive_sha256": "f1ef0514580f54e43033cfff914bb7bdc096d02e275b634d4100e660f5798e69",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.028318,
+          "p99_seconds": 0.000207,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.069754,
+          "p99_seconds": 0.027025,
+          "stderr_log_indices": {
+            "daily_route_budget_fallback": [
+              700
+            ]
+          },
+          "stderr_messages": {
+            "daily_route_budget_fallback": 1
+          },
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 1
+        }
+      },
+      "sale_units": {
+        "CARROT": 19,
+        "FERTILIZER": 214,
+        "MELON": 84,
+        "MILK": 298,
+        "STRAWBERRY": 271,
+        "TOMATO": 168,
+        "WHEAT": 148,
+        "WOOL": 38
+      }
+    },
+    "5000-1-fleet-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        85752.0,
+        99545.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 12313.0,
+          "composition": {
+            "COW": 16,
+            "SHEEP": 2,
+            "STRAWBERRY": 43,
+            "WEED": 1,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 31897.0,
+          "composition": {
+            "COW": 16,
+            "PASTURE": 2,
+            "STRAWBERRY": 43,
+            "TOMATO": 7,
+            "WEED": 1
+          }
+        },
+        "624": {
+          "cash": 59530.0,
+          "composition": {
+            "CARROT": 5,
+            "COW": 11,
+            "STRAWBERRY": 23,
+            "TOMATO": 7,
+            "WEED": 1,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 85752.0,
+          "composition": {
+            "COW": 11,
+            "STRAWBERRY": 6,
+            "WEED": 18
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 264,
+        "EGG": 138,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 480,
+        "STRAWBERRY": 462,
+        "TOMATO": 624,
+        "WHEAT": 732,
+        "WOOL": 30
+      },
+      "expenses": {
+        "CARROT": 240,
+        "COW": 6400,
+        "FERTILIZER": 282,
+        "MELON": 1120,
+        "SHEEP": 1000,
+        "STRAWBERRY": 4300,
+        "TOMATO": 350,
+        "WHEAT": 9504,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -13793.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        85752.0,
+        99545.0
+      ],
+      "income": {
+        "CARROT": 1503,
+        "FERTILIZER": 10991,
+        "MELON": 13879,
+        "MILK": 27052,
+        "STRAWBERRY": 30823,
+        "TOMATO": 23656,
+        "WHEAT": 4346,
+        "WOOL": 4567
+      },
+      "replay_archive_sha256": "1946033facb10c199ad8550946c0c8776c328e6fb022a441c5e7ab155f70853c",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.027821,
+          "p99_seconds": 0.000494,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.03891,
+          "p99_seconds": 0.033327,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 30,
+        "FERTILIZER": 234,
+        "MELON": 84,
+        "MILK": 295,
+        "STRAWBERRY": 329,
+        "TOMATO": 56,
+        "WHEAT": 93,
+        "WOOL": 34
+      }
+    },
+    "5001-0-cereal-town-cereal": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        75680.0,
+        96997.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 15626.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 35211.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 22
+          }
+        },
+        "624": {
+          "cash": 63193.0,
+          "composition": {
+            "CARROT": 9,
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 15,
+            "WEED": 1,
+            "WHEAT": 24
+          }
+        },
+        "719": {
+          "cash": 75680.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "WEED": 15
+          }
+        }
+      },
+      "control": {
+        "actions_match": false,
+        "first_action_difference": 489,
+        "first_observation_difference": 489,
+        "observations_match": false,
+        "step_count_matches": true
+      },
+      "control_accepted": false,
+      "direct_town_consumption": {
+        "CARROT": 318,
+        "EGG": 354,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 246,
+        "STRAWBERRY": 462,
+        "TOMATO": 102,
+        "WHEAT": 480,
+        "WOOL": 246
+      },
+      "expenses": {
+        "CARROT": 420,
+        "COW": 800,
+        "FERTILIZER": 82,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 3400,
+        "WHEAT": 7170,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "failed_control_details": {
+        "action_observation_day": 20,
+        "action_observation_hour": 8,
+        "counterfactual_action": {
+          "farmer": [
+            "COLLECT_FERTILIZER"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FERTILIZE"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "HARVEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ]
+        },
+        "historical_action": {
+          "farmer": [
+            "COLLECT_FERTILIZER"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FERTILIZE"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "HARVEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ]
+        },
+        "opponent_action_matches": true
+      },
+      "gap": -21317.0,
+      "historical_candidate_stderr_turns": 1,
+      "historical_cash_candidate_opponent": [
+        76263.0,
+        96912.0
+      ],
+      "income": {
+        "CARROT": 2617,
+        "EGG": 15482,
+        "FERTILIZER": 11423,
+        "MELON": 13847,
+        "MILK": 5027,
+        "STRAWBERRY": 31027,
+        "WHEAT": 7061,
+        "WOOL": 16257
+      },
+      "replay_archive_sha256": "a3701b4e13669d4010700e695f9d3ff3a3b54412d631c92b06af3e98ac12bd68",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.055822,
+          "p99_seconds": 0.028285,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.028571,
+          "p99_seconds": 0.000318,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 49,
+        "EGG": 296,
+        "FERTILIZER": 301,
+        "MELON": 84,
+        "MILK": 64,
+        "STRAWBERRY": 266,
+        "WHEAT": 170,
+        "WOOL": 147
+      }
+    },
+    "5001-0-cereal-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        69114.0,
+        95636.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13516.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 31713.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WEED": 2,
+            "WHEAT": 6
+          }
+        },
+        "624": {
+          "cash": 58383.0,
+          "composition": {
+            "CARROT": 12,
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 24,
+            "WEED": 3,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 69114.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "STRAWBERRY": 4,
+            "WEED": 19
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 440,
+        "COW": 800,
+        "FERTILIZER": 57,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 4300,
+        "WHEAT": 9962,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -26522.0,
+      "income": {
+        "CARROT": 2873,
+        "EGG": 15454,
+        "FERTILIZER": 11356,
+        "MELON": 13847,
+        "MILK": 5020,
+        "STRAWBERRY": 31212,
+        "WHEAT": 4072,
+        "WOOL": 16028
+      },
+      "replay_archive_sha256": "de18466fe5a466eb2c13428492b8acc04ca0f348999cc74f7bc359335b2e1af0",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.030322,
+          "p99_seconds": 0.027518,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.029677,
+          "p99_seconds": 0.000238,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 53,
+        "EGG": 295,
+        "FERTILIZER": 285,
+        "MELON": 84,
+        "MILK": 68,
+        "STRAWBERRY": 328,
+        "WHEAT": 94,
+        "WOOL": 148
+      }
+    },
+    "5001-0-fleet-town-cereal": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        84396.0,
+        95405.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 15626.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 35264.0,
+          "composition": {
+            "COW": 1,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 22
+          }
+        },
+        "624": {
+          "cash": 67492.0,
+          "composition": {
+            "CARROT": 13,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 6,
+            "STRAWBERRY": 14,
+            "WHEAT": 20
+          }
+        },
+        "719": {
+          "cash": 84396.0,
+          "composition": {
+            "GOOSE": 9,
+            "PASTURE": 5,
+            "SHEEP": 1,
+            "WEED": 12,
+            "WHEAT": 1
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 580,
+        "COW": 800,
+        "FERTILIZER": 32,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 3400,
+        "WHEAT": 7119,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -11009.0,
+      "income": {
+        "CARROT": 3948,
+        "EGG": 16242,
+        "FERTILIZER": 11335,
+        "MELON": 13847,
+        "MILK": 2992,
+        "STRAWBERRY": 38763,
+        "WHEAT": 8156,
+        "WOOL": 16233
+      },
+      "replay_archive_sha256": "54fc0bbc3a72eddb00536bcf7191cf118f9c522e45bdee602955b697a4605090",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.041153,
+          "p99_seconds": 0.02797,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.029392,
+          "p99_seconds": 0.000211,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 75,
+        "EGG": 296,
+        "FERTILIZER": 275,
+        "MELON": 84,
+        "MILK": 40,
+        "STRAWBERRY": 264,
+        "WHEAT": 192,
+        "WOOL": 149
+      }
+    },
+    "5001-0-fleet-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        74573.0,
+        90523.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13516.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 33231.0,
+          "composition": {
+            "COW": 1,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WEED": 2,
+            "WHEAT": 7
+          }
+        },
+        "624": {
+          "cash": 62743.0,
+          "composition": {
+            "CARROT": 12,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 22,
+            "WEED": 2,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 74573.0,
+          "composition": {
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "STRAWBERRY": 4,
+            "WEED": 18
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 318,
+        "EGG": 444,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 156,
+        "STRAWBERRY": 516,
+        "TOMATO": 30,
+        "WHEAT": 534,
+        "WOOL": 246
+      },
+      "expenses": {
+        "CARROT": 460,
+        "COW": 800,
+        "FERTILIZER": 124,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 4300,
+        "WHEAT": 8911,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -15950.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        74573.0,
+        90523.0
+      ],
+      "income": {
+        "CARROT": 3204,
+        "EGG": 16202,
+        "FERTILIZER": 11341,
+        "MELON": 13847,
+        "MILK": 3012,
+        "STRAWBERRY": 36862,
+        "WHEAT": 3880,
+        "WOOL": 16009
+      },
+      "replay_archive_sha256": "de25a4f6281784f6f6751e92ebabb582fb2f50fa8cb6132f9bbdfcd655670f51",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.042975,
+          "p99_seconds": 0.027092,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.028579,
+          "p99_seconds": 0.000241,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 60,
+        "EGG": 295,
+        "FERTILIZER": 278,
+        "MELON": 84,
+        "MILK": 42,
+        "STRAWBERRY": 336,
+        "WHEAT": 89,
+        "WOOL": 151
+      }
+    },
+    "5001-1-cereal-town-cereal": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        77762.0,
+        99028.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 15626.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 35211.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 22
+          }
+        },
+        "624": {
+          "cash": 63380.0,
+          "composition": {
+            "CARROT": 13,
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 13,
+            "WEED": 1,
+            "WHEAT": 23
+          }
+        },
+        "719": {
+          "cash": 77762.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "WEED": 13
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 354,
+        "EGG": 318,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 246,
+        "STRAWBERRY": 498,
+        "TOMATO": 138,
+        "WHEAT": 480,
+        "WOOL": 246
+      },
+      "expenses": {
+        "CARROT": 500,
+        "COW": 800,
+        "FERTILIZER": 46,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 3400,
+        "WHEAT": 7269,
+        "labor": 8013.0,
+        "land": 3000.0
+      },
+      "gap": -21266.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        77762.0,
+        99028.0
+      ],
+      "income": {
+        "CARROT": 3358,
+        "EGG": 15097,
+        "FERTILIZER": 11378,
+        "MELON": 13847,
+        "MILK": 5027,
+        "STRAWBERRY": 32708,
+        "WHEAT": 7500,
+        "WOOL": 16195
+      },
+      "replay_archive_sha256": "32fdda432d0fbb8fbbea4c39ff4cac1ed9d116f0bbe7047b314e0ae8d60792de",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.029115,
+          "p99_seconds": 0.000204,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.052385,
+          "p99_seconds": 0.029354,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 60,
+        "EGG": 295,
+        "FERTILIZER": 290,
+        "MELON": 84,
+        "MILK": 64,
+        "STRAWBERRY": 268,
+        "WHEAT": 180,
+        "WOOL": 148
+      }
+    },
+    "5001-1-cereal-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        69899.0,
+        97250.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13516.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 31713.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WEED": 2,
+            "WHEAT": 6
+          }
+        },
+        "624": {
+          "cash": 58265.0,
+          "composition": {
+            "CARROT": 12,
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 24,
+            "WEED": 3,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 69899.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "STRAWBERRY": 4,
+            "WEED": 19
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 460,
+        "COW": 800,
+        "FERTILIZER": 121,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 4300,
+        "WHEAT": 9906,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -27351.0,
+      "income": {
+        "CARROT": 3251,
+        "EGG": 15064,
+        "FERTILIZER": 11408,
+        "MELON": 13847,
+        "MILK": 5027,
+        "STRAWBERRY": 32344,
+        "WHEAT": 3833,
+        "WOOL": 15901
+      },
+      "replay_archive_sha256": "4b7b352ebbeed3ee3905dc16ba500f0201f39fdceda31a3a3f4c6e6a4b0a3829",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.03072,
+          "p99_seconds": 0.000299,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.10683,
+          "p99_seconds": 0.030042,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 58,
+        "EGG": 294,
+        "FERTILIZER": 287,
+        "MELON": 84,
+        "MILK": 68,
+        "STRAWBERRY": 333,
+        "WHEAT": 89,
+        "WOOL": 148
+      }
+    },
+    "5001-1-fleet-town-cereal": {
+      "candidate_stderr_turns": 1,
+      "cash_candidate_opponent": [
+        84700.0,
+        94755.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 15626.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 23
+          }
+        },
+        "480": {
+          "cash": 35264.0,
+          "composition": {
+            "COW": 1,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 7,
+            "STRAWBERRY": 34,
+            "WHEAT": 22
+          }
+        },
+        "624": {
+          "cash": 67646.0,
+          "composition": {
+            "CARROT": 17,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 6,
+            "STRAWBERRY": 16,
+            "WEED": 2,
+            "WHEAT": 22
+          }
+        },
+        "719": {
+          "cash": 84700.0,
+          "composition": {
+            "GOOSE": 9,
+            "PASTURE": 2,
+            "SHEEP": 3,
+            "WEED": 13
+          }
+        }
+      },
+      "control": null,
+      "control_accepted": null,
+      "expenses": {
+        "CARROT": 640,
+        "COW": 800,
+        "FERTILIZER": 32,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 3400,
+        "WHEAT": 6816,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -10055.0,
+      "income": {
+        "CARROT": 4191,
+        "EGG": 16244,
+        "FERTILIZER": 11242,
+        "MELON": 13847,
+        "MILK": 2990,
+        "STRAWBERRY": 38833,
+        "WHEAT": 8040,
+        "WOOL": 16190
+      },
+      "replay_archive_sha256": "5faba8d08e966d2f33f8e067ace72b6557d92a4fbbdb85286cbc0b8e38f1f602",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.02879,
+          "p99_seconds": 0.001072,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.073602,
+          "p99_seconds": 0.04605,
+          "stderr_log_indices": {
+            "daily_route_budget_fallback": [
+              483
+            ]
+          },
+          "stderr_messages": {
+            "daily_route_budget_fallback": 1
+          },
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 1
+        }
+      },
+      "sale_units": {
+        "CARROT": 79,
+        "EGG": 296,
+        "FERTILIZER": 271,
+        "MELON": 84,
+        "MILK": 38,
+        "STRAWBERRY": 266,
+        "WHEAT": 190,
+        "WOOL": 150
+      }
+    },
+    "5001-1-fleet-town-fleet": {
+      "candidate_stderr_turns": 0,
+      "cash_candidate_opponent": [
+        74573.0,
+        90523.0
+      ],
+      "composition_checkpoints": {
+        "360": {
+          "cash": 13516.0,
+          "composition": {
+            "COW": 2,
+            "GOOSE": 9,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WHEAT": 7
+          }
+        },
+        "480": {
+          "cash": 33231.0,
+          "composition": {
+            "COW": 1,
+            "GOOSE": 9,
+            "PASTURE": 1,
+            "SHEEP": 7,
+            "STRAWBERRY": 43,
+            "WEED": 2,
+            "WHEAT": 7
+          }
+        },
+        "624": {
+          "cash": 62743.0,
+          "composition": {
+            "CARROT": 12,
+            "GOOSE": 9,
+            "SHEEP": 5,
+            "STRAWBERRY": 22,
+            "WEED": 2,
+            "WHEAT": 13
+          }
+        },
+        "719": {
+          "cash": 74573.0,
+          "composition": {
+            "GOOSE": 9,
+            "PASTURE": 3,
+            "SHEEP": 2,
+            "STRAWBERRY": 4,
+            "WEED": 18
+          }
+        }
+      },
+      "control": {
+        "actions_match": true,
+        "first_action_difference": null,
+        "first_observation_difference": null,
+        "observations_match": true,
+        "step_count_matches": true
+      },
+      "control_accepted": true,
+      "direct_town_consumption": {
+        "CARROT": 318,
+        "EGG": 444,
+        "FERTILIZER": 0,
+        "MELON": 30,
+        "MILK": 156,
+        "STRAWBERRY": 516,
+        "TOMATO": 30,
+        "WHEAT": 534,
+        "WOOL": 246
+      },
+      "expenses": {
+        "CARROT": 460,
+        "COW": 800,
+        "FERTILIZER": 124,
+        "GOOSE": 2700,
+        "MELON": 1120,
+        "SHEEP": 3500,
+        "STRAWBERRY": 4300,
+        "WHEAT": 8911,
+        "labor": 7869.0,
+        "land": 3000.0
+      },
+      "gap": -15950.0,
+      "historical_candidate_stderr_turns": 0,
+      "historical_cash_candidate_opponent": [
+        74573.0,
+        90523.0
+      ],
+      "income": {
+        "CARROT": 3204,
+        "EGG": 16202,
+        "FERTILIZER": 11341,
+        "MELON": 13847,
+        "MILK": 3012,
+        "STRAWBERRY": 36862,
+        "WHEAT": 3880,
+        "WOOL": 16009
+      },
+      "replay_archive_sha256": "4859b1d4e5a1fd503db4616f799b0a3a37d7d5c79f75f9bfb4d3474cc35eafc8",
+      "runtime_by_seat": {
+        "0": {
+          "calls": 719,
+          "max_seconds": 0.029999,
+          "p99_seconds": 0.000789,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        },
+        "1": {
+          "calls": 719,
+          "max_seconds": 0.036692,
+          "p99_seconds": 0.032889,
+          "stderr_log_indices": {},
+          "stderr_messages": {},
+          "stderr_omitted_turns": 0,
+          "stderr_truncated_turns": 0,
+          "stderr_turns": 0
+        }
+      },
+      "sale_units": {
+        "CARROT": 60,
+        "EGG": 295,
+        "FERTILIZER": 278,
+        "MELON": 84,
+        "MILK": 42,
+        "STRAWBERRY": 336,
+        "WHEAT": 89,
+        "WOOL": 151
+      }
+    }
+  },
+  "competitive_score_eligible": false,
+  "donor_schedules": {
+    "cereal-5000-0": [
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "BAKERY",
+      "FARMERS_MARKET",
+      "FARMERS_MARKET",
+      "YARN_STORE"
+    ],
+    "cereal-5000-1": [
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "BAKERY",
+      "PIZZA_SHOP",
+      "FARMERS_MARKET",
+      "FARMERS_MARKET"
+    ],
+    "cereal-5001-0": [
+      "BRUNCH_SPOT",
+      "PET_CAFE",
+      "BRUNCH_SPOT",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "cereal-5001-1": [
+      "BRUNCH_SPOT",
+      "PET_CAFE",
+      "BRUNCH_SPOT",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET"
+    ],
+    "fleet-5000-0": [
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "BRUNCH_SPOT",
+      "BRUNCH_SPOT",
+      "PIZZA_SHOP",
+      "BRUNCH_SPOT",
+      "ICE_CREAM_SHOP"
+    ],
+    "fleet-5000-1": [
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP",
+      "BRUNCH_SPOT",
+      "SMOOTHIE_SHOP",
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP"
+    ],
+    "fleet-5001-0": [
+      "BRUNCH_SPOT",
+      "PET_CAFE",
+      "BRUNCH_SPOT",
+      "YARN_STORE",
+      "ICE_CREAM_SHOP",
+      "BRUNCH_SPOT",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "fleet-5001-1": [
+      "BRUNCH_SPOT",
+      "PET_CAFE",
+      "BRUNCH_SPOT",
+      "YARN_STORE",
+      "ICE_CREAM_SHOP",
+      "BRUNCH_SPOT",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ]
+  },
+  "evidence_kind": "offline_counterfactual",
+  "input_sha256": "1beb7dd0d08b32d71ee52145f6cd9ea8ade4c3bb4f17589c06169444d95b8c4c",
+  "method": "Hash-check all saved archives, verify donor controls against full recorded observations/actions, and decompose cash gaps along explicitly identified policy/town paths. Direct demand counts use the pinned official _town_consume helper only. No new policy execution or game.",
+  "paired_seat_decompositions": {
+    "5000-0": {
+      "candidate_receipt_changes_on_town_first_path": {
+        "policy_change_with_cereal_town": {
+          "CARROT": -1140,
+          "FERTILIZER": -116,
+          "MELON": 0,
+          "MILK": -60,
+          "STRAWBERRY": -267,
+          "TOMATO": 75093,
+          "WHEAT": 2476,
+          "WOOL": 0
+        },
+        "town_change_with_fleet_policy": {
+          "CARROT": 1135,
+          "FERTILIZER": -114,
+          "MELON": 0,
+          "MILK": 9486,
+          "STRAWBERRY": -14000,
+          "TOMATO": 17398,
+          "WHEAT": -1312,
+          "WOOL": -19
+        }
+      },
+      "descriptive_opposite_path": {
+        "interaction": 46099.0,
+        "policy_change_with_fleet_town": 30606.0,
+        "town_change_with_cereal_policy": 64050.0
+      },
+      "direct_demand_change": {
+        "CARROT": 126,
+        "EGG": -162,
+        "FERTILIZER": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "STRAWBERRY": -162,
+        "TOMATO": 162,
+        "WHEAT": -36,
+        "WOOL": 72
+      },
+      "historical_diagonal_control_accepted": true,
+      "opposite_path_has_runtime_fallback": true,
+      "town_first_path": {
+        "diagonal_sum": 94656.0,
+        "policy_change_with_cereal_town": 76705.0,
+        "town_change_with_fleet_policy": 17951.0
+      },
+      "town_first_path_accepted": true
+    },
+    "5000-1": {
+      "candidate_receipt_changes_on_town_first_path": {
+        "policy_change_with_cereal_town": {
+          "CARROT": -1365,
+          "FERTILIZER": 79,
+          "MELON": 0,
+          "MILK": 417,
+          "STRAWBERRY": -370,
+          "TOMATO": 78004,
+          "WHEAT": 2329,
+          "WOOL": 11
+        },
+        "town_change_with_fleet_policy": {
+          "CARROT": 164,
+          "FERTILIZER": 382,
+          "MELON": 0,
+          "MILK": 6994,
+          "STRAWBERRY": -19068,
+          "TOMATO": 14041,
+          "WHEAT": 612,
+          "WOOL": 1
+        }
+      },
+      "descriptive_opposite_path": {
+        "interaction": 34249.0,
+        "policy_change_with_fleet_town": 46627.0,
+        "town_change_with_cereal_policy": 51520.0
+      },
+      "direct_demand_change": {
+        "CARROT": 18,
+        "EGG": -18,
+        "FERTILIZER": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "STRAWBERRY": -180,
+        "TOMATO": 108,
+        "WHEAT": 90,
+        "WOOL": 0
+      },
+      "historical_diagonal_control_accepted": true,
+      "opposite_path_has_runtime_fallback": true,
+      "town_first_path": {
+        "diagonal_sum": 98147.0,
+        "policy_change_with_cereal_town": 80876.0,
+        "town_change_with_fleet_policy": 17271.0
+      },
+      "town_first_path_accepted": true
+    },
+    "5001-0": {
+      "candidate_receipt_changes_on_town_first_path": {
+        "policy_change_with_cereal_town": {
+          "CARROT": -256,
+          "EGG": 28,
+          "FERTILIZER": 67,
+          "MELON": 0,
+          "MILK": 7,
+          "STRAWBERRY": -185,
+          "WHEAT": 2989,
+          "WOOL": 229
+        },
+        "town_change_with_fleet_policy": {
+          "CARROT": -331,
+          "EGG": -748,
+          "FERTILIZER": 15,
+          "MELON": 0,
+          "MILK": 2008,
+          "STRAWBERRY": -5650,
+          "WHEAT": 192,
+          "WOOL": 19
+        }
+      },
+      "descriptive_opposite_path": {
+        "interaction": 264.0,
+        "policy_change_with_fleet_town": 4941.0,
+        "town_change_with_cereal_policy": -10308.0
+      },
+      "direct_demand_change": {
+        "CARROT": 0,
+        "EGG": -90,
+        "FERTILIZER": 0,
+        "MELON": 0,
+        "MILK": 90,
+        "STRAWBERRY": -54,
+        "TOMATO": 72,
+        "WHEAT": -54,
+        "WOOL": 0
+      },
+      "historical_diagonal_control_accepted": false,
+      "opposite_path_has_runtime_fallback": false,
+      "town_first_path": {
+        "diagonal_sum": -5367.0,
+        "policy_change_with_cereal_town": 5205.0,
+        "town_change_with_fleet_policy": -10572.0
+      },
+      "town_first_path_accepted": false
+    },
+    "5001-1": {
+      "candidate_receipt_changes_on_town_first_path": {
+        "policy_change_with_cereal_town": {
+          "CARROT": 107,
+          "EGG": 33,
+          "FERTILIZER": -30,
+          "MELON": 0,
+          "MILK": 0,
+          "STRAWBERRY": 364,
+          "WHEAT": 3667,
+          "WOOL": 294
+        },
+        "town_change_with_fleet_policy": {
+          "CARROT": 47,
+          "EGG": -1138,
+          "FERTILIZER": 67,
+          "MELON": 0,
+          "MILK": 2015,
+          "STRAWBERRY": -4518,
+          "WHEAT": -47,
+          "WOOL": -108
+        }
+      },
+      "descriptive_opposite_path": {
+        "interaction": 190.0,
+        "policy_change_with_fleet_town": 5895.0,
+        "town_change_with_cereal_policy": -11211.0
+      },
+      "direct_demand_change": {
+        "CARROT": 36,
+        "EGG": -126,
+        "FERTILIZER": 0,
+        "MELON": 0,
+        "MILK": 90,
+        "STRAWBERRY": -18,
+        "TOMATO": 108,
+        "WHEAT": -54,
+        "WOOL": 0
+      },
+      "historical_diagonal_control_accepted": true,
+      "opposite_path_has_runtime_fallback": true,
+      "town_first_path": {
+        "diagonal_sum": -5316.0,
+        "policy_change_with_cereal_town": 6085.0,
+        "town_change_with_fleet_policy": -11401.0
+      },
+      "town_first_path_accepted": true
+    }
+  },
+  "runner_sha256": "e3758f1947a43a8aa350091cc41c631f3f7d6f31330cd1b89b0bd5ae35b72af5",
+  "seed_decompositions": {
+    "5000": {
+      "both_seats_accepted": true,
+      "descriptive_town_first_path_mean": {
+        "diagonal_sum": 96401.5,
+        "policy_change_with_cereal_town": 78790.5,
+        "town_change_with_fleet_policy": 17611.0
+      }
+    },
+    "5001": {
+      "both_seats_accepted": false,
+      "descriptive_town_first_path_mean": {
+        "diagonal_sum": -5341.5,
+        "policy_change_with_cereal_town": 5645.0,
+        "town_change_with_fleet_policy": -10986.5
+      }
+    }
+  },
+  "source_provenance": {
+    "dependencies": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1"
+    },
+    "environment_version": "1.32.7",
+    "executable_bundles": {
+      "data\\interim\\fixed-shop-diagnostic\\9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7\\main.py": {
+        "data\\interim\\fixed-shop-diagnostic\\9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7\\main.py": "9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7"
+      },
+      "data\\interim\\fixed-shop-diagnostic\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05\\main.py": {
+        "data\\interim\\fixed-shop-diagnostic\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05\\main.py": "c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05"
+      },
+      "data\\raw\\reference-mooman\\main.py": {
+        "data\\raw\\reference-mooman\\LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "data\\raw\\reference-mooman\\actions.json": "17d503f2fd20d59f9c0f14024d1e74a8add8bb9b5561d4d908b45deecb5495ef",
+        "data\\raw\\reference-mooman\\main.py": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded",
+        "data\\raw\\reference-mooman\\router.py": "d6d74997dc5b483db63d8e39cafa1afeec0f366824e75107e109123f111e866b"
+      }
+    },
+    "harness_sha256": {
+      "C:\\Users\\oscar\\Documents\\kaggle\\agriculture-agent\\scripts\\benchmark.py": "64bbfd230b5203dd356b95f126e1c56ba7ae50ce1ab41ba80fd5d6ee3bb028e9",
+      "C:\\Users\\oscar\\Documents\\kaggle\\agriculture-agent\\scripts\\strategy_screen.py": "046b6fd8d53d8a4cbb58e5bfb413abe441085dfb21e6e6a1c61fa6f238a6e5b7",
+      "C:\\Users\\oscar\\Documents\\kaggle\\agriculture-agent\\scripts\\telemetry.py": "9acfb0d3760c4312326c6ef19303a6daa0d96bc1894ed8ee620c88e5fcae6d18"
+    },
+    "hashes": {
+      "data/raw/reference-mooman/main.py": "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded",
+      "data\\interim\\fixed-shop-diagnostic\\9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7\\main.py": "9400f9b0cdaa02d268ab9e234779d17013f2facf5f5517698bdfdb04671464b7",
+      "data\\interim\\fixed-shop-diagnostic\\c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05\\main.py": "c2b3162de26b82cb6057e94cb121b5655b7ee5c2e30659520f379f6ac7828b05"
+    },
+    "interpreter_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "lock_sha256": "bc34a08cf1e2d76f41008bbeb37b87684a51e8a105222239bc27fc8b0f160b25",
+    "revision": "21f1d948de6c53b501a988d3423476a45eed402a",
+    "tracked_worktree_changes": []
+  },
+  "warning": "Altered environment. Exclude from competitive scores, promotion gates, ratings and live-strength claims."
+}

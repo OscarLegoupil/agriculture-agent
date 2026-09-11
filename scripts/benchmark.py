@@ -25,19 +25,52 @@ def sha(path):
 
 def snapshot(path):
     """Keep exact candidate bytes without duplicating deployed Python modules."""
-    digest = sha(path)
+    content = Path(path).read_bytes()
+    digest = hashlib.sha256(content).hexdigest()
     archive = Path("reports/sources") / (digest + ".py.gz")
     archive.parent.mkdir(parents=True, exist_ok=True)
-    archive.write_bytes(gzip.compress(Path(path).read_bytes(), mtime=0))
+    if archive.exists():
+        if gzip.decompress(archive.read_bytes()) != content:
+            raise ValueError(f"Existing source snapshot is corrupt: {archive}")
+    else:
+        compressed = bytearray(gzip.compress(content, mtime=0))
+        # Python 3.11/3.12 can expose zlib's platform-specific gzip OS header.
+        # Existing archives remain immutable; new ones use the portable marker.
+        compressed[9] = 255
+        archive.write_bytes(compressed)
     return str(archive)
 
 
 def provenance(paths):
     from kaggle_environments.envs.kaggriculture import kaggriculture as game
 
+    bundles = {}
+    for filename in paths:
+        main = Path(filename)
+        if main.name != "main.py" or not main.is_file():
+            continue
+        bundles[str(main)] = {
+            str(path): sha(path)
+            for path in sorted(main.parent.rglob("*"))
+            if path.is_file()
+            and path.suffix in (".py", ".json", ".txt", ".so", ".dll", ".dylib")
+            and ".git" not in path.parts
+        }
     return {
         "revision": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "tracked_worktree_changes": subprocess.check_output(
+            ["git", "status", "--porcelain", "--untracked-files=no"], text=True
+        ).splitlines(),
+        "harness_sha256": {
+            str(path): sha(path)
+            for path in (
+                Path(__file__),
+                Path(__file__).with_name("telemetry.py"),
+                Path(__file__).with_name("strategy_screen.py"),
+            )
+        },
         "hashes": {p: sha(p) for p in paths if Path(p).is_file()},
+        "executable_bundles": bundles,
         "environment_version": importlib.metadata.version("kaggle-environments"),
         "interpreter_sha256": sha(game.__file__),
         "lock_sha256": sha("uv.lock"),
@@ -45,11 +78,20 @@ def provenance(paths):
     }
 
 
+def verify_bundles(manifest):
+    """Reject changed imported modules or action tables, not only main.py."""
+    for bundle in manifest.get("executable_bundles", {}).values():
+        for path, expected in bundle.items():
+            if sha(path) != expected:
+                raise RuntimeError(f"Executable bundle changed during benchmark: {path}")
+
+
 def stderr_summary(logs, seat):
     """Retain bounded diagnostics; counts refer to messages, not inferred fallbacks."""
     messages = Counter()
+    indices = {}
     turns = truncated = omitted = 0
-    for log in logs:
+    for log_index, log in enumerate(logs):
         if len(log) <= seat or not log[seat].get("stderr"):
             continue
         turns += 1
@@ -59,11 +101,13 @@ def stderr_summary(logs, seat):
             message = message[:2048]
         if message in messages or len(messages) < 32:
             messages[message] += 1
+            indices.setdefault(message, []).append(log_index)
         else:
             omitted += 1
     return {
         "stderr_turns": turns,
         "stderr_messages": dict(messages),
+        "stderr_log_indices": indices,
         "stderr_truncated_turns": truncated,
         "stderr_omitted_turns": omitted,
     }
@@ -167,6 +211,8 @@ def main():
         "episodes": [],
     }
     output = Path(args.output)
+    if output.exists():
+        raise FileExistsError(f"Use a new experiment path: {output}")
     output.parent.mkdir(parents=True, exist_ok=True)
     tasks = [
         (
@@ -197,6 +243,7 @@ def main():
     for path in paths:
         if path in manifest["hashes"] and sha(path) != manifest["hashes"][path]:
             raise RuntimeError(f"Executable changed during benchmark: {path}")
+    verify_bundles(manifest)
     manifest["complete"] = True
     output.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 

@@ -13,25 +13,25 @@ def build():
     raw = gzip.decompress((Path("reports/sources") / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
-    old_limit = '''                if shed.get(required, 0) <= 0 or fetches[required] >= max(
+    old_limit = """                if shed.get(required, 0) <= 0 or fetches[required] >= max(
                     1, math.ceil(demand_inputs[required] / 3)
                 ):
                     continue
-                cost = home_dist + 2 + distance(home, target)'''
-    new_limit = '''                batch_size = 6 if required == "WHEAT" else 8
+                cost = home_dist + 2 + distance(home, target)"""
+    new_limit = """                batch_size = 6 if required == "WHEAT" else 8
                 if shed.get(required, 0) <= 0 or fetches[required] >= max(
                     1, math.ceil(demand_inputs[required] / batch_size)
                 ):
                     continue
-                cost = home_dist + 2 + distance(home, target)'''
+                cost = home_dist + 2 + distance(home, target)"""
     assert source.count(old_limit) == 1
     source = source.replace(old_limit, new_limit)
-    old_amount = '''                amount = min(
+    old_amount = """                amount = min(
                     shed[required], 3 if required == "WHEAT" else 4, demand_inputs[required]
-                )'''
-    new_amount = '''                amount = min(
+                )"""
+    new_amount = """                amount = min(
                     shed[required], 6 if required == "WHEAT" else 8, demand_inputs[required]
-                )'''
+                )"""
     assert source.count(old_amount) == 1
     source = source.replace(old_amount, new_amount)
     compile(source, "input_batches", "exec")
