@@ -12,7 +12,7 @@ from pathlib import Path
 
 from scripts.phase4_delivery import immediate_delivery_sales
 
-from kaggriculture.agent.competitive import ANIMALS, CROPS, distance, move
+from kaggriculture.agent.competitive import ANIMALS, BASE, CROPS, distance, move
 
 INCUMBENT = "64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325"
 _DAILY_ROUTES = {}
@@ -20,7 +20,17 @@ _DAILY_ROUTE_STATS = Counter()
 
 
 def daily_routes(
-    obs, cfg, positions, inventories, shed, seeds, tasks, access, animal_sites, forecast
+    obs,
+    cfg,
+    positions,
+    inventories,
+    shed,
+    seeds,
+    tasks,
+    access,
+    animal_sites,
+    forecast,
+    target_hands,
 ):
     """Insert local service bundles while retaining a feasible daily fleet plan.
 
@@ -32,6 +42,14 @@ def daily_routes(
     player, day, hour, step = obs["player"], obs["day"], obs["hour"], obs["step"]
     farm, board = obs["farms"][player], obs["farms"][player]["tiles"]
     prices = obs["market"]["prices"]
+    hire_runway, first, second = 121, 1, 1
+    for index in range(target_hands):
+        if index >= len(farm["hands"]):
+            hire_runway += first
+        first, second = second, first + second
+    liquidity_needed = (
+        len(farm["hands"]) < target_hands and farm["money"] < hire_runway and hour < 8
+    )
     end = 23 if day == 29 else 24
     capacity = cfg.get("shedCapacity", 100)
     deadline = time.perf_counter() + 0.065
@@ -231,15 +249,31 @@ def daily_routes(
             del plans[worker]
             continue
         creating = {target for target, op, _ in plan["ops"] if op in ("PLANT", "PLACE")}
-        operations = [
-            op for op in plan["ops"] if pending(op, plan["expected"].get(op[0]), op[0] in creating)
-        ]
+        operations, waiting = [], set()
+        for operation in plan["ops"]:
+            target = operation[0]
+            # Later operations on this tile are conditional on its first
+            # unfinished operation. A still-present weed does not invalidate
+            # BUILD/PLANT behind DIG, nor zero yield HARVEST behind WATER.
+            if target in waiting or pending(
+                operation, plan["expected"].get(target), target in creating
+            ):
+                operations.append(operation)
+                waiting.add(target)
         if operations and operations[0][1] == "DROP" and not inventories[worker]:
             operations = []
         if not operations or hour + route_cost(worker, operations)[0] > end:
             del plans[worker]
         else:
             plan["ops"] = operations
+        liquid_cargo = sum(
+            amount * prices.get(item, 0)
+            for item, amount in inventories[worker].items()
+            if item in BASE and item != "WHEAT"
+        )
+        if liquidity_needed and liquid_cargo > 0:
+            home = min(access, key=lambda depot: (distance(positions[worker], depot), depot))
+            plans[worker] = {"ops": [(home, "DROP", None)], "expected": {}}
 
     # Claim all inputs for retained routes, including workers walking to depot.
     available, seed_available = Counter(shed), Counter(seeds)
@@ -380,6 +414,27 @@ def daily_routes(
                 operations.extend(((target, "FEED", None), (target, "CARE", None)))
                 value += forecast[product] - prices["WHEAT"]
         if operations and value > 0:
+            liquid = False
+            if liquidity_needed:
+                collection = [
+                    operation
+                    for operation in operations
+                    if operation[1] in ("HARVEST", "COLLECT_FERTILIZER")
+                    and not (operation[1] == "HARVEST" and tile.get("crop") == "WHEAT")
+                ]
+                if collection:
+                    product = ANIMALS[tile["animal"]][4] if "animal" in tile else tile["crop"]
+                    receipts = sum(
+                        tile.get("yield_units", 0) * prices[product]
+                        if op == "HARVEST"
+                        else prices["FERTILIZER"]
+                        for _, op, _ in collection
+                    )
+                    if receipts > 0:
+                        # Collection has no feed prerequisite. Recover a hire's
+                        # cash runway before committing the only worker to a
+                        # productive asset whose first sale is many days away.
+                        operations, value, required, liquid = collection, receipts, False, True
             bundles.append(
                 dict(
                     target=target,
@@ -391,6 +446,8 @@ def daily_routes(
                     premium=isinstance(tile, dict)
                     and tile.get("crop") == "MELON"
                     and any(op == "HARVEST" for _, op, _ in operations),
+                    liquid=liquid,
+                    commissioning=any(op in ("PLANT", "PLACE") for _, op, _ in operations),
                 )
             )
 
@@ -412,7 +469,13 @@ def daily_routes(
         bundle = min(
             bundles,
             key=lambda candidate: (
-                0 if candidate["premium"] else 1 if candidate["required"] else 2,
+                0
+                if candidate["liquid"]
+                else 1
+                if candidate["premium"]
+                else 2
+                if candidate["required"]
+                else 3,
                 -candidate["value"]
                 / (
                     len(candidate["ops"])
@@ -452,12 +515,21 @@ def daily_routes(
         for worker in range(len(positions)):
             old = plans.get(worker, {"ops": [], "expected": {}})
             old_ops = old["ops"]
+            if liquidity_needed and any(op == "DROP" for _, op, _ in old_ops):
+                continue
             if inventories[worker].get("MELON", 0) or any(
                 op == "HARVEST"
                 and isinstance(tile_at(target), dict)
                 and tile_at(target).get("crop") == "MELON"
                 for target, op, _ in old_ops
             ):
+                continue
+            liquid_cargo = sum(
+                amount * prices.get(item, 0)
+                for item, amount in inventories[worker].items()
+                if item in BASE and item != "WHEAT"
+            )
+            if liquidity_needed and liquid_cargo > 0:
                 continue
             old_cost, old_need, old_seeds, _ = (
                 route_details[worker] if old_ops else (0, Counter(), Counter(), None)
@@ -521,7 +593,7 @@ def daily_routes(
                 # otherwise one worker can monopolize crops and their feed.
                 rank = (
                     (cost, extra, worker, slot)
-                    if bundle["premium"]
+                    if bundle["premium"] or bundle["liquid"] or bundle["commissioning"]
                     else (max(cost, other_finish), extra, worker, slot)
                     if bundle["required"]
                     else (-score, cost, worker, slot)
@@ -592,7 +664,8 @@ def build():
     source = raw.decode()
     marker = "    deadline_actions = {}\n    if day < 29:"
     replacement = """    deadline_actions, route_claimed = daily_routes(
-        obs, cfg, positions, inventories, shed, seeds, tasks, shed_tiles, animal_sites, forecast
+        obs, cfg, positions, inventories, shed, seeds, tasks, shed_tiles, animal_sites, forecast,
+        target_hands,
     )
     claimed.update(route_claimed)
     for worker, action in deadline_actions.items():

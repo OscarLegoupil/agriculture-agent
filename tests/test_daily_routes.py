@@ -1,15 +1,18 @@
 """Official worker transitions validate the daily fleet's service contracts."""
 
+import gzip
 import json
 import subprocess
 import sys
 from copy import deepcopy
+from pathlib import Path
 
 import pytest
-from experiments.daily_routes import build
+from experiments.daily_routes import INCUMBENT, build
 from kaggle_environments import make
 from kaggle_environments.agent import get_last_callable
 from kaggle_environments.envs.kaggriculture import kaggriculture as game
+from kaggle_environments.utils import structify
 
 
 def policy():
@@ -187,6 +190,170 @@ def test_removed_animal_releases_a_committed_feed_obligation():
         for plan in ns["_DAILY_ROUTES"][0]["plans"].values()
         for target, op, _ in plan["ops"]
     )
+
+
+@pytest.mark.parametrize("animal", [False, True])
+def test_walking_before_dig_preserves_creation_prerequisites(animal):
+    obs, cfg = world(day=0, hour=0, hands=0)
+    farm = obs["farms"][0]
+    farm["farmer"] = [0, 0]
+    for row in farm["tiles"]:
+        for x in range(len(row)):
+            row[x] = "LOCKED"
+    farm["tiles"][4][4] = {"kind": "WEED"}
+    if animal:
+        obs["private"]["shed"] = {"COW": 1}
+    else:
+        obs["private"]["seeds"] = {"WHEAT": 1}
+    ns = policy()
+    history = run_units(ns, obs, cfg, end=16)
+    tile = farm["tiles"][4][4]
+    if animal:
+        assert tile.get("animal") == "COW"
+        assert sum(action["farmer"][0] == "PLACE" for action in history) == 1
+    else:
+        assert tile.get("crop") == "WHEAT" and tile["watered_today"]
+        assert sum(action["farmer"][0] == "PLANT" for action in history) == 1
+
+
+def test_zero_current_yield_does_not_remove_harvest_behind_water():
+    obs, cfg = world(day=5, hour=0, hands=0)
+    farm = obs["farms"][0]
+    crop = game._new_plant("WHEAT", 1, 24)
+    crop.update(yield_units=0)
+    farm["tiles"][2][4] = crop
+    ns = policy()
+    ns["_DAILY_ROUTES"][0] = {
+        "day": 5,
+        "step": 120,
+        "plans": {
+            0: {
+                "ops": [((4, 2), "WATER", None), ((4, 2), "HARVEST", None)],
+                "expected": {(4, 2): ("PLANT", "WHEAT", 1)},
+            }
+        },
+    }
+    history = run_units(ns, obs, cfg, end=5)
+    assert [action["farmer"][0] for action in history[:4]] == ["NORTH", "NORTH", "WATER", "HARVEST"]
+    assert farm["tiles"][2][4] is None
+    assert obs["private"]["inventories"][0].get("WHEAT") == 1
+
+
+def test_manure_cash_recovery_precedes_unfunded_service_and_new_investment():
+    obs, cfg = world(day=1, hour=0, hands=0)
+    farm = obs["farms"][0]
+    farm["money"] = 39
+    cow = game._new_animal("COW", 0)
+    cow.update(fertilizer_available=True)
+    farm["tiles"][4][4] = cow
+    obs["private"]["shed"] = {"SHEEP": 1}
+    obs["private"]["seeds"] = {"MELON": 4}
+    ns = policy()
+    env = make("kaggriculture", configuration={"seed": 5000})
+    env.reset()
+    env.state[0].observation = structify(obs)
+    history = []
+    for hour in range(5):
+        current = env.state[0].observation
+        current.update(day=1, hour=hour, step=24 + hour)
+        decision = ns["agent"](deepcopy(current), cfg)
+        history.append(decision)
+        for worker, action in enumerate([decision["farmer"], *decision["hands"]]):
+            game._apply_unit_action(
+                current["farms"][0], current["private"], worker, action, 10, 1, 24, 100
+            )
+        env.state[0].action = decision
+        env.state[1].action = {}
+        game._process_market(env.state, env)
+    assert history[0]["farmer"] == ["COLLECT_FERTILIZER"]
+    assert history[1]["farmer"] == ["DROP"]
+    assert any(order[:2] == ["SELL", "FERTILIZER"] for order in history[2]["market"])
+    assert any(order == ["HIRE"] for decision in history[3:] for order in decision["market"])
+    assert env.state[0].observation["farms"][0]["hands"]
+
+
+def test_hiring_boundary_does_not_interrupt_manure_delivery_with_irrigation():
+    obs, cfg = world(day=2, hour=3, hands=0)
+    farm = obs["farms"][0]
+    farm.update(money=121, farmer=[4, 3])
+    for y, animal in enumerate(("SHEEP", "SHEEP", "COW", "COW"), start=1):
+        tile = game._new_animal(animal, 0)
+        tile.update(fertilizer_available=True)
+        farm["tiles"][y][4] = tile
+    for y in range(4):
+        for x in range(3):
+            crop = game._new_plant("MELON", 0, 24)
+            crop.update(consecutive_unwatered=1)
+            farm["tiles"][y][x] = crop
+    obs["private"]["shed"] = {"WHEAT": 3}
+    ns = policy()
+    env = make("kaggriculture", configuration={"seed": 5000})
+    env.reset()
+    env.state[0].observation = structify(obs)
+    history = []
+    for hour in range(3, 8):
+        current = env.state[0].observation
+        current.update(day=2, hour=hour, step=48 + hour)
+        decision = ns["agent"](deepcopy(current), cfg)
+        history.append(decision)
+        for worker, action in enumerate([decision["farmer"], *decision["hands"]]):
+            game._apply_unit_action(
+                current["farms"][0], current["private"], worker, action, 10, 2, 24, 100
+            )
+        env.state[0].action = decision
+        env.state[1].action = {}
+        game._process_market(env.state, env)
+    assert [decision["farmer"] for decision in history[:3]] == [
+        ["COLLECT_FERTILIZER"],
+        ["SOUTH"],
+        ["DROP"],
+    ]
+    assert any(order == ["HIRE"] for order in history[-1]["market"])
+    assert len(env.state[0].observation["farms"][0]["hands"]) >= 5
+
+
+def test_first_three_days_recover_labor_without_crop_deaths():
+    """Official startup transitions, with an active frozen opponent in both runs."""
+    root = Path(__file__).resolve().parents[1]
+    incumbent = gzip.decompress(
+        (root / "reports/sources" / f"{INCUMBENT}.py.gz").read_bytes()
+    ).decode()
+    results = {}
+    for name, source in (("incumbent", incumbent), ("routes", build())):
+        own, opponent = get_last_callable(source), get_last_callable(incumbent)
+        env = make("kaggriculture", configuration={"seed": 5000})
+        env.reset()
+        deaths, labor = 0, {}
+        for _ in range(72):
+            views = [env._Environment__get_shared_state(player).observation for player in (0, 1)]
+            before = deepcopy(views[0]["farms"][0]["tiles"])
+            env.step([own(views[0], env.configuration), opponent(views[1], env.configuration)])
+            current = env._Environment__get_shared_state(0).observation
+            farm = current["farms"][0]
+            if current["hour"] == 8:
+                labor[current["day"]] = len(farm["hands"])
+            for y, row in enumerate(farm["tiles"]):
+                for x, tile in enumerate(row):
+                    previous = before[y][x]
+                    deaths += int(
+                        isinstance(previous, dict)
+                        and previous.get("kind") == "PLANT"
+                        and isinstance(tile, dict)
+                        and tile.get("kind") == "WEED"
+                    )
+        animals = sum(
+            isinstance(tile, dict) and "animal" in tile for row in farm["tiles"] for tile in row
+        )
+        melons = sum(
+            isinstance(tile, dict) and tile.get("crop") == "MELON"
+            for row in farm["tiles"]
+            for tile in row
+        )
+        results[name] = dict(deaths=deaths, labor=labor, animals=animals, melons=melons)
+    assert results["routes"]["deaths"] == results["incumbent"]["deaths"] == 0
+    assert results["routes"]["animals"] >= 4
+    assert results["routes"]["melons"] >= 12
+    assert all(results["routes"]["labor"][day] >= 5 for day in (1, 2))
 
 
 def test_official_loader_and_isolated_artifact_have_identical_actions(tmp_path):
