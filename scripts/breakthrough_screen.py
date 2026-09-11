@@ -39,11 +39,14 @@ def main():
         elif name.startswith("melon"):
             from experiments.melon_race import build as melon_build
 
-            candidates[name] = melon_build(
-                fertilizer=name != "melon_race_only",
-                race=name != "melon_fertilizer_only",
-                same_turn_sales=name != "melon_fertilizer_only",
-            )
+            modes = {
+                "melon": (True, True, True),
+                "melon_race_only": (False, True, True),
+                "melon_fertilizer_only": (True, False, False),
+                "melon_harvest_only": (False, True, False),
+                "melon_sale_only": (False, False, True),
+            }
+            candidates[name] = melon_build(*modes[name])
         elif name.endswith("_herd"):
             candidates[name] = build(name.removesuffix("_herd"), scope="herd")
         else:

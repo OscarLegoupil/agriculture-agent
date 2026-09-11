@@ -8,9 +8,19 @@ from pathlib import Path
 from benchmark import episode, provenance, snapshot, verify_bundles
 
 
-def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=None):
+def verify_entrypoint(source):
+    """Check the official callable selector, including constants and bindings."""
     from kaggle_environments.agent import get_last_callable
 
+    namespace = {}
+    exec(source, namespace)
+    loaded = get_last_callable(source)
+    intended = namespace.get("agent")
+    if intended is None or not hasattr(loaded, "__code__") or loaded.__code__ != intended.__code__:
+        raise ValueError("Official loader selects a different candidate policy")
+
+
+def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=None):
     output = Path(output)
     assert candidates and opponents and seeds
     assert len(seeds) == len(set(seeds)) and len(opponents) == len(set(opponents))
@@ -23,12 +33,7 @@ def screen(candidates, opponents, seeds, output, workers=4, inputs=(), replays=N
     }
     tasks = []
     for name, source in candidates.items():
-        namespace = {}
-        exec(source, namespace)
-        loaded = get_last_callable(source)
-        intended = namespace.get("agent")
-        if intended is None or loaded.__code__.co_code != intended.__code__.co_code:
-            raise ValueError(f"Official loader selects a different candidate policy: {name}")
+        verify_entrypoint(source)
         content = source.encode("utf-8")
         digest = hashlib.sha256(content).hexdigest()
         path = Path("data/interim/strategy-screen") / digest / "main.py"

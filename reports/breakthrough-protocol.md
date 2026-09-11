@@ -100,3 +100,18 @@ and same-turn delivery sales; whole-farm routes including crop/input obligations
 Each first requires official transition and loader tests. Qualify each against
 COK/Seyam (32games); only promising whole-policy gains earn broader development
 or Mooman confirmation. No change opens validation or holdout.
+
+The completed 96-game melon ablation supports **harvest/delivery urgency plus
+same-turn melon sales**, not fertilizer. That candidate (`13f029db...5815c2`)
+wins COK11/16 and Seyam16/16 versus v8's6/16 and16/16; full fertilizer package
+retains6/16 and16/16, while fertilizer alone falls to3/16 and15/16. The candidate
+name `melon_race_only` means race plus same-turn sales, without fertilizer.
+
+Confirm the frozen race candidate and v8 on **5008–5031**, both seats and both
+historical challenge opponents (192games). Combine with the original eight
+development seeds for the declared32-seed field; do not rerun or select among
+duplicate attempts. Independently run both policies against Mooman on5000–5007,
+both seats (32games), reporting that pool separately. Complete both panels
+without score-based stopping. At most six game processes; no fresh selection
+or holdout data is opened. Separate harvest-only/sale-only component tests may
+use the original eight development seeds to diagnose the interaction.
