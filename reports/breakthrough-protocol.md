@@ -62,6 +62,17 @@ predeclared rows with the first eight seeds once; no early stopping or replacing
 unfavorable games. This tests whether the modest cash mechanism generalizes
 beyond the small screen. Validation and holdout remain unopened.
 
+Production-family screen (48 games, same eight Mooman development seeds/both
+seats): repair the early cohort selector to use only affordable or already-owned
+seeds; split the prescribed long-crop allocation into 16 berries and 18 tomatoes
+while retaining the seven-wheat finance bridge; test that same diversified
+calendar with only four animals. The explicit calendars investigate a weakness
+of the early price model: current rival assets omit predictable future expansion,
+so an apparently valuable berry cohort can be overcommitted before competing
+production appears. These are fixed experimental compositions, not inferred
+future opponent actions. The funded-selector prefix grows real short crops but
+does not advance land, so its competitive effect still requires full seasons.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,

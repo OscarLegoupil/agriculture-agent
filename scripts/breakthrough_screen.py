@@ -83,6 +83,14 @@ def main():
             from experiments.fleet_animal_service import build as animal_dp_build
 
             candidates[name] = animal_dp_build()
+        elif name == "capacity_financed":
+            from experiments.crop_opportunity_financed import build as financed_build
+
+            candidates[name] = financed_build()
+        elif name in ("capacity_diversified", "capacity_crop_focus"):
+            from experiments.diversified_calendar import build as diversified_build
+
+            candidates[name] = diversified_build(compact_herd=name == "capacity_crop_focus")
         elif name in ("capacity_arrival", "capacity_bridge", "capacity_bridge_arrival"):
             from experiments.berry_bridge import build as bridge_build
 
