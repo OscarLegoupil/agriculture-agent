@@ -1,5 +1,24 @@
 # Structural strategy research, 11 September 2026
 
+Floor-execution screen: retain the exact 150 ms control, replacing only its
+daily price execution with early, spread and late sale scenarios. Each respects
+the official rule that a sale at one coin does not increase market inventory,
+and six intraday shop-consumption opportunities. Test this forecast alone and
+with the already frozen finite-season animal service model, on all 16 Mooman
+scenarios (5000-5007, both seats) each. Cohort quantities, expected unknown
+shops, opening and labor remain inherited. Complete all 32 games; recorded
+runtime and interpreter contracts precede the screen. These changes test a
+verified market-model error, not foreknowledge of the opponent's orders.
+
+Minimum-water screen: the observed seed-5018 control death is avoidable with
+SOUTH then WATER; a bundle containing optional fertilizer and harvesting cannot
+fit that same deadline. Market pressure also discards zero-held-yield ongoing
+crops despite their remaining harvests. Test minimum WATER obligations in the
+control and the repaired market-dispatch candidate, 16 Mooman games each on
+5000-5007/both seats. Preserve mandatory feeding and creation commitments.
+The official late-turn witness and zero-held-yield tests must pass first; full
+seasons determine whether the repair generalizes without other service losses.
+
 Latest development extension: the 150 ms common-budget Mooman panel rejects the
 berry bridge, arrival replanning, wheat renewal and extra-quadrant package.
 Fertilizer alone preserves the same six wins out of sixteen. Next, test three

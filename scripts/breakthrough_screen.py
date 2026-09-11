@@ -83,6 +83,18 @@ def main():
             from experiments.fleet_animal_service import build as animal_dp_build
 
             candidates[name] = animal_dp_build()
+        elif name in ("capacity_floor", "capacity_floor_animals"):
+            from experiments.floor_forecast import build as floor_build
+
+            candidates[name] = floor_build(animal_service=name == "capacity_floor_animals")
+        elif name in ("capacity_water", "capacity_water_market"):
+            from experiments.deadline_water import build as water_build
+
+            candidates[name] = (
+                water_build()
+                if name == "capacity_water"
+                else water_build(base="a028706ed48d71983ea57522eedf9bed450341a8f2247b97281b8e2a7a4f28eb")
+            )
         elif name == "capacity_financed":
             from experiments.crop_opportunity_financed import build as financed_build
 
