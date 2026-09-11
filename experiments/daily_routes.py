@@ -657,11 +657,13 @@ def daily_routes(
     return actions, claimed
 
 
-def build(*, mature_hands=None, cereal=False):
+def build(*, mature_hands=None, cereal=False, budget_seconds=0.065):
     root = Path(__file__).resolve().parents[1]
     raw = gzip.decompress((root / "reports/sources" / f"{INCUMBENT}.py.gz").read_bytes())
     assert hashlib.sha256(raw).hexdigest() == INCUMBENT
     source = raw.decode()
+    if budget_seconds not in (0.065, 0.150):
+        raise ValueError("Use a declared search budget")
     if mature_hands is not None and mature_hands not in (8, 10, 12):
         raise ValueError("Use a declared mature workforce level")
     parameters = []
@@ -725,6 +727,10 @@ def build(*, mature_hands=None, cereal=False):
         '"""Pure observation policy: no episode globals or repository imports."""',
         '"""Observation policy with disposable, verified daily fleet routes."""',
     )
+    if budget_seconds != 0.065:
+        guard = "deadline = time.perf_counter() + 0.065"
+        assert source.count(guard) == 1
+        source = source.replace(guard, f"deadline = time.perf_counter() + {budget_seconds:.3f}")
     compile(source, "daily_routes_candidate", "exec")
     return source
 

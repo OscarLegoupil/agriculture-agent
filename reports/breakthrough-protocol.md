@@ -219,3 +219,22 @@ seed rows, retaining all losses. These192 games investigate generalization
 and lower-tail behavior before fresh validation. They do not open4000-4063
 or20000-20127. No score-based early stopping. Record the three visible
 Mooman fallback turns; future harnesses preserve their exact log indices.
+
+Stateful clean-process verification exposes a reliability confound: the65ms
+guard produces different actions under concurrent load, and those route
+differences can alter later shop draws. Preserve the old artifacts and scores.
+A150ms guard with the same512-insertion limit passes2,157 sequential actions
+per process (both seats plus repeated episode), two clean processes, with no
+source/loader/recorded-action differences or fallback messages. Peak isolated
+RSS is20.5MB; maximum isolated action86ms, parent source119ms. Frozen source
+hash is `fca083cd...f8e61ba`; competitive matches remain to be run.
+
+The next fixed Mooman screen uses the same150ms guard throughout: capacity
+control; arrival replanning; four day5 berries in existing wheat slots; their
+combination; wheat fertilizer; local wheat renewal; fertilizer plus renewal.
+Each receives5000-5007, both seats (112games total), compared with the common
+capacity control and original v8. Renewal must retain the option of a more
+valuable later crop. First complete official prerequisite/economic tests.
+Run all declared rows without score-based stopping, at most six game processes.
+Only material matchup improvement earns broader confirmation. No validation
+or holdout opens during these mechanism and reliability screens.
