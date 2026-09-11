@@ -9,7 +9,7 @@ gain of +27,779.19 [seed-block 95% interval +5,781.75 to +50,624.33]. The score
 interval is wide: 12.5-87.5%. Median capacity gap is +4,522; its tenth percentile
 is -18,696. There are no candidate errors or stderr; maximum capacity call time
 is 56.89 ms. Both policies run on the same Linux Python environment, with the
-same interpreter and dependency hashes used in the Windows experiments.
+same interpreter hash and dependency versions used in the Windows experiments.
 
 These remain known development seeds. The extension establishes that the gain
 is not confined to seed 5000, but does not establish a stable live rating or add

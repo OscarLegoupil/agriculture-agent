@@ -53,6 +53,15 @@ unit first harvest; saturated animals are deliberately retired. Test the same
 16 Mooman development scenarios. Collection timing and future price paths remain
 approximations. Interrupted-episode cache reset is verified before freezing.
 
+Broader grain-service confirmation: the fertilizer-only prototype produces more
+grain and saves feed in two reconstructed witnesses, with zero water deaths,
+but retains the same six wins and causes more storage overflow. Compare its
+frozen artifact against the 150 ms capacity control on development seeds
+5008-5031, both seats, pinned Mooman (96 games, four workers). Combine these
+predeclared rows with the first eight seeds once; no early stopping or replacing
+unfavorable games. This tests whether the modest cash mechanism generalizes
+beyond the small screen. Validation and holdout remain unopened.
+
 Base: `5054fd30b6ec76ac819799907fda8ec8d27e42da`, stacked on the unmerged
 second-cycle branch. Frozen experimental incumbent: v8,
 `64fe323936dc9494add413eb956b0294658a88efe28572332c94676c68a09325`,
