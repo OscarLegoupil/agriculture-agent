@@ -7,6 +7,8 @@ probe executes the frozen source only against its own recorded observations.
 import gzip
 import hashlib
 import json
+import runpy
+import sys
 from collections import Counter
 from copy import deepcopy
 from pathlib import Path
@@ -168,5 +170,107 @@ def main():
     )
 
 
+def financed_prefix():
+    """Bounded official continuation witness; this does not report match scores."""
+    from kaggle_environments import make
+    from kaggle_environments.agent import get_last_callable
+
+    build = runpy.run_path("experiments/crop_opportunity_financed.py")["build"]
+    reference = Path("data/raw/reference-mooman/main.py")
+    assert (
+        hashlib.sha256(reference.read_bytes()).hexdigest()
+        == "4332662941c5eb6cb79c8d0acdb75ddf0d9c2ad66a7cb002787d3b99ffe19ded"
+    )
+    parent = gzip.decompress(Path(f"reports/sources/{EARLY}.py.gz").read_bytes()).decode()
+    output = dict(
+        method="Official seed5007 responding-Mooman prefixes, both seats, 216 actions per episode. No state intervention or terminal match result.",
+        opponent=str(reference),
+        opponent_sha256=hashlib.sha256(reference.read_bytes()).hexdigest(),
+        episodes=[],
+    )
+    for label, source in (("early", parent), ("financed", build())):
+        for seat in (0, 1):
+            own = get_last_callable(source)
+            other = runpy.run_path(str(reference))["agent"]
+            env = make("kaggriculture", configuration={"seed": 5007})
+            env.reset()
+            births, daily, purchases = [], [], []
+            deaths = escapes = failed_plants = 0
+            for index in range(216):
+                views = [env._Environment__get_shared_state(p).observation for p in (0, 1)]
+                before = deepcopy(views[seat]["farms"][seat])
+                positions = [before["farmer"], *before["hands"]]
+                action = own(views[seat], env.configuration)
+                rival_action = other(views[1 - seat], env.configuration)
+                work = [action["farmer"], *action["hands"]]
+                requested = Counter(row[1] for row in work if row[0] == "PLANT")
+                assert all(
+                    n <= views[seat]["private"]["seeds"].get(crop, 0)
+                    for crop, n in requested.items()
+                )
+                env.step([action, rival_action] if seat == 0 else [rival_action, action])
+                observed = env._Environment__get_shared_state(seat).observation
+                farm = observed["farms"][seat]
+                for position, task in zip(positions, work, strict=True):
+                    if task[0] == "PLANT":
+                        tile = farm["tiles"][position[1]][position[0]]
+                        success = isinstance(tile, dict) and tile.get("crop") == task[1]
+                        failed_plants += not success
+                        if success and index >= 72:
+                            births.append([index // 24, index % 24, task[1], position])
+                for y, row in enumerate(before["tiles"]):
+                    for x, tile in enumerate(row):
+                        after = farm["tiles"][y][x]
+                        if isinstance(tile, dict):
+                            deaths += (
+                                tile.get("kind") == "PLANT"
+                                and isinstance(after, dict)
+                                and after.get("kind") == "WEED"
+                            )
+                            escapes += "animal" in tile and not (
+                                isinstance(after, dict) and "animal" in after
+                            )
+                if len(farm["unlocked_quadrants"]) > len(before["unlocked_quadrants"]):
+                    purchases.append([index // 24, index % 24, farm["money"]])
+                if observed["hour"] == 0:
+                    daily.append(
+                        dict(
+                            day=index // 24,
+                            cash=farm["money"],
+                            seeds=dict(observed["private"]["seeds"]),
+                            composition=dict(
+                                Counter(
+                                    t.get("crop", t.get("animal", t["kind"]))
+                                    for row in farm["tiles"]
+                                    for t in row
+                                    if isinstance(t, dict)
+                                )
+                            ),
+                        )
+                    )
+            output["configuration"] = dict(env.configuration)
+            output["episodes"].append(
+                dict(
+                    label=label,
+                    source_sha256=hashlib.sha256(source.encode()).hexdigest(),
+                    seat=seat,
+                    births=births,
+                    daily=daily,
+                    land_purchases=purchases,
+                    deaths=deaths,
+                    escapes=escapes,
+                    failed_plants=failed_plants,
+                )
+            )
+    path = Path("reports/results/breakthrough-financed-prefix.json.gz")
+    path.write_bytes(
+        gzip.compress((json.dumps(output, separators=(",", ":")) + "\n").encode(), mtime=0)
+    )
+    print(path)
+
+
 if __name__ == "__main__":
-    main()
+    if "--financed-prefix" in sys.argv:
+        financed_prefix()
+    else:
+        main()

@@ -53,6 +53,12 @@
     "games": 96,
     "kind": "benchmark"
   },
+  "breakthrough-care-bank-mooman.json.gz": {
+    "sha256_uncompressed": "c9fbaeaf600a48205e2e2fc2300090b457a0dfb48e9623d9aaf5e640c9ec9936",
+    "bytes": 119282,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-cereal-mooman.json.gz": {
     "sha256_uncompressed": "a476be1af35e0784b267f6dee0732ac46d989bec78102b63c2a460d85fe9d1a2",
     "bytes": 59986,
@@ -76,6 +82,24 @@
     "bytes": 236377,
     "games": 64,
     "kind": "benchmark"
+  },
+  "breakthrough-diversification-mooman.json.gz": {
+    "sha256_uncompressed": "78d2c1876a827ed94341710a8e552c243501f774233c84edcff1458fa83c58a7",
+    "bytes": 175685,
+    "games": 48,
+    "kind": "benchmark"
+  },
+  "breakthrough-fertilizer-field.json.gz": {
+    "sha256_uncompressed": "73e05f43b0e9f5caeebf5c14fcd3ed3f81396f1b7c7d3252318fc1b37b2db200",
+    "bytes": 346774,
+    "games": 96,
+    "kind": "benchmark"
+  },
+  "breakthrough-financed-prefix.json.gz": {
+    "sha256_uncompressed": "52bd601243581a8f90b6fb70519a7d13a34e9e1bf3df79cd3022360a01b553e3",
+    "bytes": 1243,
+    "games": 0,
+    "kind": "analysis"
   },
   "breakthrough-fleet-animals-mooman.json.gz": {
     "sha256_uncompressed": "d0c92b02a15da2f579a66a7aff1b1983bdf601d407cf76990d08238f6c87e577",
@@ -105,6 +129,12 @@
     "sha256_uncompressed": "67acb29871155c1d0b95a1a3296950ee1f3a68bf5bc4c025b8aa66a3070eca29",
     "bytes": 237642,
     "games": 64,
+    "kind": "benchmark"
+  },
+  "breakthrough-floor-mooman.json.gz": {
+    "sha256_uncompressed": "3864b42c98dbae2cf29f94696f6fc593f01ec91aee6ff0774aa564771576bf3c",
+    "bytes": 118694,
+    "games": 32,
     "kind": "benchmark"
   },
   "breakthrough-investment-cash-mooman.json.gz": {
@@ -185,6 +215,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-safe-collection-mooman.json.gz": {
+    "sha256_uncompressed": "6cc7c6f6509a1fed256b1b67532873cd529b1622e5203c1f246329478be590e1",
+    "bytes": 177604,
+    "games": 48,
+    "kind": "benchmark"
+  },
   "breakthrough-season-screen.json.gz": {
     "sha256_uncompressed": "fe3036b7f9d6a290711aab633ec3a1e388a70f4c3b307e0a366b379b1dc10608",
     "bytes": 459535,
@@ -215,6 +251,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-water-mooman.json.gz": {
+    "sha256_uncompressed": "a7501f067125e71952936f18afc6a7915ef21419baa3c8a66df782af4b2ade58",
+    "bytes": 119447,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-wheat-service.json.gz": {
     "sha256_uncompressed": "989ce1541f80307c0572ed658336daff1c0646017ba00a2aff59ffd8a0587d7f",
     "bytes": 121858,
@@ -226,6 +268,12 @@
     "bytes": 49773,
     "games": 64,
     "kind": "benchmark"
+  },
+  "forecast-expansion-diagnostic.json.gz": {
+    "sha256_uncompressed": "0f826915f186d1536e6f41d0d8cd23c0a1ee25dc549d63123447af2529e7e5f7",
+    "bytes": 46854,
+    "games": 0,
+    "kind": "analysis"
   },
   "holdout-v7.json.gz": {
     "sha256_uncompressed": "5e5dc31dc3b59db978da64bb288cd6bc3debfc31d8ee8bb24005c36d8be8dcc5",

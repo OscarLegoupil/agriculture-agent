@@ -57,11 +57,32 @@ Each candidate processed 2,157 complete recorded observations: seed 5007 in both
 
 Remaining limitations are consequential: the executor may fail to renew a harvested site the following day; future rival crop renewal and investment are not in the deployed price path; private rival cargo is unknown; future fertilizer availability and bulk transport are forecasts. The absence of an explicit scenario engine is intentional because its observed decision value is small. The next diagnostic is whether requested admissions are commissioned on time and whether measured receipts support their projected advantage.
 
+## Matched development screen and the first failed decision
+
+None of the three candidates qualifies for promotion. The fixed Mooman panel uses seeds 5000–5007, both seats; the capacity parent wins 6/16. The canonical [comparison](results/breakthrough-opportunity-summary.json) resamples whole seeds, retaining both seats, with 10,000 bootstrap draws and RNG 20260910. These are development intervals and do not correct for candidate selection or limited opponent coverage.
+
+| Candidate | Wins / 16 | Mean paired cash-gap change | 95% bootstrap interval |
+|---|---:|---:|---:|
+| No wheat multiplier, day 15 | 4 | +2,622 | −226 to +5,598 |
+| Cohort receipts, day 15 | 6 | +167 | −2,991 to +2,392 |
+| Cohort receipts, day 3 | 3 | −9,898 | −29,140 to +7,839 |
+
+The early model's first failure is a capital-allocation mismatch, not nonexistent crop maturation. In seed 5007 at day 3, hour 0, the first empty site's remaining-season scores are berry 1,079, carrot 688, wheat 663 and tomato 627. Two berry purchases fit after hiring and the cash reserve. The remaining sites still select unaffordable berries instead of four owned wheat seeds. Those seeds remain unused through day 11. Actual commissioning is prompt once a seed exists: three berries are planted on day 3 and four on day 4. Their first possible production is day 13. Spending 700 on this rotation instead of the parent's 30 reduces day-5 opening cash from 1,181 to 511. First land is purchased at day 6, hour 18 rather than day 5, hour 22. Official action and market helpers reproduce every saved cash transition in this witness.
+
+This does **not** establish that the full-game loss is caused by 670 cash of seed spending. All sixteen early-model games draw a different second shop at day 6. The official interpreter draws weeds on currently empty sites before choosing that day's shop from the same day-local random generator. Different farm occupancy therefore changes the town path even with the same seed. For example, seed 5007's parent sees a pizza shop while the early candidate sees an ice-cream shop. Seed 5005 changes a farmers' market to a pet cafe, and the candidate subsequently grows carrots. Matched-seed evaluation remains a valid policy comparison, but it does not hold realized demand fixed. Large differences in sheep versus cow income cannot be assigned solely to the new crop ranker. [Saved decision and timeline evidence](results/breakthrough-opportunity-diagnosis.json.gz) records each first town divergence and the representative bilateral ledger.
+
+The evidence supports one narrow repair: filter crop rankings by unreserved observed seeds or a seed order that fits the actual remaining decision budget. `experiments/crop_opportunity_financed.py` implements this separately from the frozen early model. It retains the first profitable funded berries, all maturity forecasts, the controller and the inherited 200-cash reserve. It does not add a hindsight-selected shop rule or a new fixed opening.
+
+The repaired artifact is `6e1216cab5bdbf8359c4284deb8bbb61df1e9458eec724f3b274a50dc55b2e84`. In official seed-5007 Mooman prefixes, both seats, it actually commissions three berries, two carrots and two owned wheat on day 3. Day-5 closing cash rises from 737 to 1,098. All 216 prefix actions complete without failed planting, crop deaths or animal escapes. This verifies funded alternative execution, not a competitive gain: first land is **later**, at day 7, hour 1; by day 8 the repaired farm has 14 wheat, four tomatoes, five carrots and nine berries, compared with the early model's 19 berries. The controller's delivery timing and future working-capital needs are still outside the admission score. The [prefix evidence](results/breakthrough-financed-prefix.json.gz) preserves both trajectories and their exact source hashes. A complete matched screen is required before interpreting the new mix as an improvement.
+
 ## Reproduce
 
 ```powershell
 python scripts/shop_option_diagnostic.py
+python scripts/diagnose_crop_opportunity.py
+python scripts/diagnose_crop_opportunity.py --financed-prefix
 python -m pytest tests/test_crop_opportunity.py -q
+python -m pytest tests/test_crop_opportunity_financed.py -q
 ```
 
 The diagnostic reads the six retained development replays, preserving their hashes and effective configuration, and writes [compressed measurements](results/shop-option-diagnostic.json.gz). Replays remain outside version control. The saved output contains all 108 sensitivity cases and 12 actual selector witnesses; it contains no new game results.

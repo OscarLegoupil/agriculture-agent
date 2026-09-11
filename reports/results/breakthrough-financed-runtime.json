@@ -1,0 +1,25 @@
+{
+  "sha256": "6e1216cab5bdbf8359c4284deb8bbb61df1e9458eec724f3b274a50dc55b2e84",
+  "observations": 2157,
+  "source_source_mismatches": [],
+  "runtime_p95": 0.014787140001135412,
+  "runtime_max": 0.023767099999531638,
+  "stderr": [],
+  "stats": [
+    {
+      "insertion_evaluations": 325326,
+      "committed_actions": 17016,
+      "unassigned_obligations": 1545,
+      "resource_invalidations": 132,
+      "bounded_searches": 297
+    },
+    {
+      "insertion_evaluations": 325326,
+      "committed_actions": 17016,
+      "unassigned_obligations": 1545,
+      "resource_invalidations": 132,
+      "bounded_searches": 297
+    }
+  ],
+  "scope": "Recorded early-model seed5007 both seats then seat0 again; off-policy reset/runtime diagnostic, no new match result"
+}
