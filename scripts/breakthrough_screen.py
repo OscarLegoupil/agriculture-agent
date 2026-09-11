@@ -52,6 +52,10 @@ def main():
             from experiments.wheat_service import build as wheat_build
 
             candidates[name] = wheat_build()
+        elif name == "marginal_herd":
+            from experiments.marginal_herd import build as herd_build
+
+            candidates[name] = herd_build()
         elif name.startswith("rotation"):
             from experiments.crop_rotation import build as rotation_build
 
