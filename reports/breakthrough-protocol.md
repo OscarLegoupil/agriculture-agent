@@ -196,3 +196,10 @@ These panels use at most five game processes while one additional process
 qualifies the reviewed Six-Day Fieldbook native reference. Candidate selection
 and holdout ranges remain unopened. A distinct150ms fleet search guard may
 be profiled on recorded states without changing the frozen65ms artifact.
+
+The cereal candidate `c2b3162d...7828b05` completes its declared32 rows with
+16/16 wins against each historical challenge, mean gaps23,780 and30,455.
+This earns a16-game Mooman panel on5000-5007, both seats, compared with the
+existing frozen v8 and fleet rows. Start that panel while the predeclared
+labor/cereal interaction finishes; do not use partial interaction scores for
+selection or stop it early. The total game-process ceiling remains six.

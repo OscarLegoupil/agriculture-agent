@@ -29,6 +29,12 @@
     "games": 32,
     "kind": "benchmark"
   },
+  "breakthrough-animal-service.json.gz": {
+    "sha256_uncompressed": "b6262dbff41e94c5bd62f7469b2a88149b2ff9a17b5ad97577a7044d8920d6ed",
+    "bytes": 122288,
+    "games": 32,
+    "kind": "benchmark"
+  },
   "breakthrough-control-screen.json.gz": {
     "sha256_uncompressed": "36b6a810a5896f22efef99218b75c66439ec2775870c46eba0e4d9675d4b9446",
     "bytes": 237956,
